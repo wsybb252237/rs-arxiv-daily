@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="遥感大模型 arXiv 日报规则配置页，可查看和调整 arXiv 分类、强弱锚点、关键词、标签和排除词。"
+    />
+    <title>规则配置 · 遥感大模型 arXiv 日报</title>
+    <script src="assets/theme.js"></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="assets/rules.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Matching Rules</p>
+          <h1>规则配置</h1>
+          <p class="lede">
+            管理 arXiv 分类、强锚点、弱锚点共现、关键词、排除词和标签定义。配置驱动遥感大模型论文抓取。
+          </p>
+        </div>
+        <div class="source-block" aria-label="页面导航">
+          <span class="source-label">站点</span>
+          <a href="index.html">返回归档</a>
+          <span class="source-meta">当前文件：config.json</span>
+          <div class="source-actions">
+            <button class="source-secondary theme-toggle" type="button" data-theme-toggle>
+              <i data-lucide="moon" aria-hidden="true"></i>
+              <span data-theme-label>暗色</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="rules-workspace">
+        <section class="rules-panel">
+          <div class="results-toolbar">
+            <div>
+              <span class="field-label">配置摘要</span>
+              <h2 id="rulesTitle">加载中</h2>
+            </div>
+            <div class="toolbar-actions">
+              <button id="validateRules" class="icon-button" type="button" title="校验 JSON" aria-label="校验 JSON">
+                <i data-lucide="check" aria-hidden="true"></i>
+              </button>
+              <button id="resetRules" class="icon-button" type="button" title="恢复当前配置" aria-label="恢复当前配置">
+                <i data-lucide="rotate-ccw" aria-hidden="true"></i>
+              </button>
+              <button id="downloadRules" class="icon-button" type="button" title="导出 config.json" aria-label="导出 config.json">
+                <i data-lucide="download" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <div id="ruleStatus" class="rule-status"></div>
+          <div id="ruleSummary" class="rule-summary"></div>
+          <textarea id="configEditor" class="config-editor" spellcheck="false" aria-label="config.json 编辑器"></textarea>
+        </section>
+
+        <aside class="rules-panel rules-aside">
+          <div class="control-block">
+            <div class="field-label">迁移字段</div>
+            <div class="rule-notes">
+              <p><strong>categories</strong><span>目标 arXiv 分类范围。</span></p>
+              <p><strong>matching</strong><span>论文是否进入归档的门槛。</span></p>
+              <p><strong>strong_terms</strong><span>高权重相关性词。</span></p>
+              <p><strong>keywords</strong><span>普通相关性词。</span></p>
+              <p><strong>exclude_terms</strong><span>排除或降噪词。</span></p>
+              <p><strong>labels</strong><span>前端多选标签定义。</span></p>
+            </div>
+          </div>
+
+          <div class="control-block">
+            <div class="field-label">匹配规则</div>
+            <div class="rule-notes">
+              <p><strong>强锚点</strong><span>命中一个即可进入打分。</span></p>
+              <p><strong>弱锚点</strong><span>必须和上下文词共同出现。</span></p>
+              <p><strong>打分</strong><span>通过锚点后再按强词、关键词、标题命中、分类加分和领域关键词加成。</span></p>
+              <p><strong>开源</strong><span>由代码托管链接生成，不靠关键词。</span></p>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>

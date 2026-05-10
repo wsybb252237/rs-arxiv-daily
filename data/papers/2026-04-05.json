@@ -1,0 +1,843 @@
+{
+  "date": "2026-04-05",
+  "generated_at": "2026-05-09T14:58:14.940941+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.RO OR cat:cs.AI OR cat:cs.CV OR cat:cs.LG OR cat:cs.CL OR cat:cs.MA OR cat:cs.HC OR cat:stat.ML OR cat:eess.SY OR cat:eess.IV) AND submittedDate:[202604050000 TO 202604052359]",
+  "total_fetched": 214,
+  "total_matched": 19,
+  "papers": [
+    {
+      "title": "frax: Fast Robot Kinematics and Dynamics in JAX",
+      "authors": [
+        "Daniel Morton",
+        "Marco Pavone"
+      ],
+      "summary": "In robot control, planning, and learning, there is a need for rigid-body dynamics libraries that are highly performant, easy to use, and compatible with CPUs and accelerators. While existing libraries often excel at either low-latency CPU execution or high-throughput GPU workloads, few provide a unified framework that targets multiple architectures without compromising performance or ease-of-use. To address this, we introduce frax, a JAX-based library for robot kinematics and dynamics, providing a high-performance, pure-Python interface across CPU, GPU, and TPU. Via a fully-vectorized approach to robot dynamics, frax enables efficient real-time control and parallelization, while supporting automatic differentiation for optimization-based methods. On CPU, frax achieves low-microsecond computation times suitable for kilohertz control rates, outperforming common libraries in Python and approaching optimized C++ implementations. On GPU, the same code scales to thousands of instances, reaching upwards of 100 million dynamics evaluations per second. We validate performance on a Franka Panda manipulator and a Unitree G1 humanoid, and release frax as an open-source library.",
+      "published": "2026-04-05T23:08:10Z",
+      "updated": "2026-04-05T23:08:10Z",
+      "arxiv_id": "2604.04310v1",
+      "abs_url": "http://arxiv.org/abs/2604.04310v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.04310v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "Submitted to the ICRA 2026 Workshop on Frontiers of Optimization for Robotics",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "人形与灵巧",
+        "数据集/评测",
+        "双足机器人",
+        "机械臂"
+      ],
+      "topic": "人形与灵巧",
+      "score": 10,
+      "anchor_terms": [
+        "humanoid",
+        "manipulator",
+        "robot",
+        "robotic",
+        "robotics"
+      ],
+      "matched_terms": [
+        "humanoid",
+        "manipulator",
+        "open-source",
+        "robot",
+        "robotic",
+        "robotics"
+      ]
+    },
+    {
+      "title": "Real-Time Projected Adaptive Control for Closed-Chain Co-Manipulative Continuum Robots",
+      "authors": [
+        "Rana Danesh",
+        "Farrokh Janabi-Sharifi",
+        "Farhad Aghili"
+      ],
+      "summary": "In co-manipulative continuum robots (CCRs), multiple continuum arms cooperate by grasping a common flexible object, forming a closed-chain deformable mechanical system. The closed-chain coupling induces strong dynamic interactions and internal reaction forces. Moreover, in practical tasks, the flexible object's physical parameters are often unknown and vary between operations, rendering nominal model-based controllers inadequate. This paper presents a projected adaptive control framework for CCRs formulated at the dynamic level. The coupled dynamics are expressed using the Geometric Variable Strain (GVS) representation, yielding a finite-dimensional model that accurately represents the system, preserves the linear-in-parameters structure required for adaptive control, and is suitable for real-time implementation. Closed-chain interactions are enforced through Pfaffian velocity constraints, and an orthogonal projection is used to express the dynamics in the constraint-consistent motion subspace. Based on the projected dynamics, an adaptive control law is developed to compensate online for uncertain dynamic parameters of both the continuum robots and the manipulated flexible object. Lyapunov analysis establishes closed-loop stability and convergence of the task-space tracking errors to zero. Simulation and experiments on a tendon-driven CCR platform validate the proposed framework in task-space regulation and trajectory tracking.",
+      "published": "2026-04-05T22:03:23Z",
+      "updated": "2026-04-05T22:03:23Z",
+      "arxiv_id": "2604.04286v1",
+      "abs_url": "http://arxiv.org/abs/2604.04286v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.04286v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "世界模型与仿真",
+        "其他机器人"
+      ],
+      "topic": "机器人操作",
+      "score": 7,
+      "anchor_terms": [
+        "grasp",
+        "grasping",
+        "robot"
+      ],
+      "matched_terms": [
+        "grasp",
+        "grasping",
+        "robot"
+      ]
+    },
+    {
+      "title": "Decentralized Ergodic Coverage Control in Unknown Time-Varying Environments",
+      "authors": [
+        "Maria G. Mendoza",
+        "Victoria Marie Tuck",
+        "Chinmay Maheshwari",
+        "Shankar Sastry"
+      ],
+      "summary": "A key challenge in disaster response is maintaining situational awareness of an evolving landscape, which requires balancing exploration of unobserved regions with sustained monitoring of changing Regions of Interest (ROIs). Unmanned Aerial Vehicles (UAVs) have emerged as an effective response tool, particularly in applications like environmental monitoring and search-and-rescue, due to their ability to provide aerial coverage, withstand hazardous conditions, and navigate quickly and flexibly. However, efficient and adaptable multi-robot coverage with limited sensing in disaster settings and evolving time-varying information maps remains a significant challenge, necessitating better methods for UAVs to continuously adapt their trajectories in response to changes. In this paper, we propose a decentralized multi-agent coverage framework that serves as a high-level planning strategy for adaptive coverage in unknown, time-varying environments under partial observability. Each agent computes an adaptive ergodic policy, implemented via a Markov-chain transition model, that tracks a continuously updated belief over the underlying importance map. Gaussian Processes are used to perform those online belief updates. The resulting policy drives agents to spend time in ROIs proportional to their estimated importance, while preserving sufficient exploration to detect and adapt to time-varying environmental changes. Unlike existing approaches that assume known importance maps, require centralized coordination, or assume a static environment, our framework addresses the combined challenges of unknown, time-varying distributions in a more realistic decentralized and partially observable setting. We compare against alternative coverage strategies and analyze our method's response to simulated disaster evolution, highlighting its improved adaptability and transient performance in dynamic scenarios.",
+      "published": "2026-04-05T21:42:54Z",
+      "updated": "2026-04-12T21:35:01Z",
+      "arxiv_id": "2604.04280v2",
+      "abs_url": "http://arxiv.org/abs/2604.04280v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.04280v2",
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "eess.SY"
+      ],
+      "comment": "17 pages, 6 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "其他机器人"
+      ],
+      "topic": "其他机器人",
+      "score": 2,
+      "anchor_terms": [
+        "robot"
+      ],
+      "matched_terms": [
+        "robot"
+      ]
+    },
+    {
+      "title": "Precise Robot Command Understanding Using Grammar-Constrained Large Language Models",
+      "authors": [
+        "Xinyun Huo",
+        "Raghav Gnanasambandam",
+        "Xinyao Zhang"
+      ],
+      "summary": "Human-robot collaboration in industrial settings requires precise and reliable communication to enhance operational efficiency. While Large Language Models (LLMs) understand general language, they often lack the domain-specific rigidity needed for safe and executable industrial commands. To address this gap, this paper introduces a novel grammar-constrained LLM that integrates a grammar-driven Natural Language Understanding (NLU) system with a fine-tuned LLM, which enables both conversational flexibility and the deterministic precision required in robotics. Our method employs a two-stage process. First, a fine-tuned LLM performs high-level contextual reasoning and parameter inference on natural language inputs. Second, a Structured Language Model (SLM) and a grammar-based canonicalizer constrain the LLM's output, forcing it into a standardized symbolic format composed of valid action frames and command elements. This process guarantees that generated commands are valid and structured in a robot-readable JSON format. A key feature of the proposed model is a validation and feedback loop. A grammar parser validates the output against a predefined list of executable robotic actions. If a command is invalid, the system automatically generates corrective prompts and re-engages the LLM. This iterative self-correction mechanism allows the model to recover from initial interpretation errors to improve system robustness. We evaluate our grammar-constrained hybrid model against two baselines: a fine-tuned API-based LLM and a standalone grammar-driven NLU model. Using the Human Robot Interaction Corpus (HuRIC) dataset, we demonstrate that the hybrid approach achieves superior command validity, which promotes safer and more effective industrial human-robot collaboration.",
+      "published": "2026-04-05T19:30:54Z",
+      "updated": "2026-04-05T19:30:54Z",
+      "arxiv_id": "2604.04233v1",
+      "abs_url": "http://arxiv.org/abs/2604.04233v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.04233v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CL"
+      ],
+      "comment": "Accepted at ASME MSEC2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "数据集/评测",
+      "score": 7,
+      "anchor_terms": [
+        "robot",
+        "robotic",
+        "robotics"
+      ],
+      "matched_terms": [
+        "robot",
+        "robotic",
+        "robotics"
+      ]
+    },
+    {
+      "title": "Learning from Imperfect Demonstrations via Temporal Behavior Tree-Guided Trajectory Repair",
+      "authors": [
+        "Aniruddh G. Puranic",
+        "Sebastian Schirmer",
+        "John S. Baras",
+        "Calin Belta"
+      ],
+      "summary": "Learning robot control policies from demonstrations is a powerful paradigm, yet real-world data is often suboptimal, noisy, or otherwise imperfect, posing significant challenges for imitation and reinforcement learning. In this work, we present a formal framework that leverages Temporal Behavior Trees (TBT), an extension of Signal Temporal Logic (STL) with Behavior Tree semantics, to repair suboptimal trajectories prior to their use in downstream policy learning. Given demonstrations that violate a TBT specification, a model-based repair algorithm corrects trajectory segments to satisfy the formal constraints, yielding a dataset that is both logically consistent and interpretable. The repaired trajectories are then used to extract potential functions that shape the reward signal for reinforcement learning, guiding the agent toward task-consistent regions of the state space without requiring knowledge of the agent's kinematic model. We demonstrate the effectiveness of this framework on discrete grid-world navigation and continuous single and multi-agent reach-avoid tasks, highlighting its potential for data-efficient robot learning in settings where high-quality demonstrations cannot be assumed.",
+      "published": "2026-04-05T18:49:45Z",
+      "updated": "2026-04-05T18:49:45Z",
+      "arxiv_id": "2604.04225v1",
+      "abs_url": "http://arxiv.org/abs/2604.04225v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.04225v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO",
+        "eess.SY"
+      ],
+      "comment": "12 pages, 4 figures. This work has been submitted to the IEEE for possible publication",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "导航与移动",
+        "强化/模仿学习",
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "导航与移动",
+      "score": 10,
+      "anchor_terms": [
+        "navigation",
+        "reinforcement learning",
+        "robot",
+        "robot learning"
+      ],
+      "matched_terms": [
+        "navigation",
+        "policy learning",
+        "reinforcement learning",
+        "robot",
+        "robot learning"
+      ]
+    },
+    {
+      "title": "RK-MPC: Residual Koopman Model Predictive Control for Quadruped Locomotion in Offroad Environments",
+      "authors": [
+        "Sriram S. K. S. Narayanan",
+        "Umesh Vaidya"
+      ],
+      "summary": "This paper presents Residual Koopman MPC (RK-MPC), a Koopman-based, data-driven model predictive control framework for quadruped locomotion that improves prediction fidelity while preserving real-time tractability. RK-MPC augments a nominal template model with a compact linear residual predictor learned from data in lifted coordinates, enabling systematic correction of model mismatch induced by contact variability and terrain disturbances with provable bounds on multi-step prediction error. The learned residual model is embedded within a convex quadratic-program MPC formulation, yielding a receding-horizon controller that runs onboard at 500 Hz and retains the structure and constraint-handling advantages of optimization-based control. We evaluate RK-MPC in both Gazebo simulation and Unitree Go1 hardware experiments, demonstrating reliable blind locomotion across contact disturbances, multiple gait schedules, and challenging off-road terrains including grass, gravel, snow, and ice. We further compare against Koopman/EDMD baselines using alternative observable dictionaries, including monomial and $SE(3)$-structured bases, and show that the residual correction improves multi-step prediction and closed-loop performance while reducing sensitivity to the choice of observables. Overall, RK-MPC provides a practical, hardware-validated pathway for data-driven predictive control of quadrupeds in unstructured environments. See https://sriram-2502.github.io/rk-mpc for implementation videos.",
+      "published": "2026-04-05T18:43:23Z",
+      "updated": "2026-04-07T21:39:59Z",
+      "arxiv_id": "2604.04221v2",
+      "abs_url": "http://arxiv.org/abs/2604.04221v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.04221v2",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "导航与移动",
+        "世界模型与仿真",
+        "四足机器人"
+      ],
+      "topic": "导航与移动",
+      "score": 6,
+      "anchor_terms": [
+        "locomotion",
+        "quadruped"
+      ],
+      "matched_terms": [
+        "locomotion",
+        "quadruped"
+      ]
+    },
+    {
+      "title": "DriveVA: Video Action Models are Zero-Shot Drivers",
+      "authors": [
+        "Mengmeng Liu",
+        "Diankun Zhang",
+        "Jiuming Liu",
+        "Jianfeng Cui",
+        "Hongwei Xie",
+        "Guang Chen",
+        "Hangjun Ye",
+        "Michael Ying Yang",
+        "Francesco Nex",
+        "Hao Cheng"
+      ],
+      "summary": "Generalization is a central challenge in autonomous driving, as real-world deployment requires robust performance under unseen scenarios, sensor domains, and environmental conditions. Recent world-model-based planning methods have shown strong capabilities in scene understanding and multi-modal future prediction, yet their generalization across datasets and sensor configurations remains limited. In addition, their loosely coupled planning paradigm often leads to poor video-trajectory consistency during visual imagination. To overcome these limitations, we propose DriveVA, a novel autonomous driving world model that jointly decodes future visual forecasts and action sequences in a shared latent generative process. DriveVA inherits rich priors on motion dynamics and physical plausibility from well-pretrained large-scale video generation models to capture continuous spatiotemporal evolution and causal interaction patterns. To this end, DriveVA employs a DiT-based decoder to jointly predict future action sequences (trajectories) and videos, enabling tighter alignment between planning and scene evolution. We also introduce a video continuation strategy to strengthen long-duration rollout consistency. DriveVA achieves an impressive closed-loop performance of 90.9 PDM score on the challenge NAVSIM. Extensive experiments also demonstrate the zero-shot capability and cross-domain generalization of DriveVA, which reduces average L2 error and collision rate by 78.9% and 83.3% on nuScenes and 52.5% and 52.4% on the Bench2drive built on CARLA v2 compared with the state-of-the-art world-model-based planner.",
+      "published": "2026-04-05T17:43:16Z",
+      "updated": "2026-04-05T17:43:16Z",
+      "arxiv_id": "2604.04198v1",
+      "abs_url": "http://arxiv.org/abs/2604.04198v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.04198v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "世界模型与仿真",
+        "数据集/评测",
+        "感知与3D理解"
+      ],
+      "topic": "世界模型与仿真",
+      "score": 3,
+      "anchor_terms": [
+        "world model"
+      ],
+      "matched_terms": [
+        "world model"
+      ]
+    },
+    {
+      "title": "Belief-Aware VLM Model for Human-like Reasoning",
+      "authors": [
+        "Anshul Nayak",
+        "Shahil Shaik",
+        "Yue Wang"
+      ],
+      "summary": "Traditional neural network models for intent inference rely heavily on observable states and struggle to generalize across diverse tasks and dynamic environments. Recent advances in Vision Language Models (VLMs) and Vision Language Action (VLA) models introduce common-sense reasoning through large-scale multimodal pretraining, enabling zero-shot performance across tasks. However, these models still lack explicit mechanisms to represent and update belief, limiting their ability to reason like humans or capture the evolving human intent over long-horizon. To address this, we propose a belief-aware VLM framework that integrates retrieval-based memory and reinforcement learning. Instead of learning an explicit belief model, we approximate belief using a vector-based memory that retrieves relevant multimodal context, which is incorporated into the VLM for reasoning. We further refine decision-making using a reinforcement learning policy over the VLM latent space. We evaluate our approach on publicly available VQA datasets such as HD-EPIC and demonstrate consistent improvements over zero-shot baselines, highlighting the importance of belief-aware reasoning.",
+      "published": "2026-04-05T17:36:26Z",
+      "updated": "2026-04-05T17:36:26Z",
+      "arxiv_id": "2604.09686v1",
+      "abs_url": "http://arxiv.org/abs/2604.09686v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.09686v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "comment": "6 Pages, 3 figures, 1 Table",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "VLA/多模态策略",
+        "强化/模仿学习",
+        "数据集/评测"
+      ],
+      "topic": "VLA/多模态策略",
+      "score": 4,
+      "anchor_terms": [
+        "vision language action",
+        "vla"
+      ],
+      "matched_terms": [
+        "reinforcement learning",
+        "vision language action",
+        "vla"
+      ]
+    },
+    {
+      "title": "Robots Need Some Education: On the complexity of learning in evolutionary robotics",
+      "authors": [
+        "Fuda van Diggelen"
+      ],
+      "summary": "Evolutionary Robotics and Robot Learning are two fields in robotics that aim to automatically optimize robot designs. The key difference between them lies in what is being optimized and the time scale involved. Evolutionary Robotics is a field that applies evolutionary computation techniques to evolve the morphologies or controllers, or both. Robot Learning, on the other hand, involves any learning technique aimed at optimizing a robot's controller in a given morphology. In terms of time scales, evolution occurs across multiple generations, whereas learning takes place within the `lifespan' of an individual robot. Integrating Robot Learning with Evolutionary Robotics requires the careful design of suitable learning algorithms in the context of evolutionary robotics. The effects of introducing learning into the evolutionary process are not well-understood and can thus be tricky. This thesis investigates these intricacies and presents several learning algorithms developed for an Evolutionary Robotics context.",
+      "published": "2026-04-05T17:34:40Z",
+      "updated": "2026-04-05T17:34:40Z",
+      "arxiv_id": "2604.04196v1",
+      "abs_url": "http://arxiv.org/abs/2604.04196v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.04196v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "comment": "PhD thesis",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "其他机器人"
+      ],
+      "topic": "其他机器人",
+      "score": 12,
+      "anchor_terms": [
+        "robot",
+        "robot learning",
+        "robotic",
+        "robotics"
+      ],
+      "matched_terms": [
+        "robot",
+        "robot learning",
+        "robotic",
+        "robotics"
+      ]
+    },
+    {
+      "title": "2026 Roadmap on Artificial Intelligence and Machine Learning for Smart Manufacturing",
+      "authors": [
+        "Jay Lee",
+        "Hanqi Su",
+        "Marco Macchi",
+        "Adalberto Polenghi",
+        "Wei Wu",
+        "Zhiheng Zhao",
+        "George Q. Huang",
+        "Kiva Allgood",
+        "Devendra Jain",
+        "Benedikt Gieger",
+        "Vibhor Pandhare",
+        "Soumyabrata Bhattacharjee",
+        "Ram Mohril",
+        "Lingbao Kong",
+        "Qiyuan Wang",
+        "Xinlan Tang",
+        "Sungjong Kim",
+        "Chan Hee Park",
+        "Byeng D. Youn",
+        "Guo Dong Goh",
+        "Xi Huang",
+        "Wai Yee Yeong",
+        "Yung C Shin",
+        "He Zhang",
+        "Zitong Wang",
+        "Fei Tao",
+        "Jagjit Singh Srai",
+        "Satyandra K. Gupta",
+        "Byung Gun Joung",
+        "Albin John",
+        "John W. Sutherland",
+        "Sang Won Lee",
+        "Olga Fink",
+        "Vinay Sharma",
+        "Faez Ahmed",
+        "Wei Chen",
+        "Mark Fuge",
+        "Arild Waaler",
+        "Martin G. Skjæveland",
+        "Dimitris Kyritsis",
+        "Wei Chen",
+        "VispiNevile Karkaria",
+        "Yi-Ping Chen",
+        "Ying-Kuan Tsai",
+        "Joseph Cohen",
+        "Xun Huan",
+        "Jing Lin",
+        "Liangwei Zhang",
+        "Gregory W. Vogl",
+        "Aaron W. Cornelius",
+        "Xiaodong Jia",
+        "Dai-Yan Ji",
+        "Takanobu Minami",
+        "Ruoxin Wang"
+      ],
+      "summary": "The evolution of artificial intelligence (AI) and machine learning (ML) is reshaping smart manufacturing by providing new capabilities for efficiency, adaptability, and autonomy across industrial value chains. However, the deployment of AI and ML in industrial settings still faces critical challenges, including the complexity of industrial big data, effective data management, integration with heterogeneous sensing and control systems, and the demand for trustworthy, explainable, and reliable operation in high-stakes industrial environments. In this roadmap, we present a comprehensive perspective on the foundations, applications, and emerging directions of AI and ML in smart manufacturing. It is structured in three parts. The first highlights the foundations and trends that frame the evolution of AI in smart manufacturing. The second focuses on key topics where AI is already enabling advances, including industrial big data analytics, advanced sensing and perception, autonomous systems, additive and laser-based manufacturing, digital twins, robotics, supply chain and logistics optimization, and sustainable manufacturing. The third section explores non-traditional ML approaches that are opening new frontiers, such as physics-informed AI, generative AI, semantic AI, advanced digital twins, explainable AI, RAMS, data-centric metrology, LLMs, and foundation models for highly connected and complex manufacturing systems. By identifying both opportunities and remaining barriers across these areas, this roadmap outlines the advances needed in methods, integration strategies, and industrial adoption. We hope this roadmap will serve as a guide for researchers, engineers, and practitioners to accelerate innovation, align academic and industrial priorities, and ensure that AI-driven smart manufacturing delivers reliable, sustainable, and scalable impact for the future of manufacturing ecosystems.",
+      "published": "2026-04-05T17:34:26Z",
+      "updated": "2026-04-05T17:34:26Z",
+      "arxiv_id": "2605.00839v1",
+      "abs_url": "http://arxiv.org/abs/2605.00839v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.00839v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "This paper has been accepted for publication in the Journal Machine Learning: Engineering",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "世界模型与仿真",
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "世界模型与仿真",
+      "score": 5,
+      "anchor_terms": [
+        "robot",
+        "robotic",
+        "robotics"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "robot",
+        "robotic",
+        "robotics"
+      ]
+    },
+    {
+      "title": "Adaptive Action Chunking at Inference-time for Vision-Language-Action Models",
+      "authors": [
+        "Yuanchang Liang",
+        "Xiaobo Wang",
+        "Kai Wang",
+        "Shuo Wang",
+        "Xiaojiang Peng",
+        "Haoyu Chen",
+        "David Kim Huat Chua",
+        "Prahlad Vadakkepat"
+      ],
+      "summary": "In Vision-Language-Action (VLA) models, action chunking (i.e., executing a sequence of actions without intermediate replanning) is a key technique to improve robotic manipulation abilities. However, a large chunk size reduces the model's responsiveness to new information, while a small one increases the likelihood of mode-jumping, jerky behavior resulting from discontinuities between chunks. Therefore, selecting the optimal chunk size is an urgent demand to balance the model's reactivity and consistency. Unfortunately, a dominant trend in current VLA models is an empirical fixed chunk length at inference-time, hindering their superiority and scalability across diverse manipulation tasks. To address this issue, we propose a novel Adaptive Action Chunking (AAC) strategy, which exploits action entropy as the cue to adaptively determine the chunk size based on current predictions. Extensive experiments on a wide range of simulated and real-world robotic manipulation tasks have demonstrated that our approach substantially improves performance over the state-of-the-art alternatives. The videos and source code are publicly available at https://lance-lot.github.io/adaptive-chunking.github.io/.",
+      "published": "2026-04-05T16:03:32Z",
+      "updated": "2026-04-10T12:28:01Z",
+      "arxiv_id": "2604.04161v2",
+      "abs_url": "http://arxiv.org/abs/2604.04161v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.04161v2",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "accepted by CVPR 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "VLA/多模态策略",
+        "其他机器人"
+      ],
+      "topic": "机器人操作",
+      "score": 22,
+      "anchor_terms": [
+        "manipulation",
+        "real-world robot",
+        "robot",
+        "robotic",
+        "vision-language-action",
+        "vla"
+      ],
+      "matched_terms": [
+        "action chunking",
+        "manipulation",
+        "real-world robot",
+        "robot",
+        "robotic",
+        "vision-language-action",
+        "vla",
+        "vla model"
+      ]
+    },
+    {
+      "title": "Learning Dexterous Grasping from Sparse Taxonomy Guidance",
+      "authors": [
+        "Juhan Park",
+        "Taerim Yoon",
+        "Seungmin Kim",
+        "Joonggil Kim",
+        "Wontae Ye",
+        "Jeongeun Park",
+        "Yoonbyung Chai",
+        "Geonwoo Cho",
+        "Geunwoo Cho",
+        "Dohyeong Kim",
+        "Kyungjae Lee",
+        "Yongjae Kim",
+        "Sungjoon Choi"
+      ],
+      "summary": "Dexterous manipulation requires planning a grasp configuration suited to the object and task, which is then executed through coordinated multi-finger control. However, specifying grasp plans with dense pose or contact targets for every object and task is impractical. Meanwhile, end-to-end reinforcement learning from task rewards alone lacks controllability, making it difficult for users to intervene when failures occur. To this end, we present GRIT, a two-stage framework that learns dexterous control from sparse taxonomy guidance. GRIT first predicts a taxonomy-based grasp specification from the scene and task context. Conditioned on this sparse command, a policy generates continuous finger motions that accomplish the task while preserving the intended grasp structure. Our result shows that certain grasp taxonomies are more effective for specific object geometries. By leveraging this relationship, GRIT improves generalization to novel objects over baselines and achieves an overall success rate of 87.9%. Moreover, real-world experiments demonstrate controllability, enabling grasp strategies to be adjusted through high-level taxonomy selection based on object geometry and task intent.",
+      "published": "2026-04-05T14:53:43Z",
+      "updated": "2026-04-05T14:53:43Z",
+      "arxiv_id": "2604.04138v1",
+      "abs_url": "http://arxiv.org/abs/2604.04138v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.04138v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "强化/模仿学习",
+        "人形与灵巧",
+        "数据集/评测"
+      ],
+      "topic": "机器人操作",
+      "score": 11,
+      "anchor_terms": [
+        "grasp",
+        "grasping",
+        "manipulation",
+        "reinforcement learning"
+      ],
+      "matched_terms": [
+        "dexterous",
+        "dexterous manipulation",
+        "grasp",
+        "grasping",
+        "manipulation",
+        "reinforcement learning"
+      ]
+    },
+    {
+      "title": "Hypothesis Graph Refinement: Hypothesis-Driven Exploration with Cascade Error Correction for Embodied Navigation",
+      "authors": [
+        "Peixin Chen",
+        "Guoxi Zhang",
+        "Jianwei Ma",
+        "Qing Li"
+      ],
+      "summary": "Embodied agents must explore partially observed environments while maintaining reliable long-horizon memory. Existing graph-based navigation systems improve scalability, but they often treat unexplored regions as semantically unknown, leading to inefficient frontier search. Although vision-language models (VLMs) can predict frontier semantics, erroneous predictions may be embedded into memory and propagate through downstream inferences, causing structural error accumulation that confidence attenuation alone cannot resolve. These observations call for a framework that can leverage semantic predictions for directed exploration while systematically retracting errors once new evidence contradicts them. We propose Hypothesis Graph Refinement (HGR), a framework that represents frontier predictions as revisable hypothesis nodes in a dependency-aware graph memory. HGR introduces (1) semantic hypothesis module, which estimates context-conditioned semantic distributions over frontiers and ranks exploration targets by goal relevance, travel cost, and uncertainty, and (2) verification-driven cascade correction, which compares on-site observations against predicted semantics and, upon mismatch, retracts the refuted node together with all its downstream dependents. Unlike additive map-building, this allows the graph to contract by pruning erroneous subgraphs, keeping memory reliable throughout long episodes. We evaluate HGR on multimodal lifelong navigation (GOAT-Bench) and embodied question answering (A-EQA, EM-EQA). HGR achieves 72.41% success rate and 56.22% SPL on GOAT-Bench, and shows consistent improvements on both QA benchmarks. Diagnostic analysis reveals that cascade correction eliminates approximately 20% of structurally redundant hypothesis nodes and reduces revisits to erroneous regions by 4.5x, with specular and transparent surfaces accounting for 67% of corrected prediction errors.",
+      "published": "2026-04-05T13:02:18Z",
+      "updated": "2026-04-05T13:02:18Z",
+      "arxiv_id": "2604.04108v1",
+      "abs_url": "http://arxiv.org/abs/2604.04108v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.04108v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "导航与移动",
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "导航与移动",
+      "score": 19,
+      "anchor_terms": [
+        "embodied",
+        "embodied agent",
+        "embodied agents",
+        "navigation"
+      ],
+      "matched_terms": [
+        "embodied",
+        "embodied agent",
+        "embodied agents",
+        "embodied navigation",
+        "embodied question answering",
+        "navigation"
+      ]
+    },
+    {
+      "title": "Adapting Neural Robot Dynamics on the Fly for Predictive Control",
+      "authors": [
+        "Abdullah Altawaitan",
+        "Nikolay Atanasov"
+      ],
+      "summary": "Accurate dynamics models are critical for the design of predictive controller for autonomous mobile robots. Physics-based models are often too simple to capture relevant real-world effects, while data-driven models are data-intensive and slow to train. We introduce an approach for fast adaptation of neural robot dynamic models that combines offline training with efficient online updates. Our approach learns an incremental neural dynamics model offline and performs low-rank second-order parameter adaptation online, enabling rapid updates without full retraining. We demonstrate the approach on a real quadrotor robot, achieving robust predictive tracking control in novel operational conditions.",
+      "published": "2026-04-05T09:45:26Z",
+      "updated": "2026-04-05T09:45:26Z",
+      "arxiv_id": "2604.04039v1",
+      "abs_url": "http://arxiv.org/abs/2604.04039v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.04039v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "This work has been submitted to the IEEE for possible publication",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "导航与移动",
+        "其他机器人"
+      ],
+      "topic": "导航与移动",
+      "score": 6,
+      "anchor_terms": [
+        "robot"
+      ],
+      "matched_terms": [
+        "mobile robot",
+        "robot"
+      ]
+    },
+    {
+      "title": "Dynamic Whole-Body Dancing with Humanoid Robots -- A Model-Based Control Approach",
+      "authors": [
+        "Shibowen Zhang",
+        "Jiayang Wu",
+        "Guannan Liu",
+        "Helin Zhu",
+        "Junjie Liu",
+        "Zhehan Li",
+        "Junhong Guo",
+        "Xiaokun Leng",
+        "Hangxin Liu",
+        "Jingwen Zhang",
+        "Jikai Wang",
+        "Zonghai Chen",
+        "Zhicheng He",
+        "Jiayi Wang",
+        "Yao Su"
+      ],
+      "summary": "This paper presents an integrated model-based framework for generating and executing dynamic whole-body dance motions on humanoid robots. The framework operates in two stages: offline motion generation and online motion execution, both leveraging future state prediction to enable robust and dynamic dance motions in real-world environments. In the offline motion generation stage, human dance demonstrations are captured via a motion capture (MoCap) system, retargeted to the robot by solving a Quadratic Programming (QP) problem, and further refined using Trajectory Optimization (TO) to ensure dynamic feasibility. In the online motion execution stage, a centroidal dynamics-based Model Predictive Control (MPC) framework tracks the planned motions in real time and proactively adjusts swing foot placement to adapt to real world disturbances. We validate our framework on the full-size humanoid robot Kuavo 4Pro, demonstrating the dynamic dance motions both in simulation and in a four-minute live public performance with a team of four robots. Experimental results show that longer prediction horizons improve both motion expressiveness in planning and stability in execution.",
+      "published": "2026-04-05T07:17:33Z",
+      "updated": "2026-04-05T07:17:33Z",
+      "arxiv_id": "2604.03999v1",
+      "abs_url": "http://arxiv.org/abs/2604.03999v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03999v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "世界模型与仿真",
+        "人形与灵巧",
+        "双足机器人"
+      ],
+      "topic": "世界模型与仿真",
+      "score": 8,
+      "anchor_terms": [
+        "humanoid",
+        "robot"
+      ],
+      "matched_terms": [
+        "humanoid",
+        "robot",
+        "trajectory optimization"
+      ]
+    },
+    {
+      "title": "VA-FastNavi-MARL: Real-Time Robot Control with Multimedia-Driven Meta-Reinforcement Learning",
+      "authors": [
+        "Yang Zhang",
+        "Shengxi Jing",
+        "Fengxiang Wang",
+        "Yuan Feng",
+        "Hong Wang"
+      ],
+      "summary": "Interpreting dynamic, heterogeneous multimedia commands with real-time responsiveness is critical for Human-Robot Interaction. We present VA-FastNavi-MARL, a framework that aligns asynchronous audio-visual inputs into a unified latent representation. By treating diverse instructions as a distribution of navigable goals via Meta-Reinforcement Learning, our method enables rapid adaptation to unseen directives with negligible inference overhead. Unlike approaches bottlenecked by heavy sensory processing, our modality-agnostic stream ensures seamless, low-latency control. Validation on a multi-arm workspace confirms that VA-FastNavi-MARL significantly outperforms baselines in sample efficiency and maintains robust, real-time execution even under noisy multimedia streams.",
+      "published": "2026-04-05T07:05:49Z",
+      "updated": "2026-04-05T07:05:49Z",
+      "arxiv_id": "2604.03998v1",
+      "abs_url": "http://arxiv.org/abs/2604.03998v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03998v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "Accepted to the 2026 IEEE International Conference on Multimedia and Expo (ICME 2026)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "强化/模仿学习",
+        "其他机器人"
+      ],
+      "topic": "强化/模仿学习",
+      "score": 8,
+      "anchor_terms": [
+        "reinforcement learning",
+        "robot"
+      ],
+      "matched_terms": [
+        "human-robot interaction",
+        "reinforcement learning",
+        "robot"
+      ]
+    },
+    {
+      "title": "VLA-Forget: Vision-Language-Action Unlearning for Embodied Foundation Models",
+      "authors": [
+        "Ravi Ranjan",
+        "Agoritsa Polyzou"
+      ],
+      "summary": "Vision-language-action (VLA) models are emerging as embodied foundation models for robotic manipulation, but their deployment introduces a new unlearning challenge: removing unsafe, spurious, or privacy-sensitive behaviors without degrading perception, language grounding, and action control. In OpenVLA-style policies, behavior is produced through a fused visual encoder, a cross-modal projector, and a language backbone that predicts tokenized robot actions, so undesirable knowledge can be distributed across perception, alignment, and reasoning/action layers rather than confined to a single module. Consequently, partial unlearning applied only to the vision stack or only to the language backbone is often insufficient, while conventional unlearning baselines designed for standalone vision or language models may leave residual forgetting or incur unnecessary utility loss in embodied settings. We propose VLA-Forget, a hybrid unlearning framework that combines ratio-aware selective editing for perception and cross-modal specificity with layer-selective reasoning/action unlearning for utility-preserving forgetting. VLA-Forget jointly optimizes three objectives: targeted forgetting, perceptual preservation, and reasoning retention, through staged updates over the visual encoder, projector, and upper action-generating transformer blocks. Across forget-set behavior probes and retain-task evaluations, VLA-Forget improves forgetting efficacy by 10%, preserves perceptual specificity by 22%, retains reasoning and task success by 9%, and reduces post-quantization recovery by 55% relative to strong unlearning baselines.",
+      "published": "2026-04-05T04:23:18Z",
+      "updated": "2026-04-22T18:43:28Z",
+      "arxiv_id": "2604.03956v2",
+      "abs_url": "http://arxiv.org/abs/2604.03956v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.03956v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "18 pages, 9 figures, Accepted to ACL-2026, KnowFM",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "VLA/多模态策略",
+        "数据集/评测",
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "机器人操作",
+      "score": 16,
+      "anchor_terms": [
+        "embodied",
+        "manipulation",
+        "openvla",
+        "robot",
+        "robotic",
+        "vision-language-action",
+        "vla"
+      ],
+      "matched_terms": [
+        "embodied",
+        "foundation model",
+        "manipulation",
+        "openvla",
+        "robot",
+        "robotic",
+        "vision-language-action",
+        "vla"
+      ]
+    },
+    {
+      "title": "Distributed Nonlinear Control of Networked Two-Wheeled Robots under Adversarial Interactions",
+      "authors": [
+        "Moh Kamalul Wafi",
+        "Ahmad Ataka",
+        "Yul Y. Nazaruddin",
+        "Bayu Jayawardhana"
+      ],
+      "summary": "This paper studies distributed trajectory tracking for networks of nonholonomic mobile robots under adversarial information exchange. An exact global input--output feedback linearization scheme is developed to regulate planar position outputs, yielding linear error dynamics without prescribing internal state trajectories. To mitigate corrupted neighbor information, a resilient desired-signal construction is proposed that combines local redundancy with trusted in-neighbor signals, without requiring adversary detection or isolation. When sufficient redundancy is available, the method suppresses adversarial influence and recovers nominal tracking performance. If redundancy conditions are violated, adversarial effects enter as bounded disturbances and the tracking error remains ultimately bounded. Simulation results on star, cyclic, and path topologies validate the analysis and demonstrate the superior resilience of cyclic networks due to distributed information propagation.",
+      "published": "2026-04-05T00:55:09Z",
+      "updated": "2026-04-05T00:55:09Z",
+      "arxiv_id": "2604.03917v1",
+      "abs_url": "http://arxiv.org/abs/2604.03917v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03917v1",
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "导航与移动",
+        "世界模型与仿真",
+        "其他机器人"
+      ],
+      "topic": "导航与移动",
+      "score": 6,
+      "anchor_terms": [
+        "robot"
+      ],
+      "matched_terms": [
+        "mobile robot",
+        "robot",
+        "wheeled robot"
+      ]
+    },
+    {
+      "title": "DC-Ada: Reward-Only Decentralized Sensor Adaptation for Heterogeneous Multi-Robot Teams",
+      "authors": [
+        "Saad Alqithami"
+      ],
+      "summary": "Heterogeneity is a defining feature of deployed multi-robot teams: platforms often differ in sensing modalities, ranges, fields of view, and failure patterns. Controllers trained under nominal sensing can degrade sharply when deployed on robots with missing or mismatched sensors, even when the task and action interface are unchanged. We present DC-Ada, a reward-only decentralized adaptation method that keeps a pretrained shared policy frozen and instead adapts compact per-robot observation transforms to map heterogeneous sensing into a fixed inference interface. DC-Ada is gradient-free and communication-minimal: it uses budgeted accept/reject random search with short common-random-number rollouts under a strict step budget. We evaluate DC-Ada against four baselines in a deterministic 2D multi-robot simulator covering warehouse logistics, search and rescue, and collaborative mapping, across four heterogeneity regimes (H0--H3) and five seeds with a matched budget of $200{,}000$ joint environment steps per run. Results show that heterogeneity can substantially degrade a frozen shared policy and that no single mitigation dominates across all tasks and metrics. Observation normalization is strongest for reward robustness in warehouse logistics and competitive in search and rescue, while the frozen shared policy is strongest for reward in collaborative mapping. DC-Ada offers a useful complementary operating point: it improves completion most clearly in severe coverage-based mapping while requiring only scalar team returns and no policy fine-tuning or persistent communication. These results position DC-Ada as a practical deploy-time adaptation method for heterogeneous teams.",
+      "published": "2026-04-05T00:15:49Z",
+      "updated": "2026-04-29T15:52:51Z",
+      "arxiv_id": "2604.03905v2",
+      "abs_url": "http://arxiv.org/abs/2604.03905v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.03905v2",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "世界模型与仿真",
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "世界模型与仿真",
+      "score": 6,
+      "anchor_terms": [
+        "robot"
+      ],
+      "matched_terms": [
+        "robot",
+        "simulator"
+      ]
+    }
+  ]
+}

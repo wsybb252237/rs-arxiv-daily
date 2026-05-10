@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="遥感大模型 arXiv 日报归档，自动抓取遥感目标检测、分割、变化检测、场景分类、图像生成、基础模型、视觉-语言模型等方向最新论文。"
+    />
+    <title>遥感大模型 arXiv 日报 · 归档</title>
+    <script src="assets/theme.js"></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="assets/app.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Remote Sensing Large Model Papers</p>
+          <h1>遥感大模型 arXiv 日报 · 归档</h1>
+          <p class="lede">
+            聚焦遥感目标检测、语义/实例分割、变化检测、场景分类、图像生成与重建、基础模型、视觉-语言模型、多模态融合与各类遥感图像类型。
+          </p>
+        </div>
+        <div class="source-block" aria-label="数据源">
+          <span class="source-label">数据源</span>
+          <a href="https://arxiv.org/" target="_blank" rel="noreferrer">arxiv.org</a>
+          <span class="source-meta">每日约 08:00 更新</span>
+          <div class="source-actions">
+            <a class="source-secondary" href="rules.html">规则配置</a>
+            <button class="source-secondary theme-toggle" type="button" data-theme-toggle>
+              <i data-lucide="moon" aria-hidden="true"></i>
+              <span data-theme-label>暗色</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <section class="metrics" aria-label="归档统计">
+        <article class="metric">
+          <span class="metric-label">最新归档</span>
+          <strong id="latestDate">--</strong>
+        </article>
+        <article class="metric">
+          <span class="metric-label">论文总数</span>
+          <strong id="paperCount">0</strong>
+        </article>
+        <article class="metric">
+          <span class="metric-label">覆盖日期</span>
+          <strong id="dateCount">0</strong>
+        </article>
+        <article class="metric">
+          <span class="metric-label">更新时间</span>
+          <strong id="generatedAt">--</strong>
+        </article>
+      </section>
+
+      <main class="workspace">
+        <aside class="rail" aria-label="筛选">
+          <div class="control-block">
+            <label class="field-label" for="searchInput">检索</label>
+            <div class="search-box">
+              <i data-lucide="search" aria-hidden="true"></i>
+              <input id="searchInput" type="search" placeholder="标题 / 作者 / 摘要 / arXiv ID" autocomplete="off" />
+            </div>
+          </div>
+
+          <div class="control-block">
+            <div class="field-label">标签</div>
+            <div id="labelFilters" class="segmented" role="listbox" aria-label="标签筛选"></div>
+          </div>
+
+          <div class="control-block">
+            <div class="field-label">日期</div>
+            <div id="dateFilters" class="date-list" aria-label="日期筛选"></div>
+          </div>
+        </aside>
+
+        <section class="results-panel" aria-live="polite">
+          <div class="results-toolbar">
+            <div>
+              <span class="field-label">论文列表</span>
+              <h2 id="resultTitle">全部归档</h2>
+            </div>
+            <div class="toolbar-actions">
+              <button id="clearFilters" class="icon-button" type="button" title="清除筛选" aria-label="清除筛选">
+                <i data-lucide="rotate-ccw" aria-hidden="true"></i>
+              </button>
+              <a
+                class="icon-button"
+                href="https://arxiv.org/list/cs.CV/recent"
+                target="_blank"
+                rel="noreferrer"
+                title="打开 arXiv Computer Vision"
+                aria-label="打开 arXiv Computer Vision"
+              >
+                <i data-lucide="external-link" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div id="activeSummary" class="active-summary"></div>
+          <div id="paperList" class="paper-list"></div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

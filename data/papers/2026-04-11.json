@@ -1,0 +1,599 @@
+{
+  "date": "2026-04-11",
+  "generated_at": "2026-05-09T15:02:18.234227+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.RO OR cat:cs.AI OR cat:cs.CV OR cat:cs.LG OR cat:cs.CL OR cat:cs.MA OR cat:cs.HC OR cat:stat.ML OR cat:eess.SY OR cat:eess.IV) AND submittedDate:[202604110000 TO 202604112359]",
+  "total_fetched": 205,
+  "total_matched": 14,
+  "papers": [
+    {
+      "title": "COSMIK-MPPI: Scaling Constrained Model Predictive Control to Collision Avoidance in Close-Proximity Dynamic Human Environments",
+      "authors": [
+        "Ege Gursoy",
+        "Maxime Sabbah",
+        "Arthur Haffemayer",
+        "Joao Cavalcanti Santos",
+        "Pietro Noah Crestaz",
+        "Vladimir Petrik",
+        "Nicolas Mansard",
+        "Vincent Bonnet"
+      ],
+      "summary": "Ensuring safe physical interaction between torque-controlled manipulators and humans is essential for deploying robots in everyday environments. Model Predictive Control (MPC) has emerged as a suitable framework thanks to its capacity to handle hard constraints, provide strong guarantees and zero-shot adaptability through predictive reasoning. However, Gradient-Based MPC (GB-MPC) solvers have demonstrated limited performance for collision avoidance in complex environments. Sampling-based approaches such as Model Predictive Path Integral (MPPI) control offer an alternative via stochastic rollouts, but enforcing safety via additive penalties is inherently fragile, as it provides no formal constraint satisfaction guarantees. We propose a collision avoidance framework called COSMIK-MPPI combining MPPI with the toolbox for human motion estimation RT-COSMIK and the Constraints-as-Terminations transcription, which enforces safety by treating constraint violations as terminal events, without relying on large penalty terms or explicit human motion prediction. The proposed approach is evaluated against state-of-the-art GB-MPC and vanilla MPPI in simulation and on a real manipulator arm. Results show that COSMIK-MPPI achieves a 100% task success rate with a constant computation time (22 ms), largely outperforming GB-MPC. In simulated infeasible scenarios, COSMIK-MPPI consistently generates collision-free trajectories, contrary to vanilla MPPI. These properties enabled safe execution of complex real-world human-robot interaction tasks in shared workspaces using an affordable markerless human motion estimator, demonstrating a robust, compliant, and practical solution for predictive collision avoidance (cf. results showcased at https://exquisite-parfait-ffa925.netlify.app)",
+      "published": "2026-04-11T22:04:22Z",
+      "updated": "2026-04-11T22:04:22Z",
+      "arxiv_id": "2604.10358v1",
+      "abs_url": "http://arxiv.org/abs/2604.10358v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.10358v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "世界模型与仿真",
+        "机械臂"
+      ],
+      "topic": "世界模型与仿真",
+      "score": 6,
+      "anchor_terms": [
+        "manipulator",
+        "robot"
+      ],
+      "matched_terms": [
+        "human-robot interaction",
+        "manipulator",
+        "robot"
+      ]
+    },
+    {
+      "title": "Trajectory-based actuator identification via differentiable simulation",
+      "authors": [
+        "Vyacheslav Kovalev",
+        "Ekaterina Chaikovskaia",
+        "Egor Davydenko",
+        "Roman Gorbachev"
+      ],
+      "summary": "Accurate actuation models are critical for bridging the gap between simulation and real robot behavior, yet obtaining high-fidelity actuator dynamics typically requires dedicated test stands and torque sensing. We present a trajectory-based actuator identification method that uses differentiable simulation to fit system-level actuator models from encoder motion alone. Identification is posed as a trajectory-matching problem: given commanded joint positions and measured joint angles and velocities, we optimize actuator and simulator parameters by backpropagating through the simulator, without torque sensors, current/voltage measurements, or access to embedded motor-control internals. The framework supports multiple model classes, ranging from compact structured parameterizations to neural actuator mappings, within a unified optimization pipeline. On held-out real-robot trajectories for a high-gear-ratio actuator with an embedded PD controller, the proposed torque-sensor-free identification achieves much tighter trajectory alignment than a supervised stand-trained baseline dominated by steady-state data, reducing mean absolute position error from 14.20 mrad to as low as 7.54 mrad (1.88 times). Finally, we demonstrate downstream impact for the same actuator class in a real-robot locomotion study: training policies with the refined actuator model increases travel distance by 46% and reduces rotational deviation by 75% relative to the baseline.",
+      "published": "2026-04-11T21:36:34Z",
+      "updated": "2026-04-16T09:31:43Z",
+      "arxiv_id": "2604.10351v2",
+      "abs_url": "http://arxiv.org/abs/2604.10351v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.10351v2",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "导航与移动",
+        "世界模型与仿真",
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "导航与移动",
+      "score": 6,
+      "anchor_terms": [
+        "locomotion",
+        "robot"
+      ],
+      "matched_terms": [
+        "locomotion",
+        "robot",
+        "simulator"
+      ]
+    },
+    {
+      "title": "Zero-shot World Models Are Developmentally Efficient Learners",
+      "authors": [
+        "Khai Loong Aw",
+        "Klemen Kotar",
+        "Wanhee Lee",
+        "Seungwoo Kim",
+        "Khaled Jedoui",
+        "Rahul Venkatesh",
+        "Lilian Naing Chen",
+        "Michael C. Frank",
+        "Daniel L. K. Yamins"
+      ],
+      "summary": "Young children demonstrate early abilities to understand their physical world, estimating depth, motion, object coherence, interactions, and many other aspects of physical scene understanding. Children are both data-efficient and flexible cognitive systems, creating competence despite extremely limited training data, while generalizing to myriad untrained tasks -- a major challenge even for today's best AI systems. Here we introduce a novel computational hypothesis for these abilities, the Zero-shot Visual World Model (ZWM). ZWM is based on three principles: a sparse temporally-factored predictor that decouples appearance from dynamics; zero-shot estimation through approximate causal inference; and composition of inferences to build more complex abilities. We show that ZWM can be learned from the first-person experience of a single child, rapidly generating competence across multiple physical understanding benchmarks. It also broadly recapitulates behavioral signatures of child development and builds brain-like internal representations. Our work presents a blueprint for efficient and flexible learning from human-scale data, advancing both a computational account for children's early physical understanding and a path toward data-efficient AI systems.",
+      "published": "2026-04-11T19:32:33Z",
+      "updated": "2026-04-11T19:32:33Z",
+      "arxiv_id": "2604.10333v1",
+      "abs_url": "http://arxiv.org/abs/2604.10333v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.10333v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "世界模型与仿真",
+        "数据集/评测",
+        "感知与3D理解"
+      ],
+      "topic": "世界模型与仿真",
+      "score": 2,
+      "anchor_terms": [
+        "world model"
+      ],
+      "matched_terms": [
+        "world model"
+      ]
+    },
+    {
+      "title": "A Coordinate-Invariant Local Representation of Motion and Force Trajectories for Identification and Generalization Across Coordinate Systems",
+      "authors": [
+        "Arno Verduyn",
+        "Erwin Aertbeliën",
+        "Maxim Vochten",
+        "Joris De Schutter"
+      ],
+      "summary": "Identifying the trajectories of rigid bodies and of interaction forces is essential for a wide range of tasks in robotics, biomechanics, and related domains. These tasks include trajectory segmentation, recognition, and prediction. For these tasks, a key challenge lies in achieving consistent results when the trajectory is expressed in different coordinate systems. A way to address this challenge is to utilize trajectory models that can generalize across coordinate systems. The focus of this paper is on such trajectory models obtained by transforming the trajectory into a coordinate-invariant representation. However, coordinate-invariant representations often suffer from sensitivity to measurement noise and the manifestation of singularities in the representation, where the representation is not uniquely defined. This paper aims to address this limitation by introducing the novel Dual-Upper-Triangular Invariant Representation (DUTIR), with improved robustness to singularities, along with its computational algorithm. The proposed representation is formulated at a level of abstraction that makes it applicable to both rigid-body trajectories and interaction-force trajectories, hence making it a versatile tool for robotics, biomechanics, and related domains.",
+      "published": "2026-04-11T14:47:07Z",
+      "updated": "2026-04-11T14:47:07Z",
+      "arxiv_id": "2604.10241v1",
+      "abs_url": "http://arxiv.org/abs/2604.10241v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.10241v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "This preprint has been accepted for presentation at the 17th World Symposium on the Algorithmic Foundations of Robotics (WAFR 2026). The preprint corresponds to the version submitted for peer review",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "其他机器人"
+      ],
+      "topic": "其他机器人",
+      "score": 6,
+      "anchor_terms": [
+        "robot",
+        "robotic",
+        "robotics"
+      ],
+      "matched_terms": [
+        "robot",
+        "robotic",
+        "robotics"
+      ]
+    },
+    {
+      "title": "Glide-in-Place: Foot-Steered Differential-Drive for Hands-Free VR Locomotion",
+      "authors": [
+        "Bin Hu",
+        "Yang Liu",
+        "Xizi Liu",
+        "Qinggerou Xiao",
+        "Xiru Wang",
+        "Zhe Yuan",
+        "Wen Ku",
+        "Xiu Li",
+        "Yun Wang"
+      ],
+      "summary": "Seated VR locomotion in constrained environments, including homes, offices, and transit settings, calls for hardware that is lightweight and deployable, steering that remains continuous enough for curved motion, and a control channel that leaves the hands free for concurrent interaction. Inspired by the steering logic of self-balancing scooters, we present Glide-in-Place, a seated foot locomotion system that maps per-foot fore-aft pressure to a differential-drive model: the two feet act as virtual wheels whose relative drive continuously determines translation and yaw. This lets users move forward, rotate in place, and follow arcs in one unified vocabulary without hand-held input or discrete mode switches. We evaluated Glide-in-Place in a counterbalanced within-subject study with 16 participants against two baselines: joystick control and a seated walking-in-place technique with discrete snap motions. Across two steering-heavy navigation tasks, zig-zag path following with multitasking and curved-path traversal, Glide-in-Place was consistently faster than Seated-WIP, reduced physical demand, and lowered fatigue-related discomfort without significantly differing from joystick control on total VRSQ. We position Glide-in-Place as a deployable hardware-control design point for constrained seated VR: thin insole sensing, continuous foot steering, and lightweight calibration packaged in one compact artifact.",
+      "published": "2026-04-11T14:39:34Z",
+      "updated": "2026-04-11T14:39:34Z",
+      "arxiv_id": "2604.10237v1",
+      "abs_url": "http://arxiv.org/abs/2604.10237v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.10237v1",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "导航与移动"
+      ],
+      "topic": "导航与移动",
+      "score": 3,
+      "anchor_terms": [
+        "locomotion",
+        "navigation"
+      ],
+      "matched_terms": [
+        "locomotion",
+        "navigation"
+      ]
+    },
+    {
+      "title": "Device-Conditioned Neural Architecture Search for Efficient Robotic Manipulation",
+      "authors": [
+        "Yiming Wu",
+        "Huan Wang",
+        "Zhenghao Chen",
+        "Ge Yuan",
+        "Dong Xu"
+      ],
+      "summary": "The growing complexity of visuomotor policies poses significant challenges for deployment with heterogeneous robotic hardware constraints. However, most existing model-efficient approaches for robotic manipulation are device- and model-specific, lack generalizability, and require time-consuming per-device optimization during the adaptation process. In this work, we propose a unified framework named \\textbf{D}evice-\\textbf{C}onditioned \\textbf{Q}uantization-\\textbf{F}or-\\textbf{A}ll (DC-QFA) which amortizes deployment effort with the device-conditioned quantization-aware training and hardware-constrained architecture search. Specifically, we introduce a single supernet that spans a rich design space over network architectures and mixed-precision bit-widths. It is optimized with latency- and memory-aware regularization, guided by per-device lookup tables. With this supernet, for each target platform, we can perform a once-for-all lightweight search to select an optimal subnet without any per-device re-optimization, which enables more generalizable deployment across heterogeneous hardware, and substantially reduces deployment time. To improve long-horizon stability under low precision, we further introduce multi-step on-policy distillation to mitigate error accumulation during closed-loop execution. Extensive experiments on three representative policy backbones, such as DiffusionPolicy-T, MDT-V, and OpenVLA-OFT, demonstrate that our DC-QFA achieves $2\\text{-}3\\times$ acceleration on edge devices, consumer-grade GPUs, and cloud platforms, with negligible performance drop in task success. Real-world evaluations on an Inovo robot equipped with a force/torque sensor further validates that our low-bit DC-QFA policies maintain stable, contact-rich manipulation even under severe quantization.",
+      "published": "2026-04-11T11:36:16Z",
+      "updated": "2026-04-11T11:36:16Z",
+      "arxiv_id": "2604.10170v1",
+      "abs_url": "http://arxiv.org/abs/2604.10170v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.10170v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "comment": "17 pages, 4 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "VLA/多模态策略",
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "机器人操作",
+      "score": 13,
+      "anchor_terms": [
+        "manipulation",
+        "openvla",
+        "robot",
+        "robotic"
+      ],
+      "matched_terms": [
+        "manipulation",
+        "openvla",
+        "robot",
+        "robotic",
+        "visuomotor"
+      ]
+    },
+    {
+      "title": "MoRI: Mixture of RL and IL Experts for Long-Horizon Manipulation Tasks",
+      "authors": [
+        "Yaohang Xu",
+        "Lianjie Ma",
+        "Gewei Zuo",
+        "Wentao Zhang",
+        "Han Ding",
+        "Lijun Zhu"
+      ],
+      "summary": "Reinforcement Learning (RL) and Imitation Learning (IL) are the standard frameworks for policy acquisition in manipulation. While IL offers efficient policy derivation, it suffers from compounding errors and distribution shift. Conversely, RL facilitates autonomous exploration but is frequently hindered by low sample efficiency and the high cost of trial and error. Since existing hybrid methods often struggle with complex tasks, we introduce Mixture of RL and IL Experts (MoRI). This system dynamically switches between IL and RL experts based on the variance of expert actions to handle coarse movements and fine-grained manipulations. MoRI employs an offline pre-training stage followed by online fine-tuning to accelerate convergence. To maintain exploration safety and minimize human intervention, the system applies IL-based regularization to the RL component. Evaluation across four complex real-world tasks shows that MoRI achieves an average success rate of 97.5% within 2 to 5 hours of fine-tuning. Compared to baseline RL algorithms, MoRI reduces human intervention by 85.8% and shortens convergence time by 21%, demonstrating its capability in robotic manipulation.",
+      "published": "2026-04-11T11:24:39Z",
+      "updated": "2026-04-11T11:24:39Z",
+      "arxiv_id": "2604.10165v1",
+      "abs_url": "http://arxiv.org/abs/2604.10165v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.10165v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "强化/模仿学习",
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "机器人操作",
+      "score": 9,
+      "anchor_terms": [
+        "imitation learning",
+        "manipulation",
+        "reinforcement learning",
+        "robot",
+        "robotic"
+      ],
+      "matched_terms": [
+        "imitation learning",
+        "manipulation",
+        "reinforcement learning",
+        "robot",
+        "robotic"
+      ]
+    },
+    {
+      "title": "PhyMix: Towards Physically Consistent Single-Image 3D Indoor Scene Generation with Implicit--Explicit Optimization",
+      "authors": [
+        "Dongli Wu",
+        "Jingyu Hu",
+        "Ka-Hei Hui",
+        "Xiaobao Wei",
+        "Chengwen Luo",
+        "Jianqiang Li",
+        "Zhengzhe Liu"
+      ],
+      "summary": "Existing single-image 3D indoor scene generators often produce results that look visually plausible but fail to obey real-world physics, limiting their reliability in robotics, embodied AI, and design. To examine this gap, we introduce a unified Physics Evaluator that measures four main aspects: geometric priors, contact, stability, and deployability, which are further decomposed into nine sub-constraints, establishing the first benchmark to measure physical consistency. Based on this evaluator, our analysis shows that state-of-the-art methods remain largely physics-unaware. To overcome this limitation, we further propose a framework that integrates feedback from the Physics Evaluator into both training and inference, enhancing the physical plausibility of generated scenes. Specifically, we propose PhyMix, which is composed of two complementary components: (i) implicit alignment via Scene-GRPO, a critic-free group-relative policy optimization that leverages the Physics Evaluator as a preference signal and biases sampling towards physically feasible layouts, and (ii) explicit refinement via a plug-and-play Test-Time Optimizer (TTO) that uses differentiable evaluator signals to correct residual violations during generation. Overall, our method unifies evaluation, reward shaping, and inference-time correction, producing 3D indoor scenes that are visually faithful and physically plausible. Extensive synthetic evaluations confirm state-of-the-art performance in both visual fidelity and physical plausibility, and extensive qualitative examples in stylized and real-world images further showcase the robustness of the method. We will release codes and models upon publication.",
+      "published": "2026-04-11T09:41:42Z",
+      "updated": "2026-04-11T09:41:42Z",
+      "arxiv_id": "2604.10125v1",
+      "abs_url": "http://arxiv.org/abs/2604.10125v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.10125v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "数据集/评测",
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "数据集/评测",
+      "score": 8,
+      "anchor_terms": [
+        "embodied",
+        "embodied ai",
+        "robot",
+        "robotic",
+        "robotics"
+      ],
+      "matched_terms": [
+        "embodied",
+        "embodied ai",
+        "robot",
+        "robotic",
+        "robotics"
+      ]
+    },
+    {
+      "title": "ABot-Claw: A Foundation for Persistent, Cooperative, and Self-Evolving Robotic Agents",
+      "authors": [
+        "Dongjie Huo",
+        "Haoyun Liu",
+        "Guoqing Liu",
+        "Dekang Qi",
+        "Zhiming Sun",
+        "Maoguo Gao",
+        "Jianxin He",
+        "Yandan Yang",
+        "Xinyuan Chang",
+        "Feng Xiong",
+        "Xing Wei",
+        "Zhiheng Ma",
+        "Mu Xu"
+      ],
+      "summary": "Current embodied intelligent systems still face a substantial gap between high-level reasoning and low-level physical execution in open-world environments. Although Vision-Language-Action (VLA) models provide strong perception and intuitive responses, their open-loop nature limits long-horizon performance. Agents incorporating System 2 cognitive mechanisms improve planning, but usually operate in closed sandboxes with predefined toolkits and limited real-system control. OpenClaw provides a localized runtime with full system privileges, but lacks the embodied control architecture required for long-duration, multi-robot execution. We therefore propose ABot-Claw, an embodied extension of OpenClaw that integrates: 1) a unified embodiment interface with capability-driven scheduling for heterogeneous robot coordination; 2) a visual-centric cross-embodiment multimodal memory for persistent context retention and grounded retrieval; and 3) a critic-based closed-loop feedback mechanism with a generalist reward model for online progress evaluation, local correction, and replanning. With a decoupled architecture spanning the OpenClaw layer, shared service layer, and robot embodiment layer, ABot-Claw enables real-world interaction, closes the loop from natural language intent to physical action, and supports progressively self-evolving robotic agents in open, dynamic environments.",
+      "published": "2026-04-11T08:33:14Z",
+      "updated": "2026-04-17T05:54:11Z",
+      "arxiv_id": "2604.10096v2",
+      "abs_url": "http://arxiv.org/abs/2604.10096v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.10096v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "VLA/多模态策略",
+        "数据集/评测",
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "VLA/多模态策略",
+      "score": 9,
+      "anchor_terms": [
+        "embodied",
+        "robot",
+        "robotic",
+        "vision-language-action",
+        "vla"
+      ],
+      "matched_terms": [
+        "embodied",
+        "robot",
+        "robotic",
+        "vision-language-action",
+        "vla"
+      ]
+    },
+    {
+      "title": "A Ray Intersection Algorithm for Fast Growth Distance Computation Between Convex Sets",
+      "authors": [
+        "Akshay Thirugnanam",
+        "Koushil Sreenath"
+      ],
+      "summary": "In this paper, we discuss an efficient algorithm for computing the growth distance between two compact convex sets with representable support functions. The growth distance between two sets is the minimum scaling factor such that the sets intersect when scaled about some center points. Unlike the minimum distance between sets, the growth distance provides a unified measure for set intersection and separation. We first reduce the growth distance problem to an equivalent ray intersection problem on the Minkowski difference set. Then, we propose an algorithm to solve the ray intersection problem by iteratively constructing inner and outer polyhedral approximations of the Minkowski difference set. We show that our algorithm satisfies several key properties, such as primal and dual feasibility and monotone convergence. We provide extensive benchmark results for our algorithm and show that our open-source implementation achieves state-of-the-art performance across a wide variety of convex sets. Finally, we demonstrate robotics applications of our algorithm in motion planning and rigid-body simulation.",
+      "published": "2026-04-11T06:50:35Z",
+      "updated": "2026-04-11T06:50:35Z",
+      "arxiv_id": "2604.10058v1",
+      "abs_url": "http://arxiv.org/abs/2604.10058v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.10058v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CG"
+      ],
+      "comment": "14 pages, 7 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "导航与移动",
+        "世界模型与仿真",
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "导航与移动",
+      "score": 8,
+      "anchor_terms": [
+        "robot",
+        "robotic",
+        "robotics"
+      ],
+      "matched_terms": [
+        "motion planning",
+        "open-source",
+        "robot",
+        "robotic",
+        "robotics"
+      ]
+    },
+    {
+      "title": "Natural Gradient Gaussian Approximation Filter on Lie Groups for Robot State Estimation",
+      "authors": [
+        "Tianyi Zhang",
+        "Wenhan Cao",
+        "Chang Liu",
+        "Yao Lyu",
+        "Shengbo Eben Li"
+      ],
+      "summary": "Accurate state estimation for robotic systems evolving on Lie group manifolds, such as legged robots, is a prerequisite for achieving agile control. However, this task is challenged by nonlinear observation models defined on curved manifolds, where existing filters rely on local linearization in the tangent space to handle such nonlinearity, leading to accumulated estimation errors. To address this limitation, we reformulate manifold filtering as a parameter optimization problem over a Gaussian-distributed increment variable, thereby avoiding linearization. Under this formulation, the increment can be mapped to the Lie group through the exponential operator, where it acts multiplicatively on the prior estimate to yield the posterior state. We further propose a natural gradient optimization scheme for solving this problem, whose iteration process leverages the Fisher information matrix of the increment variable to account for the curvature of the tangent space. This results in an iterative algorithm named the Natural Gradient Gaussian Approximation on Lie Groups (NANO-L) filter. Leveraging the perturbation model in Lie derivative, we prove that for the invariant observation model widely adopted in robotic localization tasks, the covariance update in NANO-L admits an exact closed-form solution, eliminating the need for iterative updates thus improving computational efficiency. Hardware experiments on a Unitree GO2 legged robot operating across different terrains demonstrate that NANO-L achieves approximately 40% lower estimation error than commonly used filters at a comparable computational cost.",
+      "published": "2026-04-11T06:50:16Z",
+      "updated": "2026-04-11T06:50:16Z",
+      "arxiv_id": "2604.10057v1",
+      "abs_url": "http://arxiv.org/abs/2604.10057v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.10057v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "人形与灵巧",
+        "其他机器人"
+      ],
+      "topic": "人形与灵巧",
+      "score": 8,
+      "anchor_terms": [
+        "robot",
+        "robotic"
+      ],
+      "matched_terms": [
+        "legged",
+        "legged robot",
+        "robot",
+        "robotic"
+      ]
+    },
+    {
+      "title": "STRONG-VLA: Decoupled Robustness Learning for Vision-Language-Action Models under Multimodal Perturbations",
+      "authors": [
+        "Yuhan Xie",
+        "Yuping Yan",
+        "Yunqi Zhao",
+        "Handing Wang",
+        "Yaochu Jin"
+      ],
+      "summary": "Despite their strong performance in embodied tasks, recent Vision-Language-Action (VLA) models remain highly fragile under multimodal perturbations, where visual corruption and linguistic noise jointly induce distribution shifts that degrade task-level execution. Existing robustness approaches typically rely on joint training with perturbed data, treating robustness as a static objective, which leads to conflicting optimization between robustness and task fidelity. In this work, we propose STRONG-VLA, a decoupled fine-tuning framework that explicitly separates robustness acquisition from task-aligned refinement. In Stage I, the model is exposed to a curriculum of multimodal perturbations with increasing difficulty, enabling progressive robustness learning under controlled distribution shifts. In Stage II, the model is re-aligned with clean task distributions to recover execution fidelity while preserving robustness. We further establish a comprehensive benchmark with 28 perturbation types spanning both textual and visual modalities, grounded in realistic sources of sensor noise, occlusion, and instruction corruption. Extensive experiments on the LIBERO benchmark show that STRONG-VLA consistently improves task success rates across multiple VLA architectures. On OpenVLA, our method achieves gains of up to 12.60% under seen perturbations and 7.77% under unseen perturbations. Notably, similar or larger improvements are observed on OpenVLA-OFT (+14.48% / +13.81%) and pi0 (+16.49% / +5.58%), demonstrating strong cross-architecture generalization. Real-world experiments on an AIRBOT robotic platform further validate its practical effectiveness. These results highlight the importance of decoupled optimization for multimodal robustness and establish STRONG-VLA as a simple yet principled framework for robust embodied control.",
+      "published": "2026-04-11T06:37:47Z",
+      "updated": "2026-04-14T02:34:59Z",
+      "arxiv_id": "2604.10055v2",
+      "abs_url": "http://arxiv.org/abs/2604.10055v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.10055v2",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "VLA/多模态策略",
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "VLA/多模态策略",
+      "score": 17,
+      "anchor_terms": [
+        "embodied",
+        "openvla",
+        "robot",
+        "robotic",
+        "vision-language-action",
+        "vla"
+      ],
+      "matched_terms": [
+        "embodied",
+        "libero",
+        "openvla",
+        "robot",
+        "robotic",
+        "vision-language-action",
+        "vla"
+      ]
+    },
+    {
+      "title": "A Comparative Study of Modern Object Detectors for Robust Apple Detection in Orchard Imagery",
+      "authors": [
+        "Mohammed Asad",
+        "Ajai Kumar Gautam",
+        "Priyanshu Dhiman",
+        "Rishi Raj Prajapati"
+      ],
+      "summary": "Accurate apple detection in orchard images is important for yield prediction, fruit counting, robotic harvesting, and crop monitoring. However, changing illumination, leaf clutter, dense fruit clusters, and partial occlusion make detection difficult. To provide a fair and reproducible comparison, this study establishes a controlled benchmark for single-class apple detection on the public AppleBBCH81 dataset using one deterministic train, validation, and test split and a unified evaluation protocol across six representative detectors: YOLOv10n, YOLO11n, RT-DETR-L, Faster R-CNN (ResNet50-FPN), FCOS (ResNet50-FPN), and SSDLite320 (MobileNetV3-Large). Performance is evaluated primarily using COCO-style mAP@0.5 and mAP@0.5:0.95, and threshold-dependent behavior is further analyzed using precision-recall curves and fixed-threshold precision, recall, and F1-score at IoU = 0.5. On the validation split, YOLO11n achieves the best strict localization performance with mAP@0.5:0.95 = 0.6065 and mAP@0.5 = 0.9620, followed closely by RT-DETR-L and YOLOv10n. At a fixed operating point with confidence >= 0.05, YOLOv10n attains the highest F1-score, whereas RT-DETR-L achieves very high recall but low precision because of many false positives at low confidence. These findings show that detector selection for orchard deployment should be guided not only by localization-aware accuracy but also by threshold robustness and the requirements of the downstream task.",
+      "published": "2026-04-11T02:56:42Z",
+      "updated": "2026-04-11T02:56:42Z",
+      "arxiv_id": "2604.09996v1",
+      "abs_url": "http://arxiv.org/abs/2604.09996v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.09996v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted at ICICV 2026; 8 pages, 4 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "数据集/评测",
+      "score": 3,
+      "anchor_terms": [
+        "robot",
+        "robotic"
+      ],
+      "matched_terms": [
+        "robot",
+        "robotic"
+      ]
+    },
+    {
+      "title": "GPU-Accelerated Continuous-Time Successive Convexification for Contact-Implicit Legged Locomotion",
+      "authors": [
+        "Samuel C. Buckner",
+        "Purnanand Elango"
+      ],
+      "summary": "Contact-implicit trajectory optimization (CITO) enables the automatic discovery of contact sequences, but most methods rely on fine time discretization to capture all contact events accurately, which increases problem size and runtime while tying solution quality to grid resolution. We extend the recently proposed sequential convex programming (SCP) approach for trajectory optimization, continuous-time successive convexification (ct-SCvx), to CITO by introducing integral cross-complementarity constraints, which eliminate the risk of missing contact events between discretization nodes while preserving the flexibility of contact mode changes. The resulting framework, contact-implicit successive convexification (ci-SCvx), models full multibody dynamics in maximal coordinates, including stick-slip friction and partially elastic impacts. To handle complementarity constraints, we embed a backtracking homotopy scheme within SCP for reliable convergence. We implement this framework in a stand-alone Python software, leveraging JAX for GPU acceleration and a custom canonical-form parser for the convex subproblems of SCP to avoid the overhead of general-purpose modeling tools such as CVXPY. We demonstrate ci-SCvx on diverse legged-locomotion tasks. In particular, we validate the approach in MuJoCo with the Gymnasium HalfCheetah model against the MuJoCo MPC baseline, showing that a tracking simulation with the optimized torque profiles from ci-SCvx produces physically consistent trajectories with lesser energy consumption. We also show that the resulting software achieves faster solve times than existing state-of-the-art SCP implementations by over an order of magnitude, thereby demonstrating a practically important contribution to scalable real-time trajectory optimization.",
+      "published": "2026-04-11T02:40:29Z",
+      "updated": "2026-04-11T02:40:29Z",
+      "arxiv_id": "2604.09993v1",
+      "abs_url": "http://arxiv.org/abs/2604.09993v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.09993v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "math.OC"
+      ],
+      "comment": "Accepted to IEEE ICRA 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "导航与移动",
+        "世界模型与仿真"
+      ],
+      "topic": "导航与移动",
+      "score": 8,
+      "anchor_terms": [
+        "locomotion"
+      ],
+      "matched_terms": [
+        "legged",
+        "locomotion",
+        "mujoco",
+        "trajectory optimization"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,799 @@
+{
+  "date": "2026-04-26",
+  "generated_at": "2026-05-09T15:11:33.228424+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.RO OR cat:cs.AI OR cat:cs.CV OR cat:cs.LG OR cat:cs.CL OR cat:cs.MA OR cat:cs.HC OR cat:stat.ML OR cat:eess.SY OR cat:eess.IV) AND submittedDate:[202604260000 TO 202604262359]",
+  "total_fetched": 208,
+  "total_matched": 18,
+  "papers": [
+    {
+      "title": "Safe Navigation in Unknown and Cluttered Environments via Direction-Aware Convex Free-Region Generation",
+      "authors": [
+        "Zhicheng Song",
+        "Yongjian Li",
+        "Kai Chen",
+        "Yulin Li",
+        "Fan Shi",
+        "Jun Ma"
+      ],
+      "summary": "Convex free regions provide a structured and optimization-friendly representation of collision-free space for robot navigation in unknown and cluttered environments. However, existing methods typically enlarge local collision-free regions mainly according to surrounding obstacle geometry. In cluttered environments, such strategies may fail to generate regions that both accommodate robot geometry and preserve traversable extension along candidate motion directions, thereby limiting downstream traversal, especially in narrow passages. Even when such a region is available, safe motion generation remains challenging, because safety checking at discretized trajectory samples does not guarantee continuously collision-free motion when robot geometry is modeled explicitly. To address these issues, we propose a navigation framework that jointly incorporates candidate motion directions and robot geometry into convex free-region generation, and achieves continuously collision-free motion through continuous-safe trajectory generation. Within each region, the framework performs geometry-aware target pose selection and trajectory generation, together with Lipschitz-based continuous safety certification and local refinement. The resulting free regions and candidate motions are maintained in a region-based graph to support incremental planning. Quantitative results in cluttered 2D navigation scenarios show that the proposed method generates free regions better aligned with downstream traversal and enables reliable collision-free navigation, while additional 3D and real-world experiments on a quadrupedal robot and a UAV demonstrate the extensibility and practical applicability of the framework. The open-source project can be found at https://github.com/ZhichengSong6/FRGraph.",
+      "published": "2026-04-26T10:37:01Z",
+      "updated": "2026-04-26T10:37:01Z",
+      "arxiv_id": "2604.23648v1",
+      "abs_url": "http://arxiv.org/abs/2604.23648v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23648v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/ZhichengSong6/FRGraph",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "导航与移动",
+        "感知与3D理解",
+        "四足机器人",
+        "其他机器人"
+      ],
+      "topic": "导航与移动",
+      "score": 10,
+      "anchor_terms": [
+        "navigation",
+        "quadruped",
+        "quadrupedal",
+        "robot"
+      ],
+      "matched_terms": [
+        "navigation",
+        "open-source",
+        "quadruped",
+        "quadrupedal",
+        "robot",
+        "uav"
+      ]
+    },
+    {
+      "title": "Cooptimizing Safety and Performance Using Safety Value-Constrained Model Predictive Control",
+      "authors": [
+        "Hao Wang",
+        "Nam Nguyen",
+        "Armand Jordana",
+        "Ludovic Righetti",
+        "Somil Bansal"
+      ],
+      "summary": "Autonomous systems are increasingly deployed in real-world environments, where they must achieve high performance while maintaining safety under state and input constraints. Although Model Predictive Control (MPC) provides a principled framework for constrained optimal control, guaranteeing safety beyond its finite planning horizon remains a fundamental challenge. In this work, we augment MPC with a safety value function-based terminal constraint that enforces membership in a control-invariant safe set at the end of each planning horizon. This formulation enables real-time synthesis of trajectories that are both high-performing and provably safe. We show that, under an exact safety value function and a feasible initialization, the proposed MPC scheme is recursively feasible, thereby ensuring persistent safety. In contrast to traditional terminal set constructions that rely on local linearizations or conservative approximations, our approach incorporates a reachability-based safety value function for terminal constraints, yielding less conservative and more expressive safety guarantees. We validate the proposed framework through simulation and hardware experiments on a Flexiv Rizon 10s manipulator. Results demonstrate improved constraint satisfaction and robustness compared to standard state-constrained MPC and reactive safety filtering, while maintaining competitive task performance. The full implementation and experiments are available on the project website.",
+      "published": "2026-04-26T20:10:03Z",
+      "updated": "2026-04-26T20:10:03Z",
+      "arxiv_id": "2604.23863v1",
+      "abs_url": "http://arxiv.org/abs/2604.23863v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23863v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "世界模型与仿真",
+        "机械臂"
+      ],
+      "topic": "世界模型与仿真",
+      "score": 3,
+      "anchor_terms": [
+        "manipulator"
+      ],
+      "matched_terms": [
+        "manipulator"
+      ]
+    },
+    {
+      "title": "Bringing a Personal Point of View: Evaluating Dynamic 3D Gaussian Splatting for Egocentric Scene Reconstruction",
+      "authors": [
+        "Jan Warchocki",
+        "Xi Wang",
+        "Jonas Kulhanek",
+        "Jan van Gemert"
+      ],
+      "summary": "Egocentric video provides a unique view into human perception and interaction, with growing relevance for augmented reality, robotics, and assistive technologies. However, rapid camera motion and complex scene dynamics pose major challenges for 3D reconstruction from this perspective. While 3D Gaussian Splatting (3DGS) has become a state-of-the-art method for efficient, high-quality novel view synthesis, variants, that focus on reconstructing dynamic scenes from monocular video are rarely evaluated on egocentric video. It remains unclear whether existing models generalize to this setting or if egocentric-specific solutions are needed. In this work, we evaluate dynamic monocular 3DGS models on egocentric and exocentric video using paired ego-exo recordings from the EgoExo4D dataset. We find that reconstruction quality is consistently lower in egocentric views. Analysis reveals that the difference in reconstruction quality, measured in peak signal-to-noise ratio, stems from the reconstruction of static, not dynamic, content. Our findings underscore current limitations and motivate the development of egocentric-specific approaches, while also highlighting the value of separately evaluating static and dynamic regions of a video.",
+      "published": "2026-04-26T16:58:19Z",
+      "updated": "2026-04-26T16:58:19Z",
+      "arxiv_id": "2604.23803v1",
+      "abs_url": "http://arxiv.org/abs/2604.23803v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23803v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted at the EgoVis Workshop at CVPR 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "数据集/评测",
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "数据集/评测",
+      "score": 6,
+      "anchor_terms": [
+        "robot",
+        "robotic",
+        "robotics"
+      ],
+      "matched_terms": [
+        "egocentric",
+        "robot",
+        "robotic",
+        "robotics"
+      ]
+    },
+    {
+      "title": "Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms",
+      "authors": [
+        "Qi Li",
+        "Bo Yin",
+        "Weiqi Huang",
+        "Ruhao Liu",
+        "Bojun Zou",
+        "Runpeng Yu",
+        "Jingwen Ye",
+        "Weihao Yu",
+        "Xinchao Wang"
+      ],
+      "summary": "Vision-Language-Action (VLA) models are emerging as a unified substrate for embodied intelligence. This shift raises a new class of safety challenges, stemming from the embodied nature of VLA systems, including irreversible physical consequences, a multimodal attack surface across vision, language, and state, real-time latency constraints on defense, error propagation over long-horizon trajectories, and vulnerabilities in the data supply chain. Yet the literature remains fragmented across robotic learning, adversarial machine learning, AI alignment, and autonomous systems safety. This survey provides a unified and up-to-date overview of safety in Vision-Language-Action models. We organize the field along two parallel timing axes, attack timing (training-time vs. inference-time and defense timing (training-time vs. inference-time, linking each class of threat to the stage at which it can be mitigated. We first define the scope of VLA safety, distinguishing it from text-only LLM safety and classical robotic safety, and review the foundations of VLA models, including architectures, training paradigms, and inference mechanisms. We then examine the literature through four lenses: Attacks, Defenses, Evaluation, and Deployment. We survey training-time threats such as data poisoning and backdoors, as well as inference-time attacks including adversarial patches, cross-modal perturbations, semantic jailbreaks, and freezing attacks. We review training-time and runtime defenses, analyze existing benchmarks and metrics, and discuss safety challenges across six deployment domains. Finally, we highlight key open problems, including certified robustness for embodied trajectories, physically realizable defenses, safety-aware training, unified runtime safety architectures, and standardized evaluation.",
+      "published": "2026-04-26T15:58:19Z",
+      "updated": "2026-04-26T15:58:19Z",
+      "arxiv_id": "2604.23775v1",
+      "abs_url": "http://arxiv.org/abs/2604.23775v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23775v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "VLA/多模态策略",
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "VLA/多模态策略",
+      "score": 17,
+      "anchor_terms": [
+        "embodied",
+        "robot",
+        "robotic",
+        "vision-language-action",
+        "vla"
+      ],
+      "matched_terms": [
+        "embodied",
+        "embodied intelligence",
+        "robot",
+        "robotic",
+        "vision-language-action",
+        "vla",
+        "vla model"
+      ]
+    },
+    {
+      "title": "Unleashing the Agility of Wheeled-Legged Robots for High-Dynamic Reflexive Obstacle Evasion",
+      "authors": [
+        "Yongen Zhao",
+        "Zihao Xu",
+        "Wenzhi Lu",
+        "Zhen Chu",
+        "Ce Hao"
+      ],
+      "summary": "Wheeled-legged robots combine the energy efficiency of wheeled locomotion with the terrain adaptability of legged systems, making them promising platforms for agile mobility in complex and dynamic environments. However, enabling high-dynamic reflexive evasion against fast-moving obstacles remains challenging due to the hybrid morphology, mode coupling, and non-holonomic constraints of such platforms. In this work, we propose AWARE, Adaptive Wheeled-Legged Avoidance and Reflexive Evasion, a hierarchical reinforcement learning framework for high-dynamic obstacle avoidance in wheeled-legged robots. The proposed system naturally exhibits diverse emergent gaits and evasive behaviors, including forward lunge and lateral dodge, thereby leveraging the robot's hybrid morphology to enhance agility under highly dynamic threats. Extensive experiments in Isaac Lab simulation and real-world deployment on the M20 platform across diverse dynamic scenarios demonstrate that AWARE achieves robust and agile obstacle avoidance while revealing behaviorally distinct evasive strategies. These results highlight both the practical effectiveness of AWARE and the intrinsic reflexive agility of wheeled-legged robots.",
+      "published": "2026-04-26T15:21:33Z",
+      "updated": "2026-04-26T15:21:33Z",
+      "arxiv_id": "2604.23761v1",
+      "abs_url": "http://arxiv.org/abs/2604.23761v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23761v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "8 pages, 8 figures, 4 tables",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "导航与移动",
+        "世界模型与仿真",
+        "强化/模仿学习",
+        "人形与灵巧",
+        "其他机器人"
+      ],
+      "topic": "导航与移动",
+      "score": 12,
+      "anchor_terms": [
+        "locomotion",
+        "reinforcement learning",
+        "robot"
+      ],
+      "matched_terms": [
+        "isaac",
+        "legged",
+        "legged robot",
+        "locomotion",
+        "reinforcement learning",
+        "robot"
+      ]
+    },
+    {
+      "title": "A Pose-only Geometric Constraint for Multi-Camera Pose Adjustment",
+      "authors": [
+        "Shunkun Liang",
+        "Banglei Guan",
+        "Bin Li",
+        "Qifeng Yu",
+        "Yang Shang"
+      ],
+      "summary": "Multi-camera systems offer rich observation capabilities for visual navigation and 3D scene reconstruction; however, the resulting feature redundancy often compromises computational efficiency. This challenge is particularly pronounced during bundle adjustment, where the non-linear optimization of both system poses and scene points incurs substantial computational overhead. To address this challenge, this paper introduces a pose-only geometric constraint for multi-camera systems and proposes a corresponding pose adjustment algorithm. Specifically, we use generalized camera model to establish a unified representation of the multi-camera system. Building upon this model, we formulate the multi-camera pose-only constraint, which implicitly represents a 3D scene point using two base observations and their associated poses, thereby achieving a pose-only representation of the projection geometry. Subsequently, we introduce a multi-camera pose adjustment algorithm that eliminates 3D points from the parameter space, thereby achieving efficient and focused pose optimization. Experimental results on both synthetic and real-world datasets demonstrate that the proposed algorithm outperforms baseline bundle adjustment methods in computational efficiency, while maintaining or even improving pose estimation accuracy.",
+      "published": "2026-04-26T13:36:46Z",
+      "updated": "2026-04-26T13:36:46Z",
+      "arxiv_id": "2604.23704v1",
+      "abs_url": "http://arxiv.org/abs/2604.23704v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23704v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "导航与移动",
+        "数据集/评测",
+        "感知与3D理解"
+      ],
+      "topic": "导航与移动",
+      "score": 4,
+      "anchor_terms": [
+        "navigation"
+      ],
+      "matched_terms": [
+        "navigation",
+        "visual navigation"
+      ]
+    },
+    {
+      "title": "QuietWalk: Physics-Informed Reinforcement Learning for Ground Reaction Force-Aware Humanoid Locomotion Under Diverse Footwear",
+      "authors": [
+        "Hanze Hu",
+        "Luying Feng",
+        "Silu Chen",
+        "Tianjiang Zheng",
+        "Dexin Jiang",
+        "Wei Chen",
+        "Chi Zhang",
+        "Guilin Yang",
+        "Yaochu Jin"
+      ],
+      "summary": "Humanoid robots operating in human-centered environments (e.g., homes, hospitals, and offices) must mitigate foot--ground impact transients, as impact-induced vibration and noise degrade user experience and repeated impacts accelerate hardware wear. However, existing low-noise locomotion training often relies on kinematic proxy objectives or fragile force sensors, and footwear-induced changes in contact dynamics introduce distribution shifts that hinder policy generalization.We present QuietWalk, a physics-informed reinforcement learning framework for ground-reaction-force-aware humanoid locomotion under diverse footwear conditions. QuietWalk employs an inverse-dynamics-constrained physics-informed neural network (PINN) to estimate per-foot vertical ground reaction forces (GRFs) from proprioceptive signals, and integrates the frozen predictor into the RL training loop to penalize predicted impact forces without requiring force sensors at deployment.On a held-out real-robot dataset, enforcing inverse-dynamics consistency reduces vertical GRF prediction errors by 82%-86% compared with a purely supervised predictor and improves the coefficient of determination from 0.39/0.67 to 0.99/0.99 for the left/right feet. On hardware at 1.2 m/s (barefoot; averaged over four floor materials), QuietWalk reduces mean A-weighted noise level by 7.17 dB and peak noise level by 4.98 dB under a consistent recording setup. Cross-footwear experiments (barefoot, skate shoes, athletic sneakers, and high heels) across multiple surfaces further demonstrate robust adaptation to footwear-induced contact variations.",
+      "published": "2026-04-26T13:34:21Z",
+      "updated": "2026-04-26T13:34:21Z",
+      "arxiv_id": "2604.23702v1",
+      "abs_url": "http://arxiv.org/abs/2604.23702v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23702v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "8 pages,8 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "导航与移动",
+        "强化/模仿学习",
+        "人形与灵巧",
+        "数据集/评测",
+        "双足机器人"
+      ],
+      "topic": "导航与移动",
+      "score": 10,
+      "anchor_terms": [
+        "humanoid",
+        "locomotion",
+        "reinforcement learning",
+        "robot"
+      ],
+      "matched_terms": [
+        "humanoid",
+        "locomotion",
+        "reinforcement learning",
+        "robot"
+      ]
+    },
+    {
+      "title": "Real-Time Non-Contact Force Compensation for Wrist-Mounted Force/Torque Sensors in Haptic-Enabled Robotic Surgery Training",
+      "authors": [
+        "Walid Shaker",
+        "Mustafa Suphi Erden"
+      ],
+      "summary": "Haptic feedback has been a long-missed feature in robotic-assisted surgery, one that would allow surgeons to perceive tissue properties and apply controlled forces during delicate procedures. Although commercial robotic systems have begun to integrate haptic technologies, their high costs limit accessibility for training and research purposes. To address this gap, we extend our previously developed low-cost robotic surgery training setup, RoboScope, by incorporating a wrist-mounted force/torque (F/T) sensor for haptic feedback training. Wrist-mounted sensing avoids many challenges associated with tip-mounted sensors but introduces additional non-contact forces, such as gravity, sensor bias, installation offsets, and associated torques, which compromise measurement accuracy. In this paper, we propose a robust real-time compensation method based on recursive least squares (RLS). This method eliminates the need for dataset collection and frequent recalibration while adapting to changing operating conditions. Experimental validation demonstrates that the proposed approach achieves over 95% error reduction in non-contact force compensation and more than 91% in non-contact torque compensation, significantly outperforming existing methods. These results highlight the potential of our approach for providing reliable haptic feedback in robotic surgery training and research.",
+      "published": "2026-04-26T13:21:45Z",
+      "updated": "2026-04-26T13:21:45Z",
+      "arxiv_id": "2604.23696v1",
+      "abs_url": "http://arxiv.org/abs/2604.23696v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23696v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "comment": "Submitted to 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "数据集/评测",
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "数据集/评测",
+      "score": 9,
+      "anchor_terms": [
+        "robot",
+        "robotic"
+      ],
+      "matched_terms": [
+        "haptic",
+        "robot",
+        "robotic"
+      ]
+    },
+    {
+      "title": "Decentralized Heterogeneous Multi-Robot Collaborative Exploration for Indoor and Outdoor 3D Environments",
+      "authors": [
+        "Yuxiang Li",
+        "Kun Chen",
+        "Jiancheng Wang",
+        "Shihao Fang",
+        "Haoyao Chen",
+        "Yunhui Liu"
+      ],
+      "summary": "Heterogeneous multi-robot systems feature significant adaptability for complex environments. However, effective collaboration that fully exploits the robots' potential remains a core challenge. This paper proposes a decentralized collaborative framework for heterogeneous multi-robot systems to autonomously explore indoor and outdoor 3D environments. First, a basic perception map that integrates terrain and observation metrics is designed. Improved supervoxel segmentation is developed to simplify the map structure and form a high-level representation that supports lightweight communication. Second, the traversal and observation capabilities of heterogeneous robots are modeled to evaluate the requirements of task views derived from incomplete supervoxels. These task views are grouped by requirements and clustered to streamline assignment. Subsequently, the view-cluster assignment is formulated as a heterogeneous multi-depot multi-traveling salesman problem (HMDMTSP) that incorporates constraints between view-cluster requirements and robot capabilities. An improved genetic algorithm is developed to efficiently solve this problem while ensuring global consistency. Based on the assignments, redundant views within clusters are eliminated to refine exploration routes. Finally, conflicts between robots' motion paths are resolved. Simulations and field experiments in cluttered indoor and outdoor environments demonstrate that our approach effectively coordinates exploration tasks among heterogeneous robots, achieving superior exploration efficiency and communication savings compared to state-of-the-art approaches.",
+      "published": "2026-04-26T13:16:13Z",
+      "updated": "2026-04-26T13:16:13Z",
+      "arxiv_id": "2604.23693v1",
+      "abs_url": "http://arxiv.org/abs/2604.23693v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23693v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "世界模型与仿真",
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "世界模型与仿真",
+      "score": 5,
+      "anchor_terms": [
+        "robot"
+      ],
+      "matched_terms": [
+        "robot"
+      ]
+    },
+    {
+      "title": "Move-Then-Operate: Behavioral Phasing for Human-Like Robotic Manipulation",
+      "authors": [
+        "Haoming Xu",
+        "Lei Lei",
+        "Jie Gu",
+        "Chu Tang",
+        "Jingmin Chen",
+        "Ruiqi Wang"
+      ],
+      "summary": "We present Move-Then-Operate, a Vision language action framework that explicitly decouples robotic manipulation into two distinct behavioral phases: coarse relocation (move) and contact-critical interaction (operate). Unlike monolithic policies that conflate these heterogeneous regimes, our architecture employs a dual-expert policy routed by a learnable phase selector, introducing a structural inductive bias that isolates phase-specific dynamics. Phase labels are automatically generated via an MLLM-based pipeline conditioned on lightweight contextual cues such as end-effector velocity and subtask decomposition to ensure alignment with human motor patterns. Evaluated on the RoboTwin2 benchmark, our method achieves an average success rate of $68.9\\%$, outperforming the monolithic $π_0$ baseline by $24\\%$. It matches or exceeds models trained on $10\\times$ more data and reaches peak performance in $40\\%$ fewer training steps, demonstrating that architectural disentanglement of move and operate phases is a highly effective and efficient strategy for mastering high-precision manipulation.",
+      "published": "2026-04-26T09:28:10Z",
+      "updated": "2026-04-26T09:28:10Z",
+      "arxiv_id": "2604.23620v1",
+      "abs_url": "http://arxiv.org/abs/2604.23620v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23620v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "15 pages, 10 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "VLA/多模态策略",
+        "数据集/评测",
+        "机械臂"
+      ],
+      "topic": "机器人操作",
+      "score": 13,
+      "anchor_terms": [
+        "manipulation",
+        "robot",
+        "robotic",
+        "vision language action"
+      ],
+      "matched_terms": [
+        "end-effector",
+        "manipulation",
+        "robot",
+        "robotic",
+        "vision language action"
+      ]
+    },
+    {
+      "title": "Adversarial Flow Matching for Imperceptible Attacks on End-to-End Autonomous Driving",
+      "authors": [
+        "Xinyu Zeng",
+        "Xiangkun He",
+        "Lei Tao",
+        "Chen Lv",
+        "Hong Cheng"
+      ],
+      "summary": "Autonomous driving (AD) is evolving towards end-to-end (E2E) frameworks through two primary paradigms: monolithic models exemplified by Vision-Language-Action (VLA), and specialized modular architectures. Despite their divergent designs, both paradigms increasingly rely on Transformer backbones for complex reasoning, potentially causing a shared vulnerability: visually imperceptible perturbations can manipulate E2E AD models into hazardous maneuvers by targeting the Transformer module. Most existing adversarial attack approaches against AD systems operate under white-box or black-box settings; yet, they typically necessitate full model transparency, or suffer from either prohibitive query latency or limited attack transferability. In this paper, we propose Adversarial Flow Matching (AFM), a novel gray-box attack framework that exploits Transformer structural vulnerabilities in E2E AD models. AFM enables efficient one-step generation of adversarial examples via a neural average velocity field. Additionally, the proposed technique yields effective and visually imperceptible attacks by synergistically perturbing the generative latent space and the neural average velocity field. Extensive experiments demonstrate that AFM achieves a superior trade-off between attack effectiveness and imperceptibility: it substantially degrades the performance of both VLA and modular AD agents across various scenarios compared to baselines, while maintaining state-of-the-art visual imperceptibility. Furthermore, adversarial examples generated by AFM exhibit robust cross-model transferability, indicating that AFM closely approximates a black-box attack setting while requiring only the prior knowledge that the target AD model incorporates a Transformer-based module.",
+      "published": "2026-04-26T09:12:32Z",
+      "updated": "2026-04-26T09:12:32Z",
+      "arxiv_id": "2605.00880v1",
+      "abs_url": "http://arxiv.org/abs/2605.00880v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.00880v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "16 pages, 11 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "VLA/多模态策略"
+      ],
+      "topic": "VLA/多模态策略",
+      "score": 3,
+      "anchor_terms": [
+        "vision-language-action",
+        "vla"
+      ],
+      "matched_terms": [
+        "vision-language-action",
+        "vla"
+      ]
+    },
+    {
+      "title": "LiDAR for Rehabilitation: A Comprehensive Survey of Applications, AI Techniques, and Future Directions",
+      "authors": [
+        "Soumia Siyoucef",
+        "Najmeddine Dhieb",
+        "Hakim Ghazzai",
+        "Eleonora Guanziroli",
+        "Franco Molteni",
+        "Gianluca Setti"
+      ],
+      "summary": "Rehabilitation aims to help patients with limited mobility regain their physical abilities through targeted movements, exercises, stimulation, and other therapeutic methods. Recent advances in technology have introduced sensor-based systems into rehabilitation and clinical practices, enabling real-time monitoring and providing accurate feedback on movement accuracy. Among these sensors, LiDAR has demonstrated strong potential, offering key advantages over conventional techniques such as camera-based systems, which raise privacy concerns, and wearable sensors, which can be uncomfortable and prone to errors. In this work, we review the applications of LiDAR in rehabilitation, post-injury care, and hospital environments, focusing on studies published between 2019 and 2025. Studies across several areas have been explored: 3D body scanning and gait analysis with standalone LiDAR, LiDAR mounted on robotic systems for rehabilitation, real-time monitoring and environment scanning for safe navigation, and activity and position recognition. We also analyze processing techniques, particularly learning-based approaches, and support the discussion with statistical analysis, highlighting trends, gaps, and future research opportunities. To the best of our knowledge, this is the first comprehensive survey dedicated to LiDAR for rehabilitation applications, providing an overview of current methods, AI-based processing techniques, and open challenges.",
+      "published": "2026-04-26T08:59:11Z",
+      "updated": "2026-04-26T08:59:11Z",
+      "arxiv_id": "2605.00879v1",
+      "abs_url": "http://arxiv.org/abs/2605.00879v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.00879v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "comment": "This paper is accepted for publication in IEEE Sensors Reviews, April, 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "导航与移动",
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "导航与移动",
+      "score": 6,
+      "anchor_terms": [
+        "navigation",
+        "robot",
+        "robotic"
+      ],
+      "matched_terms": [
+        "navigation",
+        "robot",
+        "robotic"
+      ]
+    },
+    {
+      "title": "Tube Diffusion Policy: Reactive Visual-Tactile Policy Learning for Contact-rich Manipulation",
+      "authors": [
+        "Teng Xue",
+        "Alberto Rigo",
+        "Bingjian Huang",
+        "Jiayi Shen",
+        "Zhengtong Xu",
+        "Nick Colonnese",
+        "Amirhossein H. Memar"
+      ],
+      "summary": "Contact-rich manipulation is central to many everyday human activities, requiring continuous adaptation to contact uncertainty and external disturbances through multi-modal perception, particularly vision and tactile feedback. While imitation learning has shown strong potential for learning complex manipulation behaviors, most existing approaches rely on action chunking, which fundamentally limits their ability to react to unforeseen observations during execution. This limitation becomes especially critical in contact-rich scenarios, where physical uncertainty and high-frequency tactile feedback demand rapid, reactive control. To address this challenge, we propose Tube Diffusion Policy (TDP), a novel reactive visual-tactile policy learning framework that bridges diffusion-based imitation learning with tube-based feedback control. By leveraging the expressive power of generative models, TDP learns an observation-conditioned feedback flow around nominal action chunks, forming an action tube that enables fast and adaptive reactions during execution. We evaluate TDP on the widely used Push-T benchmark and three additional challenging visual-tactile dexterous manipulation tasks. Across all benchmarks, TDP consistently outperforms state-of-the-art imitation learning baselines. Two real-world experiments further validate its robust reactivity under contact uncertainty and external disturbances. Moreover, the step-wise correction mechanism enabled by action tube significantly reduces the required denoising steps, making TDP well suited for real-time, high-frequency feedback control in contact-rich manipulation.",
+      "published": "2026-04-26T08:48:26Z",
+      "updated": "2026-04-26T08:48:26Z",
+      "arxiv_id": "2604.23609v1",
+      "abs_url": "http://arxiv.org/abs/2604.23609v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23609v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "VLA/多模态策略",
+        "强化/模仿学习",
+        "人形与灵巧",
+        "数据集/评测",
+        "感知与3D理解"
+      ],
+      "topic": "机器人操作",
+      "score": 19,
+      "anchor_terms": [
+        "imitation learning",
+        "manipulation",
+        "tactile"
+      ],
+      "matched_terms": [
+        "action chunking",
+        "dexterous",
+        "dexterous manipulation",
+        "diffusion policy",
+        "imitation learning",
+        "manipulation",
+        "policy learning",
+        "tactile"
+      ]
+    },
+    {
+      "title": "Learning to Identify Out-of-Distribution Objects for 3D LiDAR Anomaly Segmentation",
+      "authors": [
+        "Simone Mosco",
+        "Daniel Fusaro",
+        "Alberto Pretto"
+      ],
+      "summary": "Understanding the surrounding environment is fundamental in autonomous driving and robotic perception. Distinguishing between known classes and previously unseen objects is crucial in real-world environments, as done in Anomaly Segmentation. However, research in the 3D field remains limited, with most existing approaches applying post-processing techniques from 2D vision. To cover this lack, we propose a new efficient approach that directly operates in the feature space, modeling the feature distribution of inlier classes to constrain anomalous samples. Moreover, the only publicly available 3D LiDAR anomaly segmentation dataset contains simple scenarios, with few anomaly instances, and exhibits a severe domain gap due to its sensor resolution. To bridge this gap, we introduce a set of mixed real-synthetic datasets for 3D LiDAR anomaly segmentation, built upon established semantic segmentation benchmarks, with multiple out-of-distribution objects and diverse, complex environments. Extensive experiments demonstrate that our approach achieves state-of-the-art and competitive results on the existing real-world dataset and the newly introduced mixed datasets, respectively, validating the effectiveness of our method and the utility of the proposed datasets. Code and datasets are available at https://simom0.github.io/lido-page/.",
+      "published": "2026-04-26T08:32:07Z",
+      "updated": "2026-04-26T08:32:07Z",
+      "arxiv_id": "2604.23604v1",
+      "abs_url": "http://arxiv.org/abs/2604.23604v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23604v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "comment": "This paper has been accepted at the 2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "世界模型与仿真",
+        "数据集/评测",
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "世界模型与仿真",
+      "score": 5,
+      "anchor_terms": [
+        "robot",
+        "robotic"
+      ],
+      "matched_terms": [
+        "robot",
+        "robotic"
+      ]
+    },
+    {
+      "title": "PhysCodeBench: Benchmarking Physics-Aware Symbolic Simulation of 3D Scenes via Self-Corrective Multi-Agent Refinement",
+      "authors": [
+        "Tianyidan Xie",
+        "Peiyu Wang",
+        "Yuyi Qian",
+        "Yuxuan Wang",
+        "Rui Ma",
+        "Ying Tai",
+        "Song Wu",
+        "Qian Wang",
+        "Lanjun Wang",
+        "Zili Yi"
+      ],
+      "summary": "Physics-aware symbolic simulation of 3D scenes is critical for robotics, embodied AI, and scientific computing, requiring models to understand natural language descriptions of physical phenomena and translate them into executable simulation environments. While large language models (LLMs) excel at general code generation, they struggle with the semantic gap between physical descriptions and simulation implementation. We introduce PhysCodeBench, the first comprehensive benchmark for evaluating physics-aware symbolic simulation, comprising 700 manually-crafted diverse samples across mechanics, fluid dynamics, and soft-body physics with expert annotations. Our evaluation framework measures both code executability and physical accuracy through automated and visual assessment. Building on this, we propose a Self-Corrective Multi-Agent Refinement Framework (SMRF) with three specialized agents (simulation generator, error corrector, and simulation refiner) that collaborate iteratively with domain-specific validation to produce physically accurate simulations. SMRF achieves 67.7 points overall performance compared to 36.3 points for the best baseline among evaluated SOTA models, representing a 31.4-point improvement. Our analysis demonstrates that error correction is critical for accurate physics-aware symbolic simulation and that specialized multi-agent approaches significantly outperform single-agent methods across the tested physical domains.",
+      "published": "2026-04-26T07:37:20Z",
+      "updated": "2026-04-26T07:37:20Z",
+      "arxiv_id": "2604.23580v1",
+      "abs_url": "http://arxiv.org/abs/2604.23580v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23580v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "世界模型与仿真",
+        "数据集/评测",
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "世界模型与仿真",
+      "score": 10,
+      "anchor_terms": [
+        "embodied",
+        "embodied ai",
+        "robot",
+        "robotic",
+        "robotics"
+      ],
+      "matched_terms": [
+        "embodied",
+        "embodied ai",
+        "robot",
+        "robotic",
+        "robotics"
+      ]
+    },
+    {
+      "title": "EgoLive: A Large-Scale Egocentric Dataset from Real-World Human Tasks",
+      "authors": [
+        "Yihang Li",
+        "Xuelong Wei",
+        "Jingzhou Luo",
+        "Yingjing Xiao",
+        "Yibo Bai",
+        "Guangyuan Zhou",
+        "Teng Zou",
+        "Chenguang Gui",
+        "Jiajun Wen",
+        "He Zhang",
+        "Kangliang Chen",
+        "Xing Pan",
+        "Shuaiyan Liu",
+        "Daming Wang",
+        "Tao An",
+        "Jiayi Li",
+        "Shibo Jin",
+        "Wanwan Zhang",
+        "Tianyu Wang",
+        "Boren Wei",
+        "Zhixuan Huang",
+        "Fangsheng Liu",
+        "Ruodai Li",
+        "Hui Zhang",
+        "Anson Li",
+        "Yicheng Gong",
+        "Peng Cao",
+        "Jiaming Liang",
+        "Liang Lin"
+      ],
+      "summary": "The advancement of robot learning is currently hindered by the scarcity of large-scale, high-quality datasets. While established data collection methods such as teleoperation and universal manipulation interfaces dominate current datasets, they suffer from inherent limitations in scalability and real-world deployability. Human egocentric video collection, by contrast, has emerged as a promising approach to enable scalable, natural and in-the-wild data collection. As such, we present EgoLive, a large-scale, high-quality egocentric dataset designed explicitly for robot manipulation learning. EgoLive establishes three distinctive technical advantages over existing egocentric datasets: first, it represents the largest open-source annotated egocentric dataset focused on real-world task-oriented human routines to date; second, it delivers leading data quality via a customized head-mounted capture device and comprehensive high-precision multi-modal annotations; third, all data is collected exclusively in unconstrained real-world scenarios and encompasses vertical field human working data, including home service, retail, and other practical work scenarios, providing superior diversity and ecological validity. With the introduction of EgoLive, we aim to provide the research community with a scalable, high-quality dataset that accelerates breakthroughs in generalizable robotic models and facilitates the real-world deployment of robot systems.",
+      "published": "2026-04-26T07:21:15Z",
+      "updated": "2026-04-26T07:21:15Z",
+      "arxiv_id": "2604.23570v1",
+      "abs_url": "http://arxiv.org/abs/2604.23570v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23570v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "数据集/评测",
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "机器人操作",
+      "score": 16,
+      "anchor_terms": [
+        "manipulation",
+        "robot",
+        "robot learning",
+        "robot manipulation",
+        "robotic",
+        "teleoperation"
+      ],
+      "matched_terms": [
+        "egocentric",
+        "manipulation",
+        "open-source",
+        "robot",
+        "robot learning",
+        "robot manipulation",
+        "robotic",
+        "teleoperation"
+      ]
+    },
+    {
+      "title": "Emotion-Conditioned Short-Horizon Human Pose Forecasting with a Lightweight Predictive World Model",
+      "authors": [
+        "Jingni Huang",
+        "Peter Bloodsworth"
+      ],
+      "summary": "Short-term human pose prediction plays a crucial role in interactive systems, assistive robots, and emotion-aware human-computer interaction[1-3]. While current trajectory prediction models primarily rely on geometric motion cues, they often overlook the underlying emotional signals influencing human motion dynamics[4-5]. This paper investigates whether facial expression-derived emotion embeddings can provide auxiliary conditional signals for short-term pose prediction. To further evaluate multimodal conditionation in a recursive prediction setting, we propose a lightweight autoregressive predictive world model that performs 15-step rolling pose prediction. This framework combines pose keypoints with emotion embeddings through a learnable gating mechanism and performs autoregressive unfolding prediction using a recurrent sequence model based on a two-layer LSTM architecture. Experiments were conducted on two small-scale pose-emotion video datasets: controlled motion sequences with minimal facial expression changes and, natural emotion-driven motion sequences with considerable facial expression changes. The results show that simple multimodal fusion does not consistently improve prediction accuracy, while normalized gating fusion significantly enhances the performance of emotion-driven motion sequences. Furthermore, counterfactual perturbation experiments demonstrate that the predicted trajectory exhibits measurable sensitivity to changes in multimodal input, suggesting that facial expression embeddings act as auxiliary conditional signals rather than redundant features. In summary, these results indicate that incorporating facial expression-derived emotion embeddings into emotion-conditional short-term pose prediction based on a lightweight predictive world model architecture is a feasible approach.",
+      "published": "2026-04-26T04:56:45Z",
+      "updated": "2026-04-26T04:56:45Z",
+      "arxiv_id": "2604.23532v1",
+      "abs_url": "http://arxiv.org/abs/2604.23532v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23532v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "世界模型与仿真",
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "世界模型与仿真",
+      "score": 4,
+      "anchor_terms": [
+        "robot",
+        "world model"
+      ],
+      "matched_terms": [
+        "robot",
+        "world model"
+      ]
+    },
+    {
+      "title": "Breaking the Secret: Economic Interventions for Combating Collusion in Embodied Multi-Agent Systems",
+      "authors": [
+        "Qi Liu",
+        "Xiaohui Chen",
+        "Zhihui Zhao",
+        "Yaowen Zheng",
+        "Dan Yu",
+        "Zehua Zhang",
+        "Limin Sun",
+        "Yongle Chen"
+      ],
+      "summary": "Collusion among autonomous agents poses a critical security threat in embodied multi-agent systems (MAS), where coordinated behaviors can deviate from global objectives and lead to real-world consequences. Existing defenses, primarily based on identity control or post-hoc behavior analysis, are insufficient to address such threats in embodied settings due to delayed feedback and noisy observations in physical environments, which make behavioral deviations difficult to detect accurately and in a timely manner. To address this challenge, we propose a mutagenic incentive intervention approach that mitigates collusion by reshaping agents' payoff structures. By rewarding agents who report collusive behavior and penalizing identified participants, the mechanism induces strategic defection and renders collusion unstable. We further design supporting mechanisms, including reporting deposits, smart contract-based reward enforcement, and encrypted communication, to ensure robustness against misuse of the incentive mechanism and retaliation from penalized agents. We implement the proposed approach in both simulated and real-world embodied environments. Experimental results show that our method effectively suppresses collusion by inducing defection, while preserving system efficiency. It achieves performance comparable to the non-collusion baseline and outperforms representative reactive defenses, thereby fulfilling the desired security objectives. These results demonstrate the effectiveness of proactive incentive design as a practical paradigm for securing embodied multi-agent systems.",
+      "published": "2026-04-26T03:13:47Z",
+      "updated": "2026-04-26T03:13:47Z",
+      "arxiv_id": "2604.23511v1",
+      "abs_url": "http://arxiv.org/abs/2604.23511v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.23511v1",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.MA"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "其他机器人"
+      ],
+      "topic": "其他机器人",
+      "score": 3,
+      "anchor_terms": [
+        "embodied"
+      ],
+      "matched_terms": [
+        "embodied"
+      ]
+    }
+  ]
+}

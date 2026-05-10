@@ -1,0 +1,485 @@
+{
+  "site": {
+    "title": "遥感大模型 arXiv 日报 · 归档",
+    "description": "每日自动抓取 arXiv 中遥感大模型相关论文，覆盖遥感目标检测、语义/实例分割、变化检测、场景分类、图像生成与重建、基础模型、视觉-语言模型、多模态融合、各类遥感图像类型以及数据集/评测等标签。",
+    "source_url": "https://arxiv.org/",
+    "update_window": "08:00",
+    "timezone": "Asia/Shanghai"
+  },
+  "categories": ["cs.CV", "eess.IV", "cs.AI", "cs.LG", "cs.MM", "stat.ML"],
+  "minimum_score": 2,
+  "matching": {
+    "minimum_score": 2,
+    "strong_anchor_terms": [
+      "remote sensing",
+      "earth observation",
+      "satellite imagery",
+      "satellite image",
+      "satellite images",
+      "aerial imagery",
+      "aerial image",
+      "aerial images",
+      "hyperspectral image",
+      "hyperspectral imagery",
+      "multispectral image",
+      "multispectral imagery",
+      "synthetic aperture radar",
+      "SAR image",
+      "SAR imagery",
+      "geospatial foundation",
+      "land cover classification",
+      "land cover mapping",
+      "land cover segmentation",
+      "oriented object detection",
+      "rotated object detection",
+      "optical remote sensing",
+      "very high resolution remote",
+      "remote sensing foundation model",
+      "remote sensing large model",
+      "remote sensing vision foundation",
+      "earth observation foundation model",
+      "geospatial foundation model",
+      "DOTA dataset",
+      "DIOR dataset",
+      "NWPU VHR-10",
+      "FAIR1M dataset",
+      "iSAID dataset",
+      "LoveDA dataset",
+      "SpaceNet dataset",
+      "xView dataset",
+      "RESISC45 dataset",
+      "EuroSAT dataset",
+      "BigEarthNet",
+      "SEN12MS",
+      "mmrotate",
+      "RarePlanes dataset",
+      "UC Merced dataset",
+      "AID dataset"
+    ],
+    "weak_anchor_rules": [
+      {
+        "term": "change detection",
+        "requires_any": ["remote sensing", "satellite", "aerial", "land cover", "SAR", "multispectral", "hyperspectral", "earth observation", "geospatial", "very high resolution", "VHR", "optical"]
+      },
+      {
+        "term": "object detection",
+        "requires_any": ["remote sensing", "aerial", "satellite", "oriented", "rotated", "SAR", "hyperspectral", "multispectral", "earth observation", "geospatial", "UAV", "drone", "very high resolution"]
+      },
+      {
+        "term": "semantic segmentation",
+        "requires_any": ["remote sensing", "aerial", "satellite", "SAR", "land cover", "hyperspectral", "geospatial", "earth observation"]
+      },
+      {
+        "term": "instance segmentation",
+        "requires_any": ["remote sensing", "aerial", "satellite", "SAR", "hyperspectral", "geospatial", "earth observation", "panoptic"]
+      },
+      {
+        "term": "panoptic segmentation",
+        "requires_any": ["remote sensing", "aerial", "satellite", "SAR", "geospatial", "earth observation"]
+      },
+      {
+        "term": "foundation model",
+        "requires_any": ["remote sensing", "geospatial", "earth observation", "satellite", "aerial", "SAR", "hyperspectral", "multispectral", "land cover"]
+      },
+      {
+        "term": "large vision model",
+        "requires_any": ["remote sensing", "geospatial", "earth observation", "satellite", "aerial", "SAR", "hyperspectral", "multispectral"]
+      },
+      {
+        "term": "super-resolution",
+        "requires_any": ["remote sensing", "satellite", "aerial", "SAR", "hyperspectral", "multispectral", "geospatial"]
+      },
+      {
+        "term": "image generation",
+        "requires_any": ["remote sensing", "satellite", "aerial", "SAR", "hyperspectral", "multispectral", "geospatial", "text-to-image", "text-to-remote"]
+      },
+      {
+        "term": "scene classification",
+        "requires_any": ["remote sensing", "aerial", "satellite", "SAR", "hyperspectral", "geospatial", "land use"]
+      },
+      {
+        "term": "land use",
+        "requires_any": ["remote sensing", "satellite", "aerial", "classification", "geospatial", "earth observation"]
+      },
+      {
+        "term": "SAM",
+        "requires_any": ["remote sensing", "satellite", "aerial", "SAR", "geospatial", "earth observation", "hyperspectral"]
+      },
+      {
+        "term": "CLIP",
+        "requires_any": ["remote sensing", "satellite", "aerial", "SAR", "geospatial", "earth observation"]
+      },
+      {
+        "term": "diffusion model",
+        "requires_any": ["remote sensing", "satellite", "aerial", "SAR", "hyperspectral", "geospatial", "earth observation"]
+      },
+      {
+        "term": "vision transformer",
+        "requires_any": ["remote sensing", "satellite", "aerial", "SAR", "hyperspectral", "multispectral", "geospatial", "earth observation"]
+      },
+      {
+        "term": "MLLM",
+        "requires_any": ["remote sensing", "satellite", "aerial", "SAR", "geospatial", "earth observation"]
+      },
+      {
+        "term": "multimodal large language model",
+        "requires_any": ["remote sensing", "satellite", "aerial", "SAR", "geospatial", "earth observation"]
+      },
+      {
+        "term": "visual question answering",
+        "requires_any": ["remote sensing", "satellite", "aerial", "SAR", "geospatial", "earth observation"]
+      },
+      {
+        "term": "geospatial",
+        "requires_any": ["foundation model", "AI", "deep learning", "transformer", "segmentation", "detection", "classification", "large model"]
+      },
+      {
+        "term": "UAV",
+        "requires_any": ["detection", "segmentation", "classification", "image", "object", "remote sensing", "aerial"]
+      },
+      {
+        "term": "drone",
+        "requires_any": ["detection", "segmentation", "classification", "image", "object", "remote sensing", "aerial"]
+      },
+      {
+        "term": "SAR",
+        "requires_any": ["detection", "segmentation", "classification", "image", "object", "change detection", "despeckling", "deep learning", "transformer"]
+      },
+      {
+        "term": "cloud removal",
+        "requires_any": ["remote sensing", "satellite", "aerial", "earth observation"]
+      },
+      {
+        "term": "image fusion",
+        "requires_any": ["remote sensing", "satellite", "aerial", "SAR", "hyperspectral", "multispectral", "pan-sharpening"]
+      },
+      {
+        "term": "small object",
+        "requires_any": ["remote sensing", "aerial", "satellite", "SAR", "UAV", "drone"]
+      }
+    ]
+  },
+  "strong_terms": [
+    "remote sensing foundation model",
+    "geospatial foundation model",
+    "earth observation foundation model",
+    "remote sensing large model",
+    "remote sensing vision language model",
+    "remote sensing MLLM",
+    "remote sensing VLN",
+    "RSGPT",
+    "GeoGPT",
+    "GeoChat",
+    "SkySense",
+    "RingMo",
+    "SatMAE",
+    "SatViT",
+    "Scale-MAE",
+    "GFM",
+    "SpectralGPT",
+    "GeoFM",
+    "SAMRS",
+    "RSPrompter",
+    "SAM4RS",
+    "RS SAM",
+    "GeoCLIP",
+    "RemoteCLIP",
+    "GeoRSCLIP",
+    "oriented object detection",
+    "rotated object detection",
+    "remote sensing object detection",
+    "aerial object detection",
+    "small object detection remote sensing",
+    "arbitrary-oriented detection",
+    "remote sensing semantic segmentation",
+    "aerial image segmentation",
+    "remote sensing instance segmentation",
+    "remote sensing change detection",
+    "change detection remote sensing",
+    "bitemporal change detection",
+    "remote sensing scene classification",
+    "aerial scene classification",
+    "hyperspectral image classification",
+    "remote sensing image generation",
+    "SAR-to-optical",
+    "cloud removal remote sensing",
+    "hyperspectral unmixing",
+    "panchromatic sharpening",
+    "pansharpening",
+    "DOTA-v1.5",
+    "DOTA-v2.0",
+    "DIOR-R",
+    "FAIR1M",
+    "LoveDA",
+    "iSAID",
+    "SpaceNet",
+    "xView",
+    "RESISC45",
+    "UC Merced",
+    "EuroSAT",
+    "BigEarthNet",
+    "SEN12MS",
+    "mmrotate",
+    "RSI-CB",
+    "WHU building",
+    "Vaihingen",
+    "Potsdam",
+    "remote sensing super-resolution",
+    "remote sensing image fusion",
+    "multi-modal remote sensing",
+    "cross-modal remote sensing",
+    "self-supervised learning remote sensing",
+    "few-shot remote sensing",
+    "zero-shot remote sensing",
+    "domain adaptation remote sensing"
+  ],
+  "keywords": [
+    "remote sensing",
+    "earth observation",
+    "geospatial",
+    "GIS",
+    "photogrammetry",
+    "hyperspectral",
+    "multispectral",
+    "synthetic aperture radar",
+    "SAR",
+    "InSAR",
+    "PolSAR",
+    "LiDAR",
+    "point cloud",
+    "thermal infrared",
+    "panchromatic",
+    "very high resolution",
+    "VHR",
+    "high resolution remote",
+    "optical remote",
+    "satellite",
+    "aerial",
+    "UAV",
+    "drone",
+    "unmanned aerial vehicle",
+    "airborne",
+    "spaceborne",
+    "object detection",
+    "semantic segmentation",
+    "instance segmentation",
+    "panoptic segmentation",
+    "change detection",
+    "scene classification",
+    "land cover",
+    "land use",
+    "image classification",
+    "image generation",
+    "image fusion",
+    "super-resolution",
+    "image restoration",
+    "cloud removal",
+    "despeckling",
+    "dehazing remote",
+    "denoising",
+    "pansharpening",
+    "building extraction",
+    "road extraction",
+    "water body extraction",
+    "vehicle detection",
+    "ship detection",
+    "aircraft detection",
+    "small object",
+    "dense object",
+    "foundation model",
+    "large model",
+    "vision transformer",
+    "ViT",
+    "Swin Transformer",
+    "diffusion model",
+    "stable diffusion",
+    "generative adversarial network",
+    "GAN",
+    "Segment Anything Model",
+    "SAM",
+    "CLIP",
+    "vision language model",
+    "VLM",
+    "multimodal large language model",
+    "MLLM",
+    "LLaVA",
+    "large language model",
+    "LLM",
+    "convolutional neural network",
+    "CNN",
+    "graph neural network",
+    "GNN",
+    "U-Net",
+    "Mask R-CNN",
+    "YOLO",
+    "DETR",
+    "transformer",
+    "self-attention",
+    "self-supervised learning",
+    "contrastive learning",
+    "masked autoencoder",
+    "MAE",
+    "knowledge distillation",
+    "few-shot learning",
+    "zero-shot learning",
+    "domain adaptation",
+    "transfer learning",
+    "prompt engineering",
+    "visual prompting",
+    "DOTA",
+    "DIOR",
+    "NWPU",
+    "FAIR1M",
+    "LoveDA",
+    "iSAID",
+    "SpaceNet",
+    "xView",
+    "RESISC45",
+    "UC Merced",
+    "AID",
+    "EuroSAT",
+    "BigEarthNet",
+    "SEN12MS",
+    "mmrotate",
+    "RarePlanes",
+    "Vaihingen",
+    "Potsdam",
+    "WHU",
+    "GID",
+    "DeepGlobe",
+    "fMoW",
+    "Million-AID",
+    "attention mechanism",
+    "feature pyramid",
+    "multi-scale",
+    "feature fusion",
+    "modal fusion",
+    "cross-attention",
+    "tokenization",
+    "pre-training",
+    "fine-tuning",
+    "instruction tuning",
+    "visual instruction tuning",
+    "open-vocabulary",
+    "zero-shot",
+    "generalizable",
+    "robust"
+  ],
+  "exclude_terms": [
+    "embodied carbon",
+    "laparoscope",
+    "intraoperative",
+    "surgical robot",
+    "surgical",
+    "medical image",
+    "medical imaging",
+    "molecular",
+    "protein",
+    "clinical",
+    "pathology",
+    "endoscopic",
+    "MRI",
+    "CT scan",
+    "ultrasound",
+    "X-ray",
+    "histopathological",
+    "microscope",
+    "cellular",
+    "genome",
+    "DNA",
+    "RNA"
+  ],
+  "domain_boost_keywords": [
+    "remote sensing",
+    "earth observation",
+    "satellite",
+    "aerial",
+    "geospatial"
+  ],
+  "category_boost": {
+    "eess.IV": 2,
+    "cs.CV": 1
+  },
+  "labels": [
+    {
+      "name": "目标检测",
+      "group": "task",
+      "terms": ["object detection", "oriented detection", "rotated detection", "oriented object detection", "rotated object detection", "small object", "vehicle detection", "ship detection", "aircraft detection", "building detection", "YOLO", "DETR", "DOTA", "DIOR", "FAIR1M", "NWPU", "xView", "RarePlanes"]
+    },
+    {
+      "name": "语义分割",
+      "group": "task",
+      "terms": ["semantic segmentation", "land cover", "building extraction", "road extraction", "water body extraction", "U-Net", "DeepLab", "land cover classification", "land cover mapping", "DeepGlobe", "Vaihingen", "Potsdam", "LoveDA", "GID", "iSAID"]
+    },
+    {
+      "name": "实例分割",
+      "group": "task",
+      "terms": ["instance segmentation", "panoptic segmentation", "Mask R-CNN", "Mask2Former", "SAM", "Segment Anything"]
+    },
+    {
+      "name": "变化检测",
+      "group": "task",
+      "terms": ["change detection", "bitemporal", "temporal change", "land cover change", "urban change", "building change", "SEN12MS"]
+    },
+    {
+      "name": "场景分类",
+      "group": "task",
+      "terms": ["scene classification", "land use classification", "image classification", "scene recognition", "land use", "RESISC45", "UC Merced", "AID", "EuroSAT", "BigEarthNet", "Million-AID"]
+    },
+    {
+      "name": "图像生成与重建",
+      "group": "task",
+      "terms": ["image generation", "image synthesis", "generative adversarial network", "GAN", "diffusion model", "stable diffusion", "image-to-image", "SAR-to-optical", "super-resolution", "image restoration", "image fusion", "cloud removal", "dehazing", "despeckling", "denoising", "pansharpening"]
+    },
+    {
+      "name": "基础模型",
+      "group": "model",
+      "terms": ["foundation model", "large model", "pre-training", "pre-trained", "self-supervised", "masked autoencoder", "MAE", "vision transformer", "ViT", "Swin Transformer", "contrastive learning", "knowledge distillation", "generalist model", "remote sensing foundation", "geospatial foundation", "earth observation foundation", "RingMo", "SkySense", "SatMAE", "SatViT", "Scale-MAE", "SpectralGPT", "GeoFM", "GFM"]
+    },
+    {
+      "name": "视觉-语言模型",
+      "group": "model",
+      "terms": ["vision language model", "VLM", "multimodal large language model", "MLLM", "large language model", "LLM", "CLIP", "visual question answering", "vision-language", "visual grounding", "instruction tuning", "visual instruction tuning", "LLaVA", "RemoteCLIP", "GeoCLIP", "GeoChat", "RSGPT", "GeoGPT", "open-vocabulary", "zero-shot", "visual prompting", "prompt engineering", "SAM", "RSPrompter"]
+    },
+    {
+      "name": "少样本/域适应",
+      "group": "technique",
+      "terms": ["few-shot", "zero-shot", "domain adaptation", "transfer learning", "generalizable", "cross-domain", "unsupervised domain adaptation", "source-free", "test-time adaptation"]
+    },
+    {
+      "name": "多模态融合",
+      "group": "technique",
+      "terms": ["multi-modal", "cross-modal", "modal fusion", "feature fusion", "data fusion", "SAR-optical", "multispectral fusion", "pan-sharpening", "hyperspectral and", "LiDAR and"]
+    },
+    {
+      "name": "光学遥感",
+      "group": "image_type",
+      "terms": ["optical remote", "optical image", "optical imagery", "very high resolution", "VHR", "panchromatic", "visible light", "RGB remote"]
+    },
+    {
+      "name": "SAR遥感",
+      "group": "image_type",
+      "terms": ["synthetic aperture radar", "SAR", "InSAR", "PolSAR", "SAR image", "SAR imagery", "radar image", "radar remote"]
+    },
+    {
+      "name": "高光谱/多光谱",
+      "group": "image_type",
+      "terms": ["hyperspectral", "multispectral", "spectral", "HSI", "MSI", "spectral-spatial", "spectral unmixing", "band selection", "hyperspectral image classification"]
+    },
+    {
+      "name": "LiDAR/点云",
+      "group": "image_type",
+      "terms": ["LiDAR", "point cloud", "airborne laser scanning", "ALS", "3D point cloud", "pointNet", "voxel"]
+    },
+    {
+      "name": "无人机/UAV",
+      "group": "image_type",
+      "terms": ["UAV", "drone", "unmanned aerial vehicle", "airborne image", "aerial image", "aerial imagery", "low-altitude"]
+    },
+    {
+      "name": "数据集/评测",
+      "group": "resource",
+      "terms": ["dataset", "benchmark", "evaluation", "DOTA", "DIOR", "FAIR1M", "LoveDA", "iSAID", "SpaceNet", "xView", "RESISC45", "UC Merced", "AID", "EuroSAT", "BigEarthNet", "SEN12MS", "mmrotate", "RarePlanes", "Vaihingen", "Potsdam", "WHU", "GID", "DeepGlobe", "fMoW", "Million-AID", "corpus", "suite"]
+    }
+  ]
+}

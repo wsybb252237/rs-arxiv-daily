@@ -1,0 +1,795 @@
+{
+  "date": "2026-04-04",
+  "generated_at": "2026-05-09T14:58:09.563754+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.RO OR cat:cs.AI OR cat:cs.CV OR cat:cs.LG OR cat:cs.CL OR cat:cs.MA OR cat:cs.HC OR cat:stat.ML OR cat:eess.SY OR cat:eess.IV) AND submittedDate:[202604040000 TO 202604042359]",
+  "total_fetched": 201,
+  "total_matched": 19,
+  "papers": [
+    {
+      "title": "Optimizing Neurorobot Policy under Limited Demonstration Data through Preference Regret",
+      "authors": [
+        "Viet Dung Nguyen",
+        "Yuhang Song",
+        "Anh Nguyen",
+        "Jamison Heard",
+        "Reynold Bailey",
+        "Alexander Ororbia"
+      ],
+      "summary": "Robot reinforcement learning from demonstrations (RLfD) assumes that expert data is abundant; this is usually unrealistic in the real world given data scarcity as well as high collection cost. Furthermore, imitation learning algorithms assume that the data is independently and identically distributed, which ultimately results in poorer performance as gradual errors emerge and compound within test-time trajectories. We address these issues by introducing the \"master your own expertise\" (MYOE) framework, a self-imitation framework that enables robotic agents to learn complex behaviors from limited demonstration data samples. Inspired by human perception and action, we propose and design what we call the queryable mixture-of-preferences state space model (QMoP-SSM), which estimates the desired goal at every time step. These desired goals are used in computing the \"preference regret\", which is used to optimize the robot control policy. Our experiments demonstrate the robustness, adaptability, and out-of-sample performance of our agent compared to other state-of-the-art RLfD schemes. The GitHub repository that supports this work can be found at: https://github.com/rxng8/neurorobot-preference-regret-learning.",
+      "published": "2026-04-04T00:03:59Z",
+      "updated": "2026-04-04T00:03:59Z",
+      "arxiv_id": "2604.03523v1",
+      "abs_url": "http://arxiv.org/abs/2604.03523v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03523v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": "10 pages, 4 figures, 4 tables",
+      "code_url": "https://github.com/rxng8/neurorobot-preference-regret-learning",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "强化/模仿学习",
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "强化/模仿学习",
+      "score": 13,
+      "anchor_terms": [
+        "imitation learning",
+        "reinforcement learning",
+        "robot",
+        "robot policy",
+        "robotic"
+      ],
+      "matched_terms": [
+        "imitation learning",
+        "reinforcement learning",
+        "robot",
+        "robot policy",
+        "robotic"
+      ]
+    },
+    {
+      "title": "From Prompt to Physical Action: Structured Backdoor Attacks on LLM-Mediated Robotic Control Systems",
+      "authors": [
+        "Mingyang Xie",
+        "Jin Wei-Kocsis"
+      ],
+      "summary": "The integration of large language models (LLMs) into robotic control pipelines enables natural language interfaces that translate user prompts into executable commands. However, this digital-to-physical interface introduces a critical and underexplored vulnerability: structured backdoor attacks embedded during fine-tuning. In this work, we experimentally investigate LoRA-based supply-chain backdoors in LLM-mediated ROS2 robotic control systems and evaluate their impact on physical robot execution. We construct two poisoned fine-tuning strategies targeting different stages of the command generation pipeline and reveal a key systems-level insight: back-doors embedded at the natural-language reasoning stage do not reliably propagate to executable control outputs, whereas backdoors aligned directly with structured JSON command formats successfully survive translation and trigger physical actions. In both simulation and real-world experiments, backdoored models achieve an average Attack Success Rate of 83% while maintaining over 93% Clean Performance Accuracy (CPA) and sub-second latency, demonstrating both reliability and stealth. We further implement an agentic verification defense using a secondary LLM for semantic consistency checking. Although this reduces the Attack Success Rate (ASR) to 20%, it increases end-to-end latency to 8-9 seconds, exposing a significant security-responsiveness trade-off in real-time robotic systems. These results highlight structural vulnerabilities in LLM-mediated robotic control architectures and underscore the need for robotics-aware defenses for embodied AI systems.",
+      "published": "2026-04-04T23:06:16Z",
+      "updated": "2026-04-04T23:06:16Z",
+      "arxiv_id": "2604.03890v1",
+      "abs_url": "http://arxiv.org/abs/2604.03890v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03890v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "世界模型与仿真",
+        "其他机器人"
+      ],
+      "topic": "世界模型与仿真",
+      "score": 12,
+      "anchor_terms": [
+        "embodied",
+        "embodied ai",
+        "robot",
+        "robotic",
+        "robotics"
+      ],
+      "matched_terms": [
+        "embodied",
+        "embodied ai",
+        "robot",
+        "robotic",
+        "robotics"
+      ]
+    },
+    {
+      "title": "Risk-Constrained Belief-Space Optimization for Safe Control under Latent Uncertainty",
+      "authors": [
+        "Clinton Enwerem",
+        "John S. Baras",
+        "Calin Belta"
+      ],
+      "summary": "Many safety-critical control systems must operate under latent uncertainty that sensors cannot directly resolve at decision time. Such uncertainty, arising from unknown physical properties, exogenous disturbances, or unobserved environment geometry, influences dynamics, task feasibility, and safety margins. Standard methods optimize expected performance and offer limited protection against rare but severe outcomes, while robust formulations treat uncertainty conservatively without exploiting its probabilistic structure. We consider partially observed dynamical systems whose dynamics, costs, and safety constraints depend on a latent parameter maintained as a belief distribution, and propose a risk-sensitive belief-space Model Predictive Path Integral (MPPI) control framework that plans under this belief while enforcing a Conditional Value-at-Risk (CVaR) constraint on a trajectory safety margin over the receding horizon. The resulting controller optimizes a risk-regularized performance objective while explicitly constraining the tail risk of safety violations induced by latent parameter variability. We establish three properties of the resulting risk-constrained controller: (1) the CVaR constraint implies a probabilistic safety guarantee, (2) the controller recovers the risk-neutral optimum as the risk weight in the objective tends to zero, and (3) a union-bound argument extends the per-horizon guarantee to cumulative safety over repeated solves. In physics-based simulations of a vision-guided dexterous stowing task in which a grasped object must be inserted into an occupied slot with pose uncertainty exceeding prescribed lateral clearance requirements, our method achieves 82% success with zero contact violations at high risk aversion, compared to 55% and 50% for a risk-neutral configuration and a chance-constrained baseline, both of which incur nonzero exterior contact forces.",
+      "published": "2026-04-04T21:22:44Z",
+      "updated": "2026-04-04T21:22:44Z",
+      "arxiv_id": "2604.03868v1",
+      "abs_url": "http://arxiv.org/abs/2604.03868v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03868v1",
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY",
+        "cs.RO"
+      ],
+      "comment": "8 pages, 4 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "世界模型与仿真",
+        "人形与灵巧"
+      ],
+      "topic": "机器人操作",
+      "score": 4,
+      "anchor_terms": [
+        "grasp"
+      ],
+      "matched_terms": [
+        "dexterous",
+        "grasp"
+      ]
+    },
+    {
+      "title": "COMB: Common Open Modular robotic platform for Bees",
+      "authors": [
+        "Pranav Kedia",
+        "Marie Messerich",
+        "Tim Landgraf"
+      ],
+      "summary": "Experimental access to real honeybee colonies requires robotic systems capable of operating within limited spatial constraints, tolerating hive-specific fouling and environmental conditions, and supporting both sensing and localized actuation without frequent hardware redesign. This paper introduces COMB, a compact, open-source, modular mechatronic platform designed for in-hive experiments within standard observation-hive frames. The platform integrates a XY positioning stage, a Movable Access Window (MAW) for sealed tool access through the hive boundary, interchangeable payload modules, and an embedded control architecture that enables repeatable trajectory execution and signal generation. The platform's capabilities are demonstrated through three representative modules: a biomimetic dance-and-signaling payload, a close-range comb scanner, and an electromagnetic wing actuator for localized oscillatory stimulation. This paper details the hardware and software design of COMB, outlines its operational capabilities, and describes the supporting infrastructure for conducting real-world in-hive experiments. The platform is characterized in engineering terms through tracking waggle-trajectory executions, performing multi-image stitching for repeated comb mosaics, and conducting video-based spectral analysis of the wing actuator. These results position COMB as a reusable experimental robotics platform for controlled in-hive sensing and actuation, and as a compact, generalized successor to earlier task-specific honeybee robotic systems.",
+      "published": "2026-04-04T19:22:19Z",
+      "updated": "2026-04-04T19:22:19Z",
+      "arxiv_id": "2604.04980v1",
+      "abs_url": "http://arxiv.org/abs/2604.04980v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.04980v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "其他机器人"
+      ],
+      "topic": "其他机器人",
+      "score": 9,
+      "anchor_terms": [
+        "robot",
+        "robotic",
+        "robotics"
+      ],
+      "matched_terms": [
+        "open-source",
+        "robot",
+        "robotic",
+        "robotics"
+      ]
+    },
+    {
+      "title": "From Video to Control: A Survey of Learning Manipulation Interfaces from Temporal Visual Data",
+      "authors": [
+        "Linfang Zheng",
+        "Zikai Ouyang",
+        "Chen Wang",
+        "Jia Pan",
+        "Wei Zhang"
+      ],
+      "summary": "Video is a scalable observation of physical dynamics: it captures how objects move, how contact unfolds, and how scenes evolve under interaction -- all without requiring robot action labels. Yet translating this temporal structure into reliable robotic control remains an open challenge, because video lacks action supervision and differs from robot experience in embodiment, viewpoint, and physical constraints. This survey reviews methods that exploit non-action-annotated temporal video to learn control interfaces for robotic manipulation. We introduce an \\emph{interface-centric taxonomy} organized by where the video-to-control interface is constructed and what control properties it enables, identifying three families: direct video--action policies, which keep the interface implicit; latent-action methods, which route temporal structure through a compact learned intermediate; and explicit visual interfaces, which predict interpretable targets for downstream control. For each family, we analyze control-integration properties -- how the loop is closed, what can be verified before execution, and where failures enter. A cross-family synthesis reveals that the most pressing open challenges center on the \\emph{robotics integration layer} -- the mechanisms that connect video-derived predictions to dependable robot behavior -- and we outline research directions toward closing this gap.",
+      "published": "2026-04-04T15:37:11Z",
+      "updated": "2026-04-04T15:37:11Z",
+      "arxiv_id": "2604.04974v1",
+      "abs_url": "http://arxiv.org/abs/2604.04974v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.04974v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "其他机器人"
+      ],
+      "topic": "机器人操作",
+      "score": 8,
+      "anchor_terms": [
+        "manipulation",
+        "robot",
+        "robotic",
+        "robotics"
+      ],
+      "matched_terms": [
+        "manipulation",
+        "robot",
+        "robotic",
+        "robotics"
+      ]
+    },
+    {
+      "title": "A Novel Hybrid PID-LQR Controller for Sit-To-Stand Assistance Using a CAD-Integrated Simscape Multibody Lower Limb Exoskeleton",
+      "authors": [
+        "Ranjeet Kumbhar",
+        "Rajmeet Singh",
+        "Appaso M Gadade",
+        "Ashish Singla",
+        "Irfan Hussain"
+      ],
+      "summary": "Precise control of lower limb exoskeletons during sit-to-stand (STS) transitions remains a central challenge in rehabilitation robotics owing to the highly nonlinear, time-varying dynamics of the human-exoskeleton system and the stringent trajectory tracking requirements imposed by clinical safety. This paper presents the systematic design, simulation, and comparative evaluation of three control strategies: a classical Proportional-Integral-Derivative (PID) controller, a Linear Quadratic Regulator (LQR), and a novel Hybrid PID-LQR controller applied to a bilateral lower limb exoskeleton performing the sit-to-stand transition. A high-fidelity, physics-based dynamic model of the exoskeleton is constructed by importing a SolidWorks CAD assembly directly into the MATLAB/Simulink Simscape Multibody environment, preserving accurate geometric and inertial properties of all links. Physiologically representative reference joint trajectories for the hip, knee, and ankle joints are generated using OpenSim musculoskeletal simulation and decomposed into three biomechanical phases: flexion-momentum (0-33%), momentum-transfer (34-66%), and extension (67-100%). The proposed Hybrid PID-LQR controller combines the optimal transient response of LQR with the integral disturbance rejection of PID through a tuned blending coefficient alpha = 0.65. Simulation results demonstrate that the Hybrid PID-LQR achieves RMSE reductions of 72.3% and 70.4% over PID at the hip and knee joints, respectively, reduces settling time by over 90% relative to PID across all joints, and limits overshoot to 2.39%-6.10%, confirming its superiority over both baseline strategies across all evaluated performance metrics and demonstrating strong translational potential for clinical assistive exoskeleton deployment.",
+      "published": "2026-04-04T15:37:11Z",
+      "updated": "2026-04-04T15:37:11Z",
+      "arxiv_id": "2604.03766v1",
+      "abs_url": "http://arxiv.org/abs/2604.03766v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03766v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "世界模型与仿真",
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "世界模型与仿真",
+      "score": 6,
+      "anchor_terms": [
+        "robot",
+        "robotic",
+        "robotics"
+      ],
+      "matched_terms": [
+        "robot",
+        "robotic",
+        "robotics"
+      ]
+    },
+    {
+      "title": "Build on Priors: Vision--Language--Guided Neuro-Symbolic Imitation Learning for Data-Efficient Real-World Robot Manipulation",
+      "authors": [
+        "Pierrick Lorang",
+        "Johannes Huemer",
+        "Timothy Duggan",
+        "Kai Goebel",
+        "Patrik Zips",
+        "Matthias Scheutz"
+      ],
+      "summary": "Enabling robots to learn long-horizon manipulation tasks from a handful of demonstrations remains a central challenge in robotics. Existing neuro-symbolic approaches often rely on hand-crafted symbolic abstractions, semantically labeled trajectories or large demonstration datasets, limiting their scalability and real-world applicability. We present a scalable neuro-symbolic framework that autonomously constructs symbolic planning domains and data-efficient control policies from as few as one to thirty unannotated skill demonstrations, without requiring manual domain engineering. Our method segments demonstrations into skills and employs a Vision-Language Model (VLM) to classify skills and identify equivalent high-level states, enabling automatic construction of a state-transition graph. This graph is processed by an Answer Set Programming solver to synthesize a PDDL planning domain, which an oracle function exploits to isolate the minimal, task-relevant and target relative observation and action spaces for each skill policy. Policies are learned at the control reference level rather than at the raw actuator signal level, yielding a smoother and less noisy learning target. Known controllers can be leveraged for real-world data augmentation by projecting a single demonstration onto other objects in the scene, simultaneously enriching the graph construction process and the dataset for imitation learning. We validate our framework primarily on a real industrial forklift across statistically rigorous manipulation trials, and demonstrate cross-platform generality on a Kinova Gen3 robotic arm across two standard benchmarks. Our results show that grounding control learning, VLM-driven abstraction, and automated planning synthesis into a unified pipeline constitutes a practical path toward scalable, data-efficient, expert-free and interpretable neuro-symbolic robotics.",
+      "published": "2026-04-04T15:17:59Z",
+      "updated": "2026-04-04T15:17:59Z",
+      "arxiv_id": "2604.03759v1",
+      "abs_url": "http://arxiv.org/abs/2604.03759v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03759v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "强化/模仿学习",
+        "数据集/评测",
+        "机械臂"
+      ],
+      "topic": "机器人操作",
+      "score": 22,
+      "anchor_terms": [
+        "imitation learning",
+        "manipulation",
+        "real-world robot",
+        "robot",
+        "robot manipulation",
+        "robotic",
+        "robotics"
+      ],
+      "matched_terms": [
+        "imitation learning",
+        "manipulation",
+        "real-world robot",
+        "robot",
+        "robot manipulation",
+        "robotic",
+        "robotic arm",
+        "robotics"
+      ]
+    },
+    {
+      "title": "CT-VoxelMap: Efficient Continuous-Time LiDAR-Inertial Odometry with Probabilistic Adaptive Voxel Mapping",
+      "authors": [
+        "Lei Zhao",
+        "Xingyi Li",
+        "Tianchen Deng",
+        "Chuan Cao",
+        "Han Zhang",
+        "Weidong Chen"
+      ],
+      "summary": "Maintaining stable and accurate localization during fast motion or on rough terrain remains highly challenging for mobile robots with onboard resources. Currently, multi-sensor fusion methods based on continuous-time representation offer a potential and effective solution to this challenge. Among these, spline-based methods provide an efficient and intuitive approach for continuous-time representation. Previous continuous-time odometry works based on B-splines either treat control points as variables to be estimated or perform estimation in quaternion space, which introduces complexity in deriving analytical Jacobians and often overlooks the fitting error between the spline and the true trajectory over time. To address these issues, we first propose representing the increments of control points on matrix Lie groups as variables to be estimated. Leveraging the feature of the cumulative form of B-splines, we derive a more compact formulation that yields simpler analytical Jacobians without requiring additional boundary condition considerations. Second, we utilize forward propagation information from IMU measurements to estimate fitting errors online and further introduce a hybrid feature-based voxel map management strategy, enhancing system accuracy and robustness. Finally, we propose a re-estimation policy that significantly improves system computational efficiency and robustness. The proposed method is evaluated on multiple challenging public datasets, demonstrating superior performance on most sequences. Detailed ablation studies are conducted to analyze the impact of each module on the overall pose estimation system.",
+      "published": "2026-04-04T14:27:54Z",
+      "updated": "2026-04-04T14:27:54Z",
+      "arxiv_id": "2604.03747v1",
+      "abs_url": "http://arxiv.org/abs/2604.03747v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03747v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "导航与移动",
+        "数据集/评测",
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "导航与移动",
+      "score": 5,
+      "anchor_terms": [
+        "robot"
+      ],
+      "matched_terms": [
+        "mobile robot",
+        "robot"
+      ]
+    },
+    {
+      "title": "A Multi-View 3D Telepresence System for XR Robot Teleoperation",
+      "authors": [
+        "Enes Ulas Dincer",
+        "Manuel Zaremski",
+        "Alexandra Nick",
+        "Elias Wucher",
+        "Barbara Deml",
+        "Gerhard Neumann"
+      ],
+      "summary": "Robot teleoperation is critical for applications such as remote maintenance, fleet robotics, search and rescue, and data collection for robot learning. Effective teleoperation requires intuitive 3D visualization with reliable depth cues, which conventional screen-based interfaces often fail to provide. We introduce a multi-view VR telepresence system that (1) fuses geometry from three cameras to produce GPU-accelerated point-cloud rendering on standalone VR hardware, and (2) integrates a wrist-mounted RGB stream to provide high-resolution local detail where point-cloud accuracy is limited. Our pipeline supports real-time rendering of approximately 75k points on the Meta Quest 3. A within-subject study was conducted with 31 participants to compare our system to other visualisation modalities, such as RGB streams, a projection of stereo-vision directly in the VR device and point clouds without providing additional RGB information. Across three different teleoperated manipulation tasks, we measured task success, completion time, perceived workload, and usability. Our system achieved the best overall performance, while the Point Cloud modality without RGB also outperforming the RGB streams and OpenTeleVision. These results show that combining global 3D structure with localized high-resolution detail substantially improves telepresence for manipulation and provides a strong foundation for next-generation robot teleoperation systems.",
+      "published": "2026-04-04T13:22:12Z",
+      "updated": "2026-04-04T13:22:12Z",
+      "arxiv_id": "2604.03730v1",
+      "abs_url": "http://arxiv.org/abs/2604.03730v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03730v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "机器人操作",
+      "score": 13,
+      "anchor_terms": [
+        "manipulation",
+        "robot",
+        "robot learning",
+        "robotic",
+        "robotics",
+        "teleoperation"
+      ],
+      "matched_terms": [
+        "manipulation",
+        "robot",
+        "robot learning",
+        "robotic",
+        "robotics",
+        "teleoperation"
+      ]
+    },
+    {
+      "title": "15 Years of Augmented Human(s) Research: Where Do We Stand?",
+      "authors": [
+        "Steeven Villa",
+        "Abdallah El Ali"
+      ],
+      "summary": "The Augmented Human vision broadly seeks to improve or expand baseline human functioning through the restoration or extension of physical, intellectual, and social capabilities. However, given the rapid pace of technology development, we ask: what exactly does Augmented Human research involve, what are its core themes, and how has the Augmented Human(s) conference series evolved over time? To answer this, we conducted a scientometric analysis on the past 15 years of the Augmented Human(s) conference (N=735 paper), focusing on: geographical aspects, submissions and citation timelines, author frequency and popularity, and topic modeling. We find that: (a) Number of papers in the conference exhibit a bimodal distribution, peaking in 2015 and 2025, but showing periods of stagnant growth; (b) key topics over time include Haptics, Wearable Sensing, Vision & Eye Tracking, Embodied Interaction, and Sports / Motion; (c) some seminal papers on AH are not published in AH(s), but rather at related venues (e.g., CHI); (d) the conference has an active Japanese HCI community despite its historical Eurocentric location dominance. We contribute a closer look at the trajectory of the AH(s) field, and raise considerations of definitional and research scope ambiguities given the core problems/enhancements the field seeks to address.",
+      "published": "2026-04-04T12:42:42Z",
+      "updated": "2026-04-04T12:42:42Z",
+      "arxiv_id": "2604.03715v1",
+      "abs_url": "http://arxiv.org/abs/2604.03715v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03715v1",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "comment": "Accepted to Augmented Humans International Conference 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "感知与3D理解",
+        "其他机器人"
+      ],
+      "topic": "感知与3D理解",
+      "score": 3,
+      "anchor_terms": [
+        "embodied"
+      ],
+      "matched_terms": [
+        "embodied",
+        "haptic"
+      ]
+    },
+    {
+      "title": "VidNum-1.4K: A Comprehensive Benchmark for Video-based Numerical Reasoning",
+      "authors": [
+        "Shaoyang Cui",
+        "Lingbei Meng"
+      ],
+      "summary": "Video-based numerical reasoning provides a premier arena for testing whether Vision-Language Models (VLMs) truly \"understand\" real-world dynamics, as accurate numerical deduction necessitates a profound grasp of temporal events, object permanence, and compositional logic beyond superficial pattern matching. However, existing benchmarks are often confined to narrow domains, such as repetitive athletic motions, or treat simple counting merely as a superficial regression task, failing to assess multi-step numerical logic within the inherent complexity of real-world multimedia content. We introduce VidNum-1.4K, a comprehensive VideoQA benchmark comprising 1,379 strictly human-annotated video-question pairs designed to evaluate genuine numerical reasoning across highly diverse environments, encompassing object, action, and event quantification. The VidNum-1.4K is uniquely structured into a three-level hierarchy that evolves from direct visual perception to video-based compositional numerical reasoning, requiring models to perform arithmetic operations, comparisons, and logical deductions grounded in temporal evidence. Our evaluations across a diverse suite of state-of-the-art VLMs reveal a striking reasoning gap: while the Gemini-3.1-pro barely reaches a 60% accuracy threshold, representative open-source families struggle heavily in the 25%--45% range. These findings demonstrate that current VLMs still lack a stable \"internal world model\", positioning VidNum-1.4K as a demanding diagnostic testbed for the next generation of numerical video intelligence.",
+      "published": "2026-04-04T12:10:09Z",
+      "updated": "2026-04-04T12:10:09Z",
+      "arxiv_id": "2604.03701v1",
+      "abs_url": "http://arxiv.org/abs/2604.03701v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03701v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "7 pages, 5 figures, under review at ACMMM 2026 Dataset Track",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "世界模型与仿真",
+        "数据集/评测",
+        "感知与3D理解"
+      ],
+      "topic": "机器人操作",
+      "score": 3,
+      "anchor_terms": [
+        "grasp"
+      ],
+      "matched_terms": [
+        "grasp",
+        "open-source",
+        "world model"
+      ]
+    },
+    {
+      "title": "ART: Adaptive Relational Transformer for Pedestrian Trajectory Prediction with Temporal-Aware Relations",
+      "authors": [
+        "Ruochen Li",
+        "Ziyi Chang",
+        "Junyan Hu",
+        "Jiannan Li",
+        "Amir Atapour-Abarghouei",
+        "Hubert P. H. Shum"
+      ],
+      "summary": "Accurate prediction of real-world pedestrian trajectories is crucial for a wide range of robot-related applications. Recent approaches typically adopt graph-based or transformer-based frameworks to model interactions. Despite their effectiveness, these methods either introduce unnecessary computational overhead or struggle to represent the diverse and time-varying characteristics of human interactions. In this work, we present an Adaptive Relational Transformer (ART), which introduces a Temporal-Aware Relation Graph (TARG) to explicitly capture the evolution of pairwise interactions and an Adaptive Interaction Pruning (AIP) mechanism to reduce redundant computations efficiently. Extensive evaluations on ETH/UCY and NBA benchmarks show that ART delivers state-of-the-art accuracy with high computational efficiency.",
+      "published": "2026-04-04T08:59:33Z",
+      "updated": "2026-04-04T08:59:33Z",
+      "arxiv_id": "2604.03649v1",
+      "abs_url": "http://arxiv.org/abs/2604.03649v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03649v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "数据集/评测",
+      "score": 2,
+      "anchor_terms": [
+        "robot"
+      ],
+      "matched_terms": [
+        "robot"
+      ]
+    },
+    {
+      "title": "Towards Edge Intelligence via Autonomous Navigation: A Robot-Assisted Data Collection Approach",
+      "authors": [
+        "Tingting Huang",
+        "Yingyang Chen",
+        "Sixian Qin",
+        "Zhijian Lin",
+        "Jun Li",
+        "Li Wang"
+      ],
+      "summary": "With the growing demand for large-scale and high-quality data in edge intelligence systems, mobile robots are increasingly deployed to collect data proactively, particularly in complex environments. However, existing robot-assisted data collection methods face significant challenges in achieving reliable and efficient performance, especially in non-line-of-sight (NLoS) environments. This paper proposes a communication-and-learning dual-driven (CLD) autonomous navigation scheme that incorporates region-aware propagation characteristics and a non-point-mass robot representation. This scheme enables simultaneous optimization of navigation, communication, and learning performance. An efficient algorithm based on majorization-minimization (MM) is proposed to solve the non-convex and non-smooth CLD problem. Simulation results demonstrate that the proposed scheme achieves superior performance in collision-avoidance navigation, data collection, and model training compared to benchmark methods. It is also shown that CLD can adapt to different scenarios by flexibly adjusting the weight factor among navigation, communication and learning objectives.",
+      "published": "2026-04-04T07:40:26Z",
+      "updated": "2026-04-04T07:40:26Z",
+      "arxiv_id": "2604.03623v1",
+      "abs_url": "http://arxiv.org/abs/2604.03623v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03623v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "eess.SP"
+      ],
+      "comment": "6 pages, 9 figures, submitted to IEEE International Conference on Communications (ICC) 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "导航与移动",
+        "世界模型与仿真",
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "导航与移动",
+      "score": 10,
+      "anchor_terms": [
+        "navigation",
+        "robot"
+      ],
+      "matched_terms": [
+        "autonomous navigation",
+        "mobile robot",
+        "navigation",
+        "robot"
+      ]
+    },
+    {
+      "title": "Human-Robot Copilot for Data-Efficient Imitation Learning",
+      "authors": [
+        "Rui Yan",
+        "Zaitian Gongye",
+        "Lars Paulsen",
+        "Xuxin Cheng",
+        "Xiaolong Wang"
+      ],
+      "summary": "Collecting human demonstrations via teleoperation is a common approach for teaching robots task-specific skills. However, when only a limited number of demonstrations are available, policies are prone to entering out-of-distribution (OOD) states due to compounding errors or environmental stochasticity. Existing interactive imitation learning or human-in-the-loop methods try to address this issue by following the Human-Gated DAgger (HG-DAgger) paradigm, an approach that augments demonstrations through selective human intervention during policy execution. Nevertheless, these approaches struggle to balance dexterity and generality: they either provide fine-grained corrections but are limited to specific kinematic structures, or achieve generality at the cost of precise control. To overcome this limitation, we propose the Human-Robot Copilot framework that can leverage a scaling factor for dexterous teleoperation while maintaining compatibility with a wide range of industrial and research manipulators. Experimental results demonstrate that our framework achieves higher performance with the same number of demonstration trajectories. Moreover, since corrective interventions are required only intermittently, the overall data collection process is more efficient and less time-consuming.",
+      "published": "2026-04-04T07:00:32Z",
+      "updated": "2026-04-04T07:00:32Z",
+      "arxiv_id": "2604.03613v1",
+      "abs_url": "http://arxiv.org/abs/2604.03613v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03613v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "强化/模仿学习",
+        "人形与灵巧",
+        "机械臂"
+      ],
+      "topic": "机器人操作",
+      "score": 10,
+      "anchor_terms": [
+        "imitation learning",
+        "manipulator",
+        "robot",
+        "teleoperation"
+      ],
+      "matched_terms": [
+        "dexterous",
+        "imitation learning",
+        "manipulator",
+        "robot",
+        "teleoperation"
+      ]
+    },
+    {
+      "title": "Multi-Robot Multi-Queue Control via Exhaustive Assignment Actor-Critic Learning",
+      "authors": [
+        "Mohammad Merati",
+        "H. M. Sabbir Ahmad",
+        "Wenchao Li",
+        "David Castañón"
+      ],
+      "summary": "We study online task allocation for multi-robot, multi-queue systems with asymmetric stochastic arrivals and switching delays. We formulate the problem in discrete time: each location can host at most one robot per slot, servicing a task consumes one slot, switching between locations incurs a one-slot travel delay, and arrivals at locations are independent Bernoulli processes with heterogeneous rates. Building on our previous structural result that optimal policies are of exhaustive type, we formulate a discounted-cost Markov decision process and develop an exhaustive-assignment actor-critic policy architecture that enforces exhaustive service by construction and learns only the next-queue allocation for idle robots. Unlike the exhaustive-serve-longest (ESL) queue rule, whose optimality is known only under symmetry, the proposed policy adapts to asymmetry in arrival rates. Across different server-location ratios, loads, and asymmetric arrival profiles, the proposed policy consistently achieves lower discounted holding cost and smaller mean queue length than the ESL baseline, while remaining near-optimal on instances where an optimal benchmark is available. These results show that structure-aware actor-critic methods provide an effective approach for real-time multi-robot scheduling.",
+      "published": "2026-04-04T06:32:35Z",
+      "updated": "2026-04-04T06:32:35Z",
+      "arxiv_id": "2604.03605v1",
+      "abs_url": "http://arxiv.org/abs/2604.03605v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03605v1",
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY",
+        "cs.AI",
+        "math.OC"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "数据集/评测",
+      "score": 3,
+      "anchor_terms": [
+        "robot"
+      ],
+      "matched_terms": [
+        "robot"
+      ]
+    },
+    {
+      "title": "Belief Dynamics for Detecting Behavioral Shifts in Safe Collaborative Manipulation",
+      "authors": [
+        "Devashri Naik",
+        "Divake Kumar",
+        "Nastaran Darabi",
+        "Amit Ranjan Trivedi"
+      ],
+      "summary": "Robots operating in shared workspaces must maintain safe coordination with other agents whose behavior may change during task execution. When a collaborating agent switches strategy mid-episode, continuing under outdated assumptions can lead to unsafe actions and increased collision risk. Reliable detection of such behavioral regime changes is therefore critical. We study regime-switch detection under controlled non-stationarity in ManiSkill shared-workspace manipulation tasks. Across ten detection methods and five random seeds, enabling detection reduces post-switch collisions by 52%. However, average performance hides significant reliability differences: under a realistic tolerance of +-3 steps, detection ranges from 86% to 30%, while under +-5 steps all methods achieve 100%. We introduce UA-TOM, a lightweight belief-tracking module that augments frozen vision-language-action (VLA) control backbones using selective state-space dynamics, causal attention, and prediction-error signals. Across five seeds and 1200 episodes, UA-TOM achieves the highest detection rate among unassisted methods (85.7% at +-3) and the lowest close-range time (4.8 steps), outperforming an Oracle (5.3 steps). Analysis shows hidden-state update magnitude increases by 17x at regime switches and decays over roughly 10 timesteps, while the discretization step converges to a near-constant value (Delta_t approx 0.78), indicating sensitivity driven by learned dynamics rather than input-dependent gating. Cross-domain experiments in Overcooked show complementary roles of causal attention and prediction-error signals. UA-TOM introduces 7.4 ms inference overhead (14.8% of a 50 ms control budget), enabling reliable regime-switch detection without modifying the base policy.",
+      "published": "2026-04-04T02:41:09Z",
+      "updated": "2026-04-04T02:41:09Z",
+      "arxiv_id": "2604.04967v1",
+      "abs_url": "http://arxiv.org/abs/2604.04967v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.04967v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "VLA/多模态策略",
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "机器人操作",
+      "score": 12,
+      "anchor_terms": [
+        "manipulation",
+        "robot",
+        "vision-language-action",
+        "vla"
+      ],
+      "matched_terms": [
+        "manipulation",
+        "maniskill",
+        "robot",
+        "vision-language-action",
+        "vla"
+      ]
+    },
+    {
+      "title": "CRAFT: Video Diffusion for Bimanual Robot Data Generation",
+      "authors": [
+        "Jason Chen",
+        "I-Chun Arthur Liu",
+        "Gaurav Sukhatme",
+        "Daniel Seita"
+      ],
+      "summary": "Bimanual robot learning from demonstrations is fundamentally limited by the cost and narrow visual diversity of real-world data, which constrains policy robustness across viewpoints, object configurations, and embodiments. We present Canny-guided Robot Data Generation using Video Diffusion Transformers (CRAFT), a video diffusion-based framework for scalable bimanual demonstration generation that synthesizes temporally coherent manipulation videos while producing action labels. By conditioning video diffusion on edge-based structural cues extracted from simulator-generated trajectories, CRAFT produces physically plausible trajectory variations and supports a unified augmentation pipeline spanning object pose changes, camera viewpoints, lighting and background variations, cross-embodiment transfer, and multi-view synthesis. We leverage a pre-trained video diffusion model to convert simulated videos, along with action labels from the simulation trajectories, into action-consistent demonstrations. Starting from only a few real-world demonstrations, CRAFT generates a large, visually diverse set of photorealistic training data, bypassing the need to replay demonstrations on the real robot (Sim2Real). Across simulated and real-world bimanual tasks, CRAFT improves success rates over existing augmentation strategies and straightforward data scaling, demonstrating that diffusion-based video generation can substantially expand demonstration diversity and improve generalization for dual-arm manipulation tasks. Our project website is available at: https://craftaug.github.io/",
+      "published": "2026-04-04T02:36:54Z",
+      "updated": "2026-04-04T02:36:54Z",
+      "arxiv_id": "2604.03552v1",
+      "abs_url": "http://arxiv.org/abs/2604.03552v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03552v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "世界模型与仿真",
+        "机械臂"
+      ],
+      "topic": "机器人操作",
+      "score": 15,
+      "anchor_terms": [
+        "manipulation",
+        "robot",
+        "robot learning",
+        "sim2real"
+      ],
+      "matched_terms": [
+        "bimanual",
+        "manipulation",
+        "robot",
+        "robot learning",
+        "sim2real",
+        "simulator"
+      ]
+    },
+    {
+      "title": "Beyond Generation: An Empirical Study on Redefining the Act of Drawing Through an 85% Time Reduction in Picture-Book Production",
+      "authors": [
+        "Cosei Kawa"
+      ],
+      "summary": "Conventional picture-book production imposes substantial physical and temporal demands on creators, often constraining opportunities for high-level artistic exploration. While generative AI can drastically accelerate image generation, concerns remain regarding style homogenization and the erosion of authorial agency in professional practice. This study presents an empirical evaluation of an AI-collaborative workflow through the full production of one professional 15-illustration picture-book title, and compares the process with a conventional hand-drawn pipeline by the same creator. Quantitatively, the proposed workflow reduces total production time by 85.2% (from 2,162.8 to 320.4 hours), with the largest substitution observed in early drafting stages. Qualitatively, however, the core contribution is the strategic reallocation of labor: time saved in mechanical rendering is reinvested into high-level Judgment (aesthetic selection, narrative direction, and cross-scene consistency decisions) and Completion (embodied manual retouching and integrative refinement). Notably, 235 hours were devoted to Completion, indicating that publication-quality outcomes still depend on sustained human synthesis to reconcile generative inconsistencies. Our findings suggest that AI-integration, when framed as a \"mild-work\" partnership, enhances rather than diminishes the creative experience by shifting the creator's focus from repetitive physical labor to sophisticated aesthetic synthesis.",
+      "published": "2026-04-04T02:34:35Z",
+      "updated": "2026-04-04T02:34:35Z",
+      "arxiv_id": "2604.03549v1",
+      "abs_url": "http://arxiv.org/abs/2604.03549v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03549v1",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "comment": "10 pages, 6 figures, 1 table. This study provides an empirical comparison between conventional and AI-collaborative picture-book production workflows",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "数据集/评测",
+      "score": 2,
+      "anchor_terms": [
+        "embodied"
+      ],
+      "matched_terms": [
+        "embodied"
+      ]
+    },
+    {
+      "title": "Drift-Based Policy Optimization: Native One-Step Policy Learning for Online Robot Control",
+      "authors": [
+        "Yuxuan Gao",
+        "Yedong Shen",
+        "Shiqi Zhang",
+        "Wenhao Yu",
+        "Yifan Duan",
+        "Jia pan",
+        "Jiajia Wu",
+        "Jiajun Deng",
+        "Yanyong Zhang"
+      ],
+      "summary": "Although multi-step generative policies achieve strong performance in robotic manipulation by modeling multimodal action distributions, they require multi-step iterative denoising at inference time. Each action therefore needs tens to hundreds of network function evaluations (NFEs), making them costly for high-frequency closed-loop control and online reinforcement learning (RL). To address this limitation, we propose a two-stage framework for native one-step generative policies that shifts refinement from inference to training. First, we introduce the Drift-Based Policy (DBP), which leverages fixed-point drifting objectives to internalize iterative refinement into the model parameters, yielding a one-step generative backbone by design while preserving multimodal action modeling capacity. Second, we develop Drift-Based Policy Optimization (DBPO), an online RL framework that equips the pretrained backbone with a compatible stochastic interface, enabling stable on-policy updates without sacrificing the one-step deployment property. Extensive experiments demonstrate the effectiveness of the proposed framework across offline imitation learning, online fine-tuning, and real-world control scenarios. DBP matches or exceeds the performance of multi-step diffusion policies while achieving up to $100\\times$ faster inference. It also consistently outperforms existing one-step baselines on challenging manipulation benchmarks. Moreover, DBPO enables effective and stable policy improvement in online settings. Experiments on a real-world dual-arm robot demonstrate reliable high-frequency control at 105.2 Hz.",
+      "published": "2026-04-04T01:32:01Z",
+      "updated": "2026-04-21T12:50:07Z",
+      "arxiv_id": "2604.03540v3",
+      "abs_url": "http://arxiv.org/abs/2604.03540v3",
+      "pdf_url": "https://arxiv.org/pdf/2604.03540v3",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "机器人操作",
+        "强化/模仿学习",
+        "数据集/评测",
+        "其他机器人"
+      ],
+      "topic": "机器人操作",
+      "score": 11,
+      "anchor_terms": [
+        "imitation learning",
+        "manipulation",
+        "reinforcement learning",
+        "robot",
+        "robotic"
+      ],
+      "matched_terms": [
+        "imitation learning",
+        "manipulation",
+        "policy learning",
+        "reinforcement learning",
+        "robot",
+        "robotic"
+      ]
+    }
+  ]
+}
