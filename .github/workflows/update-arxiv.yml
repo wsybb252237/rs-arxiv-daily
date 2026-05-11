@@ -2,8 +2,8 @@ name: Update arXiv archive
 
 on:
   schedule:
-    # 09:30 Beijing (UTC+8) = 01:30 UTC, 90min after arXiv release at 00:00 UTC (EDT)
-    - cron: "30 1 * * 1-5"
+    # 10:00 Beijing (UTC+8) = 02:00 UTC, works for both EDT (2h buffer) and EST (1h buffer)
+    - cron: "0 2 * * 1-5"
   workflow_dispatch:
     inputs:
       date:
