@@ -15,78 +15,73 @@
   </head>
   <body>
     <div class="app-shell">
-      <header class="topbar">
-        <div class="topbar-main">
-          <p class="eyebrow">Remote Sensing · arXiv Daily Archive</p>
-          <h1>遥感大模型 arXiv 日报</h1>
-          <p class="lede">
-            每日自动抓取 arXiv 最新遥感方向预印本论文，中英双语翻译、关键词智能匹配、多标签分类归档，覆盖从经典感知任务到前沿大模型范式的全方向研究。
-          </p>
-          <div class="lede-detail">
-            <div class="lede-section">
-              <span class="lede-section-title">📌 经典任务</span>
-              目标检测（含旋转框/定向框）、语义分割、实例分割、全景分割、变化检测（双时相/多时相）、场景分类、图像检索、超分辨率与图像重建、图像生成与合成、云去除、去噪去斑、图像融合与锐化
-            </div>
-            <div class="lede-section">
-              <span class="lede-section-title">🚀 前沿范式</span>
-              开放词汇检测与分割、开放集识别、开放世界目标检测、图像描述与视觉推理、视觉问答（VQA）、视觉定位（Grounding）、时序分析与卫星视频、三维重建与深度估计、异常检测
-            </div>
-            <div class="lede-section">
-              <span class="lede-section-title">🧠 模型方法</span>
-              遥感基础模型、视觉-语言大模型（VLM/MLLM）、扩散模型、Mamba/状态空间模型、SAM/Segment Anything 遥感适配、CLIP 系列遥感应用、Grounding DINO 遥感定位
-            </div>
-            <div class="lede-section">
-              <span class="lede-section-title">⚙️ 学习范式</span>
-              小样本学习、零样本迁移、域泛化、域自适应、无源域适应、无监督学习、弱监督与半监督、主动学习、持续学习/增量学习、自监督预训练、对比学习
-            </div>
-            <div class="lede-section">
-              <span class="lede-section-title">🔧 高效技术</span>
-              LoRA / PEFT / Adapter 参数高效微调、知识蒸馏、模型剪枝与量化、Prompt 工程与指令微调、上下文学习（In-context Learning）、多任务学习
-            </div>
-            <div class="lede-section">
-              <span class="lede-section-title">🗺️ 应用方向</span>
-              灾害应急监测（洪涝/火灾/地震/滑坡）、农业与生态（作物识别/森林砍伐/湿地/物候）、城市与基础设施（建筑提取/道路网络/城市变化）、海洋与海岸（船舶检测/岸线变化）
-            </div>
-            <div class="lede-section">
-              <span class="lede-section-title">📡 数据类型</span>
-              光学（VHR/WorldView/GaoFen/Planet）、SAR/InSAR/PolSAR（Sentinel-1）、多光谱/高光谱（Sentinel-2/Landsat/MODIS）、LiDAR/点云/DEM/DSM、无人机/UAV 低空图像、卫星视频
-            </div>
-          </div>
-          <div class="coverage-tags">
-            <span class="ctag ctag-task">目标检测</span>
-            <span class="ctag ctag-task">语义分割</span>
-            <span class="ctag ctag-task">变化检测</span>
-            <span class="ctag ctag-task">开放词汇/开放集</span>
-            <span class="ctag ctag-task">图像描述与推理</span>
-            <span class="ctag ctag-task">时序与视频</span>
-            <span class="ctag ctag-model">基础模型</span>
-            <span class="ctag ctag-model">视觉-语言模型</span>
-            <span class="ctag ctag-tech">小样本/域泛化</span>
-            <span class="ctag ctag-tech">无监督/弱监督</span>
-            <span class="ctag ctag-tech">高效微调 LoRA</span>
-            <span class="ctag ctag-app">灾害应急</span>
-            <span class="ctag ctag-app">农业与生态</span>
-            <span class="ctag ctag-app">城市基础设施</span>
-            <span class="ctag ctag-data">SAR · 高光谱 · LiDAR · UAV</span>
-          </div>
+
+      <!-- ① 顶部导航条 -->
+      <nav class="topnav">
+        <div class="topnav-left">
+          <span class="topnav-brand">遥感大模型 arXiv 日报</span>
+          <span class="topnav-dot">·</span>
+          <span class="topnav-source">
+            数据源：<a href="https://arxiv.org/" target="_blank" rel="noreferrer">arxiv.org</a>
+          </span>
+          <span class="topnav-badge">工作日 10:00 自动更新</span>
         </div>
-        <div class="source-block" aria-label="数据源">
-          <span class="source-label">数据源</span>
-          <a href="https://arxiv.org/" target="_blank" rel="noreferrer">arxiv.org</a>
-          <span class="source-meta">工作日 10:00 自动更新</span>
-          <div class="source-actions">
-            <a class="source-secondary" href="rules.html">
-              <i data-lucide="settings" aria-hidden="true"></i>
-              规则配置
-            </a>
-            <button class="source-secondary theme-toggle" type="button" data-theme-toggle>
-              <i data-lucide="moon" aria-hidden="true"></i>
-              <span data-theme-label>暗色</span>
-            </button>
+        <div class="topnav-right">
+          <a class="topnav-btn" href="rules.html">
+            <i data-lucide="settings" aria-hidden="true"></i>
+            规则配置
+          </a>
+          <button class="topnav-btn theme-toggle" type="button" data-theme-toggle>
+            <i data-lucide="moon" aria-hidden="true"></i>
+            <span data-theme-label>暗色</span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- ② Hero 区（全宽） -->
+      <header class="hero">
+        <p class="eyebrow">Remote Sensing · arXiv Daily Archive</p>
+        <h1>遥感大模型 arXiv 日报 · 归档</h1>
+        <p class="lede">
+          每日自动抓取 arXiv 最新遥感方向预印本论文，中英双语翻译、关键词智能匹配、多标签分类归档，覆盖从经典感知任务到前沿大模型范式的全方向研究。
+        </p>
+
+        <!-- 三列覆盖方向卡片 -->
+        <div class="coverage-grid">
+          <div class="cov-card">
+            <span class="cov-icon">📌</span>
+            <span class="cov-title">经典任务</span>
+            <span class="cov-body">目标检测（旋转框）· 语义/实例/全景分割 · 变化检测 · 场景分类 · 图像检索 · 超分辨率 · 图像生成与合成 · 云去除 · 图像融合</span>
+          </div>
+          <div class="cov-card">
+            <span class="cov-icon">🚀</span>
+            <span class="cov-title">前沿范式</span>
+            <span class="cov-body">开放词汇检测/分割 · 开放集/开放世界识别 · 视觉问答 VQA · 视觉定位 Grounding · 图像描述 · 时序分析 · 卫星视频 · 三维重建 · 异常检测</span>
+          </div>
+          <div class="cov-card">
+            <span class="cov-icon">🧠</span>
+            <span class="cov-title">模型方法</span>
+            <span class="cov-body">遥感基础模型 · 视觉-语言大模型 VLM/MLLM · 扩散模型 · Mamba 状态空间模型 · SAM 遥感适配 · CLIP 系列 · Grounding DINO</span>
+          </div>
+          <div class="cov-card">
+            <span class="cov-icon">⚙️</span>
+            <span class="cov-title">学习范式</span>
+            <span class="cov-body">小样本/零样本 · 域泛化/域自适应 · 无源域适应 · 无监督/弱监督/半监督 · 主动学习 · 持续学习 · 自监督预训练 · 对比学习</span>
+          </div>
+          <div class="cov-card">
+            <span class="cov-icon">🔧</span>
+            <span class="cov-title">高效技术</span>
+            <span class="cov-body">LoRA · PEFT · Adapter 参数高效微调 · 知识蒸馏 · 剪枝与量化 · Prompt 工程 · 指令微调 · In-context Learning · 多任务学习</span>
+          </div>
+          <div class="cov-card">
+            <span class="cov-icon">🗺️</span>
+            <span class="cov-title">应用与数据</span>
+            <span class="cov-body">灾害应急（洪涝/火灾/地震）· 农业生态 · 城市基础设施 · 光学/SAR/高光谱/LiDAR/UAV · Sentinel · Landsat · GaoFen</span>
           </div>
         </div>
       </header>
 
+      <!-- ③ 统计指标 -->
       <section class="metrics" aria-label="归档统计">
         <article class="metric">
           <span class="metric-label">最新归档</span>
@@ -106,6 +101,7 @@
         </article>
       </section>
 
+      <!-- ④ 主内容区 -->
       <main class="workspace">
         <aside class="rail" aria-label="筛选">
           <div class="control-block">
@@ -115,12 +111,10 @@
               <input id="searchInput" type="search" placeholder="标题 / 作者 / 摘要 / arXiv ID" autocomplete="off" />
             </div>
           </div>
-
           <div class="control-block">
             <div class="field-label">标签筛选</div>
             <div id="labelFilters" class="segmented" role="listbox" aria-label="标签筛选"></div>
           </div>
-
           <div class="control-block">
             <div class="field-label">按日期</div>
             <div id="dateFilters" class="date-list" aria-label="日期筛选"></div>
@@ -137,14 +131,7 @@
               <button id="clearFilters" class="icon-button" type="button" title="清除筛选" aria-label="清除筛选">
                 <i data-lucide="rotate-ccw" aria-hidden="true"></i>
               </button>
-              <a
-                class="icon-button"
-                href="https://arxiv.org/list/cs.CV/recent"
-                target="_blank"
-                rel="noreferrer"
-                title="打开 arXiv"
-                aria-label="打开 arXiv"
-              >
+              <a class="icon-button" href="https://arxiv.org/list/cs.CV/recent" target="_blank" rel="noreferrer" title="打开 arXiv" aria-label="打开 arXiv">
                 <i data-lucide="external-link" aria-hidden="true"></i>
               </a>
             </div>
