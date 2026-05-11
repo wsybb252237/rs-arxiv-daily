@@ -15,6 +15,11 @@ on:
         required: false
         default: "1"
         type: string
+      rebuild_index:
+        description: "Only rebuild index from existing data (re-apply labels, no new fetch)"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -38,14 +43,15 @@ jobs:
         run: |
           DAYS="${{ github.event.inputs.days }}"
           DATE="${{ github.event.inputs.date }}"
+          REBUILD="${{ github.event.inputs.rebuild_index }}"
           ARGS="--timezone Asia/Shanghai --max-results 700"
-          if [ -n "$DATE" ]; then
-            ARGS="$ARGS --date $DATE"
+          if [ "$REBUILD" = "true" ]; then
+            python scripts/fetch_arxiv.py --rebuild-index
+          else
+            if [ -n "$DATE" ]; then ARGS="$ARGS --date $DATE"; fi
+            if [ -n "$DAYS" ]; then ARGS="$ARGS --days $DAYS"; fi
+            python scripts/fetch_arxiv.py $ARGS
           fi
-          if [ -n "$DAYS" ]; then
-            ARGS="$ARGS --days $DAYS"
-          fi
-          python scripts/fetch_arxiv.py $ARGS
 
       - name: Commit archive updates
         run: |
