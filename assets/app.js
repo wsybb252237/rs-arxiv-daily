@@ -275,19 +275,20 @@ function renderPaper(paper) {
   const ar5ivUrl = paper.arxiv_id ? `https://ar5iv.labs.arxiv.org/html/${paper.arxiv_id}` : "";
 
   const titleZh = paper.title_zh && paper.title_zh !== paper.title ? paper.title_zh : "";
-  const summaryText = paper.summary_zh || paper.summary;
+  const summaryZh = paper.summary_zh && paper.summary_zh !== paper.summary ? paper.summary_zh : "";
 
   return `
     <article class="paper-card">
       <div class="paper-head">
         <a class="paper-title" href="${escapeHtml(paper.abs_url || "#")}" target="_blank" rel="noreferrer">
-          ${titleZh ? escapeHtml(titleZh) : escapeHtml(paper.title)}
+          ${escapeHtml(paper.title)}
         </a>
         <span class="paper-date">${escapeHtml(compactDate(paper.published))}</span>
       </div>
-      ${titleZh ? `<div class="paper-title-en">${escapeHtml(paper.title)}</div>` : ""}
+      ${titleZh ? `<div class="paper-title-zh">${escapeHtml(titleZh)}</div>` : ""}
       <div class="paper-meta">${paperMeta(paper)}</div>
-      <p class="paper-summary">${escapeHtml(summaryText)}</p>
+      <p class="paper-summary">${escapeHtml(paper.summary)}</p>
+      ${summaryZh ? `<p class="paper-summary-zh">${escapeHtml(summaryZh)}</p>` : ""}
       <div class="paper-tags">${tags}${scoreTag}</div>
       <div class="paper-links">
         <a class="paper-link" href="${escapeHtml(paper.abs_url || "#")}" target="_blank" rel="noreferrer">
