@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="遥感大模型 arXiv 日报归档，自动抓取遥感目标检测、分割、变化检测、场景分类、图像生成、基础模型、视觉-语言模型等方向最新论文。"
+      content="遥感大模型 arXiv 日报归档，每日自动抓取并翻译遥感领域最新论文，涵盖目标检测、语义分割、变化检测、基础模型、视觉-语言模型、开放词汇/开放集、时序分析、灾害监测、农业生态、城市基础设施等方向。"
     />
     <title>遥感大模型 arXiv 日报 · 归档</title>
     <script src="assets/theme.js"></script>
@@ -16,19 +16,39 @@
   <body>
     <div class="app-shell">
       <header class="topbar">
-        <div>
-          <p class="eyebrow">Remote Sensing Large Model Papers</p>
-          <h1>遥感大模型 arXiv 日报 · 归档</h1>
+        <div class="topbar-main">
+          <p class="eyebrow">Remote Sensing · arXiv Daily Archive</p>
+          <h1>遥感大模型 arXiv 日报</h1>
           <p class="lede">
-            聚焦遥感目标检测、语义/实例分割、变化检测、场景分类、图像生成与重建、基础模型、视觉-语言模型、多模态融合与各类遥感图像类型。
+            聚合遥感领域顶会顶刊方向论文，每日自动抓取、翻译并归档。覆盖基础模型、视觉-语言模型、开放词汇/开放集检测、时序分析、无监督/弱监督、域泛化等前沿范式，以及目标检测、语义分割、变化检测、图像生成重建等经典任务，兼顾光学、SAR、高光谱、LiDAR、无人机等多类遥感数据。
           </p>
+          <div class="coverage-tags">
+            <span class="ctag ctag-task">目标检测</span>
+            <span class="ctag ctag-task">语义分割</span>
+            <span class="ctag ctag-task">变化检测</span>
+            <span class="ctag ctag-task">开放词汇/开放集</span>
+            <span class="ctag ctag-task">图像描述与推理</span>
+            <span class="ctag ctag-task">时序与视频</span>
+            <span class="ctag ctag-model">基础模型</span>
+            <span class="ctag ctag-model">视觉-语言模型</span>
+            <span class="ctag ctag-tech">小样本/域泛化</span>
+            <span class="ctag ctag-tech">无监督/弱监督</span>
+            <span class="ctag ctag-tech">高效微调 LoRA</span>
+            <span class="ctag ctag-app">灾害应急</span>
+            <span class="ctag ctag-app">农业与生态</span>
+            <span class="ctag ctag-app">城市基础设施</span>
+            <span class="ctag ctag-data">SAR · 高光谱 · LiDAR · UAV</span>
+          </div>
         </div>
         <div class="source-block" aria-label="数据源">
           <span class="source-label">数据源</span>
           <a href="https://arxiv.org/" target="_blank" rel="noreferrer">arxiv.org</a>
-          <span class="source-meta">每日约 08:00 更新</span>
+          <span class="source-meta">工作日 10:00 自动更新</span>
           <div class="source-actions">
-            <a class="source-secondary" href="rules.html">规则配置</a>
+            <a class="source-secondary" href="rules.html">
+              <i data-lucide="settings" aria-hidden="true"></i>
+              规则配置
+            </a>
             <button class="source-secondary theme-toggle" type="button" data-theme-toggle>
               <i data-lucide="moon" aria-hidden="true"></i>
               <span data-theme-label>暗色</span>
@@ -51,7 +71,7 @@
           <strong id="dateCount">0</strong>
         </article>
         <article class="metric">
-          <span class="metric-label">更新时间</span>
+          <span class="metric-label">最近更新</span>
           <strong id="generatedAt">--</strong>
         </article>
       </section>
@@ -67,12 +87,12 @@
           </div>
 
           <div class="control-block">
-            <div class="field-label">标签</div>
+            <div class="field-label">标签筛选</div>
             <div id="labelFilters" class="segmented" role="listbox" aria-label="标签筛选"></div>
           </div>
 
           <div class="control-block">
-            <div class="field-label">日期</div>
+            <div class="field-label">按日期</div>
             <div id="dateFilters" class="date-list" aria-label="日期筛选"></div>
           </div>
         </aside>
@@ -92,8 +112,8 @@
                 href="https://arxiv.org/list/cs.CV/recent"
                 target="_blank"
                 rel="noreferrer"
-                title="打开 arXiv Computer Vision"
-                aria-label="打开 arXiv Computer Vision"
+                title="打开 arXiv"
+                aria-label="打开 arXiv"
               >
                 <i data-lucide="external-link" aria-hidden="true"></i>
               </a>

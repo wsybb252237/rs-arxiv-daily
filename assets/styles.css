@@ -112,9 +112,9 @@ input {
 
 .topbar {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 24px;
-  align-items: end;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 32px;
+  align-items: start;
   padding: 36px 0 28px;
   border-bottom: 1px solid var(--line);
   margin-bottom: 24px;
@@ -175,6 +175,61 @@ h2 {
   color: var(--lede-ink);
   font-size: clamp(14px, 1.6vw, 17px);
   line-height: 1.75;
+}
+
+/* ── Coverage tags ──────────────────────────────── */
+
+.topbar-main {
+  min-width: 0;
+}
+
+.coverage-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 16px;
+}
+
+.ctag {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.ctag-task {
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  border-color: rgba(13,148,136,.25);
+}
+
+.ctag-model {
+  color: var(--blue);
+  background: var(--blue-soft);
+  border-color: rgba(30,95,168,.2);
+}
+
+.ctag-tech {
+  color: var(--amber);
+  background: var(--amber-soft);
+  border-color: rgba(146,96,15,.2);
+}
+
+.ctag-app {
+  color: var(--green);
+  background: var(--green-soft);
+  border-color: rgba(22,101,52,.2);
+}
+
+.ctag-data {
+  color: var(--purple);
+  background: var(--purple-soft);
+  border-color: rgba(91,33,182,.2);
 }
 
 /* ── Source block ───────────────────────────────── */
