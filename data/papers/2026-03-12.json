@@ -1,0 +1,597 @@
+{
+  "date": "2026-03-12",
+  "generated_at": "2026-05-11T07:11:19.960304+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202603120000 TO 202603122359]",
+  "total_fetched": 186,
+  "total_matched": 14,
+  "papers": [
+    {
+      "title": "Naïve PAINE: Lightweight Text-to-Image Generation Improvement with Prompt Evaluation",
+      "authors": [
+        "Joong Ho Kim",
+        "Nicholas Thai",
+        "Souhardya Saha Dip",
+        "Dong Lao",
+        "Keith G. Mills"
+      ],
+      "summary": "Text-to-Image (T2I) generation is primarily driven by Diffusion Models (DM) which rely on random Gaussian noise. Thus, like playing the slots at a casino, a DM will produce different results given the same user-defined inputs. This imposes a gambler's burden: To perform multiple generation cycles to obtain a satisfactory result. However, even though DMs use stochastic sampling to seed generation, the distribution of generated content quality highly depends on the prompt and the generative ability of a DM with respect to it. To account for this, we propose Naïve PAINE for improving the generative quality of Diffusion Models by leveraging T2I preference benchmarks. We directly predict the numerical quality of an image from the initial noise and given prompt. Naïve PAINE then selects a handful of quality noises and forwards them to the DM for generation. Further, Naïve PAINE provides feedback on the DM generative quality given the prompt and is lightweight enough to seamlessly fit into existing DM pipelines. Experimental results demonstrate that Naïve PAINE outperforms existing approaches on several prompt corpus benchmarks.",
+      "published": "2026-03-12T22:51:39Z",
+      "updated": "2026-03-12T22:51:39Z",
+      "arxiv_id": "2603.12506v1",
+      "abs_url": "http://arxiv.org/abs/2603.12506v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12506v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "Code available at https://github.com/LSU-ATHENA/Naive-PAINE",
+      "code_url": "https://github.com/LSU-ATHENA/Naive-PAINE",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像生成与重建",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 4,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "diffusion model",
+        "image generation"
+      ],
+      "title_zh": "Naïve PAINE：通过及时评估改进轻量级文本到图像生成",
+      "summary_zh": "文本到图像 (T2I) 的生成主要由依赖于随机高斯噪声的扩散模型 (DM) 驱动。因此，就像在赌场玩老虎机一样，给定相同的用户定义输入，DM 将产生不同的结果。这给赌徒带来了负担：执行多个生成周期以获得满意的结果。然而，即使 DM 使用随机采样来生成种子，生成的内容质量的分布在很大程度上取决于 DM 的提示和生成能力。考虑到这一点，我们建议 Naïve PAINE 通过利用 T2I 偏好基准来提高扩散模型的生成质量。我们根据初始噪声和给定的提示直接预测图像的数值质量。 Naïve PAINE 然后选择一些高质量的噪声并将它们转发给 DM 进行生成。此外，Naïve PAINE 根据提示提供有关 DM 生成质量的反馈，并且足够轻量，可以无缝地融入现有的 DM 管道。实验结果表明，Naïve PAINE 在多个即时语料库基准上优于现有方法。"
+    },
+    {
+      "title": "SpectralGuard: Detecting Memory Collapse Attacks in State Space Models",
+      "authors": [
+        "Davi Bonetto"
+      ],
+      "summary": "State Space Models (SSMs) such as Mamba achieve linear-time sequence processing through input-dependent recurrence, but this mechanism introduces a critical safety vulnerability. We show that the spectral radius rho(A-bar) of the discretized transition operator governs effective memory horizon: when an adversary drives rho toward zero through gradient-based Hidden State Poisoning, memory collapses from millions of tokens to mere dozens, silently destroying reasoning capacity without triggering output-level alarms. We prove an Evasion Existence Theorem showing that for any output-only defense, adversarial inputs exist that simultaneously induce spectral collapse and evade detection, then introduce SpectralGuard, a real-time monitor that tracks spectral stability across all model layers. SpectralGuard achieves F1=0.961 against non-adaptive attackers and retains F1=0.842 under the strongest adaptive setting, with sub-15ms per-token latency. Causal interventions and cross-architecture transfer to hybrid SSM-Attention systems confirm that spectral monitoring provides a principled, deployable safety layer for recurrent foundation models.",
+      "published": "2026-03-12T19:52:37Z",
+      "updated": "2026-03-12T19:52:37Z",
+      "arxiv_id": "2603.12414v1",
+      "abs_url": "http://arxiv.org/abs/2603.12414v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12414v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "comment": "24 pages, 10 figures. Code, dataset, and demo: https://github.com/DaviBonetto/spectralguard",
+      "code_url": "https://github.com/DaviBonetto/spectralguard",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "基础模型",
+        "高光谱/多光谱",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 5,
+      "anchor_terms": [
+        "Mamba"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "Mamba",
+        "SSM",
+        "state space model"
+      ],
+      "title_zh": "SpectralGuard：检测状态空间模型中的内存崩溃攻击",
+      "summary_zh": "Mamba 等状态空间模型 (SSM) 通过输入相关的递归实现线性时间序列处理，但这种机制引入了严重的安全漏洞。我们证明了离散转移算子的谱半径 rho(A-bar) 控制着有效的内存范围：当对手通过基于梯度的隐藏状态中毒将 rho 推向零时，内存会从数百万个令牌崩溃到仅仅几十个，默默地破坏推理能力而不触发输出级警报。我们证明了逃避存在定理，表明对于任何仅输出的防御，存在同时引起频谱崩溃和逃避检测的对抗性输入，然后引入 SpectralGuard，这是一种实时监视器，可以跟踪所有模型层的频谱稳定性。 SpectralGuard 针对非自适应攻击者实现了 F1=0.961，并在最强的自适应设置下保留了 F1=0.842，每个令牌延迟低于 15 毫秒。因果干预和跨架构转移到混合 SSM-Attention 系统证实，频谱监控为循环基础模型提供了有原则的、可部署的安全层。"
+    },
+    {
+      "title": "The Latent Color Subspace: Emergent Order in High-Dimensional Chaos",
+      "authors": [
+        "Mateusz Pach",
+        "Jessica Bader",
+        "Quentin Bouniot",
+        "Serge Belongie",
+        "Zeynep Akata"
+      ],
+      "summary": "Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder latent space of FLUX.1 [Dev], revealing a structure reflecting Hue, Saturation, and Lightness. We verify our Latent Color Subspace (LCS) interpretation by demonstrating that it can both predict and explicitly control color, introducing a fully training-free method in FLUX based solely on closed-form latent-space manipulation. Code is available at https://github.com/ExplainableML/LCS.",
+      "published": "2026-03-12T17:59:48Z",
+      "updated": "2026-03-12T17:59:48Z",
+      "arxiv_id": "2603.12261v1",
+      "abs_url": "http://arxiv.org/abs/2603.12261v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12261v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "comment": "Preprint",
+      "code_url": "https://github.com/ExplainableML/LCS",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像生成与重建"
+      ],
+      "topic": "图像生成与重建",
+      "score": 2,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "image generation"
+      ],
+      "title_zh": "潜在颜色子空间：高维混沌中的涌现秩序",
+      "summary_zh": "文本到图像生成模型发展迅速，但对生成的图像实现细粒度控制仍然很困难，这很大程度上是由于对语义信息编码方式的理解有限。我们对 FLUX.1 [Dev] 的变分自动编码器潜在空间中的颜色表示进行了解释，揭示了反映色调、饱和度和亮度的结构。我们验证了我们的潜在颜色子空间 (LCS) 解释，证明它既可以预测又可以显式控制颜色，并在 FLUX 中引入完全基于封闭形式潜在空间操作的完全免训练方法。代码可在 https://github.com/ExplainableML/LCS 获取。"
+    },
+    {
+      "title": "Probing Length Generalization in Mamba via Image Reconstruction",
+      "authors": [
+        "Jan Rathjens",
+        "Robin Schiewer",
+        "Laurenz Wiskott",
+        "Anand Subramoney"
+      ],
+      "summary": "Mamba has attracted widespread interest as a general-purpose sequence model due to its low computational complexity and competitive performance relative to transformers. However, its performance can degrade when inference sequence lengths exceed those seen during training. We study this phenomenon using a controlled vision task in which Mamba reconstructs images from sequences of image patches. By analyzing reconstructions at different stages of sequence processing, we reveal that Mamba qualitatively adapts its behavior to the distribution of sequence lengths encountered during training, resulting in strategies that fail to generalize beyond this range. To support our analysis, we introduce a length-adaptive variant of Mamba that improves performance across training sequence lengths. Our results provide an intuitive perspective on length generalization in Mamba and suggest directions for improving the architecture.",
+      "published": "2026-03-12T22:32:27Z",
+      "updated": "2026-03-12T22:32:27Z",
+      "arxiv_id": "2603.12499v1",
+      "abs_url": "http://arxiv.org/abs/2603.12499v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12499v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型"
+      ],
+      "topic": "基础模型",
+      "score": 3,
+      "anchor_terms": [
+        "Mamba"
+      ],
+      "matched_terms": [
+        "Mamba",
+        "transformer"
+      ],
+      "title_zh": "通过图像重建在 Mamba 中探测长度泛化",
+      "summary_zh": "Mamba 作为通用序列模型因其较低的计算复杂度和相对于 Transformer 的竞争性能而引起了广泛的兴趣。 However, its performance can degrade when inference sequence lengths exceed those seen during training. We study this phenomenon using a controlled vision task in which Mamba reconstructs images from sequences of image patches.通过分析序列处理不同阶段的重建，我们揭示了 Mamba 定性地调整其行为以适应训练期间遇到的序列长度的分布，从而导致策略无法泛化超出该范围。 To support our analysis, we introduce a length-adaptive variant of Mamba that improves performance across training sequence lengths. Our results provide an intuitive perspective on length generalization in Mamba and suggest directions for improving the architecture."
+    },
+    {
+      "title": "Annotation Entropy Predicts Per-Example Learning Dynamics in LoRA Fine-Tuning",
+      "authors": [
+        "Brady Steele"
+      ],
+      "summary": "We find that LoRA fine-tuning exhibits un-learning on contested examples: items with high annotator disagreement show increasing loss during training, a qualitatively distinct pattern largely absent under full fine-tuning and consistent across all six models tested (four encoder, two decoder-only). This discovery emerges from correlating annotation entropy, computed from ChaosNLI's 100 labels per example, with per-example area under the loss curve (AULC) on SNLI and MNLI. The correlation is positive in all 25 conditions tested (Spearman $ρ= 0.06$-$0.43$), with decoder-only models showing stronger correlations than encoders at matched LoRA rank. The effect survives partial-correlation controls and replicates across seeds and datasets. A preliminary noise-injection experiment is consistent with these findings.",
+      "published": "2026-03-12T20:19:33Z",
+      "updated": "2026-03-12T20:19:33Z",
+      "arxiv_id": "2604.16332v1",
+      "abs_url": "http://arxiv.org/abs/2604.16332v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.16332v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "comment": "12 pages, 9 figures, 6 tables",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 4,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "LoRA"
+      ],
+      "title_zh": "注释熵预测 LoRA 微调中每个示例的学习动态",
+      "summary_zh": "我们发现 LoRA 微调在有争议的示例中表现出不学习的现象：注释者分歧较大的项目在训练期间显示出不断增加的损失，在完全微调下基本上不存在定性独特的模式，并且在所有六个测试模型（四个编码器，两个仅解码器）中保持一致。这一发现源于关联注释熵，该注释熵是根据 ChaosNLI 每个示例的 100 个标签与 SNLI 和 MNLI 上每个示例的损失曲线下面积 (AULC) 计算得出的。在所有 25 种测试条件下，相关性均为正相关（Spearman $ρ= 0.06$-$0.43$），仅解码器模型在匹配的 LoRA 等级下显示出比编码器更强的相关性。该效应在偏相关控制下仍然存在，并在种子和数据集中复制。初步的噪声注入实验与这些发现一致。"
+    },
+    {
+      "title": "NeuroLoRA: Context-Aware Neuromodulation for Parameter-Efficient Multi-Task Adaptation",
+      "authors": [
+        "Yuxin Yang",
+        "Haoran Zhang",
+        "Mingxuan Li",
+        "Jiachen Xu",
+        "Ruoxi Shen",
+        "Zhenyu Wang",
+        "Tianhao Liu",
+        "Siqi Chen",
+        "Weilin Huang"
+      ],
+      "summary": "Parameter-Efficient Fine-Tuning (PEFT) techniques, particularly Low-Rank Adaptation (LoRA), have become essential for adapting Large Language Models (LLMs) to downstream tasks. While the recent FlyLoRA framework successfully leverages bio-inspired sparse random projections to mitigate parameter interference, it relies on a static, magnitude-based routing mechanism that is agnostic to input context. In this paper, we propose NeuroLoRA, a novel Mixture-of-Experts (MoE) based LoRA framework inspired by biological neuromodulation -- the dynamic regulation of neuronal excitability based on context. NeuroLoRA retains the computational efficiency of frozen random projections while introducing a lightweight, learnable neuromodulation gate that contextually rescales the projection space prior to expert selection. We further propose a Contrastive Orthogonality Loss to explicitly enforce separation between expert subspaces, enhancing both task decoupling and continual learning capacity. Extensive experiments on MMLU, GSM8K, and ScienceQA demonstrate that NeuroLoRA consistently outperforms FlyLoRA and other strong baselines across single-task adaptation, multi-task model merging, and sequential continual learning scenarios, while maintaining comparable parameter efficiency.",
+      "published": "2026-03-12T18:57:20Z",
+      "updated": "2026-03-12T18:57:20Z",
+      "arxiv_id": "2603.12378v1",
+      "abs_url": "http://arxiv.org/abs/2603.12378v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12378v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "comment": "work in progress",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 6,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "continual learning",
+        "fine-tuning",
+        "large language model",
+        "LoRA",
+        "PEFT"
+      ],
+      "title_zh": "NeuroLoRA：用于参数高效多任务适应的上下文感知神经调节",
+      "summary_zh": "参数高效微调 (PEFT) 技术，特别是低秩适应 (LoRA)，已成为使大型语言模型 (LLM) 适应下游任务的关键。虽然最近的 FlyLoRA 框架成功地利用生物启发的稀疏随机投影来减轻参数干扰，但它依赖于与输入上下文无关的静态、基于幅度的路由机制。在本文中，我们提出了 NeuroLoRA，一种新型的基于专家混合 (MoE) 的 LoRA 框架，其灵感来自于生物神经调节——基于上下文的神经元兴奋性的动态调节。 NeuroLoRA 保留了冻结随机投影的计算效率，同时引入了轻量级、可学习的神经调节门，可以在专家选择之前根据上下文重新调整投影空间。我们进一步提出了对比正交性损失来明确强制专家子空间之间的分离，从而增强任务解耦和持续学习能力。在 MMLU、GSM8K 和 ScienceQA 上进行的大量实验表明，NeuroLoRA 在单任务适应、多任务模型合并和顺序连续学习场景中始终优于 FlyLoRA 和其他强大的基线，同时保持相当的参数效率。"
+    },
+    {
+      "title": "Adapting Methods for Domain-Specific Japanese Small LMs: Scale, Architecture, and Quantization",
+      "authors": [
+        "Takato Yasuno"
+      ],
+      "summary": "This paper presents a systematic methodology for building domain-specific Japanese small language models using QLoRA fine-tuning. We address three core questions: optimal training scale, base-model selection, and architecture-aware quantization. Stage 1 (Training scale): Scale-learning experiments (1k--5k samples) identify n=4,000 as optimal, where test-set NLL reaches minimum (1.127) before overfitting at 5k samples. Stage 2 (Compare finetuned SLMs): Comparing four Japanese LLMs shows that Llama-3 models with Japanese continual pre-training (Swallow-8B, ELYZA-JP-8B) outperform multilingual models (Qwen2.5-7B). Stage 3 (Quantization): Llama-3 architectures improve under Q4_K_M quantization, while GQA architectures degrade severely (Qwen2.5: -0.280 points). Production recommendation: Swallow-8B Q4_K_M achieves 2.830/3 score, 8.9 s/question, 4.9 GB size. The methodology generalizes to low-resource technical domains and provides actionable guidance for compact Japanese specialist LMs on consumer hardware.",
+      "published": "2026-03-12T18:27:57Z",
+      "updated": "2026-03-12T18:27:57Z",
+      "arxiv_id": "2603.18037v1",
+      "abs_url": "http://arxiv.org/abs/2603.18037v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.18037v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "16 pages, 11 figures, 6 tables",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "基础模型",
+      "score": 3,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "LoRA",
+        "pre-training"
+      ],
+      "title_zh": "针对特定领域的日本小型 LM 的调整方法：规模、架构和量化",
+      "summary_zh": "本文提出了一种使用 QLoRA 微调构建特定领域日语小语言模型的系统方法。我们解决三个核心问题：最佳训练规模、基础模型选择和架构感知量化。第 1 阶段（训练规模）：规模学习实验（1k--5k 样本）确定 n=4,000 为最佳，其中测试集 NLL 在 5k 样本过度拟合之前达到最小值 (1.127)。第 2 阶段（比较微调的 SLM）：比较四个日本 LLM 表明，经过日语连续预训练的 Llama-3 模型（Swallow-8B、ELYZA-JP-8B）优于多语言模型（Qwen2.5-7B）。第 3 阶段（量化）：Llama-3 架构在 Q4_K_M 量化下得到改善，而 GQA 架构严重退化（Qwen2.5：-0.280 点）。制作推荐：Swallow-8B Q4_K_M 得分为 2.830/3，8.9 秒/问题，4.9 GB 大小。该方法可推广到资源匮乏的技术领域，并为消费类硬件上的紧凑型日本专业语言模型提供可行的指导。"
+    },
+    {
+      "title": "Frequentist Consistency of Prior-Data Fitted Networks for Causal Inference",
+      "authors": [
+        "Valentyn Melnychuk",
+        "Vahid Balazadeh",
+        "Stefan Feuerriegel",
+        "Rahul G. Krishnan"
+      ],
+      "summary": "Foundation models based on prior-data fitted networks (PFNs) have shown strong empirical performance in causal inference by framing the task as an in-context learning problem.However, it is unclear whether PFN-based causal estimators provide uncertainty quantification that is consistent with classical frequentist estimators. In this work, we address this gap by analyzing the frequentist consistency of PFN-based estimators for the average treatment effect (ATE). (1) We show that existing PFNs, when interpreted as Bayesian ATE estimators, can exhibit prior-induced confounding bias: the prior is not asymptotically overwritten by data, which, in turn, prevents frequentist consistency. (2) As a remedy, we suggest employing a calibration procedure based on a one-step posterior correction (OSPC). We show that the OSPC helps to restore frequentist consistency and can yield a semi-parametric Bernstein-von Mises theorem for calibrated PFNs (i.e., both the calibrated PFN-based estimators and the classical semi-parametric efficient estimators converge in distribution with growing data size). (3) Finally, we implement OSPC through tailoring martingale posteriors on top of the PFNs. In this way, we are able to recover functional nuisance posteriors from PFNs, required by the OSPC. In multiple (semi-)synthetic experiments, PFNs calibrated with our martingale posterior OSPC produce ATE uncertainty that (i) asymptotically matches frequentist uncertainty and (ii) is well calibrated in finite samples in comparison to other Bayesian ATE estimators.",
+      "published": "2026-03-12T15:14:35Z",
+      "updated": "2026-03-12T15:14:35Z",
+      "arxiv_id": "2603.12037v1",
+      "abs_url": "http://arxiv.org/abs/2603.12037v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.12037v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "基础模型",
+      "score": 2,
+      "anchor_terms": [
+        "in-context learning"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "in-context learning"
+      ],
+      "title_zh": "用于因果推理的先验数据拟合网络的频率一致性",
+      "summary_zh": "基于先验数据拟合网络（PFN）的基础模型通过将任务视为上下文学习问题，在因果推理中表现出了强大的经验性能。然而，目前尚不清楚基于 PFN 的因果估计器是否提供与经典频率估计器一致的不确定性量化。在这项工作中，我们通过分析基于 PFN 的平均治疗效果 (ATE) 估计量的频率一致性来解决这一差距。 (1) 我们表明，现有的 PFN 在被解释为贝叶斯 ATE 估计器时，可能会表现出先验引起的混杂偏差：先验不会被数据渐近覆盖，这反过来又会妨碍频率一致性。 (2) 作为一种补救措施，我们建议采用基于一步后验校正 (OSPC) 的校准程序。我们表明，OSPC 有助于恢复频率一致性，并且可以为校准的 PFN 生成半参数 Bernstein-von Mises 定理（即，校准的基于 PFN 的估计器和经典的半参数有效估计器随着数据大小的增长而收敛于分布）。 (3) 最后，我们通过在 PFN 之上定制鞅后验来实现 OSPC。通过这种方式，我们能够从 PFN 中恢复 OSPC 所需的功能性扰乱后验。在多个（半）综合实验中，用我们的鞅后 OSPC 校准的 PFN 产生 ATE 不确定性，其（i）渐近匹配频率不确定性，（ii）与其他贝叶斯 ATE 估计器相比，在有限样本中得到了很好的校准。"
+    },
+    {
+      "title": "Learning Transferable Sensor Models via Language-Informed Pretraining",
+      "authors": [
+        "Yuliang Chen",
+        "Arvind Pillai",
+        "Yu Yvonne Wu",
+        "Tess Z. Griffin",
+        "Lisa Marsch",
+        "Michael V. Heinz",
+        "Nicholas C. Jacobson",
+        "Andrew Campbell"
+      ],
+      "summary": "Modern sensing systems generate large volumes of unlabeled multivariate time-series data. This abundance of unlabeled data makes self-supervised learning (SSL) a natural approach for learning transferable representations. However, most existing approaches are optimized for reconstruction or forecasting objectives and often fail to capture the semantic structure required for downstream classification and reasoning tasks. While recent sensor-language alignment methods improve semantic generalization through captioning and zero-shot transfer, they are limited to fixed sensor configurations, such as predefined channel sets, signal lengths, or temporal resolutions, which hinders cross-domain applicability. To address these gaps, we introduce \\textbf{SLIP} (\\textbf{S}ensor \\textbf{L}anguage-\\textbf{I}nformed \\textbf{P}retraining), an open-source framework for learning language-aligned representations that generalize across diverse sensor setups. SLIP integrates contrastive alignment with sensor-conditioned captioning, facilitating both discriminative understanding and generative reasoning. By repurposing a pretrained decoder-only language model via cross-attention and introducing an elegant, flexible patch-embedder, SLIP supports different temporal resolutions and variable-length input at inference time without additional retraining. Across 11 datasets, SLIP demonstrates superior performance in zero-shot transfer, signal captioning, and question answering. It achieves a 77.14% average linear-probing accuracy, a 5.93% relative improvement over strong baselines, and reaches 64.83% accuracy in sensor-based question answering.",
+      "published": "2026-03-12T13:59:13Z",
+      "updated": "2026-03-12T13:59:13Z",
+      "arxiv_id": "2603.11950v1",
+      "abs_url": "http://arxiv.org/abs/2603.11950v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.11950v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像描述与视觉推理",
+        "时间序列与视频",
+        "基础模型",
+        "小样本与域泛化",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "图像描述与视觉推理",
+      "score": 5,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "cross-attention",
+        "self-supervised",
+        "self-supervised learning",
+        "temporal",
+        "time-series",
+        "zero-shot"
+      ],
+      "title_zh": "通过语言通知预训练学习可转移传感器模型",
+      "summary_zh": "现代传感系统会生成大量未标记的多元时间序列数据。大量的未标记数据使自监督学习（SSL）成为学习可转移表示的自然方法。然而，大多数现有方法都是针对重建或预测目标进行优化的，并且通常无法捕获下游分类和推理任务所需的语义结构。虽然最近的传感器语言对齐方法通过字幕和零样本传输改进了语义泛化，但它们仅限于固定的传感器配置，例如预定义的通道集、信号长度或时间分辨率，这阻碍了跨域适用性。为了解决这些差距，我们引入了 \\textbf{SLIP} （\\textbf{S}ensor \\textbf{L}anguage-\\textbf{I}nformed \\textbf{P}retraining），这是一个开源框架，用于学习语言一致的表示，可以泛化到不同的传感器设置。 SLIP 将对比对齐与传感器调节的字幕相结合，促进判别性理解和生成推理。通过交叉注意力重新利用预训练的仅解码器语言模型并引入优雅、灵活的补丁嵌入器，SLIP 在推理时支持不同的时间分辨率和可变长度输入，而无需额外的重新训练。在 11 个数据集上，SLIP 在零样本传输、信号字幕和问题回答方面展示了卓越的性能。它实现了 77.14% 的平均线性探测精度，比强基线相对提高了 5.93%，并且基于传感器的问答精度达到 64.83%。"
+    },
+    {
+      "title": "From Broad Exploration to Stable Synthesis: Entropy-Guided Optimization for Autoregressive Image Generation",
+      "authors": [
+        "Han Song",
+        "Yucheng Zhou",
+        "Jianbing Shen",
+        "Yu Cheng"
+      ],
+      "summary": "Combining Chain-of-Thought (CoT) with Reinforcement Learning (RL) improves text-to-image (T2I) generation, yet the underlying interaction between CoT's exploration and RL's optimization remains unclear. We present a systematic entropy-based analysis that yields three key insights: (1) CoT expands the generative exploration space, while RL contracts it toward high-reward regions; (2) final reward is strongly negatively correlated with both the mean and variance of image-token entropy, highlighting the need to reduce uncertainty and instability; and (3) the entropy of the textual CoT directly governs downstream image quality, with lower-entropy CoTs leading to better generations. Motivated by these findings, we propose Entropy-Guided Group Relative Policy Optimization (EG-GRPO), a fine-tuning strategy that reallocates optimization budget by uncertainty: low-entropy tokens are excluded from reward-driven updates to preserve stability, while high-entropy tokens receive an entropy bonus that encourages structured exploration without collapse. Experiments on standard T2I benchmarks demonstrate that EG-GRPO achieves state-of-the-art performance.",
+      "published": "2026-03-12T12:49:26Z",
+      "updated": "2026-03-12T12:49:26Z",
+      "arxiv_id": "2604.02355v1",
+      "abs_url": "http://arxiv.org/abs/2604.02355v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.02355v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 6,
+      "anchor_terms": [
+        "image generation",
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "image generation",
+        "LoRA"
+      ],
+      "title_zh": "从广泛探索到稳定合成：自回归图像生成的熵引导优化",
+      "summary_zh": "将思想链 (CoT) 与强化学习 (RL) 相结合可改善文本到图像 (T2I) 的生成，但 CoT 的探索和 RL 的优化之间的潜在相互作用仍不清楚。我们提出了一种基于熵的系统分析，得出了三个关键见解：（1）CoT 扩大了生成探索空间，而 RL 将其收缩到高回报区域； （2）最终奖励与图像令牌熵的均值和方差均呈强负相关，凸显了减少不确定性和不稳定性的必要性； (3) 文本 CoT 的熵直接控制下游图像质量，较低熵的 CoT 会产生更好的生成。受这些发现的启发，我们提出了熵引导组相对策略优化（EG-GRPO），这是一种根据不确定性重新分配优化预算的微调策略：低熵代币被排除在奖励驱动的更新之外以保持稳定性，而高熵代币则获得熵奖励，鼓励结构化探索而不会崩溃。标准 T2I 基准测试的实验表明 EG-GRPO 实现了最先进的性能。"
+    },
+    {
+      "title": "OSMDA: OpenStreetMap-based Domain Adaptation for Remote Sensing VLMs",
+      "authors": [
+        "Stefan Maria Ailuro",
+        "Mario Markov",
+        "Mohammad Mahdi",
+        "Delyan Boychev",
+        "Luc Van Gool",
+        "Danda Pani Paudel"
+      ],
+      "summary": "Vision-Language Models (VLMs) adapted to remote sensing rely heavily on domain-specific image-text supervision, yet high-quality annotations for satellite and aerial imagery remain scarce and expensive to produce. Prevailing pseudo-labeling pipelines address this gap by distilling knowledge from large frontier models, but this dependence on large teachers is costly, limits scalability, and caps achievable performance at the ceiling of the teacher. We propose OSMDA: a self-contained domain adaptation framework that eliminates this dependency. Our key insight is that a capable base VLM can serve as its own annotation engine: by pairing aerial images with rendered OpenStreetMap (OSM) tiles, we leverage optical character recognition and chart comprehension capabilities of the model to generate captions enriched by OSM's vast auxiliary metadata. The model is then fine-tuned on the resulting corpus with satellite imagery alone, yielding OSMDA-VLM, a domain-adapted VLM that requires no manual labeling and no stronger external model. We conduct exhaustive evaluations spanning 10 benchmarks across image-text-to-text tasks and comparing against 9 competitive baselines. When equally mixed with real data, our method achieves state-of-the-art results, while being substantially cheaper to train than teacher-dependent alternatives. These results suggest that, given a strong foundation model, alignment with crowd-sourced geographic data is a practical and scalable path towards remote sensing domain adaptation. Dataset and model weights will be made publicly available.",
+      "published": "2026-03-12T11:08:30Z",
+      "updated": "2026-03-25T08:37:47Z",
+      "arxiv_id": "2603.11804v2",
+      "abs_url": "http://arxiv.org/abs/2603.11804v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.11804v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像描述与视觉推理",
+        "基础模型",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "图像描述与视觉推理",
+      "score": 13,
+      "anchor_terms": [
+        "aerial image",
+        "aerial imagery",
+        "aerial images",
+        "foundation model",
+        "remote sensing",
+        "satellite image",
+        "satellite imagery"
+      ],
+      "matched_terms": [
+        "aerial",
+        "aerial image",
+        "aerial imagery",
+        "aerial images",
+        "domain adaptation",
+        "foundation model",
+        "remote sensing",
+        "satellite",
+        "satellite image",
+        "satellite imagery",
+        "VLM"
+      ],
+      "title_zh": "OSMDA：基于 OpenStreetMap 的遥感 VLM 域适应",
+      "summary_zh": "适用于遥感的视觉语言模型（VLM）在很大程度上依赖于特定领域的图像文本监督，但卫星和航空图像的高质量注释仍然稀缺且生产成本昂贵。流行的伪标签管道通过从大型前沿模型中提取知识来解决这一差距，但这种对大型教师的依赖成本高昂，限制了可扩展性，并将可实现的性能限制在教师的上限。我们提出 OSMDA：一个独立的域适应框架，可以消除这种依赖性。我们的主要见解是，功能强大的基础 VLM 可以作为自己的注释引擎：通过将航拍图像与渲染的 OpenStreetMap (OSM) 图块配对，我们利用模型的光学字符识别和图表理解功能来生成由 OSM 的大量辅助元数据丰富的说明文字。然后，仅使用卫星图像对生成的语料库对该模型进行微调，产生 OSMDA-VLM，这是一种适应领域的 VLM，不需要手动标记，也不需要更强的外部模型。我们对图像-文本到文本任务的 10 个基准进行了详尽的评估，并与 9 个竞争基准进行了比较。当与真实数据均匀混合时，我们的方法可以获得最先进的结果，同时比依赖教师的替代方法训练成本要低得多。这些结果表明，鉴于强大的基础模型，与众包地理数据的结合是实现遥感领域适应的实用且可扩展的路径。数据集和模型权重将公开。"
+    },
+    {
+      "title": "Anomaly detection in time-series via inductive biases in the latent space of conditional normalizing flows",
+      "authors": [
+        "David Baumgartner",
+        "Eliezer de Souza da Silva",
+        "Iñigo Urteaga"
+      ],
+      "summary": "Deep generative models for anomaly detection in multivariate time-series are typically trained by maximizing data likelihood. However, likelihood in observation space measures marginal density rather than conformity to structured temporal dynamics, and therefore can assign high probability to anomalous or out-of-distribution samples. We address this structural limitation by relocating the notion of anomaly to a prescribed latent space. We introduce explicit inductive biases in conditional normalizing flows, modeling time-series observations within a discrete-time state-space framework that constrains latent representations to evolve according to prescribed temporal dynamics. Under this formulation, expected behavior corresponds to compliance with a specified distribution over latent trajectories, while anomalies are defined as violations of these dynamics. Anomaly detection is consequently reduced to a statistically grounded compliance test, such that observations are mapped to latent space and evaluated via goodness-of-fit tests against the prescribed latent evolution. This yields a principled decision rule that remains effective even in regions of high observation likelihood. Experiments on synthetic and real-world time-series demonstrate reliable detection of anomalies in frequency, amplitude, and observation noise, while providing interpretable diagnostics of model compliance.",
+      "published": "2026-03-12T10:02:38Z",
+      "updated": "2026-03-12T10:02:38Z",
+      "arxiv_id": "2603.11756v1",
+      "abs_url": "http://arxiv.org/abs/2603.11756v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.11756v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "小样本与域泛化"
+      ],
+      "topic": "时间序列与视频",
+      "score": 4,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "temporal",
+        "time-series"
+      ],
+      "title_zh": "通过条件归一化流的潜在空间中的归纳偏差进行时间序列异常检测",
+      "summary_zh": "用于多变量时间序列异常检测的深度生成模型通常通过最大化数据似然来训练。然而，观察空间中的可能性衡量的是边际密度，而不是符合结构化时间动态，因此可以为异常或分布外样本分配高概率。我们通过将异常的概念重新定位到规定的潜在空间来解决这种结构性限制。我们在条件归一化流中引入显式归纳偏差，在离散时间状态空间框架内对时间序列观察进行建模，该框架限制潜在表示根据规定的时间动态演化。根据这个公式，预期行为对应于遵守潜在轨迹上的指定分布，而异常则被定义为违反这些动态。因此，异常检测被简化为基于统计的合规性测试，从而将观察结果映射到潜在空间，并通过针对规定的潜在演化的拟合优度测试进行评估。这产生了一个原则性的决策规则，即使在高观察可能性的区域也仍然有效。对合成和真实世界时间序列的实验证明了对频率、幅度和观测噪声异常的可靠检测，同时提供了模型合规性的可解释诊断。"
+    },
+    {
+      "title": "CINDI: Conditional Imputation and Noisy Data Integrity with Flows in Power Grid Data",
+      "authors": [
+        "David Baumgartner",
+        "Helge Langseth",
+        "Heri Ramampiaro"
+      ],
+      "summary": "Real-world multivariate time series, particularly in critical infrastructure such as electrical power grids, are often corrupted by noise and anomalies that degrade the performance of downstream tasks. Standard data cleaning approaches often rely on disjoint strategies, which involve detecting errors with one model and imputing them with another. Such approaches can fail to capture the full joint distribution of the data and ignore prediction uncertainty. This work introduces Conditional Imputation and Noisy Data Integrity (CINDI), an unsupervised probabilistic framework designed to restore data integrity in complex time series. Unlike fragmented approaches, CINDI unifies anomaly detection and imputation into a single end-to-end system built on conditional normalizing flows. By modeling the exact conditional likelihood of the data, the framework identifies low-probability segments and iteratively samples statistically consistent replacements. This allows CINDI to efficiently reuse learned information while preserving the underlying physical and statistical properties of the system. We evaluate the framework using real-world grid loss data from a Norwegian power distribution operator, though the methodology is designed to generalize to any multivariate time series domain. The results demonstrate that CINDI yields robust performance compared to competitive baselines, offering a scalable solution for maintaining reliability in noisy environments.",
+      "published": "2026-03-12T09:49:10Z",
+      "updated": "2026-03-12T09:49:10Z",
+      "arxiv_id": "2603.11745v1",
+      "abs_url": "http://arxiv.org/abs/2603.11745v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.11745v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无监督与弱监督",
+        "高效微调与轻量化"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 3,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "robust",
+        "unsupervised"
+      ],
+      "title_zh": "CINDI：电网数据流的条件插补和噪声数据完整性",
+      "summary_zh": "现实世界的多元时间序列，特别是在电网等关键基础设施中，经常会受到噪声和异常现象的破坏，从而降低下游任务的性能。标准数据清理方法通常依赖于不相交的策略，其中涉及使用一种模型检测错误并将其归因于另一种模型。此类方法可能无法捕获数据的完整联合分布并忽略预测不确定性。这项工作介绍了条件插补和噪声数据完整性（CINDI），这是一种无监督的概率框架，旨在恢复复杂时间序列中的数据完整性。与分散的方法不同，CINDI 将异常检测和插补统一到基于条件标准化流构建的单个端到端系统中。通过对数据的精确条件可能性进行建模，该框架可以识别低概率片段并迭代地对统计上一致的替换进行采样。这使得 CINDI 能够有效地重用学到的信息，同时保留系统的底层物理和统计属性。我们使用挪威配电运营商的真实电网损耗数据来评估该框架，尽管该方法旨在推广到任何多元时间序列域。结果表明，与竞争基准相比，CINDI 具有强大的性能，为在嘈杂环境中保持可靠性提供了可扩展的解决方案。"
+    },
+    {
+      "title": "Simple Recipe Works: Vision-Language-Action Models are Natural Continual Learners with Reinforcement Learning",
+      "authors": [
+        "Jiaheng Hu",
+        "Jay Shim",
+        "Chen Tang",
+        "Yoonchang Sung",
+        "Bo Liu",
+        "Peter Stone",
+        "Roberto Martin-Martin"
+      ],
+      "summary": "Continual Reinforcement Learning (CRL) for Vision-Language-Action (VLA) models is a promising direction toward self-improving embodied agents that can adapt in openended, evolving environments. However, conventional wisdom from continual learning suggests that naive Sequential Fine-Tuning (Seq. FT) leads to catastrophic forgetting, necessitating complex CRL strategies. In this work, we take a step back and conduct a systematic study of CRL for large pretrained VLAs across three models and five challenging lifelong RL benchmarks. We find that, contrary to established belief, simple Seq. FT with low-rank adaptation (LoRA) is remarkably strong: it achieves high plasticity, exhibits little to no forgetting, and retains strong zero-shot generalization, frequently outperforming more sophisticated CRL methods. Through detailed analysis, we show that this robustness arises from a synergy between the large pretrained model, parameter-efficient adaptation, and on-policy RL. Together, these components reshape the stability-plasticity trade-off, making continual adaptation both stable and scalable. Our results position Sequential Fine-Tuning as a powerful method for continual RL with VLAs and provide new insights into lifelong learning in the large model era. Code is available at github.com/UT-Austin-RobIn/continual-vla-rl.",
+      "published": "2026-03-12T08:22:39Z",
+      "updated": "2026-03-12T08:22:39Z",
+      "arxiv_id": "2603.11653v1",
+      "abs_url": "http://arxiv.org/abs/2603.11653v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.11653v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 7,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "catastrophic forgetting",
+        "continual learning",
+        "fine-tuning",
+        "large model",
+        "LoRA",
+        "robust",
+        "zero-shot"
+      ],
+      "title_zh": "简单的方法有效：视觉-语言-动作模型是具有强化学习功能的自然持续学习者",
+      "summary_zh": "用于视觉-语言-动作（VLA）模型的持续强化学习（CRL）是实现自我改进的实体代理的一个有前途的方向，可以适应开放的、不断发展的环境。然而，持续学习的传统观点表明，天真的顺序微调 (Seq. FT) 会导致灾难性遗忘，从而需要复杂的 CRL 策略。在这项工作中，我们退后一步，对跨三个模型和五个具有挑战性的终身 RL 基准的大型预训练 VLA 的 CRL 进行系统研究。我们发现，与既定的信念相反，简单的序列。具有低秩适应（LoRA）的 FT 非常强大：它实现了高可塑性，几乎没有遗忘，并且保留了强大的零样本泛化能力，通常优于更复杂的 CRL 方法。通过详细分析，我们表明这种鲁棒性来自于大型预训练模型、参数高效自适应和同策略强化学习之间的协同作用。这些组件共同重塑了稳定性与可塑性的权衡，使持续适应既稳定又可扩展。我们的结果将顺序微调定位为使用 VLA 进行持续强化学习的强大方法，并为大模型时代的终身学习提供了新的见解。代码可在 github.com/UT-Austin-RobIn/continual-vla-rl 获取。"
+    }
+  ]
+}

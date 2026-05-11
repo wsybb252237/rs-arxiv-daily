@@ -1,0 +1,556 @@
+{
+  "date": "2026-03-05",
+  "generated_at": "2026-05-11T06:31:19.143946+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202603050000 TO 202603052359]",
+  "total_fetched": 386,
+  "total_matched": 13,
+  "papers": [
+    {
+      "title": "Towards 3D Scene Understanding of Gas Plumes in LWIR Hyperspectral Images Using Neural Radiance Fields",
+      "authors": [
+        "Scout Jarman",
+        "Zigfried Hampel-Arias",
+        "Adra Carr",
+        "Kevin R. Moon"
+      ],
+      "summary": "Hyperspectral images (HSI) have many applications, ranging from environmental monitoring to national security, and can be used for material detection and identification. Longwave infrared (LWIR) HSI can be used for gas plume detection and analysis. Oftentimes, only a few images of a scene of interest are available and are analyzed individually. The ability to combine information from multiple images into a single, cohesive representation could enhance analysis by providing more context on the scene's geometry and spectral properties. Neural radiance fields (NeRFs) create a latent neural representation of volumetric scene properties that enable novel-view rendering and geometry reconstruction, offering a promising avenue for hyperspectral 3D scene reconstruction. We explore the possibility of using NeRFs to create 3D scene reconstructions from LWIR HSI and demonstrate that the model can be used for the basic downstream analysis task of gas plume detection. The physics-based DIRSIG software suite was used to generate a synthetic multi-view LWIR HSI dataset of a simple facility with a strong sulfur hexafluoride gas plume. Our method, built on the standard Mip-NeRF architecture, combines state-of-the-art methods for hyperspectral NeRFs and sparse-view NeRFs, along with a novel adaptive weighted MSE loss. Our final NeRF method requires around 50% fewer training images than the standard Mip-NeRF and achieves an average PSNR of 39.8 dB with as few as 30 training images. Gas plume detection applied to NeRF-rendered test images using the adaptive coherence estimator achieves an average AUC of 0.821 when compared with detection masks generated from ground-truth test images.",
+      "published": "2026-03-05T18:44:45Z",
+      "updated": "2026-03-05T18:44:45Z",
+      "arxiv_id": "2603.05473v1",
+      "abs_url": "http://arxiv.org/abs/2603.05473v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05473v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "This manuscript was submitted to SPIE JARS and is under review. Code and Data can be found at https://github.com/lanl/HSI-Nerfstudio and https://zenodo.org/records/18626884 respectively. Video 1 and Video 2 can be found at https://github.com/lanl/HSI-Nerfstudio/blob/main/renders/paper/grid_Falsecolor.mp4 and https://github.com/lanl/HSI-Nerfstudio/blob/main/renders/paper/grid_ACE.mp4 respectively",
+      "code_url": "https://github.com/lanl/HSI-Nerfstudio",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "场景分类",
+        "高光谱/多光谱",
+        "数据集/评测"
+      ],
+      "topic": "场景分类",
+      "score": 3,
+      "anchor_terms": [
+        "hyperspectral image"
+      ],
+      "matched_terms": [
+        "hyperspectral",
+        "hyperspectral image"
+      ],
+      "title_zh": "使用神经辐射场对 LWIR 高光谱图像中的气体羽流进行 3D 场景理解",
+      "summary_zh": "高光谱图像 (HSI) 有许多应用，从环境监测到国家安全，可用于材料检测和识别。长波红外 (LWIR) HSI 可用于气体羽流检测和分析。通常，只有一些感兴趣场景的图像可用，并且需要单独分析。将多个图像的信息组合成一个单一的、有凝聚力的表示的能力可以通过提供更多有关场景几何和光谱属性的上下文来增强分析。神经辐射场 (NeRF) 创建体积场景属性的潜在神经表示，可实现新颖的视图渲染和几何重建，为高光谱 3D 场景重建提供了一条有前景的途径。我们探索了使用 NeRF 从 LWIR HSI 创建 3D 场景重建的可能性，并证明该模型可用于气体羽流检测的基本下游分析任务。基于物理的 DIRSIG 软件套件用于生成具有强六氟化硫气体羽流的简单设施的合成多视图 LWIR HSI 数据集。我们的方法建立在标准 Mip-NeRF 架构之上，结合了最先进的高光谱 NeRF 和稀疏视图 NeRF 方法，以及新颖的自适应加权 MSE 损失。我们最终的 NeRF 方法所需的训练图像比标准 Mip-NeRF 少约 50%，并且仅用 30 个训练图像即可实现 39.8 dB 的平均 PSNR。与从真实测试图像生成的检测掩模相比，使用自适应相干估计器将气体羽流检测应用于 NeRF 渲染的测试图像，平均 AUC 为 0.821。"
+    },
+    {
+      "title": "Reclaiming Lost Text Layers for Source-Free Cross-Domain Few-Shot Learning",
+      "authors": [
+        "Zhenyu Zhang",
+        "Guangyao Chen",
+        "Yixiong Zou",
+        "Yuhua Li",
+        "Ruixuan Li"
+      ],
+      "summary": "Source-Free Cross-Domain Few-Shot Learning (SF-CDFSL) focuses on fine-tuning with limited training data from target domains (e.g., medical or satellite images), where CLIP has recently shown promising results due to its generalizability to downstream tasks. Current works indicate CLIP's text encoder is more suitable for cross-domain tasks, however, we find that \\textbf{removing certain middle layers of the text encoder can effectively improve performance in SF-CDFSL}, which we call the Lost Layers. In this paper, we delve into this phenomenon for a deeper understanding. We discover that instead of being harmful for the SF-CDFSL task, the information in these layers is actually beneficial, but visual gaps prevent this useful information from being fully utilized, making these layers seem redundant. Based on this understanding, unlike current works that simply remove these layers, we propose a method to teachs the model to \\textbf{re-utilize} information in these lost layers at both the layer and encoder levels, guiding the re-learning of the visual branch under domain shifts. Our approach effectively addresses the issue of underutilized information in the text encoder. Extensive experiments across various settings, backbones (CLIP, SigLip, PE-Core), and tasks (4 CDFSL datasets and 10 Meta-dataset datasets) demonstrate the effectiveness of our method. Code is available at https://github.com/zhenyuZ-HUST/CVPR26-VtT.",
+      "published": "2026-03-05T14:51:52Z",
+      "updated": "2026-03-05T14:51:52Z",
+      "arxiv_id": "2603.05235v1",
+      "abs_url": "http://arxiv.org/abs/2603.05235v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05235v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "CVPR 2026",
+      "code_url": "https://github.com/zhenyuZ-HUST/CVPR26-VtT",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "开放词汇与开放集",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "开放词汇与开放集",
+      "score": 6,
+      "anchor_terms": [
+        "CLIP",
+        "satellite image",
+        "satellite images",
+        "source-free"
+      ],
+      "matched_terms": [
+        "CLIP",
+        "few-shot learning",
+        "fine-tuning",
+        "satellite",
+        "satellite image",
+        "satellite images",
+        "source-free"
+      ],
+      "title_zh": "回收丢失的文本层以实现无源跨域小样本学习",
+      "summary_zh": "无源跨域少样本学习 (SF-CDFSL) 专注于利用来自目标领域（例如医学或卫星图像）的有限训练数据进行微调，其中 CLIP 由于其对下游任务的泛化性，最近显示出了有希望的结果。目前的工作表明CLIP的文本编码器更适合跨域任务，然而，我们发现\\textbf{删除文本编码器的某些中间层可以有效提高SF-CDFSL的性能}，我们称之为丢失层。在本文中，我们深入研究这一现象以加深理解。我们发现，这些层中的信息实际上是有益的，而不是对 SF-CDFSL 任务有害，但视觉间隙阻止了这些有用信息的充分利用，使这些层显得多余。基于这种理解，与简单地删除这些层的当前工作不同，我们提出了一种方法来教导模型在层和编码器级别上重新利用这些丢失层中的信息，从而指导域转移下视觉分支的重新学习。我们的方法有效地解决了文本编码器中信息未充分利用的问题。跨各种设置、主干（CLIP、SigLip、PE-Core）和任务（4 个 CDFSL 数据集和 10 个元数据集）的广泛实验证明了我们方法的有效性。代码可在 https://github.com/zhenyuZ-HUST/CVPR26-VtT 获取。"
+    },
+    {
+      "title": "Stable-LoRA: Stabilizing Feature Learning of Low-Rank Adaptation",
+      "authors": [
+        "Yize Wu",
+        "Ke Gao",
+        "Ling Li",
+        "Yanjun Wu"
+      ],
+      "summary": "Low-Rank Adaptation (LoRA) is a widely adopted parameter-efficient method for fine-tuning Large Langauge Models. It updates the weight matrix as $W=W_0+sBA$, where $W_0$ is the original frozen weight, $s$ is a scaling factor and $A$,$B$ are trainable low-rank matrices. Despite its robust empirical effectiveness, the theoretical foundations of LoRA remain insufficiently understood, particularly with respect to feature learning stability. In this paper, we first establish that, LoRA can, in principle, naturally achieve and sustain stable feature learning (i.e., be self-stabilized) under appropriate hyper-parameters and initializations of $A$ and $B$. However, we also uncover a fundamental limitation that the necessary non-zero initialization of $A$ compromises self-stability, leading to suboptimal performances. To address this challenge, we propose Stable-LoRA, a weight-shrinkage optimization strategy that dynamically enhances stability of LoRA feature learning. By progressively shrinking $A$ during the earliest training steps, Stable-LoRA is both theoretically and empirically validated to effectively eliminate instability of LoRA feature learning while preserving the benefits of the non-zero start. Experiments show that Stable-LoRA consistently outperforms other baselines across diverse models and tasks, with no additional memory usage and only negligible computation overheads. The code is available at https://github.com/Yize-Wu/Stable-LoRA.",
+      "published": "2026-03-05T14:15:51Z",
+      "updated": "2026-03-05T14:15:51Z",
+      "arxiv_id": "2603.05204v1",
+      "abs_url": "http://arxiv.org/abs/2603.05204v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05204v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/Yize-Wu/Stable-LoRA",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "高效微调与轻量化"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 4,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "LoRA",
+        "robust"
+      ],
+      "title_zh": "Stable-LoRA：稳定低秩适应的特征学习",
+      "summary_zh": "低秩适应 (LoRA) 是一种广泛采用的参数高效方法，用于微调大型语言模型。它将权重矩阵更新为 $W=W_0+sBA$，其中 $W_0$ 是原始冻结权重，$s$ 是缩放因子，$A$、$B$ 是可训练的低秩矩阵。尽管其实证有效性很强，但 LoRA 的理论基础仍然没有得到充分理解，特别是在特征学习稳定性方面。在本文中，我们首先确定，LoRA 原则上可以在适当的超参数以及 $A$ 和 $B$ 的初始化下自然地实现并维持稳定的特征学习（即自稳定）。然而，我们还发现了一个基本限制，即 $A$ 必要的非零初始化会损害自稳定性，导致性能不佳。为了应对这一挑战，我们提出了 Stable-LoRA，一种权重收缩优化策略，可以动态增强 LoRA 特征学习的稳定性。通过在最早的训练步骤中逐步缩小 $A$，Stable-LoRA 得到了理论和经验的验证，可以有效消除 LoRA 特征学习的不稳定性，同时保留非零启动的好处。实验表明，Stable-LoRA 在不同的模型和任务中始终优于其他基线，没有额外的内存使用，计算开销也可以忽略不计。代码可在 https://github.com/Yize-Wu/Stable-LoRA 获取。"
+    },
+    {
+      "title": "UniPAR: A Unified Framework for Pedestrian Attribute Recognition",
+      "authors": [
+        "Minghe Xu",
+        "Rouying Wu",
+        "Jiarui Xu",
+        "Minhao Sun",
+        "Zikang Yan",
+        "Xiao Wang",
+        "ChiaWei Chu",
+        "Yu Li"
+      ],
+      "summary": "Pedestrian Attribute Recognition is a foundational computer vision task that provides essential support for downstream applications, including person retrieval in video surveillance and intelligent retail analytics. However, existing research is frequently constrained by the ``one-model-per-dataset\" paradigm and struggles to handle significant discrepancies across domains in terms of modalities, attribute definitions, and environmental scenarios. To address these challenges, we propose UniPAR, a unified Transformer-based framework for PAR. By incorporating a unified data scheduling strategy and a dynamic classification head, UniPAR enables a single model to simultaneously process diverse datasets from heterogeneous modalities, including RGB images, video sequences, and event streams. We also introduce an innovative phased fusion encoder that explicitly aligns visual features with textual attribute queries through a late deep fusion strategy. Experimental results on the widely used benchmark datasets, including MSP60K, DukeMTMC, and EventPAR, demonstrate that UniPAR achieves performance comparable to specialized SOTA methods. Furthermore, multi-dataset joint training significantly enhances the model's cross-domain generalization and recognition robustness in extreme environments characterized by low light and motion blur. The source code of this paper will be released on https://github.com/Event-AHU/OpenPAR",
+      "published": "2026-03-05T12:34:35Z",
+      "updated": "2026-03-05T12:34:35Z",
+      "arxiv_id": "2603.05114v1",
+      "abs_url": "http://arxiv.org/abs/2603.05114v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05114v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/Event-AHU/OpenPAR",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "小样本与域泛化",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 4,
+      "anchor_terms": [
+        "domain generalization"
+      ],
+      "matched_terms": [
+        "domain generalization",
+        "robust",
+        "transformer"
+      ],
+      "title_zh": "UniPAR：行人属性识别的统一框架",
+      "summary_zh": "行人属性识别是一项基础计算机视觉任务，为下游应用程序提供必要的支持，包括视频监控和智能零售分析中的人员检索。然而，现有的研究经常受到“每个数据集一个模型”范式的限制，并且难以处理跨领域在模态、属性定义和环境场景方面的显着差异。为了应对这些挑战，我们提出了 UniPAR，一个基于 Transformer 的统一 PAR 框架。通过结合统一的数据调度策略和动态分类头，UniPAR 使单个模型能够同时处理来自异构模态的不同数据集，包括 RGB 图像、视频序列和事件流。我们还介绍了一种创新的分阶段融合编码器，通过后期深度融合策略将视觉特征与文本属性查询显式对齐。在广泛使用的基准数据集（包括 MSP60K、DukeMTMC 和 EventPAR）上的实验结果表明，UniPAR 的性能可与专门的 SOTA 方法相媲美。此外，多数据集联合训练显着增强了模型在弱光和运动模糊的极端环境中的跨域泛化和识别鲁棒性。 https://github.com/Event-AHU/OpenPAR"
+    },
+    {
+      "title": "Spatiotemporal Heterogeneity of AI-Driven Traffic Flow Patterns and Land Use Interaction: A GeoAI-Based Analysis of Multimodal Urban Mobility",
+      "authors": [
+        "Olaf Yunus Laitinen Imanov"
+      ],
+      "summary": "Urban traffic flow is governed by the complex, nonlinear interaction between land use configuration and spatiotemporally heterogeneous mobility demand. Conventional global regression and time-series models cannot simultaneously capture these multi-scale dynamics across multiple travel modes. This study proposes a GeoAI Hybrid analytical framework that sequentially integrates Multiscale Geographically Weighted Regression (MGWR), Random Forest (RF), and Spatio-Temporal Graph Convolutional Networks (ST-GCN) to model the spatiotemporal heterogeneity of traffic flow patterns and their interaction with land use across three mobility modes: motor vehicle, public transit, and active transport. Applying the framework to an empirically calibrated dataset of 350 traffic analysis zones across six cities spanning two contrasting urban morphologies, four key findings emerge: (i) the GeoAI Hybrid achieves a root mean squared error (RMSE) of 0.119 and an R^2 of 0.891, outperforming all benchmarks by 23-62%; (ii) SHAP analysis identifies land use mix as the strongest predictor for motor vehicle flows and transit stop density as the strongest predictor for public transit; (iii) DBSCAN clustering identifies five functionally distinct urban traffic typologies with a silhouette score of 0.71, and GeoAI Hybrid residuals exhibit Moran's I=0.218 (p<0.001), a 72% reduction relative to OLS baselines; and (iv) cross-city transfer experiments reveal moderate within-cluster transferability (R^2>=0.78) and limited cross-cluster generalisability, underscoring the primacy of urban morphological context. The framework offers planners and transportation engineers an interpretable, scalable toolkit for evidence-based multimodal mobility management and land use policy design.",
+      "published": "2026-03-05T18:45:44Z",
+      "updated": "2026-03-05T18:45:44Z",
+      "arxiv_id": "2603.05581v1",
+      "abs_url": "http://arxiv.org/abs/2603.05581v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05581v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "eess.SP"
+      ],
+      "comment": "13 pages, 7 figures, 9 tables. Submitted to Computers, Environment and Urban Systems (Elsevier)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "场景分类",
+        "时间序列与视频",
+        "无监督与弱监督",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "场景分类",
+      "score": 4,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "land use",
+        "multi-scale",
+        "temporal",
+        "time-series"
+      ],
+      "title_zh": "人工智能驱动的交通流模式和土地利用交互的时空异质性：基于 GeoAI 的多模式城市出行分析",
+      "summary_zh": "城市交通流量受土地利用配置与时空异质流动需求之间复杂的非线性相互作用的控制。传统的全局回归和时间序列模型无法同时捕获多种出行模式的多尺度动态。本研究提出了一种 GeoAI 混合分析框架，该框架依次集成多尺度地理加权回归 (MGWR)、随机森林 (RF) 和时空图卷积网络 (ST-GCN)，以模拟交通流模式的时空异质性及其与三种移动模式（机动车辆、公共交通和主动交通）土地利用的相互作用。将该框架应用于跨越两种截然不同的城市形态的六个城市的 350 个交通分析区域的经验校准数据集，得出四个关键发现：(i) GeoAI Hybrid 的均方根误差 (RMSE) 为 0.119，R^2 为 0.891，比所有基准高出 23-62%； (ii) SHAP 分析确定土地利用组合是机动车流量的最强预测因素，公交站密度是公共交通的最强预测因素； (iii) DBSCAN 聚类识别出五种功能不同的城市交通类型，轮廓得分为 0.71，GeoAI Hybrid 残差显示 Moran's I=0.218（p<0.001），相对于 OLS 基线减少了 72%； (iv) 跨城市转移实验揭示了适度的集群内可转移性 (R^2>=0.78) 和有限的跨集群普遍性，强调了城市形态环境的首要地位。该框架为规划者和交通工程师提供了一个可解释、可扩展的工具包，用于基于证据的多式联运管理和土地使用政策设计。"
+    },
+    {
+      "title": "GALACTIC: Global and Local Agnostic Counterfactuals for Time-series Clustering",
+      "authors": [
+        "Christos Fragkathoulas",
+        "Eleni Psaroudaki",
+        "Themis Palpanas",
+        "Evaggelia Pitoura"
+      ],
+      "summary": "Time-series clustering is a fundamental tool for pattern discovery, yet existing explainability methods, primarily based on feature attribution or metadata, fail to identify the transitions that move an instance across cluster boundaries. While Counterfactual Explanations (CEs) identify the minimal temporal perturbations required to alter the prediction of a model, they have been mostly confined to supervised settings. This paper introduces GALACTIC, the first unified framework to bridge local and global counterfactual explainability for unsupervised time-series clustering. At instance level (local), GALACTIC generates perturbations via a cluster-aware optimization objective that respects the target and underlying cluster assignments. At cluster level (global), to mitigate cognitive load and enhance interpretability, we formulate a representative CE selection problem. We propose a Minimum Description Length (MDL) objective to extract a non-redundant summary of global explanations that characterize the transitions between clusters. We prove that our MDL objective is supermodular, which allows the corresponding MDL reduction to be framed as a monotone submodular set function. This enables an efficient greedy selection algorithm with provable $(1-1/e)$ approximation guarantees. Extensive experimental evaluation on the UCR Archive demonstrates that GALACTIC produces significantly sparser local CEs and more concise global summaries than state-of-the-art baselines adapted for our problem, offering the first unified approach for interpreting clustered time-series through counterfactuals.",
+      "published": "2026-03-05T15:59:33Z",
+      "updated": "2026-03-09T15:52:20Z",
+      "arxiv_id": "2603.05318v2",
+      "abs_url": "http://arxiv.org/abs/2603.05318v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.05318v2",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "时间序列与视频",
+      "score": 3,
+      "anchor_terms": [
+        "temporal",
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "temporal",
+        "time-series",
+        "unsupervised"
+      ],
+      "title_zh": "GALACTIC：时间序列聚类的全局和局部不可知的反事实",
+      "summary_zh": "时间序列聚类是模式发现的基本工具，但现有的可解释性方法（主要基于特征归因或元数据）无法识别跨集群边界移动实例的转换。虽然反事实解释（CE）确定了改变模型预测所需的最小时间扰动，但它们大多局限于监督设置。本文介绍了 GALACTIC，这是第一个为无监督时间序列聚类连接局部和全局反事实可解释性的统一框架。在实例级别（本地），GALACTIC 通过尊重目标和底层集群分配的集群感知优化目标生成扰动。在集群级别（全局），为了减轻认知负荷并增强可解释性，我们制定了一个代表性的 CE 选择问题。我们提出了最小描述长度（MDL）目标来提取表征簇之间转换的全局解释的非冗余摘要。我们证明我们的 MDL 目标是超模的，这允许将相应的 MDL 约简构建为单调子模集函数。这使得高效的贪婪选择算法具有可证明的 $(1-1/e)$ 近似保证。对 UCR 档案进行的广泛实验评估表明，与适合我们问题的最先进基线相比，GALACTIC 产生的局部 CE 显着稀疏，全局摘要更简洁，提供了第一个通过反事实解释集群时间序列的统一方法。"
+    },
+    {
+      "title": "SPyCer: Semi-Supervised Physics-Guided Contextual Attention for Near-Surface Air Temperature Estimation from Satellite Imagery",
+      "authors": [
+        "Sofiane Bouaziz",
+        "Adel Hafiane",
+        "Raphael Canals",
+        "Rachid Nedjai"
+      ],
+      "summary": "Modern Earth observation relies on satellites to capture detailed surface properties. Yet, many phenomena that affect humans and ecosystems unfold in the atmosphere close to the surface. Near-ground sensors provide accurate measurements of certain environmental characteristics, such as near-surface air temperature (NSAT). However, they remain sparse and unevenly distributed, limiting their ability to provide continuous spatial measurements. To bridge this gap, we introduce SPyCer, a semi-supervised physics-guided network that can leverage pixel information and physical modeling to guide the learning process through meaningful physical properties. It is designed for continuous estimation of NSAT by proxy using satellite imagery. SPyCer frames NSAT prediction as a pixel-wise vision problem, where each near-ground sensor is projected onto satellite image coordinates and positioned at the center of a local image patch. The corresponding sensor pixel is supervised using both observed NSAT and physics-based constraints, while surrounding pixels contribute through physics-guided regularization derived from the surface energy balance and advection-diffusion-reaction partial differential equations. To capture the physical influence of neighboring pixels, SPyCer employs a multi-head attention guided by land cover characteristics and modulated with Gaussian distance weighting. Experiments on real-world datasets demonstrate that SPyCer produces spatially coherent and physically consistent NSAT estimates, outperforming existing baselines in terms of accuracy, generalization, and alignment with underlying physical processes.",
+      "published": "2026-03-05T14:31:44Z",
+      "updated": "2026-03-05T14:31:44Z",
+      "arxiv_id": "2603.05219v1",
+      "abs_url": "http://arxiv.org/abs/2603.05219v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05219v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "语义分割",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 9,
+      "anchor_terms": [
+        "earth observation",
+        "satellite image",
+        "satellite imagery",
+        "semi-supervised"
+      ],
+      "matched_terms": [
+        "earth observation",
+        "land cover",
+        "satellite",
+        "satellite image",
+        "satellite imagery",
+        "semi-supervised"
+      ],
+      "title_zh": "SPyCer：半监督物理引导的上下文注意，用于根据卫星图像估算近地表气温",
+      "summary_zh": "现代地球观测依靠卫星来捕获详细的表面特性。然而，许多影响人类和生态系统的现象都是在靠近地表的大气中展开的。近地传感器可准确测量某些环境特征，例如近地表气温 (NSAT)。然而，它们仍然稀疏且分布不均匀，限制了它们提供连续空间测量的能力。为了弥补这一差距，我们引入了 SPyCer，这是一种半监督物理引导网络，可以利用像素信息和物理建模，通过有意义的物理属性来指导学习过程。它设计用于使用卫星图像通过代理连续估计 NSAT。 SPyCer 将 NSAT 预测视为像素级视觉问题，其中每个近地传感器都被投影到卫星图像坐标上并位于局部图像块的中心。相应的传感器像素使用观察到的 NSAT 和基于物理的约束进行监督，而周围的像素则通过从表面能量平衡和平流扩散反应偏微分方程导出的物理引导正则化进行贡献。为了捕捉邻近像素的物理影响，SPyCer 采用了由土地覆盖特征引导并用高斯距离加权进行调制的多头注意力。对真实世界数据集的实验表明，SPyCer 可以生成空间相干且物理一致的 NSAT 估计，在准确性、泛化性以及与底层物理过程的一致性方面优于现有基线。"
+    },
+    {
+      "title": "AegisUI: Behavioral Anomaly Detection for Structured User Interface Protocols in AI Agent Systems",
+      "authors": [
+        "Mohd Safwan Uddin",
+        "Saba Hajira"
+      ],
+      "summary": "AI agents that build user interfaces on the fly assembling buttons, forms, and data displays from structured protocol payloads are becoming common in production systems. The trouble is that a payload can pass every schema check and still trick a user: a button might say \"View invoice\" while its hidden action wipes an account, or a display widget might quietly bind to an internal salary field. Current defenses stop at syntax; they were never built to catch this kind of behavioral mismatch. We built AegisUI to study exactly this gap. The framework generates structured UI payloads, injects realistic attacks into them, extracts numeric features, and benchmarks anomaly detectors end-to-end. We produced 4000 labeled payloads (3000 benign, 1000 malicious) spanning five application domains and five attack families: phishing interfaces, data leakage, layout abuse, manipulative UI, and workflow anomalies. From each payload we extracted 18 features covering structural, semantic, binding, and session dimensions, then compared three detectors: Isolation Forest (unsupervised), a benign-trained autoencoder (semi-supervised), and Random Forest (supervised). On a stratified 80/20 split, Random Forest scored best overall (accuracy 0.931, precision 0.980, recall 0.740, F1 0.843, ROC-AUC 0.952). The autoencoder came second (F1 0.762, ROC-AUC 0.863) and needs no malicious labels at training time, which matters when deploying a new system that lacks attack history. Per-attack-type analysis showed that layout abuse is easiest to catch while manipulative UI payloads are hardest. All code, data, and configurations are released for full reproducibility.",
+      "published": "2026-03-05T10:24:43Z",
+      "updated": "2026-03-05T10:24:43Z",
+      "arxiv_id": "2603.05031v1",
+      "abs_url": "http://arxiv.org/abs/2603.05031v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.05031v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "8 pages, 7 figures, 5 tables. Behavioral anomaly detection framework for security analysis of AI agent-generated UI protocol payloads",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 4,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "semi-supervised",
+        "unsupervised"
+      ],
+      "title_zh": "AegisUI：人工智能代理系统中结构化用户界面协议的行为异常检测",
+      "summary_zh": "从结构化协议有效负载中动态构建用户界面、组装按钮、表单和数据显示的人工智能代理在生产系统中变得越来越普遍。问题在于，有效负载可以通过每个模式检查，但仍然会欺骗用户：按钮可能会显示“查看发票”，而其隐藏操作会擦除帐户，或者显示小部件可能会悄悄地绑定到内部工资字段。目前的防御措施仅限于语法；它们从来就不是为了捕捉这种行为不匹配而设计的。我们构建 AegisUI 就是为了研究这个差距。该框架生成结构化的 UI 有效负载，向其中注入真实的攻击，提取数字特征，并对异常检测器进行端到端的基准测试。我们生成了 4000 个标记的有效负载（3000 个良性，1000 个恶意），涵盖五个应用程序域和五个攻击系列：网络钓鱼接口、数据泄漏、布局滥用、操纵性 UI 和工作流程异常。我们从每个有效负载中提取了涵盖结构、语义、绑定和会话维度的 18 个特征，然后比较了三个检测器：隔离森林（无监督）、良性训练的自动编码器（半监督）和随机森林（监督）。在分层 80/20 分割中，随机森林总体得分最高（准确度 0.931、精确度 0.980、召回率 0.740、F1 0.843、ROC-AUC 0.952）。自动编码器位居第二（F1 0.762，ROC-AUC 0.863），并且在训练时不需要恶意标签，这在部署缺乏攻击历史的新系统时很重要。针对每种攻击类型的分析表明，布局滥用最容易被发现，而操纵性 UI 有效负载则最难发现。所有代码、数据和配置均已发布，以实现完全可重复性。"
+    },
+    {
+      "title": "Lightweight and Scalable Transfer Learning Framework for Load Disaggregation",
+      "authors": [
+        "L. E. Garcia-Marrero",
+        "G. Petrone",
+        "E. Monmasson"
+      ],
+      "summary": "Non-Intrusive Load Monitoring (NILM) aims to estimate appliance-level consumption from aggregate electrical signals recorded at a single measurement point. In recent years, the field has increasingly adopted deep learning approaches; however, cross-domain generalization remains a persistent challenge due to variations in appliance characteristics, usage patterns, and background loads across homes. Transfer learning provides a practical paradigm to adapt models with limited target data. However, existing methods often assume a fixed appliance set, lack flexibility for evolving real-world deployments, remain unsuitable for edge devices, or scale poorly for real-time operation. This paper proposes RefQuery, a scalable multi-appliance, multi-task NILM framework that conditions disaggregation on compact appliance fingerprints, allowing one shared model to serve many appliances without a fixed output set. RefQuery keeps a pretrained disaggregation network fully frozen and adapts to a target home by learning only a per-appliance embedding during a lightweight backpropagation stage. Experiments on three public datasets demonstrate that RefQuery delivers a strong accuracy-efficiency trade-off against single-appliance and multi-appliance baselines, including modern Transformer-based methods. These results support RefQuery as a practical path toward scalable, real-time NILM on resource-constrained edge devices.",
+      "published": "2026-03-05T09:43:48Z",
+      "updated": "2026-03-05T09:43:48Z",
+      "arxiv_id": "2603.04998v1",
+      "abs_url": "http://arxiv.org/abs/2603.04998v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.04998v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "This work has been submitted to the IEEE for possible publication",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 4,
+      "anchor_terms": [
+        "domain generalization"
+      ],
+      "matched_terms": [
+        "domain generalization",
+        "transfer learning",
+        "transformer"
+      ],
+      "title_zh": "用于负载分解的轻量级且可扩展的迁移学习框架",
+      "summary_zh": "非侵入式负载监控 (NILM) 旨在根据单个测量点记录的聚合电信号来估计设备级消耗。近年来，该领域越来越多地采用深度学习方法；然而，由于家庭中的设备特性、使用模式和背景负载存在差异，跨域泛化仍然是一个持续的挑战。迁移学习提供了一种实用的范例，可以使模型适应有限的目标数据。然而，现有方法通常假设固定设备集，缺乏不断发展的现实世界部署的灵活性，仍然不适合边缘设备，或者对于实时操作的扩展性较差。本文提出了 RefQuery，这是一种可扩展的多设备、多任务 NILM 框架，它可以对紧凑设备指纹进行分解，从而允许一个共享模型为许多设备提供服务，而无需固定输出集。 RefQuery 保持预训练的分解网络完全冻结，并通过在轻量级反向传播阶段仅学习每个设备的嵌入来适应目标家庭。对三个公共数据集的实验表明，RefQuery 相对于单设备和多设备基线（包括基于 Transformer 的现代方法）提供了强大的准确性与效率权衡。这些结果支持 RefQuery 作为在资源受限的边缘设备上实现可扩展、实时 NILM 的实用途径。"
+    },
+    {
+      "title": "RMK RetinaNet: Rotated Multi-Kernel RetinaNet for Robust Oriented Object Detection in Remote Sensing Imagery",
+      "authors": [
+        "Huiran Sun"
+      ],
+      "summary": "Rotated object detection in remote sensing imagery is hindered by three major bottlenecks: non-adaptive receptive field utilization, inadequate long-range multi-scale feature fusion, and discontinuities in angle regression. To address these issues, we propose Rotated Multi-Kernel RetinaNet (RMK RetinaNet). First, we design a Multi-Scale Kernel (MSK) Block to strengthen adaptive multi-scale feature extraction. Second, we incorporate a Multi-Directional Contextual Anchor Attention (MDCAA) mechanism into the feature pyramid to enhance contextual modeling across scales and orientations. Third, we introduce a Bottom-up Path to preserve fine-grained spatial details that are often degraded during downsampling. Finally, we develop an Euler Angle Encoding Module (EAEM) to enable continuous and stable angle regression. Extensive experiments on DOTA-v1.0, HRSC2016, and UCAS-AOD show that RMK RetinaNet achieves performance comparable to state-of-the-art rotated object detectors while improving robustness in multi-scale and multi-orientation scenarios.",
+      "published": "2026-03-05T04:14:28Z",
+      "updated": "2026-03-05T04:14:28Z",
+      "arxiv_id": "2603.04793v1",
+      "abs_url": "http://arxiv.org/abs/2603.04793v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.04793v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 20,
+      "anchor_terms": [
+        "object detection",
+        "oriented object detection",
+        "remote sensing",
+        "rotated object detection"
+      ],
+      "matched_terms": [
+        "DOTA",
+        "feature fusion",
+        "feature pyramid",
+        "multi-scale",
+        "object detection",
+        "oriented object detection",
+        "remote sensing",
+        "robust",
+        "rotated object detection"
+      ],
+      "title_zh": "RMK RetinaNet：旋转多内核 RetinaNet，用于遥感图像中稳健的定向目标检测",
+      "summary_zh": "遥感图像中的旋转目标检测受到三个主要瓶颈的阻碍：非自适应感受野利用、远距离多尺度特征融合不足以及角度回归的不连续性。为了解决这些问题，我们提出了旋转多内核 RetinaNet（RMK RetinaNet）。首先，我们设计了一个多尺度内核（MSK）块来加强自适应多尺度特征提取。其次，我们将多方向上下文锚注意力（MDCAA）机制纳入特征金字塔中，以增强跨尺度和方向的上下文建模。第三，我们引入了自下而上的路径来保留在下采样过程中经常退化的细粒度空间细节。最后，我们开发了欧拉角编码模块（EAEM）来实现连续稳定的角度回归。在 DOTA-v1.0、HRSC2016 和 UCAS-AOD 上进行的大量实验表明，RMK RetinaNet 的性能可与最先进的旋转目标检测器相媲美，同时提高了多尺度和多方向场景中的鲁棒性。"
+    },
+    {
+      "title": "Breaking Contextual Inertia: Reinforcement Learning with Single-Turn Anchors for Stable Multi-Turn Interaction",
+      "authors": [
+        "Xingwu Chen",
+        "Zhanqiu Zhang",
+        "Yiwen Guo",
+        "Difan Zou"
+      ],
+      "summary": "While LLMs demonstrate strong reasoning capabilities when provided with full information in a single turn, they exhibit substantial vulnerability in multi-turn interactions. Specifically, when information is revealed incrementally or requires updates, models frequently fail to integrate new constraints, leading to a collapse in performance compared to their single-turn baselines. We term the root cause as \\emph{Contextual Inertia}: a phenomenon where models rigidly adhere to previous reasoning traces. Even when users explicitly provide corrections or new data in later turns, the model ignores them, preferring to maintain consistency with its previous (incorrect) reasoning path. To address this, we introduce \\textbf{R}einforcement \\textbf{L}earning with \\textbf{S}ingle-\\textbf{T}urn \\textbf{A}nchors (\\textbf{RLSTA}), a generalizable training approach designed to stabilize multi-turn interaction across diverse scenarios and domains. RLSTA leverages the model's superior single-turn capabilities as stable internal anchors to provide reward signals. By aligning multi-turn responses with these anchors, RLSTA empowers models to break contextual inertia and self-calibrate their reasoning based on the latest information. Experiments show that RLSTA significantly outperforms standard fine-tuning and abstention-based methods. Notably, our method exhibits strong cross-domain generalization (e.g., math to code) and proves effective even without external verifiers, highlighting its potential for general-domain applications.",
+      "published": "2026-03-05T04:04:59Z",
+      "updated": "2026-03-05T04:04:59Z",
+      "arxiv_id": "2603.04783v1",
+      "abs_url": "http://arxiv.org/abs/2603.04783v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.04783v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "小样本与域泛化",
+        "高效微调与轻量化"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 3,
+      "anchor_terms": [
+        "domain generalization"
+      ],
+      "matched_terms": [
+        "domain generalization",
+        "fine-tuning",
+        "generalizable"
+      ],
+      "title_zh": "打破上下文惯性：使用单轮锚点进行强化学习以实现稳定的多轮交互",
+      "summary_zh": "虽然法学硕士在单轮提供完整信息时表现出强大的推理能力，但它们在多轮交互中表现出巨大的弱点。具体来说，当信息逐渐揭示或需要更新时，模型经常无法集成新的约束，从而导致与单轮基线相比性能崩溃。我们将根本原因称为\\emph{上下文惯性}：模型严格遵循先前推理轨迹的现象。即使用户在以后的回合中明确提供更正或新数据，模型也会忽略它们，而是更愿意与之前（不正确的）推理路径保持一致。为了解决这个问题，我们引入了 \\textbf{R}einforcement \\textbf{L}earning with \\textbf{S}ingle-\\textbf{T}urn \\textbf{A}nchors (\\textbf{RLSTA})，这是一种通用的训练方法，旨在稳定跨不同场景和领域的多轮交互。 RLSTA 利用模型卓越的单转能力作为稳定的内部锚点来提供奖励信号。通过将多轮响应与这些锚点对齐，RLSTA 使模型能够打破上下文惯性并根据最新信息自我校准其推理。实验表明，RLSTA 显着优于标准微调和基于弃权的方法。值得注意的是，我们的方法表现出强大的跨域泛化能力（例如，从数学到代码），并且即使没有外部验证器也被证明是有效的，凸显了其在通用领域应用中的潜力。"
+    },
+    {
+      "title": "From Offline to Periodic Adaptation for Pose-Based Shoplifting Detection in Real-world Retail Security",
+      "authors": [
+        "Shanle Yao",
+        "Narges Rashvand",
+        "Armin Danesh Pazho",
+        "Hamed Tabkhi"
+      ],
+      "summary": "Shoplifting is a growing operational and economic challenge for retailers, with incidents rising and losses increasing despite extensive video surveillance. Continuous human monitoring is infeasible, motivating automated, privacy-preserving, and resource-aware detection solutions. In this paper, we cast shoplifting detection as a pose-based, unsupervised video anomaly detection problem and introduce a periodic adaptation framework designed for on-site Internet of Things (IoT) deployment. Our approach enables edge devices in smart retail environments to adapt from streaming, unlabeled data, supporting scalable and low-latency anomaly detection across distributed camera networks. To support reproducibility, we introduce RetailS, a new large-scale real-world shoplifting dataset collected from a retail store under multi-day, multi-camera conditions, capturing unbiased shoplifting behavior in realistic IoT settings. For deployable operation, thresholds are selected using both F1 and H_PRS scores, the harmonic mean of precision, recall, and specificity, during data filtering and training. In periodic adaptation experiments, our framework consistently outperformed offline baselines on AUC-ROC and AUC-PR in 91.6% of evaluations, with each training update completing in under 30 minutes on edge-grade hardware, demonstrating the feasibility and reliability of our solution for IoT-enabled smart retail deployment.",
+      "published": "2026-03-05T01:53:06Z",
+      "updated": "2026-03-05T01:53:06Z",
+      "arxiv_id": "2603.04723v1",
+      "abs_url": "http://arxiv.org/abs/2603.04723v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.04723v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 2,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "unsupervised"
+      ],
+      "title_zh": "现实零售安全中基于姿势的入店行窃检测从离线到定期适应",
+      "summary_zh": "商店行窃对零售商来说是一个日益严峻的运营和经济挑战，尽管有广泛的视频监控，但事件仍在增加，损失也在增加。持续的人工监控是不可行的，因此需要自动化、隐私保护和资源感知的检测解决方案。在本文中，我们将商店行窃检测视为基于姿势的无监督视频异常检测问题，并介绍了专为现场物联网（IoT）部署而设计的定期适应框架。我们的方法使智能零售环境中的边缘设备能够适应流式、未标记的数据，支持跨分布式摄像头网络的可扩展和低延迟异常检测。为了支持可重复性，我们引入了 RetailS，这是一个新的大规模现实世界入店行窃数据集，在多天、多摄像头条件下从零售商店收集，捕捉现实物联网环境中的公正入店行窃行为。对于可部署操作，在数据过滤和训练期间，使用 F1 和 H_PRS 分数（精度、召回率和特异性的调和平均值）来选择阈值。在定期适应实验中，我们的框架在 91.6% 的评估中始终优于 AUC-ROC 和 AUC-PR 的离线基线，每次训练更新在边缘级硬件上都在 30 分钟内完成，这证明了我们的物联网智能零售部署解决方案的可行性和可靠性。"
+    },
+    {
+      "title": "A Benchmark Study of Neural Network Compression Methods for Hyperspectral Image Classification",
+      "authors": [
+        "Sai Shi"
+      ],
+      "summary": "Deep neural networks have achieved strong performance in image classification tasks due to their ability to learn complex patterns from high-dimensional data. However, their large computational and memory requirements often limit deployment on resource-constrained platforms such as remote sensing devices and edge systems. Network compression techniques have therefore been proposed to reduce model size and computational cost while maintaining predictive performance. In this study, we conduct a systematic evaluation of neural network compression methods for a remote sensing application, namely hyperspectral land cover classification. Specifically, we examine three widely used compression strategies for convolutional neural networks: pruning, quantization, and knowledge distillation. Experiments are conducted on two benchmark hyperspectral datasets, considering classification accuracy, memory consumption, and inference efficiency. Our results demonstrate that compressed models can significantly reduce model size and computational cost while maintaining competitive classification performance. These findings provide insights into the trade-offs between compression ratio, efficiency, and accuracy, and highlight the potential of compression techniques for enabling efficient deep learning deployment in remote sensing applications.",
+      "published": "2026-03-05T01:48:30Z",
+      "updated": "2026-03-05T01:48:30Z",
+      "arxiv_id": "2603.04720v1",
+      "abs_url": "http://arxiv.org/abs/2603.04720v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.04720v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": "18 pages, 5 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "语义分割",
+        "场景分类",
+        "基础模型",
+        "高效微调与轻量化",
+        "高光谱/多光谱",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 15,
+      "anchor_terms": [
+        "hyperspectral image",
+        "land cover classification",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "convolutional neural network",
+        "hyperspectral",
+        "hyperspectral image",
+        "hyperspectral image classification",
+        "image classification",
+        "knowledge distillation",
+        "land cover",
+        "land cover classification",
+        "remote sensing"
+      ],
+      "title_zh": "高光谱图像分类神经网络压缩方法的基准研究",
+      "summary_zh": "深度神经网络由于能够从高维数据中学习复杂模式，因此在图像分类任务中取得了强大的性能。然而，它们的大量计算和内存要求通常限制在资源受限的平台（例如遥感设备和边缘系统）上的部署。因此，人们提出了网络压缩技术来减少模型大小和计算成本，同时保持预测性能。在本研究中，我们对遥感应用（即高光谱土地覆盖分类）的神经网络压缩方法进行了系统评估。具体来说，我们研究了卷积神经网络的三种广泛使用的压缩策略：剪枝、量化和知识蒸馏。在两个基准高光谱数据集上进行实验，考虑分类精度、内存消耗和推理效率。我们的结果表明，压缩模型可以显着减少模型大小和计算成本，同时保持有竞争力的分类性能。这些发现提供了对压缩比、效率和准确性之间权衡的见解，并强调了压缩技术在遥感应用中实现高效深度学习部署的潜力。"
+    }
+  ]
+}

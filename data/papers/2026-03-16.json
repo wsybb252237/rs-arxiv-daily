@@ -1,0 +1,1046 @@
+{
+  "date": "2026-03-16",
+  "generated_at": "2026-05-11T07:16:42.036383+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202603160000 TO 202603162359]",
+  "total_fetched": 503,
+  "total_matched": 23,
+  "papers": [
+    {
+      "title": "Real-Time Oriented Object Detection Transformer in Remote Sensing Images",
+      "authors": [
+        "Zeyu Ding",
+        "Yong Zhou",
+        "Jiaqi Zhao",
+        "Wen-Liang Du",
+        "Xixi Li",
+        "Rui Yao",
+        "Abdulmotaleb El Saddik"
+      ],
+      "summary": "Recent real-time detection transformers have gained popularity due to their simplicity and efficiency. However, these detectors do not explicitly model object rotation, especially in remote sensing imagery where objects appear at arbitrary angles, leading to challenges in angle representation, matching cost, and training stability. In this paper, we propose a real-time oriented object detection transformer, the first real-time end-to-end oriented object detector to the best of our knowledge, that addresses the above issues. Specifically, angle distribution refinement is proposed to reformulate angle regression as an iterative refinement of probability distributions, thereby capturing the uncertainty of object rotation and providing a more fine-grained angle representation. Then, we incorporate a Chamfer distance cost into bipartite matching, measuring box distance via vertex sets, enabling more accurate geometric alignment and eliminating ambiguous matches. Moreover, we propose oriented contrastive denoising to stabilize training and analyze four noise modes. We observe that a ground truth can be assigned to different index queries across different decoder layers, and analyze this issue using the proposed instability metric. We design a series of model variants and experiments to validate the proposed method. Notably, our O2-DFINE-L, O2-RTDETR-R50 and O2-DEIM-R50 achieve 77.73%/78.45%/80.15% AP50 on DOTA1.0 and 132/119/119 FPS on the 2080ti GPU. Code is available at https://github.com/wokaikaixinxin/ai4rs.",
+      "published": "2026-03-16T16:28:31Z",
+      "updated": "2026-03-16T16:28:31Z",
+      "arxiv_id": "2603.15497v1",
+      "abs_url": "http://arxiv.org/abs/2603.15497v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15497v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "IEEE Transactions on Geoscience and Remote Sensing, 2026, doi 10.1109/TGRS.2026.3671683",
+      "code_url": "https://github.com/wokaikaixinxin/ai4rs",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "目标检测",
+        "图像生成与重建",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 16,
+      "anchor_terms": [
+        "object detection",
+        "oriented object detection",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "denoising",
+        "DETR",
+        "DOTA",
+        "object detection",
+        "oriented object detection",
+        "remote sensing",
+        "transformer"
+      ],
+      "title_zh": "遥感图像中的实时定向目标检测变压器",
+      "summary_zh": "最近的实时检测变压器由于其简单性和效率而受到欢迎。然而，这些检测器没有明确地模拟对象旋转，特别是在对象以任意角度出现的遥感图像中，导致角度表示、匹配成本和训练稳定性方面的挑战。在本文中，我们提出了一种面向实时的对象检测转换器，这是据我们所知的第一个实时端到端的对象检测器，可以解决上述问题。具体来说，提出了角度分布细化，将角度回归重新表述为概率分布的迭代细化，从而捕获对象旋转的不确定性并提供更细粒度的角度表示。然后，我们将倒角距离成本纳入二分匹配中，通过顶点集测量框距离，从而实现更准确的几何对齐并消除模糊匹配。此外，我们提出了定向对比降噪来稳定训练并分析四种噪声模式。我们观察到，可以将基本事实分配给不同解码器层的不同索引查询，并使用所提出的不稳定性指标来分析这个问题。我们设计了一系列模型变体和实验来验证所提出的方法。值得注意的是，我们的 O2-DFINE-L、O2-RTDETR-R50 和 O2-DEIM-R50 在 DOTA1.0 上实现了 77.73%/78.45%/80.15% AP50，在 2080ti GPU 上实现了 132/119/119 FPS。代码可在 https://github.com/wokaikaixinxin/ai4rs 获取。"
+    },
+    {
+      "title": "RSGen: Enhancing Layout-Driven Remote Sensing Image Generation with Diverse Edge Guidance",
+      "authors": [
+        "Xianbao Hou",
+        "Yonghao He",
+        "Zeyd Boukhers",
+        "John See",
+        "Hu Su",
+        "Wei Sui",
+        "Cong Yang"
+      ],
+      "summary": "Diffusion models have significantly mitigated the impact of annotated data scarcity in remote sensing (RS). Although recent approaches have successfully harnessed these models to enable diverse and controllable Layout-to-Image (L2I) synthesis, they still suffer from limited fine-grained control and fail to strictly adhere to bounding box constraints. To address these limitations, we propose RSGen, a plug-and-play framework that leverages diverse edge guidance to enhance layout-driven RS image generation. Specifically, RSGen employs a progressive enhancement strategy: 1) it first enriches the diversity of edge maps composited from retrieved training instances via Image-to-Image generation; and 2) subsequently utilizes these diverse edge maps as conditioning for existing L2I models to enforce pixel-level control within bounding boxes, ensuring the generated instances strictly adhere to the layout. Extensive experiments across three baseline models demonstrate that RSGen significantly boosts the capabilities of existing L2I models. For instance, with CC-Diff on the DOTA dataset for oriented object detection, we achieve remarkable gains of +9.8/+12.0 in YOLOScore mAP50/mAP50-95 and +1.6 in mAP on the downstream detection task. Our code will be publicly available: https://github.com/D-Robotics-AI-Lab/RSGen",
+      "published": "2026-03-16T16:14:52Z",
+      "updated": "2026-03-17T07:32:14Z",
+      "arxiv_id": "2603.15484v2",
+      "abs_url": "http://arxiv.org/abs/2603.15484v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.15484v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/D-Robotics-AI-Lab/RSGen",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "目标检测",
+        "图像生成与重建",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 18,
+      "anchor_terms": [
+        "diffusion model",
+        "DOTA dataset",
+        "image generation",
+        "object detection",
+        "oriented object detection",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "diffusion model",
+        "DOTA",
+        "DOTA dataset",
+        "image generation",
+        "object detection",
+        "oriented object detection",
+        "remote sensing",
+        "remote sensing image generation",
+        "YOLO"
+      ],
+      "title_zh": "RSGen：通过多样化边缘引导增强布局驱动的遥感图像生成",
+      "summary_zh": "扩散模型显着减轻了遥感（RS）中注释数据稀缺的影响。尽管最近的方法已经成功地利用这些模型来实现多样化且可控的布局到图像（L2I）合成，但它们仍然受到有限的细粒度控制的影响，并且无法严格遵守边界框约束。为了解决这些限制，我们提出了 RSGen，这是一个即插即用的框架，它利用不同的边缘引导来增强布局驱动的 RS 图像生成。具体来说，RSGen 采用渐进增强策略：1）首先通过图像到图像生成丰富从检索到的训练实例合成的边缘图的多样性； 2) 随后利用这些不同的边缘图作为现有 L2I 模型的条件，以在边界框中强制执行像素级控制，确保生成的实例严格遵循布局。跨越三个基线模型的大量实验表明，RSGen 显着增强了现有 L2I 模型的功能。例如，利用 DOTA 数据集上的 CC-Diff 进行定向对象检测，我们在 YOLOScore mAP50/mAP50-95 中取得了 +9.8/+12.0 的显着增益，在下游检测任务中在 mAP 中取得了 +1.6 的显着增益。我们的代码将公开：https://github.com/D-Robotics-AI-Lab/RSGen"
+    },
+    {
+      "title": "Integrating Weather Foundation Model and Satellite to Enable Fine-Grained Solar Irradiance Forecasting",
+      "authors": [
+        "Ziqing Ma",
+        "Kai Ying",
+        "Xinyue Gu",
+        "Tian Zhou",
+        "Tianyu Zhu",
+        "Haifan Zhang",
+        "Peisong Niu",
+        "Zheng Wang",
+        "Cong Bai",
+        "Liang Sun"
+      ],
+      "summary": "Accurate day-ahead solar irradiance forecasting is essential for integrating solar energy into the power grid. However, it remains challenging due to the pronounced diurnal cycle and inherently complex cloud dynamics. Current methods either lack fine-scale resolution (e.g., numerical weather prediction, weather foundation models) or degrade at longer lead times (e.g., satellite extrapolation). We propose Baguan-solar, a two-stage multimodal framework that fuses forecasts from Baguan, a global weather foundation model, with high-resolution geostationary satellite imagery to produce 24-hour irradiance forecasts at kilometer scale. Its decoupled two-stage design first forecasts day-night continuous intermediates (e.g., cloud cover) and then infers irradiance, while its modality fusion jointly preserves fine-scale cloud structures from satellite and large-scale constraints from Baguan forecasts. Evaluated over East Asia using CLDAS as ground truth, Baguan-solar outperforms strong baselines (including ECMWF IFS, vanilla Baguan, and SolarSeer), reducing RMSE by 16.08% and better resolving cloud-induced transients. An operational deployment of Baguan-solar has supported solar power forecasting in an eastern province in China, since July 2025. Our code is accessible at https://github.com/DAMO-DI-ML/Baguan-solar.git.",
+      "published": "2026-03-16T05:44:56Z",
+      "updated": "2026-04-29T11:25:40Z",
+      "arxiv_id": "2603.14845v3",
+      "abs_url": "http://arxiv.org/abs/2603.14845v3",
+      "pdf_url": "https://arxiv.org/pdf/2603.14845v3",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/DAMO-DI-ML/Baguan-solar.git",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "基础模型",
+        "多模态融合"
+      ],
+      "topic": "基础模型",
+      "score": 5,
+      "anchor_terms": [
+        "foundation model",
+        "satellite image",
+        "satellite imagery"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "satellite",
+        "satellite image",
+        "satellite imagery"
+      ],
+      "title_zh": "集成天气基础模型和卫星以实现细粒度太阳辐照度预报",
+      "summary_zh": "准确的日前太阳辐照度预测对于将太阳能并入电网至关重要。然而，由于明显的昼夜周期和固有复杂的云动态，它仍然具有挑战性。当前的方法要么缺乏精细尺度的分辨率（例如数值天气预报、天气基础模型），要么在较长的交付时间内退化（例如卫星外推）。我们提出了 Baguan-solar，这是一个两阶段的多模式框架，它将全球天气基础模型 Baguan 的预报与高分辨率对地静止卫星图像相融合，以生成公里级的 24 小时辐照度预报。其解耦的两阶段设计首先预测昼夜连续中间体（例如云量），然后推断辐照度，而其模态融合共同保留来自卫星的精细尺度云结构和来自巴关预测的大规模约束。使用 CLDAS 作为地面实况对东亚进行评估，Baguan-solar 的性能优于强大的基线（包括 ECMWF IFS、vanilla Baguan 和 SolarSeer），将 RMSE 降低了 16.08%，并更好地解决了云引起的瞬态。自 2025 年 7 月以来，Baguan-solar 的运营部署已支持中国东部省份的太阳能预测。我们的代码可在 https://github.com/DAMO-DI-ML/Baguan-solar.git 访问。"
+    },
+    {
+      "title": "UMO: Unified In-Context Learning Unlocks Motion Foundation Model Priors",
+      "authors": [
+        "Xiaoyan Cong",
+        "Zekun Li",
+        "Zhiyang Dou",
+        "Hongyu Li",
+        "Omid Taheri",
+        "Chuan Guo",
+        "Abhay Mittal",
+        "Sizhe An",
+        "Taku Komura",
+        "Wojciech Matusik",
+        "Michael J. Black",
+        "Srinath Sridhar"
+      ],
+      "summary": "Large-scale foundation models (LFMs) have recently made impressive progress in text-to-motion generation by learning strong generative priors from massive 3D human motion datasets and paired text descriptions. However, how to effectively and efficiently leverage such single-purpose motion LFMs, i.e., text-to-motion synthesis, in more diverse cross-modal and in-context motion generation downstream tasks remains largely unclear. Prior work typically adapts pretrained generative priors to individual downstream tasks in a task-specific manner. In contrast, our goal is to unlock such priors to support a broad spectrum of downstream motion generation tasks within a single unified framework. To bridge this gap, we present UMO, a simple yet general unified formulation that casts diverse downstream tasks into compositions of atomic per-frame operations, enabling in-context adaptation to unlock the generative priors of pretrained DiT-based motion LFMs. Specifically, UMO introduces three learnable frame-level meta-operation embeddings to specify per-frame intent and employs lightweight temporal fusion to inject in-context cues into the pretrained backbone, with negligible runtime overhead compared to the base model. With this design, UMO finetunes the pretrained model, originally limited to text-to-motion generation, to support diverse previously unsupported tasks, including temporal inpainting, text-guided motion editing, text-serialized geometric constraints, and multi-identity reaction generation. Experiments demonstrate that UMO consistently outperforms task-specific and training-free baselines across a wide range of benchmarks, despite using a single unified model. Code and model will be publicly available. Project Page: https://oliver-cong02.github.io/UMO.github.io/",
+      "published": "2026-03-16T22:44:52Z",
+      "updated": "2026-03-16T22:44:52Z",
+      "arxiv_id": "2603.15975v1",
+      "abs_url": "http://arxiv.org/abs/2603.15975v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15975v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Project Page: https://oliver-cong02.github.io/UMO.github.io/",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 5,
+      "anchor_terms": [
+        "in-context learning"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "in-context learning"
+      ],
+      "title_zh": "UMO：统一的情境学习解锁运动基础模型先验",
+      "summary_zh": "大规模基础模型 (LFM) 最近通过从大量 3D 人体运动数据集和配对文本描述中学习强大的生成先验，在文本到运动生成方面取得了令人瞩目的进展。然而，如何在更多样化的跨模式和上下文运动生成下游任务中有效和高效地利用这种单一用途的运动 LFM（即文本到运动合成）仍然很不清楚。先前的工作通常以特定于任务的方式使预先训练的生成先验适应各个下游任务。相比之下，我们的目标是解锁此类先验，以在单个统一框架内支持广泛的下游运动生成任务。为了弥补这一差距，我们提出了 UMO，这是一种简单但通用的统一公式，它将不同的下游任务转化为原子每帧操作的组合，从而实现上下文适应以解锁基于 DiT 的预训练运动 LFM 的生成先验。具体来说，UMO 引入了三个可学习的帧级元操作嵌入来指定每帧意图，并采用轻量级时间融合将上下文线索注入到预训练的主干中，与基本模型相比，运行时开销可以忽略不计。通过这种设计，UMO 对最初仅限于文本到运动生成的预训练模型进行了微调，以支持以前不支持的各种任务，包括时间修复、文本引导运动编辑、文本序列化几何约束和多身份反应生成。实验表明，尽管使用单一统一模型，UMO 在各种基准测试中始终优于特定任务和免训练基线。代码和模型将公开。项目页面：https://oliver-cong02.github.io/UMO.github.io/"
+    },
+    {
+      "title": "OMNIFLOW: A Physics-Grounded Multimodal Agent for Generalized Scientific Reasoning",
+      "authors": [
+        "Hao Wu",
+        "Yongheng Zhang",
+        "Yuan Gao",
+        "Fan Xu",
+        "Fan Zhang",
+        "Ruobing Xie",
+        "Ruijian Gou",
+        "Yuxuan Liang",
+        "Xiaomeng Huang",
+        "Xian Wu"
+      ],
+      "summary": "Large Language Models (LLMs) have demonstrated exceptional logical reasoning capabilities but frequently struggle with the continuous spatiotemporal dynamics governed by Partial Differential Equations (PDEs), often resulting in non-physical hallucinations. Existing approaches typically resort to costly, domain-specific fine-tuning, which severely limits cross-domain generalization and interpretability. To bridge this gap, we propose OMNIFLOW, a neuro-symbolic architecture designed to ground frozen multimodal LLMs in fundamental physical laws without requiring domain-specific parameter updates. OMNIFLOW introduces a novel \\textit{Semantic-Symbolic Alignment} mechanism that projects high-dimensional flow tensors into topological linguistic descriptors, enabling the model to perceive physical structures rather than raw pixel values. Furthermore, we construct a Physics-Guided Chain-of-Thought (PG-CoT) workflow that orchestrates reasoning through dynamic constraint injection (e.g., mass conservation) and iterative reflexive verification. We evaluate OMNIFLOW on a comprehensive benchmark spanning microscopic turbulence, theoretical Navier-Stokes equations, and macroscopic global weather forecasting. Empirical results demonstrate that OMNIFLOW significantly outperforms traditional deep learning baselines in zero-shot generalization and few-shot adaptation tasks. Crucially, it offers transparent, physically consistent reasoning reports, marking a paradigm shift from black-box fitting to interpretable scientific reasoning.",
+      "published": "2026-03-16T18:29:01Z",
+      "updated": "2026-03-18T09:11:28Z",
+      "arxiv_id": "2603.15797v2",
+      "abs_url": "http://arxiv.org/abs/2603.15797v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.15797v2",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 4,
+      "anchor_terms": [
+        "domain generalization"
+      ],
+      "matched_terms": [
+        "domain generalization",
+        "fine-tuning",
+        "large language model",
+        "zero-shot"
+      ],
+      "title_zh": "OMNIFLOW：用于广义科学推理的基于物理的多模态代理",
+      "summary_zh": "大型语言模型 (LLM) 已表现出卓越的逻辑推理能力，但经常与偏微分方程 (PDE) 控制的连续时空动态作斗争，常常导致非物理幻觉。现有的方法通常诉诸于昂贵的、特定领域的微调，这严重限制了跨领域的泛化和可解释性。为了弥补这一差距，我们提出了 OMNIFLOW，这是一种神经符号架构，旨在将冻结的多模态 LLM 融入基本物理定律，而不需要特定领域的参数更新。 OMNIFLOW 引入了一种新颖的 \\textit{语义符号对齐} 机制，将高维流张量投影到拓扑语言描述符中，使模型能够感知物理结构而不是原始像素值。此外，我们构建了一个物理引导思想链（PG-CoT）工作流程，通过动态约束注入（例如质量守恒）和迭代自反验证来协调推理。我们根据涵盖微观湍流、理论纳维-斯托克斯方程和宏观全球天气预报的综合基准来评估 OMNIFLOW。实证结果表明，OMNIFLOW 在零样本泛化和少样本适应任务中显着优于传统深度学习基线。至关重要的是，它提供了透明的、物理上一致的推理报告，标志着从黑盒拟合到可解释的科学推理的范式转变。"
+    },
+    {
+      "title": "Fast SAM 3D Body: Accelerating SAM 3D Body for Real-Time Full-Body Human Mesh Recovery",
+      "authors": [
+        "Timing Yang",
+        "Sicheng He",
+        "Hongyi Jing",
+        "Jiawei Yang",
+        "Zhijian Liu",
+        "Chuhang Zou",
+        "Yue Wang"
+      ],
+      "summary": "SAM 3D Body (3DB) achieves state-of-the-art accuracy in monocular 3D human mesh recovery, yet its inference latency of several seconds per image precludes real-time application. We present Fast SAM 3D Body, a training-free acceleration framework that reformulates the 3DB inference pathway to achieve interactive rates. By decoupling serial spatial dependencies and applying architecture-aware pruning, we enable parallelized multi-crop feature extraction and streamlined transformer decoding. Moreover, to extract the joint-level kinematics (SMPL) compatible with existing humanoid control and policy learning frameworks, we replace the iterative mesh fitting with a direct feedforward mapping, accelerating this specific conversion by over 10,000x. Overall, our framework delivers up to a 10.9x end-to-end speedup while maintaining on-par reconstruction fidelity, even surpassing 3DB on benchmarks such as LSPET. We demonstrate its utility by deploying Fast SAM 3D Body in a vision-only teleoperation system that-unlike methods reliant on wearable IMUs-enables real-time humanoid control and the direct collection of manipulation policies from a single RGB stream.",
+      "published": "2026-03-16T17:54:40Z",
+      "updated": "2026-03-16T17:54:40Z",
+      "arxiv_id": "2603.15603v1",
+      "abs_url": "http://arxiv.org/abs/2603.15603v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15603v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "实例分割",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "实例分割",
+      "score": 4,
+      "anchor_terms": [
+        "crop"
+      ],
+      "matched_terms": [
+        "crop",
+        "SAM",
+        "transformer"
+      ],
+      "title_zh": "Fast SAM 3D Body：加速 SAM 3D Body，实现实时全身人体网格恢复",
+      "summary_zh": "SAM 3D Body (3DB) 在单眼 3D 人体网格恢复方面实现了最先进的精度，但其每张图像数秒的推理延迟阻碍了实时应用。我们推出 Fast SAM 3D Body，这是一种无需训练的加速框架，可重新制定 3DB 推理路径以实现交互率。通过解耦串行空间依赖性并应用架构感知修剪，我们实现了并行多作物特征提取和简化的转换器解码。此外，为了提取与现有人形控制和策略学习框架兼容的关节级运动学 (SMPL)，我们用直接前馈映射取代迭代网格拟合，将这种特定转换加速了 10,000 倍以上。总体而言，我们的框架提供了高达 10.9 倍的端到端加速，同时保持了同等的重建保真度，甚至在 LSPET 等基准测试中超过了 3DB。我们通过在纯视觉远程操作系统中部署 Fast SAM 3D Body 来展示其实用性，该系统与依赖可穿戴 IMU 的方法不同，可以实现实时人形控制并从单个 RGB 流直接收集操纵策略。"
+    },
+    {
+      "title": "Mamba-3: Improved Sequence Modeling using State Space Principles",
+      "authors": [
+        "Aakash Lahoti",
+        "Kevin Y. Li",
+        "Berlin Chen",
+        "Caitlin Wang",
+        "Aviv Bick",
+        "J. Zico Kolter",
+        "Tri Dao",
+        "Albert Gu"
+      ],
+      "summary": "Scaling inference-time compute has emerged as an important driver of LLM performance, making inference efficiency a central focus of model design alongside model quality. While the current Transformer-based models deliver strong model quality, their quadratic compute and linear memory make inference expensive. This has spurred the development of sub-quadratic models with reduced linear compute and constant memory requirements. However, many recent linear models trade off model quality and capability for algorithmic efficiency, failing on tasks such as state tracking. Moreover, their theoretically linear inference remains hardware-inefficient in practice. Guided by an inference-first perspective, we introduce three core methodological improvements inspired by the state space model (SSM) viewpoint of linear models. We combine: (1) a more expressive recurrence derived from SSM discretization, (2) a complex-valued state update rule that enables richer state tracking, and (3) a multi-input, multi-output (MIMO) formulation for better model performance without increasing decode latency. Together with architectural refinements, our Mamba-3 model achieves significant gains across retrieval, state-tracking, and downstream language modeling tasks. At the 1.5B scale, Mamba-3 improves average downstream accuracy by 0.6 percentage points compared to the next best model (Gated DeltaNet), with Mamba-3's MIMO variant further improving accuracy by another 1.2 points for a total 1.8 point gain. Across state-size experiments, Mamba-3 achieves comparable perplexity to Mamba-2 despite using half of its predecessor's state size. Our evaluations demonstrate Mamba-3's ability to advance the performance-efficiency Pareto frontier.",
+      "published": "2026-03-16T17:30:08Z",
+      "updated": "2026-03-16T17:30:08Z",
+      "arxiv_id": "2603.15569v1",
+      "abs_url": "http://arxiv.org/abs/2603.15569v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15569v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "ICLR 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 6,
+      "anchor_terms": [
+        "Mamba"
+      ],
+      "matched_terms": [
+        "LLM",
+        "Mamba",
+        "SSM",
+        "state space model",
+        "transformer"
+      ],
+      "title_zh": "Mamba-3：使用状态空间原理改进序列建模",
+      "summary_zh": "扩展推理时间计算已成为 LLM 性能的重要驱动因素，使推理效率与模型质量一起成为模型设计的核心焦点。虽然当前基于 Transformer 的模型提供了强大的模型质量，但其二次计算和线性内存使得推理成本高昂。这刺激了次二次模型的发展，减少了线性计算和恒定的内存需求。然而，许多最近的线性模型为了算法效率而牺牲了模型质量和能力，在状态跟踪等任务上失败了。此外，它们理论上的线性推理在实践中仍然是硬件效率低下的。在推理优先视角的指导下，我们引入了受线性模型状态空间模型（SSM）观点启发的三个核心方法改进。我们结合了：（1）从 SSM 离散化导出的更具表现力的递归，（2）可实现更丰富状态跟踪的复值状态更新规则，以及（3）多输入多输出（MIMO）公式，可在不增加解码延迟的情况下获得更好的模型性能。结合架构的改进，我们的 Mamba-3 模型在检索、状态跟踪和下游语言建模任务方面取得了显着的进步。在 1.5B 规模上，与次佳模型（Gated DeltaNet）相比，Mamba-3 将平均下游准确度提高了 0.6 个百分点，Mamba-3 的 MIMO 变体进一步将准确度再提高了 1.2 个百分点，总增益提高了 1.8 个百分点。在状态大小实验中，Mamba-3 实现了与 Mamba-2 相当的困惑度，尽管使用了其前身状态大小的一半。我们的评估证明了 Mamba-3 推进性能效率帕累托前沿的能力。"
+    },
+    {
+      "title": "A PPO-Based Bitrate Allocation Conditional Diffusion Model for Remote Sensing Image Compression",
+      "authors": [
+        "Yuming Han",
+        "Jooho Kim",
+        "Anish Shakya"
+      ],
+      "summary": "Existing remote sensing image compression methods still explore to balance high compression efficiency with the preservation of fine details and task-relevant information. Meanwhile, high-resolution drone imagery offers valuable structural details for urban monitoring and disaster assessment, but large-area datasets can easily reach hundreds of gigabytes, creating significant challenges for storage and long-term management. In this paper, we propose a PPO-based bitrate allocation Conditional Diffusion Compression (PCDC) framework. PCDC integrates a conditional diffusion decoder with a PPO-based block-wise bitrate allocation strategy to achieve high compression ratios while maintaining strong perceptual performance. We also release a high-resolution drone image dataset with richer structural details at a consistent low altitude over residential neighborhoods in coastal urban areas. Experimental results show compression ratios of 19.3x on DIV2K and 21.2x on the drone image dataset. Moreover, downstream object detection experiments demonstrate that the reconstructed images preserve task-relevant information with negligible performance loss.",
+      "published": "2026-03-16T14:40:48Z",
+      "updated": "2026-03-16T14:40:48Z",
+      "arxiv_id": "2603.15365v1",
+      "abs_url": "http://arxiv.org/abs/2603.15365v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15365v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "图像生成与重建",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 8,
+      "anchor_terms": [
+        "diffusion model",
+        "drone",
+        "object detection",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "diffusion model",
+        "drone",
+        "object detection",
+        "remote sensing"
+      ],
+      "title_zh": "基于PPO的遥感图像压缩比特率分配条件扩散模型",
+      "summary_zh": "现有的遥感图像压缩方法仍在探索如何在高压缩效率与保留精细细节和任务相关信息之间取得平衡。与此同时，高分辨率无人机图像为城市监测和灾害评估提供了有价值的结构细节，但大面积数据集很容易达到数百GB，给存储和长期管理带来了巨大挑战。在本文中，我们提出了一种基于 PPO 的比特率分配条件扩散压缩（PCCDC）框架。 PCCDC 将条件扩散解码器与基于 PPO 的分块比特率分配策略集成在一起，以实现高压缩比，同时保持强大的感知性能。我们还发布了沿海城市地区居民区上空一致低空的高分辨率无人机图像数据集，该数据集具有更丰富的结构细节。实验结果显示，DIV2K 上的压缩率为 19.3 倍，无人机图像数据集上的压缩率为 21.2 倍。此外，下游目标检测实验表明，重建图像保留了任务相关信息，性能损失可以忽略不计。"
+    },
+    {
+      "title": "CATFormer: When Continual Learning Meets Spiking Transformers With Dynamic Thresholds",
+      "authors": [
+        "Vaishnavi Nagabhushana",
+        "Kartikay Agrawal",
+        "Ayon Borthakur"
+      ],
+      "summary": "Although deep neural networks perform extremely well in controlled environments, they fail in real-world scenarios where data isn't available all at once, and the model must adapt to a new data distribution that may or may not follow the initial distribution. Previously acquired knowledge is lost during subsequent updates based on new data. a phenomenon commonly known as catastrophic forgetting. In contrast, the brain can learn without such catastrophic forgetting, irrespective of the number of tasks it encounters. Existing spiking neural networks (SNNs) for class-incremental learning (CIL) suffer a sharp performance drop as tasks accumulate. We here introduce CATFormer (Context Adaptive Threshold Transformer), a scalable framework that overcomes this limitation. We observe that the key to preventing forgetting in SNNs lies not only in synaptic plasticity but also in modulating neuronal excitability. At the core of CATFormer is the Dynamic Threshold Leaky Integrate-and-Fire (DTLIF) neuron model, which leverages context-adaptive thresholds as the primary mechanism for knowledge retention. This is paired with a Gated Dynamic Head Selection (G-DHS) mechanism for task-agnostic inference. Extensive evaluation on both static (CIFAR-10/100/Tiny-ImageNet) and neuromorphic (CIFAR10-DVS/SHD) datasets reveals that CATFormer outperforms existing rehearsal-free CIL algorithms across various task splits, establishing it as an ideal architecture for energy-efficient, true-class incremental learning.",
+      "published": "2026-03-16T12:20:23Z",
+      "updated": "2026-03-16T12:20:23Z",
+      "arxiv_id": "2603.15184v1",
+      "abs_url": "http://arxiv.org/abs/2603.15184v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15184v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.NE",
+        "eess.IV"
+      ],
+      "comment": "Accepted for publication in the proceedings of the Neuro for AI & AI for Neuro Workshop at AAAI 2026 (PMLR)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 9,
+      "anchor_terms": [
+        "continual learning"
+      ],
+      "matched_terms": [
+        "catastrophic forgetting",
+        "class-incremental",
+        "continual learning",
+        "incremental learning",
+        "transformer"
+      ],
+      "title_zh": "CATFormer：当持续学习遇到具有动态阈值的尖峰变压器时",
+      "summary_zh": "尽管深度神经网络在受控环境中表现得非常好，但它们在现实场景中会失败，因为数据无法一次性全部可用，并且模型必须适应可能遵循也可能不遵循初始分布的新数据分布。先前获得的知识在基于新数据的后续更新期间会丢失。这种现象通常被称为灾难性遗忘。相比之下，无论大脑遇到多少任务，大脑都可以在没有这种灾难性遗忘的情况下进行学习。随着任务的积累，现有的用于类增量学习 (CIL) 的尖峰神经网络 (SNN) 的性能会急剧下降。我们在此介绍 CATFormer（上下文自适应阈值转换器），这是一个克服此限制的可扩展框架。我们观察到，SNN 中防止遗忘的关键不仅在于突触可塑性，还在于调节神经元兴奋性。 CATFormer 的核心是动态阈值泄漏集成激发 (DTLIF) 神经元模型，该模型利用上下文自适应阈值作为知识保留的主要机制。它与门控动态头选择 (G-DHS) 机制配对，用于与任务无关的推理。对静态 (CIFAR-10/100/Tiny-ImageNet) 和神经形态 (CIFAR10-DVS/SHD) 数据集的广泛评估表明，CATFormer 在各种任务分割上均优于现有的免排演 CIL 算法，使其成为节能、真正一流增量学习的理想架构。"
+    },
+    {
+      "title": "SNCE: Geometry-Aware Supervision for Scalable Discrete Image Generation",
+      "authors": [
+        "Shufan Li",
+        "Jiuxiang Gu",
+        "Kangning Liu",
+        "Zhe Lin",
+        "Aditya Grover",
+        "Jason Kuen"
+      ],
+      "summary": "Recent advancements in discrete image generation showed that scaling the VQ codebook size significantly improves reconstruction fidelity. However, training generative models with a large VQ codebook remains challenging, typically requiring larger model size and a longer training schedule. In this work, we propose Stochastic Neighbor Cross Entropy Minimization (SNCE), a novel training objective designed to address the optimization challenges of large-codebook discrete image generators. Instead of supervising the model with a hard one-hot target, SNCE constructs a soft categorical distribution over a set of neighboring tokens. The probability assigned to each token is proportional to the proximity between its code embedding and the ground-truth image embedding, encouraging the model to capture semantically meaningful geometric structure in the quantized embedding space. We conduct extensive experiments across class-conditional ImageNet-256 generation, large-scale text-to-image synthesis, and image editing tasks. Results show that SNCE significantly improves convergence speed and overall generation quality compared to standard cross-entropy objectives.",
+      "published": "2026-03-16T11:44:11Z",
+      "updated": "2026-03-16T11:44:11Z",
+      "arxiv_id": "2603.15150v1",
+      "abs_url": "http://arxiv.org/abs/2603.15150v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15150v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "21 pages, 4 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建"
+      ],
+      "topic": "图像生成与重建",
+      "score": 3,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "image generation"
+      ],
+      "title_zh": "SNCE：用于可扩展离散图像生成的几何感知监督",
+      "summary_zh": "离散图像生成的最新进展表明，缩放 VQ 码本大小可显着提高重建保真度。然而，使用大型 VQ 码本训练生成模型仍然具有挑战性，通常需要更大的模型大小和更长的训练计划。在这项工作中，我们提出了随机邻域交叉熵最小化（SNCE），这是一种新颖的训练目标，旨在解决大型码本离散图像生成器的优化挑战。 SNCE 不是用硬性单热目标来监督模型，而是在一组相邻标记上构建软分类分布。分配给每个标记的概率与其代码嵌入和真实图像嵌入之间的接近程度成正比，从而鼓励模型在量化嵌入空间中捕获语义上有意义的几何结构。我们在类条件 ImageNet-256 生成、大规模文本到图像合成和图像编辑任务方面进行了广泛的实验。结果表明，与标准交叉熵目标相比，SNCE 显着提高了收敛速度和整体生成质量。"
+    },
+    {
+      "title": "A Novel Camera-to-Robot Calibration Method for Vision-Based Floor Measurements",
+      "authors": [
+        "Jan Andre Rudolph",
+        "Dennis Haitz",
+        "Markus Ulrich"
+      ],
+      "summary": "A novel hand-eye calibration method for ground-observing mobile robots is proposed. While cameras on mobile robots are common, they are rarely used for ground-observing measurement tasks. Laser trackers are increasingly used in robotics for precise localization. A referencing plate is designed to combine the two measurement modalities of laser-tracker 3D metrology and camera-based 2D imaging. It incorporates reflector nests for pose acquisition using a laser tracker and a camera calibration target that is observed by the robot-mounted camera. The procedure comprises estimating the plate pose, the plate-camera pose, and the robot pose, followed by computing the robot-camera transformation. Experiments indicate sub-millimeter repeatability.",
+      "published": "2026-03-16T11:22:44Z",
+      "updated": "2026-03-31T07:57:32Z",
+      "arxiv_id": "2603.15126v2",
+      "abs_url": "http://arxiv.org/abs/2603.15126v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.15126v2",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "comment": "8 pages; accepted for publication in the ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 4,
+      "anchor_terms": [
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "photogrammetry",
+        "remote sensing"
+      ],
+      "title_zh": "用于基于视觉的地板测量的新型相机到机器人校准方法",
+      "summary_zh": "提出了一种新颖的地面观测移动机器人手眼标定方法。虽然移动机器人上的摄像头很常见，但它们很少用于地面观测测量任务。激光跟踪器越来越多地用于机器人技术中以实现精确定位。参考板旨在结合激光跟踪仪 3D 计量和基于相机的 2D 成像这两种测量模式。它包含使用激光跟踪器进行姿态采集的反射器巢和由机器人安装的相机观察的相机校准目标。该过程包括估计板位姿、板相机位姿和机器人位姿，然后计算机器人相机变换。实验表明具有亚毫米级的重复性。"
+    },
+    {
+      "title": "A Tutorial on ALOS2 SAR Utilization: Dataset Preparation, Self-Supervised Pretraining, and Semantic Segmentation",
+      "authors": [
+        "Nevrez Imamoglu",
+        "Ali Caglayan",
+        "Toru Kouyama"
+      ],
+      "summary": "Masked auto-encoders (MAE) and related approaches have shown promise for satellite imagery, but their application to synthetic aperture radar (SAR) remains limited due to challenges in semantic labeling and high noise levels. Building on our prior work with SAR-W-MixMAE, which adds SAR-specific intensity-weighted loss to standard MixMAE for pretraining, we also introduce SAR-W-SimMIM; a weighted variant of SimMIM applied to ALOS-2 single-channel SAR imagery. This method aims to reduce the impact of speckle and extreme intensity values during self-supervised pretraining. We evaluate its effect on semantic segmentation compared to our previous trial with SAR-W-MixMAE and random initialization, observing notable improvements. In addition, pretraining and fine-tuning models on satellite imagery pose unique challenges, particularly when developing region-specific models. Imbalanced land cover distributions such as dominant water, forest, or desert areas can introduce bias, affecting both pretraining and downstream tasks like land cover segmentation. To address this, we constructed a SAR dataset using ALOS-2 single-channel (HH polarization) imagery focused on the Japan region, marking the initial phase toward a national-scale foundation model. This dataset was used to pretrain a vision transformer-based autoencoder, with the resulting encoder fine-tuned for semantic segmentation using a task-specific decoder. Initial results demonstrate significant performance improvements compared to training from scratch with random initialization. In summary, this work provides a guide to process and prepare ALOS2 observations to create dataset so that it can be taken advantage of self-supervised pretraining of models and finetuning downstream tasks such as semantic segmentation.",
+      "published": "2026-03-16T11:16:03Z",
+      "updated": "2026-03-18T04:23:38Z",
+      "arxiv_id": "2603.15119v2",
+      "abs_url": "http://arxiv.org/abs/2603.15119v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.15119v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "10 pages, 8 figures, 1 Table",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "语义分割",
+        "基础模型",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "SAR遥感",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 16,
+      "anchor_terms": [
+        "foundation model",
+        "land cover segmentation",
+        "SAR",
+        "SAR image",
+        "SAR imagery",
+        "satellite image",
+        "satellite imagery",
+        "semantic segmentation",
+        "synthetic aperture radar",
+        "vision transformer"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "foundation model",
+        "land cover",
+        "land cover segmentation",
+        "MAE",
+        "SAR",
+        "SAR image",
+        "SAR imagery",
+        "satellite",
+        "satellite image",
+        "satellite imagery",
+        "self-supervised"
+      ],
+      "title_zh": "ALOS2 SAR 使用教程：数据集准备、自监督预训练和语义分割",
+      "summary_zh": "掩码自动编码器 (MAE) 和相关方法在卫星图像方面显示出了前景，但由于语义标记和高噪声水平方面的挑战，它们在合成孔径雷达 (SAR) 中的应用仍然受到限制。基于我们之前与 SAR-W-MixMAE 的合作，将 SAR 特定的强度加权损失添加到标准 MixMAE 中进行预训练，我们还引入了 SAR-W-SimMIM；应用于 ALOS-2 单通道 SAR 图像的 SimMIM 加权变体。该方法旨在减少自监督预训练期间散斑和极端强度值的影响。与之前使用 SAR-W-MixMAE 和随机初始化的试验相比，我们评估了它对语义分割的影响，观察到显着的改进。此外，卫星图像的预训练和微调模型带来了独特的挑战，特别是在开发特定区域的模型时。不平衡的土地覆盖分布（例如主要水域、森林或沙漠地区）可能会引入偏差，影响预训练和土地覆盖分割等下游任务。为了解决这个问题，我们使用专注于日本地区的 ALOS-2 单通道（HH 偏振）图像构建了 SAR 数据集，标志着国家规模基础模型的初始阶段。该数据集用于预训练基于视觉变换器的自动编码器，并使用特定于任务的解码器对生成的编码器进行微调以进行语义分割。初步结果表明，与使用随机初始化从头开始训练相比，性能显着提高。总之，这项工作提供了处理和准备 ALOS2 观察结果以创建数据集的指南，以便可以利用模型的自监督预训练和微调语义分割等下游任务。"
+    },
+    {
+      "title": "PAKAN: Pixel Adaptive Kolmogorov-Arnold Network Modules for Pansharpening",
+      "authors": [
+        "Haoyu Zhang",
+        "Haojing Chen",
+        "Zhen Zhong",
+        "Liangjian Deng"
+      ],
+      "summary": "Pansharpening aims to fuse high-resolution spatial details from panchromatic images with the rich spectral information of multispectral images. Existing deep neural networks for this task typically rely on static activation functions, which limit their ability to dynamically model the complex, non-linear mappings required for optimal spatial-spectral fusion. While the recently introduced Kolmogorov-Arnold Network (KAN) utilizes learnable activation functions, traditional KANs lack dynamic adaptability during inference. To address this limitation, we propose a Pixel Adaptive Kolmogorov-Arnold Network framework. Starting from KAN, we design two adaptive variants: a 2D Adaptive KAN that generates spline summation weights across spatial dimensions and a 1D Adaptive KAN that generates them across spectral channels. These two components are then assembled into PAKAN 2to1 for feature fusion and PAKAN 1to1 for feature refinement. Extensive experiments demonstrate that our proposed modules significantly enhance network performance, proving the effectiveness and superiority of pixel-adaptive activation in pansharpening tasks.",
+      "published": "2026-03-16T11:05:57Z",
+      "updated": "2026-03-16T11:05:57Z",
+      "arxiv_id": "2603.15109v1",
+      "abs_url": "http://arxiv.org/abs/2603.15109v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15109v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "16 pages,5 figures,4 tables",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "多模态融合",
+        "光学遥感",
+        "高光谱/多光谱"
+      ],
+      "topic": "图像生成与重建",
+      "score": 11,
+      "anchor_terms": [
+        "multispectral image"
+      ],
+      "matched_terms": [
+        "feature fusion",
+        "multispectral",
+        "multispectral image",
+        "panchromatic",
+        "pansharpening"
+      ],
+      "title_zh": "PAKAN：用于全色锐化的像素自适应 Kolmogorov-Arnold 网络模块",
+      "summary_zh": "全色锐化旨在将全色图像的高分辨率空间细节与多光谱图像的丰富光谱信息融合。用于此任务的现有深度神经网络通常依赖于静态激活函数，这限制了它们对最佳空间光谱融合所需的复杂非线性映射进行动态建模的能力。虽然最近推出的柯尔莫哥洛夫-阿诺德网络（KAN）利用可学习的激活函数，但传统的 KAN 在推理过程中缺乏动态适应性。为了解决这个限制，我们提出了像素自适应柯尔莫哥洛夫-阿诺德网络框架。从 KAN 开始，我们设计了两种自适应变体：跨空间维度生成样条求和权重的 2D 自适应 KAN 和跨光谱通道生成样条求和权重的 1D 自适应 KAN。然后将这两个组件组装成 PAKAN 2to1 以进行特征融合，并组装成 PAKAN 1to1 以进行特征细化。大量的实验表明，我们提出的模块显着增强了网络性能，证明了像素自适应激活在全色锐化任务中的有效性和优越性。"
+    },
+    {
+      "title": "Reference-Free Omnidirectional Stereo Matching via Multi-View Consistency Maximization",
+      "authors": [
+        "Lehuai Xu",
+        "Weiming Zhang",
+        "Yang Li",
+        "Sidan Du",
+        "Lin Wang"
+      ],
+      "summary": "Reliable omnidirectional depth estimation from multi-fisheye stereo matching is pivotal to many applications, such as embodied robotics. Existing approaches either rely on spherical sweeping with heuristic fusion strategies to build the cost columns or perform reference-centric stereo matching based on rectified views. However, these methods fail to explicitly exploit geometric relationships between multiple views, rendering them less capable of capturing the global dependencies, visibility, or scale changes. In this paper, we shift to a new perspective and propose a novel reference-free framework, dubbed FreeOmniMVS, via multi-view consistency maximization. The highlight of FreeOmniMVS is that it can aggregate pair-wise correlations into a robust, visibility-aware, and global consensus. As such, it is tolerant to occlusions, partial overlaps, and varying baselines. Specifically, to achieve global coherence, we introduce a novel View-pair Correlation Transformer (VCT) that explicitly models pairwise correlation volumes across all camera view pairs, allowing us to drop unreliable pairs caused by occlusion or out-of-focus observations. To realize scalable and visibility-aware consensus, we propose a lightweight attention mechanism that adaptively fuses the correlation vectors, eliminating the need for a designated reference view and allowing all cameras to contribute equally to the stereo matching process. Extensive experiments on diverse benchmark datasets demonstrate the superiority of our method for globally consistent, visibility-aware, and scale-aware omnidirectional depth estimation.",
+      "published": "2026-03-16T09:23:23Z",
+      "updated": "2026-03-16T09:23:23Z",
+      "arxiv_id": "2603.15019v1",
+      "abs_url": "http://arxiv.org/abs/2603.15019v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15019v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "8 pages, 5 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "LiDAR/点云",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 4,
+      "anchor_terms": [
+        "depth estimation"
+      ],
+      "matched_terms": [
+        "attention mechanism",
+        "depth estimation",
+        "robust",
+        "transformer"
+      ],
+      "title_zh": "通过多视图一致性最大化实现无参考全向立体匹配",
+      "summary_zh": "通过多鱼眼立体匹配进行可靠的全向深度估计对于许多应用（例如实体机器人）至关重要。现有方法要么依赖于具有启发式融合策略的球形扫描来构建成本列，要么基于校正视图执行以参考为中心的立体匹配。然而，这些方法无法显式地利用多个视图之间的几何关系，导致它们无法捕获全局依赖性、可见性或比例变化。在本文中，我们转向一个新的视角，并通过多视图一致性最大化提出了一种新颖的无参考框架，称为 FreeOmniMVS。 FreeOmniMVS 的亮点在于它可以将成对相关性聚合成强大的、可见性感知的全局共识。因此，它可以容忍遮挡、部分重叠和变化的基线。具体来说，为了实现全局一致性，我们引入了一种新颖的视图对相关变换器（VCT），它可以对所有摄像机视图对之间的成对相关量进行显式建模，从而使我们能够丢弃由遮挡或失焦观察引起的不可靠对。为了实现可扩展和可见性感知的共识，我们提出了一种轻量级的注意力机制，该机制自适应地融合相关向量，消除了对指定参考视图的需要，并允许所有相机对立体匹配过程做出同等的贡献。对不同基准数据集的广泛实验证明了我们的方法在全局一致、可见性感知和尺度感知的全向深度估计方面的优越性。"
+    },
+    {
+      "title": "TrajFlow: Nation-wide Pseudo GPS Trajectory Generation with Flow Matching Models",
+      "authors": [
+        "Peiran Li",
+        "Jiawei Wang",
+        "Haoran Zhang",
+        "Xiaodan Shi",
+        "Noboru Koshizuka",
+        "Chihiro Shimizu",
+        "Renhe Jiang"
+      ],
+      "summary": "The importance of mobile phone GPS trajectory data is widely recognized across many fields, yet the use of real data is often hindered by privacy concerns, limited accessibility, and high acquisition costs. As a result, generating pseudo-GPS trajectory data has become an active area of research. Recent diffusion-based approaches have achieved strong fidelity but remain limited in spatial scale (small urban areas), transportation-mode diversity, and efficiency (requiring numerous sampling steps). To address these challenges, we introduce TrajFlow, which to the best of our knowledge is the first flow-matching-based generative model for GPS trajectory generation. TrajFlow leverages the flow-matching paradigm to improve robustness and efficiency across multiple geospatial scales, and incorporates a trajectory harmonization and reconstruction strategy to jointly address scalability, diversity, and efficiency. Using a nationwide mobile phone GPS dataset with millions of trajectories across Japan, we show that TrajFlow or its variants consistently outperform diffusion-based and deep generative baselines at urban, metropolitan, and nationwide levels. As the first nationwide, multi-scale GPS trajectory generation model, TrajFlow demonstrates strong potential to support inter-region urban planning, traffic management, and disaster response, thereby advancing the resilience and intelligence of future mobility systems.",
+      "published": "2026-03-16T09:15:13Z",
+      "updated": "2026-03-16T09:15:13Z",
+      "arxiv_id": "2603.15009v1",
+      "abs_url": "http://arxiv.org/abs/2603.15009v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15009v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "灾害与应急监测",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 4,
+      "anchor_terms": [
+        "geospatial"
+      ],
+      "matched_terms": [
+        "geospatial",
+        "multi-scale",
+        "robust"
+      ],
+      "title_zh": "TrajFlow：利用流量匹配模型生成全国范围的伪 GPS 轨迹",
+      "summary_zh": "手机GPS轨迹数据的重要性在许多领域得到广泛认可，但真实数据的使用往往受到隐私问题、访问受限和获取成本高昂的阻碍。因此，生成伪 GPS 轨迹数据已成为一个活跃的研究领域。最近基于扩散的方法已经实现了很强的保真度，但在空间规模（小城市地区）、交通方式多样性和效率（需要大量采样步骤）方面仍然有限。为了应对这些挑战，我们引入了 TrajFlow，据我们所知，它是第一个基于流匹配的 GPS 轨迹生成模型。 TrajFlow 利用流匹配范例来提高跨多个地理空间尺度的鲁棒性和效率，并结合轨迹协调和重建策略来共同解决可扩展性、多样性和效率问题。使用包含日本数百万条轨迹的全国手机 GPS 数据集，我们表明 TrajFlow 或其变体在城市、大都市和全国层面始终优于基于扩散的深度生成基线。作为首个全国性多尺度 GPS 轨迹生成模型，TrajFlow 在支持跨区域城市规划、交通管理和灾难响应方面展现出强大的潜力，从而提高未来移动系统的弹性和智能性。"
+    },
+    {
+      "title": "Edit2Interp: Adapting Image Foundation Models from Spatial Editing to Video Frame Interpolation with Few-Shot Learning",
+      "authors": [
+        "Nasrin Rahimi",
+        "Mısra Yavuz",
+        "Burak Can Biner",
+        "Yunus Bilge Kurt",
+        "Ahmet Rasim Emirdağı",
+        "Süleyman Aslan",
+        "Görkay Aydemir",
+        "M. Akın Yılmaz",
+        "A. Murat Tekalp"
+      ],
+      "summary": "Pre-trained image editing models exhibit strong spatial reasoning and object-aware transformation capabilities acquired from billions of image-text pairs, yet they possess no explicit temporal modeling. This paper demonstrates that these spatial priors can be repurposed to unlock temporal synthesis capabilities through minimal adaptation - without introducing any video-specific architecture or motion estimation modules. We show that a large image editing model (Qwen-Image-Edit), originally designed solely for static instruction-based edits, can be adapted for Video Frame Interpolation (VFI) using only 64-256 training samples via Low-Rank Adaptation (LoRA). Our core contribution is revealing that the model's inherent understanding of \"how objects transform\" in static scenes contains latent temporal reasoning that can be activated through few-shot fine-tuning. While the baseline model completely fails at producing coherent intermediate frames, our parameter-efficient adaptation successfully unlocks its interpolation capability. Rather than competing with task-specific VFI methods trained from scratch on massive datasets, our work establishes that foundation image editing models possess untapped potential for temporal tasks, offering a data-efficient pathway for video synthesis in resource-constrained scenarios. This bridges the gap between image manipulation and video understanding, suggesting that spatial and temporal reasoning may be more intertwined in foundation models than previously recognized",
+      "published": "2026-03-16T09:07:25Z",
+      "updated": "2026-03-16T09:07:25Z",
+      "arxiv_id": "2603.15003v1",
+      "abs_url": "http://arxiv.org/abs/2603.15003v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.15003v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像描述与视觉推理",
+        "时间序列与视频",
+        "基础模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "图像描述与视觉推理",
+      "score": 8,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "few-shot learning",
+        "fine-tuning",
+        "foundation model",
+        "LoRA",
+        "spatial reasoning"
+      ],
+      "title_zh": "Edit2Interp：通过少镜头学习将图像基础模型从空间编辑调整为视频帧插值",
+      "summary_zh": "预训练的图像编辑模型表现出从数十亿图像文本对中获得的强大的空间推理和对象感知转换能力，但它们不具有明确的时间建模。本文证明，这些空间先验可以通过最小的适应重新调整用途，以解锁时间合成功能，而无需引入任何视频特定的架构或运动估计模块。我们展示了最初专为基于静态指令的编辑而设计的大型图像编辑模型 (Qwen-Image-Edit)，可以通过低秩适应 (LoRA) 仅使用 64-256 个训练样本来适应视频帧插值 (VFI)。我们的核心贡献是揭示了模型对静态场景中“对象如何变换”的固有理解包含潜在的时间推理，可以通过几次微调来激活。虽然基线模型完全无法产生连贯的中间帧，但我们的参数高效适应成功地释放了其插值能力。我们的工作不是与在海量数据集上从头开始训练的特定任务 VFI 方法竞争，而是确定基础图像编辑模型在时间任务方面拥有未开发的潜力，为资源受限场景中的视频合成提供了一条数据高效的途径。这弥合了图像处理和视频理解之间的差距，表明空间和时间推理在基础模型中可能比以前认识到的更加交织在一起"
+    },
+    {
+      "title": "Thermal Image Refinement with Depth Estimation using Recurrent Networks for Monocular ORB-SLAM3",
+      "authors": [
+        "Hürkan Şahin",
+        "Huy Xuan Pham",
+        "Van Huyen Dang",
+        "Alper Yegenoglu",
+        "Erdal Kayacan"
+      ],
+      "summary": "Autonomous navigation in GPS-denied and visually degraded environments remains challenging for unmanned aerial vehicles (UAVs). To this end, we investigate the use of a monocular thermal camera as a standalone sensor on a UAV platform for real-time depth estimation and simultaneous localization and mapping (SLAM). To extract depth information from thermal images, we propose a novel pipeline employing a lightweight supervised network with recurrent blocks (RBs) integrated to capture temporal dependencies, enabling more robust predictions. The network combines lightweight convolutional backbones with a thermal refinement network (T-RefNet) to refine raw thermal inputs and enhance feature visibility. The refined thermal images and predicted depth maps are integrated into ORB-SLAM3, enabling thermal-only localization. Unlike previous methods, the network is trained on a custom non-radiometric dataset, obviating the need for high-cost radiometric thermal cameras. Experimental results on datasets and UAV flights demonstrate competitive depth accuracy and robust SLAM performance under low-light conditions. On the radiometric VIVID++ (indoor-dark) dataset, our method achieves an absolute relative error of approximately 0.06, compared to baselines exceeding 0.11. In our non-radiometric indoor set, baseline errors remain above 0.24, whereas our approach remains below 0.10. Thermal-only ORB-SLAM3 maintains a mean trajectory error under 0.4 m.",
+      "published": "2026-03-16T09:02:57Z",
+      "updated": "2026-03-16T09:02:57Z",
+      "arxiv_id": "2603.14998v1",
+      "abs_url": "http://arxiv.org/abs/2603.14998v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.14998v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "comment": "8 pages, 8 figures, 2 table",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "LiDAR/点云",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 6,
+      "anchor_terms": [
+        "depth estimation",
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "depth estimation",
+        "robust",
+        "UAV",
+        "unmanned aerial vehicle"
+      ],
+      "title_zh": "使用单目 ORB-SLAM3 循环网络进行热图像细化和深度估计",
+      "summary_zh": "对于无人机 (UAV) 而言，在无法使用 GPS 和视觉效果较差的环境中进行自主导航仍然是一项挑战。为此，我们研究了在无人机平台上使用单目热像仪作为独立传感器进行实时深度估计以及同时定位和建图（SLAM）。为了从热图像中提取深度信息，我们提出了一种新颖的管道，采用轻量级监督网络，集成循环块（RB）以捕获时间依赖性，从而实现更稳健的预测。该网络将轻量级卷积主干与热细化网络 (T-RefNet) 相结合，以细化原始热输入并增强特征可见性。精细的热图像和预测的深度图被集成到 ORB-SLAM3 中，从而实现仅热定位。与以前的方法不同，该网络是在自定义非辐射数据集上进行训练的，从而无需使用高成本的辐射热像仪。数据集和无人机飞行的实验结果证明了低光条件下具有竞争力的深度精度和强大的 SLAM 性能。在辐射 VIVID++（室内黑暗）数据集上，我们的方法实现了约 0.06 的绝对相对误差，而基线超过 0.11。在我们的非辐射室内设置中，基线误差保持在 0.24 以上，而我们的方法保持在 0.10 以下。仅热 ORB-SLAM3 将平均轨迹误差保持在 0.4 m 以下。"
+    },
+    {
+      "title": "Pansharpening for Thin-Cloud Contaminated Remote Sensing Images: A Unified Framework and Benchmark Dataset",
+      "authors": [
+        "Songcheng Du",
+        "Yang Zou",
+        "Jiaxin Li",
+        "Mingxuan Liu",
+        "Ying Li",
+        "Changjing Shang",
+        "Qiang Shen"
+      ],
+      "summary": "Pansharpening under thin cloudy conditions is a practically significant yet rarely addressed task, challenged by simultaneous spatial resolution degradation and cloud-induced spectral distortions. Existing methods often address cloud removal and pansharpening sequentially, leading to cumulative errors and suboptimal performance due to the lack of joint degradation modeling. To address these challenges, we propose a Unified Pansharpening Model with Thin Cloud Removal (Pan-TCR), an end-to-end framework that integrates physical priors. Motivated by theoretical analysis in the frequency domain, we design a frequency-decoupled restoration (FDR) block that disentangles the restoration of multispectral image (MSI) features into amplitude and phase components, each guided by complementary degradation-robust prompts: the near-infrared (NIR) band amplitude for cloud-resilient restoration, and the panchromatic (PAN) phase for high-resolution structural enhancement. To ensure coherence between the two components, we further introduce an interactive inter-frequency consistency (IFC) module, enabling cross-modal refinement that enforces consistency and robustness across frequency cues. Furthermore, we introduce the first real-world thin-cloud contaminated pansharpening dataset (PanTCR-GF2), comprising paired clean and cloudy PAN-MSI images, to enable robust benchmarking under realistic conditions. Extensive experiments on real-world and synthetic datasets demonstrate the superiority and robustness of Pan-TCR, establishing a new benchmark for pansharpening under realistic atmospheric degradations.",
+      "published": "2026-03-16T08:05:56Z",
+      "updated": "2026-03-16T08:05:56Z",
+      "arxiv_id": "2603.14952v1",
+      "abs_url": "http://arxiv.org/abs/2603.14952v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.14952v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "11 pages,5 figures,published in AAAI2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "多模态融合",
+        "光学遥感",
+        "高光谱/多光谱",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 15,
+      "anchor_terms": [
+        "cloud removal",
+        "multispectral image",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "cloud removal",
+        "multispectral",
+        "multispectral image",
+        "panchromatic",
+        "pansharpening",
+        "remote sensing",
+        "robust"
+      ],
+      "title_zh": "薄云污染遥感图像的全色锐化：统一框架和基准数据集",
+      "summary_zh": "薄云条件下的全色锐化是一项实际意义重大但很少得到解决的任务，受到空间分辨率同时下降和云引起的光谱失真的挑战。现有方法通常依次解决云去除和全色锐化问题，由于缺乏联合退化建模，导致累积错误和次优性能。为了应对这些挑战，我们提出了带有薄云去除的统一全色锐化模型（Pan-TCR），这是一个集成物理先验的端到端框架。在频域理论分析的推动下，我们设计了一个频率解耦恢复（FDR）块，它将多光谱图像（MSI）特征的恢复分解为幅度和相位分量，每个分量都由互补的退化鲁棒提示引导：用于云弹性恢复的近红外（NIR）波段幅度和用于高分辨率结构增强的全色（PAN）相位。为了确保两个组件之间的一致性，我们进一步引入了交互式频率间一致性（IFC）模块，从而实现跨模式细化，从而增强跨频率线索的一致性和鲁棒性。此外，我们引入了第一个真实世界的薄云污染全色锐化数据集 (PanTCR-GF2)，其中包含配对的干净和多云 PAN-MSI 图像，以在现实条件下实现稳健的基准测试。对真实世界和合成数据集的大量实验证明了 Pan-TCR 的优越性和鲁棒性，为现实大气退化下的全色锐化建立了新的基准。"
+    },
+    {
+      "title": "RS-WorldModel: a Unified Model for Remote Sensing Understanding and Future Sense Forecasting",
+      "authors": [
+        "Linrui Xu",
+        "Zhongan Wang",
+        "Fei Shen",
+        "Gang Xu",
+        "Huiping Zhuang",
+        "Ming Li",
+        "Haifeng Li"
+      ],
+      "summary": "Remote sensing world models aim to both explain observed changes and forecast plausible futures, two tasks that share spatiotemporal priors. Existing methods, however, typically address them separately, limiting cross-task transfer. We present RS-WorldModel, a unified world model for remote sensing that jointly handles spatiotemporal change understanding and text-guided future scene forecasting, and we build RSWBench-1.1M, a 1.1 million sample dataset with rich language annotations covering both tasks. RS-WorldModel is trained in three stages: (1) Geo-Aware Generative Pre-training (GAGP) conditions forecasting on geographic and acquisition metadata; (2) synergistic instruction tuning (SIT) jointly trains understanding and forecasting; (3) verifiable reinforcement optimization (VRO) refines outputs with verifiable, task-specific rewards. With only 2B parameters, RS-WorldModel surpasses open-source models up to 120$ \\times $ larger on most spatiotemporal change question-answering metrics. It achieves an FID of 43.13 on text-guided future scene forecasting, outperforming all open-source baselines as well as the closed-source Gemini-2.5-Flash Image (Nano Banana).",
+      "published": "2026-03-16T07:45:15Z",
+      "updated": "2026-03-16T07:45:15Z",
+      "arxiv_id": "2603.14941v1",
+      "abs_url": "http://arxiv.org/abs/2603.14941v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.14941v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "变化检测",
+        "基础模型",
+        "视觉-语言模型",
+        "数据集/评测"
+      ],
+      "topic": "变化检测",
+      "score": 5,
+      "anchor_terms": [
+        "remote sensing",
+        "temporal"
+      ],
+      "matched_terms": [
+        "instruction tuning",
+        "pre-training",
+        "remote sensing",
+        "temporal"
+      ],
+      "title_zh": "RS-WorldModel：遥感理解和未来感知预测的统一模型",
+      "summary_zh": "遥感世界模型旨在解释观察到的变化并预测可能的未来，这两项任务共享时空先验。然而，现有的方法通常单独解决它们，限制了跨任务传输。我们提出了 RS-WorldModel，这是一种统一的遥感世界模型，可联合处理时空变化理解和文本引导的未来场景预测，并构建了 RSWBench-1.1M，这是一个包含 110 万个样本的数据集，具有涵盖这两项任务的丰富语言注释。 RS-WorldModel 分三个阶段进行训练：（1）地理感知生成预训练（GAGP）对地理和采集元数据进行条件预测； （2）协同指令调优（SIT）联合训练理解和预测； (3) 可验证的强化优化 (VRO) 通过可验证的、特定于任务的奖励来完善输出。仅用 2B 参数，RS-WorldModel 在大多数时空变化问答指标上就超过了开源模型高达 120 美元 × 美元。它在文本引导的未来场景预测方面达到了 43.13 的 FID，优于所有开源基线以及闭源 Gemini-2.5-Flash Image (Nano Banana)。"
+    },
+    {
+      "title": "PASTE: Physics-Aware Scattering Topology Embedding Framework for SAR Object Detection",
+      "authors": [
+        "Jiacheng Chen",
+        "Yuxuan Xiong",
+        "Haipeng Wang"
+      ],
+      "summary": "Current deep learning-based object detection for Synthetic Aperture Radar (SAR) imagery mainly adopts optical image methods, treating targets as texture patches while ignoring inherent electromagnetic scattering mechanisms. Though scattering points have been studied to boost detection performance, most methods still rely on amplitude-based statistical models. Some approaches introduce frequency-domain information for scattering center extraction, but they suffer from high computation cost and poor compatibility with diverse datasets. Thus, effectively embedding scattering topological information into modern detection frameworks remains challenging. To solve these problems, this paper proposes the Physics-Aware Scattering Topology Embedding Framework (PASTE), a novel closed-loop architecture for comprehensive scattering prior integration. By building the full pipeline from topology generation, injection to joint supervision, PASTE elegantly integrates scattering physics into modern SAR detectors. Specifically, it designs a scattering keypoint generation and automatic annotation scheme based on the Attributed Scattering Center (ASC) model to produce scalable and physically consistent priors. A scattering topology injection module guides multi-scale feature learning, and a scattering prior supervision strategy constrains network optimization by aligning predictions with scattering center distributions. Experiments on real datasets show that PASTE is compatible with various detectors and brings relative mAP gains of 2.9% to 11.3% over baselines with acceptable computation overhead. Visualization of scattering maps verifies that PASTE successfully embeds scattering topological priors into feature space, clearly distinguishing target and background scattering regions, thus providing strong interpretability for results.",
+      "published": "2026-03-16T06:34:35Z",
+      "updated": "2026-03-16T06:34:35Z",
+      "arxiv_id": "2603.14886v1",
+      "abs_url": "http://arxiv.org/abs/2603.14886v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.14886v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "光学遥感",
+        "SAR遥感",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 7,
+      "anchor_terms": [
+        "object detection",
+        "SAR",
+        "synthetic aperture radar"
+      ],
+      "matched_terms": [
+        "multi-scale",
+        "object detection",
+        "SAR",
+        "synthetic aperture radar"
+      ],
+      "title_zh": "PASTE：用于 SAR 目标检测的物理感知散射拓扑嵌入框架",
+      "summary_zh": "目前基于深度学习的合成孔径雷达（SAR）图像目标检测主要采用光学图像方法，将目标视为纹理块，而忽略了固有的电磁散射机制。尽管已经研究了散射点以提高检测性能，但大多数方法仍然依赖于基于幅度的统计模型。一些方法引入频域信息来提取散射中心，但它们的计算成本高且与不同数据集的兼容性差。因此，将散射拓扑信息有效地嵌入到现代检测框架中仍然具有挑战性。为了解决这些问题，本文提出了物理感知散射拓扑嵌入框架（PASTE），这是一种用于全面散射先验积分的新型闭环架构。通过构建从拓扑生成、注入到联合监督的完整流程，PASTE 优雅地将散射物理集成到现代 SAR 探测器中。具体来说，它设计了基于属性散射中心（ASC）模型的散射关键点生成和自动注释方案，以产生可扩展且物理一致的先验。散射拓扑注入模块指导多尺度特征学习，散射先验监督策略通过将预测与散射中心分布对齐来限制网络优化。在真实数据集上的实验表明，PASTE 与各种检测器兼容，并且在可接受的计算开销的情况下，相对于基线而言 mAP 增益提高了 2.9% 至 11.3%。散射图的可视化验证了 PASTE 成功地将散射拓扑先验嵌入到特征空间中，清楚地区分了目标和背景散射区域，从而为结果提供了强大的可解释性。"
+    },
+    {
+      "title": "From Horizontal to Rotated: Cross-View Object Geo-Localization with Orientation Awareness",
+      "authors": [
+        "Chenlin Fu",
+        "Ao Gong",
+        "Yingying Zhu"
+      ],
+      "summary": "Cross-View object geo-localization (CVOGL) aims to precisely determine the geographic coordinates of a query object from a ground or drone perspective by referencing a satellite map. Segmentation-based approaches offer high precision but require prohibitively expensive pixel-level annotations, whereas more economical detection-based methods suffer from lower accuracy. This performance disparity in detection is primarily caused by two factors: the poor geometric fit of Horizontal Bounding Boxes (HBoxes) for oriented objects and the degradation in precision due to feature map scaling. Motivated by these, we propose leveraging Rotated Bounding Boxes (RBoxes) as a natural extension of the detection-based paradigm. RBoxes provide a much tighter geometric fit to oriented objects. Building on this, we introduce OSGeo, a novel geo-localization framework, meticulously designed with a multi-scale perception module and an orientation-sensitive head to accurately regress RBoxes. To support this scheme, we also construct and release CVOGL-R, the first dataset with precise RBox annotations for CVOGL. Extensive experiments demonstrate that our OSGeo achieves state-of-the-art performance, consistently matching or even surpassing the accuracy of leading segmentation-based methods but with an annotation cost that is over an order of magnitude lower.",
+      "published": "2026-03-16T05:56:06Z",
+      "updated": "2026-03-16T05:56:06Z",
+      "arxiv_id": "2603.14856v1",
+      "abs_url": "http://arxiv.org/abs/2603.14856v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.14856v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "无人机/UAV",
+      "score": 6,
+      "anchor_terms": [
+        "drone"
+      ],
+      "matched_terms": [
+        "drone",
+        "multi-scale",
+        "rotated bounding box",
+        "satellite"
+      ],
+      "title_zh": "从水平到旋转：具有方向感知的跨视图对象地理定位",
+      "summary_zh": "跨视图对象地理定位（CVOGL）旨在通过参考卫星地图从地面或无人机角度精确确定查询对象的地理坐标。基于分割的方法提供高精度，但需要极其昂贵的像素级注释，而更经济的基于检测的方法则精度较低。检测中的这种性能差异主要是由两个因素引起的：水平边界框（HBox）对于定向对象的几何拟合较差，以及由于特征图缩放而导致的精度下降。受这些启发，我们建议利用旋转边界框（RBoxes）作为基于检测的范例的自然扩展。 RBox 为定向对象提供了更紧密的几何拟合。在此基础上，我们引入了 OSGeo，一种新颖的地理定位框架，精心设计了多尺度感知模块和方向敏感头，可以准确地回归 RBox。为了支持该方案，我们还构建并发布了 CVOGL-R，这是第一个具有 CVOGL 精确 RBox 注释的数据集。大量的实验表明，我们的 OSGeo 实现了最先进的性能，始终匹配甚至超越了领先的基于分割的方法的准确性，但注释成本却低了一个数量级。"
+    },
+    {
+      "title": "Zero-Shot Reconstruction of Animatable 3D Avatars with Cloth Dynamics from a Single Image",
+      "authors": [
+        "Joohyun Kwon",
+        "Geonhee Sim",
+        "Gyeongsik Moon"
+      ],
+      "summary": "Existing single-image 3D human avatar methods primarily rely on rigid joint transformations, limiting their ability to model realistic cloth dynamics. We present DynaAvatar, a zero-shot framework that reconstructs animatable 3D human avatars with motion-dependent cloth dynamics from a single image. Trained on large-scale multi-person motion datasets, DynaAvatar employs a Transformer-based feed-forward architecture that directly predicts dynamic 3D Gaussian deformations without subject-specific optimization. To overcome the scarcity of dynamic captures, we introduce a static-to-dynamic knowledge transfer strategy: a Transformer pretrained on large-scale static captures provides strong geometric and appearance priors, which are efficiently adapted to motion-dependent deformations through lightweight LoRA fine-tuning on dynamic captures. We further propose the DynaFlow loss, an optical flow-guided objective that provides reliable motion-direction geometric cues for cloth dynamics in rendered space. Finally, we reannotate the missing or noisy SMPL-X fittings in existing dynamic capture datasets, as most public dynamic capture datasets contain incomplete or unreliable fittings that are unsuitable for training high-quality 3D avatar reconstruction models. Experiments demonstrate that DynaAvatar produces visually rich and generalizable animations, outperforming prior methods.",
+      "published": "2026-03-16T03:12:27Z",
+      "updated": "2026-03-16T03:12:27Z",
+      "arxiv_id": "2603.14772v1",
+      "abs_url": "http://arxiv.org/abs/2603.14772v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.14772v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted to CVPR 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 7,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "generalizable",
+        "LoRA",
+        "transformer",
+        "zero-shot"
+      ],
+      "title_zh": "利用单幅图像的布料动力学零镜头重建可动画 3D 化身",
+      "summary_zh": "现有的单图像 3D 人体头像方法主要依赖于刚性关节变换，限制了它们模拟真实布料动力学的能力。我们提出了 DynaAvatar，这是一个零镜头框架，可以从单个图像中利用依赖于运动的布料动力学来重建可动画的 3D 人体化身。 DynaAvatar 经过大规模多人运动数据集的训练，采用基于 Transformer 的前馈架构，可直接预测动态 3D 高斯变形，无需针对特定对象进行优化。为了克服动态捕获的稀缺性，我们引入了静态到动态的知识转移策略：在大规模静态捕获上预训练的 Transformer 提供了强大的几何和外观先验，通过对动态捕获的轻量级 LoRA 微调，可以有效地适应与运动相关的变形。我们进一步提出了 DynaFlow 损失，这是一种光流引导物镜，可为渲染空间中的布料动力学提供可靠的运动方向几何线索。最后，我们重新注释现有动态捕获数据集中缺失或有噪声的 SMPL-X 配件，因为大多数公共动态捕获数据集包含不完整或不可靠的配件，不适合训练高质量的 3D 头像重建模型。实验表明，DynaAvatar 可以生成视觉丰富且可概括的动画，优于之前的方法。"
+    },
+    {
+      "title": "Robust Building Damage Detection in Cross-Disaster Settings Using Domain Adaptation",
+      "authors": [
+        "Asmae Mouradi",
+        "Shruti Kshirsagar"
+      ],
+      "summary": "Rapid structural damage assessment from remote sensing imagery is essential for timely disaster response. Within human-machine systems (HMS) for disaster management, automated damage detection provides decision-makers with actionable situational awareness. However, models trained on multi-disaster benchmarks often underperform in unseen geographic regions due to domain shift - a distributional mismatch between training and deployment data that undermines human trust in automated assessments. We explore a two-stage ensemble approach using supervised domain adaptation (SDA) for building damage classification across four severity classes. The pipeline adapts the xView2 first-place method to the Ida-BD dataset using SDA and systematically investigates the effect of individual augmentation components on classification performance. Comprehensive ablation experiments on the unseen Ida-BD test split demonstrate that SDA is indispensable: removing it causes damage detection to fail entirely. Our pipeline achieves the most robust performance using SDA with unsharp-enhanced RGB input, attaining a Macro-F1 of 0.5552. These results underscore the critical role of domain adaptation in building trustworthy automated damage assessment modules for HMS-integrated disaster response.",
+      "published": "2026-03-16T01:03:30Z",
+      "updated": "2026-03-16T01:03:30Z",
+      "arxiv_id": "2603.14694v1",
+      "abs_url": "http://arxiv.org/abs/2603.14694v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.14694v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "小样本与域泛化",
+        "灾害与应急监测",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 12,
+      "anchor_terms": [
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "damage assessment",
+        "domain adaptation",
+        "remote sensing",
+        "robust",
+        "xView"
+      ],
+      "title_zh": "使用域适应在跨灾难环境中进行稳健的建筑损坏检测",
+      "summary_zh": "利用遥感图像进行快速结构损坏评估对于及时应对灾害至关重要。在用于灾害管理的人机系统 (HMS) 中，自动损坏检测为决策者提供了可操作的态势感知。然而，由于域转移，在多灾难基准上训练的模型通常在看不见的地理区域中表现不佳——训练和部署数据之间的分布不匹配破坏了人类对自动评估的信任。我们探索使用监督域适应（SDA）的两阶段集成方法来构建跨四个严重性类别的损坏分类。该管道使用 SDA 将 xView2 第一方法应用于 Ida-BD 数据集，并系统地研究各个增强组件对分类性能的影响。对看不见的 Ida-BD 测试分割进行的综合烧蚀实验表明，SDA 是不可或缺的：移除它会导致损坏检测完全失败。我们的管道使用具有非锐化增强 RGB 输入的 SDA 实现了最强大的性能，实现了 0.5552 的 Macro-F1。这些结果强调了领域适应在为 HMS 集成灾难响应构建值得信赖的自动损害评估模块方面的关键作用。"
+    }
+  ]
+}

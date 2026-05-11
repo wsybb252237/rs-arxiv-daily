@@ -1,0 +1,983 @@
+{
+  "date": "2026-03-17",
+  "generated_at": "2026-05-11T07:34:46.782034+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202603170000 TO 202603172359]",
+  "total_fetched": 340,
+  "total_matched": 22,
+  "papers": [
+    {
+      "title": "MetaClaw: Just Talk -- An Agent That Meta-Learns and Evolves in the Wild",
+      "authors": [
+        "Peng Xia",
+        "Jianwen Chen",
+        "Xinyu Yang",
+        "Haoqin Tu",
+        "Jiaqi Liu",
+        "Kaiwen Xiong",
+        "Siwei Han",
+        "Shi Qiu",
+        "Haonian Ji",
+        "Yuyin Zhou",
+        "Zeyu Zheng",
+        "Cihang Xie",
+        "Huaxiu Yao"
+      ],
+      "summary": "Large language model (LLM) agents are increasingly used for complex tasks, yet deployed agents often remain static, failing to adapt as user needs evolve. This creates a tension between the need for continuous service and the necessity of updating capabilities to match shifting task distributions. On platforms like OpenClaw, which handle diverse workloads across 20+ channels, existing methods either store raw trajectories without distilling knowledge, maintain static skill libraries, or require disruptive downtime for retraining. We present MetaClaw, a continual meta-learning framework that jointly evolves a base LLM policy and a library of reusable behavioral skills. MetaClaw employs two complementary mechanisms. Skill-driven fast adaptation analyzes failure trajectories via an LLM evolver to synthesize new skills, enabling immediate improvement with zero downtime. Opportunistic policy optimization performs gradient-based updates via cloud LoRA fine-tuning and Reinforcement Learning with a Process Reward Model (RL-PRM). This is triggered during user-inactive windows by the Opportunistic Meta-Learning Scheduler (OMLS), which monitors system inactivity and calendar data. These mechanisms are mutually reinforcing: a refined policy generates better trajectories for skill synthesis, while richer skills provide higher-quality data for policy optimization. To prevent data contamination, a versioning mechanism separates support and query data. Built on a proxy-based architecture, MetaClaw scales to production-size LLMs without local GPUs. Experiments on MetaClaw-Bench and AutoResearchClaw show that skill-driven adaptation improves accuracy by up to 32% relative. The full pipeline advances Kimi-K2.5 accuracy from 21.4% to 40.6% and increases composite robustness by 18.3%. Code is available at https://github.com/aiming-lab/MetaClaw.",
+      "published": "2026-03-17T22:30:30Z",
+      "updated": "2026-03-17T22:30:30Z",
+      "arxiv_id": "2603.17187v1",
+      "abs_url": "http://arxiv.org/abs/2603.17187v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.17187v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/aiming-lab/MetaClaw",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 5,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA",
+        "robust"
+      ],
+      "title_zh": "MetaClaw：Just Talk——一种可以在野外进行元学习和进化的代理",
+      "summary_zh": "大型语言模型 (LLM) 代理越来越多地用于复杂任务，但部署的代理通常保持静态，无法适应用户需求的变化。这就在持续服务的需求和更新功能以匹配不断变化的任务分配的必要性之间造成了紧张。在 OpenClaw 等跨 20 多个渠道处理不同工作负载的平台上，现有方法要么存储原始轨迹而不提取知识，要么维护静态技能库，要么需要中断性停机进行再训练。我们提出了 MetaClaw，一个持续的元学习框架，它共同发展了基本的法学硕士政策和可重用的行为技能库。 MetaClaw 采用两种互补机制。技能驱动的快速适应通过 LLM 进化器分析失败轨迹以综合新技能，从而实现零停机时间的立即改进。机会策略优化通过云 LoRA 微调和带有过程奖励模型 (RL-PRM) 的强化学习来执行基于梯度的更新。这是在用户不活动窗口期间由机会元学习调度程序 (OMLS) 触发的，该调度程序监视系统不活动和日历数据。这些机制是相辅相成的：完善的政策为技能综合提供更好的轨迹，而更丰富的技能为政策优化提供更高质量的数据。为了防止数据污染，版本控制机制将支持数据和查询数据分开。 MetaClaw 基于基于代理的架构构建，无需本地 GPU 即可扩展到生产规模的 LLM。 MetaClaw-Bench 和 AutoResearchClaw 上的实验表明，技能驱动的适应相对准确率提高了 32%。完整的流程将 Kimi-K2.5 的精度从 21.4% 提高到 40.6%，并将复合材料的稳健性提高 18.3%。代码可在 https://github.com/aiming-lab/MetaClaw 获取。"
+    },
+    {
+      "title": "ACE-LoRA: Graph-Attentive Context Enhancement for Parameter-Efficient Adaptation of Medical Vision-Language Models",
+      "authors": [
+        "M. Arda Aydın",
+        "Melih B. Yilmaz",
+        "Aykut Koç",
+        "Tolga Çukur"
+      ],
+      "summary": "The success of CLIP-like vision-language models (VLMs) on natural images has inspired medical counterparts, yet existing approaches largely fall into two extremes: specialist models trained on single-domain data, which capture domain-specific details but generalize poorly, and generalist medical VLMs trained on multi-domain data, which retain broad semantics but dilute fine-grained diagnostic cues. Bridging this specialization-generalization trade-off remains challenging. To address this problem, we propose ACE-LoRA, a parameter-efficient adaptation framework for generalist medical VLMs that maintains robust zero-shot generalization. ACE-LoRA integrates Low-Rank Adaptation (LoRA) modules into frozen image-text encoders and introduces an Attention-based Context Enhancement Hypergraph Neural Network (ACE-HGNN) module that captures higher-order contextual interactions beyond pairwise similarity to enrich global representations with localized diagnostic cues, addressing a key limitation of prior Parameter-Efficient Fine-Tuning (PEFT) methods that overlook fine-grained details. To further enhance cross-modal alignment, we formulate a label-guided InfoNCE loss to effectively suppress false negatives between semantically related image-text pairs. Despite adding only 0.95M trainable parameters, ACE-LoRA consistently outperforms state-of-the-art medical VLMs and PEFT baselines across zero-shot classification, segmentation, and detection benchmarks spanning multiple domains. Our code is available at https://github.com/icon-lab/ACE-LoRA.",
+      "published": "2026-03-17T19:06:33Z",
+      "updated": "2026-03-17T19:06:33Z",
+      "arxiv_id": "2603.17079v1",
+      "abs_url": "http://arxiv.org/abs/2603.17079v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.17079v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/icon-lab/ACE-LoRA",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 9,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "CLIP",
+        "fine-tuning",
+        "graph neural network",
+        "LoRA",
+        "PEFT",
+        "robust",
+        "zero-shot"
+      ],
+      "title_zh": "ACE-LoRA：图形注意力上下文增强，用于医学视觉语言模型的参数高效适应",
+      "summary_zh": "类似 CLIP 的视觉语言模型 (VLM) 在自然图像上的成功启发了医学同行，但现有的方法很大程度上陷入两个极端：在单域数据上训练的专业模型，捕获特定领域的细节，但泛化能力较差；以及在多域数据上训练的通用医学 VLM，保留广泛的语义，但淡化了细粒度的诊断线索。弥合这种专业化与通用化的权衡仍然具有挑战性。为了解决这个问题，我们提出了 ACE-LoRA，这是一种用于通用医学 VLM 的参数高效自适应框架，可保持稳健的零样本泛化。 ACE-LoRA 将低秩适应 (LoRA) 模块集成到冻结的图像文本编码器中，并引入基于注意力的上下文增强超图神经网络 (ACE-HGNN) 模块，该模块捕获成对相似性之外的高阶上下文交互，以通过局部诊断线索丰富全局表示，解决了先前参数高效微调 (PEFT) 方法忽略细粒度细节的关键限制。为了进一步增强跨模态对齐，我们制定了标签引导的 InfoNCE 损失，以有效抑制语义相关的图像文本对之间的漏报。尽管仅添加了 0.95M 可训练参数，ACE-LoRA 在跨越多个领域的零样本分类、分割和检测基准方面始终优于最先进的医学 VLM 和 PEFT 基线。我们的代码可在 https://github.com/icon-lab/ACE-LoRA 获取。"
+    },
+    {
+      "title": "World Reconstruction From Inconsistent Views",
+      "authors": [
+        "Lukas Höllein",
+        "Matthias Nießner"
+      ],
+      "summary": "Video diffusion models generate high-quality and diverse worlds; however, individual frames often lack 3D consistency across the output sequence, which makes the reconstruction of 3D worlds difficult. To this end, we propose a new method that handles these inconsistencies by non-rigidly aligning the video frames into a globally-consistent coordinate frame that produces sharp and detailed pointcloud reconstructions. First, a geometric foundation model lifts each frame into a pixel-wise 3D pointcloud, which contains unaligned surfaces due to these inconsistencies. We then propose a tailored non-rigid iterative frame-to-model ICP to obtain an initial alignment across all frames, followed by a global optimization that further sharpens the pointcloud. Finally, we leverage this pointcloud as initialization for 3D reconstruction and propose a novel inverse deformation rendering loss to create high quality and explorable 3D environments from inconsistent views. We demonstrate that our 3D scenes achieve higher quality than baselines, effectively turning video models into 3D-consistent world generators.",
+      "published": "2026-03-17T16:18:08Z",
+      "updated": "2026-03-18T13:16:47Z",
+      "arxiv_id": "2603.16736v2",
+      "abs_url": "http://arxiv.org/abs/2603.16736v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.16736v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "project website: https://lukashoel.github.io/video_to_world video: https://www.youtube.com/watch?v=qXnUwhVmBzA code: https://github.com/lukasHoel/video_to_world",
+      "code_url": "https://github.com/lukasHoel/video_to_world",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像生成与重建",
+        "基础模型",
+        "高效微调与轻量化",
+        "LiDAR/点云"
+      ],
+      "topic": "图像生成与重建",
+      "score": 4,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "diffusion model",
+        "foundation model",
+        "LoRA"
+      ],
+      "title_zh": "从不一致的观点重建世界",
+      "summary_zh": "视频扩散模型生成高质量且多样化的世界；然而，各个帧在输出序列中通常缺乏 3D 一致性，这使得 3D 世界的重建变得困难。为此，我们提出了一种新方法，通过将视频帧非严格地对齐到全局一致的坐标系中来处理这些不一致问题，从而产生清晰且详细的点云重建。首先，几何基础模型将每个帧提升为像素级 3D 点云，其中包含由于这些不一致而未对齐的表面。然后，我们提出定制的非刚性迭代帧到模型 ICP，以获得跨所有帧的初始对齐，然后进行全局优化，进一步锐化点云。最后，我们利用这个点云作为 3D 重建的初始化，并提出一种新颖的逆变形渲染损失，以从不一致的视图创建高质量和可探索的 3D 环境。我们证明我们的 3D 场景比基线具有更高的质量，有效地将视频模型转变为 3D 一致的世界生成器。"
+    },
+    {
+      "title": "ACPV-Net: All-Class Polygonal Vectorization for Seamless Vector Map Generation from Aerial Imagery",
+      "authors": [
+        "Weiqin Jiao",
+        "Hao Cheng",
+        "George Vosselman",
+        "Claudio Persello"
+      ],
+      "summary": "We tackle the problem of generating a complete vector map representation from aerial imagery in a single run: producing polygons for all land-cover classes with shared boundaries and without gaps or overlaps. Existing polygonization methods are typically class-specific; extending them to multiple classes via per-class runs commonly leads to topological inconsistencies, such as duplicated edges, gaps, and overlaps. We formalize this new task as All-Class Polygonal Vectorization (ACPV) and release the first public benchmark, Deventer-512, with standardized metrics jointly evaluating semantic fidelity, geometric accuracy, vertex efficiency, per-class topological fidelity and global topological consistency. To realize ACPV, we propose ACPV-Net, a unified framework introducing a novel Semantically Supervised Conditioning (SSC) mechanism coupling semantic perception with geometric primitive generation, along with a topological reconstruction that enforces shared-edge consistency by design. While enforcing such strict topological constraints, ACPV-Net surpasses all class-specific baselines in polygon quality across classes on Deventer-512. It also applies to single-class polygonal vectorization without any architectural modification, achieving the best-reported results on WHU-Building. Data, code, and models will be released at: https://github.com/HeinzJiao/ACPV-Net.",
+      "published": "2026-03-17T14:55:10Z",
+      "updated": "2026-03-17T14:55:10Z",
+      "arxiv_id": "2603.16616v1",
+      "abs_url": "http://arxiv.org/abs/2603.16616v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16616v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted to CVPR 2026. The supplementary material available in the conference proceedings",
+      "code_url": "https://github.com/HeinzJiao/ACPV-Net",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "无人机/UAV",
+      "score": 5,
+      "anchor_terms": [
+        "aerial image",
+        "aerial imagery"
+      ],
+      "matched_terms": [
+        "aerial",
+        "aerial image",
+        "aerial imagery",
+        "WHU"
+      ],
+      "title_zh": "ACPV-Net：用于从航空图像生成无缝矢量图的全类多边形矢量化",
+      "summary_zh": "我们解决了在一次运行中从航空图像生成完整矢量图表示的问题：为所有土地覆盖类别生成具有共享边界且没有间隙或重叠的多边形。现有的多边形化方法通常是特定于类的；通过按类运行将它们扩展到多个类通常会导致拓扑不一致，例如重复的边、间隙和重叠。我们将这一新任务正式化为全类多边形矢量化（ACPV），并发布了第一个公共基准 Deventer-512，其标准化指标共同评估语义保真度、几何精度、顶点效率、每类拓扑保真度和全局拓扑一致性。为了实现 ACPV，我们提出了 ACPV-Net，这是一个统一的框架，引入了一种新颖的语义监督调节（SSC）机制，将语义感知与几何图元生成相结合，以及通过设计强制共享边缘一致性的拓扑重建。在执行如此严格的拓扑约束的同时，ACPV-Net 在 Deventer-512 上的跨类多边形质量方面超越了所有类特定基线。它还适用于单类多边形矢量化，无需任何架构修改，在 WHU-Building 上取得了最佳报告结果。数据、代码和模型将发布在：https://github.com/HeinzJiao/ACPV-Net。"
+    },
+    {
+      "title": "Unpaired Cross-Domain Calibration of DMSP to VIIRS Nighttime Light Data Based on CUT Network",
+      "authors": [
+        "Zhan Tong",
+        "ChenXu Zhou",
+        "Fei Tang",
+        "Yiming Tu",
+        "Tianyu Qin",
+        "Kaihao Fang"
+      ],
+      "summary": "Defense Meteorological Satellite Program (DMSP-OLS) and Suomi National Polar-orbiting Partnership (SNPP-VIIRS) nighttime light (NTL) data are vital for monitoring urbanization, yet sensor incompatibilities hinder long-term analysis. This study proposes a cross-sensor calibration method using Contrastive Unpaired Translation (CUT) network to transform DMSP data into VIIRS-like format, correcting DMSP defects. The method employs multilayer patch-wise contrastive learning to maximize mutual information between corresponding patches, preserving content consistency while learning cross-domain similarity. Utilizing 2012-2013 overlapping data for training, the network processes 1992-2013 DMSP imagery to generate enhanced VIIRS-style raster data. Validation results demonstrate that generated VIIRS-like data exhibits high consistency with actual VIIRS observations (R-squared greater than 0.87) and socioeconomic indicators. This approach effectively resolves cross-sensor data fusion issues and calibrates DMSP defects, providing reliable attempt for extended NTL time-series.",
+      "published": "2026-03-17T11:14:20Z",
+      "updated": "2026-03-17T11:14:20Z",
+      "arxiv_id": "2603.16385v1",
+      "abs_url": "http://arxiv.org/abs/2603.16385v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16385v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "16 pages, 10 figures, 8 tables. Submitted to Remote Sensing of Environment. Code and data available at: https://github.com/[your-repo-link]",
+      "code_url": "https://github.com/[your-repo-link",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "时间序列与视频",
+        "基础模型",
+        "小样本与域泛化",
+        "无监督与弱监督",
+        "多模态融合"
+      ],
+      "topic": "时间序列与视频",
+      "score": 7,
+      "anchor_terms": [
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "contrastive learning",
+        "remote sensing",
+        "satellite",
+        "time-series"
+      ],
+      "title_zh": "基于CUT网络的DMSP对VIIRS夜间灯光数据的非配对跨域标定",
+      "summary_zh": "国防气象卫星计划 (DMSP-OLS) 和索米国家极地轨道合作伙伴 (SNPP-VIIRS) 夜间灯光 (NTL) 数据对于监测城市化至关重要，但传感器不兼容阻碍了长期分析。本研究提出了一种跨传感器校准方法，使用对比不成对翻译（CUT）网络将 DMSP 数据转换为类似 VIIRS 的格式，从而纠正 DMSP 缺陷。该方法采用多层逐块对比学习来最大化相应块之间的互信息，在学习跨域相似性的同时保持内容一致性。该网络利用 2012-2013 年重叠数据进行训练，处理 1992-2013 年 DMSP 图像以生成增强的 VIIRS 式栅格数据。验证结果表明，生成的类似 VIIRS 的数据与实际 VIIRS 观测结果（R 方大于 0.87）和社会经济指标表现出高度一致性。该方法有效解决了跨传感器数据融合问题并校准了DMSP缺陷，为扩展NTL时间序列提供了可靠的尝试。"
+    },
+    {
+      "title": "Anonymous-by-Construction: An LLM-Driven Framework for Privacy-Preserving Text",
+      "authors": [
+        "Federico Albanese",
+        "Pablo Ronco",
+        "Nicolás D'Ippolito"
+      ],
+      "summary": "Responsible use of AI demands that we protect sensitive information without undermining the usefulness of data, an imperative that has become acute in the age of large language models. We address this challenge with an on-premise, LLM-driven substitution pipeline that anonymizes text by replacing personally identifiable information (PII) with realistic, type-consistent surrogates. Executed entirely within organizational boundaries using local LLMs, the approach prevents data egress while preserving fluency and task-relevant semantics. We conduct a systematic, multi-metric, cross-technique evaluation on the Action-Based Conversation Dataset, benchmarking against industry standards (Microsoft Presidio and Google DLP) and a state-of-the-art approach (ZSTS, in redaction-only and redaction-plus-substitution variants). Our protocol jointly measures privacy, semantic utility, and trainability under privacy via a lifecycle-ready criterion obtained by fine-tuning a compact encoder (BERT+LoRA) on sanitized text. In addition, we assess agentic Q&A performance by inserting an on-premise anonymization layer before the answering LLM and evaluating the quality of its responses. This intermediate, type-preserving substitution stage ensures that no sensitive content is exposed to third-party APIs, enabling responsible deployment of Q\\&A agents without compromising confidentiality. Our method attains state-of-the-art privacy, minimal topical drift, strong factual utility, and low trainability loss, outperforming rule-based approaches and named-entity recognition (NER) baselines and ZSTS variants on the combined privacy--utility--trainability frontier. These results show that local LLM substitution yields anonymized corpora that are both responsible to use and operationally valuable: safe for agentic pipelines and suitable for downstream fine-tuning with limited degradation.",
+      "published": "2026-03-17T23:46:15Z",
+      "updated": "2026-03-17T23:46:15Z",
+      "arxiv_id": "2603.17217v1",
+      "abs_url": "http://arxiv.org/abs/2603.17217v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.17217v1",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 5,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA"
+      ],
+      "title_zh": "构造匿名：法学硕士驱动的隐私保护文本框架",
+      "summary_zh": "负责任地使用人工智能要求我们在不损害数据有用性的情况下保护敏感信息，这一点在大型语言模型时代变得越来越迫切。我们通过本地 LLM 驱动的替换管道来应对这一挑战，该管道通过用真实的、类型一致的代理替换个人身份信息 (PII) 来匿名化文本。该方法完全在组织边界内使用本地法学硕士执行，可防止数据流出，同时保持流畅性和任务相关语义。我们对基于操作的对话数据集进行了系统性、多指标、跨技术的评估，以行业标准（Microsoft Presidio 和 Google DLP）和最先进的方法（ZSTS，仅编辑和编辑加替换变体）为基准。我们的协议通过在净化文本上微调紧凑编码器（BERT+LoRA）获得的生命周期就绪标准来联合测量隐私、语义效用和隐私下的可训练性。此外，我们通过在回答 LLM 之前插入本地匿名层并评估其响应的质量来评估代理问答性能。这个中间的、类型保留的替换阶段可确保敏感内容不会暴露给第三方 API，从而能够在不影响机密性的情况下负责任地部署问答代理。我们的方法实现了最先进的隐私、最小的主题漂移、强大的事实实用性和低可训练性损失，在隐私-实用性-可训练性组合前沿上优于基于规则的方法和命名实体识别（NER）基线和 ZSTS 变体。这些结果表明，本地法学硕士替代产生了匿名语料库，该语料库既负责使用又具有操作价值：对于代理管道来说是安全的，并且适合下游微调，且降级有限。"
+    },
+    {
+      "title": "REAL: Regression-Aware Reinforcement Learning for LLM-as-a-Judge",
+      "authors": [
+        "Yasi Zhang",
+        "Tianyu Chen",
+        "Mingyuan Zhou",
+        "Oscar Leong",
+        "Ying Nian Wu",
+        "Michal Lukasik"
+      ],
+      "summary": "Large language models (LLMs) are increasingly deployed as automated evaluators that assign numeric scores to model outputs, a paradigm known as LLM-as-a-Judge. However, standard Reinforcement Learning (RL) methods typically rely on binary rewards (e.g., 0-1 accuracy), thereby ignoring the ordinal structure inherent in regression tasks; for instance, they fail to recognize that predicting 4 is significantly better than predicting 1 when the ground truth is 5. Conversely, existing regression-aware approaches are often confined to Supervised Fine-Tuning (SFT), limiting their ability to explore optimal reasoning paths. To bridge this gap, we propose \\textbf{REAL} (\\underline{RE}gression-\\underline{A}ware Reinforcement \\underline{L}earning), a principled RL framework designed to optimize regression rewards, and also proven to be optimal for correlation metrics. A key technical challenge is that the regression objective is explicitly policy-dependent, thus invalidating standard policy gradient methods. To address this, we employ the generalized policy gradient estimator, which naturally decomposes optimization into two complementary components: (1) exploration over Chain-of-Thought (CoT) trajectory, and (2) regression-aware prediction refinement of the final score. Extensive experiments across model scales (8B to 32B) demonstrate that REAL consistently outperforms both regression-aware SFT baselines and standard RL methods, exhibiting significantly better generalization on out-of-domain benchmarks. On Qwen3-32B specifically, we achieve gains of +8.40 Pearson and +7.20 Spearman correlation over the SFT baseline, and +18.30/+11.20 over the base model. These findings highlight the critical value of integrating regression objectives into RL exploration for accurate LLM evaluation.",
+      "published": "2026-03-17T21:19:08Z",
+      "updated": "2026-03-17T21:19:08Z",
+      "arxiv_id": "2603.17145v1",
+      "abs_url": "http://arxiv.org/abs/2603.17145v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.17145v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 5,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA"
+      ],
+      "title_zh": "REAL：法学硕士法官的回归感知强化学习",
+      "summary_zh": "大型语言模型 (LLM) 越来越多地被部署为自动评估器，为模型输出分配数字分数，这种范例被称为 LLM 作为法官。然而，标准强化学习 (RL) 方法通常依赖于二元奖励（例如 0-1 精度），从而忽略了回归任务中固有的序数结构；例如，当基本事实为 5 时，他们无法认识到预测 4 明显优于预测 1。相反，现有的回归感知方法通常仅限于监督微调（SFT），限制了它们探索最佳推理路径的能力。为了弥补这一差距，我们提出了 \\textbf{REAL} （\\underline{RE}gression-\\underline{A}ware Reinforcement \\underline{L}earning），这是一个有原则的 RL 框架，旨在优化回归奖励，并且也被证明是相关指标的最佳选择。一个关键的技术挑战是回归目标明确依赖于策略，从而使标准策略梯度方法无效。为了解决这个问题，我们采用广义策略梯度估计器，它自然地将优化分解为两个互补的组成部分：（1）对思想链（CoT）轨迹的探索，以及（2）最终分数的回归感知预测细化。跨模型规模（8B 到 32B）的大量实验表明，REAL 始终优于回归感知 SFT 基线和标准 RL 方法，在域外基准上表现出明显更好的泛化能力。具体来说，在 Qwen3-32B 上，我们在 SFT 基线上实现了 +8.40 Pearson 和 +7.20 Spearman 相关性的增益，并且在基本模型上实现了 +18.30/+11.20 的增益。这些发现凸显了将回归目标整合到 RL 探索中以实现准确的 LLM 评估的关键价值。"
+    },
+    {
+      "title": "LLM-Powered Flood Depth Estimation from Social Media Imagery: A Vision-Language Model Framework with Mechanistic Interpretability for Transportation Resilience",
+      "authors": [
+        "Nafis Fuad",
+        "Xiaodong Qian"
+      ],
+      "summary": "Urban flooding poses an escalating threat to transportation network continuity, yet no operational system currently provides real-time, street-level flood depth information at the centimeter resolution required for dynamic routing, electric vehicle (EV) safety, and autonomous vehicle (AV) operations. This study presents FloodLlama, a fine-tuned open-source vision-language model (VLM) for continuous flood depth estimation from single street-level images, supported by a multimodal sensing pipeline using TikTok data. A synthetic dataset of approximately 190000 images was generated, covering seven vehicle types, four weather conditions, and 41 depth levels (0-40 cm at 1 cm resolution). Progressive curriculum training enabled coarse-to-fine learning, while LLaMA 3.2-11B Vision was fine-tuned using QLoRA. Evaluation across 34797 trials reveals a depth-dependent prompt effect: simple prompts perform better for shallow flooding, whereas chain-of-thought (CoT) reasoning improves performance at greater depths. FloodLlama achieves a mean absolute error (MAE) below 0.97 cm and Acc@5cm above 93.7% for deep flooding, exceeding 96.8% for shallow depths. A five-phase mechanistic interpretability framework identifies layer L23 as the critical depth-encoding transition and enables selective fine-tuning that reduces trainable parameters by 76-80% while maintaining accuracy. The Tier 3 configuration achieves 98.62% accuracy on real-world data and shows strong robustness under visual occlusion. A TikTok-based data pipeline, validated on 676 annotated flood frames from Detroit, demonstrates the feasibility of real-time, crowd-sourced flood sensing. The proposed framework provides a scalable, infrastructure-free solution with direct implications for EV safety, AV deployment, and resilient transportation management.",
+      "published": "2026-03-17T19:59:25Z",
+      "updated": "2026-03-23T20:39:33Z",
+      "arxiv_id": "2603.17108v2",
+      "abs_url": "http://arxiv.org/abs/2603.17108v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.17108v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "There is a update in result, which is needed to be addressed",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "基础模型",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "多模态融合",
+        "LiDAR/点云",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 9,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "DETR",
+        "fine-tuning",
+        "LLM",
+        "LoRA",
+        "MAE",
+        "robust",
+        "VLM"
+      ],
+      "title_zh": "由法学硕士支持的社交媒体图像洪水深度估计：具有交通弹性机械解释性的视觉语言模型框架",
+      "summary_zh": "城市洪水对交通网络的连续性构成了日益严重的威胁，但目前还没有操作系统能够提供动态路线、电动汽车 (EV) 安全和自动驾驶汽车 (AV) 操作所需的厘米分辨率的实时街道级洪水深度信息。这项研究提出了 FloodLlama，这是一种经过微调的开源视觉语言模型 (VLM)，用于从单个街道图像连续估计洪水深度，并由使用 TikTok 数据的多模态传感管道支持。生成了约 190000 张图像的合成数据集，涵盖七种车辆类型、四种天气条件和 41 个深度级别（1 厘米分辨率下为 0-40 厘米）。渐进式课程培训实现了从粗到精的学习，而 LLaMA 3.2-11B Vision 使用 QLoRA 进行了微调。对 34797 项试验的评估揭示了与深度相关的提示效果：简单的提示对于浅层洪水表现更好，而思想链 (CoT) 推理可以提高更深深度的表现。 FloodLlama 的平均绝对误差 (MAE) 低于 0.97 厘米，Acc@5cm 对于深度洪水超过 93.7%，对于浅深度超过 96.8%。五阶段机械可解释性框架将 L23 层识别为关键的深度编码过渡，并实现选择性微调，在保持准确性的同时将可训练参数减少 76-80%。 Tier 3 配置在真实世界数据上实现了 98.62% 的准确率，并在视觉遮挡下表现出很强的鲁棒性。基于 TikTok 的数据管道在底特律的 676 个带注释的洪水帧上进行了验证，展示了实时众包洪水传感的可行性。拟议的框架提供了一个可扩展、无基础设施的解决方案，对电动汽车安全、自动驾驶汽车部署和弹性交通管理有直接影响。"
+    },
+    {
+      "title": "Efficient Reasoning on the Edge",
+      "authors": [
+        "Yelysei Bondarenko",
+        "Thomas Hehn",
+        "Rob Hesselink",
+        "Romain Lepert",
+        "Fabio Valerio Massoli",
+        "Evgeny Mironov",
+        "Leyla Mirvakhabova",
+        "Tribhuvanesh Orekondy",
+        "Spyridon Stasis",
+        "Andrey Kuzmin",
+        "Anna Kuzina",
+        "Markus Nagel",
+        "Ankita Nayak",
+        "Corrado Rainone",
+        "Ork de Rooij",
+        "Paul N Whatmough",
+        "Arash Behboodi",
+        "Babak Ehteshami Bejnordi"
+      ],
+      "summary": "Large language models (LLMs) with chain-of-thought reasoning achieve state-of-the-art performance across complex problem-solving tasks, but their verbose reasoning traces and large context requirements make them impractical for edge deployment. These challenges include high token generation costs, large KV-cache footprints, and inefficiencies when distilling reasoning capabilities into smaller models for mobile devices. Existing approaches often rely on distilling reasoning traces from larger models into smaller models, which are verbose and stylistically redundant, undesirable for on-device inference. In this work, we propose a lightweight approach to enable reasoning in small LLMs using LoRA adapters combined with supervised fine-tuning. We further introduce budget forcing via reinforcement learning on these adapters, significantly reducing response length with minimal accuracy loss. To address memory-bound decoding, we exploit parallel test-time scaling, improving accuracy at minor latency increase. Finally, we present a dynamic adapter-switching mechanism that activates reasoning only when needed and a KV-cache sharing strategy during prompt encoding, reducing time-to-first-token for on-device inference. Experiments on Qwen2.5-7B demonstrate that our method achieves efficient, accurate reasoning under strict resource constraints, making LLM reasoning practical for mobile scenarios. Videos demonstrating our solution running on mobile devices are available on our project page.",
+      "published": "2026-03-17T17:59:51Z",
+      "updated": "2026-03-17T17:59:51Z",
+      "arxiv_id": "2603.16867v1",
+      "abs_url": "http://arxiv.org/abs/2603.16867v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16867v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "comment": "Project page: https://qualcomm-ai-research.github.io/llm-reasoning-on-edge/",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 5,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "adapter",
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA"
+      ],
+      "title_zh": "边缘高效推理",
+      "summary_zh": "具有思想链推理的大型语言模型 (LLM) 在复杂的问题解决任务中实现了最先进的性能，但其冗长的推理轨迹和大量的上下文要求使得它们对于边缘部署来说不切实际。这些挑战包括高令牌生成成本、大的 KV 缓存占用空间以及将推理功能提炼为移动设备的较小模型时的低效率。现有的方法通常依赖于将推理轨迹从较大的模型提取到较小的模型中，这既冗长又风格冗余，不利于设备上的推理。在这项工作中，我们提出了一种轻量级方法，使用 LoRA 适配器与监督微调相结合，在小型 LLM 中进行推理。我们通过对这些适配器的强化学习进一步引入预算强制，显着缩短响应长度，同时将准确性损失降至最低。为了解决内存限制解码问题，我们利用并行测试时间缩放，在轻微延迟增加的情况下提高准确性。最后，我们提出了一种动态适配器切换机制，仅在需要时才激活推理，并在提示编码期间提供 KV 缓存共享策略，从而减少设备上推理的首次令牌时间。在Qwen2.5-7B上的实验表明，我们的方法在严格的资源限制下实现了高效、准确的推理，使得LLM推理在移动场景下变得实用。我们的项目页面上提供了演示我们在移动设备上运行的解决方案的视频。"
+    },
+    {
+      "title": "An assessment of data-centric methods for label noise identification in remote sensing data sets",
+      "authors": [
+        "Felix Kröber",
+        "Genc Hoxha",
+        "Ribana Roscher"
+      ],
+      "summary": "Label noise in the sense of incorrect labels is present in many real-world data sets and is known to severely limit the generalizability of deep learning models. In the field of remote sensing, however, automated treatment of label noise in data sets has received little attention to date. In particular, there is a lack of systematic analysis of the performance of data-centric methods that not only cope with label noise but also explicitly identify and isolate noisy labels. In this paper, we examine three such methods and evaluate their behavior under different label noise assumptions. To do this, we inject different types of label noise with noise levels ranging from 10 to 70% into two benchmark data sets, followed by an analysis of how well the selected methods filter the label noise and how this affects task performances. With our analyses, we clearly prove the value of data-centric methods for both parts - label noise identification and task performance improvements. Our analyses provide insights into which method is the best choice depending on the setting and objective. Finally, we show in which areas there is still a need for research in the transfer of data-centric label noise methods to remote sensing data. As such, our work is a step forward in bridging the methodological establishment of data-centric label noise methods and their usage in practical settings in the remote sensing domain.",
+      "published": "2026-03-17T17:40:28Z",
+      "updated": "2026-03-17T17:40:28Z",
+      "arxiv_id": "2603.16835v1",
+      "abs_url": "http://arxiv.org/abs/2603.16835v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16835v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted for publication in International Society for Photogrammetry and Remote Sensing (ISPRS) Annals 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 5,
+      "anchor_terms": [
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "photogrammetry",
+        "remote sensing"
+      ],
+      "title_zh": "遥感数据集中以数据为中心的标签噪声识别方法的评估",
+      "summary_zh": "不正确标签意义上的标签噪声存在于许多现实世界的数据集中，并且已知会严重限制深度学习模型的通用性。然而，在遥感领域，数据集中标签噪声的自动处理迄今为止很少受到关注。特别是，缺乏对以数据为中心的方法性能的系统分析，这些方法不仅可以应对标签噪声，还可以明确识别和隔离噪声标签。在本文中，我们研究了三种此类方法，并评估了它们在不同标签噪声假设下的行为。为此，我们将噪声水平从 10% 到 70% 不等的不同类型的标签噪声注入到两个基准数据集中，然后分析所选方法过滤标签噪声的效果以及这如何影响任务性能。通过我们的分析，我们清楚地证明了以数据为中心的方法对于标签噪声识别和任务性能改进这两个部分的价值。我们的分析提供了根据设置和目标哪种方法是最佳选择的见解。最后，我们展示了哪些领域仍需要研究以数据为中心的标签噪声方法向遥感数据的转移。因此，我们的工作在以数据为中心的标签噪声方法的方法论建立及其在遥感领域实际环境中的使用方面向前迈出了一步。"
+    },
+    {
+      "title": "Integrating Inductive Biases in Transformers via Distillation for Financial Time Series Forecasting",
+      "authors": [
+        "Yu-Chen Den",
+        "Kuan-Yu Chen",
+        "Kendro Vincent",
+        "Darby Tien-Hao Chang"
+      ],
+      "summary": "Transformer-based models have been widely adopted for time-series forecasting due to their high representational capacity and architectural flexibility. However, many Transformer variants implicitly assume stationarity and stable temporal dynamics -- assumptions routinely violated in financial markets characterized by regime shifts and non-stationarity. Empirically, state-of-the-art time-series Transformers often underperform even vanilla Transformers on financial tasks, while simpler architectures with distinct inductive biases, such as CNNs and RNNs, can achieve stronger performance with substantially lower complexity. At the same time, no single inductive bias dominates across markets or regimes, suggesting that robust financial forecasting requires integrating complementary temporal priors. We propose TIPS (Transformer with Inductive Prior Synthesis), a knowledge distillation framework that synthesizes diverse inductive biases -- causality, locality, and periodicity -- within a unified Transformer. TIPS trains bias-specialized Transformer teachers via attention masking, then distills their knowledge into a single student model with regime-dependent alignment across inductive biases. Across four major equity markets, TIPS achieves state-of-the-art performance, outperforming strong ensemble baselines by 55%, 9%, and 16% in annual return, Sharpe ratio, and Calmar ratio, while requiring only 38% of the inference-time computation. Further analyses show that TIPS generates statistically significant excess returns beyond both vanilla Transformers and its teacher ensembles, and exhibits regime-dependent behavioral alignment with classical architectures during their profitable periods. These results highlight the importance of regime-dependent inductive bias utilization for robust generalization in non-stationary financial time series.",
+      "published": "2026-03-17T17:06:46Z",
+      "updated": "2026-03-17T17:06:46Z",
+      "arxiv_id": "2603.16985v1",
+      "abs_url": "http://arxiv.org/abs/2603.16985v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16985v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "18 pages, 6 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "基础模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "时间序列与视频",
+      "score": 5,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "knowledge distillation",
+        "robust",
+        "temporal",
+        "time-series",
+        "transformer"
+      ],
+      "title_zh": "通过蒸馏将变压器中的归纳偏差集成到金融时间序列预测中",
+      "summary_zh": "基于 Transformer 的模型由于其高表示能力和架构灵活性而被广泛用于时间序列预测。然而，许多 Transformer 变体隐含地假设了平稳性和稳定的时间动态——在以政权转变和非平稳为特征的金融市场中，这些假设经常被违反。根据经验，最先进的时间序列 Transformer 在金融任务上的表现通常甚至不如普通 Transformer，而具有明显归纳偏差的更简单的架构（例如 CNN 和 RNN）可以以大幅降低的复杂性实现更强的性能。与此同时，没有单一的归纳偏差在整个市场或制度中占主导地位，这表明稳健的金融预测需要整合互补的时间先验。我们提出了 TIPS（具有归纳先验综合的 Transformer），这是一种知识蒸馏框架，可以在统一的 Transformer 中综合不同的归纳偏差（因果性、局部性和周期性）。 TIPS 通过注意力掩蔽来培训偏见专业的 Transformer 教师，然后将他们的知识提炼成单个学生模型，该模型具有跨归纳偏见的制度依赖对齐。在四个主要股票市场中，TIPS 实现了最先进的性能，年回报率、夏普比率和卡尔玛比率分别比强大的集成基线高出 55%、9% 和 16%，而仅需要 38% 的推理时间计算。进一步的分析表明，TIPS 产生了统计上显着的超额回报，超越了普通的 Transformers 及其教师组合，并且在盈利时期表现出了与经典架构的依赖于制度的行为一致性。这些结果强调了利用依赖于制度的归纳偏差对于非平稳金融时间序列的稳健泛化的重要性。"
+    },
+    {
+      "title": "Spectral Property-Driven Data Augmentation for Hyperspectral Single-Source Domain Generalization",
+      "authors": [
+        "Taiqin Chen",
+        "Yifeng Wang",
+        "Xiaochen Feng",
+        "Zhilin Zhu",
+        "Hao Sha",
+        "Yingjian Li",
+        "Yongbing Zhang"
+      ],
+      "summary": "While hyperspectral images (HSI) benefit from numerous spectral channels that provide rich information for classification, the increased dimensionality and sensor variability make them more sensitive to distributional discrepancies across domains, which in turn can affect classification performance. To tackle this issue, hyperspectral single-source domain generalization (SDG) typically employs data augmentation to simulate potential domain shifts and enhance model robustness under the condition of single-source domain training data availability. However, blind augmentation may produce samples misaligned with real-world scenarios, while excessive emphasis on realism can suppress diversity, highlighting a tradeoff between realism and diversity that limits generalization to target domains. To address this challenge, we propose a spectral property-driven data augmentation (SPDDA) that explicitly accounts for the inherent properties of HSI, namely the device-dependent variation in the number of spectral channels and the mixing of adjacent channels. Specifically, SPDDA employs a spectral diversity module that resamples data from the source domain along the spectral dimension to generate samples with varying spectral channels, and constructs a channel-wise adaptive spectral mixer by modeling inter-channel similarity, thereby avoiding fixed augmentation patterns. To further enhance the realism of the augmented samples, we propose a spatial-spectral co-optimization mechanism, which jointly optimizes a spatial fidelity constraint and a spectral continuity self-constraint. Moreover, the weight of the spectral self-constraint is adaptively adjusted based on the spatial counterpart, thus preventing over-smoothing in the spectral dimension and preserving spatial structure. Extensive experiments conducted on three remote sensing benchmarks demonstrate that SPDDA outperforms state-of-the-art methods.",
+      "published": "2026-03-17T15:30:28Z",
+      "updated": "2026-03-17T15:30:28Z",
+      "arxiv_id": "2603.16662v1",
+      "abs_url": "http://arxiv.org/abs/2603.16662v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16662v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "小样本与域泛化",
+        "高光谱/多光谱",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 8,
+      "anchor_terms": [
+        "domain generalization",
+        "hyperspectral image",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "domain generalization",
+        "hyperspectral",
+        "hyperspectral image",
+        "remote sensing",
+        "robust"
+      ],
+      "title_zh": "用于高光谱单源域泛化的光谱属性驱动数据增强",
+      "summary_zh": "虽然高光谱图像 (HSI) 受益于为分类提供丰富信息的众多光谱通道，但维度的增加和传感器的可变性使它们对跨域的分布差异更加敏感，这反过来又会影响分类性能。为了解决这个问题，高光谱单源域泛化（SDG）通常采用数据增强来模拟潜在的域转移，并在单源域训练数据可用的情况下增强模型的鲁棒性。然而，盲目增强可能会产生与现实世界场景不相符的样本，而过度强调现实性会抑制多样性，突出现实性和多样性之间的权衡，从而限制了对目标领域的泛化。为了应对这一挑战，我们提出了一种光谱属性驱动的数据增强（SPDDA），它明确地考虑了 HSI 的固有属性，即光谱通道数量的设备相关变化和相邻通道的混合。具体来说，SPDDA采用频谱分集模块，沿频谱维度对来自源域的数据进行重采样，以生成具有不同频谱通道的样本，并通过对通道间相似性进行建模来构造通道自适应频谱混合器，从而避免固定的增强模式。为了进一步增强增强样本的真实感，我们提出了一种空间光谱协同优化机制，该机制联合优化空间保真度约束和光谱连续性自我约束。此外，光谱自约束的权重根据空间对应物自适应调整，从而防止光谱维度过度平滑并保留空间结构。在三个遥感基准上进行的大量实验表明，SPDDA 的性能优于最先进的方法。"
+    },
+    {
+      "title": "FEAT: A Linear-Complexity Foundation Model for Extremely Large Structured Data",
+      "authors": [
+        "Zhenghang Song",
+        "Tang Qian",
+        "Lu Chen",
+        "Yushuai Li",
+        "Zhengke Hu",
+        "Bingbing Fang",
+        "Yumeng Song",
+        "Junbo Zhao",
+        "Sheng Zhang",
+        "Tianyi Li"
+      ],
+      "summary": "Structured data is foundational to healthcare, finance, e-commerce, and scientific data management. Large structured-data models (LDMs) extend the foundation model paradigm to unify heterogeneous datasets for tasks such as classification, regression, and decision support. However, existing LDMs face major limitations. First, most rely on sample-wise self-attention, whose O(N^2) complexity limits the sample count. Second, linear sequence models often degrade representations due to hidden-state compression and artificial causal bias. Third, synthetic-only pre-training often fails to match real-world distributions. We propose FEAT, a linear-complexity foundation model for extremely large structured data. FEAT introduces a multi-layer dual-axis architecture that replaces quadratic attention with hybrid linear encoding. The architecture combines adaptive-fusion bi-Mamba-2 (AFBM) for local sample dependencies and convolutional gated linear attention (Conv-GLA) for global memory. This design enables linear-complexity cross-sample modeling while preserving expressive representations. To improve robustness, FEAT adopts a hybrid structural causal model pipeline and a stable reconstruction objective. Experiments on 11 real-world datasets show that FEAT consistently outperforms baselines in zero-shot performance, while scaling linearly and achieving up to 40x faster inference.",
+      "published": "2026-03-17T13:40:39Z",
+      "updated": "2026-03-20T05:05:26Z",
+      "arxiv_id": "2603.16513v2",
+      "abs_url": "http://arxiv.org/abs/2603.16513v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.16513v2",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "小样本与域泛化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 7,
+      "anchor_terms": [
+        "Mamba"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "Mamba",
+        "pre-training",
+        "robust",
+        "self-attention",
+        "zero-shot"
+      ],
+      "title_zh": "FEAT：超大结构化数据的线性复杂度基础模型",
+      "summary_zh": "结构化数据是医疗保健、金融、电子商务和科学数据管理的基础。大型结构化数据模型 (LDM) 扩展了基础模型范例，以统一异构数据集来执行分类、回归和决策支持等任务。然而，现有的 LDM 面临着重大限制。首先，大多数依赖于样本自注意力，其 O(N^2) 复杂度限制了样本数量。其次，由于隐藏状态压缩和人为因果偏差，线性序列模型通常会降低表示的质量。第三，仅合成的预训练通常无法匹配现实世界的分布。我们提出了 FEAT，一种适用于超大结构化数据的线性复杂度基础模型。 FEAT 引入了多层双轴架构，用混合线性编码取代二次注意力。该架构结合了用于局部样本依赖性的自适应融合 bi-Mamba-2 (AFBM) 和用于全局记忆的卷积门控线性注意 (Conv-GLA)。这种设计可以实现线性复杂度跨样本建模，同时保留表达性表示。为了提高鲁棒性，FEAT 采用混合结构因果模型管道和稳定的重建目标。对 11 个真实世界数据集的实验表明，FEAT 在零样本性能方面始终优于基准，同时线性扩展并实现高达 40 倍的推理速度。"
+    },
+    {
+      "title": "CD-FKD: Cross-Domain Feature Knowledge Distillation for Robust Single-Domain Generalization in Object Detection",
+      "authors": [
+        "Junseok Lee",
+        "Sungho Shin",
+        "Seongju Lee",
+        "Kyoobin Lee"
+      ],
+      "summary": "Single-domain generalization is essential for object detection, particularly when training models on a single source domain and evaluating them on unseen target domains. Domain shifts, such as changes in weather, lighting, or scene conditions, pose significant challenges to the generalization ability of existing models. To address this, we propose Cross-Domain Feature Knowledge Distillation (CD-FKD), which enhances the generalization capability of the student network by leveraging both global and instance-wise feature distillation. The proposed method uses diversified data through downscaling and corruption to train the student network, whereas the teacher network receives the original source domain data. The student network mimics the features of the teacher through both global and instance-wise distillation, enabling it to extract object-centric features effectively, even for objects that are difficult to detect owing to corruption. Extensive experiments on challenging scenes demonstrate that CD-FKD outperforms state-of-the-art methods in both target domain generalization and source domain performance, validating its effectiveness in improving object detection robustness to domain shifts. This approach is valuable in real-world applications, like autonomous driving and surveillance, where robust object detection in diverse environments is crucial.",
+      "published": "2026-03-17T12:20:02Z",
+      "updated": "2026-03-17T12:20:02Z",
+      "arxiv_id": "2603.16439v1",
+      "abs_url": "http://arxiv.org/abs/2603.16439v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16439v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "Accepted to ICRA 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "基础模型",
+        "小样本与域泛化",
+        "高效微调与轻量化"
+      ],
+      "topic": "目标检测",
+      "score": 9,
+      "anchor_terms": [
+        "domain generalization"
+      ],
+      "matched_terms": [
+        "domain generalization",
+        "knowledge distillation",
+        "object detection",
+        "robust"
+      ],
+      "title_zh": "CD-FKD：目标检测中鲁棒单域泛化的跨域特征知识蒸馏",
+      "summary_zh": "单域泛化对于对象检测至关重要，特别是在单个源域上训练模型并在看不见的目标域上评估它们时。领域的变化，例如天气、照明或场景条件的变化，对现有模型的泛化能力提出了重大挑战。为了解决这个问题，我们提出了跨域特征知识蒸馏（CD-FKD），它通过利用全局和实例特征蒸馏来增强学生网络的泛化能力。所提出的方法通过缩减和损坏使用多样化的数据来训练学生网络，而教师网络则接收原始源域数据。学生网络通过全局和实例级蒸馏来模仿教师的特征，使其能够有效地提取以对象为中心的特征，即使是由于损坏而难以检测的对象。在具有挑战性的场景上进行的大量实验表明，CD-FKD 在目标域泛化和源域性能方面均优于最先进的方法，验证了其在提高对象检测对域移动的鲁棒性方面的有效性。这种方法在现实应用中很有价值，例如自动驾驶和监控，在这些应用中，不同环境中强大的对象检测至关重要。"
+    },
+    {
+      "title": "3D Fourier-based Global Feature Extraction for Hyperspectral Image Classification",
+      "authors": [
+        "Muhammad Ahmad"
+      ],
+      "summary": "Hyperspectral image classification (HSIC) has been significantly advanced by deep learning methods that exploit rich spatial-spectral correlations. However, existing approaches still face fundamental limitations: transformer-based models suffer from poor scalability due to the quadratic complexity of self-attention, while recent Fourier transform-based methods typically rely on 2D spatial FFTs and largely ignore critical inter-band spectral dependencies inherent to hyperspectral data. To address these challenges, we propose Hybrid GFNet (HGFNet), a novel architecture that integrates localized 3D convolutional feature extraction with frequency-domain global filtering via GFNet-style blocks for efficient and robust spatial-spectral representation learning. HGFNet introduces three complementary frequency transforms tailored to hyperspectral imagery: Spectral Fourier Transform (a 1D FFT along the spectral axis), Spatial Fourier Transform (a 2D FFT over spatial dimensions), and Spatial-Spatial Fourier Transform (a 3D FFT jointly over spectral and spatial dimensions), enabling comprehensive and high-dimensional frequency modeling. The 3D convolutional layers capture fine-grained local spatial-spectral structures, while the Fourier-based global filtering modules efficiently model long-range dependencies and suppress noise. To further mitigate the severe class imbalance commonly observed in HSIC, HGFNet incorporates an Adaptive Focal Loss (AFL) that dynamically adjusts class-wise focusing and weighting, improving discrimination for underrepresented classes.",
+      "published": "2026-03-17T12:02:28Z",
+      "updated": "2026-03-17T12:02:28Z",
+      "arxiv_id": "2603.16426v1",
+      "abs_url": "http://arxiv.org/abs/2603.16426v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16426v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "场景分类",
+        "高效微调与轻量化",
+        "高光谱/多光谱"
+      ],
+      "topic": "场景分类",
+      "score": 13,
+      "anchor_terms": [
+        "hyperspectral image",
+        "hyperspectral imagery"
+      ],
+      "matched_terms": [
+        "hyperspectral",
+        "hyperspectral image",
+        "hyperspectral image classification",
+        "hyperspectral imagery",
+        "image classification",
+        "robust",
+        "self-attention",
+        "transformer"
+      ],
+      "title_zh": "用于高光谱图像分类的基于 3D 傅立叶的全局特征提取",
+      "summary_zh": "通过利用丰富的空间光谱相关性的深度学习方法，高光谱图像分类 (HSIC) 得到了显着的进步。然而，现有方法仍然面临根本性的限制：由于自注意力的二次复杂性，基于变换器的模型的可扩展性较差，而最近基于傅里叶变换的方法通常依赖于二维空间 FFT，并且在很大程度上忽略了高光谱数据固有的关键带间光谱依赖性。为了应对这些挑战，我们提出了混合 GFNet (HGFNet)，这是一种新颖的架构，通过 GFNet 样式块将局部 3D 卷积特征提取与频域全局滤波相集成，以实现高效、鲁棒的空间频谱表示学习。 HGFNet 引入了三种针对高光谱图像定制的互补频率变换：频谱傅里叶变换（沿谱轴的 1D FFT）、空间傅里叶变换（空间维度上的 2D FFT）和空间-空间傅里叶变换（频谱和空间维度上的 3D FFT），从而实现全面的高维频率建模。 3D 卷积层捕获细粒度的局部空间频谱结构，而基于傅里叶的全局滤波模块则有效地模拟长程依赖性并抑制噪声。为了进一步缓解 HSIC 中常见的严重类别不平衡，HGFNet 结合了自适应焦点损失 (AFL)，可动态调整类别聚焦和权重，从而改善对代表性不足类别的歧视。"
+    },
+    {
+      "title": "$D^3$-RSMDE: 40$\\times$ Faster and High-Fidelity Remote Sensing Monocular Depth Estimation",
+      "authors": [
+        "Ruizhi Wang",
+        "Weihan Li",
+        "Zunlei Feng",
+        "Haofei Zhang",
+        "Mingli Song",
+        "Jiayu Wang",
+        "Jie Song",
+        "Li Sun"
+      ],
+      "summary": "Real-time, high-fidelity monocular depth estimation from remote sensing imagery is crucial for numerous applications, yet existing methods face a stark trade-off between accuracy and efficiency. Although using Vision Transformer (ViT) backbones for dense prediction is fast, they often exhibit poor perceptual quality. Conversely, diffusion models offer high fidelity but at a prohibitive computational cost. To overcome these limitations, we propose Depth Detail Diffusion for Remote Sensing Monocular Depth Estimation ($D^3$-RSMDE), an efficient framework designed to achieve an optimal balance between speed and quality. Our framework first leverages a ViT-based module to rapidly generate a high-quality preliminary depth map construction, which serves as a structural prior, effectively replacing the time-consuming initial structure generation stage of diffusion models. Based on this prior, we propose a Progressive Linear Blending Refinement (PLBR) strategy, which uses a lightweight U-Net to refine the details in only a few iterations. The entire refinement step operates efficiently in a compact latent space supported by a Variational Autoencoder (VAE). Extensive experiments demonstrate that $D^3$-RSMDE achieves a notable 11.85% reduction in the Learned Perceptual Image Patch Similarity (LPIPS) perceptual metric over leading models like Marigold, while also achieving over a 40x speedup in inference and maintaining VRAM usage comparable to lightweight ViT models.",
+      "published": "2026-03-17T10:50:36Z",
+      "updated": "2026-03-17T10:50:36Z",
+      "arxiv_id": "2603.16362v1",
+      "abs_url": "http://arxiv.org/abs/2603.16362v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16362v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "语义分割",
+        "图像生成与重建",
+        "基础模型",
+        "高效微调与轻量化",
+        "LiDAR/点云"
+      ],
+      "topic": "语义分割",
+      "score": 9,
+      "anchor_terms": [
+        "depth estimation",
+        "diffusion model",
+        "remote sensing",
+        "vision transformer"
+      ],
+      "matched_terms": [
+        "depth estimation",
+        "diffusion model",
+        "remote sensing",
+        "transformer",
+        "U-Net",
+        "vision transformer",
+        "ViT"
+      ],
+      "title_zh": "$D^3$-RSMDE：40$\\times$ 更快、高保真遥感单目深度估计",
+      "summary_zh": "利用遥感图像进行实时、高保真度的单目深度估计对于许多应用来说至关重要，但现有方法面临着准确性和效率之间的严重权衡。尽管使用 Vision Transformer (ViT) 主干进行密集预测速度很快，但它们通常表现出较差的感知质量。相反，扩散模型提供高保真度，但计算成本却过高。为了克服这些限制，我们提出了用于遥感单目深度估计的深度细节扩散（$D^3$-RSMDE），这是一个旨在实现速度和质量之间的最佳平衡的有效框架。我们的框架首先利用基于 ViT 的模块快速生成高质量的初步深度图构造，作为结构先验，有效地取代了扩散模型耗时的初始结构生成阶段。基于此，我们提出了渐进线性混合细化（PLBR）策略，该策略使用轻量级 U-Net 只需几次迭代即可细化细节。整个细化步骤在变分自动编码器 (VAE) 支持的紧凑潜在空间中高效运行。大量实验表明，与 Marigold 等领先模型相比，$D^3$-RSMDE 的学习感知图像块相似度 (LPIPS) 感知指标显着降低了 11.85%，同时推理速度提高了 40 倍以上，并保持了与轻量级 ViT 模型相当的 VRAM 使用率。"
+    },
+    {
+      "title": "PKINet-v2: Towards Powerful and Efficient Poly-Kernel Remote Sensing Object Detection",
+      "authors": [
+        "Xinhao Cai",
+        "Liulei Li",
+        "Gensheng Pei",
+        "Zeren Sun",
+        "Yazhou Yao",
+        "Wenguan Wang"
+      ],
+      "summary": "Object detection in remote sensing images (RSIs) is challenged by the coexistence of geometric and spatial complexity: targets may appear with diverse aspect ratios, while spanning a wide range of object sizes under varied contexts. Existing RSI backbones address the two challenges separately, either by adopting anisotropic strip kernels to model slender targets or by using isotropic large kernels to capture broader context. However, such isolated treatments lead to complementary drawbacks: the strip-only design can disrupt spatial coherence for regular-shaped objects and weaken tiny details, whereas isotropic large kernels often introduce severe background noise and geometric mismatch for slender structures. In this paper, we extend PKINet, and present a powerful and efficient backbone that jointly handles both challenges within a unified paradigm named Poly Kernel Inception Network v2 (PKINet-v2). PKINet-v2 synergizes anisotropic axial-strip convolutions with isotropic square kernels and builds a multi-scope receptive field, preserving fine-grained local textures while progressively aggregating long-range context across scales. To enable efficient deployment, we further introduce a Heterogeneous Kernel Re-parameterization (HKR) Strategy that fuses all heterogeneous branches into a single depth-wise convolution for inference, eliminating fragmented kernel launches without accuracy loss. Extensive experiments on four widely-used benchmarks, including DOTA-v1.0, DOTA-v1.5, HRSC2016, and DIOR-R, demonstrate that PKINet-v2 achieves state-of-the-art accuracy while delivering a $\\textbf{3.9}\\times$ FPS acceleration compared to PKINet-v1, surpassing previous remote sensing backbones in both effectiveness and efficiency.",
+      "published": "2026-03-17T10:17:58Z",
+      "updated": "2026-03-17T10:17:58Z",
+      "arxiv_id": "2603.16341v1",
+      "abs_url": "http://arxiv.org/abs/2603.16341v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16341v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 19,
+      "anchor_terms": [
+        "object detection",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "DIOR",
+        "DIOR-R",
+        "DOTA",
+        "DOTA-v1.5",
+        "object detection",
+        "remote sensing",
+        "remote sensing object detection"
+      ],
+      "title_zh": "PKINet-v2：迈向强大而高效的多核遥感目标检测",
+      "summary_zh": "遥感图像（RSI）中的目标检测面临着几何和空间复杂性共存的挑战：目标可能以不同的长宽比出现，同时在不同的背景下跨越各种目标尺寸。现有的 RSI 主干网分别解决了这两个挑战，要么采用各向异性条带内核来模拟细长目标，要么使用各向同性大内核来捕获更广泛的背景。然而，这种孤立的处理会带来互补的缺点：仅带状的设计会破坏规则形状物体的空间连贯性并削弱微小的细节，而各向同性的大内核通常会给细长结构带来严重的背景噪声和几何失配。在本文中，我们扩展了 PKINet，并提出了一个强大而高效的主干网，可以在名为 Poly Kernel Inception Network v2 (PKINet-v2) 的统一范式中共同应对这两个挑战。 PKINet-v2 将各向异性轴向带卷积与各向同性方核协同作用，并构建多范围感受野，保留细粒度的局部纹理，同时逐步聚合跨尺度的远程上下文。为了实现高效部署，我们进一步引入了异构内核重新参数化（HKR）策略，该策略将所有异构分支融合到单个深度卷积中进行推理，消除碎片内核启动而不会损失准确性。对 DOTA-v1.0、DOTA-v1.5、HRSC2016 和 DIOR-R 等四个广泛使用的基准进行的大量实验表明，与 PKINet-v1 相比，PKINet-v2 实现了最先进的精度，同时提供 $\\textbf{3.9}\\times$ FPS 加速，在有效性和效率方面超越了以前的遥感骨干网。"
+    },
+    {
+      "title": "SpikeCLR: Contrastive Self-Supervised Learning for Few-Shot Event-Based Vision using Spiking Neural Networks",
+      "authors": [
+        "Maxime Vaillant",
+        "Axel Carlier",
+        "Lai Xing Ng",
+        "Christophe Hurter",
+        "Benoit R. Cottereau"
+      ],
+      "summary": "Event-based vision sensors provide significant advantages for high-speed perception, including microsecond temporal resolution, high dynamic range, and low power consumption. When combined with Spiking Neural Networks (SNNs), they can be deployed on neuromorphic hardware, enabling energy-efficient applications on embedded systems. However, this potential is severely limited by the scarcity of large-scale labeled datasets required to effectively train such models. In this work, we introduce SpikeCLR, a contrastive self-supervised learning framework that enables SNNs to learn robust visual representations from unlabeled event data. We adapt prior frame-based methods to the spiking domain using surrogate gradient training and introduce a suite of event-specific augmentations that leverage spatial, temporal, and polarity transformations. Through extensive experiments on CIFAR10-DVS, N-Caltech101, N-MNIST, and DVS-Gesture benchmarks, we demonstrate that self-supervised pretraining with subsequent fine-tuning outperforms supervised learning in low-data regimes, achieving consistent gains in few-shot and semi-supervised settings. Our ablation studies reveal that combining spatial and temporal augmentations is critical for learning effective spatio-temporal invariances in event data. We further show that learned representations transfer across datasets, contributing to efforts for powerful event-based models in label-scarce settings.",
+      "published": "2026-03-17T10:11:34Z",
+      "updated": "2026-03-17T10:11:34Z",
+      "arxiv_id": "2603.16338v1",
+      "abs_url": "http://arxiv.org/abs/2603.16338v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16338v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "17 pages, 4 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "小样本与域泛化",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 8,
+      "anchor_terms": [
+        "semi-supervised"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "robust",
+        "self-supervised",
+        "self-supervised learning",
+        "semi-supervised"
+      ],
+      "title_zh": "SpikeCLR：使用尖峰神经网络进行基于小样本事件的视觉的对比自监督学习",
+      "summary_zh": "基于事件的视觉传感器为高速感知提供了显着的优势，包括微秒时间分辨率、高动态范围和低功耗。当与尖峰神经网络 (SNN) 结合使用时，它们可以部署在神经形态硬件上，从而在嵌入式系统上实现节能应用。然而，这种潜力受到有效训练此类模型所需的大规模标记数据集的稀缺性的严重限制。在这项工作中，我们介绍了 SpikeCLR，这是一种对比自监督学习框架，使 SNN 能够从未标记的事件数据中学习鲁棒的视觉表示。我们使用代理梯度训练将先前基于帧的方法适应尖峰域，并引入一套利用空间、时间和极性变换的特定于事件的增强。通过对 CIFAR10-DVS、N-Caltech101、N-MNIST 和 DVS-Gesture 基准的大量实验，我们证明了自监督预训练和后续微调在低数据情况下优于监督学习，在少样本和半监督设置中实现了一致的增益。我们的消融研究表明，结合空间和时间增强对于学习事件数据中有效的时空不变性至关重要。我们进一步表明，学习到的表示可以跨数据集传输，有助于在标签稀缺的环境中建立强大的基于事件的模型。"
+    },
+    {
+      "title": "Offline Exploration-Aware Fine-Tuning for Long-Chain Mathematical Reasoning",
+      "authors": [
+        "Yongyu Mu",
+        "Jiali Zeng",
+        "Fandong Meng",
+        "JingBo Zhu",
+        "Tong Xiao"
+      ],
+      "summary": "Through encouraging self-exploration, reinforcement learning from verifiable rewards (RLVR) has significantly advanced the mathematical reasoning capabilities of large language models. As the starting point for RLVR, the capacity of supervised fine-tuning (SFT) to memorize new chain-of-thought trajectories provides a crucial initialization that shapes the subsequent exploration landscape. However, existing research primarily focuses on facilitating exploration during RLVR training, leaving exploration-aware SFT under-explored. To bridge this gap, we propose Offline eXploration-Aware (OXA) fine-tuning. Specifically, OXA optimizes two objectives: promoting low-confidence verified teacher-distillation data to internalize previously uncaptured reasoning patterns, and suppressing high-confidence incorrect self-distillation data to redistribute probability mass of incorrect patterns toward potentially correct candidates. Experimental results across 6 benchmarks show that OXA consistently improves mathematical reasoning performance, especially achieving an average gain of $+6$ Pass@1 and $+5$ Pass@$k$ points compared to conventional SFT on the Qwen2.5-1.5B-Math. Crucially, OXA elevates initial policy entropy, and performance gains persist throughout extensive RLVR training, demonstrating the long-term value of OXA.",
+      "published": "2026-03-17T07:36:29Z",
+      "updated": "2026-03-17T07:36:29Z",
+      "arxiv_id": "2603.16206v1",
+      "abs_url": "http://arxiv.org/abs/2603.16206v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16206v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "comment": "Working in process",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 5,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LoRA"
+      ],
+      "title_zh": "长链数学推理的离线探索感知微调",
+      "summary_zh": "通过鼓励自我探索，可验证奖励的强化学习（RLVR）显着提高了大型语言模型的数学推理能力。作为 RLVR 的起点，监督微调（SFT）记忆新的思维链轨迹的能力提供了塑造后续探索景观的关键初始化。然而，现有的研究主要集中在促进 RLVR 训练期间的探索，而探索感知的 SFT 尚未得到充分探索。为了弥补这一差距，我们提出了离线探索感知（OXA）微调。具体来说，OXA 优化了两个目标：促进低置信度验证的教师蒸馏数据以内化以前未捕获的推理模式，并抑制高置信度不正确的自蒸馏数据，以将错误模式的概率质量重新分配给潜在正确的候选者。 6 个基准测试的实验结果表明，OXA 持续提高了数学推理性能，特别是与 Qwen2.5-1.5B-Math 上的传统 SFT 相比，平均获得了 $+6$ Pass@1 和 $+5$ Pass@$k$ 分。至关重要的是，OXA 提高了初始策略熵，并且在广泛的 RLVR 训练过程中持续提高性能，这证明了 OXA 的长期价值。"
+    },
+    {
+      "title": "Communication-Aware Multi-Agent Reinforcement Learning for Decentralized Cooperative UAV Deployment",
+      "authors": [
+        "Enguang Fan",
+        "Yifan Chen",
+        "Zihan Shan",
+        "Matthew Caesar",
+        "Jae Kim"
+      ],
+      "summary": "Autonomous Unmanned Aerial Vehicle (UAV) swarms are increasingly used as rapidly deployable aerial relays and sensing platforms, yet practical deployments must operate under partial observability and intermittent peer-to-peer links. We present a graph-based multi-agent reinforcement learning framework trained under centralized training with decentralized execution (CTDE): a centralized critic and global state are available only during training, while each UAV executes a shared policy using local observations and messages from nearby neighbors. Our architecture encodes local agent state and nearby entities with an agent-entity attention module, and aggregates inter-UAV messages with neighbor self-attention over a distance-limited communication graph. We evaluate primarily on a cooperative relay deployment task (DroneConnect) and secondarily on an adversarial engagement task (DroneCombat). In DroneConnect, the proposed method achieves high coverage under restricted communication and partial observation (e.g. 74% coverage with M = 5 UAVs and N = 10 nodes) while remaining competitive with a mixed-integer linear programming (MILP) optimization-based offline upper bound, and it generalizes to unseen team sizes without fine-tuning. In the adversarial setting, the same framework transfers without architectural changes and improves win rate over non-communicating baselines.",
+      "published": "2026-03-17T05:48:51Z",
+      "updated": "2026-03-17T05:48:51Z",
+      "arxiv_id": "2603.16141v1",
+      "abs_url": "http://arxiv.org/abs/2603.16141v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16141v1",
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cs.LG",
+        "cs.NI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "无人机/UAV"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 8,
+      "anchor_terms": [
+        "drone",
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "drone",
+        "fine-tuning",
+        "self-attention",
+        "UAV",
+        "unmanned aerial vehicle"
+      ],
+      "title_zh": "用于分散式协作无人机部署的通信感知多智能体强化学习",
+      "summary_zh": "自主无人机（UAV）群越来越多地用作快速部署的空中中继和传感平台，但实际部署必须在部分可观测性和间歇性点对点链路下运行。我们提出了一个基于图的多智能体强化学习框架，在集中式训练和分散式执行（CTDE）下进行训练：集中式批评家和全局状态仅在训练期间可用，而每个无人机使用本地观察和来自附近邻居的消息执行共享策略。我们的架构使用代理实体注意力模块对本地代理状态和附近实体进行编码，并在距离有限的通信图上聚合具有邻居自注意力的无人机间消息。我们主要评估合作中继部署任务（DroneConnect），其次评估对抗性交战任务（DroneCombat）。在 DroneConnect 中，所提出的方法在受限通信和部分观察下实现了高覆盖率（例如，M = 5 架无人机和 N = 10 个节点的覆盖率达到 74%），同时与基于混合整数线性规划 (MILP) 优化的离线上限保持竞争力，并且无需微调即可推广到看不见的团队规模。在对抗性环境中，相同的框架无需进行架构更改即可进行传输，并且相对于非通信基线提高了获胜率。"
+    },
+    {
+      "title": "Out-of-Distribution Object Detection in Street Scenes via Synthetic Outlier Exposure and Transfer Learning",
+      "authors": [
+        "Sadia Ilyas",
+        "Annika Mütze",
+        "Klaus Friedrichs",
+        "Thomas Kurbiel",
+        "Matthias Rottmann"
+      ],
+      "summary": "Out-of-distribution (OOD) object detection is an important yet underexplored task. A reliable object detector should be able to handle OOD objects by localizing and correctly classifying them as OOD. However, a critical issue arises when such atypical objects are completely missed by the object detector and incorrectly treated as background. Existing OOD detection approaches in object detection often rely on complex architectures or auxiliary branches and typically do not provide a framework that treats in-distribution (ID) and OOD in a unified way. In this work, we address these limitations by enabling a single detector to detect OOD objects, that are otherwise silently overlooked, alongside ID objects. We present \\textbf{SynOE-OD}, a \\textbf{Syn}thetic \\textbf{O}utlier-\\textbf{E}xposure-based \\textbf{O}bject \\textbf{D}etection framework, that leverages strong generative models, like Stable Diffusion, and Open-Vocabulary Object Detectors (OVODs) to generate semantically meaningful, object-level data that serve as outliers during training. The generated data is used for transfer-learning to establish strong ID task performance and supplement detection models with OOD object detection robustness. Our approach achieves state-of-the-art average precision on an established OOD object detection benchmark, where OVODs, such as GroundingDINO, show limited zero-shot performance in detecting OOD objects in street-scenes.",
+      "published": "2026-03-17T05:06:28Z",
+      "updated": "2026-03-17T05:06:28Z",
+      "arxiv_id": "2603.16122v1",
+      "abs_url": "http://arxiv.org/abs/2603.16122v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16122v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "图像生成与重建",
+        "开放词汇与开放集",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 10,
+      "anchor_terms": [
+        "object detection",
+        "open-vocabulary"
+      ],
+      "matched_terms": [
+        "object detection",
+        "open-vocabulary",
+        "robust",
+        "stable diffusion",
+        "transfer learning",
+        "zero-shot"
+      ],
+      "title_zh": "通过合成异常值曝光和迁移学习进行街道场景中的分布外对象检测",
+      "summary_zh": "分布外（OOD）对象检测是一项重要但尚未得到充分探索的任务。可靠的对象检测器应该能够通过定位 OOD 对象并将其正确分类为 OOD 来处理它们。然而，当物体检测器完全错过此类非典型物体并错误地将其视为背景时，就会出现一个关键问题。现有的物体检测中的 OOD 检测方法通常依赖于复杂的架构或辅助分支，并且通常不提供以统一方式处理分布内（ID）和 OOD 的框架。在这项工作中，我们通过启用单个检测器来检测 OOD 对象来解决这些限制，否则这些对象会与 ID 对象一起被悄悄忽略。我们提出了 \\textbf{SynOE-OD}，一个 \\textbf{Syn}thetic \\textbf{O}utlier-\\textbf{E}xposure-based \\textbf{O}bject \\textbf{D} 检测框架，它利用强大的生成模型，如稳定扩散和开放词汇对象检测器（OVOD）来生成语义上有意义的对象级数据，这些数据在培训。生成的数据用于迁移学习，以建立强大的 ID 任务性能，并通过 OOD 对象检测鲁棒性补充检测模型。我们的方法在已建立的 OOD 对象检测基准上实现了最先进的平均精度，其中 OVOD（例如 GroundingDINO）在检测街道场景中的 OOD 对象时显示出有限的零样本性能。"
+    },
+    {
+      "title": "Adaptive regularization parameter selection for high-dimensional inverse problems: A Bayesian approach with Tucker low-rank constraints",
+      "authors": [
+        "Qing-Mei Yang",
+        "Da-Qing Zhang"
+      ],
+      "summary": "This paper introduces a novel variational Bayesian method that integrates Tucker decomposition for efficient high-dimensional inverse problem solving. The method reduces computational complexity by transforming variational inference from a high-dimensional space to a lower-dimensional core tensor space via Tucker decomposition. A key innovation is the introduction of per-mode precision parameters, enabling adaptive regularization for anisotropic structures. For instance, in directional image deblurring, learned parameters align with physical anisotropy, applying stronger regularization to critical directions (e.g., row vs. column axes). The method further estimates noise levels from data, eliminating reliance on prior knowledge of noise parameters (unlike conventional benchmarks such as the discrepancy principle (DP)). Experimental evaluations across 2D deblurring, 3D heat conduction, and Fredholm integral equations demonstrate consistent improvements in quantitative metrics (PSNR, SSIM) and qualitative visualizations (error maps, precision parameter trends) compared to L-curve criterion, generalized cross-validation (GCV), unbiased predictive risk estimator (UPRE), and DP. The approach scales to problems with 110,000 variables and outperforms existing methods by 0.73-2.09 dB in deblurring tasks and 6.75 dB in 3D heat conduction. Limitations include sensitivity to rank selection in Tucker decomposition and the need for theoretical analysis. Future work will explore automated rank selection and theoretical guarantees. This method bridges Bayesian theory and scalable computation, offering practical solutions for large-scale inverse problems in imaging, remote sensing, and scientific computing.",
+      "published": "2026-03-17T02:23:44Z",
+      "updated": "2026-03-17T02:23:44Z",
+      "arxiv_id": "2603.16066v1",
+      "abs_url": "http://arxiv.org/abs/2603.16066v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.16066v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 2,
+      "anchor_terms": [
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "remote sensing"
+      ],
+      "title_zh": "高维反问题的自适应正则化参数选择：具有塔克低秩约束的贝叶斯方法",
+      "summary_zh": "本文介绍了一种新颖的变分贝叶斯方法，该方法集成了塔克分解以实现高效的高维逆问题求解。该方法通过塔克分解将变分推理从高维空间变换到低维核心张量空间，从而降低了计算复杂度。一项关键创新是引入每模式精度参数，从而实现各向异性结构的自适应正则化。例如，在定向图像去模糊中，学习的参数与物理各向异性一致，对关键方向（例如行轴与列轴）应用更强的正则化。该方法进一步从数据中估计噪声水平，消除了对噪声参数先验知识的依赖（与差异原理（DP）等传统基准不同）。 2D 去模糊、3D 热传导和 Fredholm 积分方程的实验评估表明，与 L 曲线准则、广义交叉验证 (GCV)、无偏预测风险估计器 (UPRE) 和 DP 相比，定量指标（PSNR、SSIM）和定性可视化（误差图、精度参数趋势）得到了一致的改进。该方法可扩展到 110,000 个变量的问题，在去模糊任务中比现有方法高 0.73-2.09 dB，在 3D 热传导中比现有方法高 6.75 dB。局限性包括塔克分解中等级选择的敏感性以及理论分析的需要。未来的工作将探索自动排名选择和理论保证。该方法将贝叶斯理论和可扩展计算联系起来，为成像、遥感和科学计算中的大规模反问题提供实用的解决方案。"
+    }
+  ]
+}

@@ -1,0 +1,1109 @@
+{
+  "date": "2026-03-19",
+  "generated_at": "2026-05-11T07:46:44.642584+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202603190000 TO 202603192359]",
+  "total_fetched": 421,
+  "total_matched": 26,
+  "papers": [
+    {
+      "title": "Multi-Modal Building Change Detection for Large-Scale Small Changes: Benchmark and Baseline",
+      "authors": [
+        "Ye Wang",
+        "Wei Lu",
+        "Zhihui You",
+        "Keyan Chen",
+        "Tongfei Liu",
+        "Kaiyu Li",
+        "Hongruixuan Chen",
+        "Qingling Shu",
+        "Sibao Chen"
+      ],
+      "summary": "Change detection in optical remote sensing imagery is susceptible to illumination fluctuations, seasonal changes, and variations in surface land-cover materials. Relying solely on RGB imagery often produces pseudo-changes and leads to semantic ambiguity in features. Incorporating near-infrared (NIR) information provides heterogeneous physical cues that are complementary to visible light, thereby enhancing the discriminability of building materials and tiny structures while improving detection accuracy. However, existing multi-modal datasets generally lack high-resolution and accurately registered bi-temporal imagery, and current methods often fail to fully exploit the inherent heterogeneity between these modalities. To address these issues, we introduce the Large-scale Small-change Multi-modal Dataset (LSMD), a bi-temporal RGB-NIR building change detection benchmark dataset targeting small changes in realistic scenarios, providing a rigorous testing platform for evaluating multi-modal change detection methods in complex environments. Based on LSMD, we further propose the Multi-modal Spectral Complementarity Network (MSCNet) to achieve effective cross-modal feature fusion. MSCNet comprises three key components: the Neighborhood Context Enhancement Module (NCEM) to strengthen local spatial details, the Cross-modal Alignment and Interaction Module (CAIM) to enable deep interaction between RGB and NIR features, and the Saliency-aware Multisource Refinement Module (SMRM) to progressively refine fused features. Extensive experiments demonstrate that MSCNet effectively leverages multi-modal information and consistently outperforms existing methods under multiple input configurations, validating its efficacy for fine-grained building change detection. The source code will be made publicly available at: https://github.com/AeroVILab-AHU/LSMD",
+      "published": "2026-03-19T16:05:05Z",
+      "updated": "2026-03-19T16:05:05Z",
+      "arxiv_id": "2603.19077v1",
+      "abs_url": "http://arxiv.org/abs/2603.19077v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19077v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "15 pages, 12 figures",
+      "code_url": "https://github.com/AeroVILab-AHU/LSMD",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "变化检测",
+        "多模态融合",
+        "光学遥感",
+        "高光谱/多光谱",
+        "数据集/评测"
+      ],
+      "topic": "变化检测",
+      "score": 7,
+      "anchor_terms": [
+        "change detection",
+        "optical remote sensing",
+        "remote sensing",
+        "temporal"
+      ],
+      "matched_terms": [
+        "change detection",
+        "feature fusion",
+        "optical remote",
+        "optical remote sensing",
+        "remote sensing",
+        "temporal"
+      ],
+      "title_zh": "针对大规模小变化的多模式建筑变化检测：基准和基线",
+      "summary_zh": "光学遥感图像中的变化检测容易受到光照波动、季节变化和地表土地覆盖材料变化的影响。仅仅依赖 RGB 图像通常会产生伪变化并导致特征的语义模糊。结合近红外 (NIR) 信息可提供与可见光互补的异构物理线索，从而增强建筑材料和微小结构的辨别能力，同时提高检测精度。然而，现有的多模态数据集通常缺乏高分辨率和准确配准的双时态图像，并且当前的方法通常无法充分利用这些模态之间固有的异质性。为了解决这些问题，我们引入了大规模小变化多模态数据集（LSMD），这是一个针对现实场景中微小变化的双时态 RGB-NIR 建筑变化检测基准数据集，为评估复杂环境下的多模态变化检测方法提供了严格的测试平台。基于LSMD，我们进一步提出多模态谱互补网络（MSCNet）以实现有效的跨模态特征融合。 MSCNet 包含三个关键组件：用于增强局部空间细节的邻域上下文增强模块 (NCEM)、用于实现 RGB 和 NIR 特征之间深度交互的跨模态对齐和交互模块 (CAIM)，以及用于逐步细化融合特征的显着性感知多源细化模块 (SMRM)。大量实验表明，MSCNet 有效地利用了多模态信息，并在多种输入配置下始终优于现有方法，验证了其细粒度建筑变化检测的功效。源代码将公开发布于：https://github.com/AeroVILab-AHU/LSMD"
+    },
+    {
+      "title": "ProCal: Probability Calibration for Neighborhood-Guided Source-Free Domain Adaptation",
+      "authors": [
+        "Ying Zheng",
+        "Yiyi Zhang",
+        "Yi Wang",
+        "Lap-Pui Chau"
+      ],
+      "summary": "Source-Free Domain Adaptation (SFDA) adapts pre-trained models to unlabeled target domains without requiring access to source data. Although state-of-the-art methods leveraging local neighborhood structures show promise for SFDA, they tend to over-rely on prediction similarity among neighbors. This over-reliance accelerates the forgetting of source knowledge and increases susceptibility to local noise overfitting. To address these issues, we introduce ProCal, a probability calibration method that dynamically calibrates neighborhood-based predictions through a dual-model collaborative prediction mechanism. ProCal integrates the source model's initial predictions with the current model's online outputs to effectively calibrate neighbor probabilities. This strategy not only mitigates the interference of local noise but also preserves the discriminative information from the source model, thereby achieving a balance between knowledge retention and domain adaptation. Furthermore, we design a joint optimization objective that combines a soft supervision loss with a diversity loss to guide the target model. Our theoretical analysis shows that ProCal converges to an equilibrium where source knowledge and target information are effectively fused, reducing both knowledge forgetting and overfitting. We validate the effectiveness of our approach through extensive experiments on 31 cross-domain tasks across four public datasets. Our code is available at: https://github.com/zhengyinghit/ProCal.",
+      "published": "2026-03-19T11:18:21Z",
+      "updated": "2026-03-19T11:18:21Z",
+      "arxiv_id": "2603.18764v1",
+      "abs_url": "http://arxiv.org/abs/2603.18764v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.18764v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/zhengyinghit/ProCal",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "基础模型",
+        "小样本与域泛化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 5,
+      "anchor_terms": [
+        "source-free"
+      ],
+      "matched_terms": [
+        "domain adaptation",
+        "source-free",
+        "source-free domain adaptation"
+      ],
+      "title_zh": "ProCal：邻域引导的无源域适应的概率校准",
+      "summary_zh": "无源域适应 (SFDA) 将预先训练的模型适应未标记的目标域，而无需访问源数据。尽管利用当地社区结构的最先进方法为 SFDA 带来了希望，但它们往往过度依赖邻居之间的预测相似性。这种过度依赖会加速源知识的遗忘，并增加对局部噪声过度拟合的敏感性。为了解决这些问题，我们引入了 ProCal，一种概率校准方法，通过双模型协作预测机制动态校准基于邻域的预测。 ProCal 将源模型的初始预测与当前模型的在线输出相结合，以有效地校准邻居概率。该策略不仅减轻了局部噪声的干扰，而且保留了源模型的判别信息，从而实现了知识保留和领域适应之间的平衡。此外，我们设计了一个联合优化目标，将软监督损失与多样性损失相结合来指导目标模型。我们的理论分析表明，ProCal 收敛到源知识和目标信息有效融合的平衡，减少知识遗忘和过度拟合。我们通过对四个公共数据集的 31 个跨域任务进行广泛的实验来验证我们方法的有效性。我们的代码位于：https://github.com/zhengyinghit/ProCal。"
+    },
+    {
+      "title": "SR-Nav: Spatial Relationships Matter for Zero-shot Object Goal Navigation",
+      "authors": [
+        "Leyuan Fang",
+        "Zan Mao",
+        "Zijing Wang",
+        "Yinlong Yan"
+      ],
+      "summary": "Zero-shot object-goal navigation aims to find target objects in unseen environments using only egocentric observation. Recent methods leverage foundation models' comprehension and reasoning capabilities to enhance navigation performance. However, when faced with poor viewpoints or weak semantic cues, foundation models often fail to support reliable reasoning in both perception and planning, resulting in inefficient or failed navigation. We observe that inherent relationships among objects and regions encode structured scene priors, which help agents infer plausible target locations even under partial observations. Motivated by this insight, we propose Spatial Relation-aware Navigation (SR-Nav), a framework that models both observed and experience-based spatial relationships to enhance both perception and planning. Specifically, SR-Nav first constructs a Dynamic Spatial Relationship Graph (DSRG) that encodes the target-centered spatial relationships through the foundation models and updates dynamically with real-time observations. We then introduce a Relation-aware Matching Module. It utilizes relationship matching instead of naive detection, leveraging diverse relationships in the DSRG to verify and correct errors, enhancing visual perception robustness. Finally, we design a Dynamic Relationship Planning Module to reduce the planning search space by dynamically computing the optimal paths based on the DSRG from the current position, thereby guiding planning and reducing exploration redundancy. Experiments on HM3D show that our method achieves state-of-the-art performance in both success rate and navigation efficiency. The code will be publicly available at https://github.com/Mzyw-1314/SR-Nav",
+      "published": "2026-03-19T03:09:32Z",
+      "updated": "2026-03-19T03:09:32Z",
+      "arxiv_id": "2603.18443v1",
+      "abs_url": "http://arxiv.org/abs/2603.18443v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.18443v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/Mzyw-1314/SR-Nav",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "基础模型",
+        "小样本与域泛化",
+        "高效微调与轻量化"
+      ],
+      "topic": "基础模型",
+      "score": 6,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "LoRA",
+        "robust",
+        "zero-shot"
+      ],
+      "title_zh": "SR-Nav：空间关系对于零样本目标导航很重要",
+      "summary_zh": "零样本目标目标导航旨在仅使用以自我为中心的观察来在看不见的环境中找到目标对象。最近的方法利用基础模型的理解和推理能力来增强导航性能。然而，当面对较差的观点或较弱的语义线索时，基础模型通常无法支持感知和规划方面的可靠推理，从而导致导航效率低下或失败。我们观察到对象和区域之间的内在关系编码结构化场景先验，这有助于代理即使在部分观察下也能推断出合理的目标位置。受这种洞察力的启发，我们提出了空间关系感知导航（SR-Nav），这是一个对观察到的和基于经验的空间关系进行建模的框架，以增强感知和规划。具体来说，SR-Nav首先构建动态空间关系图（DSRG），通过基础模型对以目标为中心的空间关系进行编码，并根据实时观测动态更新。然后我们引入一个关系感知匹配模块。它利用关系匹配而不是简单检测，利用 DSRG 中的不同关系来验证和纠正错误，从而增强视觉感知的鲁棒性。最后，我们设计了动态关系规划模块，通过从当前位置基于 DSRG 动态计算最优路径来减少规划搜索空间，从而指导规划并减少探索冗余。 HM3D 上的实验表明，我们的方法在成功率和导航效率方面都达到了最先进的性能。该代码将在 https://github.com/Mzyw-1314/SR-Nav 公开提供"
+    },
+    {
+      "title": "From Topic to Transition Structure: Unsupervised Concept Discovery at Corpus Scale via Predictive Associative Memory",
+      "authors": [
+        "Jason Dury"
+      ],
+      "summary": "Embedding models group text by semantic content, what text is about. We show that temporal co-occurrence within texts discovers a different kind of structure: recurrent transition-structure concepts or what text does. We train a 29.4M-parameter contrastive model on 373 million co-occurrence pairs from 9,766 Project Gutenberg texts (24.96 million passages), mapping pre-trained embeddings into an association space where passages with similar transition structure cluster together. Under capacity constraint (42.75% accuracy), the model must compress across recurring patterns rather than memorise individual co-occurrences. Clustering at six granularities (k=50 to k=2,000) produces a multi-resolution concept map; from broad modes like \"direct confrontation\" and \"lyrical meditation\" to precise registers and scene templates like \"sailor dialect\" and \"courtroom cross-examination.\" At k=100, clusters average 4,508 books each (of 9,766), confirming corpus-wide patterns. Direct comparison with embedding-similarity clustering shows that raw embeddings group by topic while association-space clusters group by function, register, and literary tradition. Unseen novels are assigned to existing clusters without retraining; the association model concentrates each novel into a selective subset of coherent clusters, while raw embedding assignment saturates nearly all clusters. Validation controls address positional, length, and book-concentration confounds. The method extends Predictive Associative Memory (PAM, arXiv:2602.11322) from episodic recall to concept formation: where PAM recalls specific associations, multi-epoch contrastive training under compression extracts structural patterns that transfer to unseen texts, the same framework producing qualitatively different behaviour in a different regime.",
+      "published": "2026-03-19T02:26:42Z",
+      "updated": "2026-03-19T02:26:42Z",
+      "arxiv_id": "2603.18420v1",
+      "abs_url": "http://arxiv.org/abs/2603.18420v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.18420v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "comment": "22 pages, 5 figures. Code and demo: https://github.com/EridosAI/PAM-Concept-Discovery",
+      "code_url": "https://github.com/EridosAI/PAM-Concept-Discovery",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "基础模型",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 2,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "unsupervised"
+      ],
+      "title_zh": "从主题到转换结构：通过预测联想记忆进行语料库规模的无监督概念发现",
+      "summary_zh": "嵌入模型按语义内容（文本的内容）对文本进行分组。我们表明，文本中的时间共现发现了一种不同类型的结构：反复出现的转换结构概念或文本的作用。我们在 9,766 个古腾堡计划文本（2496 万个段落）中的 3.73 亿个共现对上训练了一个 2940 万参数的对比模型，将预先训练的嵌入映射到一个关联空间，其中具有相似过渡结构的段落聚集在一起。在容量限制（42.75% 准确率）下，模型必须压缩重复出现的模式，而不是记住单独的同时出现的情况。以六个粒度（k=50 到 k=2,000）进行聚类可生成多分辨率概念图；从“直接对抗”、“抒情冥想”等宽泛的模式，到“水手方言”、“法庭盘问”等精确的语域和场景模板。当 k=100 时，每个集群平均有 4,508 本书（共 9,766 本书），证实了语料库范围内的模式。与嵌入相似性聚类的直接比较表明，原始嵌入按主题分组，而关联空间聚类按功能、语域和文学传统分组。未见过的小说被分配到现有的集群中，无需重新训练；关联模型将每部小说集中到相关簇的选择性子集中，而原始嵌入分配几乎饱和了所有簇。验证控制解决位置、长度和书籍浓度混淆问题。该方法将预测联想记忆（PAM，arXiv：2602.11322）从情景回忆扩展到概念形成：​​其中 PAM 回忆特定的关联，压缩下的多时代对比训练提取转移到未见过的文本的结构模式，相同的框架在不同的情况下产生性质不同的行为。"
+    },
+    {
+      "title": "dinov3.seg: Open-Vocabulary Semantic Segmentation with DINOv3",
+      "authors": [
+        "Saikat Dutta",
+        "Biplab Banerjee",
+        "Hamid Rezatofighi"
+      ],
+      "summary": "Open-Vocabulary Semantic Segmentation (OVSS) assigns pixel-level labels from an open set of text-defined categories, demanding reliable generalization to unseen classes at inference. Although modern vision-language models (VLMs) support strong open-vocabulary recognition, their representations learned through global contrastive objectives remain suboptimal for dense prediction, prompting many OVSS methods to depend on limited adaptation or refinement of image-text similarity maps. This, in turn, restricts spatial precision and robustness in complex, cluttered scenes. We introduce dinov3.seg, extending dinov3.txt into a dedicated framework for OVSS. Our contributions are four-fold. First, we design a task-specific architecture tailored to this backbone, systematically adapting established design principles from prior open-vocabulary segmentation work. Second, we jointly leverage text embeddings aligned with both the global [CLS] token and local patch-level visual features from ViT-based encoder, effectively combining semantic discrimination with fine-grained spatial locality. Third, unlike prior approaches that rely primarily on post hoc similarity refinement, we perform early refinement of visual representations prior to image-text interaction, followed by late refinement of the resulting image-text correlation features, enabling more accurate and robust dense predictions in cluttered scenes. Finally, we propose a high-resolution local-global inference strategy based on sliding-window aggregation, which preserves spatial detail while maintaining global context. We conduct extensive experiments on five widely adopted OVSS benchmarks to evaluate our approach. The results demonstrate its effectiveness and robustness, consistently outperforming current state-of-the-art methods.",
+      "published": "2026-03-19T23:57:28Z",
+      "updated": "2026-03-19T23:57:28Z",
+      "arxiv_id": "2603.19531v1",
+      "abs_url": "http://arxiv.org/abs/2603.19531v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19531v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "语义分割",
+        "开放词汇与开放集",
+        "基础模型",
+        "视觉-语言模型",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 9,
+      "anchor_terms": [
+        "open-vocabulary",
+        "semantic segmentation"
+      ],
+      "matched_terms": [
+        "open-vocabulary",
+        "robust",
+        "semantic segmentation",
+        "ViT"
+      ],
+      "title_zh": "dinov3.seg：使用 DINOv3 进行开放词汇语义分割",
+      "summary_zh": "开放词汇语义分割 (OVSS) 从一组开放的文本定义类别中分配像素级标签，要求在推理时可靠地泛化到看不见的类。尽管现代视觉语言模型（VLM）支持强大的开放词汇识别，但它们通过全局对比目标学习的表示对于密集预测来说仍然不是最佳的，这促使许多 OVSS 方法依赖于图像文本相似性图的有限适应或细化。这反过来又限制了复杂、杂乱场景中的空间精度和鲁棒性。我们引入 dinov3.seg，将 dinov3.txt 扩展为 OVSS 的专用框架。我们的贡献有四方面。首先，我们设计了一个针对该主干的特定于任务的架构，系统地适应先前开放词汇分割工作中既定的设计原则。其次，我们联合利用与全局 [CLS] 标记和基于 ViT 的编码器的局部补丁级视觉特征对齐的文本嵌入，有效地将语义辨别与细粒度空间局部性结合起来。第三，与主要依赖于事后相似性细化的先前方法不同，我们在图像-文本交互之前对视觉表示进行早期细化，然后对所得到的图像-文本相关特征进行后期细化，从而在杂乱的场景中实现更准确、更鲁棒的密集预测。最后，我们提出了一种基于滑动窗口聚合的高分辨率局部全局推理策略，该策略在保留全局上下文的同时保留空间细节。我们对五个广泛采用的 OVSS 基准进行了广泛的实验来评估我们的方法。结果证明了其有效性和稳健性，始终优于当前最先进的方法。"
+    },
+    {
+      "title": "Which Workloads Belong in Orbit? A Workload-First Framework for Orbital Data Centers Using Semantic Abstraction",
+      "authors": [
+        "Durgendra Narayan Singh"
+      ],
+      "summary": "Space-based compute is becoming plausible as launch costs fall and data-intensive AI workloads grow. This paper proposes a workload-centric framework for deciding which tasks belong in orbit versus terrestrial cloud, along with a phased adoption model tied to orbital data center maturity. We ground the framework with in-orbit semantic-reduction prototypes. An Earth-observation pipeline on Sentinel-2 imagery from Seattle and Bengaluru (formerly Bangalore) achieves 99.7-99.99% payload reduction by converting raw imagery to compact semantic artifacts. A multi-pass stereo reconstruction prototype reduces ~306 MB to ~1.57 MB of derived 3D representations (99.49% reduction). These results support a workload-first view in which semantic abstraction, not raw compute scale, drives early workload suitability.",
+      "published": "2026-03-19T22:25:47Z",
+      "updated": "2026-03-19T22:25:47Z",
+      "arxiv_id": "2603.20317v1",
+      "abs_url": "http://arxiv.org/abs/2603.20317v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.20317v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.DC",
+        "cs.NI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高光谱/多光谱"
+      ],
+      "topic": "高光谱/多光谱",
+      "score": 2,
+      "anchor_terms": [
+        "Sentinel-2"
+      ],
+      "matched_terms": [
+        "Sentinel-2"
+      ],
+      "title_zh": "哪些工作负载属于轨道？使用语义抽象的轨道数据中心工作负载优先框架",
+      "summary_zh": "随着发射成本的下降和数据密集型人工智能工作负载的增长，基于太空的计算变得越来越可行。本文提出了一个以工作负载为中心的框架，用于决定哪些任务属于轨道云和地面云，以及与轨道数据中心成熟度相关的分阶段采用模型。我们用在轨语义简化原型来构建该框架。来自西雅图和班加罗尔（以前称为班加罗尔）的 Sentinel-2 图像的地球观测管道通过将原始图像转换为紧凑的语义工件，实现了 99.7-99.99% 的有效负载减少。多通道立体重建原型将派生 3D 表示的约 306 MB 减少到约 1.57 MB（减少 99.49%）。这些结果支持工作负载优先的观点，其中语义抽象（而不是原始计算规模）推动了早期工作负载的适用性。"
+    },
+    {
+      "title": "ICLAD: In-Context Learning for Unified Tabular Anomaly Detection Across Supervision Regimes",
+      "authors": [
+        "Jack Yi Wei",
+        "Narges Armanfard"
+      ],
+      "summary": "Anomaly detection on tabular data is commonly studied under three supervision regimes, including one-class settings that assume access to anomaly-free training samples, fully unsupervised settings with unlabeled and potentially contaminated training data, and semi-supervised settings with limited anomaly labels. Existing deep learning approaches typically train dataset-specific models under the assumption of a single supervision regime, which limits their ability to leverage shared structures across anomaly detection tasks and to adapt to different supervision levels. We propose ICLAD, an in-context learning foundation model for tabular anomaly detection that generalizes across both datasets and supervision regimes. ICLAD is trained via meta-learning on synthetic tabular anomaly detection tasks, and at inference time, the model assigns anomaly scores by conditioning on the training set without updating model weights. Comprehensive experiments on 57 tabular datasets from ADBench show that our method achieves state-of-the-art performance across three supervision regimes, establishing a unified framework for tabular anomaly detection.",
+      "published": "2026-03-19T21:49:04Z",
+      "updated": "2026-03-19T21:49:04Z",
+      "arxiv_id": "2603.19497v1",
+      "abs_url": "http://arxiv.org/abs/2603.19497v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19497v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "33 pages, 17 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 7,
+      "anchor_terms": [
+        "in-context learning",
+        "semi-supervised",
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "foundation model",
+        "in-context learning",
+        "semi-supervised",
+        "unsupervised"
+      ],
+      "title_zh": "ICLAD：跨监管制度统一表格异常检测的上下文学习",
+      "summary_zh": "表格数据的异常检测通常在三种监督机制下进行研究，包括假设访问无异常训练样本的一类设置、具有未标记和可能污染的训练数据的完全无监督设置以及具有有限异常标签的半监督设置。现有的深度学习方法通​​常在单一监督机制的假设下训练特定于数据集的模型，这限制了它们在异常检测任务中利用共享结构并适应不同监督级别的能力。我们提出了 ICLAD，一种用于表格异常检测的上下文学习基础模型，可泛化到数据集和监督机制。 ICLAD 通过元学习对合成表格异常检测任务进行训练，并且在推理时，模型通过对训练集进行调节来分配异常分数，而不更新模型权重。对 ADBench 的 57 个表格数据集进行的综合实验表明，我们的方法在三种监督机制中实现了最先进的性能，为表格异常检测建立了统一的框架。"
+    },
+    {
+      "title": "VeloxNet: Efficient Spatial Gating for Lightweight Embedded Image Classification",
+      "authors": [
+        "Md Meftahul Ferdaus",
+        "Elias Ioup",
+        "Mahdi Abdelguerfi",
+        "Anton Netchaev",
+        "Steven Sloan",
+        "Ken Pathak",
+        "Kendall N. Niles"
+      ],
+      "summary": "Deploying deep learning models on embedded devices for tasks such as aerial disaster monitoring and infrastructure inspection requires architectures that balance accuracy with strict constraints on model size, memory, and latency. This paper introduces VeloxNet, a lightweight CNN architecture that replaces SqueezeNet's fire modules with gated multi-layer perceptron (gMLP) blocks for embedded image classification. Each gMLP block uses a spatial gating unit (SGU) that applies learned spatial projections and multiplicative gating, enabling the network to capture spatial dependencies across the full feature map in a single layer. Unlike fire modules, which are limited to local receptive fields defined by small convolutional kernels, the SGU provides global spatial modeling at each layer with fewer parameters. We evaluate VeloxNet on three aerial image datasets: the Aerial Image Database for Emergency Response (AIDER), the Comprehensive Disaster Dataset (CDD), and the Levee Defect Dataset (LDD), comparing against eleven baselines including MobileNet variants, ShuffleNet, EfficientNet, and recent vision transformers. VeloxNet reduces the parameter count by 46.1% relative to SqueezeNet (from 740,970 to 399,366) while improving weighted F1 scores by 6.32% on AIDER, 30.83% on CDD, and 2.51% on LDD. These results demonstrate that substituting local convolutional modules with spatial gating blocks can improve both classification accuracy and parameter efficiency for resource-constrained deployment. The source code will be made publicly available upon acceptance of the paper.",
+      "published": "2026-03-19T21:46:20Z",
+      "updated": "2026-03-19T21:46:20Z",
+      "arxiv_id": "2603.19496v1",
+      "abs_url": "http://arxiv.org/abs/2603.19496v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19496v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "This work has been submitted to the IEEE for possible publication",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "场景分类",
+        "基础模型",
+        "高效微调与轻量化",
+        "无人机/UAV",
+        "灾害与应急监测",
+        "数据集/评测"
+      ],
+      "topic": "场景分类",
+      "score": 9,
+      "anchor_terms": [
+        "aerial image",
+        "vision transformer"
+      ],
+      "matched_terms": [
+        "aerial",
+        "aerial image",
+        "CNN",
+        "disaster monitoring",
+        "image classification",
+        "transformer",
+        "vision transformer"
+      ],
+      "title_zh": "VeloxNet：用于轻量级嵌入式图像分类的高效空间门控",
+      "summary_zh": "在嵌入式设备上部署深度学习模型以执行空中灾害监测和基础设施检查等任务，需要架构能够平衡准确性与模型大小、内存和延迟的严格限制。本文介绍了 VeloxNet，这是一种轻量级 CNN 架构，它用门控多层感知器 (gMLP) 块取代了 SqueezeNet 的 fire 模块，用于嵌入式图像分类。每个 gMLP 块都使用一个空间门控单元 (SGU)，该单元应用学习的空间投影和乘法门控，使网络能够捕获单层中完整特征图的空间依赖性。与仅限于由小卷积核定义的局部感受野的火灾模块不同，SGU 在每一层提供全局空间建模，参数较少。我们在三个航空图像数据集上评估 VeloxNet：紧急响应航空图像数据库 (AIDER)、综合灾害数据集 (CDD) 和堤坝缺陷数据集 (LDD)，并与包括 MobileNet 变体、ShuffleNet、EfficientNet 和最新视觉 Transformer 在内的 11 个基线进行比较。相对于 SqueezeNet，VeloxNet 减少了 46.1% 的参数数量（从 740,970 到 399,366），同时 AIDER 上的加权 F1 分数提高了 6.32%，CDD 提高了 30.83%，LDD 提高了 2.51%。这些结果表明，用空间门控块替换局部卷积模块可以提高资源受限部署的分类精度和参数效率。论文被接受后，源代码将公开。"
+    },
+    {
+      "title": "RPiAE: A Representation-Pivoted Autoencoder Enhancing Both Image Generation and Editing",
+      "authors": [
+        "Yue Gong",
+        "Hongyu Li",
+        "Shanyuan Liu",
+        "Bo Cheng",
+        "Yuhang Ma",
+        "Liebucha Wu",
+        "Xiaoyu Wu",
+        "Manyuan Zhang",
+        "Dawei Leng",
+        "Yuhui Yin",
+        "Lijun Zhang"
+      ],
+      "summary": "Diffusion models have become the dominant paradigm for image generation and editing, with latent diffusion models shifting denoising to a compact latent space for efficiency and scalability. Recent attempts to leverage pretrained visual representation models as tokenizer priors either align diffusion features to representation features or directly reuse representation encoders as frozen tokenizers. Although such approaches can improve generation metrics, they often suffer from limited reconstruction fidelity due to frozen encoders, which in turn degrades editing quality, as well as overly high-dimensional latents that make diffusion modeling difficult. To address these limitations, We propose Representation-Pivoted AutoEncoder, a representation-based tokenizer that improves both generation and editing. We introduce Representation-Pivot Regularization, a training strategy that enables a representation-initialized encoder to be fine-tuned for reconstruction while preserving the semantic structure of the pretrained representation space, followed by a variational bridge which compress latent space into a compact one for better diffusion modeling. We adopt an objective-decoupled stage-wise training strategy that sequentially optimizes generative tractability and reconstruction-fidelity objectives. Together, these components yield a tokenizer that preserves strong semantics, reconstructs faithfully, and produces latents with reduced diffusion modeling complexity. Experiments demonstrate that RPiAE outperforms other visual tokenizers on text-to-image generation and image editing, while delivering the best reconstruction fidelity among representation-based tokenizers.",
+      "published": "2026-03-19T17:54:43Z",
+      "updated": "2026-03-19T17:54:43Z",
+      "arxiv_id": "2603.19206v1",
+      "abs_url": "http://arxiv.org/abs/2603.19206v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19206v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建"
+      ],
+      "topic": "图像生成与重建",
+      "score": 5,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "denoising",
+        "diffusion model",
+        "image generation"
+      ],
+      "title_zh": "RPiAE：增强图像生成和编辑的以表示为中心的自动编码器",
+      "summary_zh": "扩散模型已成为图像生成和编辑的主导范例，潜在扩散模型将去噪转移到紧凑的潜在空间，以提高效率和可扩展性。最近尝试利用预训练的视觉表示模型作为分词器先验，将扩散特征与表示特征对齐，或者直接重用表示编码器作为冻结分词器。尽管此类方法可以改善生成指标，但由于编码器冻结，它们通常会受到有限的重建保真度的影响，这反过来又会降低编辑质量，并且潜在维度过高，使扩散建模变得困难。为了解决这些限制，我们提出了 Representation-Pivoted AutoEncoder，这是一种基于表示的分词器，可以改进生成和编辑。我们引入了表示枢轴正则化，这是一种训练策略，可以对表示初始化的编码器进行微调以进行重建，同时保留预训练表示空间的语义结构，然后是一个变分桥，将潜在空间压缩为紧凑的空间，以实现更好的扩散建模。我们采用目标解耦的分阶段训练策略，依次优化生成可处理性和重建保真度目标。这些组件共同产生了一个分词器，它保留了强大的语义，忠实地重建，并以降低的扩散建模复杂性产生潜在的。实验表明，RPiAE 在文本到图像生成和图像编辑方面优于其他视觉分词器，同时在基于表示的分词器中提供最佳的重建保真度。"
+    },
+    {
+      "title": "VEPO: Variable Entropy Policy Optimization for Low-Resource Language Foundation Models",
+      "authors": [
+        "Chonghan Liu",
+        "Yimin Du",
+        "Qi An",
+        "Xin He",
+        "Cunqi Zhai",
+        "Fei Tan",
+        "Weijia Lin",
+        "Xiaochun Gong",
+        "Yongchao Deng",
+        "Shousheng Jia",
+        "Xiangzheng Zhang"
+      ],
+      "summary": "Large language models frequently exhibit suboptimal performance on low resource languages, primarily due to inefficient subword segmentation and systemic training data imbalances. In this paper, we propose Variable Entropy Policy Optimization (VEPO), which leverages Reinforcement Learning with Verifiable Rewards to incorporate deterministic structural constraints into the policy alignment process. This framework ensures prescribed sequence length, robust format consistency, and rigorous linguistic well formedness, all enforced during training. Central to our approach is a variable entropy mechanism that enables the model to dynamically calibrate the equilibrium between literal fidelity and semantic naturalness by modulating the exploration exploitation manifold. By integrating entropy tempered advantage estimation with asymmetric clipping, VEPO sustains robust exploration while mitigating policy collapse. Empirical evaluations across 90 FLORES-200, COMET-22, chrF directions demonstrate that VEPO yields substantial improvements in both tokenization efficiency and translation quality, bridging the performance gap for underrepresented languages.",
+      "published": "2026-03-19T17:10:29Z",
+      "updated": "2026-03-19T17:10:29Z",
+      "arxiv_id": "2603.19152v1",
+      "abs_url": "http://arxiv.org/abs/2603.19152v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19152v1",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "comment": "23 pages. Includes figures and tables. Conference submission",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 7,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "CLIP",
+        "foundation model",
+        "large language model",
+        "LoRA",
+        "robust",
+        "tokenization"
+      ],
+      "title_zh": "VEPO：低资源语言基础模型的变熵策略优化",
+      "summary_zh": "大型语言模型经常在低资源语言上表现出次优性能，这主要是由于低效的子词分割和系统训练数据不平衡。在本文中，我们提出了可变熵策略优化（VEPO），它利用具有可验证奖励的强化学习将确定性结构约束纳入策略调整过程。该框架确保了规定的序列长度、强大的格式一致性和严格的语言格式，所有这些都在训练期间强制执行。我们方法的核心是可变熵机制，该机制使模型能够通过调节探索利用流形来动态校准字面保真度和语义自然度之间的平衡。通过将熵调节优势估计与不对称裁剪相结合，VEPO 可以维持稳健的探索，同时减轻策略崩溃。对 90 个 FLORES-200、COMET-22、chrF 方向的实证评估表明，VEPO 在标记化效率和翻译质量方面都取得了实质性改进，缩小了代表性不足的语言的性能差距。"
+    },
+    {
+      "title": "Enhancing Pretrained Model-based Continual Representation Learning via Guided Random Projection",
+      "authors": [
+        "Ruilin Li",
+        "Heming Zou",
+        "Xiufeng Yan",
+        "Zheming Liang",
+        "Jie Yang",
+        "Chenliang Li",
+        "Xue Yang"
+      ],
+      "summary": "Recent paradigms in Random Projection Layer (RPL)-based continual representation learning have demonstrated superior performance when building upon a pre-trained model (PTM). These methods insert a randomly initialized RPL after a PTM to enhance feature representation in the initial stage. Subsequently, a linear classification head is used for analytic updates in the continual learning stage. However, under severe domain gaps between pre-trained representations and target domains, a randomly initialized RPL exhibits limited expressivity under large domain shifts. While largely scaling up the RPL dimension can improve expressivity, it also induces an ill-conditioned feature matrix, thereby destabilizing the recursive analytic updates of the linear head. To this end, we propose the Stochastic Continual Learner with MemoryGuard Supervisory Mechanism (SCL-MGSM). Unlike random initialization, MGSM constructs the projection layer via a principled, data-guided mechanism that progressively selects target-aligned random bases to adapt the PTM representation to downstream tasks. This facilitates the construction of a compact yet expressive RPL while improving the numerical stability of analytic updates. Extensive experiments on multiple exemplar-free Class Incremental Learning (CIL) benchmarks demonstrate that SCL-MGSM achieves superior performance compared to state-of-the-art methods.",
+      "published": "2026-03-19T17:01:14Z",
+      "updated": "2026-03-19T17:01:14Z",
+      "arxiv_id": "2603.19145v1",
+      "abs_url": "http://arxiv.org/abs/2603.19145v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19145v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "小样本与域泛化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 2,
+      "anchor_terms": [
+        "continual learning"
+      ],
+      "matched_terms": [
+        "continual learning",
+        "incremental learning"
+      ],
+      "title_zh": "通过引导随机投影增强基于预训练模型的持续表示学习",
+      "summary_zh": "基于随机投影层 (RPL) 的连续表示学习的最新范例在构建预训练模型 (PTM) 时表现出了卓越的性能。这些方法在 PTM 之后插入随机初始化的 RPL，以增强初始阶段的特征表示。随后，在持续学习阶段使用线性分类头进行分析更新。然而，在预训练表示和目标域之间存在严重域差距的情况下，随机初始化的 RPL 在大域移位下表现出有限的表达能力。虽然大幅扩大 RPL 维度可以提高表现力，但它也会导致病态特征矩阵，从而破坏线性头的递归分析更新的稳定性。为此，我们提出了具有 MemoryGuard 监督机制的随机持续学习器（SCL-MGSM）。与随机初始化不同，MGSM 通过有原则的、数据引导的机制构建投影层，该机制逐步选择目标对齐的随机基数以使 PTM 表示适应下游任务。这有助于构建紧凑而富有表现力的 RPL，同时提高分析更新的数值稳定性。对多个无样本类增量学习 (CIL) 基准的大量实验表明，与最先进的方法相比，SCL-MGSM 实现了卓越的性能。"
+    },
+    {
+      "title": "TerraScope: Pixel-Grounded Visual Reasoning for Earth Observation",
+      "authors": [
+        "Yan Shu",
+        "Bin Ren",
+        "Zhitong Xiong",
+        "Xiao Xiang Zhu",
+        "Begüm Demir",
+        "Nicu Sebe",
+        "Paolo Rota"
+      ],
+      "summary": "Vision-language models (VLMs) have shown promise in earth observation (EO), yet they struggle with tasks that require grounding complex spatial reasoning in precise pixel-level visual representations. To address this problem, we introduce TerraScope, a unified VLM that delivers pixel-grounded geospatial reasoning with two key capabilities: (1) modality-flexible reasoning: it handles single-modality inputs (optical or SAR) and adaptively fuses different modalities into the reasoning process when both are available; (2) multi-temporal reasoning: it integrates temporal sequences for change analysis across multiple time points. In addition, we curate Terra-CoT, a large-scale dataset containing 1 million samples with pixel-level masks embedded in reasoning chains across multiple sources. We also propose TerraScope-Bench, the first benchmark for pixel-grounded geospatial reasoning with six sub-tasks that evaluates both answer accuracy and mask quality to ensure authentic pixel-grounded reasoning. Experiments show that TerraScope significantly outperforms existing VLMs on pixel-grounded geospatial reasoning while providing interpretable visual evidence.",
+      "published": "2026-03-19T15:38:02Z",
+      "updated": "2026-03-19T15:38:02Z",
+      "arxiv_id": "2603.19039v1",
+      "abs_url": "http://arxiv.org/abs/2603.19039v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.19039v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted by CVPR20206 (Main Track)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像描述与视觉推理",
+        "时间序列与视频",
+        "视觉-语言模型",
+        "SAR遥感",
+        "数据集/评测"
+      ],
+      "topic": "图像描述与视觉推理",
+      "score": 10,
+      "anchor_terms": [
+        "earth observation",
+        "temporal"
+      ],
+      "matched_terms": [
+        "earth observation",
+        "geospatial",
+        "multi-temporal",
+        "SAR",
+        "spatial reasoning",
+        "temporal",
+        "VLM"
+      ],
+      "title_zh": "TerraScope：地球观测的基于像素的视觉推理",
+      "summary_zh": "视觉语言模型 (VLM) 在地球观测 (EO) 方面显示出了良好的前景，但它们难以完成需要在精确的像素级视觉表示中进行复杂空间推理的任务。为了解决这个问题，我们引入了 TerraScope，这是一个统一的 VLM，它提供基于像素的地理空间推理，具有两个关键功能：（1）模态灵活推理：它处理单模态输入（光学或 SAR），并在两种模态都可用时自适应地将不同模态融合到推理过程中； (2)多时间推理：整合时间序列进行跨多个时间点的变化分析。此外，我们还策划了 Terra-CoT，这是一个包含 100 万个样本的大型数据集，这些样本的像素级掩码嵌入在多个来源的推理链中。我们还提出了 TerraScope-Bench，这是第一个基于像素的地理空间推理基准，具有六个子任务，可评估答案准确性和掩模质量，以确保真实的基于像素的推理。实验表明，TerraScope 在基于像素的地理空间推理方面显着优于现有的 VLM，同时提供可解释的视觉证据。"
+    },
+    {
+      "title": "The Global-Local loop: what is missing in bridging the gap between geospatial data from numerous communities?",
+      "authors": [
+        "Clément Mallet",
+        "Ana-Maria Raimond"
+      ],
+      "summary": "We face a unprecedented amount of geospatial data, describing directly or indirectly the Earth Surface at multiple spatial, temporal, and semantic scales, and stemming from numerous contributors, from satellites to citizens. The main challenge in all the geospatial-related communities lies in suitably leveraging a combination of some of the sources for either a generic or a thematic application. Certain data fusion schemes are predominantly exploited: they correspond to popular tasks with mainstream data sources, e.g., free archives of Sentinel images coupled with OpenStreetMap data under an open and widespread deep-learning backbone for land-cover mapping purposes. Most of these approaches unfortunately operate under a \"master-slave\" paradigm, where one source is basically integrated to help processing the \"main\" source, without mutual advantages (e.g., large-scale estimation of a given biophysical variable using in-situ observations) and under a specific community bias. We argue that numerous key data fusion configurations, and in particular the effort in symmetrizing the exploitation of multiple data sources, are insufficiently addressed while being highly beneficial for generic or thematic applications. Bridges and retroactions between scales, communities and their respective sources are lacking, neglecting the utmost potential of such a \"global-local loop\". In this paper, we propose to establish the most relevant interaction schemes through illustrative use cases. We subsequently discuss under-explored research directions that could take advantage of leveraging available data through multiples extents and communities.",
+      "published": "2026-03-19T14:47:59Z",
+      "updated": "2026-03-19T14:47:59Z",
+      "arxiv_id": "2603.20305v1",
+      "abs_url": "http://arxiv.org/abs/2603.20305v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.20305v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted at the 2026 ISPRS Congress",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "多模态融合"
+      ],
+      "topic": "多模态融合",
+      "score": 6,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "geospatial",
+        "satellite",
+        "temporal"
+      ],
+      "title_zh": "全球-本地循环：在弥合来自众多社区的地理空间数据之间的差距时缺少什么？",
+      "summary_zh": "我们面临着前所未有的大量地理空间数据，这些数据在多个空间、时间和语义尺度上直接或间接描述地球表面，并且来自从卫星到公民的众多贡献者。所有地理空间相关社区的主要挑战在于适当地利用一些资源的组合来实现通用或主题应用程序。主要利用某些数据融合方案：它们对应于主流数据源的流行任务，例如，在开放且广泛的深度学习骨干下，将哨兵图像的免费档案与 OpenStreetMap 数据相结合，用于土地覆盖制图。不幸的是，这些方法中的大多数都在“主从”范式下运行，其中一个源基本上被集成以帮助处理“主要”源，没有互惠互利（例如，使用现场观测对给定生物物理变量进行大规模估计）并且处于特定的群体偏见下。我们认为，许多关键的数据融合配置，特别是对称利用多个数据源的努力，虽然对通用或主题应用程序非常有益，但没有得到充分解决。尺度、社区及其各自来源之间缺乏桥梁和追溯，忽视了这种“全球-本地循环”的最大潜力。在本文中，我们建议通过说明性用例建立最相关的交互方案。随后，我们讨论了尚未探索的研究方向，这些方向可以通过多个范围和社区利用可用数据。"
+    },
+    {
+      "title": "Geography According to ChatGPT -- How Generative AI Represents and Reasons about Geography",
+      "authors": [
+        "Krzysztof Janowicz",
+        "Gengchen Mai",
+        "Rui Zhu",
+        "Song Gao",
+        "Zhangyu Wang",
+        "Yingjie Hu",
+        "Lauren Bennett"
+      ],
+      "summary": "Understanding how AI will represent and reason about geography should be a key concern for all of us, as the broader public increasingly interacts with spaces and places through these systems. Similarly, in line with the nature of foundation models, our own research often relies on pre-trained models. Hence, understanding what world AI systems construct is as important as evaluating their accuracy, including factual recall. To motivate the need for such studies, we provide three illustrative vignettes, i.e., exploratory probes, in the hope that they will spark lively discussions and follow-up work: (1) Do models form strong defaults, and how brittle are model outputs to minute syntactic variations? (2) Can distributional shifts resurface from the composition of individually benign tasks, e.g., when using AI systems to create personas? (3) Do we overlook deeper questions of understanding when solely focusing on the ability of systems to recall facts such as geographic principles?",
+      "published": "2026-03-19T13:24:09Z",
+      "updated": "2026-03-19T13:24:09Z",
+      "arxiv_id": "2603.18881v1",
+      "abs_url": "http://arxiv.org/abs/2603.18881v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.18881v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CY"
+      ],
+      "comment": "Accepted book chapter (introduction to valume)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "基础模型",
+      "score": 2,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "LoRA"
+      ],
+      "title_zh": "ChatGPT 中的地理学——生成式 AI 如何表示地理学及其原因",
+      "summary_zh": "随着越来越多的公众越来越多地通过这些系统与空间和地点互动，了解人工智能如何表示和推理地理应该成为我们所有人的一个关键关注点。同样，根据基础模型的性质，我们自己的研究通常依赖于预先训练的模型。因此，了解世界人工智能系统的构造与评估其准确性（包括事实回忆）同样重要。为了激发此类研究的需求，我们提供了三个说明性的小插图，即探索性探索，希望它们能够引发热烈的讨论和后续工作：（1）模型是否形成强默认值，以及模型输出对微小句法变化的脆弱性如何？ (2) 分配变化能否从单个良性任务的组成中重新浮现出来，例如，当使用人工智能系统创建角色时？ （3）当仅仅关注系统回忆地理原理等事实的能力时，我们是否忽略了更深层次的理解问题？"
+    },
+    {
+      "title": "Dynamic Mask Enhanced Intelligent Multi-UAV Deployment for Urban Vehicular Networks",
+      "authors": [
+        "Gaoxiang Cao",
+        "Wenke Yuan",
+        "Yunpeng Hou",
+        "Huasen He",
+        "Quan Zheng",
+        "Jian Yang"
+      ],
+      "summary": "Vehicular Ad Hoc Networks (VANETs) play a crucial role in realizing vehicle-road collaboration and intelligent transportation. However, urban VANETs often face challenges such as frequent link disconnections and subnet fragmentation, which hinder reliable connectivity. To address these issues, we dynamically deploy multiple Unmanned Aerial Vehicles (UAVs) as communication relays to enhance VANET. A novel Score based Dynamic Action Mask enhanced QMIX algorithm (Q-SDAM) is proposed for multi-UAV deployment, which maximizes vehicle connectivity while minimizing multi-UAV energy consumption. Specifically, we design a score-based dynamic action mask mechanism to guide UAV agents in exploring large action spaces, accelerate the learning process and enhance optimization performance. The practicality of Q-SDAM is validated using real-world datasets. We show that Q-SDAM improves connectivity by 18.2% while reducing energy consumption by 66.6% compared with existing algorithms.",
+      "published": "2026-03-19T13:17:30Z",
+      "updated": "2026-03-19T13:17:30Z",
+      "arxiv_id": "2604.02358v1",
+      "abs_url": "http://arxiv.org/abs/2604.02358v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.02358v1",
+      "primary_category": "cs.NI",
+      "categories": [
+        "cs.NI",
+        "cs.AI"
+      ],
+      "comment": "6 pages, 7 figures. Accepted for publication in the 2026 IEEE International Conference on Communications (IEEE ICC 2026)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "无人机/UAV",
+      "score": 5,
+      "anchor_terms": [
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "UAV",
+        "unmanned aerial vehicle"
+      ],
+      "title_zh": "城市车载网络的动态掩模增强型智能多无人机部署",
+      "summary_zh": "车载自组织网络（VANET）在实现车路协同和智能交通中发挥着至关重要的作用。然而，城市车载自组网经常面临链路频繁断开、子网碎片化等挑战，阻碍了可靠的连接。为了解决这些问题，我们动态部署多个无人机 (UAV) 作为通信中继以增强 VANET。为多无人机部署提出了一种基于分数的动态动作掩模增强 QMIX 算法（Q-SDAM），该算法最大限度地提高了车辆连接性，同时最大限度地减少了多无人机能耗。具体来说，我们设计了一种基于分数的动态动作掩码机制来指导无人机代理探索大的动作空间，加速学习过程并增强优化性能。 Q-SDAM 的实用性通过真实数据集得到验证。我们发现，与现有算法相比，Q-SDAM 将连接性提高了 18.2%，同时将能耗降低了 66.6%。"
+    },
+    {
+      "title": "Bridging Network Fragmentation: A Semantic-Augmented DRL Framework for UAV-aided VANETs",
+      "authors": [
+        "Gaoxiang Cao",
+        "Wenke Yuan",
+        "Huasen He",
+        "Yunpeng Hou",
+        "Xiaofeng Jiang",
+        "Shuangwu Chen",
+        "Jian Yang"
+      ],
+      "summary": "Vehicular Ad-hoc Networks (VANETs) are the digital cornerstone of autonomous driving, yet they suffer from severe network fragmentation in urban environments due to physical obstructions. Unmanned Aerial Vehicles (UAVs), with their high mobility, have emerged as a vital solution to bridge these connectivity gaps. However, traditional Deep Reinforcement Learning (DRL)-based UAV deployment strategies lack semantic understanding of road topology, often resulting in blind exploration and sample inefficiency. By contrast, Large Language Models (LLMs) possess powerful reasoning capabilities capable of identifying topological importance, though applying them to control tasks remains challenging. To address this, we propose the Semantic-Augmented DRL (SA-DRL) framework. Firstly, we propose a fragmentation quantification method based on Road Topology Graphs (RTG) and Dual Connected Graphs (DCG). Subsequently, we design a four-stage pipeline to transform a general-purpose LLM into a domain-specific topology expert. Finally, we propose the Semantic-Augmented PPO (SA-PPO) algorithm, which employs a Logit Fusion mechanism to inject the LLM's semantic reasoning directly into the policy as a prior, effectively guiding the agent toward critical intersections. Extensive high-fidelity simulations demonstrate that SA-PPO achieves state-of-the-art performance with remarkable efficiency, reaching baseline performance levels using only 26.6% of the training episodes. Ultimately, SA-PPO improves two key connectivity metrics by 13.2% and 23.5% over competing methods, while reducing energy consumption to just 28.2% of the baseline.",
+      "published": "2026-03-19T13:15:52Z",
+      "updated": "2026-03-19T13:15:52Z",
+      "arxiv_id": "2603.18871v1",
+      "abs_url": "http://arxiv.org/abs/2603.18871v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.18871v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.NI"
+      ],
+      "comment": "13 pages, 13 figures. Submitted to IEEE Transactions on Cognitive Communications and Networking",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "无人机/UAV"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 8,
+      "anchor_terms": [
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "large language model",
+        "LLM",
+        "LoRA",
+        "UAV",
+        "unmanned aerial vehicle"
+      ],
+      "title_zh": "桥接网络碎片：无人机辅助 VANET 的语义增强 DRL 框架",
+      "summary_zh": "车载自组织网络（VANET）是自动驾驶的数字基石，但由于物理障碍，它们在城市环境中面临严重的网络碎片化问题。无人机 (UAV) 凭借其高机动性，已成为弥合这些连接差距的重要解决方案。然而，传统的基于深度强化学习（DRL）的无人机部署策略缺乏对道路拓扑的语义理解，往往导致盲目探索和样本效率低下。相比之下，大型语言模型（LLM）拥有强大的推理能力，能够识别拓扑重要性，尽管将其应用于控制任务仍然具有挑战性。为了解决这个问题，我们提出了语义增强 DRL（SA-DRL）框架。首先，我们提出了一种基于道路拓扑图（RTG）和对偶连通图（DCG）的碎片量化方法。随后，我们设计了一个四阶段管道，将通用的法学硕士转变为特定领域的拓扑专家。最后，我们提出了语义增强 PPO（SA-PPO）算法，该算法采用 Logit Fusion 机制将 LLM 的语义推理作为先验直接注入策略中，有效引导智能体走向关键路口。广泛的高保真模拟表明，SA-PPO 以卓越的效率实现了最先进的性能，仅使用 26.6% 的训练集就达到了基线性能水平。最终，与竞争方法相比，SA-PPO 将两个关键连接指标分别提高了 13.2% 和 23.5%，同时将能耗降低至基线的 28.2%。"
+    },
+    {
+      "title": "Learn for Variation: Variationally Guided AAV Trajectory Learning in Differentiable Environments",
+      "authors": [
+        "Xiucheng Wang",
+        "Zhenye Chen",
+        "Nan Cheng"
+      ],
+      "summary": "Autonomous aerial vehicles (AAVs) empower sixth-generation (6G) Internet-of-Things (IoT) networks through mobility-driven data collection. However, conventional reward-driven reinforcement learning for AAV trajectory planning suffers from severe credit assignment issues and training instability, because sparse scalar rewards fail to capture the long-term and nonlinear effects of sequential movements. To address these challenges, this paper proposes Learn for Variation (L4V), a gradient-informed trajectory learning framework that replaces high-variance scalar reward signals with dense and analytically grounded policy gradients. Particularly, the coupled evolution of AAV kinematics, distance-dependent channel gains, and per-user data-collection progress is first unrolled into an end-to-end differentiable computational graph. Backpropagation through time then serves as a discrete adjoint solver, which propagates exact sensitivities from the cumulative mission objective to every control action and policy parameter. These structured gradients are used to train a deterministic neural policy with temporal smoothness regularization and gradient clipping. Extensive simulations demonstrate that L4V consistently outperforms representative baselines, including a genetic algorithm, DQN, A2C, and DDPG, in mission completion time, average transmission rate, and training cost",
+      "published": "2026-03-19T12:57:42Z",
+      "updated": "2026-03-25T09:18:08Z",
+      "arxiv_id": "2603.18853v2",
+      "abs_url": "http://arxiv.org/abs/2603.18853v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.18853v2",
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 3,
+      "anchor_terms": [
+        "CLIP"
+      ],
+      "matched_terms": [
+        "aerial",
+        "CLIP"
+      ],
+      "title_zh": "学习变异：可微环境中的变异引导 AAV 轨迹学习",
+      "summary_zh": "自主飞行器 (AAV) 通过移动驱动的数据收集为第六代 (6G) 物联网 (IoT) 网络提供支持。然而，用于 AAV 轨迹规划的传统奖励驱动强化学习面临严重的信用分配问题和训练不稳定，因为稀疏的标量奖励无法捕捉顺序运动的长期和非线性影响。为了应对这些挑战，本文提出了 Learn for Variation (L4V)，这是一种基于梯度的轨迹学习框架，用密集且基于分析的策略梯度取代高方差标量奖励信号。特别是，AAV 运动学、距离相关的通道增益和每用户数据收集进度的耦合演化首先被展开为端到端可微计算图。然后，随时间的反向传播充当离散伴随求解器，它将精确的灵敏度从累积任务目标传播到每个控制操作和策略参数。这些结构化梯度用于训练具有时间平滑正则化和梯度裁剪的确定性神经策略。广泛的模拟表明，L4V 在任务完成时间、平均传输率和训练成本方面始终优于代表性基线，包括遗传算法、DQN、A2C 和 DDPG"
+    },
+    {
+      "title": "SwiftGS: Episodic Priors for Immediate Satellite Surface Recovery",
+      "authors": [
+        "Rong Fu",
+        "Jiekai Wu",
+        "Haiyun Wei",
+        "Xiaowen Ma",
+        "Shiyin Lin",
+        "Kangan Qian",
+        "Chuang Liu",
+        "Jianyuan Ni",
+        "Simon James Fong"
+      ],
+      "summary": "Rapid, large-scale 3D reconstruction from multi-date satellite imagery is vital for environmental monitoring, urban planning, and disaster response, yet remains difficult due to illumination changes, sensor heterogeneity, and the cost of per-scene optimization. We introduce SwiftGS, a meta-learned system that reconstructs 3D surfaces in a single forward pass by predicting geometry-radiation-decoupled Gaussian primitives together with a lightweight SDF, replacing expensive per-scene fitting with episodic training that captures transferable priors. The model couples a differentiable physics graph for projection, illumination, and sensor response with spatial gating that blends sparse Gaussian detail and global SDF structure, and incorporates semantic-geometric fusion, conditional lightweight task heads, and multi-view supervision from a frozen geometric teacher under an uncertainty-aware multi-task loss. At inference, SwiftGS operates zero-shot with optional compact calibration and achieves accurate DSM reconstruction and view-consistent rendering at significantly reduced computational cost, with ablations highlighting the benefits of the hybrid representation, physics-aware rendering, and episodic meta-training.",
+      "published": "2026-03-19T08:59:07Z",
+      "updated": "2026-04-05T06:17:36Z",
+      "arxiv_id": "2603.18634v2",
+      "abs_url": "http://arxiv.org/abs/2603.18634v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.18634v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": "23 pages, 6 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "LiDAR/点云",
+        "灾害与应急监测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 6,
+      "anchor_terms": [
+        "3D reconstruction",
+        "satellite image",
+        "satellite imagery"
+      ],
+      "matched_terms": [
+        "3D reconstruction",
+        "DSM",
+        "satellite",
+        "satellite image",
+        "satellite imagery",
+        "zero-shot"
+      ],
+      "title_zh": "SwiftGS：立即卫星表面恢复的情景先验",
+      "summary_zh": "利用多日期卫星图像进行快速、大规模 3D 重建对于环境监测、城市规划和灾害响应至关重要，但由于光照变化、传感器异质性和每个场景优化的成本，仍然很困难。我们引入了 SwiftGS，这是一个元学习系统，通过预测几何辐射解耦高斯基元和轻量级 SDF，在单次前向传递中重建 3D 表面，用捕获可转移先验的情景训练取代昂贵的每场景拟合。该模型将用于投影、照明和传感器响应的可微物理图与空间门控结合起来，空间门控混合了稀疏高斯细节和全局 SDF 结构，并结合了语义几何融合、条件轻量级任务头以及在不确定性感知多任务损失下来自冻结几何教师的多视图监督。推理时，SwiftGS 通过可选的紧凑校准进行零样本操作，并以显着降低的计算成本实现精确的 DSM 重建和视图一致渲染，并通过消融突出了混合表示、物理感知渲染和情景元训练的优势。"
+    },
+    {
+      "title": "An Onto-Relational-Sophic Framework for Governing Synthetic Minds",
+      "authors": [
+        "Huansheng Ning",
+        "Jianguo Ding"
+      ],
+      "summary": "The rapid evolution of artificial intelligence, from task-specific systems to foundation models exhibiting broad, flexible competence across reasoning, creative synthesis, and social interaction, has outpaced the conceptual and governance frameworks designed to manage it. Current regulatory paradigms, anchored in a tool-centric worldview, address algorithmic bias and transparency but leave unanswered foundational questions about what increasingly capable synthetic minds are, how societies should relate to them, and the normative principles that should guide their development. Here we introduce the Onto-Relational-Sophic (ORS) framework, grounded in Cyberism philosophy, which offers integrated answers to these challenges through three pillars: (1) a Cyber-Physical-Social-Thinking (CPST) ontology that defines the mode of being for synthetic minds as irreducibly multi-dimensional rather than purely computational; (2) a graded spectrum of digital personhood providing a pragmatic relational taxonomy beyond binary person-or-tool classifications; and (3) Cybersophy, a wisdom-oriented axiology synthesizing virtue ethics, consequentialism, and relational approaches to guide governance. We apply the framework to emergent scenarios including autonomous research agents, AI-mediated healthcare, and agentic AI ecosystems, demonstrating its capacity to generate proportionate, adaptive governance recommendations. The ORS framework charts a path from narrow technical alignment toward comprehensive philosophical foundations for the synthetic minds already among us.",
+      "published": "2026-03-19T08:58:10Z",
+      "updated": "2026-04-04T15:43:36Z",
+      "arxiv_id": "2603.18633v2",
+      "abs_url": "http://arxiv.org/abs/2603.18633v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.18633v2",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.ET"
+      ],
+      "comment": "9 pages, 3 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "光学遥感"
+      ],
+      "topic": "基础模型",
+      "score": 2,
+      "anchor_terms": [
+        "WorldView"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "WorldView"
+      ],
+      "title_zh": "管理综合思维的本体关系智框架",
+      "summary_zh": "人工智能的快速发展，从特定任务系统到在推理、创造性综合和社会互动方面展现出广泛、灵活能力的基础模型，已经超过了旨在管理人工智能的概念和治理框架。当前的监管范式植根于以工具为中心的世界观，解决了算法偏见和透明度问题，但没有回答一些基本问题：什么是日益强大的合成思维、社会应如何与它们建立联系，以及指导其发展的规范原则。在这里，我们介绍基于网络主义哲学的本体关系智学（ORS）框架，它通过三个支柱为这些挑战提供综合答案：（1）网络物理社会思维（CPST）本体论，将合成思维的存在模式定义为不可简化的多维而非纯粹的计算； (2) 数字人格的分级谱，提供超越二元人或工具分类的实用关系分类法； （3）网络哲学，一种以智慧为导向的价值论，综合了美德伦理、结果主义和关系方法来指导治理。我们将该框架应用于新兴场景，包括自主研究代理、人工智能介导的医疗保健和代理人工智能生态系统，展示了其生成相称、自适应治理建议的能力。 ORS 框架为我们已经存在的综合思维绘制了一条从狭隘的技术联盟到全面的哲学基础的道路。"
+    },
+    {
+      "title": "Agentic Flow Steering and Parallel Rollout Search for Spatially Grounded Text-to-Image Generation",
+      "authors": [
+        "Ping Chen",
+        "Daoxuan Zhang",
+        "Xiangming Wang",
+        "Yungeng Liu",
+        "Haijin Zeng",
+        "Yongyong Chen"
+      ],
+      "summary": "Precise Text-to-Image (T2I) generation has achieved great success but is hindered by the limited relational reasoning of static text encoders and the error accumulation in open-loop sampling. Without real-time feedback, initial semantic ambiguities during the Ordinary Differential Equation trajectory inevitably escalate into stochastic deviations from spatial constraints. To bridge this gap, we introduce AFS-Search (Agentic Flow Steering and Parallel Rollout Search), a training-free closed-loop framework built upon FLUX.1-dev. AFS-Search incorporates a training-free closed-loop parallel rollout search and flow steering mechanism, which leverages a Vision-Language Model (VLM) as a semantic critic to diagnose intermediate latents and dynamically steer the velocity field via precise spatial grounding. Complementarily, we formulate T2I generation as a sequential decision-making process, exploring multiple trajectories through lookahead simulations and selecting the optimal path based on VLM-guided rewards. Further, we provide AFS-Search-Pro for higher performance and AFS-Search-Fast for quicker generation. Experimental results show that our AFS-Search-Pro greatly boosts the performance of the original FLUX.1-dev, achieving state-of-the-art results across three different benchmarks. Meanwhile, AFS-Search-Fast also significantly enhances performance while maintaining fast generation speed.",
+      "published": "2026-03-19T08:50:49Z",
+      "updated": "2026-03-19T08:50:49Z",
+      "arxiv_id": "2603.18627v1",
+      "abs_url": "http://arxiv.org/abs/2603.18627v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.18627v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "视觉-语言模型",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 3,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "image generation",
+        "VLM"
+      ],
+      "title_zh": "用于空间基础文本到图像生成的代理流引导和并行推出搜索",
+      "summary_zh": "精确文本到图像（T2I）生成取得了巨大成功，但受到静态文本编码器有限的关系推理和开环采样中的误差累积的阻碍。如果没有实时反馈，常微分方程轨迹期间的初始语义模糊性将不可避免地升级为空间约束的随机偏差。为了弥补这一差距，我们引入了 AFS-Search（代理流程转向和并行推出搜索），这是一个基于 FLUX.1-dev 构建的免训练闭环框架。 AFS-Search 结合了免训练闭环并行推出搜索和流转向机制，利用视觉语言模型 (VLM) 作为语义批评家来诊断中间潜伏并通过精确的空间基础动态引导速度场。作为补充，我们将 T2I 生成制定为一个顺序决策过程，通过前瞻模拟探索多个轨迹，并根据 VLM 引导的奖励选择最佳路径。此外，我们还提供 AFS-Search-Pro 来实现更高的性能，并提供 AFS-Search-Fast 来实现更快的生成。实验结果表明，我们的 AFS-Search-Pro 极大地提高了原始 FLUX.1-dev 的性能，在三个不同的基准测试中取得了最先进的结果。同时，AFS-Search-Fast在保持快速生成速度的同时也显着增强了性能。"
+    },
+    {
+      "title": "HiMu: Hierarchical Multimodal Frame Selection for Long Video Question Answering",
+      "authors": [
+        "Dan Ben-Ami",
+        "Gabriele Serussi",
+        "Kobi Cohen",
+        "Chaim Baskin"
+      ],
+      "summary": "Long-form video question answering requires reasoning over extended temporal contexts, making frame selection critical for large vision-language models (LVLMs) bound by finite context windows. Existing methods face a sharp trade-off: similarity-based selectors are fast but collapse compositional queries into a single dense vector, losing sub-event ordering and cross-modal bindings; agent-based methods recover this structure through iterative LVLM inference, but at prohibitive cost. We introduce HiMu, a training-free framework that bridges this gap. A single text-only LLM call decomposes the query into a hierarchical logic tree whose leaves are atomic predicates, each routed to a lightweight expert spanning vision (CLIP, open-vocabulary detection, OCR) and audio (ASR, CLAP). The resulting signals are normalized, temporally smoothed to align different modalities, and composed bottom-up through fuzzy-logic operators that enforce temporal sequencing and adjacency, producing a continuous satisfaction curve. Evaluations on Video-MME, LongVideoBench and HERBench-Lite show that HiMu advances the efficiency-accuracy Pareto front: at 16 frames with Qwen3-VL 8B it outperforms all competing selectors, and with GPT-4o it surpasses agentic systems operating at 32-512 frames while requiring roughly 10x fewer FLOPs.",
+      "published": "2026-03-19T07:11:53Z",
+      "updated": "2026-03-19T07:11:53Z",
+      "arxiv_id": "2603.18558v1",
+      "abs_url": "http://arxiv.org/abs/2603.18558v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.18558v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "开放词汇与开放集",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "开放词汇与开放集",
+      "score": 5,
+      "anchor_terms": [
+        "open-vocabulary"
+      ],
+      "matched_terms": [
+        "CLIP",
+        "LLM",
+        "open-vocabulary"
+      ],
+      "title_zh": "HiMu：长视频问答的分层多模态帧选择",
+      "summary_zh": "长格式视频问答需要对扩展的时间上下文进行推理，这使得帧选择对于受有限上下文窗口约束的大型视觉语言模型 (LVLM) 至关重要。现有方法面临着尖锐的权衡：基于相似性的选择器速度很快，但将组合查询折叠成单个密集向量，失去了子事件排序和跨模式绑定；基于代理的方法通过迭代 LVLM 推理来恢复这种结构，但成本高昂。我们推出了 HiMu，这是一个弥补这一差距的免培训框架。单个纯文本 LLM 调用将查询分解为分层逻辑树，其叶子是原子谓词，每个谓词都路由到跨视觉（CLIP、开放词汇检测、OCR）和音频（ASR、CLAP）的轻量级专家。生成的信号经过归一化、时间平滑以对齐不同的模态，并通过模糊逻辑运算符自下而上地组成，强制时间排序和邻接，产生连续的满意度曲线。对 Video-MME、LongVideoBench 和 HERBench-Lite 的评估表明，HiMu 提高了 Pareto 前沿的效率和准确度：在 Qwen3-VL 8B 的 16 帧下，它优于所有竞争选择器，而在 GPT-4o 下，它超越了在 32-512 帧下运行的代理系统，同时所需的 FLOP 减少了大约 10 倍。"
+    },
+    {
+      "title": "HEP Statistical Inference for UAV Fault Detection: CLs, LRT, and SBI Applied to Blade Damage",
+      "authors": [
+        "Khushiyant"
+      ],
+      "summary": "This paper transfers three statistical methods from particle physics to multirotor propeller fault detection: the likelihood ratio test (LRT) for binary detection, the CLs modified frequentist method for false alarm rate control, and sequential neural posterior estimation (SNPE) for quantitative fault characterization. Operating on spectral features tied to rotor harmonic physics, the system returns three outputs: binary detection, controlled false alarm rates, and calibrated posteriors over fault severity and motor location. On UAV-FD, a hexarotor dataset of 18 real flights with 5% and 10% blade damage, leave-one-flight-out cross-validation gives AUC 0.862 +/- 0.007 (95% CI: 0.849--0.876), outperforming CUSUM (0.708 +/- 0.010), autoencoder (0.753 +/- 0.009), and LSTM autoencoder (0.551). At 5% false alarm rate the system detects 93% of significant and 81% of subtle blade damage. On PADRE, a quadrotor platform, AUC reaches 0.986 after refitting only the generative models. SNPE gives a full posterior over fault severity (90% credible interval coverage 92--100%, MAE 0.012), so the output includes uncertainty rather than just a point estimate or fault flag. Per-flight sequential detection achieves 100% fault detection with 94% overall accuracy.",
+      "published": "2026-03-19T07:01:09Z",
+      "updated": "2026-03-19T07:01:09Z",
+      "arxiv_id": "2603.18546v1",
+      "abs_url": "http://arxiv.org/abs/2603.18546v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.18546v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO",
+        "eess.SY"
+      ],
+      "comment": "12 Pages, 8 Figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "高光谱/多光谱",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 3,
+      "anchor_terms": [
+        "UAV"
+      ],
+      "matched_terms": [
+        "MAE",
+        "UAV"
+      ],
+      "title_zh": "用于无人机故障检测的 HEP 统计推断：应用于叶片损坏的 CL、LRT 和 SBI",
+      "summary_zh": "本文将三种统计方法从粒子物理学转移到多旋翼螺旋桨故障检测：用于二元检测的似然比检验（LRT）、用于误报率控制的 CLs 改进频率论方法以及用于定量故障表征的序贯神经后验估计（SNPE）。该系统根据与转子谐波物理相关的频谱特征进行操作，返回三个输出：二进制检测、受控误报率以及针对故障严重性和电机位置的校准后验。在 UAV-FD 上，18 次真实飞行的六旋翼数据集有 5% 和 10% 叶片损坏，留一飞行交叉验证给出 AUC 0.862 +/- 0.007 (95% CI: 0.849--0.876)，优于 CUSUM (0.708 +/- 0.010)、自动编码器 (0.753 +/-) 0.009）和 LSTM 自动编码器（0.551）。在误报率为 5% 的情况下，系统可检测到 93% 的重大叶片损坏和 81% 的细微叶片损坏。在四旋翼飞行器 PADRE 平台上，仅改装生成模型后，AUC 达到 0.986。 SNPE 给出故障严重性的完整后验（90% 可信区间覆盖范围 92--100%，MAE 0.012），因此输出包括不确定性而不仅仅是点估计或故障标记。每个航班的顺序检测实现了 100% 的故障检测，总体准确率达到 94%。"
+    },
+    {
+      "title": "iSatCR: Graph-Empowered Joint Onboard Computing and Routing for LEO Data Delivery",
+      "authors": [
+        "Jiangtao Luo",
+        "Bingbing Xu",
+        "Shaohua Xia",
+        "Yongyi Ran"
+      ],
+      "summary": "Sending massive Earth observation data produced by low Earth orbit (LEO) satellites back to the ground for processing consumes a large amount of on-orbit bandwidth and exacerbates the space-to-ground link bottleneck. Most prior work has concentrated on optimizing the routing of raw data within the constellation, yet cannot cope with the surge in data volume. Recently, advances in onboard computing have made it possible to process data in situ, thus significantly reducing the data volume to be transmitted. In this paper, we present iSatCR, a distributed graph-based approach that jointly optimizes onboard computing and routing to boost transmission efficiency. Within iSatCR, we design a novel graph embedding utilizing shifted feature aggregation and distributed message passing to capture satellite states, and then propose a distributed graph-based deep reinforcement learning algorithm that derives joint computing-routing strategies under constrained on-board storage to handle the complexity and dynamics of LEO networks. Extensive experiments show iSatCR outperforms baselines, particularly under high load.",
+      "published": "2026-03-19T06:49:27Z",
+      "updated": "2026-03-19T06:49:27Z",
+      "arxiv_id": "2603.18539v1",
+      "abs_url": "http://arxiv.org/abs/2603.18539v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.18539v1",
+      "primary_category": "cs.NI",
+      "categories": [
+        "cs.NI",
+        "cs.LG"
+      ],
+      "comment": "14 pages, 9 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [],
+      "topic": "其他",
+      "score": 4,
+      "anchor_terms": [
+        "earth observation"
+      ],
+      "matched_terms": [
+        "earth observation",
+        "satellite"
+      ],
+      "title_zh": "iSatCR：用于 LEO 数据传输的图形赋能联合机载计算和路由",
+      "summary_zh": "将低地球轨道（LEO）卫星产生的海量地球观测数据发送回地面进行处理会消耗大量在轨带宽，加剧空地链路瓶颈。之前的大多数工作都集中在优化星座内原始数据的路由，但无法应对数据量的激增。最近，机载计算的进步使得就地处理数据成为可能，从而显着减少了要传输的数据量。在本文中，我们提出了 iSatCR，一种基于分布式图的方法，可联合优化机载计算和路由以提高传输效率。在 iSatCR 中，我们设计了一种新颖的图嵌入，利用移位特征聚合和分布式消息传递来捕获卫星状态，然后提出一种基于分布式图的深度强化学习算法，该算法在受限的机载存储下导出联合计算路由策略，以处理 LEO 网络的复杂性和动态性。大量实验表明 iSatCR 的性能优于基线，尤其是在高负载下。"
+    },
+    {
+      "title": "AlignMamba-2: Enhancing Multimodal Fusion and Sentiment Analysis with Modality-Aware Mamba",
+      "authors": [
+        "Yan Li",
+        "Yifei Xing",
+        "Xiangyuan Lan",
+        "Xin Li",
+        "Haifeng Chen",
+        "Dongmei Jiang"
+      ],
+      "summary": "In the era of large-scale pre-trained models, effectively adapting general knowledge to specific affective computing tasks remains a challenge, particularly regarding computational efficiency and multimodal heterogeneity. While Transformer-based methods have excelled at modeling inter-modal dependencies, their quadratic computational complexity limits their use with long-sequence data. Mamba-based models have emerged as a computationally efficient alternative; however, their inherent sequential scanning mechanism struggles to capture the global, non-sequential relationships that are crucial for effective cross-modal alignment. To address these limitations, we propose \\textbf{AlignMamba-2}, an effective and efficient framework for multimodal fusion and sentiment analysis. Our approach introduces a dual alignment strategy that regularizes the model using both Optimal Transport distance and Maximum Mean Discrepancy, promoting geometric and statistical consistency between modalities without incurring any inference-time overhead. More importantly, we design a Modality-Aware Mamba layer, which employs a Mixture-of-Experts architecture with modality-specific and modality-shared experts to explicitly handle data heterogeneity during the fusion process. Extensive experiments on four challenging benchmarks, including dynamic time-series (on the CMU-MOSI and CMU-MOSEI datasets) and static image-related tasks (on the NYU-Depth V2 and MVSA-Single datasets), demonstrate that AlignMamba-2 establishes a new state-of-the-art in both effectiveness and efficiency across diverse pattern recognition tasks, ranging from dynamic time-series analysis to static image-text classification.",
+      "published": "2026-03-19T03:47:21Z",
+      "updated": "2026-03-19T03:47:21Z",
+      "arxiv_id": "2603.18462v1",
+      "abs_url": "http://arxiv.org/abs/2603.18462v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.18462v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "Accepted by Pattern Recognition",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "基础模型",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "时间序列与视频",
+      "score": 6,
+      "anchor_terms": [
+        "Mamba"
+      ],
+      "matched_terms": [
+        "Mamba",
+        "modal fusion",
+        "time-series",
+        "transformer"
+      ],
+      "title_zh": "AlignMamba-2：利用模态感知 Mamba 增强多模态融合和情感分析",
+      "summary_zh": "在大规模预训练模型时代，有效地将一般知识适应特定的情感计算任务仍然是一个挑战，特别是在计算效率和多模态异构性方面。虽然基于 Transformer 的方法在模态间依赖性建模方面表现出色，但其二次计算复杂性限制了它们在长序列数据中的使用。基于 Mamba 的模型已成为计算高效的替代方案；然而，它们固有的顺序扫描机制很难捕获对于有效的跨模式对齐至关重要的全局非顺序关系。为了解决这些限制，我们提出了 \\textbf{AlignMamba-2}，这是一种有效且高效的多模态融合和情感分析框架。我们的方法引入了双重对齐策略，该策略使用最佳传输距离和最大平均差异对模型进行正则化，从而促进模态之间的几何和统计一致性，而不会产生任何推理时间开销。更重要的是，我们设计了一个模态感知 Mamba 层，它采用具有特定模态和共享模态专家的专家混合架构，以在融合过程中显式处理数据异构性。对四个具有挑战性的基准（包括动态时间序列（在 CMU-MOSI 和 CMU-MOSEI 数据集上）和静态图像相关任务（在 NYU-Depth V2 和 MVSA-Single 数据集上））进行的广泛实验表明，AlignMamba-2 在各种模式识别任务（从动态时间序列分析到静态图像文本分类）的有效性和效率方面建立了新的最先进技术。"
+    },
+    {
+      "title": "MLOW: Interpretable Low-Rank Frequency Magnitude Decomposition of Multiple Effects for Time Series Forecasting",
+      "authors": [
+        "Runze Yang",
+        "Longbing Cao",
+        "Xiaoming Wu",
+        "Xin You",
+        "Kun Fang",
+        "Jianxun Li",
+        "Jie Yang"
+      ],
+      "summary": "Separating multiple effects in time series is fundamental yet challenging for time-series forecasting (TSF). However, existing TSF models cannot effectively learn interpretable multi-effect decomposition by their smoothing-based temporal techniques. Here, a new interpretable frequency-based decomposition pipeline MLOW captures the insight: a time series can be represented as a magnitude spectrum multiplied by the corresponding phase-aware basis functions, and the magnitude spectrum distribution of a time series always exhibits observable patterns for different effects. MLOW learns a low-rank representation of the magnitude spectrum to capture dominant trending and seasonal effects. We explore low-rank methods, including PCA, NMF, and Semi-NMF, and find that none can simultaneously achieve interpretable, efficient and generalizable decomposition. Thus, we propose hyperplane-nonnegative matrix factorization (Hyperplane-NMF). Further, to address the frequency (spectral) leakage restricting high-quality low-rank decomposition, MLOW enables a flexible selection of input horizons and frequency levels via a mathematical mechanism. Visual analysis demonstrates that MLOW enables interpretable and hierarchical multiple-effect decomposition, robust to noises. It can also enable plug-and-play in existing TSF backbones with remarkable performance improvement but minimal architectural modifications.",
+      "published": "2026-03-19T02:48:54Z",
+      "updated": "2026-03-19T02:48:54Z",
+      "arxiv_id": "2603.18432v1",
+      "abs_url": "http://arxiv.org/abs/2603.18432v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.18432v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "高光谱/多光谱"
+      ],
+      "topic": "时间序列与视频",
+      "score": 3,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "generalizable",
+        "robust",
+        "temporal",
+        "time-series"
+      ],
+      "title_zh": "MLOW：时间序列预测多重效应的可解释低阶频率幅度分解",
+      "summary_zh": "分离时间序列中的多重效应对于时间序列预测 (TSF) 来说是基础，但也具有挑战性。然而，现有的 TSF 模型无法通过基于平滑的时间技术有效地学习可解释的多效应分解。在这里，一个新的可解释的基于频率的分解管道 MLOW 捕捉到了这一见解：时间序列可以表示为幅度谱乘以相应的相位感知基函数，并且时间序列的幅度谱分布总是表现出不同效果的可观察模式。 MLOW 学习幅度谱的低阶表示，以捕获主要趋势和季节性影响。我们探索了低秩方法，包括 PCA、NMF 和 Semi-NMF，发现没有一种方法可以同时实现可解释、高效和可泛化的分解。因此，我们提出超平面非负矩阵分解（Hyperplane-NMF）。此外，为了解决限制高质量低秩分解的频率（频谱）泄漏问题，MLOW 可以通过数学机制灵活选择输入范围和频率级别。视觉分析表明，MLOW 能够实现可解释的分层多效分解，并且对噪声具有鲁棒性。它还可以在现有 TSF 主干中实现即插即用，从而显着提高性能，但只需进行最少的架构修改。"
+    },
+    {
+      "title": "HSI Image Enhancement Classification Based on Knowledge Distillation: A Study on Forgetting",
+      "authors": [
+        "Songfeng Zhu"
+      ],
+      "summary": "In incremental classification tasks for hyperspectral images, catastrophic forgetting is an unavoidable challenge. While memory recall methods can mitigate this issue, they heavily rely on samples from old categories. This paper proposes a teacher-based knowledge retention method for incremental image classification. It alleviates model forgetting of old category samples by utilizing incremental category samples, without depending on old category samples. Additionally, this paper introduces a mask-based partial category knowledge distillation algorithm. By decoupling knowledge distillation, this approach filters out potentially misleading information that could misguide the student model, thereby enhancing overall accuracy. Comparative and ablation experiments demonstrate the proposed method's robust performance.",
+      "published": "2026-03-19T02:03:51Z",
+      "updated": "2026-03-19T02:03:51Z",
+      "arxiv_id": "2603.20292v1",
+      "abs_url": "http://arxiv.org/abs/2603.20292v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.20292v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "18pages,7figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "场景分类",
+        "基础模型",
+        "高效微调与轻量化",
+        "高光谱/多光谱"
+      ],
+      "topic": "场景分类",
+      "score": 7,
+      "anchor_terms": [
+        "hyperspectral image"
+      ],
+      "matched_terms": [
+        "catastrophic forgetting",
+        "hyperspectral",
+        "hyperspectral image",
+        "image classification",
+        "knowledge distillation",
+        "robust"
+      ],
+      "title_zh": "基于知识蒸馏的HSI图像增强分类：遗忘研究",
+      "summary_zh": "在高光谱图像的增量分类任务中，灾难性遗忘是不可避免的挑战。虽然记忆回忆方法可以缓解这个问题，但它们严重依赖于旧类别的样本。本文提出了一种基于教师的增量图像分类知识保留方法。它通过利用增量类别样本来减轻旧类别样本的模型遗忘，而不依赖于旧类别样本。此外，本文还介绍了一种基于掩码的部分类别知识蒸馏算法。通过解耦知识蒸馏，这种方法过滤掉可能误导学生模型的潜在误导信息，从而提高整体准确性。比较和消融实验证明了所提出方法的稳健性能。"
+    }
+  ]
+}

@@ -1,0 +1,544 @@
+{
+  "date": "2026-03-21",
+  "generated_at": "2026-05-11T07:47:59.766090+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202603210000 TO 202603212359]",
+  "total_fetched": 166,
+  "total_matched": 12,
+  "papers": [
+    {
+      "title": "Lean Learning Beyond Clouds: Efficient Discrepancy-Conditioned Optical-SAR Fusion for Semantic Segmentation",
+      "authors": [
+        "Chenxing Meng",
+        "Wuzhou Quan",
+        "Yingjie Cai",
+        "Liqun Cao",
+        "Liyan Zhang",
+        "Mingqiang Wei"
+      ],
+      "summary": "Cloud occlusion severely degrades the semantic integrity of optical remote sensing imagery. While incorporating Synthetic Aperture Radar (SAR) provides complementary observations, achieving efficient global modeling and reliable cross-modal fusion under cloud interference remains challenging. Existing methods rely on dense global attention to capture long-range dependencies, yet such aggregation indiscriminately propagates cloud-induced noise. Improving robustness typically entails enlarging model capacity, which further increases computational overhead. Given the large-scale and high-resolution nature of remote sensing applications, such computational demands hinder practical deployment, leading to an efficiency-reliability trade-off. To address this dilemma, we propose EDC, an efficiency-oriented and discrepancy-conditioned optical-SAR semantic segmentation framework. A tri-stream encoder with Carrier Tokens enables compact global context modeling with reduced complexity. To prevent noise contamination, we introduce a Discrepancy-Conditioned Hybrid Fusion (DCHF) mechanism that selectively suppresses unreliable regions during global aggregation. In addition, an auxiliary cloud removal branch with teacher-guided distillation enhances semantic consistency under occlusion. Extensive experiments demonstrate that EDC achieves superior accuracy and efficiency, improving mIoU by 0.56\\% and 0.88\\% on M3M-CR and WHU-OPT-SAR, respectively, while reducing the number of parameters by 46.7\\% and accelerating inference by 1.98$\\times$. Our implementation is available at https://github.com/mengcx0209/EDC.",
+      "published": "2026-03-21T13:14:40Z",
+      "updated": "2026-03-21T13:14:40Z",
+      "arxiv_id": "2603.20811v1",
+      "abs_url": "http://arxiv.org/abs/2603.20811v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.20811v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "14 page, 7 figures",
+      "code_url": "https://github.com/mengcx0209/EDC",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "语义分割",
+        "图像生成与重建",
+        "高效微调与轻量化",
+        "多模态融合",
+        "光学遥感",
+        "SAR遥感",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 13,
+      "anchor_terms": [
+        "cloud removal",
+        "optical remote sensing",
+        "remote sensing",
+        "SAR",
+        "semantic segmentation",
+        "synthetic aperture radar"
+      ],
+      "matched_terms": [
+        "cloud removal",
+        "modal fusion",
+        "optical remote",
+        "optical remote sensing",
+        "remote sensing",
+        "robust",
+        "SAR",
+        "semantic segmentation",
+        "synthetic aperture radar",
+        "WHU"
+      ],
+      "title_zh": "超越云的精益学习：用于语义分割的高效差异条件光学 SAR 融合",
+      "summary_zh": "云遮挡严重降低了光学遥感图像的语义完整性。虽然结合合成孔径雷达 (SAR) 提供了补充观测，但在云干扰下实现高效的全局建模和可靠的跨模态融合仍然具有挑战性。现有的方法依赖于密集的全局注意力来捕获远程依赖性，但这种聚合不加区别地传播云引起的噪声。提高鲁棒性通常需要扩大模型容量，这进一步增加了计算开销。鉴于遥感应用的大规模和高分辨率性质，这种计算需求阻碍了实际部署，导致效率与可靠性的权衡。为了解决这个困境，我们提出了 EDC，一种面向效率和差异条件的光学 SAR 语义分割框架。具有运营商令牌的三流编码器可实现紧凑的全局上下文建模，并降低复杂性。为了防止噪声污染，我们引入了一种差异条件混合融合（DCHF）机制，该机制可以在全局聚合期间选择性地抑制不可靠区域。此外，具有教师指导蒸馏的辅助云去除分支增强了遮挡下的语义一致性。大量实验表明，EDC 实现了卓越的精度和效率，在 M3M-CR 和 WHU-OPT-SAR 上分别将 mIoU 提高了 0.56% 和 0.88%，同时参数数量减少了 46.7%，推理速度提高了 1.98$\\times$。我们的实现可以在 https://github.com/mengcx0209/EDC 上找到。"
+    },
+    {
+      "title": "The Role and Relationship of Initialization and Densification in 3D Gaussian Splatting",
+      "authors": [
+        "Ivan Desiatov",
+        "Torsten Sattler"
+      ],
+      "summary": "3D Gaussian Splatting (3DGS) has become the method of choice for photo-realistic 3D reconstruction of scenes, due to being able to efficiently and accurately recover the scene appearance and geometry from images. 3DGS represents the scene through a set of 3D Gaussians, parameterized by their position, spatial extent, and view-dependent color. Starting from an initial point cloud, 3DGS refines the Gaussians' parameters as to reconstruct a set of training images as accurately as possible. Typically, a sparse Structure-from-Motion point cloud is used as initialization. In order to obtain dense Gaussian clouds, 3DGS methods thus rely on a densification stage. In this paper, we systematically study the relation between densification and initialization. Proposing a new benchmark, we study combinations of different types of initializations (dense laser scans, dense (multi-view) stereo point clouds, dense monocular depth estimates, sparse SfM point clouds) and different densification schemes. We show that current densification approaches are not able to take full advantage of dense initialization as they are often unable to (significantly) improve over sparse SfM-based initialization. We will make our benchmark publicly available.",
+      "published": "2026-03-21T08:37:36Z",
+      "updated": "2026-04-22T15:48:16Z",
+      "arxiv_id": "2603.20714v2",
+      "abs_url": "http://arxiv.org/abs/2603.20714v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.20714v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Sources are available at https://github.com/deivse/ivd_splat . Changes in this version: fixed wrong graphs being used in Fig. 6 (b), Fig. 10 (a,c,d) due to compilation issue; results with EDGS* are now using splat scale increase when reducing init. size (previously reported results without scale increase, but conclusions remain unchanged)",
+      "code_url": "https://github.com/deivse/ivd_splat",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "高效微调与轻量化",
+        "LiDAR/点云",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 2,
+      "anchor_terms": [
+        "3D reconstruction"
+      ],
+      "matched_terms": [
+        "3D reconstruction",
+        "point cloud"
+      ],
+      "title_zh": "3D 高斯泼溅中初始化和致密化的作用和关系",
+      "summary_zh": "3D 高斯溅射 (3DGS) 已成为场景逼真 3D 重建的首选方法，因为它能够高效、准确地从图像中恢复场景外观和几何形状。 3DGS 通过一组 3D 高斯曲线表示场景，并通过其位置、空间范围和与视图相关的颜色进行参数化。从初始点云开始，3DGS 细化高斯参数，以尽可能准确地重建一组训练图像。通常，稀疏的运动结构点云用作初始化。为了获得密集的高斯云，3DGS 方法依赖于致密化阶段。在本文中，我们系统地研究了致密化和初始化之间的关系。提出了一个新的基准，我们研究了不同类型的初始化（密集激光扫描、密集（多视图）立体点云、密集单目深度估计、稀疏 SfM 点云）和不同致密化方案的组合。我们表明，当前的致密化方法无法充分利用密集初始化，因为它们通常无法（显着）改进基于稀疏 SfM 的初始化。我们将公开我们的基准。"
+    },
+    {
+      "title": "A Multihead Continual Learning Framework for Fine-Grained Fashion Image Retrieval with Contrastive Learning and Exponential Moving Average Distillation",
+      "authors": [
+        "Ling Xiao",
+        "Toshihiko Yamasaki"
+      ],
+      "summary": "Most fine-grained fashion image retrieval (FIR) methods assume a static setting, requiring full retraining when new attributes appear, which is costly and impractical for dynamic scenarios. Although pretrained models support zero-shot inference, their accuracy drops without supervision, and no prior work explores class-incremental learning (CIL) for fine-grained FIR. We propose a multihead continual learning framework for fine-grained fashion image retrieval with contrastive learning and exponential moving average (EMA) distillation (MCL-FIR). MCL-FIR adopts a multi-head design to accommodate evolving classes across increments, reformulates triplet inputs into doublets with InfoNCE for simpler and more effective training, and employs EMA distillation for efficient knowledge transfer. Experiments across four datasets demonstrate that, beyond its scalability, MCL-FIR achieves a strong balance between efficiency and accuracy. It significantly outperforms CIL baselines under similar training cost, and compared with static methods, it delivers comparable performance while using only about 30% of the training cost. The source code is publicly available in https://github.com/Dr-LingXiao/MCL-FIR.",
+      "published": "2026-03-21T04:58:02Z",
+      "updated": "2026-03-21T04:58:02Z",
+      "arxiv_id": "2603.20648v1",
+      "abs_url": "http://arxiv.org/abs/2603.20648v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.20648v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "Accepted by IEEE Transactions on Multimedia (TMM), to appear. Preprint version",
+      "code_url": "https://github.com/Dr-LingXiao/MCL-FIR",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像检索",
+        "基础模型",
+        "小样本与域泛化",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "图像检索",
+      "score": 10,
+      "anchor_terms": [
+        "continual learning"
+      ],
+      "matched_terms": [
+        "class-incremental",
+        "continual learning",
+        "contrastive learning",
+        "image retrieval",
+        "incremental learning",
+        "zero-shot"
+      ],
+      "title_zh": "利用对比学习和指数移动平均蒸馏进行细粒度时尚图像检索的多头持续学习框架",
+      "summary_zh": "大多数细粒度时尚图像检索（FIR）方法都假设静态设置，当新属性出现时需要完全重新训练，这对于动态场景来说成本高昂且不切实际。尽管预训练模型支持零样本推理，但在没有监督的情况下其准确性会下降，而且之前的工作还没有探索细粒度 FIR 的类增量学习 (CIL)。我们提出了一种多头持续学习框架，用于通过对比学习和指数移动平均（EMA）蒸馏（MCL-FIR）进行细粒度时尚图像检索。 MCL-FIR 采用多头设计来适应跨增量不断发展的类别，使用 InfoNCE 将三元组输入重新表述为双元组，以实现更简单、更有效的训练，并采用 EMA 蒸馏来实现高效的知识转移。四个数据集的实验表明，除了可扩展性之外，MCL-FIR 还实现了效率和准确性之间的强大平衡。在相似的训练成本下，它显着优于 CIL 基线，并且与静态方法相比，它在仅使用约 30% 的训练成本的情况下提供了相当的性能。源代码可在 https://github.com/Dr-LingXiao/MCL-FIR 中公开获取。"
+    },
+    {
+      "title": "Cyber Deception for Mission Surveillance via Hypergame-Theoretic Deep Reinforcement Learning",
+      "authors": [
+        "Zelin Wan",
+        "Jin-Hee Cho",
+        "Mu Zhu",
+        "Ahmed H. Anwar",
+        "Charles Kamhoua",
+        "Munindar P. Singh"
+      ],
+      "summary": "Unmanned Aerial Vehicles (UAVs) are valuable for mission-critical systems like surveillance, rescue, or delivery. Not surprisingly, such systems attract cyberattacks, including Denial-of-Service (DoS) attacks to overwhelm the resources of mission drones (MDs). How can we defend UAV mission systems against DoS attacks? We adopt cyber deception as a defense strategy, in which honey drones (HDs) are proposed to bait and divert attacks. The attack and deceptive defense hinge upon radio signal strength: The attacker selects victim MDs based on their signals, and HDs attract the attacker from afar by emitting stronger signals, despite this reducing battery life. We formulate an optimization problem for the attacker and defender to identify their respective strategies for maximizing mission performance while minimizing energy consumption. To address this problem, we propose a novel approach, called HT-DRL. HT-DRL identifies optimal solutions without a long learning convergence time by taking the solutions of hypergame theory into the neural network of deep reinforcement learning. This achieves a systematic way to intelligently deceive attackers. We analyze the performance of diverse defense mechanisms under different attack strategies. Further, the HT-DRL-based HD approach outperforms existing non-HD counterparts up to two times better in mission performance while incurring low energy consumption.",
+      "published": "2026-03-21T23:57:33Z",
+      "updated": "2026-03-21T23:57:33Z",
+      "arxiv_id": "2603.20981v1",
+      "abs_url": "http://arxiv.org/abs/2603.20981v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.20981v1",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.GT",
+        "cs.MA"
+      ],
+      "comment": "23 pages, 21 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无人机/UAV"
+      ],
+      "topic": "无人机/UAV",
+      "score": 5,
+      "anchor_terms": [
+        "drone",
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "drone",
+        "UAV",
+        "unmanned aerial vehicle"
+      ],
+      "title_zh": "通过超博弈理论深度强化学习进行任务监视的网络欺骗",
+      "summary_zh": "无人机 (UAV) 对于监视、救援或运送等关键任务系统非常有价值。毫不奇怪，此类系统会吸引网络攻击，包括拒绝服务 (DoS) 攻击，以压垮任务无人机 (MD) 的资源。我们如何保护无人机任务系统免受 DoS 攻击？我们采用网络欺骗作为防御策略，其中建议使用蜂蜜无人机（HD）来诱饵和转移攻击。攻击和欺骗性防御取决于无线电信号强度：攻击者根据信号选择受害者 MD，HD 通过发出更强的信号从远处吸引攻击者，尽管这会缩短电池寿命。我们为攻击者和防御者制定了一个优化问题，以确定他们各自的策略，以最大限度地提高任务性能，同时最大限度地减少能耗。为了解决这个问题，我们提出了一种新方法，称为 HT-DRL。 HT-DRL通过将超博弈论的解带入深度强化学习的神经网络，无需较长的学习收敛时间即可识别最优解。这就实现了一种系统化的方法来智能地欺骗攻击者。我们分析了不同攻击策略下不同防御机制的性能。此外，基于 HT-DRL 的 HD 方法的任务性能比现有的非 HD 方法高出两倍，同时能耗低。"
+    },
+    {
+      "title": "The data heat island effect: quantifying the impact of AI data centers in a warming world",
+      "authors": [
+        "Andrea Marinoni",
+        "Erik Cambria",
+        "Weisi Lin",
+        "Mauro Dalla Mura",
+        "Jocelyn Chanussot",
+        "Edoardo Ragusa",
+        "Chi Yan Tso",
+        "Yihao Zhu",
+        "Benjamin Horton"
+      ],
+      "summary": "The strong and continuous increase of AI-based services leads to the steady proliferation of AI data centres worldwide with the unavoidable escalation of their power consumption. It is unknown how this energy demand for computational purposes will impact the surrounding environment. Here, we focus our attention on the heat dissipation of AI hyperscalers. Taking advantage of land surface temperature measurements acquired by remote sensing platforms over the last decades, we are able to obtain a robust assessment of the temperature increase recorded in the areas surrounding AI data centres globally. We estimate that the land surface temperature increases by 2°C on average after the start of operations of an AI data centre, inducing local microclimate zones, which we call the data heat island effect. We assess the impact on the communities, quantifying that more than 340 million people could be affected by this temperature increase. Our results show that the data heat island effect could have a remarkable influence on communities and regional welfare in the future, hence becoming part of the conversation around environmentally sustainable AI worldwide.",
+      "published": "2026-03-21T18:04:03Z",
+      "updated": "2026-04-21T01:19:16Z",
+      "arxiv_id": "2603.20897v3",
+      "abs_url": "http://arxiv.org/abs/2603.20897v3",
+      "pdf_url": "https://arxiv.org/pdf/2603.20897v3",
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.AR"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [],
+      "topic": "其他",
+      "score": 3,
+      "anchor_terms": [
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "remote sensing",
+        "robust"
+      ],
+      "title_zh": "数据热岛效应：量化人工智能数据中心在变暖世界中的影响",
+      "summary_zh": "基于人工智能的服务的强劲和持续增长导致全球人工智能数据中心的稳步增长，其功耗不可避免地增加。目前尚不清楚这种用于计算目的的能源需求将如何影响周围环境。在这里，我们重点关注人工智能超大规模的散热问题。利用过去几十年遥感平台获取的地表温度测量结果，我们能够对全球人工智能数据中心周围区域记录的温度上升情况进行可靠的评估。我们估计，人工智能数据中心开始运行后，地表温度平均升高2°C，引发局部小气候区，我们称之为数据热岛效应。我们评估了对社区的影响，量化了超过 3.4 亿人可能受到气温升高的影响。我们的结果表明，数据热岛效应可能会对未来的社区和区域福利产生显着影响，从而成为全球环境可持续人工智能对话的一部分。"
+    },
+    {
+      "title": "Beyond the Academic Monoculture: A Unified Framework and Industrial Perspective for Attributed Graph Clustering",
+      "authors": [
+        "Yunhui Liu",
+        "Yue Liu",
+        "Yongchao Liu",
+        "Tao Zheng",
+        "Stan Z. Li",
+        "Xinwang Liu",
+        "Tieke He"
+      ],
+      "summary": "Attributed Graph Clustering (AGC) is a fundamental unsupervised task that partitions nodes into cohesive groups by jointly modeling structural topology and node attributes. While the advent of graph neural networks and self-supervised learning has catalyzed a proliferation of AGC methodologies, a widening chasm persists between academic benchmark performance and the stringent demands of real-world industrial deployment. To bridge this gap, this survey provides a comprehensive, industrially grounded review of AGC from three complementary perspectives. First, we introduce the Encode-Cluster-Optimize taxonomic framework, which decomposes the diverse algorithmic landscape into three orthogonal, composable modules: representation encoding, cluster projection, and optimization strategy. This unified paradigm enables principled architectural comparisons and inspires novel methodological combinations. Second, we critically examine prevailing evaluation protocols to expose the field's academic monoculture: a pervasive over-reliance on small, homophilous citation networks, the inadequacy of supervised-only metrics for an inherently unsupervised task, and the chronic neglect of computational scalability. In response, we advocate for a holistic evaluation standard that integrates supervised semantic alignment, unsupervised structural integrity, and rigorous efficiency profiling. Third, we explicitly confront the practical realities of industrial deployment. By analyzing operational constraints such as massive scale, severe heterophily, and tabular feature noise alongside extensive empirical evidence from our companion benchmark, we outline actionable engineering strategies. Furthermore, we chart a clear roadmap for future research, prioritizing heterophily-robust encoders, scalable joint optimization, and unsupervised model selection criteria to meet production-grade requirements.",
+      "published": "2026-03-21T14:15:34Z",
+      "updated": "2026-03-21T14:15:34Z",
+      "arxiv_id": "2603.20829v1",
+      "abs_url": "http://arxiv.org/abs/2603.20829v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.20829v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 5,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "graph neural network",
+        "robust",
+        "self-supervised",
+        "self-supervised learning",
+        "unsupervised"
+      ],
+      "title_zh": "超越学术单一文化：属性图聚类的统一框架和工业视角",
+      "summary_zh": "属性图聚类（AGC）是一项基本的无监督任务，它通过对结构拓扑和节点属性进行联合建模，将节点划分为内聚的组。虽然图神经网络和自监督学习的出现促进了 AGC 方法的激增，但学术基准性能与现实世界工业部署的严格要求之间仍然存在不断扩大的鸿沟。为了弥补这一差距，本次调查从三个互补的角度对 AGC 进行了全面的、基于行业的审查。首先，我们介绍 Encode-Cluster-Optimize 分类框架，它将不同的算法景观分解为三个正交的可组合模块：表示编码、聚类投影和优化策略。这种统一的范式可以进行有原则的架构比较，并激发新颖的方法组合。其次，我们批判性地研究流行的评估协议，以暴露该领域的学术单一文化：普遍过度依赖小型、同质的引用网络，仅受监督的指标对于本质上无监督的任务的不足，以及对计算可扩展性的长期忽视。作为回应，我们主张建立一个整体评估标准，整合有监督的语义对齐、无监督的结构完整性和严格的效率分析。第三，我们明确面对产业布局的实际情况。通过分析大规模、严重异质性和表格特征噪声等操作限制，以及来自我们配套基准的大量经验证据，我们概述了可行的工程策略。此外，我们为未来的研究制定了清晰的路线图，优先考虑异质鲁棒编码器、可扩展的联合优化和无监督模型选择标准，以满足生产级要求。"
+    },
+    {
+      "title": "Mamba Learns in Context: Structure-Aware Domain Generalization for Multi-Task Point Cloud Understanding",
+      "authors": [
+        "Jincen Jiang",
+        "Qianyu Zhou",
+        "Yuhang Li",
+        "Kui Su",
+        "Meili Wang",
+        "Jian Chang",
+        "Jian Jun Zhang",
+        "Xuequan Lu"
+      ],
+      "summary": "While recent Transformer and Mamba architectures have advanced point cloud representation learning, they are typically developed for single-task or single-domain settings. Directly applying them to multi-task domain generalization (DG) leads to degraded performance. Transformers effectively model global dependencies but suffer from quadratic attention cost and lack explicit structural ordering, whereas Mamba offers linear-time recurrence yet often depends on coordinate-driven serialization, which is sensitive to viewpoint changes and missing regions, causing structural drift and unstable sequential modeling. In this paper, we propose Structure-Aware Domain Generalization (SADG), a Mamba-based In-Context Learning framework that preserves structural hierarchy across domains and tasks. We design structure-aware serialization (SAS) that generates transformation-invariant sequences using centroid-based topology and geodesic curvature continuity. We further devise hierarchical domain-aware modeling (HDM) that stabilizes cross-domain reasoning by consolidating intra-domain structure and fusing inter-domain relations. At test time, we introduce a lightweight spectral graph alignment (SGA) that shifts target features toward source prototypes in the spectral domain without updating model parameters, ensuring structure-preserving test-time feature shifting. In addition, we introduce MP3DObject, a real-scan object dataset for multi-task DG evaluation. Comprehensive experiments demonstrate that the proposed approach improves structural fidelity and consistently outperforms state-of-the-art methods across multiple tasks including reconstruction, denoising, and registration.",
+      "published": "2026-03-21T09:55:10Z",
+      "updated": "2026-03-21T09:55:10Z",
+      "arxiv_id": "2603.20739v1",
+      "abs_url": "http://arxiv.org/abs/2603.20739v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.20739v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted to CVPR 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "基础模型",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "高光谱/多光谱",
+        "LiDAR/点云",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 10,
+      "anchor_terms": [
+        "domain generalization",
+        "Mamba"
+      ],
+      "matched_terms": [
+        "denoising",
+        "domain generalization",
+        "in-context learning",
+        "Mamba",
+        "point cloud",
+        "transformer"
+      ],
+      "title_zh": "Mamba 在上下文中学习：用于多任务点云理解的结构感知领域泛化",
+      "summary_zh": "虽然最近的 Transformer 和 Mamba 架构具有先进的点云表示学习，但它们通常是为单任务或单域设置开发的。直接将它们应用于多任务域泛化（DG）会导致性能下降。 Transformer 可以有效地模拟全局依赖关系，但会受到二次注意力成本的影响，并且缺乏明确的结构排序，而 Mamba 提供线性时间递归，但通常依赖于坐标驱动的序列化，这对视点变化和缺失区域敏感，导致结构漂移和不稳定的序列建模。在本文中，我们提出了结构感知领域泛化（SADG），这是一种基于 Mamba 的上下文学习框架，可保留跨领域和任务的结构层次结构。我们设计了结构感知序列化（SAS），它使用基于质心的拓扑和测地曲率连续性生成变换不变序列。我们进一步设计了分层域感知建模（HDM），通过巩固域内结构和融合域间关系来稳定跨域推理。在测试时，我们引入了一种轻量级谱图对齐（SGA），可将目标特征转移到谱域中的源原型，而无需更新模型参数，从而确保测试时特征转移保持结构保留。此外，我们还引入了 MP3DObject，这是一个用于多任务 DG 评估的实时扫描对象数据集。综合实验表明，所提出的方法提高了结构保真度，并且在重建、去噪和配准等多个任务中始终优于最先进的方法。"
+    },
+    {
+      "title": "Weakly supervised multimodal segmentation of acoustic borehole images with depth-aware cross-attention",
+      "authors": [
+        "Jose Luis Lima de Jesus Silva"
+      ],
+      "summary": "Acoustic borehole images provide high-resolution borehole-wall structure, but large-scale interpretation remains difficult because dense expert annotations are rarely available and subsurface information is intrinsically multimodal. The challenge is developing weakly supervised methods combining two-dimensional image texture with depth-aligned one-dimensional well-logs. Here, we introduce a weakly supervised multimodal segmentation framework that refines threshold-guided pseudo-labels through learned models. This preserves the annotation-free character of classical thresholding and clustering workflows while extending them with denoising, confidence-aware pseudo-supervision, and physically structured fusion. We establish that threshold-guided learned refinement provides the most robust improvement over raw thresholding, denoised thresholding, and latent clustering baselines. Multimodal performance depends strongly on fusion strategy: direct concatenation provides limited gains, whereas depth-aware cross-attention, gated fusion, and confidence-aware modulation substantially improve agreement with the weak supervisory reference. The strongest model, confidence-gated depth-aware cross-attention (CG-DCA), consistently outperforms threshold-based, image-only, and earlier multimodal baselines. Targeted ablations show its advantage depends specifically on confidence-aware fusion and structured local depth interaction rather than model complexity alone. Cross-well analyses confirm this performance is broadly stable. These results establish a practical, scalable framework for annotation-free segmentation, showing multimodal improvement is maximized when auxiliary logs are incorporated selectively and depth-aware.",
+      "published": "2026-03-21T09:28:05Z",
+      "updated": "2026-03-21T09:28:05Z",
+      "arxiv_id": "2603.20729v1",
+      "abs_url": "http://arxiv.org/abs/2603.20729v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.20729v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "physics.geo-ph"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "无监督与弱监督",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 7,
+      "anchor_terms": [
+        "weakly supervised"
+      ],
+      "matched_terms": [
+        "cross-attention",
+        "denoising",
+        "robust",
+        "weakly supervised"
+      ],
+      "title_zh": "具有深度感知交叉注意的声学钻孔图像的弱监督多模态分割",
+      "summary_zh": "声学钻孔图像提供了高分辨率的钻孔壁结构，但大规模解释仍然很困难，因为密集的专家注释很少可用，而且地下信息本质上是多模态的。面临的挑战是开发将二维图像纹理与深度对齐的一维测井相结合的弱监督方法。在这里，我们引入了一种弱监督的多模态分割框架，该框架通过学习模型细化阈值引导的伪标签。这保留了经典阈值和聚类工作流程的无注释特征，同时通过去噪、置信感知伪监督和物理结构化融合对其进行了扩展。我们确定阈值引导的学习细化相对于原始阈值、去噪阈值和潜在聚类基线提供了最强大的改进。多模态性能在很大程度上取决于融合策略：直接串联提供的增益有限，而深度感知交叉注意力、门控融合和置信感知调制则大大提高了与弱监督参考的一致性。最强大的模型，置信门控深度感知交叉注意力（CG-DCA），始终优于基于阈值、仅图像和早期的多模态基线。有针对性的消融表明，其优势具体取决于置信感知融合和结构化局部深度交互，而不仅仅是模型复杂性。井间分析证实该性能大致稳定。这些结果为无注释分割建立了一个实用的、可扩展的框架，表明当有选择地合并辅助日志并具有深度感知时，多模式改进得到最大化。"
+    },
+    {
+      "title": "Premier: Personalized Preference Modulation with Learnable User Embedding in Text-to-Image Generation",
+      "authors": [
+        "Zihao Wang",
+        "Yuxiang Wei",
+        "Xinpeng Zhou",
+        "Tianyu Zhang",
+        "Tao Liang",
+        "Yalong Bai",
+        "Hongzhi Zhang",
+        "Wangmeng Zuo"
+      ],
+      "summary": "Text-to-image generation has advanced rapidly, yet it still struggles to capture the nuanced user preferences. Existing approaches typically rely on multimodal large language models to infer user preferences, but the derived prompts or latent codes rarely reflect them faithfully, leading to suboptimal personalization. We present Premier, a novel preference modulation framework for personalized image generation. Premier represents each user's preference as a learnable embedding and introduces a preference adapter that fuses the user embedding with the text prompt. To enable accurate and fine-grained preference control, the fused preference embedding is further used to modulate the generative process. To enhance the distinctness of individual preference and improve alignment between outputs and user-specific styles, we incorporate a dispersion loss that enforces separation among user embeddings. When user data are scarce, new users are represented as linear combinations of existing preference embeddings learned during training, enabling effective generalization. Experiments show that Premier outperforms prior methods under the same history length, achieving stronger preference alignment and superior performance on text consistency, ViPer proxy metrics, and expert evaluations.",
+      "published": "2026-03-21T09:19:12Z",
+      "updated": "2026-04-12T12:02:05Z",
+      "arxiv_id": "2603.20725v2",
+      "abs_url": "http://arxiv.org/abs/2603.20725v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.20725v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 6,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "adapter",
+        "image generation",
+        "large language model",
+        "multimodal large language model"
+      ],
+      "title_zh": "Premier：在文本到图像生成中使用可学习的用户嵌入进行个性化偏好调制",
+      "summary_zh": "文本到图像的生成技术发展迅速，但仍难以捕捉细致入微的用户偏好。现有的方法通常依赖于多模态大语言模型来推断用户偏好，但派生的提示或潜在代码很少忠实地反映它们，从而导致个性化效果不佳。我们推出 Premier，一种用于个性化图像生成的新颖偏好调制框架。 Premier 将每个用户的偏好表示为可学习的嵌入，并引入了一个偏好适配器，将用户嵌入与文本提示融合在一起。为了实现准确和细粒度的偏好控制，融合的偏好嵌入进一步用于调节生成过程。为了增强个人偏好的明确性并改善输出和用户特定风格之间的一致性，我们引入了色散损失，强制用户嵌入之间的分离。当用户数据稀缺时，新用户被表示为在训练期间学习的现有偏好嵌入的线性组合，从而实现有效的泛化。实验表明，Premier 在相同历史长度下优于现有方法，在文本一致性、ViPer 代理指标和专家评估方面实现了更强的偏好对齐和优越性能。"
+    },
+    {
+      "title": "Cross-modal Fuzzy Alignment Network for Text-Aerial Person Retrieval and A Large-scale Benchmark",
+      "authors": [
+        "Yifei Deng",
+        "Chenglong Li",
+        "Yuyang Zhang",
+        "Guyue Hu",
+        "Jin Tang"
+      ],
+      "summary": "Text-aerial person retrieval aims to identify targets in UAV-captured images from eyewitness descriptions, supporting intelligent transportation and public security applications. Compared to ground-view text--image person retrieval, UAV-captured images often suffer from degraded visual information due to drastic variations in viewing angles and flight altitudes, making semantic alignment with textual descriptions very challenging. To address this issue, we propose a novel Cross-modal Fuzzy Alignment Network, which quantifies the token-level reliability by fuzzy logic to achieve accurate fine-grained alignment and incorporates ground-view images as a bridge agent to further mitigate the gap between aerial images and text descriptions, for text--aerial person retrieval. In particular, we design the Fuzzy Token Alignment module that employs the fuzzy membership function to dynamically model token-level association strength and suppress the influence of unobservable or noisy tokens. It can alleviate the semantic inconsistencies caused by missing visual cues and significantly enhance the robustness of token-level semantic alignment. Moreover, to further mitigate the gap between aerial images and text descriptions, we design a Context-Aware Dynamic Alignment module to incorporate the ground-view agent as a bridge in text--aerial alignment and adaptively combine direct alignment and agent-assisted alignment to improve the robustness. In addition, we construct a large-scale benchmark dataset called AERI-PEDES by using a chain-of-thought to decompose text generation into attribute parsing, initial captioning, and refinement, thus boosting textual accuracy and semantic consistency. Experiments on AERI-PEDES and TBAPR demonstrate the superiority of our method.",
+      "published": "2026-03-21T09:02:44Z",
+      "updated": "2026-03-21T09:02:44Z",
+      "arxiv_id": "2603.20721v1",
+      "abs_url": "http://arxiv.org/abs/2603.20721v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.20721v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted by CVPR 2026 main track",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像描述与视觉推理",
+        "多模态融合",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "图像描述与视觉推理",
+      "score": 6,
+      "anchor_terms": [
+        "aerial image",
+        "aerial images",
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "aerial image",
+        "aerial images",
+        "robust",
+        "UAV"
+      ],
+      "title_zh": "用于文本空中人物检索的跨模态模糊对齐网络和大规模基准",
+      "summary_zh": "文本航拍人物检索旨在根据目击者描述识别无人机捕获图像中的目标，支持智能交通和公共安全应用。与地景文本图像人物检索相比，由于视角和飞行高度的巨大变化，无人机捕获的图像经常会遭受视觉信息退化的影响，这使得语义与文本描述的对齐非常具有挑战性。为了解决这个问题，我们提出了一种新颖的跨模态模糊对齐网络，它通过模糊逻辑量化标记级可靠性，以实现精确的细粒度对齐，并将地面视图图像作为桥梁代理，以进一步缩小航空图像和文本描述之间的差距，用于文本-空中人物检索。特别是，我们设计了模糊标记对齐模块，该模块采用模糊隶属函数来动态建模标记级关联强度并抑制不可观察或噪声标记的影响。它可以减轻由于缺少视觉线索而导致的语义不一致，并显着增强标记级语义对齐的鲁棒性。此外，为了进一步缩小航拍图像和文本描述之间的差距，我们设计了一个上下文感知动态对齐模块，将地面视图代理作为文本空中对齐的桥梁，并自适应地结合直接对齐和代理辅助对齐以提高鲁棒性。此外，我们构建了一个名为 AERI-PEDES 的大规模基准数据集，通过使用思想链将文本生成分解为属性解析、初始字幕和细化，从而提高文本准确性和语义一致性。在AERI-PEDES和TBAPR上的实验证明了我们方法的优越性。"
+    },
+    {
+      "title": "Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery via Generative Vision Models",
+      "authors": [
+        "Yifan Yang",
+        "Lei Zou",
+        "Wendy Jepson"
+      ],
+      "summary": "In the immediate aftermath of natural disasters, rapid situational awareness is critical. Traditionally, satellite observations are widely used to estimate damage extent. However, they lack the ground-level perspective essential for characterizing specific structural failures and impacts. Meanwhile, ground-level data (e.g., street-view imagery) remains largely inaccessible during time-sensitive events. This study investigates Satellite-to-Street View Synthesis to bridge this data gap. We introduce two generative strategies to synthesize post-disaster street views from satellite imagery: a Vision-Language Model (VLM)-guided approach and a damage-sensitive Mixture-of-Experts (MoE) method. We benchmark these against general-purpose baselines (Pix2Pix, ControlNet) using a proposed Structure-Aware Evaluation Framework. This multi-tier protocol integrates (1) pixel-level quality assessment, (2) ResNet-based semantic consistency verification, and (3) a novel VLM-as-a-Judge for perceptual alignment. Experiments on 300 disaster scenarios reveal a critical realism--fidelity trade-off: while diffusion-based approaches (e.g., ControlNet) achieve high perceptual realism, they often hallucinate structural details. Quantitative results show that standard ControlNet achieves the highest semantic accuracy, 0.71, whereas VLM-enhanced and MoE models excel in textural plausibility but struggle with semantic clarity. This work establishes a baseline for trustworthy cross-view synthesis, emphasizing that visually realistic generations may still fail to preserve critical structural information required for reliable disaster assessment.",
+      "published": "2026-03-21T07:47:33Z",
+      "updated": "2026-03-21T07:47:33Z",
+      "arxiv_id": "2603.20697v1",
+      "abs_url": "http://arxiv.org/abs/2603.20697v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.20697v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "Accepted for presentation at IGARSS 2026 (IEEE International Geoscience and Remote Sensing Symposium)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 7,
+      "anchor_terms": [
+        "remote sensing",
+        "satellite image",
+        "satellite imagery"
+      ],
+      "matched_terms": [
+        "remote sensing",
+        "satellite",
+        "satellite image",
+        "satellite imagery",
+        "VLM"
+      ],
+      "title_zh": "卫星到街道：通过生成视觉模型合成卫星图像的灾后视图",
+      "summary_zh": "自然灾害发生后，快速态势感知至关重要。传统上，卫星观测被广泛用于估计损害程度。然而，它们缺乏描述特定结构故障和影响所必需的地面视角。与此同时，在时间敏感的事件期间，地面数据（例如街景图像）仍然基本上无法访问。本研究调查卫星到街景合成以弥补这一数据差距。我们引入了两种生成策略来从卫星图像合成灾后街景：视觉语言模型（VLM）引导的方法和损害敏感的专家混合（MoE）方法。我们使用提议的结构感知评估框架对通用基线（Pix2Pix、ControlNet）进行基准测试。该多层协议集成了 (1) 像素级质量评估、(2) 基于 ResNet 的语义一致性验证，以及 (3) 用于感知对齐的新型 VLM-as-a-Judge。对 300 个灾难场景的实验揭示了一个关键的现实主义——保真度权衡：虽然基于扩散的方法（例如 ControlNet）实现了高度的感知现实主义，但它们经常会产生结构细节的幻觉。定量结果表明，标准 ControlNet 实现了最高的语义准确度（0.71），而 VLM 增强模型和 MoE 模型在纹理合理性方面表现出色，但在语义清晰度方面存在困难。这项工作为可信的跨视图合成建立了基线，强调视觉逼真的生成可能仍然无法保留可靠灾害评估所需的关键结构信息。"
+    },
+    {
+      "title": "Towards Intelligent Geospatial Data Discovery: a knowledge graph-driven multi-agent framework powered by large language models",
+      "authors": [
+        "Ruixiang Liu",
+        "Zhenlong Li",
+        "Ali Khosravi Kazazi"
+      ],
+      "summary": "The rapid growth in the volume, variety, and velocity of geospatial data has created data ecosystems that are highly distributed, heterogeneous, and semantically inconsistent. Existing data catalogs, portals, and infrastructures still rely largely on keyword-based search with limited semantic support, which often fails to capture user intent and leads to weak retrieval performance. To address these challenges, this study proposes a knowledge graph-driven multi-agent framework for intelligent geospatial data discovery, powered by large language models. The framework introduces a unified geospatial metadata ontology as a semantic mediation layer to align heterogeneous metadata standards across platforms and constructs a geospatial metadata knowledge graph to explicitly model datasets and their multidimensional relationships. Building on the structured representation, the framework adopts a multi-agent collaborative architecture to perform intent parsing, knowledge graph retrieval, and answer synthesis, forming an interpretable and closed-loop discovery process from user queries to results. Results from representative use cases and performance evaluation show that the framework substantially improves intent matching accuracy, ranking quality, recall, and discovery transparency compared with traditional systems. This study advances geospatial data discovery toward a more semantic, intent-aware, and intelligent paradigm, providing a practical foundation for next-generation intelligent and autonomous spatial data infrastructures and contributing to the broader vision of Autonomous GIS.",
+      "published": "2026-03-21T06:16:56Z",
+      "updated": "2026-03-24T16:03:39Z",
+      "arxiv_id": "2603.20670v2",
+      "abs_url": "http://arxiv.org/abs/2603.20670v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.20670v2",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 6,
+      "anchor_terms": [
+        "geospatial"
+      ],
+      "matched_terms": [
+        "geospatial",
+        "GIS",
+        "large language model"
+      ],
+      "title_zh": "迈向智能地理空间数据发现：由大型语言模型支持的知识图驱动的多代理框架",
+      "summary_zh": "地理空间数据的数量、种类和速度的快速增长创造了高度分布、异构和语义不一致的数据生态系统。现有的数据目录、门户和基础设施仍然很大程度上依赖于基于关键字的搜索，语义支持有限，这往往无法捕获用户意图并导致检索性能较差。为了应对这些挑战，本研究提出了一种知识图驱动的多智能体框架，用于智能地理空间数据发现，由大型语言模型提供支持。该框架引入了统一的地理空间元数据本体作为语义中介层，以跨平台协调异构元数据标准，并构建地理空间元数据知识图来显式建模数据集及其多维关系。该框架基于结构化表示，采用多智能体协作架构来执行意图解析、知识图谱检索和答案合成，形成从用户查询到结果的可解释的闭环发现过程。代表性用例和性能评估的结果表明，与传统系统相比，该框架大大提高了意图匹配准确性、排名质量、召回率和发现透明度。这项研究将地理空间数据发现推向更加语义化、意图感知和智能的范式，为下一代智能和自主空间数据基础设施提供了实践基础，并为自主 GIS 的更广泛愿景做出了贡献。"
+    }
+  ]
+}

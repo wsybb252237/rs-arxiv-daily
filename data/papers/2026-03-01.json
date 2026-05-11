@@ -1,0 +1,507 @@
+{
+  "date": "2026-03-01",
+  "generated_at": "2026-05-11T06:27:50.352866+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202603010000 TO 202603012359]",
+  "total_fetched": 203,
+  "total_matched": 12,
+  "papers": [
+    {
+      "title": "GRAD-Former: Gated Robust Attention-based Differential Transformer for Change Detection",
+      "authors": [
+        "Durgesh Ameta",
+        "Ujjwal Mishra",
+        "Praful Hambarde",
+        "Amit Shukla"
+      ],
+      "summary": "Change detection (CD) in remote sensing aims to identify semantic differences between satellite images captured at different times. While deep learning has significantly advanced this field, existing approaches based on convolutional neural networks (CNNs), transformers and Selective State Space Models (SSMs) still struggle to precisely delineate change regions. In particular, traditional transformer-based methods suffer from quadratic computational complexity when applied to very high-resolution (VHR) satellite images and often perform poorly with limited training data, leading to under-utilization of the rich spatial information available in VHR imagery. We present GRAD-Former, a novel framework that enhances contextual understanding while maintaining efficiency through reduced model size. The proposed framework consists of a novel encoder with Adaptive Feature Relevance and Refinement (AFRAR) module, fusion and decoder blocks. AFRAR integrates global-local contextual awareness through two proposed components: the Selective Embedding Amplification (SEA) module and the Global-Local Feature Refinement (GLFR) module. SEA and GLFR leverage gating mechanisms and differential attention, respectively, which generates multiple softmax heaps to capture important features while minimizing the captured irreverent features. Multiple experiments across three challenging CD datasets (LEVIR-CD, CDD, DSIFN-CD) demonstrate GRAD-Former's superior performance compared to existing approaches. Notably, GRAD-Former outperforms the current state-of-the-art models across all the metrics and all the datasets while using fewer parameters. Our framework establishes a new benchmark for remote sensing change detection performance. Our code will be released at: https://github.com/Ujjwal238/GRAD-Former",
+      "published": "2026-03-01T15:56:42Z",
+      "updated": "2026-03-01T15:56:42Z",
+      "arxiv_id": "2603.01161v1",
+      "abs_url": "http://arxiv.org/abs/2603.01161v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.01161v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "This work has been submitted to the IEEE for possible publication",
+      "code_url": "https://github.com/Ujjwal238/GRAD-Former",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "变化检测",
+        "基础模型",
+        "光学遥感",
+        "数据集/评测"
+      ],
+      "topic": "变化检测",
+      "score": 17,
+      "anchor_terms": [
+        "change detection",
+        "remote sensing",
+        "satellite image",
+        "satellite images",
+        "state space model"
+      ],
+      "matched_terms": [
+        "change detection",
+        "convolutional neural network",
+        "remote sensing",
+        "remote sensing change detection",
+        "robust",
+        "satellite",
+        "satellite image",
+        "satellite images",
+        "state space model",
+        "transformer",
+        "VHR"
+      ],
+      "title_zh": "GRAD-Former：用于变化检测的门控鲁棒基于注意力的差分变压器",
+      "summary_zh": "遥感中的变化检测（CD）旨在识别不同时间捕获的卫星图像之间的语义差异。虽然深度学习显着推进了这一领域的发展，但基于卷积神经网络 (CNN)、变压器和选择性状态空间模型 (SSM) 的现有方法仍然难以精确描绘变化区域。特别是，传统的基于 Transformer 的方法在应用于超高分辨率 (VHR) 卫星图像时会遇到二次计算复杂性，并且在训练数据有限的情况下通常表现不佳，导致 VHR 图像中丰富的空间信息利用不足。我们提出了 GRAD-Former，这是一种新颖的框架，可以增强上下文理解，同时通过减小模型大小来保持效率。所提出的框架由具有自适应特征相关性和细化（AFRAR）模块的新型编码器、融合和解码器块组成。 AFRAR 通过两个提议的组件集成了全局-局部上下文感知：选择性嵌入放大（SEA）模块和全局-局部特征细化（GLFR）模块。 SEA 和 GLFR 分别利用门控机制和差分注意力，生成多个 softmax 堆来捕获重要特征，同时最小化捕获的不敬特征。三个具有挑战性的 CD 数据集（LEVIR-CD、CDD、DSIFN-CD）的多项实验证明了 GRAD-Former 与现有方法相比具有卓越的性能。值得注意的是，GRAD-Former 在所有指标和所有数据集上都优于当前最先进的模型，同时使用更少的参数。我们的框架为遥感变化检测性能建立了新的基准。我们的代码将发布在：https://github.com/Ujjwal238/GRAD-Former"
+    },
+    {
+      "title": "HypeLoRA: Hyper-Network-Generated LoRA Adapters for Calibrated Language Model Fine-Tuning",
+      "authors": [
+        "Bartosz Trojan",
+        "Filip Gębala"
+      ],
+      "summary": "Modern Transformer-based models frequently suffer from miscalibration, producing overconfident predictions that do not reflect true empirical frequencies. This work investigates the calibration dynamics of LoRA: Low-Rank Adaptation and a novel hyper-network-based adaptation framework as parameter-efficient alternatives to full fine-tuning for RoBERTa. Evaluating across the GLUE benchmark, we demonstrate that LoRA-based adaptation consistently achieves calibration parity with (and in specific tasks exceeds) full fine-tuning, while maintaining significantly higher parameter efficiency. We further explore a dynamic approach where a shared hyper-network generates LoRA factors (A and B matrices) to induce structural coupling across layers. This approach produced results similar to standard LoRA fine-tuning, even achieving better MCC on CoLA dataset. Our study also reveal a critical trade-off: constraining the adaptation space (e.g., freezing matrices A) acts as a powerful regularizer that enhances Expected Calibration Error (ECE), but necessitates a carefully balanced sacrifice in downstream task accuracy. To support future research, we provide a unified and reproducible implementation of contemporary calibration metrics, including ECE, MCE, and ACE. Our findings clarify the relationship between parameter efficiency and probabilistic reliability, positioning structured low-rank updates as a viable foundation for uncertainty-aware Transformer architectures. Code available at: https://github.com/btrojan-official/HypeLoRA",
+      "published": "2026-03-01T15:53:49Z",
+      "updated": "2026-03-29T14:35:38Z",
+      "arxiv_id": "2603.19278v2",
+      "abs_url": "http://arxiv.org/abs/2603.19278v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.19278v2",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "comment": "12 pages, 2 figures, 2 tables",
+      "code_url": "https://github.com/btrojan-official/HypeLoRA",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 7,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "adapter",
+        "fine-tuning",
+        "LoRA",
+        "transformer"
+      ],
+      "title_zh": "HypeLoRA：超网络生成的 LoRA 适配器，用于校准语言模型微调",
+      "summary_zh": "现代基于 Transformer 的模型经常出现校准错误，产生过于自信的预测，无法反映真实的经验频率。这项工作研究了 LoRA 的校准动态：低阶适应和一种新颖的基于超网络的适应框架，作为 RoBERTa 完全微调的参数有效替代方案。通过对 GLUE 基准进行评估，我们证明基于 LoRA 的自适应始终能够实现与（并且在特定任务中超过）完全微调的校准同等性，同时保持显着更高的参数效率。我们进一步探索一种动态方法，其中共享超网络生成 LoRA 因子（A 和 B 矩阵）以诱导跨层结构耦合。这种方法产生的结果与标准 LoRA 微调类似，甚至在 CoLA 数据集上实现了更好的 MCC。我们的研究还揭示了一个关键的权衡：限制适应空间（例如，冻结矩阵 A）充当强大的正则化器，可以增强预期校准误差（ECE），但需要仔细平衡下游任务准确性的牺牲。为了支持未来的研究，我们提供了当代校准指标的统一且可重复的实施，包括 ECE、MCE 和 ACE。我们的研究结果阐明了参数效率和概率可靠性之间的关系，将结构化低秩更新定位为不确定性感知 Transformer 架构的可行基础。代码位于：https://github.com/btrojan-official/HypeLoRA"
+    },
+    {
+      "title": "LLaDA-o: An Effective and Length-Adaptive Omni Diffusion Model",
+      "authors": [
+        "Zebin You",
+        "Xiaolu Zhang",
+        "Jun Zhou",
+        "Chongxuan Li",
+        "Ji-Rong Wen"
+      ],
+      "summary": "We present \\textbf{LLaDA-o}, an effective and length-adaptive omni diffusion model for multimodal understanding and generation. LLaDA-o is built on a Mixture of Diffusion (MoD) framework that decouples discrete masked diffusion for text understanding and continuous diffusion for visual generation, while coupling them through a shared, simple, and efficient attention backbone that reduces redundant computation for fixed conditions. Building on MoD, we further introduce a data-centric length adaptation strategy that enables flexible-length decoding in multimodal settings without architectural changes. Extensive experiments show that LLaDA-o achieves state-of-the-art performance among omni-diffusion models on multimodal understanding and generation benchmarks, and reaches 87.04 on DPG-Bench for text-to-image generation, supporting the effectiveness of unified omni diffusion modeling. Code is available at https://github.com/ML-GSAI/LLaDA-o.",
+      "published": "2026-03-01T12:05:06Z",
+      "updated": "2026-03-01T12:05:06Z",
+      "arxiv_id": "2603.01068v1",
+      "abs_url": "http://arxiv.org/abs/2603.01068v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.01068v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/ML-GSAI/LLaDA-o",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像生成与重建",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 4,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "diffusion model",
+        "image generation"
+      ],
+      "title_zh": "LLaDA-o：有效的长度自适应全向扩散模型",
+      "summary_zh": "我们提出了 \\textbf{LLaDA-o}，一种有效的长度自适应全向扩散模型，用于多模态理解和生成。 LLaDA-o 建立在扩散混合 (MoD) 框架之上，该框架将用于文本理解的离散掩模扩散和用于视觉生成的连续扩散解耦，同时通过共享、简单且高效的注意力主干将它们耦合起来，从而减少固定条件下的冗余计算。在 MoD 的基础上，我们进一步引入了一种以数据为中心的长度自适应策略，该策略可以在多模态设置中实现灵活的长度解码，而无需更改架构。大量实验表明，LLaDA-o 在多模态理解和生成基准上实现了全向扩散模型中最先进的性能，并且在文本到图像生成的 DPG-Bench 上达到了 87.04，支持了统一全向扩散建模的有效性。代码可在 https://github.com/ML-GSAI/LLaDA-o 获取。"
+    },
+    {
+      "title": "Thoth: Mid-Training Bridges LLMs to Time Series Understanding",
+      "authors": [
+        "Jiafeng Lin",
+        "Yuxuan Wang",
+        "Jialong Wu",
+        "Huakun Luo",
+        "Zhongyi Pei",
+        "Jianmin Wang"
+      ],
+      "summary": "Large Language Models (LLMs) have demonstrated remarkable success in general-purpose reasoning. However, they still struggle to understand and reason about time series data, which limits their effectiveness in decision-making scenarios that depend on temporal dynamics. In this paper, we propose Thoth, the first family of mid-trained LLMs with general-purpose time series understanding capabilities. As a pivotal intermediate stage, mid-training achieves task- and domain-agnostic alignment between time series and natural language, for which we construct Book-of-Thoth, a high-quality, time-series-centric mid-training corpus. Book-of-Thoth enables both time-series-to-text and text-to-time-series generation, equipping LLMs with a foundational grasp of temporal patterns. To better evaluate advanced reasoning capabilities, we further present KnoTS, a novel benchmark of knowledge-intensive time series understanding, designed for joint reasoning over temporal patterns and domain knowledge. Extensive experiments demonstrate that mid-training with Book-of-Thoth enables Thoth to significantly outperform its base model and advanced LLMs across a range of time series question answering benchmarks. Moreover, Thoth exhibits superior capabilities when fine-tuned under data scarcity, underscoring the effectiveness of mid-training for time series understanding. Code is available at: https://github.com/thuml/Thoth.",
+      "published": "2026-03-01T10:44:39Z",
+      "updated": "2026-03-01T10:44:39Z",
+      "arxiv_id": "2603.01042v1",
+      "abs_url": "http://arxiv.org/abs/2603.01042v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.01042v1",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/thuml/Thoth",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "时间序列与视频",
+        "视觉-语言模型",
+        "数据集/评测"
+      ],
+      "topic": "时间序列与视频",
+      "score": 2,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "large language model",
+        "temporal",
+        "time-series"
+      ],
+      "title_zh": "Thoth：中期培训将法学硕士与时间序列理解联系起来",
+      "summary_zh": "大型语言模型 (LLM) 在通用推理方面取得了显着的成功。然而，他们仍然难以理解和推理时间序列数据，这限制了它们在依赖时间动态的决策场景中的有效性。在本文中，我们提出了 Thoth，这是第一个具有通用时间序列理解能力的中等训练法学硕士系列。作为关键的中间阶段，中期训练实现了时间序列和自然语言之间与任务和领域无关的对齐，为此我们构建了 Book-of-Thoth，一个高质量的、以时间序列为中心的中期训练语料库。 Book-of-Thoth 可以生成时间序列到文本和文本到时间序列，使法学硕士能够对时间模式有基本的掌握。为了更好地评估高级推理能力，我们进一步提出了 KnoTS，一种知识密集型时间序列理解的新基准，专为时间模式和领域知识的联合推理而设计。大量实验表明，使用 Book-of-Thoth 进行的中期训练使 Thoth 在一系列时间序列问答基准测试中的表现显着优于其基本模型和高级法学硕士。此外，Thoth 在数据稀缺的情况下进行微调时表现出卓越的能力，强调了中间训练对于时间序列理解的有效性。代码位于：https://github.com/thuml/Thoth。"
+    },
+    {
+      "title": "Principled Fast and Meta Knowledge Learners for Continual Reinforcement Learning",
+      "authors": [
+        "Ke Sun",
+        "Hongming Zhang",
+        "Jun Jin",
+        "Chao Gao",
+        "Xi Chen",
+        "Wulong Liu",
+        "Linglong Kong"
+      ],
+      "summary": "Inspired by the human learning and memory system, particularly the interplay between the hippocampus and cerebral cortex, this study proposes a dual-learner framework comprising a fast learner and a meta learner to address continual Reinforcement Learning~(RL) problems. These two learners are coupled to perform distinct yet complementary roles: the fast learner focuses on knowledge transfer, while the meta learner ensures knowledge integration. In contrast to traditional multi-task RL approaches that share knowledge through average return maximization, our meta learner incrementally integrates new experiences by explicitly minimizing catastrophic forgetting, thereby supporting efficient cumulative knowledge transfer for the fast learner. To facilitate rapid adaptation in new environments, we introduce an adaptive meta warm-up mechanism that selectively harnesses past knowledge. We conduct experiments in various pixel-based and continuous control benchmarks, revealing the superior performance of continual learning for our proposed dual-learner approach relative to baseline methods. The code is released in https://github.com/datake/FAME.",
+      "published": "2026-03-01T03:49:20Z",
+      "updated": "2026-03-01T03:49:20Z",
+      "arxiv_id": "2603.00903v1",
+      "abs_url": "http://arxiv.org/abs/2603.00903v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00903v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "Published in ICLR 2026",
+      "code_url": "https://github.com/datake/FAME",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 2,
+      "anchor_terms": [
+        "continual learning"
+      ],
+      "matched_terms": [
+        "catastrophic forgetting",
+        "continual learning"
+      ],
+      "title_zh": "用于持续强化学习的有原则的快速和元知识学习者",
+      "summary_zh": "受人类学习和记忆系统的启发，特别是海马体和大脑皮层之间的相互作用，这项研究提出了一个由快速学习器和元学习器组成的双学习器框架，以解决持续的强化学习（RL）问题。这两个学习器耦合起来执行不同但互补的角色：快速学习器专注于知识转移，而元学习器确保知识集成。与通过平均回报最大化来共享知识的传统多任务强化学习方法相比，我们的元学习器通过显式最小化灾难性遗忘来增量地整合新经验，从而支持快速学习者的有效累积知识迁移。为了促进在新环境中的快速适应，我们引入了一种自适应元预热机制，可以选择性地利用过去的知识。我们在各种基于像素的连续控制基准中进行了实验，揭示了我们提出的双学习器方法相对于基线方法的持续学习的优越性能。代码发布于https://github.com/datake/FAME。"
+    },
+    {
+      "title": "Information-Theoretic Framework for Self-Adapting Model Predictive Controllers",
+      "authors": [
+        "Wael Hafez",
+        "Amir Nazeri"
+      ],
+      "summary": "Model Predictive Control (MPC) is a vital technique for autonomous systems, like Unmanned Aerial Vehicles (UAVs), enabling optimized motion planning. However, traditional MPC struggles to adapt to real-time changes such as dynamic obstacles and shifting system dynamics, lacking inherent mechanisms for self-monitoring and adaptive optimization. Here, we introduce Entanglement Learning (EL), an information-theoretic framework that enhances MPC adaptability through an Information Digital Twin (IDT). The IDT monitors and quantifies, in bits, the information flow between MPC inputs, control actions, and UAV behavior. By introducing new information-theoretic metrics we call entanglement metrics, it tracks variations in these dependencies. These metrics measure the mutual information between the optimizer's input, its control actions, and the resulting UAV dynamics, enabling a deeper understanding of their interrelationships. This allows the IDT to detect performance deviations and generate real-time adaptive signals to recalibrate MPC parameters, preserving stability. Unlike traditional MPC, which relies on error-based feedback, this dual-feedback approach leverages information flow for proactive adaptation to evolving conditions. Scalable and leveraging existing infrastructure, this framework improves MPC reliability and robustness across diverse scenarios, extending beyond UAV control to any MPC implementation requiring adaptive performance.",
+      "published": "2026-03-01T21:44:02Z",
+      "updated": "2026-03-01T21:44:02Z",
+      "arxiv_id": "2603.01286v1",
+      "abs_url": "http://arxiv.org/abs/2603.01286v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.01286v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "comment": "9 pages, 5 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无人机/UAV"
+      ],
+      "topic": "无人机/UAV",
+      "score": 5,
+      "anchor_terms": [
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "robust",
+        "UAV",
+        "unmanned aerial vehicle"
+      ],
+      "title_zh": "自适应模型预测控制器的信息论框架",
+      "summary_zh": "模型预测控制 (MPC) 是无人机 (UAV) 等自主系统的一项重要技术，可实现优化的运动规划。然而，传统的 MPC 难以适应动态障碍和变化的系统动态等实时变化，缺乏内在的自我监控和自适应优化机制。在这里，我们介绍纠缠学习 (EL)，这是一种信息理论框架，可通过信息数字孪生 (IDT) 增强 MPC 适应性。 IDT 以比特为单位监控和量化 MPC 输入、控制操作和无人机行为之间的信息流。通过引入新的信息论指标（我们称之为纠缠指标），它可以跟踪这些依赖关系的变化。这些指标测量优化器的输入、其控制操作以及由此产生的无人机动态之间的相互信息，从而能够更深入地了解它们的相互关系。这使得 IDT 能够检测性能偏差并生成实时自适应信号来重新校准 MPC 参数，从而保持稳定性。与依赖基于错误的反馈的传统 MPC 不同，这种双反馈方法利用信息流主动适应不断变化的条件。该框架可扩展并利用现有基础设施，提高了跨不同场景的 MPC 可靠性和稳健性，从无人机控制扩展到任何需要自适应性能的 MPC 实施。"
+    },
+    {
+      "title": "Extended Empirical Validation of the Explainability Solution Space",
+      "authors": [
+        "Antoni Mestre",
+        "Manoli Albert",
+        "Miriam Gil",
+        "Vicente Pelechano"
+      ],
+      "summary": "This technical report provides an extended validation of the Explainability Solution Space (ESS) through cross-domain evaluation. While initial validation focused on employee attrition prediction, this study introduces a heterogeneous intelligent urban resource allocation system to demonstrate the generality and domain-independence of the ESS framework. The second case study integrates tabular, temporal, and geospatial data under multi-stakeholder governance conditions. Explicit quantitative positioning of representative XAI families is provided for both contexts. Results confirm that ESS rankings are not domain-specific but adapt systematically to governance roles, risk profiles, and stakeholder configurations. The findings reinforce ESS as a generalizable operational decision-support instrument for explainable AI strategy design across socio-technical systems.",
+      "published": "2026-03-01T19:13:21Z",
+      "updated": "2026-03-07T14:07:27Z",
+      "arxiv_id": "2603.01235v2",
+      "abs_url": "http://arxiv.org/abs/2603.01235v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.01235v2",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "小样本与域泛化",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 3,
+      "anchor_terms": [
+        "geospatial"
+      ],
+      "matched_terms": [
+        "generalizable",
+        "geospatial"
+      ],
+      "title_zh": "可解释性解决方案空间的扩展实证验证",
+      "summary_zh": "该技术报告通过跨领域评估对可解释性解决方案空间 (ESS) 进行了扩展验证。虽然最初的验证侧重于员工流失预测，但本研究引入了异构智能城市资源分配系统，以证明 ESS 框架的通用性和领域独立性。第二个案例研究整合了多利益相关者治理条件下的表格、时间和地理空间数据。两种情况下都提供了代表性 XAI 系列的显式定量定位。结果证实，ESS 排名不是针对特定领域的，而是系统地适应治理角色、风险状况和利益相关者配置。研究结果强化了 ESS 作为一种通用的运营决策支持工具，用于跨社会技术系统进行可解释的人工智能策略设计。"
+    },
+    {
+      "title": "Intent-Context Synergy Reinforcement Learning for Autonomous UAV Decision-Making in Air Combat",
+      "authors": [
+        "Jiahao Fu",
+        "Feng Yang"
+      ],
+      "summary": "Autonomous UAV infiltration in dynamic contested environments remains a significant challenge due to the partially observable nature of threats and the conflicting objectives of mission efficiency versus survivability. Traditional Reinforcement Learning (RL) approaches often suffer from myopic decision-making and struggle to balance these trade-offs in real-time. To address these limitations, this paper proposes an Intent-Context Synergy Reinforcement Learning (ICS-RL) framework. The framework introduces two core innovations: (1) An LSTM-based Intent Prediction Module that forecasts the future trajectories of hostile units, transforming the decision paradigm from reactive avoidance to proactive planning via state augmentation; (2) A Context-Analysis Synergy Mechanism that decomposes the mission into hierarchical sub-tasks (safe cruise, stealth planning, and hostile breakthrough). We design a heterogeneous ensemble of Dueling DQN agents, each specialized in a specific tactical context. A dynamic switching controller based on Max-Advantage values seamlessly integrates these agents, allowing the UAV to adaptively select the optimal policy without hard-coded rules. Extensive simulations demonstrate that ICS-RL significantly outperforms baselines (Standard DDQN) and traditional methods (PSO, Game Theory). The proposed method achieves a mission success rate of 88\\% and reduces the average exposure frequency to 0.24 per episode, validating its superiority in ensuring robust and stealthy penetration in high-dynamic scenarios.",
+      "published": "2026-03-01T08:05:32Z",
+      "updated": "2026-03-01T08:05:32Z",
+      "arxiv_id": "2603.00974v1",
+      "abs_url": "http://arxiv.org/abs/2603.00974v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00974v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "eess.SY"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无人机/UAV"
+      ],
+      "topic": "无人机/UAV",
+      "score": 3,
+      "anchor_terms": [
+        "UAV"
+      ],
+      "matched_terms": [
+        "robust",
+        "UAV"
+      ],
+      "title_zh": "空战中自主无人机决策的意图上下文协同强化学习",
+      "summary_zh": "由于威胁的部分可观察性以及任务效率与生存能力目标的相互冲突，动态竞争环境中的自主无人机渗透仍然是一个重大挑战。传统的强化学习 (RL) 方法经常受到短视决策的困扰，并且难以实时平衡这些权衡。为了解决这些限制，本文提出了一种意图上下文协同强化学习（ICS-RL）框架。该框架引入了两项核心创新：（1）基于 LSTM 的意图预测模块，可以预测敌对单位的未来轨迹，将决策范式从被动回避转变为通过状态增强进行主动规划； （2）情境分析协同机制，将任务分解为分层子任务（安全巡航、隐身计划、敌对突破）。我们设计了一个由决斗 DQN 代理组成的异构集合，每个代理都专门从事特定的战术环境。基于最大优势值的动态切换控制器无缝集成这些代理，使无人机能够自适应地选择最佳策略，而无需硬编码规则。广泛的模拟表明 ICS-RL 的性能显着优于基线（标准 DDQN）和传统方法（PSO、博弈论）。所提出的方法实现了88％的任务成功率，并将平均暴露频率降低至每集0.24次，验证了其在确保高动态场景下稳健和隐秘渗透的优越性。"
+    },
+    {
+      "title": "Spectral Super-Resolution via Adversarial Unfolding and Data-Driven Spectrum Regularization: From Multispectral Satellite Data to NASA Hyperspectral Image",
+      "authors": [
+        "Si-Sheng Young",
+        "Chia-Hsiang Lin"
+      ],
+      "summary": "The European Space Agency's Sentinel-2 satellite provides global multispectral coverage for remote sensing (RS) applications. However, limited spectral resolution (12 bands) and non-unified spatial resolution (60/20/10 m) restrict their practicality. In contrast, the high spectral-spatial resolution sensor (e.g., NASA's AVIRIS-NG) covers only the American region due to practical considerations. This raises a fundamental question: ``Can a global hyperspectral coverage be achieved by reconstructing Sentinel-2 data to NASA hyperspectral images?'' This study aims to achieve spectral super-resolution from 12-to-186 and unify the spatial resolution of Sentinel-2 data to 5 m. To enable a reliable and efficient reconstruction, we formulate a novel deep unfolding framework regularized by a data-driven spectrum prior from PriorNet, instead of relying on implicit deep priors as conventional deep unfolding does. Moreover, an adversarial term is integrated into the unfolded architecture, enabling the discriminator to guide the reconstruction in both the training and testing phases; we term this novel concept unfolding adversarial learning (UAL). Experiments show that our UALNet outperforms the next-best Transformer in PSNR, SSIM, and SAM, while requiring only 15% MACs and 20 times fewer parameters. The associated code will be publicly available at https://sites.google.com/view/chiahsianglin/software.",
+      "published": "2026-03-01T04:44:53Z",
+      "updated": "2026-03-01T04:44:53Z",
+      "arxiv_id": "2603.00920v1",
+      "abs_url": "http://arxiv.org/abs/2603.00920v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00920v1",
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV"
+      ],
+      "comment": "Accepted by CVPR 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "实例分割",
+        "图像生成与重建",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "高光谱/多光谱"
+      ],
+      "topic": "实例分割",
+      "score": 16,
+      "anchor_terms": [
+        "hyperspectral image",
+        "remote sensing",
+        "SAM",
+        "Sentinel-2",
+        "super-resolution"
+      ],
+      "matched_terms": [
+        "hyperspectral",
+        "hyperspectral image",
+        "multispectral",
+        "remote sensing",
+        "SAM",
+        "satellite",
+        "Sentinel-2",
+        "super-resolution",
+        "transformer"
+      ],
+      "title_zh": "通过对抗性展开和数据驱动的光谱正则化实现光谱超分辨率：从多光谱卫星数据到 NASA 高光谱图像",
+      "summary_zh": "欧洲航天局的 Sentinel-2 卫星为遥感 (RS) 应用提供全球多光谱覆盖。然而，有限的光谱分辨率（12个波段）和不统一的空间分辨率（60/20/10 m）限制了它们的实用性。相比之下，高光谱空间分辨率传感器（例如NASA的AVIRIS-NG）出于实际考虑仅覆盖美国地区。这就提出了一个基本问题：“通过将 Sentinel-2 数据重建为 NASA 高光谱图像能否实现全球高光谱覆盖？”这项研究旨在实现从 12 到 186 的光谱超分辨率，并将 Sentinel-2 数据的空间分辨率统一到 5 m。为了实现可靠且高效的重建，我们制定了一种新颖的深度展开框架，该框架由 PriorNet 的数据驱动频谱先验进行正则化，而不是像传统深度展开那样依赖隐式深度先验。此外，对抗性术语被集成到展开的架构中，使鉴别器能够在训练和测试阶段指导重建；我们将这个新颖的概念称为展开对抗性学习（UAL）。实验表明，我们的 UALNet 在 PSNR、SSIM 和 SAM 方面优于次优 Transformer，同时仅需要 15% 的 MAC 和 20 倍的参数。相关代码将在 https://sites.google.com/view/chiahsianglin/software 上公开提供。"
+    },
+    {
+      "title": "Improving Text-to-Image Generation with Intrinsic Self-Confidence Rewards",
+      "authors": [
+        "Seungwook Kim",
+        "Minsu Cho"
+      ],
+      "summary": "Text-to-image generation powers content creation across design, media, and data augmentation. Post-training of text-to-image generative models is a promising path to better match human preferences, factuality, and improved aesthetics. We introduce SOLACE (Adaptive Rewarding by self-Confidence), a post-training framework that replaces external reward supervision with an internal self-confidence signal, obtained by evaluating how accurately the model recovers injected noise under self-denoising probes. SOLACE converts this intrinsic signal into scalar rewards, enabling fully unsupervised optimization without additional datasets, annotators, or reward models. Empirically, by reinforcing high-confidence generations, SOLACE delivers consistent gains in compositional generation, text rendering and text-image alignment over the baseline. We also find that integrating SOLACE with external rewards results in a complementary improvement, with alleviated reward hacking.",
+      "published": "2026-03-01T04:39:09Z",
+      "updated": "2026-03-05T17:43:49Z",
+      "arxiv_id": "2603.00918v2",
+      "abs_url": "http://arxiv.org/abs/2603.00918v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.00918v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "19 pages, accepted to CVPR 2026. Project page https://wookiekim.github.io/SOLACE/",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "图像描述与视觉推理",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 5,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "denoising",
+        "image generation",
+        "unsupervised"
+      ],
+      "title_zh": "通过内在的自信奖励改善文本到图像的生成",
+      "summary_zh": "文本到图像的生成支持跨设计、媒体和数据增强的内容创建。文本到图像生成模型的后训练是更好地匹配人类偏好、事实性和改进美学的一条有前途的途径。我们引入了 SOLACE（自信自适应奖励），这是一种训练后框架，用内部自信信号取代外部奖励监督，该信号是通过评估模型在自降噪探针下恢复注入噪声的准确程度而获得的。 SOLACE 将此内在信号转换为标量奖励，从而实现完全无监督的优化，无需额外的数据集、注释器或奖励模型。根据经验，通过增强高置信度生成，SOLACE 在基线上的合成生成、文本渲染和文本图像对齐方面提供了一致的增益。我们还发现，将 SOLACE 与外部奖励相结合会带来互补的改进，并减少奖励黑客行为。"
+    },
+    {
+      "title": "PPC-MT: Parallel Point Cloud Completion with Mamba-Transformer Hybrid Architecture",
+      "authors": [
+        "Jie Li",
+        "Shengwei Tian",
+        "Long Yu",
+        "Xin Ning"
+      ],
+      "summary": "Existing point cloud completion methods struggle to balance high-quality reconstruction with computational efficiency. To address this, we propose PPC-MT, a novel parallel framework for point cloud completion leveraging a hybrid Mamba-Transformer architecture. Our approach introduces an innovative parallel completion strategy guided by Principal Component Analysis (PCA), which imposes a geometrically meaningful structure on unordered point clouds, transforming them into ordered sets and decomposing them into multiple subsets. These subsets are reconstructed in parallel using a multi-head reconstructor. This structured parallel synthesis paradigm significantly enhances the uniformity of point distribution and detail fidelity, while preserving computational efficiency. By integrating Mamba's linear complexity for efficient feature extraction during encoding with the Transformer's capability to model fine-grained multi-sequence relationships during decoding, PPC-MT effectively balances efficiency and reconstruction accuracy. Extensive quantitative and qualitative experiments on benchmark datasets, including PCN, ShapeNet-55/34, and KITTI, demonstrate that PPC-MT outperforms state-of-the-art methods across multiple metrics, validating the efficacy of our proposed framework.",
+      "published": "2026-03-01T02:18:00Z",
+      "updated": "2026-03-01T02:18:00Z",
+      "arxiv_id": "2603.00870v1",
+      "abs_url": "http://arxiv.org/abs/2603.00870v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00870v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "Submitted to IEEE TPAMI",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "高效微调与轻量化",
+        "LiDAR/点云",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 7,
+      "anchor_terms": [
+        "Mamba"
+      ],
+      "matched_terms": [
+        "Mamba",
+        "point cloud",
+        "transformer"
+      ],
+      "title_zh": "PPC-MT：使用 Mamba-Transformer 混合架构完成并行点云",
+      "summary_zh": "现有的点云完成方法很难在高质量重建与计算效率之间取得平衡。为了解决这个问题，我们提出了 PPC-MT，这是一种利用混合 Mamba-Transformer 架构进行点云补全的新型并行框架。我们的方法引入了一种以主成分分析（PCA）为指导的创新并行完成策略，该策略在无序点云上施加了几何上有意义的结构，将它们转换为有序集并将它们分解为多个子集。使用多头重建器并行重建这些子集。这种结构化并行合成范例显着增强了点分布的均匀性和细节保真度，同时保持了计算效率。通过将 Mamba 的线性复杂性（用于在编码过程中高效提取特征）与 Transformer 在解码过程中对细粒度多序列关系进行建模的能力相结合，PPC-MT 有效地平衡了效率和重建精度。对基准数据集（包括 PCN、ShapeNet-55/34 和 KITTI）进行的广泛定量和定性实验表明，PPC-MT 在多个指标上优于最先进的方法，验证了我们提出的框架的有效性。"
+    },
+    {
+      "title": "Navigating Time's Possibilities: Plausible Counterfactual Explanations for Multivariate Time-Series Forecast through Genetic Algorithms",
+      "authors": [
+        "Gianlucca Zuin",
+        "Adriano Veloso"
+      ],
+      "summary": "Counterfactual learning has become promising for understanding and modeling causality in complex and dynamic systems. This paper presents a novel method for counterfactual learning in the context of multivariate time series analysis and forecast. The primary objective is to uncover hidden causal relationships and identify potential interventions to achieve desired outcomes. The proposed methodology integrates genetic algorithms and rigorous causality tests to infer and validate counterfactual dependencies within temporal sequences. More specifically, we employ Granger causality to enhance the reliability of identified causal relationships, rigorously assessing their statistical significance. Then, genetic algorithms, in conjunction with quantile regression, are used to exploit these intricate causal relationships to project future scenarios. The synergy between genetic algorithms and causality tests ensures a thorough exploration of the temporal dynamics present in the data, revealing hidden dependencies and enabling the projection of outcomes under hypothetical interventions. We evaluate the performance of our algorithm on real-world data, showcasing its ability to handle complex causal relationships, revealing meaningful counterfactual insights, and allowing for the prediction of outcomes under hypothetical interventions.",
+      "published": "2026-03-01T01:08:20Z",
+      "updated": "2026-03-01T01:08:20Z",
+      "arxiv_id": "2603.00855v1",
+      "abs_url": "http://arxiv.org/abs/2603.00855v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00855v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "Published on IEEE TrustCom 2024",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "高效微调与轻量化"
+      ],
+      "topic": "时间序列与视频",
+      "score": 3,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "LoRA",
+        "temporal",
+        "time-series"
+      ],
+      "title_zh": "驾驭时间的可能性：通过遗传算法对多元时间序列预测进行合理的反事实解释",
+      "summary_zh": "反事实学习对于理解和建模复杂动态系统中的因果关系已变得很有前景。本文提出了一种在多元时间序列分析和预测背景下进行反事实学习的新方法。主要目标是发现隐藏的因果关系并确定潜在的干预措施以实现预期结果。所提出的方法集成了遗传算法和严格的因果关系测试，以推断和验证时间序列内的反事实依赖性。更具体地说，我们采用格兰杰因果关系来增强已识别因果关系的可靠性，严格评估其统计显着性。然后，遗传算法与分位数回归相结合，用于利用这些复杂的因果关系来预测未来的场景。遗传算法和因果关系测试之间的协同作用确保了对数据中存在的时间动态的彻底探索，揭示了隐藏的依赖性并能够预测假设干预下的结果。我们评估算法在现实世界数据上的性能，展示其处理复杂因果关系的能力，揭示有意义的反事实见解，并允许在假设干预下预测结果。"
+    }
+  ]
+}

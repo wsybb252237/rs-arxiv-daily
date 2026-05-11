@@ -1,0 +1,355 @@
+{
+  "date": "2026-03-18",
+  "generated_at": "2026-05-11T07:45:51.123917+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202603180000 TO 202603182359]",
+  "total_fetched": 385,
+  "total_matched": 8,
+  "papers": [
+    {
+      "title": "VirPro: Visual-referred Probabilistic Prompt Learning for Weakly-Supervised Monocular 3D Detection",
+      "authors": [
+        "Chupeng Liu",
+        "Jiyong Rao",
+        "Shangquan Sun",
+        "Runkai Zhao",
+        "Weidong Cai"
+      ],
+      "summary": "Monocular 3D object detection typically relies on pseudo-labeling techniques to reduce dependency on real-world annotations. Recent advances demonstrate that deterministic linguistic cues can serve as effective auxiliary weak supervision signals, providing complementary semantic context. However, hand-crafted textual descriptions struggle to capture the inherent visual diversity of individuals across scenes, limiting the model's ability to learn scene-aware representations. To address this challenge, we propose Visual-referred Probabilistic Prompt Learning (VirPro), an adaptive multi-modal pretraining paradigm that can be seamlessly integrated into diverse weakly supervised monocular 3D detection frameworks. Specifically, we generate a diverse set of learnable, instance-conditioned prompts across scenes and store them in an Adaptive Prompt Bank (APB). Subsequently, we introduce Multi-Gaussian Prompt Modeling (MGPM), which incorporates scene-based visual features into the corresponding textual embeddings, allowing the text prompts to express visual uncertainties. Then, from the fused vision-language embeddings, we decode a prompt-targeted Gaussian, from which we derive a unified object-level prompt embedding for each instance. RoI-level contrastive matching is employed to enforce modality alignment, bringing embeddings of co-occurring objects within the same scene closer in the latent space, thus enhancing semantic coherence. Extensive experiments on the KITTI benchmark demonstrate that integrating our pretraining paradigm consistently yields substantial performance gains, achieving up to a 4.8% average precision improvement than the baseline. Code is available at https://github.com/AustinLCP/VirPro.",
+      "published": "2026-03-18T08:23:55Z",
+      "updated": "2026-03-20T13:20:01Z",
+      "arxiv_id": "2603.17470v2",
+      "abs_url": "http://arxiv.org/abs/2603.17470v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.17470v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "Accepted by CVPR 2026 Findings",
+      "code_url": "https://github.com/AustinLCP/VirPro",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "目标检测",
+        "视觉-语言模型",
+        "无监督与弱监督",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 3,
+      "anchor_terms": [
+        "weakly supervised"
+      ],
+      "matched_terms": [
+        "object detection",
+        "weakly supervised"
+      ],
+      "title_zh": "VirPro：用于弱监督单目 3D 检测的视觉参考概率提示学习",
+      "summary_zh": "单目 3D 对象检测通常依赖于伪标记技术来减少对现实世界注释的依赖。最近的进展表明，确定性语言线索可以作为有效的辅助弱监督信号，提供互补的语义上下文。然而，手工制作的文本描述很难捕捉场景中个体固有的视觉多样性，限制了模型学习场景感知表示的能力。为了应对这一挑战，我们提出了视觉参考概率提示学习（VirPro），这是一种自适应多模态预训练范例，可以无缝集成到各种弱监督的单目 3D 检测框架中。具体来说，我们跨场景生成一组多样化的可学习、实例条件提示，并将它们存储在自适应提示库（APB）中。随后，我们引入了多高斯提示建模（MGPM），它将基于场景的视觉特征合并到相应的文本嵌入中，允许文本提示表达视觉不确定性。然后，从融合的视觉语言嵌入中，我们解码一个以提示为目标的高斯分布，从中我们为每个实例导出一个统一的对象级提示嵌入。采用 RoI 级对比匹配来强制模态对齐，使同一场景中共现对象的嵌入在潜在空间中更接近，从而增强语义连贯性。 KITTI 基准的大量实验表明，集成我们的预训练范式始终能够带来显着的性能提升，与基线相比平均精度提高高达 4.8%。代码可在 https://github.com/AustinLCP/VirPro 获取。"
+    },
+    {
+      "title": "DriveVLM-RL: Neuroscience-Inspired Reinforcement Learning with Vision-Language Models for Safe and Deployable Autonomous Driving",
+      "authors": [
+        "Zilin Huang",
+        "Zihao Sheng",
+        "Zhengyang Wan",
+        "Yansong Qu",
+        "Junwei You",
+        "Sicong Jiang",
+        "Sikai Chen"
+      ],
+      "summary": "Ensuring safe decision-making in autonomous vehicles remains a fundamental challenge despite rapid advances in end-to-end learning approaches. Traditional reinforcement learning (RL) methods rely on manually engineered rewards or sparse collision signals, which fail to capture the rich contextual understanding required for safe driving and make unsafe exploration unavoidable in real-world settings. Recent vision-language models (VLMs) offer promising semantic understanding capabilities; however, their high inference latency and susceptibility to hallucination hinder direct application to real-time vehicle control. To address these limitations, this paper proposes DriveVLM-RL, a neuroscience-inspired framework that integrates VLMs into RL through a dual-pathway architecture for safe and deployable autonomous driving. The framework decomposes semantic reward learning into a Static Pathway for continuous spatial safety assessment using CLIP-based contrasting language goals, and a Dynamic Pathway for attention-gated multi-frame semantic risk reasoning using a lightweight detector and a large VLM. A hierarchical reward synthesis mechanism fuses semantic signals with vehicle states, while an asynchronous training pipeline decouples expensive VLM inference from environment interaction. All VLM components are used only during offline training and are removed at deployment, ensuring real-time feasibility. Experiments in the CARLA simulator show significant improvements in collision avoidance, task success, and generalization across diverse traffic scenarios, including strong robustness under settings without explicit collision penalties. These results demonstrate that DriveVLM-RL provides a practical paradigm for integrating foundation models into autonomous driving without compromising real-time feasibility. Demo video and code are available at: https://zilin-huang.github.io/DriveVLM-RL-website/",
+      "published": "2026-03-18T21:55:29Z",
+      "updated": "2026-03-18T21:55:29Z",
+      "arxiv_id": "2603.18315v1",
+      "abs_url": "http://arxiv.org/abs/2603.18315v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.18315v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "comment": "32 pages, 15 figures. Code and demo available online",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "基础模型",
+      "score": 7,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "CLIP",
+        "foundation model",
+        "LoRA",
+        "robust",
+        "VLM"
+      ],
+      "title_zh": "DriveVLM-RL：神经科学启发的强化学习与视觉语言模型，用于安全和可部署的自动驾驶",
+      "summary_zh": "尽管端到端学习方法取得了快速进展，但确保自动驾驶汽车的安全决策仍然是一项基本挑战。传统的强化学习（RL）方法依赖于手动设计的奖励或稀疏的碰撞信号，这无法捕获安全驾驶所需的丰富的上下文理解，并且使得在现实世界中不可避免地进行不安全的探索。最近的视觉语言模型（VLM）提供了有前景的语义理解能力；然而，它们的高推理延迟和对幻觉的敏感性阻碍了直接应用于实时车辆控制。为了解决这些限制，本文提出了 DriveVLM-RL，这是一种受神经科学启发的框架，通过双路径架构将 VLM 集成到 RL 中，以实现安全且可部署的自动驾驶。该框架将语义奖励学习分解为静态路径，用于使用基于 CLIP 的对比语言目标进行连续空间安全评估，以及动态路径，用于使用轻量级检测器和大型 VLM 进行注意门控多帧语义风险推理。分层奖励合成机制将语义信号与车辆状态融合，而异步训练管道将昂贵的 VLM 推理与环境交互分离。所有VLM组件仅在离线训练期间使用，并在部署时删除，确保实时可行性。 CARLA 模拟器中的实验表明，在避免碰撞、任务成功和跨不同交通场景的泛化方面有显着改进，包括在没有明确碰撞惩罚的设置下的强大鲁棒性。这些结果表明，DriveVLM-RL 提供了一种将基础模型集成到自动驾驶中的实用范例，同时又不影响实时可行性。演示视频和代码可访问：https://zilin-huang.github.io/DriveVLM-RL-website/"
+    },
+    {
+      "title": "Fast and Generalizable NeRF Architecture Selection for Satellite Scene Reconstruction",
+      "authors": [
+        "Devjyoti Chakraborty",
+        "Zaki Sukma",
+        "Rakandhiya D. Rachmanto",
+        "Kriti Ghosh",
+        "In Kee Kim",
+        "Suchendra M. Bhandarkar",
+        "Lakshmish Ramaswamy",
+        "Nancy K. O'Hare",
+        "Deepak Mishra"
+      ],
+      "summary": "Neural Radiance Fields (NeRF) have emerged as a powerful approach for photorealistic 3D reconstruction from multi-view images. However, deploying NeRF for satellite imagery remains challenging. Each scene requires individual training, and optimizing architectures via Neural Architecture Search (NAS) demands hours to days of GPU time. While existing approaches focus on architectural improvements, our SHAP analysis reveals that multi-view consistency, rather than model architecture, determines reconstruction quality. Based on this insight, we develop PreSCAN, a predictive framework that estimates NeRF quality prior to training using lightweight geometric and photometric descriptors. PreSCAN selects suitable architectures in < 30 seconds with < 1 dB prediction error, achieving 1000$\\times$ speedup over NAS. We further demonstrate PreSCAN's deployment utility on edge platforms (Jetson Orin), where combining its predictions with offline cost profiling reduces inference power by 26% and latency by 43% with minimal quality loss. Experiments on DFC2019 datasets confirm that PreSCAN generalizes across diverse satellite scenes without retraining.",
+      "published": "2026-03-18T21:42:39Z",
+      "updated": "2026-03-18T21:42:39Z",
+      "arxiv_id": "2603.18306v1",
+      "abs_url": "http://arxiv.org/abs/2603.18306v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.18306v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "LiDAR/点云",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 6,
+      "anchor_terms": [
+        "3D reconstruction",
+        "satellite image",
+        "satellite imagery"
+      ],
+      "matched_terms": [
+        "3D reconstruction",
+        "generalizable",
+        "satellite",
+        "satellite image",
+        "satellite imagery"
+      ],
+      "title_zh": "用于卫星场景重建的快速且通用的 NeRF 架构选择",
+      "summary_zh": "神经辐射场 (NeRF) 已成为从多视图图像进行逼真 3D 重建的强大方法。然而，为卫星图像部署 NeRF 仍然具有挑战性。每个场景都需要单独的训练，并且通过神经架构搜索 (NAS) 优化架构需要数小时到数天的 GPU 时间。虽然现有方法侧重于架构改进，但我们的 SHAP 分析表明，决定重建质量的是多视图一致性，而不是模型架构。基于这一见解，我们开发了 PreSCAN，这是一个预测框架，可在使用轻量级几何和光度描述符进行训练之前估计 NeRF 质量。 PreSCAN 在 < 30 秒内选择合适的架构，预测误差 < 1 dB，比 NAS 实现 1000$\\times$ 加速。我们进一步展示了 PreSCAN 在边缘平台 (Jetson Orin) 上的部署实用程序，将其预测与离线成本分析相结合，可将推理能力降低 26%，将延迟降低 43%，同时将质量损失降至最低。 DFC2019 数据集上的实验证实，PreSCAN 无需重新训练即可泛化不同的卫星场景。"
+    },
+    {
+      "title": "Retrieval-Augmented LLM Agents: Learning to Learn from Experience",
+      "authors": [
+        "Thomas Palmeira Ferraz",
+        "Romain Deffayet",
+        "Vassilina Nikoulina",
+        "Hervé Déjean",
+        "Stéphane Clinchant"
+      ],
+      "summary": "While large language models (LLMs) have advanced the development of general-purpose agents, achieving robust generalization to unseen tasks remains a significant challenge. Current approaches typically rely on either fine-tuning or training-free memory-augmented generation using retrieved experience; yet both have limitations: fine-tuning often fails to extrapolate to new tasks, while experience retrieval often underperforms compared to supervised baselines. In this work, we propose to combine these approaches and systematically study how to train retrieval-augmented LLM agents to effectively leverage retrieved trajectories in-context. First, we establish a robust supervised fine-tuning (SFT) recipe using LoRA that outperforms several state-of-the-art agent training pipelines. Second, we provide a detailed analysis of key design choices for experience retrieval, identifying optimal strategies for storage, querying, and trajectory selection. Finally, we propose a pipeline that integrates experience retrieval into the fine-tuning process. Our results demonstrate that this combined approach significantly improves generalization to unseen tasks, providing a scalable and effective framework for building agents that learn to learn from experience.",
+      "published": "2026-03-18T20:45:04Z",
+      "updated": "2026-03-18T20:45:04Z",
+      "arxiv_id": "2603.18272v1",
+      "abs_url": "http://arxiv.org/abs/2603.18272v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.18272v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 6,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA",
+        "robust"
+      ],
+      "title_zh": "检索增强法学硕士代理：学习从经验中学习",
+      "summary_zh": "虽然大型语言模型（LLM）促进了通用代理的开发，但实现对未见过的任务的强大泛化仍然是一个重大挑战。当前的方法通常依赖于使用检索到的经验进行微调或无需训练的记忆增强生成；但两者都有局限性：微调通常无法推断到新任务，而经验检索与监督基线相比通常表现不佳。在这项工作中，我们建议结合这些方法，系统地研究如何训练检索增强的 LLM 代理，以有效地利用上下文中检索到的轨迹。首先，我们使用 LoRA 建立了一个强大的监督微调（SFT）配方，其性能优于几个最先进的代理训练管道。其次，我们对经验检索的关键设计选择进行了详细分析，确定了存储、查询和轨迹选择的最佳策略。最后，我们提出了一个将经验检索集成到微调过程中的管道。我们的结果表明，这种组合方法显着提高了对看不见的任务的泛化能力，为构建从经验中学习的代理提供了可扩展且有效的框架。"
+    },
+    {
+      "title": "STEP: Detecting Audio Backdoor Attacks via Stability-based Trigger Exposure Profiling",
+      "authors": [
+        "Kun Wang",
+        "Meng Chen",
+        "Junhao Wang",
+        "Yuli Wu",
+        "Li Lu",
+        "Chong Zhang",
+        "Peng Cheng",
+        "Jiaheng Zhang",
+        "Kui Ren"
+      ],
+      "summary": "With the widespread deployment of deep-learning-based speech models in security-critical applications, backdoor attacks have emerged as a serious threat: an adversary who poisons a small fraction of training data can implant a hidden trigger that controls the model's output while preserving normal behavior on clean inputs. Existing inference-time defenses are not well suited to the audio domain, as they either rely on trigger over-robustness assumptions that fail on transformation-based and semantic triggers, or depend on properties specific to image or text modalities. In this paper, we propose STEP (Stability-based Trigger Exposure Profiling), a black-box, retraining-free backdoor detector that operates under hard-label-only access. Its core idea is to exploit a characteristic dual anomaly of backdoor triggers: anomalous label stability under semantic-breaking perturbations, and anomalous label fragility under semantic-preserving perturbations. STEP profiles each test sample with two complementary perturbation branches that target these two properties respectively, scores the resulting stability features with one-class anomaly detectors trained on benign references, and fuses the two scores via unsupervised weighting. Extensive experiments across seven backdoor attacks show that STEP achieves an average AUROC of 97.92% and EER of 4.54%, substantially outperforming state-of-the-art baselines, and generalizes across model architectures, speech tasks, an open-set verification scenario, and over-the-air physical-world settings.",
+      "published": "2026-03-18T12:14:14Z",
+      "updated": "2026-03-18T12:14:14Z",
+      "arxiv_id": "2603.18103v1",
+      "abs_url": "http://arxiv.org/abs/2603.18103v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.18103v1",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.LG",
+        "cs.SD"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "开放词汇与开放集",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "开放词汇与开放集",
+      "score": 3,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "open-set",
+        "robust",
+        "unsupervised"
+      ],
+      "title_zh": "步骤：通过基于稳定性的触发暴露分析检测音频后门攻击",
+      "summary_zh": "随着基于深度学习的语音模型在安全关键应用中的广泛部署，后门攻击已成为一种严重威胁：毒害一小部分训练数据的对手可以植入一个隐藏的触发器来控制模型的输出，同时保留干净输入的正常行为。现有的推理时间防御不太适合音频领域，因为它们要么依赖于在基于转换和语义触发器上失败的触发过度鲁棒性假设，要么依赖于图像或文本模态的特定属性。在本文中，我们提出了 STEP（基于稳定性的触发曝光分析），这是一种黑盒、无需重新训练的后门检测器，在仅硬标签访问下运行。其核心思想是利用后门触发器的双重异常特征：语义破坏扰动下的异常标签稳定性和语义保留扰动下的异常标签脆弱性。 STEP 使用分别针对这两个属性的两个互补扰动分支来分析每个测试样本，使用在良性参考上训练的一类异常检测器对所得稳定性特征进行评分，并通过无监督加权融合两个分数。针对七种后门攻击的大量实验表明，STEP 的平均 AUROC 为 97.92%，EER 为 4.54%，大大优于最先进的基线，并在模型架构、语音任务、开放集验证场景和无线物理世界设置中进行泛化。"
+    },
+    {
+      "title": "Unsupervised Symbolic Anomaly Detection",
+      "authors": [
+        "Md Maruf Hossain",
+        "Tim Katzke",
+        "Simon Klüttermann",
+        "Emmanuel Müller"
+      ],
+      "summary": "We propose SYRAN, an unsupervised anomaly detection method based on symbolic regression. Instead of encoding normal patterns in an opaque, high-dimensional model, our method learns an ensemble of human-readable equations that describe symbolic invariants: functions that are approximately constant on normal data. Deviations from these invariants yield anomaly scores, so that the detection logic is interpretable by construction, rather than via post-hoc explanation. Experimental results demonstrate that SYRAN is highly interpretable, providing equations that correspond to known scientific or medical relationships, and maintains strong anomaly detection performance comparable to that of state-of-the-art methods.",
+      "published": "2026-03-18T10:27:36Z",
+      "updated": "2026-03-18T10:27:36Z",
+      "arxiv_id": "2603.17575v1",
+      "abs_url": "http://arxiv.org/abs/2603.17575v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.17575v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.SC"
+      ],
+      "comment": "13 pages, 7 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无监督与弱监督"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 4,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "unsupervised"
+      ],
+      "title_zh": "无监督的符号异常检测",
+      "summary_zh": "我们提出了 SYRAN，一种基于符号回归的无监督异常检测方法。我们的方法不是在不透明的高维模型中编码正常模式，而是学习一组人类可读的方程，这些方程描述了符号不变量：在正常数据上近似恒定的函数。偏离这些不变量会产生异常分数，因此检测逻辑可以通过构造来解释，而不是通过事后解释。实验结果表明，SYRAN 具有高度可解释性，提供与已知科学或医学关系相对应的方程，并保持与最先进方法相当的强大异常检测性能。"
+    },
+    {
+      "title": "The Phasor Transformer: Resolving Attention Bottlenecks on the Unit Circle",
+      "authors": [
+        "Dibakar Sigdel"
+      ],
+      "summary": "Transformer models have redefined sequence learning, yet dot-product self-attention introduces a quadratic token-mixing bottleneck for long-context time-series. We introduce the \\textbf{Phasor Transformer} block, a phase-native alternative representing sequence states on the unit-circle manifold $S^1$. Each block combines lightweight trainable phase-shifts with parameter-free Discrete Fourier Transform (DFT) token coupling, achieving global $\\mathcal{O}(N\\log N)$ mixing without explicit attention maps. Stacking these blocks defines the \\textbf{Large Phasor Model (LPM)}. We validate LPM on autoregressive time-series prediction over synthetic multi-frequency benchmarks. Operating with a highly compact parameter budget, LPM learns stable global dynamics and achieves competitive forecasting behavior compared to conventional self-attention baselines. Our results establish an explicit efficiency-performance frontier, demonstrating that large-model scaling for time-series can emerge from geometry-constrained phase computation with deterministic global coupling, offering a practical path toward scalable temporal modeling in oscillatory domains.",
+      "published": "2026-03-18T07:18:41Z",
+      "updated": "2026-03-18T07:18:41Z",
+      "arxiv_id": "2603.17433v1",
+      "abs_url": "http://arxiv.org/abs/2603.17433v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.17433v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "时间序列与视频",
+      "score": 4,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "self-attention",
+        "temporal",
+        "time-series",
+        "transformer"
+      ],
+      "title_zh": "相量变压器：解决单位圆上的注意力瓶颈",
+      "summary_zh": "Transformer 模型重新定义了序列学习，但点积自注意力为长上下文时间序列引入了二次令牌混合瓶颈。我们引入了 \\textbf{Phasor Transformer} 模块，这是一种表示单位圆流形 $S^1$ 上的序列状态的相本机替代方案。每个块将轻量级可训练相移与无参数离散傅里叶变换（DFT）令牌耦合相结合，实现全局 $\\mathcal{O}(N\\log N)$ 混合，无需显式注意图。堆叠这些块定义了\\textbf{大相量模型（LPM）}。我们在合成多频率基准上验证 LPM 的自回归时间序列预测。与传统的自注意力基线相比，LPM 以高度紧凑的参数预算运行，学习稳定的全局动态并实现有竞争力的预测行为。我们的结果建立了一个明确的效率-性能前沿，证明时间序列的大模型缩放可以从具有确定性全局耦合的几何约束相位计算中出现，为振荡域中的可扩展时间建模提供了一条实用路径。"
+    },
+    {
+      "title": "A 3D Reconstruction Benchmark for Asset Inspection",
+      "authors": [
+        "James L. Gray",
+        "Nikolai Goncharov",
+        "Alexandre Cardaillac",
+        "Ryan Griffiths",
+        "Jack Naylor",
+        "Donald G. Dansereau"
+      ],
+      "summary": "Asset management requires accurate 3D models to inform the maintenance, repair, and assessment of buildings, maritime vessels, and other key structures as they age. These downstream applications rely on high-fidelity models produced from aerial surveys in close proximity to the asset, enabling operators to locate and characterise deterioration or damage and plan repairs. Captured images typically have high overlap between adjacent camera poses, sufficient detail at millimetre scale, and challenging visual appearances such as reflections and transparency. However, existing 3D reconstruction datasets lack examples of these conditions, making it difficult to benchmark methods for this task. We present a new dataset with ground truth depth maps, camera poses, and mesh models of three synthetic scenes with simulated inspection trajectories and varying levels of surface condition on non-Lambertian scene content. We evaluate state-of-the-art reconstruction methods on this dataset. Our results demonstrate that current approaches struggle significantly with the dense capture trajectories and complex surface conditions inherent to this domain, exposing a critical scalability gap and pointing toward new research directions for deployable 3D reconstruction in asset inspection. Project page: https://roboticimaging.org/Projects/asset-inspection-dataset/",
+      "published": "2026-03-18T04:42:14Z",
+      "updated": "2026-03-18T04:42:14Z",
+      "arxiv_id": "2603.17358v1",
+      "abs_url": "http://arxiv.org/abs/2603.17358v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.17358v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "eess.IV"
+      ],
+      "comment": "29 pages, 15 figures, 8 tables",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "LiDAR/点云",
+        "数据集/评测"
+      ],
+      "topic": "LiDAR/点云",
+      "score": 3,
+      "anchor_terms": [
+        "3D reconstruction"
+      ],
+      "matched_terms": [
+        "3D reconstruction",
+        "aerial"
+      ],
+      "title_zh": "资产检查的 3D 重建基准",
+      "summary_zh": "资产管理需要准确的 3D 模型来为建筑物、海船和其他关键结构老化时的维护、修理和评估提供信息。这些下游应用依赖于在资产附近进行航空勘测而生成的高保真模型，使操作员能够定位和表征恶化或损坏并计划维修。捕获的图像通常在相邻相机姿势之间具有高度重叠、毫米级的足够细节以及具有挑战性的视觉外观（例如反射和透明度）。然而，现有的 3D 重建数据集缺乏这些条件的示例，因此很难对该任务的方法进行基准测试。我们提出了一个新的数据集，其中包含地面真实深度图、相机姿势和三个合成场景的网格模型，以及模拟检查轨迹和非朗伯场景内容的不同级别的表面条件。我们在此数据集上评估最先进的重建方法。我们的结果表明，当前的方法在该领域固有的密集捕获轨迹和复杂表面条件方面存在很大困难，暴露了关键的可扩展性差距，并为资产检查中可部署的 3D 重建指明了新的研究方向。项目页面：https://roboticimaging.org/Projects/asset-inspection-dataset/"
+    }
+  ]
+}

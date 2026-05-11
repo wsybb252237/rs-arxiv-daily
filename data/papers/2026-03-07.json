@@ -1,0 +1,379 @@
+{
+  "date": "2026-03-07",
+  "generated_at": "2026-05-11T06:32:39.867528+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202603070000 TO 202603072359]",
+  "total_fetched": 176,
+  "total_matched": 8,
+  "papers": [
+    {
+      "title": "OV-DEIM: Real-time DETR-Style Open-Vocabulary Object Detection with GridSynthetic Augmentation",
+      "authors": [
+        "Leilei Wang",
+        "Longfei Liu",
+        "Xi Shen",
+        "Xuanlong Yu",
+        "Ying Tiffany He",
+        "Fei Richard Yu",
+        "Yingyi Chen"
+      ],
+      "summary": "Real-time open-vocabulary object detection (OVOD) is essential for practical deployment in dynamic environments, where models must recognize a large and evolving set of categories under strict latency constraints. Current real-time OVOD methods are predominantly built upon YOLO-style models. In contrast, real-time DETR-based methods still lag behind in terms of inference latency, model lightweightness, and overall performance. In this work, we present OV-DEIM, an end-to-end DETR-style open-vocabulary detector built upon the recent DEIMv2 framework with integrated vision-language modeling for efficient open-vocabulary inference. We further introduce a simple query supplement strategy that improves Fixed AP without compromising inference speed. Beyond architectural improvements, we introduce GridSynthetic, a simple yet effective data augmentation strategy that composes multiple training samples into structured image grids. By exposing the model to richer object co-occurrence patterns and spatial layouts within a single forward pass, GridSynthetic mitigates the negative impact of noisy localization signals on the classification loss and improves semantic discrimination, particularly for rare categories. Extensive experiments demonstrate that OV-DEIM achieves state-of-the-art performance on open-vocabulary detection benchmarks, delivering superior efficiency and notable improvements on challenging rare categories. Code and pretrained models are available at https://github.com/wleilei/OV-DEIM.",
+      "published": "2026-03-07T03:59:47Z",
+      "updated": "2026-03-07T03:59:47Z",
+      "arxiv_id": "2603.07022v1",
+      "abs_url": "http://arxiv.org/abs/2603.07022v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.07022v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/wleilei/OV-DEIM",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "目标检测",
+        "开放词汇与开放集",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 10,
+      "anchor_terms": [
+        "object detection",
+        "open-vocabulary"
+      ],
+      "matched_terms": [
+        "DETR",
+        "object detection",
+        "open-vocabulary",
+        "YOLO"
+      ],
+      "title_zh": "OV-DEIM：使用 GridSynthetic 增强的实时 DETR 式开放词汇对象检测",
+      "summary_zh": "实时开放词汇对象检测 (OVOD) 对于动态环境中的实际部署至关重要，其中模型必须在严格的延迟限制下识别大量且不断变化的类别。当前的实时 OVOD 方法主要基于 YOLO 风格的模型。相比之下，基于实时 DETR 的方法在推理延迟、模型轻量级和整体性能方面仍然落后。在这项工作中，我们提出了 OV-DEIM，这是一种基于最新 DEIMv2 框架的端到端 DETR 式开放词汇检测器，具有集成的视觉语言建模，可实现高效的开放词汇推理。我们进一步介绍了一种简单的查询补充策略，可以在不影响推理速度的情况下改进固定 AP。除了架构改进之外，我们还引入了 GridSynthetic，这是一种简单而有效的数据增强策略，可将多个训练样本组合成结构化图像网格。通过在一次前向传递中将模型暴露给更丰富的对象共现模式和空间布局，GridSynthetic 减轻了噪声定位信号对分类损失的负面影响，并提高了语义辨别力，特别是对于稀有类别。大量实验表明，OV-DEIM 在开放词汇检测基准上实现了最先进的性能，在具有挑战性的稀有类别上提供了卓越的效率和显着的改进。代码和预训练模型可在 https://github.com/wleilei/OV-DEIM 获取。"
+    },
+    {
+      "title": "Mind the Discriminability Trap in Source-Free Cross-domain Few-shot Learning",
+      "authors": [
+        "Zhenyu Zhang",
+        "Yixiong Zou",
+        "Yuhua Li",
+        "Ruixuan Li",
+        "Guangyao Chen"
+      ],
+      "summary": "Source-Free Cross-Domain Few-Shot Learning (SF-CDFSL) focuses on fine-tuning with limited training data from target domains (e.g., medical or satellite images), where Vision-Language Models (VLMs) such as CLIP and SigLIP have shown promising results. Current works in traditional visual models suggest that improving visual discriminability enhances performance. However, in VLM-based SF-CDFSL tasks, we find that \\textbf{strengthening visual-modal discriminability actually suppresses VLMs' performance}. In this paper, we aim to delve into this phenomenon for an interpretation and a solution. By both theoretical and experimental proofs, our study reveals that fine-tuning with the typical cross-entropy loss ($\\mathcal{L}_{\\mathrm{vlm}}$) inherently includes a visual learning part and a cross-modal learning part, where the cross-modal part is crucial for rectifying the heavily disrupted modality misalignment in SF-CDFSL. However, we find that the visual learning essentially acts as a shortcut that encourages the model to reduce $\\mathcal{L}_{\\mathrm{vlm}}$ without considering the cross-modal part, therefore hindering the cross-modal alignment and harming the performance. Based on this interpretation, we further propose an approach to address this problem: first, we perturb the visual learning to guide the model to focus on the cross-modal alignment. Then, we use the visual-text semantic relationships to gradually align the visual and textual modalities during the fine-tuning. Extensive experiments on various settings, backbones (CLIP, SigLip, PE-Core), and tasks (4 CDFSL datasets and 11 FSL datasets) show that we consistently set new state-of-the-art results. Code is available at https://github.com/zhenyuZ-HUST/CVPR26-Mind-the-Discriminability-Trap.",
+      "published": "2026-03-07T03:59:23Z",
+      "updated": "2026-03-07T03:59:23Z",
+      "arxiv_id": "2603.13341v1",
+      "abs_url": "http://arxiv.org/abs/2603.13341v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.13341v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "CVPR 2026",
+      "code_url": "https://github.com/zhenyuZ-HUST/CVPR26-Mind-the-Discriminability-Trap",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "开放词汇与开放集",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "开放词汇与开放集",
+      "score": 8,
+      "anchor_terms": [
+        "CLIP",
+        "satellite image",
+        "satellite images",
+        "source-free"
+      ],
+      "matched_terms": [
+        "CLIP",
+        "few-shot learning",
+        "fine-tuning",
+        "satellite",
+        "satellite image",
+        "satellite images",
+        "source-free",
+        "VLM"
+      ],
+      "title_zh": "注意无源跨域小样本学习中的可辨别性陷阱",
+      "summary_zh": "无源跨域少样本学习 (SF-CDFSL) 专注于利用来自目标领域（例如医学或卫星图像）的有限训练数据进行微调，其中 CLIP 和 SigLIP 等视觉语言模型 (VLM) 已显示出有希望的结果。目前传统视觉模型的研究表明，提高视觉辨别能力可以提高性能。然而，在基于 VLM 的 SF-CDFSL 任务中，我们发现 \\textbf{加强视觉模态辨别能力实际上抑制了 VLM 的性能}。在本文中，我们旨在深入研究这一现象，以寻求解释和解决方案。通过理论和实验证明，我们的研究表明，典型的交叉熵损失（$\\mathcal{L}_{\\mathrm{vlm}}$）的微调本质上包括视觉学习部分和跨模态学习部分，其中跨模态部分对于纠正 SF-CDFSL 中严重破坏的模态失调至关重要。然而，我们发现视觉学习本质上是一种捷径，鼓励模型减少 $\\mathcal{L}_{\\mathrm{vlm}}$ 而不考虑跨模态部分，从而阻碍跨模态对齐并损害性能。基于这种解释，我们进一步提出了一种解决这个问题的方法：首先，我们扰乱视觉学习以引导模型专注于跨模态对齐。然后，我们利用视觉文本语义关系在微调过程中逐渐对齐视觉和文本模态。对各种设置、主干（CLIP、SigLip、PE-Core）和任务（4 个 CDFSL 数据集和 11 个 FSL 数据集）的广泛实验表明，我们始终如一地设定了新的最先进的结果。代码可在 https://github.com/zhenyuZ-HUST/CVPR26-Mind-the-Discriminability-Trap 获取。"
+    },
+    {
+      "title": "AgrI Challenge: A Data-Centric AI Competition for Cross-Team Validation in Agricultural Vision",
+      "authors": [
+        "Mohammed Brahimi",
+        "Karim Laabassi",
+        "Mohamed Seghir Hadj Ameur",
+        "Aicha Boutorh",
+        "Badia Siab-Farsi",
+        "Amin Khouani",
+        "Omar Farouk Zouak",
+        "Seif Eddine Bouziane",
+        "Kheira Lakhdari",
+        "Abdelkader Nabil Benghanem"
+      ],
+      "summary": "Machine learning models in agricultural vision often achieve high accuracy on curated datasets but fail to generalize under real field conditions due to distribution shifts between training and deployment environments. Moreover, most machine learning competitions focus primarily on model design while treating datasets as fixed resources, leaving the role of data collection practices in model generalization largely unexplored. We introduce the AgrI Challenge, a data-centric competition framework in which multiple teams independently collect field datasets, producing a heterogeneous multi-source benchmark that reflects realistic variability in acquisition conditions. To systematically evaluate cross-domain generalization across independently collected datasets, we propose Cross-Team Validation (CTV), an evaluation paradigm that treats each team's dataset as a distinct domain. CTV includes two complementary protocols: Train-on-One-Team-Only (TOTO), which measures single-source generalization, and Leave-One-Team-Out (LOTO), which evaluates collaborative multi-source training. Experiments reveal substantial generalization gaps under single-source training: models achieve near-perfect validation accuracy yet exhibit validation-test gaps of up to 16.20% (DenseNet121) and 11.37% (Swin Transformer) when evaluated on datasets collected by other teams. In contrast, collaborative multi-source training dramatically improves robustness, reducing the gap to 2.82% and 1.78%, respectively. The challenge also produced a publicly available dataset of 50,673 field images of six tree species collected by twelve independent teams, providing a diverse benchmark for studying domain shift and data-centric learning in agricultural vision.",
+      "published": "2026-03-07T21:40:34Z",
+      "updated": "2026-03-14T23:10:50Z",
+      "arxiv_id": "2603.07356v2",
+      "abs_url": "http://arxiv.org/abs/2603.07356v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.07356v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "17 pages, 8 figures, 6 tables. Introduces the AgrI Challenge dataset containing 50,673 field images of six tree species collected by twelve independent teams",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "小样本与域泛化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 5,
+      "anchor_terms": [
+        "domain generalization"
+      ],
+      "matched_terms": [
+        "domain generalization",
+        "robust",
+        "Swin Transformer",
+        "transformer"
+      ],
+      "title_zh": "AgrI Challenge：以数据为中心的人工智能竞赛，用于农业视觉的跨团队验证",
+      "summary_zh": "农业视觉中的机器学习模型通常在精选数据集上实现高精度，但由于训练和部署环境之间的分布变化而无法在实际现场条件下进行泛化。此外，大多数机器学习竞赛主要关注模型设计，同时将数据集视为固定资源，而数据收集实践在模型泛化中的作用基本上未被探索。我们引入了 AgrI Challenge，这是一个以数据为中心的竞赛框架，其中多个团队独立收集现场数据集，生成反映采集条件实际变化的异构多源基准。为了系统地评估独立收集的数据集的跨域泛化，我们提出了跨团队验证（CTV），这是一种将每个团队的数据集视为不同域的评估范例。 CTV 包括两个互补协议：仅训练一队 (TOTO)，用于衡量单源泛化能力；以及留一队退出 (LOTO)，用于评估协作多源训练。实验揭示了单源训练下的巨大泛化差距：模型实现了近乎完美的验证准确性，但在其他团队收集的数据集上进行评估时，验证测试差距高达 16.20% (DenseNet121) 和 11.37% (Swin Transformer)。相比之下，协作多源训练极大地提高了鲁棒性，将差距分别缩小到 2.82% 和 1.78%。该挑战赛还产生了一个公开的数据集，其中包含由 12 个独立团队收集的 6 种树种的 50,673 张现场图像，为研究农业视觉中的领域转移和以数据为中心的学习提供了多样化的基准。"
+    },
+    {
+      "title": "LEPA: Learning Geometric Equivariance in Satellite Remote Sensing Data with a Predictive Architecture",
+      "authors": [
+        "Erik Scheurer",
+        "Rocco Sedona",
+        "Stefan Kesselheim",
+        "Gabriele Cavallaro"
+      ],
+      "summary": "Geospatial foundation models provide precomputed embeddings that serve as compact feature vectors for large-scale satellite remote sensing data. While these embeddings can reduce data-transfer bottlenecks and computational costs, Earth observation (EO) applications can still face geometric mismatches between user-defined areas of interest and the fixed precomputed embedding grid. Standard latent-space interpolation is unreliable in this setting because the embedding manifold is highly non-convex, yielding representations that do not correspond to realistic inputs. We verify this using Prithvi-EO-2.0 to understand the shortcomings of interpolation applied to patch embeddings. As a substitute, we propose a Learned Equivariance-Predicting Architecture (LEPA). Instead of averaging vectors, LEPA conditions a predictor on geometric augmentations to directly predict the transformed embedding. We evaluate LEPA on NASA/USGS Harmonized Landsat-Sentinel (HLS) imagery and ImageNet-1k. Experiments show that standard interpolation achieves a mean reciprocal rank (MRR) below 0.2, whereas LEPA increases MRR to over 0.8, enabling accurate geometric adjustment without re-encoding.",
+      "published": "2026-03-07T14:56:15Z",
+      "updated": "2026-03-07T14:56:15Z",
+      "arxiv_id": "2603.07246v1",
+      "abs_url": "http://arxiv.org/abs/2603.07246v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.07246v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "高光谱/多光谱"
+      ],
+      "topic": "基础模型",
+      "score": 16,
+      "anchor_terms": [
+        "earth observation",
+        "foundation model",
+        "geospatial",
+        "geospatial foundation",
+        "geospatial foundation model",
+        "Landsat",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "earth observation",
+        "foundation model",
+        "geospatial",
+        "geospatial foundation",
+        "geospatial foundation model",
+        "Landsat",
+        "remote sensing",
+        "satellite"
+      ],
+      "title_zh": "LEPA：利用预测架构学习卫星遥感数据中的几何等方差",
+      "summary_zh": "地理空间基础模型提供预先计算的嵌入，作为大规模卫星遥感数据的紧凑特征向量。虽然这些嵌入可以减少数据传输瓶颈和计算成本，但地球观测 (EO) 应用程序仍然可能面临用户定义的感兴趣区域与固定的预计算嵌入网格之间的几何不匹配问题。在这种情况下，标准潜在空间插值是不可靠的，因为嵌入流形是高度非凸的，产生的表示与实际输入不对应。我们使用 Prithvi-EO-2.0 验证了这一点，以了解应用于补丁嵌入的插值的缺点。作为替代方案，我们提出了学习等方差预测架构（LEPA）。 LEPA 不是对向量进行平均，而是在几何增强上设置预测器来直接预测变换后的嵌入。我们在 NASA/USGS 协调 Landsat-Sentinel (HLS) 图像和 ImageNet-1k 上评估 LEPA。实验表明，标准插值可实现低于 0.2 的平均倒数秩 (MRR)，而 LEPA 将 MRR 提高到 0.8 以上，无需重新编码即可实现精确的几何调整。"
+    },
+    {
+      "title": "FreeFly-Thinking : Aligning Chain-of-Thought Reasoning with Continuous UAV Navigation",
+      "authors": [
+        "Jiaxu Zhou",
+        "Shaobo Wang",
+        "Zhiyuan Yang",
+        "Zhenjun Yu",
+        "Tao Li"
+      ],
+      "summary": "Vision-Language Navigation aims to enable agents to understand natural language instructions and carry out appropriate navigation actions in real-world environments. Most work focuses on indoor settings, with little research in complex outdoor scenes. Current UAV Vision-and-Language Navigation models typically act as black boxes without explicit reasoning. We introduce FreeFly-thinking, an end-to-end VLN framework that converts the UAV agent's egocentric images and language instructions into a series of actions, inspired by environment of urban architecture proposed by OpenFly. We first construct a UAV dataset for navigation task, and then performing natural language chain of thought. We adopt a two-stage training strategy: Supervised fine-tuning and Reinforcement fine-tuning. Experiments on unseen test demonstrate a strong performance, presenting robustness and efficiency in UAV navigation issue.",
+      "published": "2026-03-07T12:42:06Z",
+      "updated": "2026-03-11T04:44:19Z",
+      "arxiv_id": "2603.07181v2",
+      "abs_url": "http://arxiv.org/abs/2603.07181v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.07181v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "10 pages, 5 figures, ECCV review",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 5,
+      "anchor_terms": [
+        "UAV"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "robust",
+        "UAV"
+      ],
+      "title_zh": "FreeFly-Thinking：将思想链推理与连续无人机导航相结合",
+      "summary_zh": "视觉语言导航旨在使代理能够理解自然语言指令并在现实环境中执行适当的导航操作。大多数工作都集中在室内环境，很少对复杂的室外场景进行研究。当前的无人机视觉和语言导航模型通常充当黑匣子，没有明确的推理。我们引入了 FreeFly-thinking，这是一个端到端的 VLN 框架，受 OpenFly 提出的城市建筑环境的启发，它将无人机代理的以自我为中心的图像和语言指令转换为一系列动作。我们首先构建用于导航任务的无人机数据集，然后执行自然语言思想链。我们采用两阶段训练策略：监督微调和强化微调。看不见的测试实验证明了其强大的性能，在无人机导航问题上呈现出鲁棒性和效率。"
+    },
+    {
+      "title": "TIQA: Human-Aligned Perceptual Text Quality Assessment in Generated Images",
+      "authors": [
+        "Kirill Koltsov",
+        "Aleksandr Gushchin",
+        "Anastasia Antsiferova",
+        "Dmitriy Vatolin"
+      ],
+      "summary": "Recent text-to-image models have improved global realism, but text rendering remains a persistent failure mode: images may look convincing overall, yet local typography often contains malformed glyphs, broken strokes, irregular spacing, and other artifacts that humans heavily penalize. We formulate Text-in-Image Quality Assessment (TIQA), a no-reference task that estimates a human-aligned perceptual quality score for detected text regions while disentangling visual text quality from semantic correctness. To support this setting, we introduce two datasets. TIQA-Crops contains 120k text crops from 36k AI-generated images produced by 12 generators, with 10k mean-opinion-score (MOS) labels and 110k proxy labels for pretraining. TIQA-Images contains 1,500 text-heavy images from 10 recent generators, including proprietary systems, with paired overall-quality and text-quality subjective scores. We also propose ANTIQA, a lightweight predictor with text-specific inductive biases. Across crop-level and image-level evaluations, ANTIQA achieves the best alignment with human judgments, reaching PLCC/SROCC of 0.942/0.935 on TIQA-Crops and 0.842/0.837 for text-quality MOS on unseen generators in TIQA-Images. In best-of-5 AI-generated image ranking, ANTIQA improves the text quality of the selected image by 0.36 MOS (14%), demonstrating utility for benchmarking, filtering, and generation-time selection. Together, these findings establish perceptual text quality as a distinct evaluation target for modern text-to-image generation.",
+      "published": "2026-03-07T09:11:10Z",
+      "updated": "2026-05-04T15:27:59Z",
+      "arxiv_id": "2603.07119v2",
+      "abs_url": "http://arxiv.org/abs/2603.07119v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.07119v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 2,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "image generation"
+      ],
+      "title_zh": "TIQA：生成图像中的人类感知文本质量评估",
+      "summary_zh": "最近的文本到图像模型提高了全局真实性，但文本渲染仍然是一种持久的失败模式：图像整体看起来可能令人信服，但局部排版通常包含畸形的字形、破碎的笔划、不规则的间距和其他人类严重惩罚的伪影。我们制定了图像中文本质量评估（TIQA），这是一项无参考任务，可估计检测到的文本区域的与人类一致的感知质量得分，同时将视觉文本质量与语义正确性分开。为了支持这个设置，我们引入了两个数据集。 TIQA-Crops 包含由 12 个生成器生成的 36k 个 AI 生成图像中的 120k 个文本裁剪，以及 10k 个平均意见得分 (MOS) 标签和 110k 个用于预训练的代理标签。 TIQA-Images 包含来自 10 个最新生成器（包括专有系统）的 1,500 张文本密集型图像，​​以及配对的整体质量和文本质量主观评分。我们还提出了 ANTIQA，一种具有特定于文本的归纳偏差的轻量级预测器。在作物级和图像级评估中，ANTIQA 实现了与人类判断的最佳一致性，在 TIQA-Crops 上达到了 0.942/0.935 的 PLCC/SROCC，在 TIQA-Images 中看不见的生成器上达到了 0.842/0.837 的文本质量 MOS。在 best-of-5 AI 生成的图像排名中，ANTIQA 将所选图像的文本质量提高了 0.36 MOS (14%)，展示了基准测试、过滤和生成时间选择的实用性。总之，这些发现将感知文本质量确立为现代文本到图像生成的独特评估目标。"
+    },
+    {
+      "title": "Physics-Guided VLM Priors for All-Cloud Removal",
+      "authors": [
+        "Liying Xu",
+        "Huifang Li",
+        "Huanfeng Shen"
+      ],
+      "summary": "Cloud removal is a fundamental challenge in optical remote sensing due to the heterogeneous degradation. Thin clouds distort radiometry via partial transmission, while thick clouds occlude the surface. Existing pipelines separate thin-cloud correction from thick-cloud reconstruction, requiring explicit cloud-type decisions and often leading to error accumulation and discontinuities in mixed-cloud scenes. Therefore, a novel approach named Physical-VLM All-Cloud Removal (PhyVLM-CR) that integrates the semantic capability of Vision-Language Model (VLM) into a physical restoration model, achieving high-fidelity unified cloud removal. Specifically, the cognitive prior from a VLM (e.g., Qwen) is transformed into physical scattering parameters and a hallucination confidence map. Leveraging this confidence map as a continuous soft gate, our method achieves a unified restoration via adaptive weighting: it prioritizes physical inversion in high-transmission regions to preserve radiometric fidelity, while seamlessly transitioning to temporal reference reconstruction in low-confidence occluded areas. This mechanism eliminates the need for explicit boundary delineation, ensuring a coherent removal across heterogeneous cloud covers. Experiments on real-world Sentinel-2 surface reflectance imagery confirm that our approach achieves a remarkable balance between cloud removal and content preservation, delivering hallucination-free results with substantially improved quantitative accuracy compared to existing methods.",
+      "published": "2026-03-07T07:07:46Z",
+      "updated": "2026-03-07T07:07:46Z",
+      "arxiv_id": "2603.07074v1",
+      "abs_url": "http://arxiv.org/abs/2603.07074v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.07074v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "视觉-语言模型",
+        "光学遥感",
+        "高光谱/多光谱"
+      ],
+      "topic": "图像生成与重建",
+      "score": 9,
+      "anchor_terms": [
+        "cloud removal",
+        "optical remote sensing",
+        "remote sensing",
+        "Sentinel-2",
+        "temporal"
+      ],
+      "matched_terms": [
+        "cloud removal",
+        "optical remote",
+        "optical remote sensing",
+        "remote sensing",
+        "Sentinel-2",
+        "temporal",
+        "VLM"
+      ],
+      "title_zh": "用于全云移除的物理引导 VLM 先验",
+      "summary_zh": "Cloud removal is a fundamental challenge in optical remote sensing due to the heterogeneous degradation. Thin clouds distort radiometry via partial transmission, while thick clouds occlude the surface. Existing pipelines separate thin-cloud correction from thick-cloud reconstruction, requiring explicit cloud-type decisions and often leading to error accumulation and discontinuities in mixed-cloud scenes. Therefore, a novel approach named Physical-VLM All-Cloud Removal (PhyVLM-CR) that integrates the semantic capability of Vision-Language Model (VLM) into a physical restoration model, achieving high-fidelity unified cloud removal.具体来说，来自 VLM（例如 Qwen）的认知先验被转换为物理散射参数和幻觉置信图。 Leveraging this confidence map as a continuous soft gate, our method achieves a unified restoration via adaptive weighting: it prioritizes physical inversion in high-transmission regions to preserve radiometric fidelity, while seamlessly transitioning to temporal reference reconstruction in low-confidence occluded areas.这种机制消除了明确边界划分的需要，确保跨异构云层的一致去除。 Experiments on real-world Sentinel-2 surface reflectance imagery confirm that our approach achieves a remarkable balance between cloud removal and content preservation, delivering hallucination-free results with substantially improved quantitative accuracy compared to existing methods."
+    },
+    {
+      "title": "Diffusion Controller: Framework, Algorithms and Parameterization",
+      "authors": [
+        "Tong Yang",
+        "Moonkyung Ryu",
+        "Chih-Wei Hsu",
+        "Guy Tennenholtz",
+        "Yuejie Chi",
+        "Craig Boutilier",
+        "Bo Dai"
+      ],
+      "summary": "Controllable diffusion generation often relies on various heuristics that are seemingly disconnected without a unified understanding. We bridge this gap with Diffusion Controller (DiffCon), a unified control-theoretic view that casts reverse diffusion sampling as state-only stochastic control within (generalized) linearly-solvable Markov Decision Processes (LS-MDPs). Under this framework, control acts by reweighting the pretrained reverse-time transition kernels, balancing terminal objectives against an $f$-divergence cost. From the resulting optimality conditions, we derive practical reinforcement learning methods for diffusion fine-tuning: (i) f-divergence-regularized policy-gradient updates, including a PPO-style rule, and (ii) a regularizer-determined reward-weighted regression objective with a minimizer-preservation guarantee under the Kullback-Leibler (KL) divergence. The LS-MDP framework further implies a principled model form: the optimal score decomposes into a fixed pretrained baseline plus a lightweight control correction, motivating a side-network parameterization conditioned on exposed intermediate denoising outputs, enabling effective gray-box adaptation with a frozen backbone. Experiments on Stable Diffusion v1.4 across supervised and reward-driven finetuning show consistent gains in preference-alignment win rates and improved quality-efficiency trade-offs versus gray-box baselines and even the parameter-efficient white-box adapter LoRA.",
+      "published": "2026-03-07T01:49:59Z",
+      "updated": "2026-03-07T01:49:59Z",
+      "arxiv_id": "2603.06981v1",
+      "abs_url": "http://arxiv.org/abs/2603.06981v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.06981v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "高效微调与轻量化"
+      ],
+      "topic": "图像生成与重建",
+      "score": 5,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "adapter",
+        "denoising",
+        "fine-tuning",
+        "LoRA",
+        "stable diffusion"
+      ],
+      "title_zh": "扩散控制器：框架、算法和参数化",
+      "summary_zh": "可控扩散生成通常依赖于各种启发式方法，这些启发式方法看似互不相关，但没有统一的理解。我们用扩散控制器（DiffCon）弥补了这一差距，这是一种统一的控制理论视图，它将反向扩散采样视为（广义）线性可解马尔可夫决策过程（LS-MDP）中的纯状态随机控制。在此框架下，控制通过重新加权预训练的逆时转换内核来发挥作用，平衡最终目标与 $f$ 发散成本。从所得的最优性条件中，我们推导出用于扩散微调的实用强化学习方法：（i）f-散度正则化策略梯度更新，包括 PPO 式规则，以及（ii）正则化确定的奖励加权回归目标，并在 Kullback-Leibler（KL）散度下具有最小化保留保证。 LS-MDP 框架进一步暗示了一种原则性的模型形式：最优分数分解为固定的预训练基线加上轻量级控制校正，激发以暴露的中间去噪输出为条件的侧网络参数化，从而实现具有冻结主干的有效灰盒适应。 Stable Diffusion v1.4 跨监督和奖励驱动的微调的实验表明，与灰盒基线甚至参数高效的白盒适配器 LoRA 相比，偏好对齐获胜率和质量效率权衡得到了持续改善。"
+    }
+  ]
+}
