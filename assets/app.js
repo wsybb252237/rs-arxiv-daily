@@ -179,7 +179,9 @@ function matchesQuery(paper) {
   if (!state.query) return true;
   const haystack = [
     paper.title,
+    paper.title_zh,
     paper.summary,
+    paper.summary_zh,
     paper.arxiv_id,
     paper.primary_category,
     paper.code_url,
@@ -260,37 +262,51 @@ function paperMeta(paper) {
 }
 
 function renderPaper(paper) {
-  const tags = [...paperLabels(paper), ...(paper.categories || []).slice(0, 4)]
+  const labels = paperLabels(paper);
+  const tags = [...labels, ...(paper.categories || []).slice(0, 4)]
     .map((tag, index) => {
-      const className = labelColors.get(tag) || (index < paperLabels(paper).length ? "tag" : "tag category");
+      const className = labelColors.get(tag) || (index < labels.length ? "tag" : "tag category");
       return `<span class="${className}">${escapeHtml(tag)}</span>`;
     })
     .join("");
   const scoreTag =
     typeof paper.score === "number" ? `<span class="tag score">匹配度 ${paper.score}</span>` : "";
   const pdfUrl = paper.pdf_url || (paper.arxiv_id ? `https://arxiv.org/pdf/${paper.arxiv_id}` : "");
+  const ar5ivUrl = paper.arxiv_id ? `https://ar5iv.labs.arxiv.org/html/${paper.arxiv_id}` : "";
+
+  const titleZh = paper.title_zh && paper.title_zh !== paper.title ? paper.title_zh : "";
+  const summaryText = paper.summary_zh || paper.summary;
 
   return `
     <article class="paper-card">
       <div class="paper-head">
         <a class="paper-title" href="${escapeHtml(paper.abs_url || "#")}" target="_blank" rel="noreferrer">
-          ${escapeHtml(paper.title)}
+          ${titleZh ? escapeHtml(titleZh) : escapeHtml(paper.title)}
         </a>
         <span class="paper-date">${escapeHtml(compactDate(paper.published))}</span>
       </div>
+      ${titleZh ? `<div class="paper-title-en">${escapeHtml(paper.title)}</div>` : ""}
       <div class="paper-meta">${paperMeta(paper)}</div>
-      <p class="paper-summary">${escapeHtml(paper.summary)}</p>
+      <p class="paper-summary">${escapeHtml(summaryText)}</p>
       <div class="paper-tags">${tags}${scoreTag}</div>
       <div class="paper-links">
         <a class="paper-link" href="${escapeHtml(paper.abs_url || "#")}" target="_blank" rel="noreferrer">
           <i data-lucide="file-text" aria-hidden="true"></i>
-          Abstract
+          摘要
         </a>
         ${
           pdfUrl
             ? `<a class="paper-link" href="${escapeHtml(pdfUrl)}" target="_blank" rel="noreferrer">
                 <i data-lucide="file-down" aria-hidden="true"></i>
                 PDF
+              </a>`
+            : ""
+        }
+        ${
+          ar5ivUrl
+            ? `<a class="paper-link" href="${escapeHtml(ar5ivUrl)}" target="_blank" rel="noreferrer">
+                <i data-lucide="file-code" aria-hidden="true"></i>
+                HTML
               </a>`
             : ""
         }

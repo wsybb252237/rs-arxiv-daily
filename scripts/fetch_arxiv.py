@@ -352,6 +352,59 @@ def paper_filter_labels(paper: dict[str, Any]) -> list[str]:
   return list(dict.fromkeys(labels))
 
 
+def translate_papers(papers: list[dict[str, Any]]) -> list[dict[str, Any]]:
+  """Translate title and summary to Chinese via Google Translate (deep-translator).
+
+  Adds title_zh and summary_zh fields. Falls back to original text on any error.
+  Skips papers that already have title_zh (e.g. loaded from an existing JSON).
+  """
+  to_translate = [p for p in papers if not p.get("title_zh")]
+  if not to_translate:
+    return papers
+
+  try:
+    from deep_translator import GoogleTranslator  # noqa: PLC0415
+  except ImportError:
+    print("deep-translator not installed — skipping translation.", file=sys.stderr)
+    for paper in to_translate:
+      paper.setdefault("title_zh", paper.get("title", ""))
+      paper.setdefault("summary_zh", paper.get("summary", ""))
+    return papers
+
+  translator = GoogleTranslator(source="en", target="zh-CN")
+
+  def safe_translate_batch(texts: list[str]) -> list[str]:
+    results: list[str] = []
+    for text in texts:
+      try:
+        result = translator.translate(text)
+        results.append(result or text)
+      except Exception as exc:
+        print(f"Translation error: {exc}", file=sys.stderr)
+        results.append(text)
+      time.sleep(0.5)
+    return results
+
+  batch_size = 20
+  for i in range(0, len(to_translate), batch_size):
+    batch = to_translate[i : i + batch_size]
+    titles = [p.get("title") or "" for p in batch]
+    summaries = [p.get("summary") or "" for p in batch]
+
+    translated_titles = safe_translate_batch(titles)
+    translated_summaries = safe_translate_batch(summaries)
+
+    for j, paper in enumerate(batch):
+      paper["title_zh"] = translated_titles[j]
+      paper["summary_zh"] = translated_summaries[j]
+
+    print(f"  翻译进度 {min(i + batch_size, len(to_translate))}/{len(to_translate)}")
+    if i + batch_size < len(to_translate):
+      time.sleep(2)
+
+  return papers
+
+
 def dedupe_papers(papers: list[dict[str, Any]]) -> list[dict[str, Any]]:
   seen = set()
   unique = []
@@ -403,6 +456,10 @@ def fetch_daily(
     key=lambda item: (bool(item.get("has_code")), item.get("published", ""), item.get("score", 0)),
     reverse=True,
   )
+
+  if matched:
+    print(f"{target_date.isoformat()}: translating {len(matched)} papers...")
+    matched = translate_papers(matched)
 
   payload = {
     "date": target_date.isoformat(),
