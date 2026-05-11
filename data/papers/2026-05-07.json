@@ -1,12 +1,12 @@
 {
   "date": "2026-05-07",
-  "generated_at": "2026-05-10T10:24:33.659680+00:00",
+  "generated_at": "2026-05-11T02:59:51.507081+00:00",
   "timezone": "Asia/Shanghai",
   "source": "arXiv",
   "source_url": "https://arxiv.org/",
   "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202605070000 TO 202605072359]",
-  "total_fetched": 542,
-  "total_matched": 10,
+  "total_fetched": 698,
+  "total_matched": 11,
   "papers": [
     {
       "title": "AMIEOD: Adaptive Multi-Experts Image Enhancement for Object Detection in Low-Illumination Scenes",
@@ -44,7 +44,9 @@
       ],
       "matched_terms": [
         "object detection"
-      ]
+      ],
+      "title_zh": "AMIEOD：用于低照度场景中物体检测的自适应多专家图像增强",
+      "summary_zh": "在多媒体应用场景中，与在光线充足的环境下拍摄的图像相比，在低照度条件下拍摄的图像通常会导致视觉感知任务的准确性较低。为了应对这一挑战，我们提出了 AMIEOD，一种用于低照度场景的图像增强目标检测框架，其中两个任务以面向检测性能的方式联合优化。具体来说，为了充分利用光线不足的图像中的信息，提出了一种多专家图像增强模块（MEIEM），该模块利用了多种增强策略。在此基础上，为了更好地将 MEIEM 与检测任务结合起来，我们提出了一种检测引导回归损失（DGRL），它利用检测结果来决定回归目标。此外，为了在推理过程中从 MEIEM 动态选择最合适的增强策略，我们构建了一个以检测引导交叉熵（DGCE）损失为指导的专家选择模块（ESM），它将 ESM 的优化制定为分类任务。改进的方法与当前的检测算法很好地匹配，以提高其在昏暗场景下的性能。对多个数据集的大量实验表明，所提出的方法显着提高了低照度条件下的目标检测精度。我们的代码已发布在 https://github.com/scujayfantasy/AMIEOD"
     },
     {
       "title": "Uncertainty-Guided Edge Learning for Deep Image Regression in Remote Sensing",
@@ -80,7 +82,60 @@
         "land use",
         "remote sensing",
         "satellite"
-      ]
+      ],
+      "title_zh": "遥感深度图像回归的不确定性引导边缘学习",
+      "summary_zh": "边缘学习是指训练部署在边缘平台上的机器学习模型，通常使用船上积累的新数据。边缘设备的计算限制不仅影响模型优化，还影响当前模型对未标记数据的预测不确定性的计算，这对于通知模型更新至关重要。在本文中，我们研究了在遥感卫星上执行深度图像回归的背景下的边缘学习，其中深度网络由机载计算机执行，以从输入图像中回归标量$y$，例如$y$是指示云覆盖或土地利用的像素百分比。我们提出了一种不确定性引导边缘学习（UGEL）算法，该算法可以准确地对数据进行优先级排序，以加快机载回归模型的训练收敛速度。 UGEL 的基础是基于深度 beta 回归的预测不确定性计算，其中深度网络用于估计 beta 分布的参数，其中输入图像的目标 $y$ 具有很高的可能性。与在边缘设备上成本太高（例如，每个样本需要多次前向传递）或对预测分布（例如高斯）做出严格假设的现有不确定性估计方法相比，深度 beta 回归可以在单个前向传递中计算，并允许更一般的预测分布。结果表明，UGEL 比主动或半监督学习提供更快收敛的边缘学习。代码和模型可在 https://github.com/anh-vunguyen/UGEL 上公开获取。"
+    },
+    {
+      "title": "TRAJGANR: Trajectory-Centric Urban Multimodal Learning via Geospatially Aligned Neural Representations",
+      "authors": [
+        "Maria Despoina Siampou",
+        "Gengchen Mai",
+        "Ni Lao",
+        "Jinmeng Rao",
+        "Neha Arora",
+        "Cyrus Shahabi",
+        "Shushman Choudhury"
+      ],
+      "summary": "Multimodal self-supervised learning (MSSL) has emerged as a key paradigm for pretraining geospatial foundation models. However, existing geospatial MSSL methods are mainly designed for static pairs of modalities, such as satellite imagery, street-view imagery, and text, where learning is driven by aligning observations from the same or nearby locations. This assumption breaks down for human mobility trajectories, which represent continuous movement along paths rather than discrete observations at individual locations. Although trajectories are important for urban understanding through their ability to capture human activity across roads, neighborhoods, and places over time, they remain largely underexplored in current geospatial MSSL frameworks. We present TrajGANR, a novel trajectory-centric geospatial MSSL framework that aligns continuous movement patterns with static, location-based observations. TrajGANR learns a continuous neural representation of trajectories at arbitrary points along each path, which enables fine-grained alignment with nearby street-view images, even when they are not co-located with any trajectory waypoints. We leverage this capability to introduce an MSSL objective that jointly aligns three modalities: trajectories, street-view images, and their geographic locations. We evaluate TrajGANR on four urban mobility and road understanding tasks. Across these tasks, TrajGANR consistently outperforms existing geospatial MSSL frameworks and a trajectory-specific foundation model. Ablation studies further demonstrate that our proposed MSSL objective and the multimodal learning framework are the primary drivers of these improvements, highlighting the importance of fine-grained geospatial alignment over coarser aggregation, as well as geospatial multimodal learning.",
+      "published": "2026-05-07T22:10:41Z",
+      "updated": "2026-05-07T22:10:41Z",
+      "arxiv_id": "2605.06990v1",
+      "abs_url": "http://arxiv.org/abs/2605.06990v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.06990v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型"
+      ],
+      "topic": "基础模型",
+      "score": 11,
+      "anchor_terms": [
+        "foundation model",
+        "geospatial",
+        "geospatial foundation",
+        "geospatial foundation model",
+        "satellite image",
+        "satellite imagery"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "geospatial",
+        "geospatial foundation",
+        "geospatial foundation model",
+        "satellite",
+        "satellite image",
+        "satellite imagery",
+        "self-supervised learning"
+      ],
+      "title_zh": "TRAJGANR：通过地理空间对齐的神经表示以轨迹为中心的城市多模态学习",
+      "summary_zh": "多模态自监督学习（MSSL）已成为预训练地理空间基础模型的关键范例。然而，现有的地理空间 MSSL 方法主要是针对静态模态对设计的，例如卫星图像、街景图像和文本，其中学习是通过对齐来自相同或附近位置的观测来驱动的。对于人类移动轨迹来说，这种假设不成立，人类移动轨迹代表沿着路径的连续移动，而不是在各个位置的离散观察。尽管轨迹能够捕捉一段时间内跨道路、社区和地点的人类活动，对于理解城市很重要，但在当前的地理空间 MSSL 框架中，它们在很大程度上仍未得到充分探索。我们提出了 TrajGANR，一种新颖的以轨迹为中心的地理空间 MSSL 框架，它将连续运动模式与静态、基于位置的观测相结合。 TrajGANR 学习每条路径上任意点处轨迹的连续神经表示，这使得能够与附近的街景图像进行细粒度对齐，即使它们不与任何轨迹路径点位于同一位置。我们利用这一功能引入了 MSSL 目标，该目标联合调整了三种模式：轨迹、街景图像及其地理位置。我们在四个城市交通和道路理解任务上评估 TrajGANR。在这些任务中，TrajGANR 始终优于现有的地理空间 MSSL 框架和特定于轨迹的基础模型。消融研究进一步表明，我们提出的 MSSL 目标和多模态学习框架是这些改进的主要驱动力，强调了细粒度地理空间对齐相对于粗略聚合以及地理空间多模态学习的重要性。"
     },
     {
       "title": "Diverse Sampling in Diffusion Models with Marginal Preserving Particle Guidance",
@@ -113,7 +168,9 @@
       "matched_terms": [
         "diffusion model",
         "image generation"
-      ]
+      ],
+      "title_zh": "具有边缘保留粒子引导的扩散模型中的多样化采样",
+      "summary_zh": "我们提出了 EDDY（通过无散动力学的精确边际多样化），这是一种扩散和流动匹配模型的指导机制，可在保持质量的同时促进生成的样本之间的多样性。 EDDY 利用福克-普朗克方程的对称性，使用漂移扰动改变粒子轨迹，同时保留不断变化的边缘分布。我们通过从排斥方向构造的基于内核的反对称成对矩阵场来实例化这一原理。由此产生的无散动力学促进了联合粒子级别的多样性，同时保留每个粒子的边缘分布，而无需任何额外的训练。由于在具有感知嵌入的文本到图像生成等情况下计算指导可能会耗费大量计算资源，因此我们提出实用的近似作为一种有效且高效的解决方案。合成分布和文本到图像生成的实验表明，与常见基线相比，EDDY 提高了多样性，同时保持了强大的分布保真度。"
     },
     {
       "title": "Earth-o1: A Grid-free Observation-native Atmospheric World Model",
@@ -167,7 +224,9 @@
       ],
       "matched_terms": [
         "earth observation"
-      ]
+      ],
+      "title_zh": "Earth-o1：无网格观测原生大气世界模型",
+      "summary_zh": "尽管现代地球观测系统提供了前所未有的多模态数据量，但我们模拟大气动力学的能力仍然受到限制。传统的建模框架迫使异构测量进入预定义的空间网格，本质上限制了原始传感器数据的充分利用并造成严重的计算瓶颈。在这里，我们介绍 Earth-o1，这是一种克服这些结构限制的观测原生大气世界模型。 Earth-o1 不依赖传统的大气动力学建模系统或传统的数据同化，而是直接从无网格的观测数据中学习地球系统的连续、三维物理演化。通过将不同的传感器输入集成到一个统一的、无网格的动态场中，该模型可以在空间和时间上自主地推进大气状态。我们证明，这种根本不同的范式可以实现直接、实时的预测和跨传感器推理，而无需显式数值求解器的开销。在事后评估中，Earth-o1 的地面预报能力可与运行中的综合预报系统 (IFS) 相媲美。这些结果表明，连续的、观测驱动的世界模型——一种完全观测原生的新型地球物理模拟器——可以与已建立的物理框架的保真度相匹配，为地球的数字孪生提供可扩展的数据驱动基础。"
     },
     {
       "title": "Backdoor Mitigation in Object Detection via Adversarial Fine-Tuning",
@@ -208,7 +267,9 @@
         "image classification",
         "object detection",
         "transformer"
-      ]
+      ],
+      "title_zh": "通过对抗性微调减轻目标检测中的后门",
+      "summary_zh": "后门攻击可以将恶意行为植入深层模型，同时保留干净数据的性能，对安全关键型视觉系统构成严重威胁。尽管后门缓解已经在图像分类方面得到了广泛的研究，但目标检测的防御仍然相对不发达。对抗性微调是分类中常见的后门缓解方法，但将其应用于检测并非易事，因为面向分类的对抗性生成与检测攻击空间不匹配，其中攻击可能导致对象错误分类或消失，而标准检测损失可能会稀释许多预测中的修复信号。当防御者只能访问受感染的检测器和小型干净数据集而不知道攻击目标时，我们通过检测感知的对抗性微调框架来解决这些挑战，以减轻对象检测后门的影响。对于不需要了解攻击目标的对抗生成，我们引入了软分支最小化，它使用软门将与错误分类和消失攻击一致的目标与检测感知的分类损失最大化结合起来。对于有针对性的修复，我们引入了应用于目标匹配预测的双目标微调损失，将防御更新集中在与后门行为最相关的预测上。基于 CNN 和 Transformer 的检测器的实验表明，与面向分类的基线相比，我们的方法可以更有效地减少攻击成功率，同时保留真实的检测，并保持有竞争力的干净检测性能。"
     },
     {
       "title": "R2H-Diff: Guided Spectral Diffusion Model for RGB-to-Hyperspectral Reconstruction",
@@ -248,7 +309,9 @@
         "feature fusion",
         "hyperspectral",
         "hyperspectral image"
-      ]
+      ],
+      "title_zh": "R2H-Diff：用于 RGB 到高光谱重建的引导光谱扩散模型",
+      "summary_zh": "RGB 到高光谱图像重建是一个高度不适定的逆问题，因为多个合理的光谱分布可能对应于相同的 RGB 观察结果。现有的基于回归的方法通常学习确定性映射，这限制了它们对重建不确定性进行建模的能力，并且常常导致过度平滑的光谱响应。尽管扩散模型提供了强大的分布建模能力，但由于光谱维数高、带间相关性强以及对光谱保真度的严格要求，将其直接应用于高光谱重建仍然具有挑战性。为此，我们提出了 R2H-Diff，这是一种专为 RGB 到 HSI 重建而定制的高效的基于扩散的框架。具体来说，R2H-Diff 将光谱恢复制定为条件迭代细化过程，从而能够在 RGB 指导下进行渐进重建。我们提出了用于 RGB 条件特征融合的引导光谱细化模块和用于高效空间光谱依赖性建模的高光谱自适应转置注意力模块。此外，采用无归一化的去噪主干来保持频谱幅度一致性，而任务适应的线性噪声计划只需五个去噪步骤即可实现高质量重建。 NTIRE2022、CAVE 和Harvard 上的大量实验表明，R2H-Diff 在重建质量和计算效率之间实现了良好的平衡。值得注意的是，在 NTIRE2022 上，R2H-Diff 通过 0.58M 参数和 12.25G FLOP 的亚百万参数模型获得了 35.37 dB PSNR，在评估方法中实现了最低的模型复杂度，同时保持了强大的重建保真度。"
     },
     {
       "title": "Leveraging Image Generators to Address Training Data Scarcity: The Gen4Regen Dataset for Forest Regeneration Mapping",
@@ -296,7 +359,9 @@
         "aerial image",
         "aerial imagery",
         "semantic segmentation"
-      ]
+      ],
+      "title_zh": "利用图像生成器解决训练数据稀缺问题：用于森林再生绘图的 Gen4Regen 数据集",
+      "summary_zh": "可持续森林管理依赖于精确的物种组成测绘，而传统的地面调查是劳动密集型的且受到地理限制。虽然无人驾驶飞行器 (UAV) 提供可扩展的数据收集，但向基于深度学习的解释的过渡受到专家注释图像严重缺乏的瓶颈，特别是在复杂、视觉异构的再生区域。本文通过提供一个可扩展的框架，减少对高分辨率毫米级航空图像手动照片解释的依赖，解决了细粒度森林再生物种语义分割中数据稀缺和极端类别不平衡的双重挑战。重要的是，我们利用大规模视觉语言 Nano Banana Pro 模型根据提示同时生成高保真图像及其相应的像素对齐语义掩模。我们引入了 WilDReF-Q-V2，它是天然森林数据集的扩展，包含 13977 个新的未标记和 50 个标记的真实图像，以及 Gen4Regen 数据集，包含 2101 对合成图像和语义掩模。我们的方法将现实世界数据与人工智能生成的图像相结合，强调人工智能生成的数据与现实世界数据高度互补，与纯监督基线相比，统一训练的 F1 分数提高了 15% 以上。此外，我们证明，即使是少量的即时生成数据也能显着提高代表性不足的物种的性能，其中一些物种的 F1 得分提高高达 30%pt。我们的结论是，视觉语言模型可以充当敏捷的数据生成器，有效地引导专家标签稀缺或不可用的利基人工智能领域的感知任务。我们的数据集、源代码和模型将在 https://norlab-ulaval.github.io/gen4regen 上提供。"
     },
     {
       "title": "Region-adaptable retrieval of coastal biogeochemical parameters from near-surface hyperspectral remote sensing reflectance using physics-aware meta-learning",
@@ -337,7 +402,9 @@
       "matched_terms": [
         "hyperspectral",
         "remote sensing"
-      ]
+      ],
+      "title_zh": "使用物理感知元学习从近地表高光谱遥感反射率中对沿海生物地球化学参数进行区域适应性检索",
+      "summary_zh": "高光谱原位传感在检索水生生物地球化学 (BGC) 参数（例如总悬浮固体、溶解有机碳和总叶绿素-a）方面显示出了前景，可用于经济高效地监测沿海水质。然而，在水体中推广此类反演算法仍然具有挑战性，因为由于环境条件和生物地球化学的区域差异导致不同的 BGC 范围和生物光学特性，遥感反射率 (Rrs) 和 BGC 参数之间的关系在不同地区可能存在很大差异。在这项研究中，我们提出了一个两阶段物理感知元学习框架，用于从近地表 Rrs 观测中检索沿海 BGC 参数。在第一阶段，生物光学前向模型用于基于具有澳大利亚沿海水域广泛代表性的原位生物光学光谱库生成大型合成数据集。然后使用该数据集通过元学习来预训练与区域无关的基础模型，使模型能够学习基本的物理关系。在第二阶段，使用局部样本针对特定区域对预训练的基础模型进行微调。我们从澳大利亚沿海水域五个不同地理位置的地点收集了原位高光谱 Rrs 和 BGC 测量结果。我们的实验结果表明：（1）BGC参数及其相应的高光谱Rrs特征在实验地点之间表现出明显的区域差异； (2) 合成数据集在物理上是合理的，并且在参数分布和参数间相关性方面与现实世界的样本紧密一致； （3）所提出的方法在 BGC 检索方面优于五个基准模型； (4)原位测量和模型预测的 BGC 参数的时间序列在震级和时间动态方面表现出良好的一致性。"
     },
     {
       "title": "The Cost of Context: Mitigating Textual Bias in Multimodal Retrieval-Augmented Generation",
@@ -376,7 +443,9 @@
         "large language model",
         "MLLM",
         "multimodal large language model"
-      ]
+      ],
+      "title_zh": "上下文成本：减轻多模态检索增强生成中的文本偏差",
+      "summary_zh": "虽然多模态大型语言模型 (MLLM) 越来越多地与检索增强生成 (RAG) 集成以减轻幻觉，但外部文档的引入可以隐藏实例级别的严重故障模式。我们识别并形式化了重新腐败现象，即使引入完全准确的“预言”上下文也会导致有能力的模型放弃最初正确的预测。通过对内部注意力矩阵的机械诊断，我们表明重新腐败是由两重注意力崩溃驱动的：（1）视觉失明，其特征是视觉注意力质量（$M_{vis}$）和锐度（$S_{vis}$）的系统性抑制；（2）结构位置偏差，迫使模型优先考虑边界标记而不是语义相关性。我们的分析揭示了成功的幻觉，表明许多看似正确的 RAG 结果仅仅是位置巧合，其中模型的文本复制偏差恰好与真实位置一致。为了解决这些漏洞，我们提出了恢复瓶颈注意力干预（BAIR），这是一种无参数的推理时间框架，可以恢复视觉显着性并对文本干扰项应用位置感知惩罚。在医学事实、社会公平和地理空间基准方面，BAIR 成功恢复了多模态基础并提高了诊断可靠性，而无需模型重新训练或微调。"
     },
     {
       "title": "Characterizing Brazilian Atlantic Forest Restoration Outcomes with Geospatial AlphaEarth Embeddings",
@@ -414,7 +483,9 @@
         "land use",
         "remote sensing",
         "satellite"
-      ]
+      ],
+      "title_zh": "使用地理空间 AlphaEarth 嵌入表征巴西大西洋森林恢复结果",
+      "summary_zh": "巴西的大西洋森林是重要的生物多样性热点地区，但其原始覆盖面积仅剩不到 12-15%。尽管大规模监测森林恢复至关重要，但传统方法受到如此大规模实地报告的不切实际以及NDVI等遥感指数饱和的限制。此外，重新造林是一个渐进的过程，而不是森林砍伐引起的快速光谱变化。在这项研究中，我们检查了圣保罗的 1,729 个恢复地点，使用 AlphaEarth 基金会模型的卫星嵌入来评估其在表征早期恢复成功方面的有效性。我们引入了“参考轨迹嵌入”的概念，定义了基于与成熟次生林参考地点的余弦相似度的恢复成功度量。我们根据不同的土地利用和土地覆盖（LULC）类型观察嵌入空间中的不同簇，并且我们可以识别具有明确变化向量的站点。然而，信号可能有噪声，嵌入可能需要进一步微调才能捕获和预测 LULC 之外的站点元数据。"
     }
   ]
 }
