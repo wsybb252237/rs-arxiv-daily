@@ -2,8 +2,8 @@ name: Update arXiv archive
 
 on:
   schedule:
-    # GitHub Actions uses UTC. 00:00 UTC is 08:00 in Beijing/Singapore.
-    - cron: "30 2 * * 1-5"
+    # 14:30 Beijing (UTC+8) = 06:30 UTC, after arXiv daily release at 13:00 Beijing
+    - cron: "30 6 * * 1-5"
   workflow_dispatch:
     inputs:
       date:
