@@ -1,53 +1,13 @@
 {
   "date": "2026-04-02",
-  "generated_at": "2026-05-09T14:57:50.180044+00:00",
+  "generated_at": "2026-05-11T04:06:46.954598+00:00",
   "timezone": "Asia/Shanghai",
   "source": "arXiv",
   "source_url": "https://arxiv.org/",
-  "query": "(cat:cs.RO OR cat:cs.AI OR cat:cs.CV OR cat:cs.LG OR cat:cs.CL OR cat:cs.MA OR cat:cs.HC OR cat:stat.ML OR cat:eess.SY OR cat:eess.IV) AND submittedDate:[202604020000 TO 202604022359]",
-  "total_fetched": 521,
-  "total_matched": 54,
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202604020000 TO 202604022359]",
+  "total_fetched": 409,
+  "total_matched": 17,
   "papers": [
-    {
-      "title": "TrackerSplat: Exploiting Point Tracking for Fast and Robust Dynamic 3D Gaussians Reconstruction",
-      "authors": [
-        "Daheng Yin",
-        "Isaac Ding",
-        "Yili Jin",
-        "Jianxin Shi",
-        "Jiangchuan Liu"
-      ],
-      "summary": "Recent advancements in 3D Gaussian Splatting (3DGS) have demonstrated its potential for efficient and photorealistic 3D reconstructions, which is crucial for diverse applications such as robotics and immersive media. However, current Gaussian-based methods for dynamic scene reconstruction struggle with large inter-frame displacements, leading to artifacts and temporal inconsistencies under fast object motions. To address this, we introduce \\textit{TrackerSplat}, a novel method that integrates advanced point tracking methods to enhance the robustness and scalability of 3DGS for dynamic scene reconstruction. TrackerSplat utilizes off-the-shelf point tracking models to extract pixel trajectories and triangulate per-view pixel trajectories onto 3D Gaussians to guide the relocation, rotation, and scaling of Gaussians before training. This strategy effectively handles large displacements between frames, dramatically reducing the fading and recoloring artifacts prevalent in prior methods. By accurately positioning Gaussians prior to gradient-based optimization, TrackerSplat overcomes the quality degradation associated with large frame gaps when processing multiple adjacent frames in parallel across multiple devices, thereby boosting reconstruction throughput while preserving rendering quality. Experiments on real-world datasets confirm the robustness of TrackerSplat in challenging scenarios with significant displacements, achieving superior throughput under parallel settings and maintaining visual quality compared to baselines. The code is available at https://github.com/yindaheng98/TrackerSplat.",
-      "published": "2026-04-02T23:43:55Z",
-      "updated": "2026-04-02T23:43:55Z",
-      "arxiv_id": "2604.02586v1",
-      "abs_url": "http://arxiv.org/abs/2604.02586v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02586v1",
-      "primary_category": "cs.CV",
-      "categories": [
-        "cs.CV",
-        "cs.GR"
-      ],
-      "comment": "11 pages, 6 figures",
-      "code_url": "https://github.com/yindaheng98/TrackerSplat",
-      "has_code": true,
-      "labels": [
-        "开源",
-        "数据集/评测"
-      ],
-      "topic": "数据集/评测",
-      "score": 4,
-      "anchor_terms": [
-        "robot",
-        "robotic",
-        "robotics"
-      ],
-      "matched_terms": [
-        "robot",
-        "robotic",
-        "robotics"
-      ]
-    },
     {
       "title": "UAV-Track VLA: Embodied Aerial Tracking via Vision-Language-Action Models",
       "authors": [
@@ -84,972 +44,289 @@
         "数据集/评测"
       ],
       "topic": "视觉-语言模型",
-      "score": 16,
+      "score": 10,
       "anchor_terms": [
-        "embodied",
-        "vision-language-action",
-        "vla"
+        "UAV"
       ],
       "matched_terms": [
-        "embodied",
-        "simulator",
-        "uav",
-        "vision-language-action",
-        "vla",
-        "vla model"
-      ]
+        "aerial",
+        "modal fusion",
+        "robust",
+        "UAV",
+        "unmanned aerial vehicle",
+        "zero-shot"
+      ],
+      "title_zh": "UAV-Track VLA：通过视觉-语言-动作模型实现空中跟踪",
+      "summary_zh": "实体视觉跟踪对于无人机（UAV）执行复杂的现实任务至关重要。在具有复杂语义需求的动态城市场景中，视觉-语言-动作（VLA）模型由于其跨模态融合和连续动作生成能力而显示出巨大的前景。为了在此类环境中对多模态跟踪进行基准测试，我们构建了一个专用的评估基准和一个包含超过 890K 帧、176 个任务和 85 个不同对象的大规模数据集。此外，为了解决现有 VLA 模型中时间特征冗余和空间几何先验的缺乏，我们提出了一种改进的 VLA 跟踪模型，UAV-Track VLA。我们的模型建立在 $π_{0.5}$ 架构之上，引入了时间压缩网络来有效捕获帧间动态。此外，并行双分支解码器包括空间感知辅助接地头和流匹配动作专家，旨在解耦跨模态特征并生成细粒度的连续动作。 CARLA 模拟器中的系统实验验证了我们方法的卓越端到端性能。值得注意的是，在具有挑战性的长距离行人跟踪任务中，UAV-Track VLA 实现了 61.76% 的成功率和 269.65 的平均跟踪帧，显着优于现有基线。此外，它在未见过的环境中展示了强大的零样本泛化能力，与原始的 $π_{0.5}$ 相比，将单步推理延迟减少了 33.4%（至 0.0571s），从而实现高效、实时的无人机控制。数据样本和演示视频可访问：https://github.com/Hub-Tian/UAV-Track_VLA。"
     },
     {
-      "title": "UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving",
+      "title": "Prototype-Based Low Altitude UAV Semantic Segmentation",
       "authors": [
-        "Yongkang Li",
-        "Lijun Zhou",
-        "Sixu Yan",
-        "Bencheng Liao",
-        "Tianyi Yan",
-        "Kaixin Xiong",
-        "Long Chen",
-        "Hongwei Xie",
-        "Bing Wang",
-        "Guang Chen",
-        "Hangjun Ye",
-        "Wenyu Liu",
-        "Haiyang Sun",
-        "Xinggang Wang"
+        "Da Zhang",
+        "Gao Junyu",
+        "Zhao Zhiyuan"
       ],
-      "summary": "Vision-Language-Action (VLA) models have recently emerged in autonomous driving, with the promise of leveraging rich world knowledge to improve the cognitive capabilities of driving systems. However, adapting such models for driving tasks currently faces a critical dilemma between spatial perception and semantic reasoning. Consequently, existing VLA systems are forced into suboptimal compromises: directly adopting 2D Vision-Language Models yields limited spatial perception, whereas enhancing them with 3D spatial representations often impairs the native reasoning capacity of VLMs. We argue that this dilemma largely stems from the coupled optimization of spatial perception and semantic reasoning within shared model parameters. To overcome this, we propose UniDriveVLA, a Unified Driving Vision-Language-Action model based on Mixture-of-Transformers that addresses the perception-reasoning conflict via expert decoupling. Specifically, it comprises three experts for driving understanding, scene perception, and action planning, which are coordinated through masked joint attention. In addition, we combine a sparse perception paradigm with a three-stage progressive training strategy to improve spatial perception while maintaining semantic reasoning capability. Extensive experiments show that UniDriveVLA achieves state-of-the-art performance in open-loop evaluation on nuScenes and closed-loop evaluation on Bench2Drive. Moreover, it demonstrates strong performance across a broad range of perception, prediction, and understanding tasks, including 3D detection, online mapping, motion forecasting, and driving-oriented VQA, highlighting its broad applicability as a unified model for autonomous driving. Code and model have been released at https://github.com/xiaomi-research/unidrivevla",
-      "published": "2026-04-02T15:48:45Z",
-      "updated": "2026-04-02T15:48:45Z",
-      "arxiv_id": "2604.02190v1",
-      "abs_url": "http://arxiv.org/abs/2604.02190v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02190v1",
+      "summary": "Semantic segmentation of low-altitude UAV imagery presents unique challenges due to extreme scale variations, complex object boundaries, and limited computational resources on edge devices. Existing transformer-based segmentation methods achieve remarkable performance but incur high computational overhead, while lightweight approaches struggle to capture fine-grained details in high-resolution aerial scenes. To address these limitations, we propose PBSeg, an efficient prototype-based segmentation framework tailored for UAV applications. PBSeg introduces a novel prototype-based cross-attention (PBCA) that exploits feature redundancy to reduce computational complexity while maintaining segmentation quality. The framework incorporates an efficient multi-scale feature extraction module that combines deformable convolutions (DConv) with context-aware modulation (CAM) to capture both local details and global semantics. Experiments on two challenging UAV datasets demonstrate the effectiveness of the proposed approach. PBSeg achieves 71.86\\% mIoU on UAVid and 80.92\\% mIoU on UDD6, establishing competitive performance while maintaining computational efficiency. Code is available at https://github.com/zhangda1018/PBSeg.",
+      "published": "2026-04-02T02:50:05Z",
+      "updated": "2026-04-02T02:50:05Z",
+      "arxiv_id": "2604.01550v1",
+      "abs_url": "http://arxiv.org/abs/2604.01550v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.01550v1",
       "primary_category": "cs.CV",
       "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "comment": "code has been released at https://github.com/xiaomi-research/unidrivevla",
-      "code_url": "https://github.com/xiaomi-research/unidrivevla",
-      "has_code": true,
-      "labels": [
-        "开源",
-        "视觉-语言模型",
-        "数据集/评测"
-      ],
-      "topic": "视觉-语言模型",
-      "score": 5,
-      "anchor_terms": [
-        "vision-language-action",
-        "vla"
-      ],
-      "matched_terms": [
-        "vision-language-action",
-        "vla"
-      ]
-    },
-    {
-      "title": "Realistic Lip Motion Generation Based on 3D Dynamic Viseme and Coarticulation Modeling for Human-Robot Interaction",
-      "authors": [
-        "Sheng Li",
-        "Jingcheng Huang",
-        "Min Li"
-      ],
-      "summary": "Realistic lip synchronization is essential for the natural human-robot non-verbal interaction of humanoid robots. Motivated by this need, this paper presents a lip motion generation framework based on 3D dynamic viseme and coarticulation modeling. By analyzing Chinese pronunciation theory, a 3D dynamic viseme library is constructed based on the ARKit standard, which offers coherent prior trajectories of lips. To resolve motion conflicts within continuous speech streams, a coarticulation mechanism is developed by incorporating initial-final (Shengmu-Yunmu) decoupling and energy modulation. After developing a strategy to retarget high-dimensional spatial lip motion to a 14-DOF lip actuation system of a humanoid head platform, the efficiency and accuracy of the proposed architecture is experimentally validated and demonstrated with quantitative ablation experiments using the metrics of the Pearson Correlation Coefficient (PCC) and the Mean Absolute Jerk (MAJ). This research offers a lightweight, efficient, and highly practical paradigm for the speech-driven lip motion generation of humanoid robots. The 3D dynamic viseme library and real-world deployment videos are available at {https://github.com/yuesheng21/Phoneme-to-Lip-14DOF}",
-      "published": "2026-04-02T08:24:49Z",
-      "updated": "2026-04-02T08:24:49Z",
-      "arxiv_id": "2604.01756v1",
-      "abs_url": "http://arxiv.org/abs/2604.01756v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01756v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "8 pages,7 figures",
-      "code_url": "https://github.com/yuesheng21/Phoneme-to-Lip-14DOF",
-      "has_code": true,
-      "labels": [
-        "开源"
-      ],
-      "topic": "其他",
-      "score": 8,
-      "anchor_terms": [
-        "humanoid",
-        "robot"
-      ],
-      "matched_terms": [
-        "human-robot interaction",
-        "humanoid",
-        "robot"
-      ]
-    },
-    {
-      "title": "Active Inference with a Self-Prior in the Mirror-Mark Task",
-      "authors": [
-        "Dongmin Kim",
-        "Hoshinori Kanazawa",
-        "Yasuo Kuniyoshi"
-      ],
-      "summary": "The mirror self-recognition test evaluates whether a subject touches a mark on its own body that is visible only in a mirror, and is widely used as an indicator of self-awareness. In this study, we present a computational model in which this behavior emerges spontaneously through a single mechanism, the self-prior, without any external reward. The self-prior, implemented with a Transformer, learns the density of familiar multisensory experiences; when a novel mark appears, the discrepancy from this learned distribution drives mark-directed behavior through active inference. A simulated infant, relying solely on vision and proprioception without tactile input, discovered a sticker placed on its own face in the mirror and removed it in approximately 70% of cases without any explicit instruction. Expected free energy decreased significantly after sticker removal, confirming that the self-prior operates as an internal criterion for distinguishing self from non-self. Cross-modal sampling further demonstrated that the self-prior captures visual--proprioceptive associations, functioning as a probabilistic body schema. These results provide a concise computational account of the key behavior observed in the mirror test and suggest that the free energy principle can serve as a unifying hypothesis for investigating the developmental origins of self-awareness. Code is available at: https://github.com/kim135797531/self-prior-mirror",
-      "published": "2026-04-02T08:15:03Z",
-      "updated": "2026-04-02T08:15:03Z",
-      "arxiv_id": "2604.09673v1",
-      "abs_url": "http://arxiv.org/abs/2604.09673v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.09673v1",
-      "primary_category": "cs.LG",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "comment": "7 pages, 5 figures",
-      "code_url": "https://github.com/kim135797531/self-prior-mirror",
-      "has_code": true,
-      "labels": [
-        "开源",
-        "多模态融合"
-      ],
-      "topic": "多模态融合",
-      "score": 2,
-      "anchor_terms": [
-        "tactile"
-      ],
-      "matched_terms": [
-        "proprioception",
-        "tactile"
-      ]
-    },
-    {
-      "title": "AnchorVLA: Anchored Diffusion for Efficient End-to-End Mobile Manipulation",
-      "authors": [
-        "Jia Syuen Lim",
-        "Zhizhen Zhang",
-        "Peter Bohm",
-        "Brendan Tidd",
-        "Zi Huang",
-        "Yadan Luo"
-      ],
-      "summary": "A central challenge in mobile manipulation is preserving multiple plausible action models while remaining reactive during execution. A bottle in a cluttered scene can often be approached and grasped in multiple valid ways. Robust behavior depends on preserving this action diversity while remaining reactive as the scene evolves. Diffusion policies are appealing because they model multimodal action distributions rather than collapsing to one solution. But in practice, full iterative denoising is costly at control time. Action chunking helps amortize inference, yet it also creates partially open-loop behavior, allowing small mismatches to accumulate into drift. We present AnchorVLA, a diffusion-based VLA policy for mobile manipulation built on the core insight that when sampling begins near a plausible solution manifold, extensive denoising is unnecessary to recover multimodal, valid actions. AnchorVLA combines a lightweight VLA adaptation backbone with an anchored diffusion action head, which denoises locally around anchor trajectories using a truncated diffusion schedule. This retains multimodal action generation while reducing inference cost for closed-loop control. Crucially, to mitigate chunking-induced drift, we introduce a test-time self-correction mechanism via a lightweight residual correction module that makes high-frequency, per-step adjustments during rollout. Across diverse mobile manipulation tasks, AnchorVLA improves success and stability under disturbances and distribution shifts while maintaining low-latency inference. The source code is made available at https://github.com/jason-lim26/AnchorVLA.",
-      "published": "2026-04-02T03:29:04Z",
-      "updated": "2026-04-02T03:29:04Z",
-      "arxiv_id": "2604.01567v1",
-      "abs_url": "http://arxiv.org/abs/2604.01567v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01567v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "",
-      "code_url": "https://github.com/jason-lim26/AnchorVLA",
-      "has_code": true,
-      "labels": [
-        "开源",
-        "图像生成与重建"
-      ],
-      "topic": "图像生成与重建",
-      "score": 13,
-      "anchor_terms": [
-        "grasp",
-        "manipulation",
-        "vla"
-      ],
-      "matched_terms": [
-        "action chunking",
-        "grasp",
-        "manipulation",
-        "mobile manipulation",
-        "vla"
-      ]
-    },
-    {
-      "title": "VoxelCodeBench: Benchmarking 3D World Modeling Through Code Generation",
-      "authors": [
-        "Yan Zheng",
-        "Florian Bordes"
-      ],
-      "summary": "Evaluating code generation models for 3D spatial reasoning requires executing generated code in realistic environments and assessing outputs beyond surface-level correctness. We introduce a platform VoxelCode, for analyzing code generation capabilities for 3D understanding and environment creation. Our platform integrates natural language task specification, API-driven code execution in Unreal Engine, and a unified evaluation pipeline supporting both automated metrics and human assessment. To demonstrate its utility, we construct VoxelCodeBench, a benchmark of voxel manipulation tasks spanning three reasoning dimensions: symbolic interpretation, geometric construction, and artistic composition. Evaluating leading code generation models, we find that producing executable code is far easier than producing spatially correct outputs, with geometric construction and multi-object composition proving particularly challenging. By open-sourcing our platform and benchmark, we provide the community with extensible infrastructure for developing new 3D code generation benchmarks and probing spatial reasoning in future models.",
-      "published": "2026-04-02T23:33:58Z",
-      "updated": "2026-04-02T23:33:58Z",
-      "arxiv_id": "2604.02580v1",
-      "abs_url": "http://arxiv.org/abs/2604.02580v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02580v1",
-      "primary_category": "cs.LG",
-      "categories": [
-        "cs.LG"
-      ],
-      "comment": "",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "LiDAR/点云",
-        "数据集/评测"
-      ],
-      "topic": "LiDAR/点云",
-      "score": 3,
-      "anchor_terms": [
-        "world model"
-      ],
-      "matched_terms": [
-        "manipulation",
-        "world model"
-      ]
-    },
-    {
-      "title": "From Impact to Insight: Dynamics-Aware Proprioceptive Terrain Sensing on Granular Media",
-      "authors": [
-        "Yifeng Zhang",
-        "Yue Wu",
-        "Jake Futterman",
-        "Jacob Meseha",
-        "Eduardo Rosales",
-        "Irie Cooper",
-        "J. Diego Caporale",
-        "Feifei Qian"
-      ],
-      "summary": "Robots that traverse natural terrain must interpret contact forces generated under highly dynamic conditions. However, most terrain characterization approaches rely on quasi-static assumptions that neglect velocity- and acceleration-dependent effects arising during impact and rapid stance transitions. In this work, we investigate granular terrain interaction during high-speed hopping and develop a physics-based framework for dynamic terrain characterization using proprioceptive sensing alone. Through controlled hopping experiments with systematically varied impact speed and leg compliance, our measurements reveal that quasi-static based assumptions lead to large discrepancies in granular terrain property estimation during high-speed hopping, particularly upon touchdown and controller-induced stiffness transitions. Velocity-dependent drag alone cannot explain these discrepancies. Instead, acceleration-dependent added-mass effects-associated with grain entrainment beneath the foot-dominate transient force responses. We integrate this force decomposition with a momentum-observer-based estimator that compensates for rigid-body inertia and gravity, and introduce an acceleration-aware weighted regression to account for increased force variance during high-acceleration events. Together, these methods enable consistent recovery of granular stiffness parameters across locomotion conditions, closely matching linear-actuator ground truth. Our results demonstrate that accurate terrain inference during high-speed locomotion requires explicit treatment of acceleration-dependent granular effects, and provide a foundation for robots to characterize complex deformable terrain during dynamic exploration of terrestrial and planetary environments.",
-      "published": "2026-04-02T22:27:18Z",
-      "updated": "2026-04-02T22:27:18Z",
-      "arxiv_id": "2604.02563v1",
-      "abs_url": "http://arxiv.org/abs/2604.02563v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02563v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "",
-      "code_url": "",
-      "has_code": false,
-      "labels": [],
-      "topic": "其他",
-      "score": 5,
-      "anchor_terms": [
-        "locomotion",
-        "robot"
-      ],
-      "matched_terms": [
-        "locomotion",
-        "robot"
-      ]
-    },
-    {
-      "title": "Review and Evaluation of Point-Cloud based Leaf Surface Reconstruction Methods for Agricultural Applications",
-      "authors": [
-        "Arif Ahmed",
-        "Parikshit Maini"
-      ],
-      "summary": "Accurate reconstruction of leaf surfaces from 3D point cloud is essential for agricultural applications such as phenotyping. However, real-world plant data (i.e., irregular 3D point cloud) are often complex to reconstruct plant parts accurately. A wide range of surface reconstruction methods has been proposed, including parametric, triangulation-based, implicit, and learning based approaches, yet their relative performance for leaf surface reconstruction remains insufficiently understood. In this work, we present a comparative study of nine representative surface reconstruction methods for leaf surfaces. We evaluate these methods on three publicly available datasets: LAST-STRAW, Pheno4D, and Crops3D - spanning diverse species, sensors, and sensing environments, ranging from clean high-resolution indoor scans to noisy low-resolution field settings. The analysis highlights the trade-offs between surface area estimation accuracy, smoothness, robustness to noise and missing data, and computational cost across different methods. These factors affect the cost and constraints of robotic hardware used in agricultural applications. Our results show that each method exhibits distinct advantages depending on application and resource constraints. The findings provide practical guidance for selecting surface reconstruction techniques for resource constrained robotic platforms.",
-      "published": "2026-04-02T22:13:19Z",
-      "updated": "2026-04-02T22:13:19Z",
-      "arxiv_id": "2604.03328v1",
-      "abs_url": "http://arxiv.org/abs/2604.03328v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.03328v1",
-      "primary_category": "cs.CV",
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "comment": "",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "LiDAR/点云",
-        "数据集/评测"
-      ],
-      "topic": "LiDAR/点云",
-      "score": 5,
-      "anchor_terms": [
-        "robot",
-        "robotic"
-      ],
-      "matched_terms": [
-        "robot",
-        "robotic"
-      ]
-    },
-    {
-      "title": "Tune to Learn: How Controller Gains Shape Robot Policy Learning",
-      "authors": [
-        "Antonia Bronars",
-        "Younghyo Park",
-        "Pulkit Agrawal"
-      ],
-      "summary": "Position controllers have become the dominant interface for executing learned manipulation policies. Yet a critical design decision remains understudied: how should we choose controller gains for policy learning? The conventional wisdom is to select gains based on desired task compliance or stiffness. However, this logic breaks down when controllers are paired with state-conditioned policies: effective stiffness emerges from the interplay between learned reactions and control dynamics, not from gains alone. We argue that gain selection should instead be guided by learnability: how amenable different gain settings are to the learning algorithm in use. In this work, we systematically investigate how position controller gains affect three core components of modern robot learning pipelines: behavior cloning, reinforcement learning from scratch, and sim-to-real transfer. Through extensive experiments across multiple tasks and robot embodiments, we find that: (1) behavior cloning benefits from compliant and overdamped gain regimes, (2) reinforcement learning can succeed across all gain regimes given compatible hyperparameter tuning, and (3) sim-to-real transfer is harmed by stiff and overdamped gain regimes. These findings reveal that optimal gain selection depends not on the desired task behavior, but on the learning paradigm employed. Project website: https://younghyopark.me/tune-to-learn",
-      "published": "2026-04-02T21:23:08Z",
-      "updated": "2026-04-02T21:23:08Z",
-      "arxiv_id": "2604.02523v1",
-      "abs_url": "http://arxiv.org/abs/2604.02523v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02523v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "Equal contribution between first two authors; order determined by coin flip. Project website: https://younghyopark.me/tune-to-learn",
-      "code_url": "",
-      "has_code": false,
-      "labels": [],
-      "topic": "其他",
-      "score": 21,
-      "anchor_terms": [
-        "manipulation",
-        "reinforcement learning",
-        "robot",
-        "robot learning",
-        "robot policy",
-        "sim-to-real"
-      ],
-      "matched_terms": [
-        "behavior cloning",
-        "manipulation",
-        "policy learning",
-        "reinforcement learning",
-        "robot",
-        "robot learning",
-        "robot policy",
-        "sim-to-real"
-      ]
-    },
-    {
-      "title": "Mitigating Data Scarcity in Spaceflight Applications for Offline Reinforcement Learning Using Physics-Informed Deep Generative Models",
-      "authors": [
-        "Alex E. Ballentine",
-        "Nachiket U. Bapat",
-        "Raghvendra V. Cowlagi"
-      ],
-      "summary": "The deployment of reinforcement learning (RL)-based controllers on physical systems is often limited by poor generalization to real-world scenarios, known as the simulation-to-reality (sim-to-real) gap. This gap is particularly challenging in spaceflight, where real-world training data are scarce due to high cost and limited planetary exploration data. Traditional approaches, such as system identification and synthetic data generation, depend on sufficient data and often fail due to modeling assumptions or lack of physics-based constraints. We propose addressing this data scarcity by introducing physics-based learning bias in a generative model. Specifically, we develop the Mutual Information-based Split Variational Autoencoder (MI-VAE), a physics-informed VAE that learns differences between observed system trajectories and those predicted by physics-based models. The latent space of the MI-VAE enables generation of synthetic datasets that respect physical constraints. We evaluate MI-VAE on a planetary lander problem, focusing on limited real-world data and offline RL training. Results show that augmenting datasets with MI-VAE samples significantly improves downstream RL performance, outperforming standard VAEs in statistical fidelity, sample diversity, and policy success rate. This work demonstrates a scalable strategy for enhancing autonomous controller robustness in complex, data-constrained environments.",
-      "published": "2026-04-02T18:09:11Z",
-      "updated": "2026-04-02T18:09:11Z",
-      "arxiv_id": "2604.02438v1",
-      "abs_url": "http://arxiv.org/abs/2604.02438v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02438v1",
-      "primary_category": "cs.LG",
-      "categories": [
-        "cs.LG"
-      ],
-      "comment": "",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "数据集/评测"
-      ],
-      "topic": "数据集/评测",
-      "score": 7,
-      "anchor_terms": [
-        "reinforcement learning",
-        "sim-to-real"
-      ],
-      "matched_terms": [
-        "offline reinforcement learning",
-        "reinforcement learning",
-        "sim-to-real"
-      ]
-    },
-    {
-      "title": "Stop Wandering: Efficient Vision-Language Navigation via Metacognitive Reasoning",
-      "authors": [
-        "Xueying Li",
-        "Feng Lyu",
-        "Hao Wu",
-        "Mingliu Liu",
-        "Jia-Nan Liu",
-        "Guozi Liu"
-      ],
-      "summary": "Training-free Vision-Language Navigation (VLN) agents powered by foundation models can follow instructions and explore 3D environments. However, existing approaches rely on greedy frontier selection and passive spatial memory, leading to inefficient behaviors such as local oscillation and redundant revisiting. We argue that this stems from a lack of metacognitive capabilities: the agent cannot monitor its exploration progress, diagnose strategy failures, or adapt accordingly. To address this, we propose MetaNav, a metacognitive navigation agent integrating spatial memory, history-aware planning, and reflective correction. Spatial memory builds a persistent 3D semantic map. History-aware planning penalizes revisiting to improve efficiency. Reflective correction detects stagnation and uses an LLM to generate corrective rules that guide future frontier selection. Experiments on GOAT-Bench, HM3D-OVON, and A-EQA show that MetaNav achieves state-of-the-art performance while reducing VLM queries by 20.7%, demonstrating that metacognitive reasoning significantly improves robustness and efficiency.",
-      "published": "2026-04-02T17:58:08Z",
-      "updated": "2026-04-02T17:58:08Z",
-      "arxiv_id": "2604.02318v1",
-      "abs_url": "http://arxiv.org/abs/2604.02318v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02318v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO",
         "cs.CV"
       ],
-      "comment": "10 pages, 6 figures",
+      "comment": "Accepted to ICME 2026",
+      "code_url": "https://github.com/zhangda1018/PBSeg",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "语义分割",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 10,
+      "anchor_terms": [
+        "semantic segmentation",
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "cross-attention",
+        "multi-scale",
+        "semantic segmentation",
+        "transformer",
+        "UAV"
+      ],
+      "title_zh": "基于原型的低空无人机语义分割",
+      "summary_zh": "由于极端的尺度变化、复杂的物体边界以及边缘设备上有限的计算资源，低空无人机图像的语义分割提出了独特的挑战。现有的基于变压器的分割方法取得了显着的性能，但会产生较高的计算开销，而轻量级方法难以捕获高分辨率航空场景中的细粒度细节。为了解决这些限制，我们提出了 PBSeg，这是一种为无人机应用量身定制的高效的基于原型的分割框架。 PBSeg 引入了一种新颖的基于原型的交叉注意力（PBCA），它利用特征冗余来降低计算复杂性，同时保持分割质量。该框架采用了高效的多尺度特征提取模块，该模块将可变形卷积（DConv）与上下文感知调制（CAM）相结合，以捕获局部细节和全局语义。对两个具有挑战性的无人机数据集的实验证明了所提出方法的有效性。 PBSeg 在 UAVid 上实现了 71.86% mIoU，在 UDD6 上实现了 80.92% mIoU，在保持计算效率的同时建立了具有竞争力的性能。代码可在 https://github.com/zhangda1018/PBSeg 获取。"
+    },
+    {
+      "title": "Safety-Aligned 3D Object Detection: Single-Vehicle, Cooperative, and End-to-End Perspectives",
+      "authors": [
+        "Brian Hsuan-Cheng Liao",
+        "Chih-Hong Cheng",
+        "Hasan Esen",
+        "Alois Knoll"
+      ],
+      "summary": "Perception plays a central role in connected and autonomous vehicles (CAVs), underpinning not only conventional modular driving stacks, but also cooperative perception systems and recent end-to-end driving models. While deep learning has greatly improved perception performance, its statistical nature makes perfect predictions difficult to attain. Meanwhile, standard training objectives and evaluation benchmarks treat all perception errors equally, even though only a subset is safety-critical. In this paper, we investigate safety-aligned evaluation and optimization for 3D object detection that explicitly characterize high-impact errors. Building on our previously proposed safety-oriented metric, NDS-USC, and safety-aware loss function, EC-IoU, we make three contributions. First, we present an expanded study of single-vehicle 3D object detection models across diverse neural network architectures and sensing modalities, showing that gains under standard metrics such as mAP and NDS may not translate to safety-oriented criteria represented by NDS-USC. With EC-IoU, we reaffirm the benefit of safety-aware fine-tuning for improving safety-critical detection performance. Second, we conduct an ego-centric, safety-oriented evaluation of AV-infrastructure cooperative object detection models, underscoring its superiority over vehicle-only models and demonstrating a safety impact analysis that illustrates the potential contribution of cooperative models to \"Vision Zero.\" Third, we integrate EC-IoU into SparseDrive and show that safety-aware perception hardening can reduce collision rate by nearly 30% and improve system-level safety directly in an end-to-end perception-to-planning framework. Overall, our results indicate that safety-aligned perception evaluation and optimization offer a practical path toward enhancing CAV safety across single-vehicle, cooperative, and end-to-end autonomy settings.",
+      "published": "2026-04-02T21:18:01Z",
+      "updated": "2026-04-02T21:18:01Z",
+      "arxiv_id": "2604.03325v1",
+      "abs_url": "http://arxiv.org/abs/2604.03325v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.03325v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "comment": "10 pages, 9 figures, 6 tables",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 4,
+      "anchor_terms": [
+        "object detection"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "object detection"
+      ],
+      "title_zh": "安全一致的 3D 物体检测：单车、协作和端到端视角",
+      "summary_zh": "感知在互联和自动驾驶车辆 (CAV) 中发挥着核心作用，不仅支持传统的模块化驾驶堆栈，还支持协作感知系统和最新的端到端驾驶模型。虽然深度学习极大地提高了感知性能，但其统计性质使得完美的预测难以实现。同时，标准培训目标和评估基准平等对待所有感知错误，即使只有一部分是安全关键的。在本文中，我们研究了 3D 物体检测的安全评估和优化，明确描述了高影响错误的特征。基于我们之前提出的面向安全的指标 NDS-USC 和安全感知损失函数 EC-IoU，我们做出了三项贡献。首先，我们对跨不同神经网络架构和传感模式的单车 3D 物体检测模型进行了扩展研究，表明 mAP 和 NDS 等标准指标下的收益可能无法转化为 NDS-USC 所代表的安全导向标准。通过 EC-IoU，我们重申了安全意识微调对于提高安全关键检测性能的好处。其次，我们对自动驾驶基础设施协作目标检测模型进行了以自我为中心、以安全为导向的评估，强调了其相对于纯车辆模型的优越性，并展示了安全影响分析，说明了协作模型对“零愿景”的潜在贡献。第三，我们将 EC-IoU 集成到 SparseDrive 中，并表明安全感知感知强化可以在端到端感知到规划框架中将碰撞率降低近 30%，并直接提高系统级安全性。总体而言，我们的结果表明，与安全相关的感知评估和优化为增强单车、协作和端到端自主设置中的 CAV 安全性提供了一条实用途径。"
+    },
+    {
+      "title": "Generating Satellite Imagery Data for Wildfire Detection through Mask-Conditioned Generative AI",
+      "authors": [
+        "Valeria Martin",
+        "K. Brent Venable",
+        "Derek Morgan"
+      ],
+      "summary": "The scarcity of labeled satellite imagery remains a fundamental bottleneck for deep-learning (DL)-based wildfire monitoring systems. This paper investigates whether a diffusion-based foundation model for Earth Observation (EO), EarthSynth, can synthesize realistic post-wildfire Sentinel-2 RGB imagery conditioned on existing burn masks, without task-specific retraining. Using burn masks derived from the CalFireSeg-50 dataset (Martin et al., 2025), we design and evaluate six controlled experimental configurations that systematically vary: (i) pipeline architecture (mask-only full generation vs. inpainting with pre-fire context), (ii) prompt engineering strategy (three hand-crafted prompts and a VLM-generated prompt via Qwen2-VL), and (iii) a region-wise color-matching post-processing step. Quantitative assessment on 10 stratified test samples uses four complementary metrics: Burn IoU, burn-region color distance (ΔC_burn), Darkness Contrast, and Spectral Plausibility. Results show that inpainting-based pipelines consistently outperform full-tile generation across all metrics, with the structured inpainting prompt achieving the best spatial alignment (Burn IoU = 0.456) and burn saliency (Darkness Contrast = 20.44), while color matching produces the lowest color distance (ΔC_burn = 63.22) at the cost of reduced burn saliency. VLM-assisted inpainting is competitive with hand-crafted prompts. These findings provide a foundation for incorporating generative data augmentation into wildfire detection pipelines. Code and experiments are available at: https://www.kaggle.com/code/valeriamartinh/genai-all-runned",
+      "published": "2026-04-02T19:25:55Z",
+      "updated": "2026-04-02T19:25:55Z",
+      "arxiv_id": "2604.02479v1",
+      "abs_url": "http://arxiv.org/abs/2604.02479v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.02479v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "22 pages, 7 figures",
       "code_url": "",
       "has_code": false,
       "labels": [
         "基础模型",
-        "视觉-语言模型"
-      ],
-      "topic": "基础模型",
-      "score": 6,
-      "anchor_terms": [
-        "navigation"
-      ],
-      "matched_terms": [
-        "foundation model",
-        "navigation",
-        "vln"
-      ]
-    },
-    {
-      "title": "F2F-AP: Flow-to-Future Asynchronous Policy for Real-time Dynamic Manipulation",
-      "authors": [
-        "Haoyu Wei",
-        "Xiuwei Xu",
-        "Ziyang Cheng",
-        "Hang Yin",
-        "Angyuan Ma",
-        "Bingyao Yu",
-        "Jie Zhou",
-        "Jiwen Lu"
-      ],
-      "summary": "Asynchronous inference has emerged as a prevalent paradigm in robotic manipulation, achieving significant progress in ensuring trajectory smoothness and efficiency. However, a systemic challenge remains unresolved, as inherent latency causes generated actions to inevitably lag behind the real-time environment. This issue is particularly exacerbated in dynamic scenarios, where such temporal misalignment severely compromises the policy's ability to interpret and react to rapidly evolving surroundings. In this paper, we propose a novel framework that leverages predicted object flow to synthesize future observations, incorporating a flow-based contrastive learning objective to align the visual feature representations of predicted observations with ground-truth future states. Empowered by this anticipated visual context, our asynchronous policy gains the capacity for proactive planning and motion, enabling it to explicitly compensate for latency and robustly execute manipulation tasks involving actively moving objects. Experimental results demonstrate that our approach significantly enhances responsiveness and success rates in complex dynamic manipulation tasks.",
-      "published": "2026-04-02T17:57:15Z",
-      "updated": "2026-04-12T08:11:55Z",
-      "arxiv_id": "2604.02408v2",
-      "abs_url": "http://arxiv.org/abs/2604.02408v2",
-      "pdf_url": "https://arxiv.org/pdf/2604.02408v2",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "Tsinghua University, 14pages,12 fugures",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "基础模型"
-      ],
-      "topic": "基础模型",
-      "score": 7,
-      "anchor_terms": [
-        "manipulation",
-        "robot",
-        "robotic"
-      ],
-      "matched_terms": [
-        "manipulation",
-        "robot",
-        "robotic"
-      ]
-    },
-    {
-      "title": "A virtual-variable-length method for robust inverse kinematics of multi-segment continuum robots",
-      "authors": [
-        "Weiting Feng",
-        "Federico Renda",
-        "Yunjie Yang",
-        "Francesco Giorgio-Serchi"
-      ],
-      "summary": "This paper proposes a new, robust method to solve the inverse kinematics (IK) of multi-segment continuum manipulators. Conventional Jacobian-based solvers, especially when initialized from neutral/rest configurations, often exhibit slow convergence and, in certain conditions, may fail to converge (deadlock). The Virtual-Variable-Length (VVL) method proposed here introduces fictitious variations of segments' length during the solution iteration, conferring virtual axial degrees of freedom that alleviate adverse behaviors and constraints, thus enabling or accelerating convergence. Comprehensive numerical experiments were conducted to compare the VVL method against benchmark Jacobian-based and Damped Least Square IK solvers. Across more than $1.8\\times 10^6$ randomized trials covering manipulators with two to seven segments, the proposed approach achieved up to a 20$\\%$ increase in convergence success rate over the benchmark and a 40-80$\\%$ reduction in average iteration count under equivalent accuracy thresholds ($10^{-4}-10^{-8}$). While deadlocks are not restricted to workspace boundaries and may occur at arbitrary poses, our empirical study identifies boundary-proximal configurations as a frequent cause of failed convergence and the VVL method mitigates such occurrences over a statistical sample of test cases.",
-      "published": "2026-04-02T16:50:57Z",
-      "updated": "2026-04-02T16:50:57Z",
-      "arxiv_id": "2604.02256v1",
-      "abs_url": "http://arxiv.org/abs/2604.02256v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02256v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO",
-        "eess.SY",
-        "math.NA"
-      ],
-      "comment": "8 pages, 6 figures, accepted for presentation in IEEE RoboSoft 2026, Kanazawa, Japan",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "数据集/评测"
-      ],
-      "topic": "数据集/评测",
-      "score": 6,
-      "anchor_terms": [
-        "manipulator",
-        "robot"
-      ],
-      "matched_terms": [
-        "manipulator",
-        "robot"
-      ]
-    },
-    {
-      "title": "Safe Control of Feedback-Interconnected Systems via Singular Perturbations",
-      "authors": [
-        "Stefano Di Gregorio",
-        "Guido Carnevale",
-        "Giuseppe Notarstefano"
-      ],
-      "summary": "Control Barrier Functions (CBFs) have emerged as a powerful tool in the design of safety-critical controllers for nonlinear systems. In modern applications, complex systems often involve the feedback interconnection of subsystems evolving at different timescales, e.g., two parts from different physical domains (e.g., the electrical and mechanical parts of robotic systems) or a physical plant and an (optimization or control) algorithm. In these scenarios, safety constraints often involve only a portion of the overall system. Inspired by singular perturbations for stability analysis, we develop a formal procedure to lift a safety certificate designed on a reduced-order model to the overall feedback-interconnected system. Specifically, we show that under a sufficient timescale separation between slow and fast dynamics, a composite CBF can be designed to certify the forward invariance of the safe set for the interconnected system. As a result, the online safety filter only needs to be solved for the lower-dimensional, reduced-order model. We numerically test the proposed approach on: (i) a robotic arm with joint motor dynamics, and (ii) a physical plant driven by an optimization algorithm.",
-      "published": "2026-04-02T15:04:51Z",
-      "updated": "2026-04-02T15:04:51Z",
-      "arxiv_id": "2604.02132v1",
-      "abs_url": "http://arxiv.org/abs/2604.02132v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02132v1",
-      "primary_category": "math.OC",
-      "categories": [
-        "math.OC",
-        "eess.SY"
-      ],
-      "comment": "",
-      "code_url": "",
-      "has_code": false,
-      "labels": [],
-      "topic": "其他",
-      "score": 4,
-      "anchor_terms": [
-        "robot",
-        "robotic"
-      ],
-      "matched_terms": [
-        "robot",
-        "robotic",
-        "robotic arm"
-      ]
-    },
-    {
-      "title": "ROS 2-Based LiDAR Perception Framework for Mobile Robots in Dynamic Production Environments, Utilizing Synthetic Data Generation, Transformation-Equivariant 3D Detection and Multi-Object Tracking",
-      "authors": [
-        "Lukas Bergs",
-        "Tan Chung",
-        "Marmik Thakkar",
-        "Alexander Moriz",
-        "Amon Göppert",
-        "Chinnawut Nantabut",
-        "Robert Schmitt"
-      ],
-      "summary": "Adaptive robots in dynamic production environments require robust perception capabilities, including 6D pose estimation and multi-object tracking. To address limitations in real-world data dependency, noise robustness, and spatiotemporal consistency, a LiDAR framework based on the Robot Operating System integrating a synthetic-data-trained Transformation-Equivariant 3D Detection with multi-object-tracking leveraging center poses is proposed. Validated across 72 scenarios with motion capture technology, overall results yield an Intersection over Union of 62.6% for standalone pose estimation, rising to 83.12% with multi-object-tracking integration. Our LiDAR-based framework achieves 91.12% of Higher Order Tracking Accuracy, advancing robustness and versatility of LiDAR-based perception systems for industrial mobile manipulators.",
-      "published": "2026-04-02T14:45:12Z",
-      "updated": "2026-04-02T14:45:12Z",
-      "arxiv_id": "2604.02109v1",
-      "abs_url": "http://arxiv.org/abs/2604.02109v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02109v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "Accepted for publication at CIRP ICME 2025; will appear in Procedia CIRP",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "LiDAR/点云"
-      ],
-      "topic": "LiDAR/点云",
-      "score": 8,
-      "anchor_terms": [
-        "manipulator",
-        "robot"
-      ],
-      "matched_terms": [
-        "manipulator",
-        "mobile robot",
-        "robot"
-      ]
-    },
-    {
-      "title": "Cross-Modal Visuo-Tactile Object Perception",
-      "authors": [
-        "Anirvan Dutta",
-        "Simone Tasciotti",
-        "Claudia Cusseddu",
-        "Ang Li",
-        "Panayiota Poirazi",
-        "Julijana Gjorgjieva",
-        "Etienne Burdet",
-        "Patrick van der Smagt",
-        "Mohsen Kaboli"
-      ],
-      "summary": "Estimating physical properties is critical for safe and efficient autonomous robotic manipulation, particularly during contact-rich interactions. In such settings, vision and tactile sensing provide complementary information about object geometry, pose, inertia, stiffness, and contact dynamics, such as stick-slip behavior. However, these properties are only indirectly observable and cannot always be modeled precisely (e.g., deformation in non-rigid objects coupled with nonlinear contact friction), making the estimation problem inherently complex and requiring sustained exploitation of visuo-tactile sensory information during action. Existing visuo-tactile perception frameworks have primarily emphasized forceful sensor fusion or static cross-modal alignment, with limited consideration of how uncertainty and beliefs about object properties evolve over time. Inspired by human multi-sensory perception and active inference, we propose the Cross-Modal Latent Filter (CMLF) to learn a structured, causal latent state-space of physical object properties. CMLF supports bidirectional transfer of cross-modal priors between vision and touch and integrates sensory evidence through a Bayesian inference process that evolves over time. Real-world robotic experiments demonstrate that CMLF improves the efficiency and robustness of latent physical properties estimation under uncertainty compared to baseline approaches. Beyond performance gains, the model exhibits perceptual coupling phenomena analogous to those observed in humans, including susceptibility to cross-modal illusions and similar trajectories in learning cross-sensory associations. Together, these results constitutes a significant step toward generalizable, robust and physically consistent cross-modal integration for robotic multi-sensory perception.",
-      "published": "2026-04-02T14:41:33Z",
-      "updated": "2026-04-02T14:41:33Z",
-      "arxiv_id": "2604.02108v1",
-      "abs_url": "http://arxiv.org/abs/2604.02108v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02108v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "comment": "23 pages, 8 figures, 1 table. Submitted for review to journal",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "少样本/域适应",
-        "多模态融合"
-      ],
-      "topic": "少样本/域适应",
-      "score": 11,
-      "anchor_terms": [
-        "manipulation",
-        "real-world robot",
-        "robot",
-        "robotic",
-        "tactile"
-      ],
-      "matched_terms": [
-        "manipulation",
-        "real-world robot",
-        "robot",
-        "robotic",
-        "tactile"
-      ]
-    },
-    {
-      "title": "HyVGGT-VO: Tightly Coupled Hybrid Dense Visual Odometry with Feed-Forward Models",
-      "authors": [
-        "Junxiang Pan",
-        "Lipu Zhou",
-        "Baojie Chen"
-      ],
-      "summary": "Dense visual odometry (VO), which provides pose estimation and dense 3D reconstruction, serves as the cornerstone for applications ranging from robotics to augmented reality. Recently, feed-forward models have demonstrated remarkable capabilities in dense mapping. However, when these models are used in dense visual SLAM systems, their heavy computational burden restricts them to yielding sparse pose outputs at keyframes while still failing to achieve real-time pose estimation. In contrast, traditional sparse methods provide high computational efficiency and high-frequency pose outputs, but lack the capability for dense reconstruction. To address these limitations, we propose HyVGGT-VO, a novel framework that combines the computational efficiency of sparse VO with the dense reconstruction capabilities of feed-forward models. To the best of our knowledge, this is the first work to tightly couple a traditional VO framework with VGGT, a state-of-the-art feed-forward model. Specifically, we design an adaptive hybrid tracking frontend that dynamically switches between traditional optical flow and the VGGT tracking head to ensure robustness. Furthermore, we introduce a hierarchical optimization framework that jointly refines VO poses and the scale of VGGT predictions to ensure global scale consistency. Our approach achieves an approximately 5x processing speedup compared to existing VGGT-based methods, while reducing the average trajectory error by 85% on the indoor EuRoC dataset and 12% on the outdoor KITTI benchmark. Our code will be publicly available upon acceptance. Project page: https://geneta2580.github.io/HyVGGT-VO.io.",
-      "published": "2026-04-02T14:35:59Z",
-      "updated": "2026-04-02T14:35:59Z",
-      "arxiv_id": "2604.02107v1",
-      "abs_url": "http://arxiv.org/abs/2604.02107v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02107v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "数据集/评测"
-      ],
-      "topic": "数据集/评测",
-      "score": 7,
-      "anchor_terms": [
-        "robot",
-        "robotic",
-        "robotics"
-      ],
-      "matched_terms": [
-        "robot",
-        "robotic",
-        "robotics",
-        "slam"
-      ]
-    },
-    {
-      "title": "CompassAD: Intent-Driven 3D Affordance Grounding in Functionally Competing Objects",
-      "authors": [
-        "Jingliang Li",
-        "Jindou Jia",
-        "Tuo An",
-        "Chuhao Zhou",
-        "Xiangyu Chen",
-        "Shilin Shan",
-        "Boyu Ma",
-        "Bofan Lyu",
-        "Gen Li",
-        "Jianfei Yang"
-      ],
-      "summary": "When told to \"cut the apple,\" a robot must choose the knife over nearby scissors, despite both objects affording the same cutting function. In real-world scenes, multiple objects may share identical affordances, yet only one is appropriate under the given task context. We call such cases confusing pairs. However, existing 3D affordance methods largely sidestep this challenge by evaluating isolated single objects, often with explicit category names provided in the query. We formalize Multi-Object Affordance Grounding under Intent-Driven Instructions, a new 3D affordance setting that requires predicting a per-point affordance mask on the correct object within a cluttered multi-object point cloud, conditioned on implicit natural language intent. To study this problem, we construct CompassAD, the first benchmark centered on implicit intent in confusable multi-object scenes. It comprises 30 confusing object pairs spanning 16 affordance types, 6,422 scenes, and 88K+ query-answer pairs. Furthermore, we propose CompassNet, a framework that incorporates two dedicated modules tailored to this task. Instance-bounded Cross Injection (ICI) constrains language-geometry alignment within object boundaries to prevent cross-object semantic leakage. Bi-level Contrastive Refinement (BCR) enforces discrimination at both geometric-group and point levels, sharpening distinctions between target and confusable surfaces. Extensive experiments demonstrate state-of-the-art results on both seen and unseen queries, and deployment on a robotic manipulator confirms effective transfer to real-world grasping in confusing multi-object scenes.",
-      "published": "2026-04-02T13:57:01Z",
-      "updated": "2026-04-02T13:57:01Z",
-      "arxiv_id": "2604.02060v1",
-      "abs_url": "http://arxiv.org/abs/2604.02060v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02060v1",
-      "primary_category": "cs.CV",
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "comment": "Code available at: github.com/Lorenzo-0-0/CompassAD",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "LiDAR/点云",
-        "数据集/评测"
-      ],
-      "topic": "LiDAR/点云",
-      "score": 10,
-      "anchor_terms": [
-        "affordance",
-        "grasp",
-        "grasping",
-        "manipulator",
-        "robot",
-        "robotic"
-      ],
-      "matched_terms": [
-        "affordance",
-        "grasp",
-        "grasping",
-        "manipulator",
-        "robot",
-        "robotic"
-      ]
-    },
-    {
-      "title": "IndoorCrowd: A Multi-Scene Dataset for Human Detection, Segmentation, and Tracking with an Automated Annotation Pipeline",
-      "authors": [
-        "Sebastian-Ion Nae",
-        "Radu Moldoveanu",
-        "Alexandra Stefania Ghita",
-        "Adina Magda Florea"
-      ],
-      "summary": "Understanding human behaviour in crowded indoor environments is central to surveillance, smart buildings, and human-robot interaction, yet existing datasets rarely capture real-world indoor complexity at scale. We introduce IndoorCrowd, a multi-scene dataset for indoor human detection, instance segmentation, and multi-object tracking, collected across four campus locations (ACS-EC, ACS-EG, IE-Central, R-Central). It comprises $31$ videos ($9{,}913$ frames at $5$fps) with human-verified, per-instance segmentation masks. A $620$-frame control subset benchmarks three foundation-model auto-annotators: SAM3, GroundingSAM, and EfficientGroundingSAM, against human labels using Cohen's $κ$, AP, precision, recall, and mask IoU. A further $2{,}552$-frame subset supports multi-object tracking with continuous identity tracks in MOTChallenge format. We establish detection, segmentation, and tracking baselines using YOLOv8n, YOLOv26n, and RT-DETR-L paired with ByteTrack, BoT-SORT, and OC-SORT. Per-scene analysis reveals substantial difficulty variation driven by crowd density, scale, and occlusion: ACS-EC, with $79.3\\%$ dense frames and a mean instance scale of $60.8$px, is the most challenging scene. The project page is available at https://sheepseb.github.io/IndoorCrowd/.",
-      "published": "2026-04-02T13:38:31Z",
-      "updated": "2026-04-02T13:38:31Z",
-      "arxiv_id": "2604.02032v1",
-      "abs_url": "http://arxiv.org/abs/2604.02032v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02032v1",
-      "primary_category": "cs.CV",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ],
-      "comment": "Accepted at Conference on Computer Vision and Pattern Recognition Workshops 2026",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "目标检测",
-        "实例分割",
-        "数据集/评测"
-      ],
-      "topic": "目标检测",
-      "score": 3,
-      "anchor_terms": [
-        "robot"
-      ],
-      "matched_terms": [
-        "human-robot interaction",
-        "robot"
-      ]
-    },
-    {
-      "title": "Bridging Discrete Planning and Continuous Execution for Redundant Robot",
-      "authors": [
-        "Teng Yan",
-        "Yue Yu",
-        "Yihan Liu",
-        "Bingzhuo Zhong"
-      ],
-      "summary": "Voxel-grid reinforcement learning is widely adopted for path planning in redundant manipulators due to its simplicity and reproducibility. However, direct execution through point-wise numerical inverse kinematics on 7-DoF arms often yields step-size jitter, abrupt joint transitions, and instability near singular configurations. This work proposes a bridging framework between discrete planning and continuous execution without modifying the discrete planner itself. On the planning side, step-normalized 26-neighbor Cartesian actions and a geometric tie-breaking mechanism are introduced to suppress unnecessary turns and eliminate step-size oscillations. On the execution side, a task-priority damped least-squares (TP-DLS) inverse kinematics layer is implemented. This layer treats end-effector position as a primary task, while posture and joint centering are handled as subordinate tasks projected into the null space, combined with trust-region clipping and joint velocity constraints. On a 7-DoF manipulator in random sparse, medium, and dense environments, this bridge raises planning success in dense scenes from about 0.58 to 1.00, shortens representative path length from roughly 1.53 m to 1.10 m, and while keeping end-effector error below 1 mm, reduces peak joint accelerations by over an order of magnitude, substantially improving the continuous execution quality of voxel-based RL paths on redundant manipulators.",
-      "published": "2026-04-02T13:23:54Z",
-      "updated": "2026-04-29T12:39:10Z",
-      "arxiv_id": "2604.02021v2",
-      "abs_url": "http://arxiv.org/abs/2604.02021v2",
-      "pdf_url": "https://arxiv.org/pdf/2604.02021v2",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "8 pages, 3 figures. Submitted to IFAC World Congress 2026",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
         "视觉-语言模型",
-        "LiDAR/点云"
+        "高光谱/多光谱",
+        "数据集/评测"
       ],
-      "topic": "视觉-语言模型",
+      "topic": "基础模型",
       "score": 9,
       "anchor_terms": [
-        "manipulator",
-        "reinforcement learning",
-        "robot"
+        "earth observation",
+        "foundation model",
+        "satellite image",
+        "satellite imagery"
       ],
       "matched_terms": [
-        "end-effector",
-        "manipulator",
-        "path planning",
-        "reinforcement learning",
-        "robot"
-      ]
+        "earth observation",
+        "foundation model",
+        "prompt engineering",
+        "satellite",
+        "satellite image",
+        "satellite imagery",
+        "VLM"
+      ],
+      "title_zh": "通过掩模条件生成人工智能生成用于野火检测的卫星图像数据",
+      "summary_zh": "标记卫星图像的稀缺仍然是基于深度学习 (DL) 的野火监测系统的基本瓶颈。本文研究了基于扩散的地球观测 (EO) 基础模型 EarthSynth 是否可以在现有烧伤掩模的条件下合成逼真的野火后 Sentinel-2 RGB 图像，而无需针对特定任务进行再训练。使用源自 CalFireSeg-50 数据集（Martin 等人，2025）的烧伤掩模，我们设计和评估了六种系统变化的受控实验配置：（i）管道架构（仅掩模完整生成与火灾前上下文修复），（ii）提示工程策略（三个手工制作的提示和通过 Qwen2-VL 的 VLM 生成的提示），以及（iii）按区域进行颜色匹配后处理步骤。对 10 个分层测试样本的定量评估使用四个互补指标：加深 IoU、加深区域颜色距离 (ΔC_burn)、暗度对比度和光谱合理性。结果表明，基于修复的管道在所有指标上始终优于全图块生成，结构化修复提示实现了最佳空间对齐（烧伤 IoU = 0.456）和烧伤显着性（暗度对比度 = 20.44），而颜色匹配以降低烧伤显着性为代价产生最低的颜色距离（ΔC_burn = 63.22）。 VLM 辅助修复与手工制作的提示相比具有竞争力。这些发现为将生成数据增强纳入野火检测管道奠定了基础。代码和实验位于：https://www.kaggle.com/code/valeriamartinh/genai-all-runned"
     },
     {
-      "title": "ProCeedRL: Process Critic with Exploratory Demonstration Reinforcement Learning for LLM Agentic Reasoning",
+      "title": "Modular Energy Steering for Safe Text-to-Image Generation with Foundation Models",
       "authors": [
-        "Jingyue Gao",
-        "Yanjiang Guo",
-        "Xiaoshuai Chen",
-        "Jianyu Chen"
+        "Yaoteng Tan",
+        "Zikui Cai",
+        "M. Salman Asif"
       ],
-      "summary": "Reinforcement Learning (RL) significantly enhances the reasoning abilities of large language models (LLMs), yet applying it to multi-turn agentic tasks remains challenging due to the long-horizon nature of interactions and the stochasticity of environmental feedback. We identify a structural failure mode in agentic exploration: suboptimal actions elicit noisy observations into misleading contexts, which further weaken subsequent decision-making, making recovery increasingly difficult. This cumulative feedback loop of errors renders standard exploration strategies ineffective and susceptible to the model's reasoning and the environment's randomness. To mitigate this issue, we propose ProCeedRL: Process Critic with Explorative Demonstration RL, shifting exploration from passive selection to active intervention. ProCeedRL employs a process-level critic to monitor interactions in real time, incorporating reflection-based demonstrations to guide agents in stopping the accumulation of errors. We find that this approach significantly exceeds the model's saturated exploration performance, demonstrating substantial exploratory benefits. By learning from exploratory demonstrations and on-policy samples, ProCeedRL significantly improves exploration efficiency and achieves superior performance on complex deep search and embodied tasks.",
-      "published": "2026-04-02T13:10:06Z",
-      "updated": "2026-04-02T13:10:06Z",
-      "arxiv_id": "2604.02006v1",
-      "abs_url": "http://arxiv.org/abs/2604.02006v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02006v1",
-      "primary_category": "cs.AI",
-      "categories": [
-        "cs.AI"
-      ],
-      "comment": "",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "视觉-语言模型"
-      ],
-      "topic": "视觉-语言模型",
-      "score": 4,
-      "anchor_terms": [
-        "embodied",
-        "reinforcement learning"
-      ],
-      "matched_terms": [
-        "embodied",
-        "reinforcement learning"
-      ]
-    },
-    {
-      "title": "Integrated Identification of Collaborative Robots for Robot Assisted 3D Printing Processes",
-      "authors": [
-        "Alessandro Dimauro",
-        "Davide Tebaldi",
-        "Fabio Pini",
-        "Luigi Biagiotti",
-        "Francesco Leali"
-      ],
-      "summary": "In recent years, the integration of additive manufacturing (AM) and industrial robotics has opened new perspectives for the production of complex components, particularly in the automotive sector. Robot-assisted additive manufacturing processes overcome the dimensional and kinematic limitations of traditional Cartesian systems, enabling non-planar deposition and greater geometric flexibility. However, the increasing dynamic complexity of robotic manipulators introduces challenges related to precision, control, and error prediction. This work proposes a model-based approach equipped with an integrated identification procedure of the system's parameters, including the robot, the actuators and the controllers. We show that the integrated modeling procedure allows to obtain a reliable dynamic model even in the presence of sensory and programming limitations typical of collaborative robots. The manipulator's dynamic model is identified through an integrated five step methodology: starting with geometric and inertial analysis, followed by friction and controller parameters identification, all the way to the remaining parameters identification. The proposed procedure intrinsically ensures the physical consistency of the identified parameters. The identification approach is validated on a real world case study involving a 6-Degrees-Of-Freedom (DoFs) collaborative robot used in a thermoplastic extrusion process. The very good matching between the experimental results given by actual robot and those given by the identified model shows the potential enhancement of precision, control, and error prediction in Robot Assisted 3D Printing Processes.",
-      "published": "2026-04-02T12:54:43Z",
-      "updated": "2026-04-02T12:54:43Z",
-      "arxiv_id": "2604.01991v1",
-      "abs_url": "http://arxiv.org/abs/2604.01991v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01991v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO",
-        "eess.SY"
-      ],
-      "comment": "",
-      "code_url": "",
-      "has_code": false,
-      "labels": [],
-      "topic": "其他",
-      "score": 8,
-      "anchor_terms": [
-        "manipulator",
-        "robot",
-        "robotic",
-        "robotics"
-      ],
-      "matched_terms": [
-        "manipulator",
-        "robot",
-        "robotic",
-        "robotics"
-      ]
-    },
-    {
-      "title": "Receding-Horizon Nonlinear Optimal Control With Safety Constraints Using Constrained Approximate Dynamic Programming",
-      "authors": [
-        "Ricardo Gutierrez",
-        "Jesse B. Hoagg"
-      ],
-      "summary": "We present a receding-horizon optimal control for nonlinear continuous-time systems subject to state constraints. The cost is a quadratic finite-horizon integral. The key enabling technique is a new constrained approximate dynamic programming (C-ADP) approach for finite-horizon nonlinear optimal control with constraints that are affine in the control. The C-ADP approach is intuitive because it uses a quadratic approximation of the cost-to-go function at each backward step. This method yields a sequence of analytic closed-form optimal control functions, which have identical structure and where parameters are obtained from 2 Riccati-like difference equations. This C-ADP method is well suited for real-time implementation. Thus, we use the C-ADP approach in combination with control barrier functions to obtain a continuous-time receding-horizon optimal control that is farsighted in the sense that it optimizes the integral cost subject to state constraints along the entire prediction horizon. Lastly, receding-horizon C-ADP control is demonstrated in simulation of a nonholonomic ground robot subject to velocity and no-collision constraints. We compare performance with 3 other approaches.",
-      "published": "2026-04-02T12:20:13Z",
-      "updated": "2026-04-02T12:20:13Z",
-      "arxiv_id": "2604.01956v1",
-      "abs_url": "http://arxiv.org/abs/2604.01956v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01956v1",
-      "primary_category": "eess.SY",
-      "categories": [
-        "eess.SY"
-      ],
-      "comment": "8 pages, 2 figures, conference paper",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "数据集/评测"
-      ],
-      "topic": "数据集/评测",
-      "score": 2,
-      "anchor_terms": [
-        "robot"
-      ],
-      "matched_terms": [
-        "robot"
-      ]
-    },
-    {
-      "title": "The Rank and Gradient Lost in Non-stationarity: Sample Weight Decay for Mitigating Plasticity Loss in Reinforcement Learning",
-      "authors": [
-        "Zihao Wu",
-        "Hongyao Tang",
-        "Yi Ma",
-        "Jiashun Liu",
-        "Yan Zheng",
-        "Jianye Hao"
-      ],
-      "summary": "Deep reinforcement learning (RL) suffers from plasticity loss severely due to the nature of non-stationarity, which impairs the ability to adapt to new data and learn continually. Unfortunately, our understanding of how plasticity loss arises, dissipates, and can be dissolved remains limited to empirical findings, leaving the theoretical end underexplored.To address this gap, we study the plasticity loss problem from the theoretical perspective of network optimization. By formally characterizing the two culprit factors in online RL process: the non-stationarity of data distributions and the non-stationarity of targets induced by bootstrapping, our theory attributes the loss of plasticity to two mechanisms: the rank collapse of the Neural Tangent Kernel (NTK) Gram matrix and the $Θ(\\frac{1}{k})$ decay of gradient magnitude. The first mechanism echoes prior empirical findings from the theoretical perspective and sheds light on the effects of existing methods, e.g., network reset, neuron recycle, and noise injection. Against this backdrop, we focus primarily on the second mechanism and aim to alleviate plasticity loss by addressing the gradient attenuation issue, which is orthogonal to existing methods. We propose Sample Weight Decay -- a lightweight method to restore gradient magnitude, as a general remedy to plasticity loss for deep RL methods based on experience replay. In experiments, we evaluate the efficacy of \\methodName upon TD3, \\myadded{Double DQN} and SAC with SimBa architecture in MuJoCo, \\myadded{ALE} and DeepMind Control Suite tasks. The results demonstrate that \\methodName effectively alleviates plasticity loss and consistently improves learning performance across various configurations of deep RL algorithms, UTD, network architectures, and environments, achieving SOTA performance on challenging DMC Humanoid tasks.",
-      "published": "2026-04-02T11:29:46Z",
-      "updated": "2026-04-02T11:29:46Z",
-      "arxiv_id": "2604.01913v1",
-      "abs_url": "http://arxiv.org/abs/2604.01913v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01913v1",
-      "primary_category": "cs.LG",
-      "categories": [
-        "cs.LG"
-      ],
-      "comment": "ICLR",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "数据集/评测"
-      ],
-      "topic": "数据集/评测",
-      "score": 4,
-      "anchor_terms": [
-        "humanoid"
-      ],
-      "matched_terms": [
-        "humanoid",
-        "mujoco",
-        "reinforcement learning"
-      ]
-    },
-    {
-      "title": "Lifting Unlabeled Internet-level Data for 3D Scene Understanding",
-      "authors": [
-        "Yixin Chen",
-        "Yaowei Zhang",
-        "Huangyue Yu",
-        "Junchao He",
-        "Yan Wang",
-        "Jiangyong Huang",
-        "Hongyu Shen",
-        "Junfeng Ni",
-        "Shaofei Wang",
-        "Baoxiong Jia",
-        "Song-Chun Zhu",
-        "Siyuan Huang"
-      ],
-      "summary": "Annotated 3D scene data is scarce and expensive to acquire, while abundant unlabeled videos are readily available on the internet. In this paper, we demonstrate that carefully designed data engines can leverage web-curated, unlabeled videos to automatically generate training data, to facilitate end-to-end models in 3D scene understanding alongside human-annotated datasets. We identify and analyze bottlenecks in automated data generation, revealing critical factors that determine the efficiency and effectiveness of learning from unlabeled data. To validate our approach across different perception granularities, we evaluate on three tasks spanning low-level perception, i.e., 3D object detection and instance segmentation, to high-evel reasoning, i.e., 3D spatial Visual Question Answering (VQA) and Vision-Lanugage Navigation (VLN). Models trained on our generated data demonstrate strong zero-shot performance and show further improvement after finetuning. This demonstrates the viability of leveraging readily available web data as a path toward more capable scene understanding systems.",
-      "published": "2026-04-02T11:26:44Z",
-      "updated": "2026-04-24T08:02:33Z",
-      "arxiv_id": "2604.01907v2",
-      "abs_url": "http://arxiv.org/abs/2604.01907v2",
-      "pdf_url": "https://arxiv.org/pdf/2604.01907v2",
+      "summary": "Controlling the behavior of text-to-image generative models is critical for safe and practical deployment. Existing safety approaches typically rely on model fine-tuning or curated datasets, which can degrade generation quality or limit scalability. We propose an inference-time steering framework that leverages gradient feedback from frozen pretrained foundation models to guide the generation process without modifying the underlying generator. Our key observation is that vision-language foundation models encode rich semantic representations that can be repurposed as off-the-shelf supervisory signals during generation. By injecting such feedback through clean latent estimates at each sampling step, our method formulates safety steering as an energy-based sampling problem. This design enables modular, training-free safety control that is compatible with both diffusion and flow-matching models and can generalize across diverse visual concepts. Experiments demonstrate state-of-the-art robustness against NSFW red-teaming benchmarks and effective multi-target steering, while preserving high generation quality on benign non-targeted prompts. Our framework provides a principled approach for utilizing foundation models as semantic energy estimators, enabling reliable and scalable safety control for text-to-image generation.",
+      "published": "2026-04-02T16:59:28Z",
+      "updated": "2026-04-02T16:59:28Z",
+      "arxiv_id": "2604.02265v1",
+      "abs_url": "http://arxiv.org/abs/2604.02265v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.02265v1",
       "primary_category": "cs.CV",
       "categories": [
-        "cs.CV",
-        "cs.AI"
+        "cs.CV"
       ],
-      "comment": "CVPR 2026. Project page: https://sv-pp.github.io/",
+      "comment": "",
       "code_url": "",
       "has_code": false,
       "labels": [
-        "目标检测",
-        "实例分割",
+        "图像生成与重建",
+        "基础模型",
         "视觉-语言模型",
-        "少样本/域适应",
         "数据集/评测"
       ],
-      "topic": "目标检测",
-      "score": 2,
+      "topic": "图像生成与重建",
+      "score": 7,
       "anchor_terms": [
-        "navigation"
+        "image generation"
       ],
       "matched_terms": [
-        "navigation",
-        "vln"
-      ]
+        "fine-tuning",
+        "foundation model",
+        "image generation",
+        "robust"
+      ],
+      "title_zh": "使用基础模型安全生成文本到图像的模块化能量控制",
+      "summary_zh": "控制文本到图像生成模型的行为对于安全和实际部署至关重要。现有的安全方法通常依赖于模型微调或精选数据集，这可能会降低发电质量或限制可扩展性。我们提出了一种推理时间引导框架，该框架利用来自冻结的预训练基础模型的梯度反馈来指导生成过程，而无需修改底层生成器。我们的主要观察结果是，视觉语言基础模型编码了丰富的语义表示，可以在生成过程中将其重新用作现成的监督信号。通过在每个采​​样步骤中通过干净的潜在估计注入此类反馈，我们的方法将安全转向制定为基于能量的采样问题。这种设计实现了模块化、免培训的安全控制，与扩散和流量匹配模型兼容，并且可以推广到不同的视觉概念。实验证明了针对 NSFW 红队基准的最先进的鲁棒性和有效的多目标引导，同时在良性非目标提示下保持高生成质量。我们的框架提供了一种利用基础模型作为语义能量估计器的原则方法，从而为文本到图像的生成实现可靠且可扩展的安全控制。"
     },
     {
-      "title": "A3R: Agentic Affordance Reasoning via Cross-Dimensional Evidence in 3D Gaussian Scenes",
+      "title": "CoRegOVCD: Consistency-Regularized Open-Vocabulary Change Detection",
       "authors": [
-        "Di Li",
+        "Weidong Tang",
+        "Hanbin Sun",
+        "Zihan Li",
+        "Yikai Wang",
+        "Feifan Zhang"
+      ],
+      "summary": "Remote sensing change detection (CD) aims to identify where land-cover semantics change across time, but most existing methods still assume a fixed label space and therefore cannot answer arbitrary user-defined queries. Open-vocabulary change detection (OVCD) instead asks for the change mask of a queried concept. In the fully training-free setting, however, dense concept responses are difficult to compare directly across dates: appearance variation, weak cross-concept competition, and the spatial continuity of many land-cover categories often produce noisy, fragmented, and semantically unreliable change evidence. We propose Consistency-Regularized Open-Vocabulary Change Detection (CoRegOVCD), a training-free dense inference framework that reformulates concept-specific change as calibrated posterior discrepancy. Competitive Posterior Calibration (CPC) and the Semantic Posterior Delta (SPD) convert raw concept responses into competition-aware queried-concept posteriors and quantify their cross-temporal discrepancy, making semantic change evidence more comparable without explicit instance matching. Geometry-Token Consistency Gate (GeoGate) and Regional Consensus Discrepancy (RCD) further suppress unsupported responses and improve spatial coherence through geometry-aware structural verification and regional consensus. Across four benchmarks spanning building-oriented and multi-class settings, CoRegOVCD consistently improves over the strongest previous training-free baseline by 2.24 to 4.98 F1$_C$ points and reaches a six-class average of 47.50% F1$_C$ on SECOND.",
+      "published": "2026-04-02T15:28:29Z",
+      "updated": "2026-04-02T15:28:29Z",
+      "arxiv_id": "2604.02160v1",
+      "abs_url": "http://arxiv.org/abs/2604.02160v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.02160v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "变化检测",
+        "视觉-语言模型",
+        "数据集/评测"
+      ],
+      "topic": "变化检测",
+      "score": 13,
+      "anchor_terms": [
+        "change detection",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "change detection",
+        "change detection remote sensing",
+        "open-vocabulary",
+        "remote sensing",
+        "remote sensing change detection"
+      ],
+      "title_zh": "CoRegOVCD：一致性正则化开放词汇变化检测",
+      "summary_zh": "遥感变化检测（CD）旨在识别土地覆盖语义随时间变化的位置，但大多数现有方法仍然假设固定的标签空间，因此无法回答任意用户定义的查询。相反，开放词汇变化检测 (OVCD) 要求查询概念的变化掩码。然而，在完全无训练的环境中，密集的概念响应很难直接跨日期进行比较：外观变化、弱的跨概念竞争以及许多土地覆盖类别的空间连续性往往会产生嘈杂、支离破碎且语义上不可靠的变化证据。我们提出了一致性正则化开放词汇变化检测（CoRegOVCD），这是一种免训练的密集推理框架，它将特定于概念的变化重新表述为校准后验差异。竞争性后验校准 (CPC) 和语义后验增量 (SPD) 将原始概念响应转换为竞争感知的查询概念后验，并量化其跨时间差异，使语义变化证据在没有显式实例匹配的情况下更具可比性。几何令牌一致性门（GeoGate）和区域共识差异（RCD）通过几何感知结构验证和区域共识进一步抑制不受支持的响应并提高空间一致性。在涵盖面向建筑和多类别设置的四个基准中，CoRegOVCD 始终比之前最强的无训练基线提高 2.24 至 4.98 F1$_C$ 点，并在第二次达到 47.50% F1$_C$ 的六类平均值。"
+    },
+    {
+      "title": "Country-wide, high-resolution monitoring of forest browning with Sentinel-2",
+      "authors": [
+        "Samantha Biegel",
+        "David Brüggemann",
+        "Francesco Grossi",
+        "Michele Volpi",
+        "Konrad Schindler",
+        "Benjamin D. Stocker"
+      ],
+      "summary": "Natural and anthropogenic disturbances are impacting the health of forests worldwide. Monitoring forest disturbances at scale is important to inform conservation efforts. Here, we present a scalable approach for country-wide mapping of forest greenness anomalies at the 10 m resolution of Sentinel-2. Using relevant ecological and topographical context and an established representation of the vegetation cycle, we learn a predictive quantile model of the normalised difference vegetation index (NDVI) derived from Sentinel-2 data. The resulting expected seasonal cycles are used to detect NDVI anomalies across Switzerland between April 2017 and August 2025. Goodness-of-fit evaluations show that the conditional model explains 65% of the observed variations in the median seasonal cycle. The model consistently benefits from the local context information, particularly during the green-up period. The approach produces coherent spatial anomaly patterns and enables country-wide quantification of forest browning. Case studies with independent reference data from known events illustrate that the model reliably detects different types of disturbances.",
+      "published": "2026-04-02T14:05:22Z",
+      "updated": "2026-04-02T14:05:22Z",
+      "arxiv_id": "2604.02074v1",
+      "abs_url": "http://arxiv.org/abs/2604.02074v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.02074v1",
+      "primary_category": "stat.AP",
+      "categories": [
+        "stat.AP",
+        "cs.CV"
+      ],
+      "comment": "9 pages, 7 figures, to be published in the ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences (ISPRS Congress)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "数据集/评测"
+      ],
+      "topic": "数据集/评测",
+      "score": 4,
+      "anchor_terms": [
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "photogrammetry",
+        "remote sensing"
+      ],
+      "title_zh": "使用 Sentinel-2 对全国范围内的森林褐变进行高分辨率监测",
+      "summary_zh": "自然和人为干扰正在影响全世界森林的健康。大规模监测森林干扰对于为保护工作提供信息非常重要。在这里，我们提出了一种可扩展的方法，用于在 Sentinel-2 的 10 m 分辨率下绘制全国范围的森林绿度异常图。利用相关的生态和地形背景以及植被周期的既定表示，我们学习了从 Sentinel-2 数据导出的归一化植被指数 (NDVI) 的预测分位数模型。由此产生的预期季节周期用于检测 2017 年 4 月至 2025 年 8 月期间瑞士各地的 NDVI 异常情况。拟合优度评估显示，条件模型解释了观察到的中位季节周期变化的 65%。该模型始终受益于本地上下文信息，特别是在绿化期间。该方法产生连贯的空间异常模式，并能够对全国范围内的森林褐变进行量化。使用已知事件的独立参考数据进行的案例研究表明，该模型能够可靠地检测不同类型的干扰。"
+    },
+    {
+      "title": "Are VLMs Lost Between Sky and Space? LinkS$^2$Bench for UAV-Satellite Dynamic Cross-View Spatial Intelligence",
+      "authors": [
+        "Dian Liu",
         "Jie Feng",
-        "Guanbin Li",
-        "Ronghua Shang",
+        "Di Li",
         "Yuhui Zheng",
+        "Guanbin Li",
         "Weisheng Dong",
         "Guangming Shi"
       ],
-      "summary": "Affordance reasoning in 3D Gaussian scenes aims to identify the region that supports the action specified by a given text instruction in complex environments. Existing methods typically cast this problem as one-shot prediction from static scene observations, assuming sufficient evidence is already available for reasoning. However, in complex 3D scenes, many failure cases arise not from weak prediction capacity, but from incomplete task-relevant evidence under fixed observations. To address this limitation, we reformulate fine-grained affordance reasoning as a sequential evidence acquisition process, where ambiguity is progressively reduced through complementary 3D geometric and 2D semantic evidence. Building on this formulation, we propose A3R, an agentic affordance reasoning framework that enables an MLLM-based policy to iteratively select evidence acquisition actions and update the affordance belief through cross-dimensional evidence acquisition. To optimize such sequential decision making, we further introduce a GRPO-based policy learning strategy that improves evidence acquisition efficiency and reasoning accuracy. Extensive experiments on scene-level benchmarks show that A3R consistently surpasses static one-shot baselines, demonstrating the advantage of agentic cross-dimensional evidence acquisition for fine-grained affordance reasoning in complex 3D Gaussian scenes.",
-      "published": "2026-04-02T10:40:51Z",
-      "updated": "2026-04-02T10:40:51Z",
-      "arxiv_id": "2604.01882v1",
-      "abs_url": "http://arxiv.org/abs/2604.01882v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01882v1",
+      "summary": "Synergistic spatial intelligence between UAVs and satellites is indispensable for emergency response and security operations, as it uniquely integrates macro-scale global coverage with dynamic, real-time local perception. However, the capacity of Vision-Language Models (VLMs) to master this complex interplay remains largely unexplored. This gap persists primarily because existing benchmarks are confined to isolated Unmanned Aerial Vehicle (UAV) videos or static satellite imagery, failing to evaluate the dynamic local-to-global spatial mapping essential for comprehensive cross-view reasoning. To bridge this gap, we introduce LinkS$^2$Bench, the first comprehensive benchmark designed to evaluate VLMs' wide-area, dynamic cross-view spatial intelligence. LinkS$^2$Bench links 1,022 minutes of dynamic UAV footage with high-resolution satellite imagery covering over 200 km$^2$. Through an LMM-assisted pipeline and rigorous human annotation, we constructed 17.9k high-quality question-answer pairs comprising 12 fine-grained tasks across four dimensions: perception, localization, relation, and reasoning. Evaluations of 18 representative VLMs reveal a substantial gap compared to human baselines, identifying accurate cross-view dynamic alignment as the critical bottleneck. To alleviate this, we design a Cross-View Alignment Adapter, demonstrating that explicit alignment significantly improves model performance. Furthermore, fine-tuning experiments underscore the potential of LinkS$^2$Bench in advancing VLM adaptation for complex spatial reasoning.",
+      "published": "2026-04-02T13:22:57Z",
+      "updated": "2026-04-02T13:22:57Z",
+      "arxiv_id": "2604.02020v1",
+      "abs_url": "http://arxiv.org/abs/2604.02020v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.02020v1",
       "primary_category": "cs.CV",
       "categories": [
         "cs.CV"
@@ -1059,17 +336,201 @@
       "has_code": false,
       "labels": [
         "视觉-语言模型",
+        "无人机/UAV",
         "数据集/评测"
       ],
       "topic": "视觉-语言模型",
-      "score": 3,
+      "score": 12,
       "anchor_terms": [
-        "affordance"
+        "satellite image",
+        "satellite imagery",
+        "UAV"
       ],
       "matched_terms": [
-        "affordance",
-        "policy learning"
-      ]
+        "aerial",
+        "fine-tuning",
+        "satellite",
+        "satellite image",
+        "satellite imagery",
+        "UAV",
+        "unmanned aerial vehicle",
+        "VLM"
+      ],
+      "title_zh": "VLM 在天空和太空之间迷失了吗？ LinkS$^2$无人机卫星动态交叉视角空间智能基准",
+      "summary_zh": "无人机和卫星之间的协同空间智能对于应急响应和安全行动是不可或缺的，因为它独特地将宏观全球覆盖与动态、实时本地感知相结合。然而，视觉语言模型（VLM）掌握这种复杂相互作用的能力在很大程度上仍有待探索。这种差距之所以持续存在，主要是因为现有基准仅限于孤立的无人机 (UAV) 视频或静态卫星图像，未能评估对于全面交叉视图推理至关重要的动态局部到全局空间映射。为了弥补这一差距，我们引入了 LinkS$^2$Bench，这是第一个旨在评估 VLM 的广域、动态跨视图空间智能的综合基准测试。 LinkS$^2$Bench 将 1,022 分钟的动态无人机镜头与覆盖 200 多公里的高分辨率卫星图像连接起来$^2$。通过 LMM 辅助的流程和严格的人工注释，我们构建了 17.9k 个高质量问答对，其中包括跨越四个维度的 12 个细粒度任务：感知、定位、关系和推理。对 18 个代表性 VLM 的评估揭示了与人类基线相比的巨大差距，将准确的跨视图动态对齐确定为关键瓶颈。为了缓解这个问题，我们设计了一个跨视图对齐适配器，证明显式对齐可以显着提高模型性能。此外，微调实验强调了 LinkS$^2$Bench 在推进 VLM 适应复杂空间推理方面的潜力。"
+    },
+    {
+      "title": "Decouple and Rectify: Semantics-Preserving Structural Enhancement for Open-Vocabulary Remote Sensing Segmentation",
+      "authors": [
+        "Jie Feng",
+        "Fengze Li",
+        "Junpeng Zhang",
+        "Siyu Chen",
+        "Yuping Liang",
+        "Junying Chen",
+        "Ronghua Shang"
+      ],
+      "summary": "Open-vocabulary semantic segmentation in the remote sensing (RS) field requires both language-aligned recognition and fine-grained spatial delineation. Although CLIP offers robust semantic generalization, its global-aligned visual representations inherently struggle to capture structural details. Recent methods attempt to compensate for this by introducing RS-pretrained DINO features. However, these methods treat CLIP representations as a monolithic semantic space and cannot localize where structural enhancement is required, failing to effectively delineate boundaries while risking the disruption of CLIP's semantic integrity. To address this limitation, we propose DR-Seg, a novel decouple-and-rectify framework in this paper. Our method is motivated by the key observation that CLIP feature channels exhibit distinct functional heterogeneity rather than forming a uniform semantic space. Building on this insight, DR-Seg decouples CLIP features into semantics-dominated and structure-dominated subspaces, enabling targeted structural enhancement by DINO without distorting language-aligned semantics. Subsequently, a prior-driven graph rectification module injects high-fidelity structural priors under DINO guidance to form a refined branch, while an uncertainty-guided adaptive fusion module dynamically integrates this refined branch with the original CLIP branch for final prediction. Comprehensive experiments across eight benchmarks demonstrate that DR-Seg establishes a new state-of-the-art.",
+      "published": "2026-04-02T13:15:05Z",
+      "updated": "2026-04-02T13:15:05Z",
+      "arxiv_id": "2604.02010v1",
+      "abs_url": "http://arxiv.org/abs/2604.02010v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.02010v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "语义分割",
+        "视觉-语言模型",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 9,
+      "anchor_terms": [
+        "CLIP",
+        "remote sensing",
+        "semantic segmentation"
+      ],
+      "matched_terms": [
+        "CLIP",
+        "open-vocabulary",
+        "remote sensing",
+        "robust",
+        "semantic segmentation"
+      ],
+      "title_zh": "解耦和纠正：开放词汇遥感分割的语义保留结构增强",
+      "summary_zh": "遥感（RS）领域的开放词汇语义分割需要语言对齐的识别和细粒度的空间描绘。尽管 CLIP 提供了强大的语义概括，但其全局对齐的视觉表示本质上难以捕获结构细节。最近的方法试图通过引入 RS 预训练的 DINO 特征来弥补这一点。然而，这些方法将 CLIP 表示视为整体语义空间，无法定位需要结构增强的位置，无法有效地描绘边界，同时存在破坏 CLIP 语义完整性的风险。为了解决这个限制，我们在本文中提出了 DR-Seg，一种新颖的解耦和纠正框架。我们的方法的动机是观察到 CLIP 特征通道表现出明显的功能异质性，而不是形成统一的语义空间。基于这一见解，DR-Seg 将 CLIP 特征解耦为语义主导和结构主导的子空间，从而使 DINO 能够有针对性的结构增强，而不会扭曲语言对齐的语义。随后，先验驱动的图校正模块在 DINO 指导下注入高保真结构先验以形成细化分支，而不确定性引导的自适应融合模块动态地将这个细化分支与原始 CLIP 分支集成以进行最终预测。八个基准的综合实验表明 DR-Seg 建立了新的最先进技术。"
+    },
+    {
+      "title": "Test-Time Adaptation for Height Completion via Self-Supervised ViT Features and Monocular Foundation Models",
+      "authors": [
+        "Osher Rafaeli",
+        "Tal Svoray",
+        "Ariel Nahlieli"
+      ],
+      "summary": "Accurate digital surface models (DSMs) are essential for many geospatial applications, including urban monitoring, environmental analyses, infrastructure management, and change detection. However, large-scale DSMs frequently contain incomplete or outdated regions due to acquisition limitations, reconstruction artifacts, or changes in the built environment. Traditional height completion approaches primarily rely on spatial interpolation or which assume spatial continuity and therefore fail when objects are missing. Recent learning-based approaches improve reconstruction quality but typically require supervised training on sensor-specific datasets, limiting their generalization across domains and sensing conditions. We propose Prior2DSM, a training-free framework for metric DSM completion that operates entirely at test time by leveraging foundation models. Unlike previous height completion approaches that require task-specific training, the proposed method combines self-supervised Vision Transformer (ViT) features from DINOv3 with monocular depth foundation models to propagate metric information from incomplete height priors through semantic feature-space correspondence. Test-time adaptation (TTA) is performed using parameter-efficient low-rank adaptation (LoRA) together with a lightweight multilayer perceptron (MLP), which predicts spatially varying scale and shift parameters to convert relative depth estimates into metric heights. Experiments demonstrate consistent improvements over interpolation based methods, prior-based rescaling height approaches, and state-of-the-art monocular depth estimation models. Prior2DSM reduces reconstruction error while preserving structural fidelity, achieving up to a 46% reduction in RMSE compared to linear fitting of MDE, and further enables DSM updating and coupled RGB-DSM generation.",
+      "published": "2026-04-02T13:13:17Z",
+      "updated": "2026-04-02T13:13:17Z",
+      "arxiv_id": "2604.02009v1",
+      "abs_url": "http://arxiv.org/abs/2604.02009v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.02009v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "变化检测",
+        "基础模型",
+        "少样本/域适应",
+        "数据集/评测"
+      ],
+      "topic": "变化检测",
+      "score": 10,
+      "anchor_terms": [
+        "change detection",
+        "foundation model",
+        "geospatial",
+        "vision transformer"
+      ],
+      "matched_terms": [
+        "change detection",
+        "foundation model",
+        "geospatial",
+        "transformer",
+        "vision transformer",
+        "ViT"
+      ],
+      "title_zh": "通过自监督 ViT 特征和单目基础模型实现高度完成的测试时间适应",
+      "summary_zh": "准确的数字表面模型 (DSM) 对于许多地理空间应用至关重要，包括城市监测、环境分析、基础设施管理和变化检测。然而，由于采集限制、重建工件或建筑环境的变化，大规模 DSM 经常包含不完整或过时的区域。传统的高度补全方法主要依赖于空间插值或假设空间连续性，因此当对象丢失时会失败。最近基于学习的方法提高了重建质量，但通常需要对特定传感器数据集进行监督训练，限制了它们跨领域和传感条件的泛化。我们提出了 Prior2DSM，这是一种无需训练的度量 DSM 完成框架，它完全在测试时利用基础模型运行。与之前需要特定任务训练的高度完成方法不同，所提出的方法将 DINOv3 的自监督视觉变换器 (ViT) 特征与单目深度基础模型相结合，通过语义特征空间对应从不完整的高度先验传播度量信息。测试时自适应 (TTA) 是使用参数高效的低秩自适应 (LoRA) 和轻量级多层感知器 (MLP) 来执行的，MLP 可预测空间变化的尺度和位移参数，以将相对深度估计转换为公制高度。实验证明了相对于基于插值的方法、基于先验的缩放高度方法和最先进的单目深度估计模型的一致改进。 Prior2DSM 减少了重建误差，同时保留了结构保真度，与 MDE 的线性拟合相比，RMSE 降低了 46%，并进一步实现了 DSM 更新和耦合 RGB-DSM 生成。"
+    },
+    {
+      "title": "Light-ResKAN: A Parameter-Sharing Lightweight KAN with Gram Polynomials for Efficient SAR Image Recognition",
+      "authors": [
+        "Pan Yi",
+        "Weijie Li",
+        "Xiaodong Chen",
+        "Jiehua Zhang",
+        "Li Liu",
+        "Yongxiang Liu"
+      ],
+      "summary": "Synthetic Aperture Radar (SAR) image recognition is vital for disaster monitoring, military reconnaissance, and ocean observation. However, large SAR image sizes hinder deep learning deployment on resource-constrained edge devices, and existing lightweight models struggle to balance high-precision feature extraction with low computational requirements. The emerging Kolmogorov-Arnold Network (KAN) enhances fitting by replacing fixed activations with learnable ones, reducing parameters and computation. Inspired by KAN, we propose Light-ResKAN to achieve a better balance between precision and efficiency. First, Light-ResKAN modifies ResNet by replacing convolutions with KAN convolutions, enabling adaptive feature extraction for SAR images. Second, we use Gram Polynomials as activations, which are well-suited for SAR data to capture complex non-linear relationships. Third, we employ a parameter-sharing strategy: each kernel shares parameters per channel, preserving unique features while reducing parameters and FLOPs. Our model achieves 99.09%, 93.01%, and 97.26% accuracy on MSTAR, FUSAR-Ship, and SAR-ACD datasets, respectively. Experiments on MSTAR resized to $1024 \\times 1024$ show that compared to VGG16, our model reduces FLOPs by $82.90 \\times$ and parameters by $163.78 \\times$. This work establishes an efficient solution for edge SAR image recognition.",
+      "published": "2026-04-02T11:17:20Z",
+      "updated": "2026-04-03T02:43:31Z",
+      "arxiv_id": "2604.01903v2",
+      "abs_url": "http://arxiv.org/abs/2604.01903v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.01903v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "16 pages, 8 figures, accepted by JSTARS",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "SAR遥感",
+        "数据集/评测"
+      ],
+      "topic": "SAR遥感",
+      "score": 4,
+      "anchor_terms": [
+        "SAR",
+        "SAR image",
+        "synthetic aperture radar"
+      ],
+      "matched_terms": [
+        "SAR",
+        "SAR image",
+        "synthetic aperture radar"
+      ],
+      "title_zh": "Light-ResKAN：一种采用格拉姆多项式的参数共享轻量级 KAN，用于高效 SAR 图像识别",
+      "summary_zh": "合成孔径雷达（SAR）图像识别对于灾害监测、军事侦察和海洋观测至关重要。然而，较大的 SAR 图像尺寸阻碍了深度学习在资源受限的边缘设备上的部署，并且现有的轻量级模型难以平衡高精度特征提取与低计算要求。新兴的柯尔莫哥洛夫-阿诺德网络 (KAN) 通过用可学习的激活替换固定激活、减少参数和计算来增强拟合。受 KAN 的启发，我们提出 Light-ResKAN 以实现精度和效率之间更好的平衡。首先，Light-ResKAN 通过用 KAN 卷积替换卷积来修改 ResNet，从而实现 SAR 图像的自适应特征提取。其次，我们使用革兰氏多项式作为激活，它非常适合 SAR 数据来捕获复杂的非线性关系。第三，我们采用参数共享策略：每个内核共享每个通道的参数，保留独特的功能，同时减少参数和失败次数。我们的模型在 MSTAR、FUSAR-Ship 和 SAR-ACD 数据集上的准确率分别为 99.09%、93.01% 和 97.26%。 MSTAR 大小调整为 $1024 \\times$ 的实验表明，与 VGG16 相比，我们的模型将 FLOP 减少了 $82.90 \\times$，参数减少了 $163.78 \\times$。这项工作为边缘 SAR 图像识别建立了一种有效的解决方案。"
+    },
+    {
+      "title": "ProVG: Progressive Visual Grounding via Language Decoupling for Remote Sensing Imagery",
+      "authors": [
+        "Ke Li",
+        "Ting Wang",
+        "Di Wang",
+        "Yongshan Zhu",
+        "Yiming Zhang",
+        "Tao Lei",
+        "Quan Wang"
+      ],
+      "summary": "Remote sensing visual grounding (RSVG) aims to localize objects in remote sensing imagery according to natural language expressions. Previous methods typically rely on sentence-level vision-language alignment, which struggles to exploit fine-grained linguistic cues, such as \\textit{spatial relations} and \\textit{object attributes}, that are crucial for distinguishing objects with similar characteristics. Importantly, these cues play distinct roles across different grounding stages and should be leveraged accordingly to provide more explicit guidance. In this work, we propose \\textbf{ProVG}, a novel RSVG framework that improves localization accuracy by decoupling language expressions into global context, spatial relations, and object attributes. To integrate these linguistic cues, ProVG employs a simple yet effective progressive cross-modal modulator, which dynamically modulates visual attention through a \\textit{survey-locate-verify} scheme, enabling coarse-to-fine vision-language alignment. In addition, ProVG incorporates a cross-scale fusion module to mitigate the large-scale variations in remote sensing imagery, along with a language-guided calibration decoder to refine cross-modal alignment during prediction. A unified multi-task head further enables ProVG to support both referring expression comprehension and segmentation tasks. Extensive experiments on two benchmarks, \\textit{i.e.}, RRSIS-D and RISBench, demonstrate that ProVG consistently outperforms existing methods, achieving new state-of-the-art performance.",
+      "published": "2026-04-02T10:59:19Z",
+      "updated": "2026-04-02T10:59:19Z",
+      "arxiv_id": "2604.01893v1",
+      "abs_url": "http://arxiv.org/abs/2604.01893v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.01893v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 4,
+      "anchor_terms": [
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "remote sensing"
+      ],
+      "title_zh": "ProVG：通过语言解耦实现遥感图像的渐进式视觉基础",
+      "summary_zh": "遥感视觉接地（RSVG）旨在根据自然语言表达来定位遥感图像中的物体。以前的方法通常依赖于句子级视觉语言对齐，它很难利用细粒度的语言线索，例如 \\textit{空间关系} 和 \\textit{对象属性}，这对于区分具有相似特征的对象至关重要。重要的是，这些线索在不同的基础阶段发挥着不同的作用，应该相应地利用以提供更明确的指导。在这项工作中，我们提出了 \\textbf{ProVG}，这是一种新颖的 RSVG 框架，它通过将语言表达解耦为全局上下文、空间关系和对象属性来提高定位精度。为了整合这些语言线索，ProVG 采用了一个简单而有效的渐进式跨模态调制器，它通过 \\textit{survey-locate-verify} 方案动态调制视觉注意力，从而实现从粗到细的视觉语言对齐。此外，ProVG 还包含一个跨尺度融合模块，以减轻遥感图像的大规模变化，以及一个语言引导的校准解码器，以在预测过程中完善跨模态对齐。统一的多任务头进一步使 ProVG 能够支持引用表达理解和分割任务。对两个基准测试（RRSIS-D 和 RISBench）的广泛实验表明，ProVG 始终优于现有方法，实现了新的最先进的性能。"
     },
     {
       "title": "GeoAI Agency Primitives",
@@ -1102,1025 +563,187 @@
         "数据集/评测"
       ],
       "topic": "基础模型",
-      "score": 2,
+      "score": 5,
       "anchor_terms": [
-        "navigation"
+        "foundation model",
+        "satellite image",
+        "visual question answering"
       ],
       "matched_terms": [
         "foundation model",
-        "navigation"
-      ]
+        "GIS",
+        "satellite",
+        "satellite image",
+        "visual question answering"
+      ],
+      "title_zh": "GeoAI 代理基元",
+      "summary_zh": "我们展示了针对 GeoAI 助手的机构原语正在进行的研究，这些核心功能将 Foundation 模型连接到 GIS 从业者实际工作的以工件为中心的人机交互工作流程。尽管卫星图像字幕、视觉问答和及时分割方面取得了进步，但这些功能并未转化为将大部分时间用于制作矢量图层、栅格地图和制图产品的从业人员的生产力提高。差距不仅仅在于模型能力，还在于缺乏支持迭代协作的代理层。我们为这一层提出了一个 9 美元原语的词汇表——包括导航、感知、地理参考记忆和对偶建模——以及衡量人类生产力的基准。我们的目标是建立一个词汇表，使 GIS 中的代理协助可实施、可测试和可比较。"
     },
     {
-      "title": "Posterior Optimization with Clipped Objective for Bridging Efficiency and Stability in Generative Policy Learning",
+      "title": "MAR-MAER: Metric-Aware and Ambiguity-Adaptive Autoregressive Image Generation",
       "authors": [
-        "Yuhui Chen",
-        "Haoran Li",
-        "Zhennan Jiang",
-        "Yuxing Qin",
-        "Yuxuan Wan",
-        "Weiheng Liu",
-        "Dongbin Zhao"
+        "Kai Dong",
+        "Tingting Bai"
       ],
-      "summary": "Expressive generative models have advanced robotic manipulation by capturing complex, multi-modal action distributions over temporally extended trajectories. However, fine-tuning these policies via RL remains challenging due to instability and sample inefficiency. We introduce Posterior Optimization with Clipped Objective (POCO), a principled RL framework that formulates policy improvement as a posterior inference problem tailored for temporal action chunks. Through an Expectation-Maximization procedure, POCO distills a reward-weighted implicit posterior into the policy without likelihood estimation. Furthermore, POCO adopts an offline-to-online paradigm that anchors online exploration to pre-trained priors, and its model-agnostic design scales to fine-tune large VLA models without architectural modifications. Evaluations across 7 simulation benchmarks and 4 contact-rich real-world tasks demonstrate that POCO prevents catastrophic policy collapse, outperforms SOTA baselines, and achieves a 96.7% success rate on real-world tasks. Videos are available at our project website https://cccedric.github.io/poco/.",
-      "published": "2026-04-02T10:15:47Z",
-      "updated": "2026-04-02T10:15:47Z",
-      "arxiv_id": "2604.01860v1",
-      "abs_url": "http://arxiv.org/abs/2604.01860v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01860v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "基础模型",
-        "视觉-语言模型",
-        "多模态融合",
-        "数据集/评测"
-      ],
-      "topic": "基础模型",
-      "score": 11,
-      "anchor_terms": [
-        "manipulation",
-        "robot",
-        "robotic",
-        "vla"
-      ],
-      "matched_terms": [
-        "manipulation",
-        "policy learning",
-        "robot",
-        "robotic",
-        "vla",
-        "vla model"
-      ]
-    },
-    {
-      "title": "VitaTouch: Property-Aware Vision-Tactile-Language Model for Robotic Quality Inspection in Manufacturing",
-      "authors": [
-        "Junyi Zong",
-        "Qingxuan Jia",
-        "Meixian Shi",
-        "Tong Li",
-        "Jiayuan Li",
-        "Zihang Lv",
-        "Gang Chen",
-        "Fang Deng"
-      ],
-      "summary": "Quality inspection in smart manufacturing requires identifying intrinsic material and surface properties beyond visible geometry, yet vision-only methods remain vulnerable to occlusion and reflection. We propose VitaTouch, a property-aware vision-tactile-language model for material-property inference and natural-language attribute description. VitaTouch uses modality-specific encoders and a dual Q-Former to extract language-relevant visual and tactile features, which are compressed into prefix tokens for a large language model. We align each modality with text and explicitly couple vision and touch through contrastive learning. We also construct VitaSet, a multimodal dataset with 186 objects, 52k images, and 5.1k human-verified instruction-answer pairs. VitaTouch achieves the best performance on HCT and the overall TVL benchmark, while remaining competitive on SSVTP. On VitaSet, it reaches 88.89% hardness accuracy, 75.13% roughness accuracy, and 54.81% descriptor recall; the material-description task further achieves a peak semantic similarity of 0.9009. With LoRA-based fine-tuning, VitaTouch attains 100.0%, 96.0%, and 92.0% accuracy for 2-, 3-, and 5-category defect recognition, respectively, and delivers 94.0% closed-loop recognition accuracy and 94.0% end-to-end sorting success in 100 laboratory robotic trials. More details are available at the project page: https://vitatouch.github.io/",
-      "published": "2026-04-02T09:24:14Z",
-      "updated": "2026-04-02T09:24:14Z",
-      "arxiv_id": "2604.03322v1",
-      "abs_url": "http://arxiv.org/abs/2604.03322v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.03322v1",
-      "primary_category": "cs.CV",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.RO"
-      ],
-      "comment": "11 pages, 6 figures",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "基础模型",
-        "视觉-语言模型",
-        "数据集/评测"
-      ],
-      "topic": "基础模型",
-      "score": 9,
-      "anchor_terms": [
-        "robot",
-        "robotic",
-        "tactile"
-      ],
-      "matched_terms": [
-        "robot",
-        "robotic",
-        "tactile"
-      ]
-    },
-    {
-      "title": "PTC-Depth: Pose-Refined Monocular Depth Estimation with Temporal Consistency",
-      "authors": [
-        "Leezy Han",
-        "Seunggyu Kim",
-        "Dongseok Shim",
-        "Hyeonbeom Lee"
-      ],
-      "summary": "Monocular depth estimation (MDE) has been widely adopted in the perception systems of autonomous vehicles and mobile robots. However, existing approaches often struggle to maintain temporal consistency in depth estimation across consecutive frames. This inconsistency not only causes jitter but can also lead to estimation failures when the depth range changes abruptly. To address these challenges, this paper proposes a consistency-aware monocular depth estimation framework that leverages wheel odometry from a mobile robot to achieve stable and coherent depth predictions over time. Specifically, we estimate camera pose and sparse depth from triangulation using optical flow between consecutive frames. The sparse depth estimates are used to update a recursive Bayesian estimate of the metric scale, which is then applied to rescale the relative depth predicted by a pre-trained depth estimation foundation model. The proposed method is evaluated on the KITTI, TartanAir, MS2, and our own dataset, demonstrating robust and accurate depth estimation performance.",
-      "published": "2026-04-02T09:03:02Z",
-      "updated": "2026-04-02T09:03:02Z",
-      "arxiv_id": "2604.01791v1",
-      "abs_url": "http://arxiv.org/abs/2604.01791v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01791v1",
+      "summary": "Autoregressive (AR) models have demonstrated significant success in the realm of text-to-image generation. However, they usually face two major challenges. Firstly, the generated images may not always meet the quality standards expected by humans. Furthermore, these models face difficulty when dealing with ambiguous prompts that could be interpreted in several valid ways. To address these issues, we introduce MAR-MAER, an innovative hierarchical autoregressive framework. It combines two main components. It is a metric-aware embedding regularization method. The other one is a probabilistic latent model used for handling ambiguous semantics. Our method utilizes a lightweight projection head, which is trained with an adaptive kernel regression loss function. This aligns the model's internal representations with human-preferred quality metrics, such as CLIPScore and HPSv2. As a result, the embedding space that is learned more accurately reflects human judgment. We are also introducing a conditional variational module. This approach incorporates an aspect of controlled randomness within the hierarchical token generation process. This capability allows the model to produce a diverse array of coherent images based on ambiguous or open-ended prompts. We conducted extensive experiments using COCO and a newly developed Ambiguous-Prompt Benchmark. The results show that MAR-MAER achieves excellent performance in both metric consistency and semantic flexibility. It exceeds the baseline Hi-MAR model's performance, showing an improvement of +1.6 in CLIPScore and +5.3 in HPSv2. For unclear inputs, it produces a notably wider range of outputs. These findings have been confirmed through both human evaluation and automated metrics.",
+      "published": "2026-04-02T10:19:46Z",
+      "updated": "2026-04-02T10:19:46Z",
+      "arxiv_id": "2604.01864v1",
+      "abs_url": "http://arxiv.org/abs/2604.01864v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.01864v1",
       "primary_category": "cs.CV",
       "categories": [
         "cs.CV"
       ],
-      "comment": "Accepted at CVPR 2026",
+      "comment": "Accepted by AMME 2025",
       "code_url": "",
       "has_code": false,
       "labels": [
-        "基础模型",
+        "图像生成与重建",
+        "视觉-语言模型",
         "数据集/评测"
       ],
-      "topic": "基础模型",
-      "score": 5,
+      "topic": "图像生成与重建",
+      "score": 4,
       "anchor_terms": [
-        "robot"
+        "image generation"
       ],
       "matched_terms": [
-        "autonomous vehicle",
-        "foundation model",
-        "mobile robot",
-        "robot"
-      ]
+        "CLIP",
+        "image generation"
+      ],
+      "title_zh": "MAR-MAER：度量感知和模糊自适应自回归图像生成",
+      "summary_zh": "自回归 (AR) 模型在文本到图像生成领域取得了巨大成功。然而，他们通常面临两大挑战。首先，生成的图像可能并不总是符合人类期望的质量标准。此外，这些模型在处理可以用多种有效方式解释的模糊提示时面临困难。为了解决这些问题，我们引入了 MAR-MAER，一种创新的分层自回归框架。它结合了两个主要组件。它是一种度量感知的嵌入正则化方法。另一种是用于处理模糊语义的概率潜在模型。我们的方法利用轻量级投影头，该投影头经过自适应核回归损失函数的训练。这使模型的内部表示与人类首选的质量指标（例如 CLIPScore 和 HPSv2）保持一致。因此，学习到的嵌入空间更准确地反映了人类的判断。我们还引入了条件变分模块。该方法在分层令牌生成过程中结合了受控随机性的一个方面。此功能允许模型根据模糊或开放式提示生成各种连贯图像。我们使用 COCO 和新开发的模糊提示基准进行了广泛的实验。结果表明，MAR-MAER 在度量一致性和语义灵活性方面都取得了优异的性能。它超过了基准 Hi-MAR 模型的性能，CLIPScore 提高了 +1.6，HPSv2 提高了 +5.3。对于不明确的输入，它会产生更广泛的输出。这些发现已通过人工评估和自动化指标得到证实。"
     },
     {
-      "title": "Preferential Bayesian Optimization with Crash Feedback",
+      "title": "Cosine-Normalized Attention for Hyperspectral Image Classification",
       "authors": [
-        "Johanna Menn",
-        "David Stenger",
-        "Sebastian Trimpe"
+        "Muhammad Ahmad",
+        "Manuel Mazzara"
       ],
-      "summary": "Bayesian optimization is a popular black-box optimization method for parameter learning in control and robotics. It typically requires an objective function that reflects the user's optimization goal. However, in practical applications, this objective function is often inaccessible due to complex or unmeasurable performance metrics. Preferential Bayesian optimization (PBO) overcomes this limitation by leveraging human feedback through pairwise comparisons, eliminating the need for explicit performance quantification. When applying PBO to hardware systems, such as in quadcopter control, crashes can cause time-consuming experimental resets, wear and tear, or otherwise undesired outcomes. Standard PBO methods cannot incorporate feedback from such crashed experiments, resulting in the exploration of parameters that frequently lead to experimental crashes. We thus introduce CrashPBO, a user-friendly mechanism that enables users to both express preferences and report crashes during the optimization process. Benchmarking on synthetic functions shows that this mechanism reduces crashes by 63% and increases data efficiency. Through experiments on three robotics platforms, we demonstrate the wide applicability and transferability of CrashPBO, highlighting that it provides a flexible, user-friendly framework for parameter learning with human feedback on preferences and crashes.",
-      "published": "2026-04-02T08:42:56Z",
-      "updated": "2026-04-02T08:42:56Z",
-      "arxiv_id": "2604.01776v1",
-      "abs_url": "http://arxiv.org/abs/2604.01776v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01776v1",
-      "primary_category": "cs.RO",
+      "summary": "Transformer-based methods have improved hyperspectral image classification (HSIC) by modeling long-range spatial-spectral dependencies; however, their attention mechanisms typically rely on dot-product similarity, which mixes feature magnitude and orientation and may be suboptimal for hyperspectral data. This work revisits attention scoring from a geometric perspective and introduces a cosine-normalized attention formulation that aligns similarity computation with the angular structure of hyperspectral signatures. By projecting query and key embeddings onto a unit hypersphere and applying a squared cosine similarity, the proposed method emphasizes angular relationships while reducing sensitivity to magnitude variations. The formulation is integrated into a spatial-spectral Transformer and evaluated under extremely limited supervision. Experiments on three benchmark datasets demonstrate that the proposed approach consistently achieves higher performance, outperforming several recent Transformer- and Mamba-based models despite using a lightweight backbone. In addition, a controlled analysis of multiple attention score functions shows that cosine-based scoring provides a reliable inductive bias for hyperspectral representation learning.",
+      "published": "2026-04-02T08:32:12Z",
+      "updated": "2026-04-02T08:32:12Z",
+      "arxiv_id": "2604.01763v1",
+      "abs_url": "http://arxiv.org/abs/2604.01763v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.01763v1",
+      "primary_category": "cs.CV",
       "categories": [
-        "cs.RO"
+        "cs.CV"
       ],
       "comment": "",
       "code_url": "",
       "has_code": false,
       "labels": [
+        "场景分类",
+        "高光谱/多光谱",
         "数据集/评测"
       ],
-      "topic": "数据集/评测",
-      "score": 6,
-      "anchor_terms": [
-        "robot",
-        "robotic",
-        "robotics"
-      ],
-      "matched_terms": [
-        "robot",
-        "robotic",
-        "robotics"
-      ]
-    },
-    {
-      "title": "DriveDreamer-Policy: A Geometry-Grounded World-Action Model for Unified Generation and Planning",
-      "authors": [
-        "Yang Zhou",
-        "Xiaofeng Wang",
-        "Hao Shao",
-        "Letian Wang",
-        "Guosheng Zhao",
-        "Jiangnan Shao",
-        "Jiagang Zhu",
-        "Tingdong Yu",
-        "Zheng Zhu",
-        "Guan Huang",
-        "Steven L. Waslander"
-      ],
-      "summary": "Recently, world-action models (WAM) have emerged to bridge vision-language-action (VLA) models and world models, unifying their reasoning and instruction-following capabilities and spatio-temporal world modeling. However, existing WAM approaches often focus on modeling 2D appearance or latent representations, with limited geometric grounding-an essential element for embodied systems operating in the physical world. We present DriveDreamer-Policy, a unified driving world-action model that integrates depth generation, future video generation, and motion planning within a single modular architecture. The model employs a large language model to process language instructions, multi-view images, and actions, followed by three lightweight generators that produce depth, future video, and actions. By learning a geometry-aware world representation and using it to guide both future prediction and planning within a unified framework, the proposed model produces more coherent imagined futures and more informed driving actions, while maintaining modularity and controllable latency. Experiments on the Navsim v1 and v2 benchmarks demonstrate that DriveDreamer-Policy achieves strong performance on both closed-loop planning and world generation tasks. In particular, our model reaches 89.2 PDMS on Navsim v1 and 88.7 EPDMS on Navsim v2, outperforming existing world-model-based approaches while producing higher-quality future video and depth predictions. Ablation studies further show that explicit depth learning provides complementary benefits to video imagination and improves planning robustness.",
-      "published": "2026-04-02T08:33:18Z",
-      "updated": "2026-04-02T08:33:18Z",
-      "arxiv_id": "2604.01765v1",
-      "abs_url": "http://arxiv.org/abs/2604.01765v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01765v1",
-      "primary_category": "cs.CV",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.RO"
-      ],
-      "comment": "11 pages, 4 figures; Project Website: https://drivedreamer-policy.github.io/",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "视觉-语言模型",
-        "数据集/评测"
-      ],
-      "topic": "视觉-语言模型",
-      "score": 9,
-      "anchor_terms": [
-        "embodied",
-        "vision-language-action",
-        "vla",
-        "world model"
-      ],
-      "matched_terms": [
-        "embodied",
-        "motion planning",
-        "vision-language-action",
-        "vla",
-        "world model"
-      ]
-    },
-    {
-      "title": "Analysis of Efficient Transmission Methods of Grid Maps for Intelligent Vehicles",
-      "authors": [
-        "Robin Dehler",
-        "Dominik Authaler",
-        "Aryan Thakur",
-        "Thomas Wodtko",
-        "Michael Buchholz"
-      ],
-      "summary": "Grid mapping is a fundamental approach to modeling the environment of intelligent vehicles or robots. Compared with object-based environment modeling, grid maps offer the distinct advantage of representing the environment without requiring any assumptions about objects, such as type or shape. For grid-map-based approaches, the environment is divided into cells, each containing information about its respective area, such as occupancy. This representation of the entire environment is crucial for achieving higher levels of autonomy. However, it has the drawback that modeling the scene at the cell level results in inherently large data sizes. Patched grid maps tackle this issue to a certain extent by adapting cell sizes in specific areas. Nevertheless, the data sizes of patched grid maps are still too large for novel distributed processing setups or vehicle-to-everything (V2X) applications. Our work builds on a patch-based grid-map approach and investigates the size problem from a communication perspective. To address this, we propose a patch-based communication pipeline that leverages existing compression algorithms to transmit grid-map data efficiently. We provide a comprehensive analysis of this pipeline for both intra-vehicle and V2X-based communication. The analysis is verified for these use cases with two real-world experiment setups. Finally, we summarize recommended guidelines for the efficient transmission of grid-map data in intelligent transportation systems.",
-      "published": "2026-04-02T08:19:19Z",
-      "updated": "2026-04-02T08:19:19Z",
-      "arxiv_id": "2604.01753v1",
-      "abs_url": "http://arxiv.org/abs/2604.01753v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01753v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "Accepted for 2026 IEEE Intelligent Vehicles Symposium (IV) - DOI will be added after publication",
-      "code_url": "",
-      "has_code": false,
-      "labels": [],
-      "topic": "其他",
-      "score": 4,
-      "anchor_terms": [
-        "robot"
-      ],
-      "matched_terms": [
-        "robot"
-      ]
-    },
-    {
-      "title": "Causal Scene Narration with Runtime Safety Supervision for Vision-Language-Action Driving",
-      "authors": [
-        "Yun Li",
-        "Yidu Zhang",
-        "Simon Thompson",
-        "Ehsan Javanmardi",
-        "Manabu Tsukada"
-      ],
-      "summary": "Vision-Language-Action (VLA) models for autonomous driving must integrate diverse textual inputs, including navigation commands, hazard warnings, and traffic state descriptions, yet current systems often present these as disconnected fragments, forcing the model to discover on its own which environmental constraints are relevant to the current maneuver. We introduce Causal Scene Narration (CSN), which restructures VLA text inputs through intent-constraint alignment, quantitative grounding, and structured separation, at inference time with zero GPU cost. We complement CSN with Simplex-based runtime safety supervision and training-time alignment via Plackett-Luce DPO with negative log-likelihood (NLL) regularization. A multi-town closed-loop CARLA evaluation shows that CSN improves Driving Score by +31.1% on original LMDrive and +24.5% on the preference-aligned variant. A controlled ablation reveals that causal structure accounts for 39.1% of this gain, with the remainder attributable to information content alone. A perception noise ablation confirms that CSN's benefit is robust to realistic sensing errors. Semantic safety supervision improves Infraction Score, while reactive Time-To-Collision monitoring degrades performance, demonstrating that intent-aware monitoring is needed for VLA systems.",
-      "published": "2026-04-02T07:43:05Z",
-      "updated": "2026-04-02T07:43:05Z",
-      "arxiv_id": "2604.01723v1",
-      "abs_url": "http://arxiv.org/abs/2604.01723v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01723v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "comment": "18 pages, 6 figures, 4 tables",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "视觉-语言模型",
-        "数据集/评测"
-      ],
-      "topic": "视觉-语言模型",
-      "score": 8,
-      "anchor_terms": [
-        "navigation",
-        "vision-language-action",
-        "vla"
-      ],
-      "matched_terms": [
-        "navigation",
-        "vision-language-action",
-        "vla"
-      ]
-    },
-    {
-      "title": "Hi-LOAM: Hierarchical Implicit Neural Fields for LiDAR Odometry and Mapping",
-      "authors": [
-        "Zhiliu Yang",
-        "Jianyuan Zhang",
-        "Lianhui Zhao",
-        "Jinyu Dai",
-        "Zhu Yang"
-      ],
-      "summary": "LiDAR Odometry and Mapping (LOAM) is a pivotal technique for embodied-AI applications such as autonomous driving and robot navigation. Most existing LOAM frameworks are either contingent on the supervision signal, or lack of the reconstruction fidelity, which are deficient in depicting details of large-scale complex scenes. To overcome these limitations, we propose a multi-scale implicit neural localization and mapping framework using LiDAR sensor, called Hi-LOAM. Hi-LOAM receives LiDAR point cloud as the input data modality, learns and stores hierarchical latent features in multiple levels of hash tables based on an octree structure, then these multi-scale latent features are decoded into signed distance value through shallow Multilayer Perceptrons (MLPs) in the mapping procedure. For pose estimation procedure, we rely on a correspondence-free, scan-to-implicit matching paradigm to estimate optimal pose and register current scan into the submap. The entire training process is conducted in a self-supervised manner, which waives the model pre-training and manifests its generalizability when applied to diverse environments. Extensive experiments on multiple real-world and synthetic datasets demonstrate the superior performance, in terms of the effectiveness and generalization capabilities, of our Hi-LOAM compared to existing state-of-the-art methods.",
-      "published": "2026-04-02T07:36:27Z",
-      "updated": "2026-04-02T07:36:27Z",
-      "arxiv_id": "2604.01720v1",
-      "abs_url": "http://arxiv.org/abs/2604.01720v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01720v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "This manuscript is the accepted version of IEEE Transactions on Multimedia",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "基础模型",
-        "LiDAR/点云",
-        "数据集/评测"
-      ],
-      "topic": "基础模型",
-      "score": 6,
-      "anchor_terms": [
-        "embodied",
-        "navigation",
-        "robot"
-      ],
-      "matched_terms": [
-        "embodied",
-        "navigation",
-        "robot"
-      ]
-    },
-    {
-      "title": "Reliability-Aware Geometric Fusion for Robust Audio-Visual Navigation",
-      "authors": [
-        "Teng Liu",
-        "Yinfeng Yu"
-      ],
-      "summary": "Audio-Visual Navigation (AVN) requires an embodied agent to navigate toward a sound source by utilizing both vision and binaural audio. A core challenge arises in complex acoustic environments, where binaural cues become intermittently unreliable, particularly when generalizing to previously unheard sound categories. To address this, we propose RAVN (Reliability-Aware Audio-Visual Navigation), a framework that conditions cross-modal fusion on audio-derived reliability cues, dynamically calibrating the integration of audio and visual inputs. RAVN introduces an Acoustic Geometry Reasoner (AGR) that is trained with geometric proxy supervision. Using a heteroscedastic Gaussian NLL objective, AGR learns observation-dependent dispersion as a practical reliability cue, eliminating the need for geometric labels during inference. Additionally, we introduce Reliability-Aware Geometric Modulation (RAGM), which converts the learned cue into a soft gate to modulate visual features, thereby mitigating cross-modal conflicts. We evaluate RAVN on SoundSpaces using both Replica and Matterport3D environments, and the results show consistent improvements in navigation performance, with notable robustness in the challenging unheard sound setting.",
-      "published": "2026-04-02T07:26:46Z",
-      "updated": "2026-04-02T07:26:46Z",
-      "arxiv_id": "2604.02391v1",
-      "abs_url": "http://arxiv.org/abs/2604.02391v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02391v1",
-      "primary_category": "cs.SD",
-      "categories": [
-        "cs.SD",
-        "cs.AI",
-        "eess.AS"
-      ],
-      "comment": "Main paper (6 pages). Accepted for publication by the International Joint Conference on Neural Networks (IJCNN 2026)",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "多模态融合"
-      ],
-      "topic": "多模态融合",
+      "topic": "场景分类",
       "score": 12,
       "anchor_terms": [
-        "embodied",
-        "embodied agent",
-        "navigation"
+        "hyperspectral image"
       ],
       "matched_terms": [
-        "embodied",
-        "embodied agent",
-        "navigation",
-        "visual navigation"
-      ]
+        "attention mechanism",
+        "hyperspectral",
+        "hyperspectral image",
+        "hyperspectral image classification",
+        "image classification",
+        "transformer"
+      ],
+      "title_zh": "高光谱图像分类的余弦归一化注意力",
+      "summary_zh": "基于 Transformer 的方法通过对远程空间光谱依赖性进行建模，改进了高光谱图像分类 (HSIC)；然而，它们的注意力机制通常依赖于点积相似性，点积相似性混合了特征大小和方向，对于高光谱数据可能不是最佳的。这项工作从几何角度重新审视了注意力评分，并引入了余弦归一化注意力公式，将相似性计算与高光谱特征的角度结构结合起来。通过将查询和关键嵌入投影到单位超球面上并应用平方余弦相似度，所提出的方法强调角度关系，同时降低对幅度变化的敏感性。该公式被集成到空间光谱转换器中，并在极其有限的监督下进行评估。对三个基准数据集的实验表明，所提出的方法始终能够实现更高的性能，尽管使用了轻量级主干，但其性能优于最近的几个基于 Transformer 和 Mamba 的模型。此外，对多个注意力评分函数的对照分析表明，基于余弦的评分为高光谱表示学习提供了可靠的归纳偏差。"
     },
     {
-      "title": "Spatial-Aware Conditioned Fusion for Audio-Visual Navigation",
+      "title": "Unifying UAV Cross-View Geo-Localization via 3D Geometric Perception",
       "authors": [
-        "Shaohang Wu",
-        "Yinfeng Yu"
+        "Haoyuan Li",
+        "Wen Yang",
+        "Fang Xu",
+        "Hong Tan",
+        "Haijian Zhang",
+        "Shengyang Li",
+        "Gui-Song Xia"
       ],
-      "summary": "Audio-visual navigation tasks require agents to locate and navigate toward continuously vocalizing targets using only visual observations and acoustic cues. However, existing methods mainly rely on simple feature concatenation or late fusion, and lack an explicit discrete representation of the target's relative position, which limits learning efficiency and generalization. We propose Spatial-Aware Conditioned Fusion (SACF). SACF first discretizes the target's relative direction and distance from audio-visual cues, predicts their distributions, and encodes them as a compact descriptor for policy conditioning and state modeling. Then, SACF uses audio embeddings and spatial descriptors to generate channel-wise scaling and bias to modulate visual features via conditional linear transformation, producing target-oriented fused representations. SACF improves navigation efficiency with lower computational overhead and generalizes well to unheard target sounds.",
-      "published": "2026-04-02T07:20:27Z",
-      "updated": "2026-04-02T07:20:27Z",
-      "arxiv_id": "2604.02390v1",
-      "abs_url": "http://arxiv.org/abs/2604.02390v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02390v1",
-      "primary_category": "cs.SD",
-      "categories": [
-        "cs.SD",
-        "cs.AI",
-        "eess.AS"
-      ],
-      "comment": "Main paper (6 pages). Accepted for publication by the International Joint Conference on Neural Networks (IJCNN 2026)",
-      "code_url": "",
-      "has_code": false,
-      "labels": [],
-      "topic": "其他",
-      "score": 7,
-      "anchor_terms": [
-        "navigation"
-      ],
-      "matched_terms": [
-        "navigation",
-        "visual navigation"
-      ]
-    },
-    {
-      "title": "OpenGo: An OpenClaw-Based Robotic Dog with Real-Time Skill Switching",
-      "authors": [
-        "Hanbing Li",
-        "Xuewei Cao",
-        "Zhiwen Zeng",
-        "Yuhan Wu",
-        "Yanyong Zhang",
-        "Yan Xia"
-      ],
-      "summary": "Adaptation to complex tasks and multiple scenarios remains a significant challenge for a single robot agent. The ability to acquire organize, and switch between a wide range of skills in real time, particularly in dynamic environments, has become a fundamental requirement for embodied intelligence. We introduce OpenGo, an OpenClaw-powered embodied robotic dog capable of switching skills in real time according to the scene and task instructions. Specifically, the agent is equipped with (1) a customizable skill library with easy skill import and autonomous skill validation, (2) a dispatcher that selects and invokes different skills according to task prompts or language instructions, and (3) a self-learning framework that fine-tunes skills based on task completion and human feedback. We deploy the agent in Unitree's Go2 robotic dog and validate its capabilities in self-checking and switching of skills autonomously. In addition, by integrating Feishu-platform communication, we enable natural-language guidance and human feedback, allowing inexperienced users to control the robotic dog through simple instructions.",
-      "published": "2026-04-02T07:19:51Z",
-      "updated": "2026-04-02T07:19:51Z",
-      "arxiv_id": "2604.01708v1",
-      "abs_url": "http://arxiv.org/abs/2604.01708v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01708v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "comment": "11 pages, 6 figures",
-      "code_url": "",
-      "has_code": false,
-      "labels": [],
-      "topic": "其他",
-      "score": 11,
-      "anchor_terms": [
-        "embodied",
-        "robot",
-        "robotic"
-      ],
-      "matched_terms": [
-        "embodied",
-        "embodied intelligence",
-        "robot",
-        "robotic"
-      ]
-    },
-    {
-      "title": "Audio Spatially-Guided Fusion for Audio-Visual Navigation",
-      "authors": [
-        "Xinyu Zhou",
-        "Yinfeng Yu"
-      ],
-      "summary": "Audio-visual Navigation refers to an agent utilizing visual and auditory information in complex 3D environments to accomplish target localization and path planning, thereby achieving autonomous navigation. The core challenge of this task lies in the following: how the agent can break free from the dependence on training data and achieve autonomous navigation with good generalization performance when facing changes in environments and sound sources. To address this challenge, we propose an Audio Spatially-Guided Fusion for Audio-Visual Navigation method. First, we design an audio spatial feature encoder, which adaptively extracts target-related spatial state information through an audio intensity attention mechanism; based on this, we introduce an Audio Spatial State Guided Fusion (ASGF) to achieve dynamic alignment and adaptive fusion of multimodal features, effectively alleviating noise interference caused by perceptual uncertainty. Experimental results on the Replica and Matterport3D datasets indicate that our method is particularly effective on unheard tasks, demonstrating improved generalization under unknown sound source distributions.",
-      "published": "2026-04-02T07:15:17Z",
-      "updated": "2026-04-02T07:15:17Z",
-      "arxiv_id": "2604.02389v1",
-      "abs_url": "http://arxiv.org/abs/2604.02389v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.02389v1",
-      "primary_category": "cs.SD",
-      "categories": [
-        "cs.SD",
-        "cs.AI",
-        "eess.AS"
-      ],
-      "comment": "Main paper (6 pages). Accepted for publication by the International Joint Conference on Neural Networks (IJCNN 2026)",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "数据集/评测"
-      ],
-      "topic": "数据集/评测",
-      "score": 9,
-      "anchor_terms": [
-        "navigation"
-      ],
-      "matched_terms": [
-        "autonomous navigation",
-        "navigation",
-        "path planning",
-        "visual navigation"
-      ]
-    },
-    {
-      "title": "3-D Relative Localization for Multi-Robot Systems with Angle and Self-Displacement Measurements",
-      "authors": [
-        "Chenyang Liang",
-        "Liangming Chen",
-        "Baoyi Cui",
-        "Jie Mei"
-      ],
-      "summary": "Realizing relative localization by leveraging inter-robot local measurements is a challenging problem, especially in the presence of measurement noise. Motivated by this challenge, in this paper we propose a novel and systematic 3-D relative localization framework based on inter-robot interior angle and self-displacement measurements. Initially, we propose a linear relative localization theory comprising a distributed linear relative localization algorithm and sufficient conditions for localizability. According to this theory, robots can determine their neighbors' relative positions and orientations in a purely linear manner. Subsequently, in order to deal with measurement noise, we present an advanced Maximum a Posterior (MAP) estimator by addressing three primary challenges existing in the MAP estimator. Firstly, it is common to formulate the MAP problem as an optimization problem, whose inherent non-convexity can result in local optima. To address this issue, we reformulate the linear computation process of the linear relative localization algorithm as a Weighted Total Least Squares (WTLS) optimization problem on manifolds. The optimal solution of the WTLS problem is more accurate, which can then be used as initial values when solving the optimization problem associated with the MAP problem, thereby reducing the risk of falling into local optima. The second challenge is the lack of knowledge of the prior probability density of the robots' relative positions and orientations at the initial time, which is required as an input for the MAP estimator. To deal with it, we combine the WTLS with a Neural Density Estimator (NDE). Thirdly, to prevent the increasing size of the relative positions and orientations to be estimated as the robots continuously move when solving the MAP problem, a marginalization mechanism is designed, which ensures that the computational cost remains constant.",
-      "published": "2026-04-02T07:02:46Z",
-      "updated": "2026-04-02T07:02:46Z",
-      "arxiv_id": "2604.01703v1",
-      "abs_url": "http://arxiv.org/abs/2604.01703v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01703v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "29 pages, 28 figures",
-      "code_url": "",
-      "has_code": false,
-      "labels": [],
-      "topic": "其他",
-      "score": 5,
-      "anchor_terms": [
-        "robot"
-      ],
-      "matched_terms": [
-        "robot"
-      ]
-    },
-    {
-      "title": "GPA: Learning GUI Process Automation from Demonstrations",
-      "authors": [
-        "Zirui Zhao",
-        "Jun Hao Liew",
-        "Yan Yang",
-        "Wenzhuo Yang",
-        "Ziyang Luo",
-        "Doyen Sahoo",
-        "Silvio Savarese",
-        "Junnan Li"
-      ],
-      "summary": "GUI Process Automation (GPA) is a lightweight but general vision-based Robotic Process Automation (RPA), which enables fast and stable process replay with only a single demo. Addressing the fragility of traditional RPA and the non-deterministic risks of current vision language model-based GUI agents, GPA introduces three core benefits: (1) Robustness via Sequential Monte Carlo-based localization to handle rescaling and detection uncertainty; (2) Deterministic and Reliability safeguarded by readiness calibration; and (3) Privacy through fast, fully local execution. This approach delivers the adaptability, robustness, and security required for enterprise workflows. It can also be used as an MCP/CLI tool by other agents with coding capabilities so that the agent only reasons and orchestrates while GPA handles the GUI execution. We conducted a pilot experiment to compare GPA with Gemini 3 Pro (with CUA tools) and found that GPA achieves higher success rate with 10 times faster execution speed in finishing long-horizon GUI tasks.",
-      "published": "2026-04-02T06:27:52Z",
-      "updated": "2026-04-04T01:55:00Z",
-      "arxiv_id": "2604.01676v2",
-      "abs_url": "http://arxiv.org/abs/2604.01676v2",
-      "pdf_url": "https://arxiv.org/pdf/2604.01676v2",
-      "primary_category": "cs.CV",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.SE"
-      ],
-      "comment": "",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "视觉-语言模型"
-      ],
-      "topic": "视觉-语言模型",
-      "score": 3,
-      "anchor_terms": [
-        "robot",
-        "robotic"
-      ],
-      "matched_terms": [
-        "robot",
-        "robotic"
-      ]
-    },
-    {
-      "title": "Robust Embodied Perception in Dynamic Environments via Disentangled Weight Fusion",
-      "authors": [
-        "Juncen Guo",
-        "Xiaoguang Zhu",
-        "Jingyi Wu",
-        "Jingyu Zhang",
-        "Jingnan Cai",
-        "Zhenghao Niu",
-        "Liang Song"
-      ],
-      "summary": "Embodied perception systems face severe challenges of dynamic environment distribution drift when they continuously interact in open physical spaces. However, the existing domain incremental awareness methods often rely on the domain id obtained in advance during the testing phase, which limits their practicability in unknown interaction scenarios. At the same time, the model often overfits to the context-specific perceptual noise, which leads to insufficient generalization ability and catastrophic forgetting. To address these limitations, we propose a domain-id and exemplar-free incremental learning framework for embodied multimedia systems, which aims to achieve robust continuous environment adaptation. This method designs a disentangled representation mechanism to remove non-essential environmental style interference, and guide the model to focus on extracting semantic intrinsic features shared across scenes, thereby eliminating perceptual uncertainty and improving generalization. We further use the weight fusion strategy to dynamically integrate the old and new environment knowledge in the parameter space, so as to ensure that the model adapts to the new distribution without storing historical data and maximally retains the discrimination ability of the old environment. Extensive experiments on multiple standard benchmark datasets show that the proposed method significantly reduces catastrophic forgetting in a completely exemplar-free and domain-id free setting, and its accuracy is better than the existing state-of-the-art methods.",
-      "published": "2026-04-02T06:15:07Z",
-      "updated": "2026-04-02T06:15:07Z",
-      "arxiv_id": "2604.01669v1",
-      "abs_url": "http://arxiv.org/abs/2604.01669v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01669v1",
-      "primary_category": "cs.CV",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "comment": "Accepted by ICME2026",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "数据集/评测"
-      ],
-      "topic": "数据集/评测",
-      "score": 3,
-      "anchor_terms": [
-        "embodied"
-      ],
-      "matched_terms": [
-        "embodied"
-      ]
-    },
-    {
-      "title": "AURA: Multimodal Shared Autonomy for Real-World Urban Navigation",
-      "authors": [
-        "Yukai Ma",
-        "Honglin He",
-        "Selina Song",
-        "Wayne Wu",
-        "Bolei Zhou"
-      ],
-      "summary": "Long-horizon navigation in complex urban environments relies heavily on continuous human operation, which leads to fatigue, reduced efficiency, and safety concerns. Shared autonomy, where a Vision-Language AI agent and a human operator collaborate on maneuvering the mobile machine, presents a promising solution to address these issues. However, existing shared autonomy methods often require humans and AI to operate within the same action space, leading to high cognitive overhead. We present Assistive Urban Robot Autonomy (AURA), a new multi-modal framework that decomposes urban navigation into high-level human instruction and low-level AI control. AURA incorporates a Spatial-Aware Instruction Encoder to align various human instructions with visual and spatial context. To facilitate training, we construct MM-CoS, a large-scale dataset comprising teleoperation and vision-language descriptions. Experiments in simulation and the real world demonstrate that AURA effectively follows human instructions, reduces manual operation effort, and improves navigation stability, while enabling online adaptation. Moreover, under similar takeover conditions, our shared autonomy framework reduces the frequency of takeovers by more than 44%. Demo video and more detail are provided in the project page.",
-      "published": "2026-04-02T05:59:31Z",
-      "updated": "2026-04-02T05:59:31Z",
-      "arxiv_id": "2604.01659v1",
-      "abs_url": "http://arxiv.org/abs/2604.01659v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01659v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "17 pages, 18 figures, 4 tables, conference",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "视觉-语言模型",
-        "多模态融合",
-        "数据集/评测"
-      ],
-      "topic": "视觉-语言模型",
-      "score": 7,
-      "anchor_terms": [
-        "navigation",
-        "robot",
-        "teleoperation"
-      ],
-      "matched_terms": [
-        "navigation",
-        "robot",
-        "teleoperation"
-      ]
-    },
-    {
-      "title": "Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models",
-      "authors": [
-        "Jiawei Chen",
-        "Simin Huang",
-        "Jiawei Du",
-        "Shuaihang Chen",
-        "Yu Tian",
-        "Mingjie Wei",
-        "Chao Yu",
-        "Zhaoxia Yin"
-      ],
-      "summary": "Vision-language-action (VLA) models have shown strong performance in robotic manipulation, yet their robustness to physically realizable adversarial attacks remains underexplored. Existing studies reveal vulnerabilities through language perturbations and 2D visual attacks, but these attack surfaces are either less representative of real deployment or limited in physical realism. In contrast, adversarial 3D textures pose a more physically plausible and damaging threat, as they are naturally attached to manipulated objects and are easier to deploy in physical environments. Bringing adversarial 3D textures to VLA systems is nevertheless nontrivial. A central obstacle is that standard 3D simulators do not provide a differentiable optimization path from the VLA objective function back to object appearance, making it difficult to optimize through an end-to-end manner. To address this, we introduce Foreground-Background Decoupling (FBD), which enables differentiable texture optimization through dual-renderer alignment while preserving the original simulation environment. To further ensure that the attack remains effective across long-horizon and diverse viewpoints in the physical world, we propose Trajectory-Aware Adversarial Optimization (TAAO), which prioritizes behaviorally critical frames and stabilizes optimization with a vertex-based parameterization. Built on these designs, we present Tex3D, the first framework for end-to-end optimization of 3D adversarial textures directly within the VLA simulation environment. Experiments in both simulation and real-robot settings show that Tex3D significantly degrades VLA performance across multiple manipulation tasks, achieving task failure rates of up to 96.7\\%. Our empirical results expose critical vulnerabilities of VLA systems to physically grounded 3D adversarial attacks and highlight the need for robustness-aware training.",
-      "published": "2026-04-02T04:55:34Z",
-      "updated": "2026-04-02T04:55:34Z",
-      "arxiv_id": "2604.01618v1",
-      "abs_url": "http://arxiv.org/abs/2604.01618v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01618v1",
-      "primary_category": "cs.CV",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "comment": "",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "视觉-语言模型"
-      ],
-      "topic": "视觉-语言模型",
-      "score": 10,
-      "anchor_terms": [
-        "manipulation",
-        "robot",
-        "robotic",
-        "vision-language-action",
-        "vla"
-      ],
-      "matched_terms": [
-        "manipulation",
-        "robot",
-        "robotic",
-        "simulator",
-        "vision-language-action",
-        "vla"
-      ]
-    },
-    {
-      "title": "Smooth Feedback Motion Planning with Reduced Curvature",
-      "authors": [
-        "Aref Amiri",
-        "Steven M. LaValle"
-      ],
-      "summary": "Feedback motion planning over cell decompositions provides a robust method for generating collision-free robot motion with formal guarantees. However, existing algorithms often produce paths with unnecessary bending, leading to slower motion and higher control effort. This paper presents a computationally efficient method to mitigate this issue for a given simplicial decomposition. A heuristic is introduced that systematically aligns and assigns local vector fields to produce more direct trajectories, complemented by a novel geometric algorithm that constructs a maximal star-shaped chain of simplexes around the goal. This creates a large ``funnel'' in which an optimal, direct-to-goal control law can be safely applied. Simulations demonstrate that our method generates measurably more direct paths, reducing total bending by an average of 91.40\\% and LQR control effort by an average of 45.47\\%. Furthermore, comparative analysis against sampling-based and optimization-based planners confirms the time efficacy and robustness of our approach. While the proposed algorithms work over any finite-dimensional simplicial complex embedded in the collision-free subset of the configuration space, the practical application focuses on low-dimensional ($d\\le3$) configuration spaces, where simplicial decomposition is computationally tractable.",
-      "published": "2026-04-02T04:48:55Z",
-      "updated": "2026-04-02T04:48:55Z",
-      "arxiv_id": "2604.01614v1",
-      "abs_url": "http://arxiv.org/abs/2604.01614v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01614v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "Accepted for publication in IEEE Robotics and Automation Letters",
-      "code_url": "",
-      "has_code": false,
-      "labels": [],
-      "topic": "其他",
-      "score": 8,
-      "anchor_terms": [
-        "robot",
-        "robotic",
-        "robotics"
-      ],
-      "matched_terms": [
-        "motion planning",
-        "robot",
-        "robotic",
-        "robotics"
-      ]
-    },
-    {
-      "title": "ModTrans: Translating Real-world Models for Distributed Training Simulator",
-      "authors": [
-        "Yi Lyu"
-      ],
-      "summary": "Large-scale distributed training has been a research hot spot in machine learning systems for industry and academia in recent years. However, conducting experiments without physical machines and corresponding resources is difficult. One solution is to leverage distributed training simulators, but current ones like ASTRA-sim do not support importing real-world developed models, which poses challenges for ML researchers seeking to use them. Based on this challenge, we developed ModTrans, a translator supporting format translation from any real-world model to the ASTRA-sim simulator's input, removing the barrier between machine learning experts and machine learning system researchers. The experiment results show that ModTrans's cost is negligible.",
-      "published": "2026-04-02T04:37:58Z",
-      "updated": "2026-04-02T04:37:58Z",
-      "arxiv_id": "2604.01607v1",
-      "abs_url": "http://arxiv.org/abs/2604.01607v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01607v1",
-      "primary_category": "cs.DC",
-      "categories": [
-        "cs.DC",
-        "cs.AI"
-      ],
-      "comment": "",
-      "code_url": "",
-      "has_code": false,
-      "labels": [],
-      "topic": "其他",
-      "score": 4,
-      "anchor_terms": [
-        "world model"
-      ],
-      "matched_terms": [
-        "simulator",
-        "world model"
-      ]
-    },
-    {
-      "title": "F3DGS: Federated 3D Gaussian Splatting for Decentralized Multi-Agent World Modeling",
-      "authors": [
-        "Morui Zhu",
-        "Mohammad Dehghani Tezerjani",
-        "Mátyás Szántó",
-        "Márton Vaitkus",
-        "Song Fu",
-        "Qing Yang"
-      ],
-      "summary": "We present F3DGS, a federated 3D Gaussian Splatting framework for decentralized multi-agent 3D reconstruction. Existing 3DGS pipelines assume centralized access to all observations, which limits their applicability in distributed robotic settings where agents operate independently, and centralized data aggregation may be restricted. Directly extending centralized training to multi-agent systems introduces communication overhead and geometric inconsistency. F3DGS first constructs a shared geometric scaffold by registering locally merged LiDAR point clouds from multiple clients to initialize a global 3DGS model. During federated optimization, Gaussian positions are fixed to preserve geometric alignment, while each client updates only appearance-related attributes, including covariance, opacity, and spherical harmonic coefficients. The server aggregates these updates using visibility-aware aggregation, weighting each client's contribution by how frequently it observed each Gaussian, resolving the partial-observability challenge inherent to multi-agent exploration. To evaluate decentralized reconstruction, we collect a multi-sequence indoor dataset with synchronized LiDAR, RGB, and IMU measurements. Experiments show that F3DGS achieves reconstruction quality comparable to centralized training while enabling distributed optimization across agents. The dataset, development kit, and source code will be publicly released.",
-      "published": "2026-04-02T04:29:44Z",
-      "updated": "2026-04-02T04:29:44Z",
-      "arxiv_id": "2604.01605v1",
-      "abs_url": "http://arxiv.org/abs/2604.01605v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01605v1",
-      "primary_category": "cs.CV",
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "comment": "Accepted to the CVPR 2026 SPAR-3D Workshop",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "LiDAR/点云",
-        "数据集/评测"
-      ],
-      "topic": "LiDAR/点云",
-      "score": 7,
-      "anchor_terms": [
-        "robot",
-        "robotic",
-        "world model"
-      ],
-      "matched_terms": [
-        "robot",
-        "robotic",
-        "world model"
-      ]
-    },
-    {
-      "title": "Riemannian and Symplectic Geometry for Hierarchical Text-Driven Place Recognition",
-      "authors": [
-        "Tianyi Shang",
-        "Zhenyu Li"
-      ],
-      "summary": "Text-to-point-cloud localization enables robots to understand spatial positions through natural language descriptions, which is crucial for human-robot collaboration in applications such as autonomous driving and last-mile delivery. However, existing methods employ pooled global descriptors for similarity retrieval, which suffer from severe information loss and fail to capture discriminative scene structures. To address these issues, we propose SympLoc, a novel coarse-to-fine localization framework with multi-level alignment in the coarse stage. Different from previous methods that rely solely on global descriptors, our coarse stage consists of three complementary alignment levels: 1) Instance-level alignment establishes direct correspondence between individual object instances in point clouds and textual hints through Riemannian self-attention in hyperbolic space; 2) Relation-level alignment explicitly models pairwise spatial relationships between objects using the Information-Symplectic Relation Encoder (ISRE), which reformulates relation features through Fisher-Rao metric and Hamiltonian dynamics for uncertainty-aware geometrically consistent propagation; 3) Global-level alignment synthesizes discriminative global descriptors via the Spectral Manifold Transform (SMT) that extracts structural invariants through graph spectral analysis. This hierarchical alignment strategy progressively captures fine-grained to coarse-grained scene semantics, enabling robust cross-modal retrieval. Extensive experiments on the KITTI360Pose dataset demonstrate that SympLoc achieves a 19% improvement in Top-1 recall@10m compared to existing state-of-the-art approaches.",
-      "published": "2026-04-02T04:13:42Z",
-      "updated": "2026-04-02T04:13:42Z",
-      "arxiv_id": "2604.01598v1",
-      "abs_url": "http://arxiv.org/abs/2604.01598v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01598v1",
+      "summary": "Cross-view geo-localization for Unmanned Aerial Vehicles (UAVs) operating in GNSS-denied environments remains challenging due to the severe geometric discrepancy between oblique UAV imagery and orthogonal satellite maps. Most existing methods address this problem through a decoupled pipeline of place retrieval and pose estimation, implicitly treating perspective distortion as appearance noise rather than an explicit geometric transformation. In this work, we propose a geometry-aware UAV geo-localization framework that explicitly models the 3D scene geometry to unify coarse place recognition and fine-grained pose estimation within a single inference pipeline. Our approach reconstructs a local 3D scene from multi-view UAV image sequences using a Visual Geometry Grounded Transformer (VGGT), and renders a virtual Bird's-Eye View (BEV) representation that orthorectifies the UAV perspective to align with satellite imagery. This BEV serves as a geometric intermediary that enables robust cross-view retrieval and provides spatial priors for accurate 3 Degrees of Freedom (3-DoF) pose regression. To efficiently handle multiple location hypotheses, we introduce a Satellite-wise Attention Block that isolates the interaction between each satellite candidate and the reconstructed UAV scene, preventing inter-candidate interference while maintaining linear computational complexity. In addition, we release a recalibrated version of the University-1652 dataset with precise coordinate annotations and spatial overlap analysis, enabling rigorous evaluation of end-to-end localization accuracy. Extensive experiments on the refined University-1652 benchmark and SUES-200 demonstrate that our method significantly outperforms state-of-the-art baselines, achieving robust meter-level localization accuracy and improved generalization in complex urban environments.",
+      "published": "2026-04-02T08:08:41Z",
+      "updated": "2026-04-02T08:08:41Z",
+      "arxiv_id": "2604.01747v1",
+      "abs_url": "http://arxiv.org/abs/2604.01747v1",
+      "pdf_url": "https://arxiv.org/pdf/2604.01747v1",
       "primary_category": "cs.CV",
       "categories": [
         "cs.CV"
       ],
-      "comment": "9 pages",
+      "comment": "15 pages, 10 figures",
       "code_url": "",
       "has_code": false,
       "labels": [
-        "多模态融合",
-        "高光谱/多光谱",
-        "LiDAR/点云",
+        "无人机/UAV",
         "数据集/评测"
       ],
-      "topic": "多模态融合",
-      "score": 2,
+      "topic": "无人机/UAV",
+      "score": 10,
       "anchor_terms": [
-        "robot"
+        "satellite image",
+        "satellite imagery",
+        "UAV"
       ],
       "matched_terms": [
-        "robot"
-      ]
+        "aerial",
+        "robust",
+        "satellite",
+        "satellite image",
+        "satellite imagery",
+        "transformer",
+        "UAV",
+        "unmanned aerial vehicle"
+      ],
+      "title_zh": "通过 3D 几何感知统一无人机跨视图地理定位",
+      "summary_zh": "由于倾斜无人机图像和正交卫星地图之间存在严重的几何差异，在 GNSS 拒绝环境中运行的无人机 (UAV) 的跨视图地理定位仍然具有挑战性。大多数现有方法通过位置检索和姿势估计的解耦管道来解决这个问题，隐式地将透视失真视为外观噪声而不是显式几何变换。在这项工作中，我们提出了一种几何感知的无人机地理定位框架，该框架对 3D 场景几何进行显式建模，以在单个推理管道中统一粗略位置识别和细粒度姿态估计。我们的方法使用视觉几何接地变换器 (VGGT) 从多视图无人机图像序列重建局部 3D 场景，并渲染虚拟鸟瞰图 (BEV) 表示，对无人机视角进行正射校正以与卫星图像对齐。该 BEV 充当几何中介，可实现强大的跨视图检索，并为准确的 3 自由度 (3-DoF) 姿态回归提供空间先验。为了有效地处理多个位置假设，我们引入了卫星注意块，它隔离每个卫星候选者和重建的无人机场景之间的交互，防止候选者之间的干扰，同时保持线性计算复杂性。此外，我们还发布了 University-1652 数据集的重新校准版本，具有精确的坐标注释和空间重叠分析，可以对端到端定位精度进行严格评估。对改进的 University-1652 基准和 SUES-200 进行的大量实验表明，我们的方法显着优于最先进的基线，实现了稳健的米级定位精度，并提高了复杂城市环境中的泛化能力。"
     },
     {
-      "title": "Boosting Vision-Language-Action Finetuning with Feasible Action Neighborhood Prior",
+      "title": "Satellite-Free Training for Drone-View Geo-Localization",
       "authors": [
-        "Haochen Niu",
-        "Kanyu Zhang",
-        "Shuyu Yin",
-        "Qinghai Guo",
-        "Peilin Liu",
-        "Fei Wen"
+        "Tao Liu",
+        "Yingzhi Zhang",
+        "Kan Ren",
+        "Xiaoqi Zhao"
       ],
-      "summary": "In real-world robotic manipulation, states typically admit a neighborhood of near-equivalent actions. That is, for each state, there exist a feasible action neighborhood (FAN) rather than a single correct action, within which motions yield indistinguishable progress. However, prevalent VLA training methodologies are directly inherited from linguistic settings and do not exploit the FAN property, thus leading to poor generalization and low sample efficiency. To address this limitation, we introduce a FAN-guided regularizer that shapes the model's output distribution to align with the geometry of FAN. Concretely, we introduce a Gaussian prior that promotes locally smooth and unimodal predictions around the preferred direction and magnitude. In extensive experiments across both reinforced finetuning (RFT) and supervised finetuning (SFT), our method achieves significant improvement in sample efficiency, and success rate in both in-distribution and out-of-distribution (OOD) scenarios. By aligning with the intrinsic action tolerance of physical manipulation, FAN-guided regularization provides a principled and practical method for sample-efficient, and generalizable VLA adaptation.",
-      "published": "2026-04-02T03:30:43Z",
-      "updated": "2026-04-02T03:30:43Z",
-      "arxiv_id": "2604.01570v1",
-      "abs_url": "http://arxiv.org/abs/2604.01570v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01570v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "Accepted by CVPR 2026",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "视觉-语言模型",
-        "少样本/域适应"
-      ],
-      "topic": "视觉-语言模型",
-      "score": 14,
-      "anchor_terms": [
-        "manipulation",
-        "real-world robot",
-        "robot",
-        "robotic",
-        "vision-language-action",
-        "vla"
-      ],
-      "matched_terms": [
-        "manipulation",
-        "real-world robot",
-        "robot",
-        "robotic",
-        "vision-language-action",
-        "vla"
-      ]
-    },
-    {
-      "title": "A Dynamic Toolkit for Transmission Characteristics of Precision Reducers with Explicit Contact Geometry",
-      "authors": [
-        "Jiacheng Miao",
-        "Chao Liu",
-        "Qiliang Wang",
-        "Yunhui Guan",
-        "Weidong He"
-      ],
-      "summary": "Precision reducers are critical components in robotic systems, directly affecting the motion accuracy and dynamic performance of humanoid robots, quadruped robots, collaborative robots, industrial robots, and SCARA robots. This paper presents a dynamic toolkit for analyzing the transmission characteristics of precision reducers with explicit contact geometry. A unified framework is proposed to address the challenges in modeling accurate contact behaviors, evaluating gear stiffness, and predicting system vibrations. By integrating advanced contact theories and numerical solving methods, the proposed toolkit offers higher precision and computational efficiency compared to traditional dynamics software. The toolkit is designed with a modular, scriptable architecture that supports rapid reconfiguration across diverse reducer topologies. Numerical validation against published benchmarks confirms the accuracy of the proposed approach.",
-      "published": "2026-04-02T03:29:01Z",
-      "updated": "2026-04-08T08:46:53Z",
-      "arxiv_id": "2604.02387v2",
-      "abs_url": "http://arxiv.org/abs/2604.02387v2",
-      "pdf_url": "https://arxiv.org/pdf/2604.02387v2",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "21 pages, 8 figures",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "数据集/评测"
-      ],
-      "topic": "数据集/评测",
-      "score": 7,
-      "anchor_terms": [
-        "humanoid",
-        "quadruped",
-        "robot",
-        "robotic"
-      ],
-      "matched_terms": [
-        "humanoid",
-        "quadruped",
-        "robot",
-        "robotic"
-      ]
-    },
-    {
-      "title": "Universal computational thermal imaging overcoming the ghosting effect",
-      "authors": [
-        "Hongyi Xu",
-        "Du Wang",
-        "Chenjun Zhao",
-        "Jiashuo Chen",
-        "Jiale Lin",
-        "Liqin Cao",
-        "Yanfei Zhong",
-        "Yiyuan She",
-        "Fanglin Bao"
-      ],
-      "summary": "Thermal imaging is crucial for night vision but fundamentally hampered by the ghosting effect, a loss of detailed texture in cluttered photon streams. While conventional ghosting mitigation has relied on data post-processing, the recent breakthrough in heat-assisted detection and ranging (HADAR) opens a promising frontier for hyperspectral computational thermal imaging that produces night vision with day-like visibility. However, universal anti-ghosting imaging remains elusive, as state-of-the-art HADAR applies only to limited scenes with uniform materials, whereas material non-uniformity is ubiquitous in the real world. Here, we propose a universal computational thermal imaging framework, TAG (thermal anti-ghosting), to address material non-uniformity and overcome ghosting for high-fidelity night vision. TAG takes hyperspectral photon streams for nonparametric texture recovery, enabling our experimental demonstration of unprecedented expression recovery in thus-far-elusive ghostly human faces -- the archetypal, long-recognized ghosting phenomenon. Strikingly, TAG not only universally outperforms HADAR across various scenes, but also reveals the influence of material non-uniformity, shedding light on HADAR's effectiveness boundary. We extensively test facial texture and expression recovery across day and night, and demonstrate, for the first time, thermal 3D topological alignment and mood detection. This work establishes a universal foundation for high-fidelity computational night vision, with potential applications in autonomous navigation, reconnaissance, healthcare, and wildlife monitoring.",
-      "published": "2026-04-02T02:36:07Z",
-      "updated": "2026-04-02T02:36:07Z",
-      "arxiv_id": "2604.01542v1",
-      "abs_url": "http://arxiv.org/abs/2604.01542v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01542v1",
+      "summary": "Drone-view geo-localization (DVGL) aims to determine the location of drones in GPS-denied environments by retrieving the corresponding geotagged satellite tile from a reference gallery given UAV observations of a location. In many existing formulations, these observations are represented by a single oblique UAV image. In contrast, our satellite-free setting is designed for multi-view UAV sequences, which are used to construct a geometry-normalized UAV-side location representation before cross-view retrieval. Existing approaches rely on satellite imagery during training, either through paired supervision or unsupervised alignment, which limits practical deployment when satellite data are unavailable or restricted. In this paper, we propose a satellite-free training (SFT) framework that converts drone imagery into cross-view compatible representations through three main stages: drone-side 3D scene reconstruction, geometry-based pseudo-orthophoto generation, and satellite-free feature aggregation for retrieval. Specifically, we first reconstruct dense 3D scenes from multi-view drone images using 3D Gaussian splatting and project the reconstructed geometry into pseudo-orthophotos via PCA-guided orthographic projection. This rendering stage operates directly on reconstructed scene geometry without requiring camera parameters at rendering time. Next, we refine these orthophotos with lightweight geometry-guided inpainting to obtain texture-complete drone-side views. Finally, we extract DINOv3 patch features from the generated orthophotos, learn a Fisher vector aggregation model solely from drone data, and reuse it at test time to encode satellite tiles for cross-view retrieval. Experimental results on University-1652 and SUES-200 show that our SFT framework substantially outperforms satellite-free generalization baselines and narrows the gap to methods trained with satellite imagery.",
+      "published": "2026-04-02T03:48:53Z",
+      "updated": "2026-04-03T03:13:11Z",
+      "arxiv_id": "2604.01581v2",
+      "abs_url": "http://arxiv.org/abs/2604.01581v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.01581v2",
       "primary_category": "cs.CV",
       "categories": [
-        "cs.CV",
-        "physics.optics"
-      ],
-      "comment": "9 pages, 6 figures",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "高光谱/多光谱"
-      ],
-      "topic": "高光谱/多光谱",
-      "score": 2,
-      "anchor_terms": [
-        "navigation"
-      ],
-      "matched_terms": [
-        "autonomous navigation",
-        "navigation"
-      ]
-    },
-    {
-      "title": "Robust Autonomous Control of a Magnetic Millirobot in In Vitro Cardiac Flow",
-      "authors": [
-        "Anuruddha Bhattacharjee",
-        "Xinhao Chen",
-        "Lamar O. Mair",
-        "Suraj Raval",
-        "Yancy Diaz-Mercado",
-        "Axel Krieger"
-      ],
-      "summary": "Untethered magnetic millirobots offer significant potential for minimally invasive cardiac therapies; however, achieving reliable autonomous control in pulsatile cardiac flow remains challenging. This work presents a vision-guided control framework enabling precise autonomous navigation of a magnetic millirobot in an in vitro heart phantom under physiologically relevant flow conditions. The system integrates UNet-based localization, A* path planning, and a sliding mode controller with a disturbance observer (SMC-DOB) designed for multi-coil electromagnetic actuation. Although drag forces are estimated using steady-state CFD simulations, the controller compensates for transient pulsatile disturbances during closed-loop operation. In static fluid, the SMC-DOB achieved sub-millimeter accuracy (root-mean-square error, RMSE = 0.49 mm), outperforming PID and MPC baselines. Under moderate pulsatile flow (7 cm/s peak, 20 cP), it reduced RMSE by 37% and peak error by 2.4$\\times$ compared to PID. It further maintained RMSE below 2 mm (0.27 body lengths) under elevated pulsatile flow (10 cm/s peak, 20 cP) and under low-viscosity conditions (4.3 cP, 7 cm/s peak), where baseline controllers exhibited unstable or failed tracking. These results demonstrate robust closed-loop magnetic control under time-varying cardiac flow disturbances and support the feasibility of autonomous millirobot navigation for targeted drug delivery.",
-      "published": "2026-04-02T01:48:04Z",
-      "updated": "2026-04-02T01:48:04Z",
-      "arxiv_id": "2604.01523v1",
-      "abs_url": "http://arxiv.org/abs/2604.01523v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01523v1",
-      "primary_category": "cs.RO",
-      "categories": [
-        "cs.RO"
-      ],
-      "comment": "",
-      "code_url": "",
-      "has_code": false,
-      "labels": [],
-      "topic": "其他",
-      "score": 8,
-      "anchor_terms": [
-        "navigation",
-        "robot"
-      ],
-      "matched_terms": [
-        "autonomous navigation",
-        "navigation",
-        "path planning",
-        "robot"
-      ]
-    },
-    {
-      "title": "MorphoGuard: A Morphology-Based Whole-Body Interactive Motion Controller",
-      "authors": [
-        "Chenjin Wang",
-        "Zheng Yan",
-        "Yanmin Zhou",
-        "Runjie Shen",
-        "Bin He"
-      ],
-      "summary": "Whole-body control (WBC) has demonstrated significant advantages in complex interactive movements of high-dimensional robotic systems. However, when a robot is required to handle dynamic multi-contact combinations along a single kinematic chain-such as pushing open a door with its elbow while grasping an object-it faces major obstacles in terms of complex contact representation and joint configuration coupling. To address this, we propose a new control approach that explicitly manages arbitrary contact combinations, aiming to endow robots with whole-body interactive capabilities. We develop a morphology-constrained WBC network (MorphoGuard)-which is trained on a self-constructed dual-arm physical and simulation platform. A series of model recommendation experiments are designed to systematically investigate the impact of backbone architecture, fusion strategy, and model scale on network performance. To evaluate the control performance, we adopt a multi-object interaction task as the benchmark, requiring the model to simultaneously manipulate multiple target objects to specified positions. Experimental results show that the proposed method achieves a contact point management error of approximately 1 cm, demonstrating its effectiveness in whole-body interactive control.",
-      "published": "2026-04-02T01:13:29Z",
-      "updated": "2026-04-02T01:13:29Z",
-      "arxiv_id": "2604.01517v1",
-      "abs_url": "http://arxiv.org/abs/2604.01517v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.01517v1",
-      "primary_category": "eess.SY",
-      "categories": [
-        "eess.SY",
-        "cs.RO"
+        "cs.CV"
       ],
       "comment": "",
       "code_url": "",
       "has_code": false,
       "labels": [
-        "数据集/评测"
+        "无人机/UAV"
       ],
-      "topic": "数据集/评测",
+      "topic": "无人机/UAV",
       "score": 7,
       "anchor_terms": [
-        "grasp",
-        "grasping",
-        "robot",
-        "robotic"
+        "drone",
+        "satellite image",
+        "satellite imagery",
+        "UAV"
       ],
       "matched_terms": [
-        "grasp",
-        "grasping",
-        "robot",
-        "robotic"
-      ]
+        "drone",
+        "satellite",
+        "satellite image",
+        "satellite imagery",
+        "UAV"
+      ],
+      "title_zh": "无人机视图地理定位的无卫星训练",
+      "summary_zh": "无人机视图地理定位 (DVGL) 旨在通过给定无人机对某个位置的观测，从参考图库中检索相应的地理标记卫星图块，从而确定 GPS 拒绝环境中无人机的位置。在许多现有的公式中，这些观测结果由单个倾斜无人机图像表示。相比之下，我们的无卫星设置是为多视图无人机序列设计的，用于在跨视图检索之前构建几何归一化的无人机侧位置表示。现有方法在训练期间依赖卫星图像，无论是通过配对监督还是无监督对准，这在卫星数据不可用或受到限制时限制了实际部署。在本文中，我们提出了一个无卫星训练（SFT）框架，通过三个主要阶段将无人机图像转换为跨视图兼容的表示：无人机端3D场景重建、基于几何的伪正射影像生成和用于检索的无卫星特征聚合。具体来说，我们首先使用 3D 高斯喷射从多视图无人机图像中重建密集的 3D 场景，并通过 PCA 引导的正射投影将重建的几何图形投影到伪正射影像中。该渲染阶段直接对重建的场景几何体进行操作，在渲染时不需要相机参数。接下来，我们通过轻量级几何引导修复来完善这些正射影像，以获得纹理完整的无人机侧面视图。最后，我们从生成的正射影像中提取 DINOv3 补丁特征，仅从无人机数据中学习 Fisher 矢量聚合模型，并在测试时重用它来编码卫星图块以进行跨视图检索。 University-1652 和 SUES-200 上的实验结果表明，我们的 SFT 框架大大优于无卫星泛化基线，并缩小了与使用卫星图像训练的方法的差距。"
     }
   ]
 }

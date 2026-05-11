@@ -1,6 +1,6 @@
 {
   "date": "2026-04-11",
-  "generated_at": "2026-05-10T10:22:44.048409+00:00",
+  "generated_at": "2026-05-11T04:10:34.206916+00:00",
   "timezone": "Asia/Shanghai",
   "source": "arXiv",
   "source_url": "https://arxiv.org/",
@@ -53,7 +53,9 @@
         "multi-scale",
         "small object",
         "transformer"
-      ]
+      ],
+      "title_zh": "A3-FPN：用于密集视觉预测的渐近内容感知金字塔注意网络",
+      "summary_zh": "学习多尺度表示是解决密集预测任务中对象尺度变化的常见策略。尽管现有的特征金字塔网络具有非常先进的视觉识别能力，但固有的设计缺陷阻碍了它们捕获有区别的特征和识别小物体。在这项工作中，我们提出了渐近内容感知金字塔注意力网络（A3-FPN），通过渐近解缠框架和内容感知注意力模块来增强多尺度特征表示。具体来说，A3-FPN 采用水平扩展的列网络，可实现渐近全局特征交互，并将每个级别与所有分层表示分离。在特征融合中，它从相邻级别收集补充内容，以生成用于上下文感知重采样的位置偏移和权重，并学习深度上下文重新加权以提高类别内相似性。在特征重组中，它进一步加强了尺度内判别特征学习，并根据特征图的信息内容和空间变化重新组装冗余特征。在 MS COCO、VisDrone2019-DET 和 Cityscapes 上进行的大量实验表明，A3-FPN 可以轻松集成到最先进的 CNN 和基于 Transformer 的架构中，从而产生显着的性能提升。值得注意的是，当与 OneFormer 和 Swin-L 主干网配合使用时，A3-FPN 在 MS COCO 上实现了 49.6 mask AP，在 Cityscapes 上实现了 85.6 mIoU。代码可在 https://github.com/mason-ching/A3-FPN 获取。"
     },
     {
       "title": "Multi-modal, multi-scale representation learning for satellite imagery analysis just needs a good ALiBi",
@@ -97,7 +99,9 @@
         "satellite image",
         "satellite imagery",
         "transformer"
-      ]
+      ],
+      "title_zh": "用于卫星图像分析的多模态、多尺度表示学习只需要一个好的 ALiBi",
+      "summary_zh": "视觉基础模型已被证明可以有效地将卫星图像处理为适合下游任务的表示，但是，创建在多个空间分辨率和模式下运行的模型具有挑战性。本文提出了 Scale-ALiBi，一种线性偏置变换器注意机制，对不同地面样本距离尺度的图像块之间的关系具有空间编码偏置。我们使用三重对比和重建架构在对齐的高分辨率和低分辨率光学和低分辨率 SAR 卫星图像数据数据集上提供 Scale-ALiBi 的实现，展示了 GEO-Bench 基准的改进，并公开发布了新策划的数据集。"
     },
     {
       "title": "SatReg: Regression-based Neural Architecture Search for Lightweight Satellite Image Segmentation",
@@ -131,7 +135,9 @@
         "knowledge distillation",
         "satellite",
         "satellite image"
-      ]
+      ],
+      "title_zh": "SatReg：用于轻量级卫星图像分割的基于回归的神经架构搜索",
+      "summary_zh": "随着地球观测工作负载转向机载和边缘处理，遥感分割模型必须在严格的延迟和能源限制下运行。我们提出了 SatReg，一种基于回归的硬件感知调整框架，用于边缘平台上的轻量级遥感分割。使用 CM-UNet 作为教师架构，我们将搜索空间减少为两个主要的宽度相关变量，在 NVIDIA Jetson Orin Nano 上分析一小组学生模型，并拟合 mIoU、延迟和功耗的低阶代理模型。使用知识蒸馏来有效地培训样本学生。学习到的代理可以快速选择部署目标的近乎最佳的架构设置，而无需进行详尽的搜索。结果表明，所选变量对任务准确性和硬件成本的影响不同，使得缩减空间回归成为将混合 CNN-Mamba 分割模型适应未来空间边缘系统的实用策略。"
     },
     {
       "title": "Are Pretrained Image Matchers Good Enough for SAR-Optical Satellite Registration?",
@@ -177,7 +183,9 @@
         "SpaceNet",
         "synthetic aperture radar",
         "zero-shot"
-      ]
+      ],
+      "title_zh": "预训练图像匹配器是否足够适合 SAR 光学卫星配准？",
+      "summary_zh": "跨模态光学 SAR（合成孔径雷达）配准是遥感灾害响应的瓶颈，但现代图像匹配器几乎完全是在自然图像领域开发和基准测试的。我们在 SpaceNet9 上评估了 24 个预训练的匹配器系列（在零样本设置中，没有对卫星或 SAR 数据进行微调或域适应），并在确定性协议下评估了两个额外的跨模式基准，具有平铺大图像推理、稳健的几何过滤和基于连接点的度量。我们的结果揭示了非对称转移——经过显式跨模式训练的匹配器并不总是优于那些没有经过显式跨模式训练的匹配器。虽然 XoFTR（针对可见光热匹配进行训练）和 RoMa 在标记的 SpaceNet9 训练场景上实现了最低报告平均误差为 3.0 美元像素，但 RoMa 在没有任何跨模态训练的情况下实现了这一目标，而在合成跨模态对上训练的 MatchAnything-ELoFTR（3.4 美元像素）紧密匹配，这表明（作为工作假设）基础模型特征 (DINOv2) 可能有助于部分替代的模态不变性进行明确的跨模式监督。 3D 重建匹配器（MASt3R、DUSt3R）并非为传统 2D 图像匹配而设计，对协议高度敏感，并且在默认设置下仍然脆弱。对于单个匹配器，部署协议选择（几何模型、图块大小、内门控）的精度变化高达 $33\\times$，有时超过了在评估的扫描范围内完全交换匹配器的效果 - 仅仿射几何将平均误差从 $12.34$ 减少到 $9.74$ px。这些发现为现有匹配器的实际部署和未来跨模式卫星注册的匹配器设计提供了信息。"
     },
     {
       "title": "Dual-Branch Remote Sensing Infrared Image Super-Resolution",
@@ -220,7 +228,9 @@
         "remote sensing",
         "super-resolution",
         "transformer"
-      ]
+      ],
+      "title_zh": "双路遥感红外图像超分辨",
+      "summary_zh": "遥感红外图像超分辨率旨在从低分辨率输入中恢复更清晰的热观测结果，同时保留目标轮廓、场景布局和辐射稳定性。与可见光图像超分辨率不同，热图像的纹理较弱，对不稳定的局部锐化更敏感，这使得互补的局部和全局建模尤为重要。本文介绍了我们针对 NTIRE 2026 红外图像超分辨率挑战赛的解决方案，这是一个结合了 HAT-L 分支和 MambaIRv2-L 分支的双分支系统。推理管道在 HAT 上应用测试时本地转换，在 MambaIRv2 上应用八路自集成，以及固定等权重图像空间融合。我们报告了官方挑战分数和对来自 Caltech Aerial RGB-Thermal 的 12 个合成四倍热样本的可重复评估，其中融合输出在 PSNR、SSIM 和总体分数方面优于单个分支。结果表明，红外超分辨率受益于局部强变压器恢复和全局稳定状态空间建模之间的明确互补性。"
     },
     {
       "title": "Global monitoring of methane point sources using deep learning on hyperspectral radiance measurements from EMIT",
@@ -264,7 +274,9 @@
         "hyperspectral",
         "transformer",
         "vision transformer"
-      ]
+      ],
+      "title_zh": "使用 EMIT 高光谱辐射测量的深度学习对甲烷点源进行全球监测",
+      "summary_zh": "人为甲烷 (CH4) 点源会导致近期气候强迫、安全隐患和系统效率低下。天基成像光谱学正在成为识别全球排放的工具，但现有方法很大程度上依赖于手动羽流识别。在这里，我们介绍了 EMIT 甲烷分析和羽流定位 (MAPL-EMIT) 模型，这是一种端到端视觉变换器框架，利用地球表面矿物尘源调查 (EMIT) 仪器的完整辐射光谱来联合检索场景内所有像素的甲烷增强情况。这种方法将光谱和空间背景结合在一起，显着降低检测限。 MAPL-EMIT 同时支持增强量化、羽流描绘和源定位，甚至对于多个重叠羽流也是如此。该模型接受了注入全球 EMIT 辐射数据的 360 万条基于物理的合成羽流的训练。综合评估证实了该模型能够以高召回率和精度识别羽流，并捕获相对于现有匹配过滤器方法较弱的羽流。在现实世界的基准测试中，MAPL-EMIT 在 1084 个 EMIT 颗粒的测试集中捕获了 79% 的已知手工注释 NASA L2B 羽流复合体，同时捕获的可信羽流数量是人类分析师识别的两倍。针对一致的机载数据、顶部排放垃圾填埋场和控制释放实验的进一步验证证实了该模型能够识别以前未捕获的来源。通过合并模型生成的指标（例如光谱拟合得分和估计的噪声水平），该框架可以进一步限制误报率。总体而言，MAPL-EMIT 可在整个 EMIT 目录上实现高通量实施，将甲烷监测​​从劳动密集型工作流程转变为快速、可扩展的设施规模全球羽流测绘范例。"
     }
   ]
 }

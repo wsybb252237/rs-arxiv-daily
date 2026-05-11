@@ -1,51 +1,13 @@
 {
   "date": "2026-04-15",
-  "generated_at": "2026-05-10T10:23:01.437914+00:00",
+  "generated_at": "2026-05-11T04:24:43.821019+00:00",
   "timezone": "Asia/Shanghai",
   "source": "arXiv",
   "source_url": "https://arxiv.org/",
   "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202604150000 TO 202604152359]",
-  "total_fetched": 338,
-  "total_matched": 7,
+  "total_fetched": 348,
+  "total_matched": 4,
   "papers": [
-    {
-      "title": "Remote Sensing Image Super-Resolution for Imbalanced Textures: A Texture-Aware Diffusion Framework",
-      "authors": [
-        "Enzhuo Zhang",
-        "Sijie Zhao",
-        "Dilxat Muhtar",
-        "Zhenshi Li",
-        "Xueliang Zhang",
-        "Pengfeng Xiao"
-      ],
-      "summary": "Generative diffusion priors have recently achieved state-of-the-art performance in natural image super-resolution, demonstrating a powerful capability to synthesize photorealistic details. However, their direct application to remote sensing image super-resolution (RSISR) reveals significant shortcomings. Unlike natural images, remote sensing images exhibit a unique texture distribution where ground objects are globally stochastic yet locally clustered, leading to highly imbalanced textures. This imbalance severely hinders the model's spatial perception. To address this, we propose TexADiff, a novel framework that begins by estimating a Relative Texture Density Map (RTDM) to represent the texture distribution. TexADiff then leverages this RTDM in three synergistic ways: as an explicit spatial conditioning to guide the diffusion process, as a loss modulation term to prioritize texture-rich regions, and as a dynamic adapter for the sampling schedule. These modifications are designed to endow the model with explicit texture-aware capabilities. Experiments demonstrate that TexADiff achieves superior or competitive quantitative metrics. Furthermore, qualitative results show that our model generates faithful high-frequency details while effectively suppressing texture hallucinations. This improved reconstruction quality also results in significant gains in downstream task performance. The source code of our method can be found at https://github.com/ZezFuture/TexAdiff.",
-      "published": "2026-04-15T15:36:49Z",
-      "updated": "2026-04-15T15:36:49Z",
-      "arxiv_id": "2604.13994v1",
-      "abs_url": "http://arxiv.org/abs/2604.13994v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.13994v1",
-      "primary_category": "cs.CV",
-      "categories": [
-        "cs.CV"
-      ],
-      "comment": "10 pages, 5 figures, 9 Tables",
-      "code_url": "https://github.com/ZezFuture/TexAdiff",
-      "has_code": true,
-      "labels": [
-        "开源",
-        "图像生成与重建"
-      ],
-      "topic": "图像生成与重建",
-      "score": 6,
-      "anchor_terms": [
-        "remote sensing",
-        "super-resolution"
-      ],
-      "matched_terms": [
-        "remote sensing",
-        "super-resolution"
-      ]
-    },
     {
       "title": "UHR-BAT: Budget-Aware Token Compression Vision-Language model for Ultra-High-Resolution Remote Sensing",
       "authors": [
@@ -87,50 +49,9 @@
         "multi-scale",
         "remote sensing",
         "small object"
-      ]
-    },
-    {
-      "title": "Enhanced Text-to-Image Generation by Fine-grained Multimodal Reasoning",
-      "authors": [
-        "Yongjin Kim",
-        "Yoonjin Oh",
-        "Yerin Kim",
-        "Hyomin Kim",
-        "Jeeyoung Yun",
-        "Yujung Heo",
-        "Minjun Kim",
-        "Sungwoong Kim"
       ],
-      "summary": "With the rapid progress of Multimodal Large Language Models (MLLMs), unified MLLMs that jointly perform image understanding and generation have advanced significantly. However, despite the inherent reasoning capabilities of unified MLLMs for self-reflection and self-refinement, their use in text-to-image generation remains largely underexplored. Meanwhile, existing multimodal reasoning-based image generation methods mostly rely on holistic image-text alignment judgments, without fine-grained reflection and refinement of detailed prompt attributes, leading to limited fine-grained control. Therefore, we propose Fine-grained Multimodal Reasoning (FiMR), a framework that leverages decomposed visual question answering (VQA) to break down an input prompt into minimal semantic units-such as entities and attributes-and verify each unit via VQA to generate explicit, fine-grained feedback. Based on this feedback, FiMR then applies targeted, localized refinements. This fine-grained self-reasoning and self-refinement enable MLLMs to achieve more precise improvements in image-prompt alignment and overall generation quality at test time. Extensive experiments demonstrate that FiMR consistently outperforms image generation baselines, including reasoning-based methods, particularly on compositional text-to-image benchmarks. The code and models are available at https://github.com/KU-AGI/FiMR",
-      "published": "2026-04-15T05:24:29Z",
-      "updated": "2026-04-16T04:19:42Z",
-      "arxiv_id": "2604.13491v2",
-      "abs_url": "http://arxiv.org/abs/2604.13491v2",
-      "pdf_url": "https://arxiv.org/pdf/2604.13491v2",
-      "primary_category": "cs.CV",
-      "categories": [
-        "cs.CV"
-      ],
-      "comment": "",
-      "code_url": "https://github.com/KU-AGI/FiMR",
-      "has_code": true,
-      "labels": [
-        "开源",
-        "图像生成与重建",
-        "视觉-语言模型",
-        "数据集/评测"
-      ],
-      "topic": "图像生成与重建",
-      "score": 6,
-      "anchor_terms": [
-        "image generation"
-      ],
-      "matched_terms": [
-        "image generation",
-        "large language model",
-        "MLLM",
-        "multimodal large language model"
-      ]
+      "title_zh": "UHR-BAT：用于超高分辨率遥感的预算感知令牌压缩视觉语言模型",
+      "summary_zh": "超高分辨率 (UHR) 遥感图像将公里级上下文与可能仅占据几个像素的关键查询证据结合起来。如此巨大的空间尺度导致视觉标记的二次爆炸，并阻碍了从小物体中提取信息。以前的工作利用直接下采样、密集平铺或全局 top-k 修剪，这要么会损害查询关键的图像细节，要么会导致不可预测的计算。在本文中，我们提出了 UHR-BAT，这是一种查询引导和区域忠实的令牌压缩框架，可在严格的上下文预算下有效地选择视觉令牌。具体来说，我们利用文本引导的、多尺度的视觉标记重要性估计，有效地解决了实现精确而低成本的特征提取的挑战。此外，通过引入按区域保留和合并策略，我们减少了视觉标记冗余，进一步降低了计算预算。实验结果表明，UHR-BAT 在各种基准测试中均实现了最先进的性能。代码可在 https://github.com/Yunkaidang/UHR 获取。"
     },
     {
       "title": "SatBLIP: Context Understanding and Feature Identification from Satellite Imagery with Vision-Language Learning",
@@ -173,60 +94,9 @@
         "satellite",
         "satellite image",
         "satellite imagery"
-      ]
-    },
-    {
-      "title": "Decoding the Delta: Unifying Remote Sensing Change Detection and Understanding with Multimodal Large Language Models",
-      "authors": [
-        "Xiaohe Li",
-        "Jiahao Li",
-        "Kaixin Zhang",
-        "Yuqiang Fang",
-        "Leilei Lin",
-        "Hong Wang",
-        "Haohua Wu",
-        "Zide Fan"
       ],
-      "summary": "While Multimodal Large Language Models (MLLMs) excel in general vision-language tasks, their application to remote sensing change understanding is hindered by a fundamental \"temporal blindness\". Existing architectures lack intrinsic mechanisms for multi-temporal contrastive reasoning and struggle with precise spatial grounding. To address this, we first introduce Delta-QA, a comprehensive benchmark comprising 180k visual question-answering samples. Delta-QA unifies pixel-level segmentation and visual question answering across bi- and tri-temporal scenarios, structuring change interpretation into four progressive cognitive dimensions. Methodologically, we propose Delta-LLaVA, a novel MLLM framework explicitly tailored for multi-temporal remote sensing interpretation. It overcomes the limitations of naive feature concatenation through three core innovations: a Change-Enhanced Attention module that systematically isolates and amplifies visual differences, a Change-SEG module utilizing Change Prior Embedding to extract differentiable difference features as input for the LLM, and Local Causal Attention to prevent cross-temporal contextual leakage. Extensive experiments demonstrate that Delta-LLaVA decisively outperforms leading generalist MLLMs and specialized segmentation models in complex change deduction and high-precision boundary localization, establishing a unified framework for earth observation intelligence.",
-      "published": "2026-04-15T16:23:05Z",
-      "updated": "2026-04-15T16:23:05Z",
-      "arxiv_id": "2604.14044v1",
-      "abs_url": "http://arxiv.org/abs/2604.14044v1",
-      "pdf_url": "https://arxiv.org/pdf/2604.14044v1",
-      "primary_category": "cs.CV",
-      "categories": [
-        "cs.CV"
-      ],
-      "comment": "",
-      "code_url": "",
-      "has_code": false,
-      "labels": [
-        "变化检测",
-        "视觉-语言模型",
-        "数据集/评测"
-      ],
-      "topic": "变化检测",
-      "score": 20,
-      "anchor_terms": [
-        "change detection",
-        "earth observation",
-        "MLLM",
-        "multimodal large language model",
-        "remote sensing",
-        "visual question answering"
-      ],
-      "matched_terms": [
-        "change detection",
-        "earth observation",
-        "large language model",
-        "LLaVA",
-        "LLM",
-        "MLLM",
-        "multimodal large language model",
-        "remote sensing",
-        "remote sensing change detection",
-        "visual question answering"
-      ]
+      "title_zh": "SatBLIP：通过视觉语言学习从卫星图像中进行上下文理解和特征识别",
+      "summary_zh": "农村环境风险是由当地条件（例如住房质量、道路通行、地表格局）决定的，但标准脆弱性指数很粗略，对风险背景的了解有限。我们提出了 SatBLIP，这是一种用于农村背景理解和特征识别的卫星特定视觉语言框架，可预测县级社会脆弱性指数（SVI）。 SatBLIP 通过将对比图像文本对齐与针对卫星语义定制的引导式字幕相结合，解决了先前遥感管道（手工制作的特征、手动虚拟审计和自然图像训练的 VLM）的局限性。我们使用 GPT-4o 生成卫星图块的结构化描述（屋顶类型/状况、房屋大小、院子属性、绿化和道路环境），然后微调卫星适应的 BLIP 模型以生成看不见的图像的说明。字幕使用 CLIP 进行编码，并通过注意空间聚合下的 SVI 估计与 LLM 派生的嵌入融合。使用 SHAP，我们确定了显着的属性（例如屋顶形式/条件、街道宽度、植被、汽车/开放空间），这些属性持续推动稳健的预测，从而实现农村风险环境的可解释映射。"
     },
     {
       "title": "Creo: From One-Shot Image Generation to Progressive, Co-Creative Ideation",
@@ -262,7 +132,9 @@
       ],
       "matched_terms": [
         "image generation"
-      ]
+      ],
+      "title_zh": "Creo：从一次性图像生成到渐进式共同创意",
+      "summary_zh": "文本到图像 (T2I) 系统可以快速生成高保真图像，但与视觉创意的发展方式不一致。 T2I 系统生成代表用户做出隐式视觉决策的输出，通常会引入细粒度的细节，这些细节可能会过早地锚定用户并限制他们尽早保持选项开放的能力，并在编辑过程中导致难以纠正的意外更改，并降低用户的控制感。为了解决这些问题，我们推出了 Creo，这是一个多阶段 T2I 系统，它通过从粗略草图到高分辨率输出来构建图像生成，并公开中间抽象，用户可以在其中进行增量更改。类似草图的抽象邀请用户进行编辑，并允许用户在想法由于其临时性而仍在形成时保持设计选项的开放。 Creo 中的每个阶段都可以通过手动更改和 AI 辅助操作进行修改，通过保留先前决策的锁定机制实现细粒度的逐步控制，以便后续编辑仅影响指定的区域或属性。用户保持在循环中，跨阶段制定和验证决策，而系统应用差异而不是重新生成完整图像，随着保真度的提高而减少漂移。一项使用一次性基线的比较研究表明，参与者对 Creo 输出感到更强的所有权，因为他们能够跟踪自己在构建图像时的决策。此外，基于嵌入的分析表明，Creo 输出的同质性不如一次性结果。这些发现表明，多阶段生成与中间控制和决策锁定相结合，是提高生成系统的可控性、用户代理、创造力和输出多样性的关键设计原则。"
     },
     {
       "title": "GeoAgentBench: A Dynamic Execution Benchmark for Tool-Augmented Agents in Spatial Analysis",
@@ -306,7 +178,9 @@
         "LLM",
         "robust",
         "VLM"
-      ]
+      ],
+      "title_zh": "GeoAgentBench：空间分析中工具增强代理的动态执行基准",
+      "summary_zh": "将大型语言模型 (LLM) 集成到地理信息系统 (GIS) 中标志着向自主空间分析的范式转变。然而，由于地理空间工作流程的复杂性、多步骤性质，评估这些基于法学硕士的代理仍然具有挑战性。现有的基准主要依赖于静态文本或代码匹配，忽略动态运行时反馈和空间输出的多模态性质。为了弥补这一差距，我们引入了 GeoAgentBench (GABench)，这是一种为工具增强型 GIS 代理量身定制的动态交互式评估基准。 GABench 提供了一个集成 117 个原子 GIS 工具的真实执行沙箱，涵盖 6 个核心 GIS 领域的 53 个典型空间分析任务。认识到精确的参数配置是动态 GIS 环境中执行成功的主要决定因素，我们设计了参数执行准确性 (PEA) 指标，该指标利用“最后尝试对齐”策略来量化隐式参数推断的保真度。作为补充，提出了基于视觉语言模型（VLM）的验证来评估数据空间准确性和制图风格的遵守情况。此外，为了解决因参数不一致和运行时异常导致的频繁任务失败问题，我们开发了一种新颖的代理架构 Plan-and-React，它通过将全局编排与逐步反应执行解耦来模仿专家认知工作流程。对七个具有代表性的法学硕士进行的大量实验表明，计划与反应范式显着优于传统框架，实现了逻辑严谨性和执行鲁棒性之间的最佳平衡，特别是在多步推理和错误恢复方面。我们的研究结果强调了当前的能力边界，并为评估和推进下一代自主 GeoAI 建立了稳健的标准。"
     }
   ]
 }
