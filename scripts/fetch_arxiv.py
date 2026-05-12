@@ -472,7 +472,8 @@ def fetch_daily(
     "total_matched": len(matched),
     "papers": matched,
   }
-  write_json(output_dir / f"{target_date.isoformat()}.json", payload)
+  if matched:
+    write_json(output_dir / f"{target_date.isoformat()}.json", payload)
   return payload
 
 

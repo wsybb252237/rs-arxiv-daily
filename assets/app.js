@@ -232,7 +232,7 @@ function renderLabelFilters() {
 }
 
 function renderDateFilters() {
-  const counts = getDateCounts();
+  const counts = getDateCounts().filter(([, count]) => count > 0);
   const options = [["全部", state.papers.length], ...counts];
   $("#dateFilters").innerHTML = options
     .map(([date, count]) => {
