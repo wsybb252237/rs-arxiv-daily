@@ -15,6 +15,11 @@ on:
         required: false
         default: "1"
         type: string
+      no_date_filter:
+        description: "Ignore submittedDate filter (use for Monday backfill, fetches latest papers)"
+        required: false
+        default: false
+        type: boolean
       rebuild_index:
         description: "Only rebuild index from existing data (re-apply labels, no new fetch)"
         required: false
@@ -44,12 +49,14 @@ jobs:
           DAYS="${{ github.event.inputs.days }}"
           DATE="${{ github.event.inputs.date }}"
           REBUILD="${{ github.event.inputs.rebuild_index }}"
+          NO_DATE_FILTER="${{ github.event.inputs.no_date_filter }}"
           ARGS="--timezone Asia/Shanghai --max-results 700"
           if [ "$REBUILD" = "true" ]; then
             python scripts/fetch_arxiv.py --rebuild-index
           elif [ -n "$DATE" ] || [ -n "$DAYS" ]; then
             if [ -n "$DATE" ]; then ARGS="$ARGS --date $DATE"; fi
             if [ -n "$DAYS" ]; then ARGS="$ARGS --days $DAYS"; fi
+            if [ "$NO_DATE_FILTER" = "true" ]; then ARGS="$ARGS --no-date-filter"; fi
             python scripts/fetch_arxiv.py $ARGS
           else
             # Scheduled run: no-date-filter fetches latest papers regardless of submittedDate
