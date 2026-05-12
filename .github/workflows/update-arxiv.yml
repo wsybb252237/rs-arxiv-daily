@@ -47,10 +47,13 @@ jobs:
           ARGS="--timezone Asia/Shanghai --max-results 700"
           if [ "$REBUILD" = "true" ]; then
             python scripts/fetch_arxiv.py --rebuild-index
-          else
+          elif [ -n "$DATE" ] || [ -n "$DAYS" ]; then
             if [ -n "$DATE" ]; then ARGS="$ARGS --date $DATE"; fi
             if [ -n "$DAYS" ]; then ARGS="$ARGS --days $DAYS"; fi
             python scripts/fetch_arxiv.py $ARGS
+          else
+            # Scheduled run: no-date-filter fetches latest papers regardless of submittedDate
+            python scripts/fetch_arxiv.py --timezone Asia/Shanghai --max-results 700 --no-date-filter
           fi
 
       - name: Commit archive updates
