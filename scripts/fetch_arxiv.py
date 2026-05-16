@@ -8,6 +8,7 @@ import json
 import re
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -129,6 +130,14 @@ def fetch_feed(query: str, max_results: int, attempts: int = 6) -> str:
     try:
       with urllib.request.urlopen(request, timeout=75) as response:
         return response.read().decode("utf-8")
+    except urllib.error.HTTPError as error:
+      last_error = error
+      if attempt == attempts:
+        break
+      # 429 rate-limit: arXiv needs a long cooldown; use 90s base instead of 8s
+      wait = (90 if error.code == 429 else 8) * attempt
+      print(f"HTTP {error.code} on attempt {attempt}/{attempts}, waiting {wait}s...", file=sys.stderr)
+      time.sleep(wait)
     except Exception as error:
       last_error = error
       if attempt == attempts:
