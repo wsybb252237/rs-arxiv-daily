@@ -1,0 +1,885 @@
+{
+  "date": "2026-05-14",
+  "generated_at": "2026-05-16T05:10:56.209873+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202605140000 TO 202605142359]",
+  "total_fetched": 430,
+  "total_matched": 19,
+  "papers": [
+    {
+      "title": "HiSem: Hierarchical Semantic Disentangling for Remote Sensing Image Change Captioning",
+      "authors": [
+        "Man Wang",
+        "Chenyang Liu",
+        "Wenjun Li",
+        "Feng Ni",
+        "Bing Jia",
+        "Baoqi Huang",
+        "Riting Xia",
+        "Zhenwei Shi"
+      ],
+      "summary": "Remote sensing image change captioning (RSICC) aims to achieve high-level semantic understanding of genuine changes occurring between bi-temporal images. Despite notable progress, existing methods are fundamentally limited by a shared modeling assumption: changed and unchanged image pairs, which have intrinsically different semantic granularities, are processed under a unified modeling strategy. This modeling inconsistency leads to semantic entanglement between coarse-grained change existence judgment and fine-grained semantic understanding.To address the above limitation, we propose a novel hierarchical semantic disentangling network (HiSem) that explicitly disentangles semantic representations of different granularities. Specifically, we first introduce the Bidirectional Differential Attention Modulation (BDAM) module that leverages discrepancy-aware attention to enhance cross-temporal interactions, thereby amplifying true change signals while suppressing irrelevant variations. Building upon this, we design a Hierarchical Adaptive Semantic Disentanglement (HASD) module that performs adaptive routing at two hierarchical levels: a coarse-grained image-level routing mechanism distinguishes changed and unchanged image pairs, while a fine-grained token-level Mixture-of-Experts (MoE) block models diverse and heterogeneous change semantics for changed samples. Extensive experiments on two benchmark datasets demonstrate that HiSem outperfoms previous methods, achieving a significant improvement of +7.52\\% BLEU-4 on the WHU-CDC dataset. More importantly, our approach provides a structured perspective for RSICC by explicitly aligning model design with the intrinsic semantic heterogeneity of bi-temporal scenes. The code will be available at https://github.com/Man-Wang-star/HiSem",
+      "published": "2026-05-14T16:23:16Z",
+      "updated": "2026-05-14T16:23:16Z",
+      "arxiv_id": "2605.15024v1",
+      "abs_url": "http://arxiv.org/abs/2605.15024v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.15024v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/Man-Wang-star/HiSem",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像描述与视觉推理",
+        "数据集/评测"
+      ],
+      "topic": "图像描述与视觉推理",
+      "score": 5,
+      "anchor_terms": [
+        "remote sensing",
+        "temporal"
+      ],
+      "matched_terms": [
+        "remote sensing",
+        "temporal",
+        "WHU"
+      ],
+      "title_zh": "HiSem：遥感图像变化字幕的分层语义解开",
+      "summary_zh": "遥感图像变化字幕（RSICC）旨在实现对双时态图像之间发生的真实变化的高级语义理解。尽管取得了显着的进展，但现有方法从根本上受到共享建模假设的限制：变化和未变化的图像对具有本质上不同的语义粒度，但在统一的建模策略下进行处理。这种建模不一致导致粗粒度变化存在判断和细粒度语义理解之间的语义纠缠。为了解决上述限制，我们提出了一种新颖的分层语义解缠网络（HiSem），它显式地解开了不同粒度的语义表示。具体来说，我们首先引入双向差分注意调制（BDAM）模块，该模块利用差异感知注意来增强跨时间交互，从而放大真实的变化信号，同时抑制不相关的变化。在此基础上，我们设计了一个分层自适应语义解缠（HASD）模块，该模块在两个层级上执行自适应路由：粗粒度图像级路由机制区分已更改和未更改的图像对，而细粒度令牌级专家混合（MoE）模块则为已更改样本的多样化和异构变化语义进行建模。对两个基准数据集的大量实验表明，HiSem 优于之前的方法，在 WHU-CDC 数据集上实现了 +7.52\\% BLEU-4 的显着改进。更重要的是，我们的方法通过明确地将模型设计与双时态场景的内在语义异质性保持一致，为 RSICC 提供了结构化的视角。代码可在 https://github.com/Man-Wang-star/HiSem 获取"
+    },
+    {
+      "title": "Sat3DGen: Comprehensive Street-Level 3D Scene Generation from Single Satellite Image",
+      "authors": [
+        "Ming Qian",
+        "Zimin Xia",
+        "Changkun Liu",
+        "Shuailei Ma",
+        "Wen Wang",
+        "Zeran Ke",
+        "Bin Tan",
+        "Hang Zhang",
+        "Gui-Song Xia"
+      ],
+      "summary": "Generating a street-level 3D scene from a single satellite image is a crucial yet challenging task. Current methods present a stark trade-off: geometry-colorization models achieve high geometric fidelity but are typically building-focused and lack semantic diversity. In contrast, proxy-based models use feed-forward image-to-3D frameworks to generate holistic scenes by jointly learning geometry and texture, a process that yields rich content but coarse and unstable geometry. We attribute these geometric failures to the extreme viewpoint gap and sparse, inconsistent supervision inherent in satellite-to-street data. We introduce Sat3DGen to address these fundamental challenges, which embodies a geometry-first methodology. This methodology enhances the feed-forward paradigm by integrating novel geometric constraints with a perspective-view training strategy, explicitly countering the primary sources of geometric error. This geometry-centric strategy yields a dramatic leap in both 3D accuracy and photorealism. For validation, we first constructed a new benchmark by pairing the VIGOR-OOD test set with high-resolution DSM data. On this benchmark, our method improves geometric RMSE from 6.76m to 5.20m. Crucially, this geometric leap also boosts photorealism, reducing the Fréchet Inception Distance (FID) from $\\sim$40 to 19 against the leading method, Sat2Density++, despite using no extra tailored image-quality modules. We demonstrate the versatility of our high-quality 3D assets through diverse downstream applications, including semantic-map-to-3D synthesis, multi-camera video generation, large-scale meshing, and unsupervised single-image Digital Surface Model (DSM) estimation. The code has been released on https://github.com/qianmingduowan/Sat3DGen.",
+      "published": "2026-05-14T15:48:15Z",
+      "updated": "2026-05-14T15:48:15Z",
+      "arxiv_id": "2605.14984v1",
+      "abs_url": "http://arxiv.org/abs/2605.14984v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14984v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "ICLR 2026; code: https://github.com/qianmingduowan/Sat3DGen demo: https://huggingface.co/spaces/qian43/Sat3DGen project page: https://qianmingduowan.github.io/Sat3DGen_project_page/",
+      "code_url": "https://github.com/qianmingduowan/Sat3DGen",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "无监督与弱监督",
+        "LiDAR/点云",
+        "数据集/评测"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 7,
+      "anchor_terms": [
+        "satellite image",
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "digital surface model",
+        "DSM",
+        "satellite",
+        "satellite image",
+        "unsupervised"
+      ],
+      "title_zh": "Sat3DGen：从单卫星图像生成全面的街道级 3D 场景",
+      "summary_zh": "从单个卫星图像生成街道级 3D 场景是一项至关重要但具有挑战性的任务。当前的方法存在明显的权衡：几何着色模型实现了高几何保真度，但通常以建筑物为中心，缺乏语义多样性。相比之下，基于代理的模型使用前馈图像到 3D 框架，通过联合学习几何和纹理来生成整体场景，这一过程会产生丰富的内容，但几何结构粗糙且不稳定。我们将这些几何故障归因于卫星到街道数据固有的极端视点差距和稀疏、不一致的监督。我们引入 Sat3DGen 来解决这些基本挑战，它体现了几何优先的方法。该方法通过将新颖的几何约束与透视训练策略相结合来增强前馈范式，明确地对抗几何误差的主要来源。这种以几何为中心的策略在 3D 精度和真实感方面实现了巨大飞跃。为了进行验证，我们首先将 VIGOR-OOD 测试集与高分辨率 DSM 数据配对，构建了一个新的基准。在此基准测试中，我们的方法将几何 RMSE 从 6.76m 提高到 5.20m。至关重要的是，这种几何飞跃还提高了照片真实感，尽管没有使用额外定制的图像质量模块，但与领先方法 Sat2Density++ 相比，Fréchet 起始距离 (FID) 从 $\\sim$40 减少到 19。我们通过各种下游应用展示了高质量 3D 资产的多功能性，包括语义图到 3D 合成、多摄像头视频生成、大规模网格划分和无监督单图像数字表面模型 (DSM) 估计。代码已发布于https://github.com/qianmingduowan/Sat3DGen。"
+    },
+    {
+      "title": "KGPFN: Unlocking the Potential of Knowledge Graph Foundation Model via In-Context Learning",
+      "authors": [
+        "Yisen Gao",
+        "Jiaxin Bai",
+        "Haoyu Huang",
+        "Zhongwei Xie",
+        "Yufei Li",
+        "Hong Ting Tsang",
+        "Sirui Han",
+        "Yangqiu Song"
+      ],
+      "summary": "Knowledge graph (KG) foundation models aim to generalize across graphs with unseen entities and relations by learning transferable relational structure. However, most existing methods primarily emphasize relation-level universality, while in-context learning, the other pillar of foundation models remains under-explored for KG reasoning. In KGs, context is inherently structured and heterogeneous: effective prediction requires conditioning on the local context around the query entities as well as the global context that summarizes how a relation behaves across many instances. We propose KGPFN, a KG foundation model using Prior-data Fitted Network that unifies transferable relational regularities with inference-time in-context learning from structured context. KGPFN first learns relation representations via message passing on relation graphs to capture cross-graph relational invariances. For query-specific reasoning, it encodes local neighborhoods using a multi-layer NBFNet as local context. To enable ICL at global scale, it constructs relation-specific global context by retrieving a large set of instances of the query relation together with their local neighborhoods, and aggregates them within a Prior-Data Fitted Network framework that combines feature-level and sample-level attention. Through multi-graph pretraining on diverse KGs, KGPFN learns when to instantiate reusable patterns and when to override them using contextual evidence. Experiments on 57 KG benchmarks demonstrate that KGPFN achieves strong adaptation to previously unseen graphs through in-context learning alone, consistently outperforming competitive fine-tuned KG foundation models. Our code is available at https://github.com/HKUST-KnowComp/KGPFN.",
+      "published": "2026-05-14T14:41:19Z",
+      "updated": "2026-05-14T14:41:19Z",
+      "arxiv_id": "2605.14907v1",
+      "abs_url": "http://arxiv.org/abs/2605.14907v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14907v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/HKUST-KnowComp/KGPFN",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "基础模型",
+        "视觉-语言模型",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 4,
+      "anchor_terms": [
+        "in-context learning"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "in-context learning"
+      ],
+      "title_zh": "KGPFN：通过上下文学习释放知识图谱基础模型的潜力",
+      "summary_zh": "知识图（KG）基础模型旨在通过学习可转移的关系结构来泛化具有看不见的实体和关系的图。然而，大多数现有方法主要强调关系级别的普遍性，而知识图谱推理的基础模型的另一个支柱——上下文学习——仍未得到充分探索。在知识图谱中，上下文本质上是结构化和异构的：有效的预测需要对查询实体周围的本地上下文以及总结关系在多个实例之间的行为方式进行调节。我们提出了 KGPFN，这是一种使用先验数据拟合网络的 KG 基础模型，它将可转移的关系规律与来自结构化上下文的推理时间上下文学习相结合。 KGPFN 首先通过在关系图上传递消息来学习关系表示，以捕获跨图关系不变性。对于特定于查询的推理，它使用多层 NBFNet 作为局部上下文对局部邻域进行编码。为了在全球范围内启用 ICL，它通过检索大量查询关系实例及其本地邻域来构建特定于关系的全局上下文，并将它们聚合到结合了特征级和样本级注意力的先验数据拟合网络框架中。通过对不同知识图谱进行多图预训练，KGPFN 学习何时实例化可重用模式以及何时使用上下文证据覆盖它们。 57 个 KG 基准的实验表明，KGPFN 仅通过上下文学习就实现了对以前未见过的图的强大适应，始终优于竞争性的微调 KG 基础模型。我们的代码可在 https://github.com/HKUST-KnowComp/KGPFN 获取。"
+    },
+    {
+      "title": "TERRA-CD: Multi-Temporal Framework for Multi-class and Semantic Change Detection",
+      "authors": [
+        "Omkar Oak",
+        "Rukmini Nazre",
+        "Rujuta Budke",
+        "Suraj Sawant"
+      ],
+      "summary": "Urban vegetation monitoring plays a vital role in understanding environmental changes, yet comprehensive datasets for this purpose remain limited. To address this gap, we present the Temporal Remote-sensing Repository for Analyzing Change Detection (TERRA-CD), a benchmark dataset comprising 5,221 Sentinel-2 image pairs from 2019 and 2024, covering 232 cities across the USA and Europe. The dataset features three distinct annotation schemes: 4-class land cover mapping masks, 3-class vegetation change masks, and 13-class semantic change masks capturing all possible land cover transitions. Using various deep learning approaches including Siamese networks, STANet variants, Bi-SRNet, Changemask, Post-Classification Comparison, and HRSCD strategies, we evaluated the dataset's effectiveness for both vegetation Multi-class Change Detection as well as Semantic Change Detection. The proposed dataset and methods are available at https://github.com/omkarsoak/TERRA-CD.",
+      "published": "2026-05-14T10:08:51Z",
+      "updated": "2026-05-14T10:08:51Z",
+      "arxiv_id": "2605.14651v1",
+      "abs_url": "http://arxiv.org/abs/2605.14651v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14651v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Paper presented at 11th International Congress on Information and Communication Technology (ICICT) 2026, London",
+      "code_url": "https://github.com/omkarsoak/TERRA-CD",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "语义分割",
+        "变化检测",
+        "时间序列与视频",
+        "高光谱/多光谱",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 7,
+      "anchor_terms": [
+        "change detection",
+        "land cover mapping",
+        "Sentinel-2",
+        "temporal"
+      ],
+      "matched_terms": [
+        "change detection",
+        "land cover",
+        "land cover mapping",
+        "multi-temporal",
+        "Sentinel-2",
+        "temporal"
+      ],
+      "title_zh": "TERRA-CD：用于多类和语义变化检测的多时态框架",
+      "summary_zh": "城市植被监测在了解环境变化方面发挥着至关重要的作用，但用于此目的的综合数据集仍然有限。为了解决这一差距，我们推出了用于分析变化检测的时态遥感存储库 (TERRA-CD)，这是一个基准数据集，包含 2019 年至 2024 年的 5,221 个 Sentinel-2 图像对，覆盖美国和欧洲的 232 个城市。该数据集具有三种不同的注释方案：4 类土地覆盖绘图掩模、3 类植被变化掩模和捕获所有可能的土地覆盖转变的 13 类语义变化掩模。使用各种深度学习方法，包括 Siamese 网络、STANet 变体、Bi-SRNet、Changemask、分类后比较和 HRSCD 策略，我们评估了数据集在植被多类变化检测和语义变化检测方面的有效性。建议的数据集和方法可在 https://github.com/omkarsoak/TERRA-CD 获取。"
+    },
+    {
+      "title": "GeoVista: Visually Grounded Active Perception for Ultra-High-Resolution Remote Sensing Understanding",
+      "authors": [
+        "Jiashun Zhu",
+        "Ronghao Fu",
+        "Jiasen Hu",
+        "Nachuan Xing",
+        "Xu Na",
+        "Xiao Yang",
+        "Zhiwen Lin",
+        "Weipeng Zhang",
+        "Lang Sun",
+        "Zhiheng Xue",
+        "Haoran Liu",
+        "Weijie Zhang",
+        "Bo Yang"
+      ],
+      "summary": "Interpreting ultra-high-resolution (UHR) remote sensing images requires models to search for sparse and tiny visual evidence across large-scale scenes. Existing remote sensing vision-language models can inspect local regions with zooming and cropping tools, but most exploration strategies follow either a one-shot focus or a single sequential trajectory. Such single-path exploration can lose global context, leave scattered regions unvisited, and revisit or count the same evidence multiple times. To this end, we propose GeoVista, a planning-driven active perception framework for UHR remote sensing interpretation. Instead of committing to one zooming path, GeoVista first builds a global exploration plan, then verifies multiple candidate regions through branch-wise local inspection, while maintaining an explicit evidence state for cross-region aggregation and de-duplication. To enable this behavior, we introduce APEX-GRO, a cold-start supervised trajectory corpus that reformulates diverse UHR tasks as Global-Region-Object interactive reasoning processes with a unified, scale-invariant spatial representation. We further design an Observe-Plan-Track mechanism for global observation, adaptive region inspection, and evidence tracking, and align the model with a GRPO-based strategy using step-wise rewards for planning, localization, and final answer correctness. Experiments on RSHR-Bench, XLRS-Bench, and LRS-VQA show that GeoVista achieves state-of-the-art performance. Code and dataset are available at https://github.com/ryan6073/GeoVista",
+      "published": "2026-05-14T07:15:46Z",
+      "updated": "2026-05-14T07:15:46Z",
+      "arxiv_id": "2605.14475v1",
+      "abs_url": "http://arxiv.org/abs/2605.14475v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14475v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/ryan6073/GeoVista",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像描述与视觉推理",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "图像描述与视觉推理",
+      "score": 5,
+      "anchor_terms": [
+        "crop",
+        "LoRA",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "crop",
+        "LoRA",
+        "remote sensing"
+      ],
+      "title_zh": "GeoVista：用于超高分辨率遥感理解的视觉基础主动感知",
+      "summary_zh": "解释超高分辨率（UHR）遥感图像需要模型在大规模场景中搜索稀疏且微小的视觉证据。现有的遥感视觉语言模型可以使用缩放和裁剪工具检查局部区域，但大多数探索策略遵循一次性聚焦或单个顺序轨迹。这种单路径探索可能会丢失全局背景，使分散的区域未被访问，并多次重新访问或计算相同的证据。为此，我们提出了GeoVista，一种用于UHR遥感解译的规划驱动的主动感知框架。 GeoVista 没有致力于单一的缩放路径，而是首先构建全局探索计划，然后通过分支局部检查验证多个候选区域，同时维护跨区域聚合和重复数据删除的明确证据状态。为了实现这种行为，我们引入了 APEX-GRO，这是一个冷启动监督轨迹语料库，它将各种 UHR 任务重新表述为具有统一的、尺度不变的空间表示的全局-区域-对象交互式推理过程。我们进一步设计了用于全局观察、自适应区域检查和证据跟踪的观察-计划-跟踪机制，并将模型与基于 GRPO 的策略结合起来，使用逐步奖励来进行规划、本地化和最终答案的正确性。 RSHR-Bench、XLRS-Bench 和 LRS-VQA 上的实验表明，GeoVista 实现了最先进的性能。代码和数据集可在 https://github.com/ryan6073/GeoVista 获取"
+    },
+    {
+      "title": "Exemplar Partitioning for Mechanistic Interpretability",
+      "authors": [
+        "Jessica Rumbelow"
+      ],
+      "summary": "We introduce Exemplar Partitioning (EP), an unsupervised method for constructing interpretable feature dictionaries from large language model activations with $\\sim 10^{3}\\times$ fewer tokens than comparable sparse autoencoders (SAEs). An EP dictionary is a Voronoi partition of activation space, built by leader-clustering streamed activations within a distance threshold. Each region is anchored by an observed exemplar that serves as both its membership criterion and intervention direction; dictionary size is not prespecified, but determined by the activation geometry at that threshold. Because exemplars are observed rather than learned, dictionaries built from the same data stream are directly comparable across layers, models, and training checkpoints. We characterise EP as an interpretability object via targeted demonstrations of properties newly accessible through this construction, plus one head-to-head benchmark. In Gemma-2-2B, EP dictionary regions are interpretable and support causal interventions: refusal in instruction-tuned Gemma concentrates in a region whose exemplar ablation can collapse held-out refusal. Cross-checkpoint matching between base and instruction-tuned dictionaries separates the directions preserved through finetuning from those introduced by it. EP regions and Gemma Scope SAE features decompose activation space differently but agree on a shared core: $\\sim 20\\%$ of EP regions match an SAE feature at $F_{1} > 0.5$, and EP one-hot probes retain $\\sim 97\\%$ of raw-activation probe accuracy at $\\ell_{0} = 1$. Nearest-exemplar distance provides a free out-of-distribution signal at inference. On AxBench latent concept detection at Gemma-2-2B-it L20, EP at $p_{1}$ reaches mean AUROC $0.881$, $+0.126$ over the canonical GemmaScope SAE leaderboard entry and within $0.030$ of SAE-A's $0.911$, at $\\sim 10^{3}\\times$ less build compute.",
+      "published": "2026-05-14T04:15:30Z",
+      "updated": "2026-05-14T04:15:30Z",
+      "arxiv_id": "2605.14347v1",
+      "abs_url": "http://arxiv.org/abs/2605.14347v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14347v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "Code: https://github.com/jessicarumbelow/exemplar-partitioning. Pretrained dictionaries: https://huggingface.co/datasets/J-RUM/exemplar-partitioning",
+      "code_url": "https://github.com/jessicarumbelow/exemplar-partitioning",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 2,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "large language model",
+        "unsupervised"
+      ],
+      "title_zh": "机械可解释性的示例分区",
+      "summary_zh": "我们引入了 Exemplar Partitioning (EP)，这是一种无监督方法，用于根据大型语言模型激活构建可解释的特征字典，其标记数量比同类稀疏自动编码器 (SAE) 少 $\\sim 10^{3}\\times$。 EP 字典是激活空间的 Voronoi 分区，由距离阈值内的领导者聚类流激活构建。每个区域都以观察到的范例为基础，该范例既作为其成员资格标准，又作为干预方向；字典大小不是预先指定的，而是由该阈值处的激活几何形状确定。由于样本是观察到的而不是学习到的，因此根据同一数据流构建的字典可以跨层、模型和训练检查点直接进行比较。我们通过有针对性地演示通过此构造新访问的属性以及一个面对面的基准，将 EP 描述为一种可解释性对象。在 Gemma-2-2B 中，EP 字典区域是可解释的并支持因果干预：指令调整的 Gemma 中的拒绝集中在一个区域，该区域的范例消融可以瓦解坚持的拒绝。基础字典和指令调整字典之间的交叉检查点匹配将通过微调保留的方向与其引入的方向分开。 EP 区域和 Gemma Scope SAE 特征以不同的方式分解激活空间，但在共享核心上达成一致：$\\sim 20\\%$ 的 EP 区域与 $F_{1} > 0.5$ 处的 SAE 特征匹配，并且 EP 一次性探针在 $\\ell_{0} = 1$ 处保留 $\\sim 97\\%$ 的原始激活探针精度。最近的样本距离在推理时提供了自由的分布外信号。在 Gemma-2-2B-it L20 的 AxBench 潜在概念检测中，$p_{1}$ 的 EP 达到平均 AUROC $0.881$，超过规范 GemmaScope SAE 排行榜条目 $+0.126$，并且在 SAE-A 的 $0.911$ 的 $0.030$ 范围内，构建计算量减少 $\\sim 10^{3}\\times$。"
+    },
+    {
+      "title": "Causal Foundation Models with Continuous Treatments",
+      "authors": [
+        "Christopher Stith",
+        "Medha Barath",
+        "Vahid Balazadeh",
+        "Jesse C. Cresswell",
+        "Rahul G. Krishnan"
+      ],
+      "summary": "Causal inference, estimating causal effects from observational data, is a fundamental tool in many disciplines. Of particular importance across a variety of domains is the continuous treatment setting, where the variable of intervention has a continuous range. This setting is far less explored and represents a substantial shift from the binary treatment setting, with models needing to represent effects across a continuum of treatment values. In this paper, we present the first causal foundation model for the continuous treatment setting. Our model meta-learns the ability to predict causal effects across a wide variety of unseen tasks without additional training or fine-tuning. First, we design a novel prior over data-generating processes with continuous treatment variables in order to generate a rich causal training corpus. We then train a transformer to reconstruct individual treatment-response curves given only observational data, leveraging in-context learning to amortize expensive Bayesian posterior inference. Our model achieves state-of-the-art performance on individual treatment-response curve reconstruction tasks compared to causal models which are trained specifically for those tasks.",
+      "published": "2026-05-14T17:40:28Z",
+      "updated": "2026-05-14T17:40:28Z",
+      "arxiv_id": "2605.15133v1",
+      "abs_url": "http://arxiv.org/abs/2605.15133v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.15133v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "22 pages, 9 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 5,
+      "anchor_terms": [
+        "in-context learning"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "foundation model",
+        "in-context learning",
+        "transformer"
+      ],
+      "title_zh": "连续治疗的因果基础模型",
+      "summary_zh": "因果推断，即根据观测数据估计因果效应，是许多学科的基本工具。在各个领域中特别重要的是连续治疗环境，其中干预变量具有连续范围。这种设置的探索要少得多，它代表了二元治疗设置的重大转变，模型需要代表治疗值连续体的效果。在本文中，我们提出了连续治疗环境的第一个因果基础模型。我们的模型元学习了预测各种未见任务的因果效应的能力，无需额外的训练或微调。首先，我们设计了一种新颖的先验数据生成过程，具有连续的治疗变量，以生成丰富的因果训练语料库。然后，我们训练一个变压器，仅在给定观察数据的情况下重建个体治疗反应曲线，利用上下文学习来分摊昂贵的贝叶斯后验推理。与专门针对这些任务训练的因果模型相比，我们的模型在个体治疗反应曲线重建任务上实现了最先进的性能。"
+    },
+    {
+      "title": "ACE-LoRA: Adaptive Orthogonal Decoupling for Continual Image Editing",
+      "authors": [
+        "Yuehao Liu",
+        "Weijia Zhang",
+        "Xuanming Shang",
+        "Zhizhou Chen",
+        "Yanhao Ge",
+        "Shanyan Guan",
+        "Chao Ma"
+      ],
+      "summary": "State-of-the-art diffusion models often rely on parameter-efficient fine-tuning to perform specialized image editing tasks. However, real-world applications require continual adaptation to new tasks while preserving previously learned knowledge. Despite the practical necessity, continual learning for image editing remains largely underexplored. We propose ACE-LoRA, a dynamic regularization framework for continual image editing that effectively mitigates catastrophic forgetting. ACE-LoRA leverages Adaptive Orthogonal Decoupling to identify and orthogonalize task interference, and introduces a Rank-Invariant Historical Information Compression strategy to address scalability issues in continual updates. To facilitate continual learning in image editing and provide a standardized evaluation protocol, we introduce CIE-Bench, the first comprehensive benchmark in this domain. CIE-Bench encompasses diverse and practically relevant image editing scenarios with a balanced level of difficulty to effectively expose limitations of existing models while remaining compatible with parameter-efficient fine-tuning. Extensive experiments demonstrate that our method consistently outperforms existing baselines in terms of instruction fidelity, visual realism, and robustness to forgetting, establishing a strong foundation for continual learning in image editing.",
+      "published": "2026-05-14T15:20:27Z",
+      "updated": "2026-05-14T15:20:27Z",
+      "arxiv_id": "2605.14948v1",
+      "abs_url": "http://arxiv.org/abs/2605.14948v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14948v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 8,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "catastrophic forgetting",
+        "continual learning",
+        "diffusion model",
+        "fine-tuning",
+        "LoRA",
+        "robust"
+      ],
+      "title_zh": "ACE-LoRA：用于连续图像编辑的自适应正交解耦",
+      "summary_zh": "最先进的扩散模型通常依赖于参数高效的微调来执行专门的图像编辑任务。然而，现实世界的应用程序需要不断适应新任务，同时保留以前学到的知识。尽管有实际必要性，但图像编辑的持续学习在很大程度上仍未得到充分探索。我们提出了 ACE-LoRA，一种用于持续图像编辑的动态正则化框架，可有效减轻灾难性遗忘。 ACE-LoRA利用自适应正交解耦来识别和正交化任务干扰，并引入排名不变的历史信息压缩策略来解决持续更新中的可扩展性问题。为了促进图像编辑方面的持续学习并提供标准化的评估协议，我们引入了 CIE-Bench，这是该领域的第一个综合基准测试。 CIE-Bench 包含多样化且实际相关的图像编辑场景，其难度水平均衡，可有效暴露现有模型的局限性，同时保持与参数高效微调的兼容性。大量实验表明，我们的方法在指令保真度、视觉真实感和遗忘鲁棒性方面始终优于现有基线，为图像编辑的持续学习奠定了坚实的基础。"
+    },
+    {
+      "title": "Road Maps as Free Geometric Priors: Weather-Invariant Drone Geo-Localization with GeoFuse",
+      "authors": [
+        "Yunsong Fang",
+        "Tingyu Wang",
+        "Zhedong Zheng"
+      ],
+      "summary": "Drone-view geo-localization aims to match a query drone image, often captured under adverse weather conditions (e.g., rain, snow, fog), against a gallery of geo-tagged satellite images. Weather-induced degradations in the drone view, such as noise, reduced visibility, and partial occlusions, severely exacerbate the intrinsic cross-view domain gap. While prior methods predominantly rely on weather-specific architectures or data augmentations, they have largely overlooked road map data, a readily available modality that provides strong, inherently weather-invariant geometric layout cues (e.g., road networks and building footprints) at negligible additional cost. We introduce GeoFuse, a cross-modal fusion framework that integrates precisely aligned road map tiles with satellite imagery to yield more discriminative and weather-resilient representations. We first augment the existing University-1652 and DenseUAV benchmarks with geo-aligned road maps, supplying structural priors robust to meteorological variations. Building on this, we propose a flexible fusion module that combines satellite and road map features via token-level and channel-level interactions, with a lightweight dynamic gating mechanism that adaptively weights modality contributions per instance. Finally, we employ class-level cross-view contrastive learning to promote robust alignment between weather-degraded drone features and the fused satellite-roadmap representations. Extensive experiments under diverse weather conditions show that GeoFuse consistently outperforms state-of-the-art methods, achieving +3.46% and +23.18% Recall@1 accuracy on the University-1652 and DenseUAV benchmarks, respectively.",
+      "published": "2026-05-14T15:01:22Z",
+      "updated": "2026-05-14T15:01:22Z",
+      "arxiv_id": "2605.14925v1",
+      "abs_url": "http://arxiv.org/abs/2605.14925v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14925v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": "18 pages, 4 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "多模态融合",
+        "无人机/UAV",
+        "城市与基础设施",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 10,
+      "anchor_terms": [
+        "building footprint",
+        "drone",
+        "satellite image",
+        "satellite imagery",
+        "satellite images"
+      ],
+      "matched_terms": [
+        "building footprint",
+        "contrastive learning",
+        "drone",
+        "modal fusion",
+        "road network",
+        "robust",
+        "satellite",
+        "satellite image",
+        "satellite imagery",
+        "satellite images"
+      ],
+      "title_zh": "作为自由几何先验的路线图：使用 GeoFuse 进行不受天气影响的无人机地理定位",
+      "summary_zh": "无人机视图地理定位旨在将通常在恶劣天气条件（例如雨、雪、雾）下捕获的查询无人机图像与地理标记的卫星图像库进行匹配。天气引起的无人机视野退化，例如噪音、能见度降低和部分遮挡，严重加剧了固有的跨视野域差距。虽然先前的方法主要依赖于特定于天气的架构或数据增强，但它们在很大程度上忽略了路线图数据，这是一种现成的模式，可以以微不足道的额外成本提供强大的、固有的天气不变的几何布局线索（例如道路网络和建筑足迹）。我们引入了 GeoFuse，这是一种跨模式融合框架，它将精确对齐的道路地图图块与卫星图像集成在一起，以产生更具辨别力和耐候性的表示。我们首先使用地理对齐的路线图增强现有的 University-1652 和 DenseUAV 基准，提供对气象变化稳健的结构先验。在此基础上，我们提出了一种灵活的融合模块，该模块通过令牌级和通道级交互将卫星和路线图特征结合起来，并采用轻量级动态门控机制，自适应地对每个实例的模态贡献进行加权。最后，我们采用类级跨视图对比学习来促进天气退化的无人机特征和融合的卫星路线图表示之间的稳健对齐。在不同天气条件下进行的大量实验表明，GeoFuse 始终优于最先进的方法，在 University-1652 和 DenseUAV 基准上分别实现 +3.46% 和 +23.18% Recall@1 准确度。"
+    },
+    {
+      "title": "GPart: End-to-End Isometric Fine-Tuning via Global Parameter Partitioning",
+      "authors": [
+        "Paolo Mandica",
+        "Michał Brzozowski",
+        "Zuzanna Dubanowska",
+        "Neo Christopher Chung"
+      ],
+      "summary": "Low-rank adaptation (LoRA) has become the dominant paradigm for parameter-efficient fine-tuning (PEFT) of large language models (LLMs). However, its bilinear structure introduces a critical limitation: the mapping from trainable parameters to weight updates is not distance-preserving, distorting the optimization landscape. Methods that project a low-dimensional vector into LoRA's parameter space, such as Uni-LoRA, improve parameter efficiency, but the subsequent bilinear LoRA map breaks end-to-end isometry, leaving the core distance-preservation problem unresolved. We propose GPart (Global Partition fine-tuning), a highly parameter-efficient fine-tuning method which removes the low-rank bottleneck entirely. Our method uses a single isometric partition matrix to map a $d$-dimensional trainable vector directly into the full weight space of the model. The result is an extremely minimal fine-tuning pipeline: one random projection, end-to-end isometric, with a single clean hyperparameter ($d$) and storage cost of $d+1$ values (the trainable vector plus a random seed). GPart builds on the theoretical premise that effective fine-tuning can emerge from random low-dimensional subspaces of the full weight space, without imposing low-rank matrix structure. We empirically demonstrate the superior or comparable performance of GPart to existing PEFT methods on natural language understanding, computer vision tasks, and mathematical reasoning. Overall, GPart achieves state-of-the-art efficiency and performance by removing structural constraints, offering a straightforward and elegant path to PEFT.",
+      "published": "2026-05-14T13:46:04Z",
+      "updated": "2026-05-14T13:46:04Z",
+      "arxiv_id": "2605.14841v1",
+      "abs_url": "http://arxiv.org/abs/2605.14841v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14841v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 5,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LoRA",
+        "PEFT"
+      ],
+      "title_zh": "GPart：通过全局参数分区进行端到端等距微调",
+      "summary_zh": "低秩适应 (LoRA) 已成为大型语言模型 (LLM) 参数高效微调 (PEFT) 的主导范例。然而，它的双线性结构引入了一个关键的限制：从可训练参数到权重更新的映射不保持距离，从而扭曲了优化景观。将低维向量投影到 LoRA 参数空间的方法（例如 Uni-LoRA）提高了参数效率，但随后的双线性 LoRA 映射打破了端到端等距，导致核心距离保持问题尚未解决。我们提出了 GPart（全局分区微调），这是一种高度参数高效的微调方法，可以完全消除低秩瓶颈。我们的方法使用单个等距划分矩阵将 $d$ 维可训练向量直接映射到模型的完整权重空间。结果是一个极其最小的微调管道：一个随机投影，端到端等距，具有单个干净的超参数（$d$）和 $d+1$ 值的存储成本（可训练向量加上随机种子）。 GPart 建立在这样的理论前提之上：有效的微调可以从全权重空间的随机低维子空间中出现，而无需强加低秩矩阵结构。我们凭经验证明 GPart 在自然语言理解、计算机视觉任务和数学推理方面比现有 PEFT 方法具有优越或可比的性能。总体而言，GPart 通过消除结构限制实现了最先进的效率和性能，提供了一条简单而优雅的 PEFT 路径。"
+    },
+    {
+      "title": "MambaRain: Multi-Scale Mamba-Attention Framework for 0-3 Hour Precipitation Nowcasting",
+      "authors": [
+        "Chunlei Shi",
+        "Cui Wu",
+        "Xiang Xu",
+        "Hao Li",
+        "Ni Fan",
+        "Xue Han",
+        "Yongchao Feng",
+        "Yufeng Zhu",
+        "Boyu Liu",
+        "Zengliang Zang",
+        "Hongbin Wang",
+        "Yanlan Yang",
+        "Dan Niu"
+      ],
+      "summary": "Accurate precipitation nowcasting over extended horizons (0-3 hours) is essential for disaster mitigation and operational decision-making, yet remains a critical challenge in the field. Existing deterministic approaches are predominantly constrained to shorter prediction windows (0-2 hours), exhibiting severe performance degradation beyond 90 minutes owing to their inherent difficulty in capturing long-range spatiotemporal dependencies from radar-derived observations. To address these fundamental limitations, we propose MambaRain, a novel multi-scale encoder-decoder architecture that synergistically integrates Mamba's linear-complexity long-range temporal modeling with self-attention mechanisms for explicit spatial correlation capture. The core innovation lies in a hybrid design paradigm wherein Mamba blocks leverage selective state space mechanisms to model global temporal dynamics across extended sequences with computational efficiency, while self-attention modules explicitly characterize spatial correlations within precipitation fields - a capability inherently absent in Mamba's sequential processing paradigm. This complementary synergy enables comprehensive spatiotemporal representation learning, effectively extending the viable forecasting horizon to 2-3 hours with substantial accuracy improvements. Furthermore, we introduce a spectral loss formulation to mitigate blurring artifacts characteristic of chaotic precipitation systems, thereby preserving fine-scale motion details critical for nowcasting accuracy. Experimental validation demonstrates that MambaRain substantially outperforms existing deterministic methodologies in 0-3 hour nowcasting tasks, with particularly pronounced performance gains in the challenging 2-3 hour prediction range.",
+      "published": "2026-05-14T09:23:12Z",
+      "updated": "2026-05-14T09:23:12Z",
+      "arxiv_id": "2605.14606v1",
+      "abs_url": "http://arxiv.org/abs/2605.14606v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14606v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "9 pages,7 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "基础模型",
+        "高光谱/多光谱"
+      ],
+      "topic": "时间序列与视频",
+      "score": 7,
+      "anchor_terms": [
+        "Mamba"
+      ],
+      "matched_terms": [
+        "attention mechanism",
+        "Mamba",
+        "multi-scale",
+        "self-attention"
+      ],
+      "title_zh": "MambaRain：用于 0-3 小时降水临近预报的多尺度 Mamba-Attention 框架",
+      "summary_zh": "超长范围内（0-3 小时）的准确降水预报对于减灾和业务决策至关重要，但仍然是该领域的一项关键挑战。现有的确定性方法主要受限于较短的预测窗口（0-2 小时），由于其从雷达观测中捕获远程时空依赖性的固有困难，在超过 90 分钟后表现出严重的性能下降。为了解决这些基本限制，我们提出了 MambaRain，这是一种新颖的多尺度编码器-解码器架构，它将 Mamba 的线性复杂性远程时间建模与用于显式空间相关性捕获的自注意力机制相集成。核心创新在于混合设计范式，其中 Mamba 块利用选择性状态空间机制以计算效率对扩展序列中的全局时间动态进行建模，而自注意力模块明确地表征降水场内的空间相关性 - 这是 Mamba 顺序处理范式中固有缺乏的功能。这种互补的协同作用可实现全面的时空表示学习，有效地将可行的预测范围延长至 2-3 小时，并大幅提高准确性。此外，我们引入了光谱损失公式来减轻混沌降水系统的模糊伪影特征，从而保留对临近预报准确性至关重要的精细尺度运动细节。实验验证表明，MambaRain 在 0-3 小时临近预报任务中大大优于现有的确定性方法，在具有挑战性的 2-3 小时预测范围内性能提升尤其明显。"
+    },
+    {
+      "title": "VMU-Diff: A Coarse-to-fine Multi-source Data Fusion Framework for Precipitation Nowcasting",
+      "authors": [
+        "Chunlei Shi",
+        "Hao Li",
+        "Yufeng Zhu",
+        "Boyu Liu",
+        "Yongchao Feng",
+        "Zengliang Zang",
+        "Hongbin Wang",
+        "Yanlan Yang",
+        "Dan Niu"
+      ],
+      "summary": "Precipitation nowcasting is a vital spatio-temporal prediction task for meteorological applications but faces challenges due to the chaotic property of precipitation systems. Existing methods predominantly rely on single-source radar data to build either deterministic or probabilistic models for extrapolation. However, the single deterministic model suffers from blurring due to MSE convergence. The single probabilistic model, typically represented by diffusion models, can generate fine details but suffers from spurious artifacts that compromise accuracy and computational inefficiency. To address these challenges, this paper proposes a novel coarse-to-fine Vision Mamba Unet and residual Diffusion (VMU-Diff) based precipitation nowcasting framework. It realizes precipitation nowcasting through a two-stage process, i.e., a deterministic model-based coarse stage to predict global motion trends and a probabilistic model-based fine stage to generate fine prediction details. In the coarse prediction stage, rather than single-source radar data, both radar and multi-band satellite data are taken as input. A spatial-temporal attention block and several Vision mamba state-space blocks realize multi-source data fusion, and predict the future echo global dynamics. The fine-grained stage is realized by a spatio-temporal refine generator based on residual conditional diffusion models. It first obtains spatio-temporal residual features based on coarse prediction and ground truth, and further reconstructs the residual via conditional Mamba state-space module. Experiments on Jiangsu SWAN datasets demonstrate the improvements of our method over state-of-the-art methods, particularly in short-term forecasts.",
+      "published": "2026-05-14T09:05:30Z",
+      "updated": "2026-05-14T09:05:30Z",
+      "arxiv_id": "2605.14597v1",
+      "abs_url": "http://arxiv.org/abs/2605.14597v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14597v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CE",
+        "cs.MM"
+      ],
+      "comment": "5 pages, 2 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "基础模型",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 5,
+      "anchor_terms": [
+        "diffusion model",
+        "Mamba",
+        "temporal"
+      ],
+      "matched_terms": [
+        "diffusion model",
+        "Mamba",
+        "satellite",
+        "temporal"
+      ],
+      "title_zh": "VMU-Diff：用于降水临近预报的从粗到细的多源数据融合框架",
+      "summary_zh": "降水临近预报是气象应用中至关重要的时空预测任务，但由于降水系统的混沌特性而面临挑战。现有方法主要依赖单源雷达数据来构建用于外推的确定性或概率模型。然而，单一确定性模型由于 MSE 收敛而变得模糊。单一概率模型（通常以扩散模型为代表）可以生成精细的细节，但会受到虚假伪影的影响，从而影响准确性和计算效率低下。为了应对这些挑战，本文提出了一种新颖的基于粗到细视觉 Mamba Unet 和残差扩散（VMU-Diff）的降水临近预报框架。它通过两阶段过程实现降水临近预报，即基于确定性模型的粗略阶段来预测全球运动趋势，以及基于概率模型的精细阶段来生成精细的预测细节。在粗略预测阶段，不采用单源雷达数据，而是采用雷达数据和多频段卫星数据作为输入。一个时空注意力块和几个 Vision mamba 状态空间块实现多源数据融合，并预测未来回声全局动态。细粒度阶段是通过基于残差条件扩散模型的时空细化生成器实现的。它首先根据粗略预测和地面实况获得时空残差特征，并通过条件 Mamba 状态空间模块进一步重建残差。在江苏 SWAN 数据集上的实验证明了我们的方法相对于最先进的方法的改进，特别是在短期预测方面。"
+    },
+    {
+      "title": "ArcGate: Adaptive Arctangent Gated Activation",
+      "authors": [
+        "Avik Bhattacharya",
+        "Siddhant Dnyanesh Gole",
+        "Subhasis Chaudhuri",
+        "Alejandro C. Frery",
+        "Biplab Banerjee"
+      ],
+      "summary": "Activation functions are central to deep networks, influencing non-linearity, feature learning, convergence, and robustness. This paper proposes the Adaptive Arctangent Gated Activation (ArcGate) function, a flexible formulation that generates a broad spectrum of activation shapes via a three-stage non-linear transformation. Unlike conventional fixed-shape activations such as ReLU, GELU, or SiLU, ArcGate uses seven learnable parameters per layer, allowing the neural network to autonomously optimize its non-linearity to the specific requirements of the feature hierarchy and data distribution. We evaluate ArcGate using ResNet-50 and Vision Transformer (ViT-B/16) architectures on three widely used remote sensing benchmarks: PatternNet, UC Merced Land Use, and the 13-band EuroSAT MSI multispectral dataset. Experimental results show that ArcGate consistently outperforms standard baselines, achieving a peak overall accuracy of 99.67% on PatternNet. Most notably, ArcGate exhibits superior structural resilience in noisy environments, maintaining a 26.65% performance lead over ReLU under moderate Gaussian noise (standard deviation 0.1). Analysis of the learned parameters reveals a depth-dependent functional evolution, where the model increases gating strength in deeper layers to enhance signal propagation. These findings suggest that ArcGate is a robust and adaptive general node activation function for high-resolution earth observation tasks.",
+      "published": "2026-05-14T08:00:46Z",
+      "updated": "2026-05-14T08:00:46Z",
+      "arxiv_id": "2605.14518v1",
+      "abs_url": "http://arxiv.org/abs/2605.14518v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14518v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "场景分类",
+        "基础模型",
+        "高光谱/多光谱",
+        "数据集/评测"
+      ],
+      "topic": "场景分类",
+      "score": 19,
+      "anchor_terms": [
+        "earth observation",
+        "land use",
+        "remote sensing",
+        "vision transformer"
+      ],
+      "matched_terms": [
+        "earth observation",
+        "EuroSAT",
+        "land use",
+        "multispectral",
+        "remote sensing",
+        "robust",
+        "transformer",
+        "UC Merced",
+        "vision transformer",
+        "ViT"
+      ],
+      "title_zh": "ArcGate：自适应反正切门控激活",
+      "summary_zh": "激活函数是深度网络的核心，影响非线性、特征学习、收敛性和鲁棒性。本文提出了自适应反正切门控激活 (ArcGate) 函数，这是一种灵活的公式，可通过三阶段非线性变换生成广泛的激活形状。与 ReLU、GELU 或 SiLU 等传统固定形状激活不同，ArcGate 每层使用七个可学习参数，允许神经网络根据特征层次和数据分布的特定要求自动优化其非线性。我们使用 ResNet-50 和 Vision Transformer (ViT-B/16) 架构在三个广泛使用的遥感基准上评估 ArcGate：PatternNet、UC Merced Land Use 和 13 波段 EuroSAT MSI 多光谱数据集。实验结果表明，ArcGate 始终优于标准基线，在 PatternNet 上实现了 99.67% 的峰值总体准确率。最值得注意的是，ArcGate 在噪声环境中表现出卓越的结构弹性，在中等高斯噪声（标准差 0.1）下保持比 ReLU 26.65% 的性能领先优势。对学习参数的分析揭示了与深度相关的功能演化，其中模型增加了更深层的选通强度以增强信号传播。这些发现表明，ArcGate 是一种用于高分辨率地球观测任务的稳健且自适应的通用节点激活函数。"
+    },
+    {
+      "title": "When Answers Stray from Questions: Hallucination Detection via Question-Answer Orthogonal Decomposition",
+      "authors": [
+        "Siyang Yao",
+        "Erhu Feng",
+        "Yubin Xia"
+      ],
+      "summary": "Hallucination detection in large language models (LLMs) requires balancing accu racy, efficiency, and robustness to distribution shift. Black-box consistency methods are effective but demand repeated inference; single-pass white-box probes are effi cient yet treat answer representations in isolation, often degrading sharply under domain shift. We propose QAOD (Question-Answer Orthogonal Decomposition), a single-pass framework that projects away the question-aligned direction from the answer representation to obtain a question-orthogonal component that suppresses domain-conditioned variation. To identify informative signals, QAOD further selects layers via diversity-penalized Fisher scoring and discriminative neurons via Fisher importance. To address both in-domain detection and cross-domain generalization, we design two complementary probing strategies: pairing the or thogonal component with question context yields a joint probe that maximizes in-domain discriminability, while using the orthogonal component alone preserves domain-agnostic factuality signals for robust transfer. QAOD's joint probe achieves the best in-domain AUROC across all evaluated model-dataset pairs, while the orthogonal-only probe delivers the strongest OOD transfer, surpassing the best white-box baseline by up to 21% on BioASQ at under 25% of generation cost.",
+      "published": "2026-05-14T06:44:18Z",
+      "updated": "2026-05-14T06:44:18Z",
+      "arxiv_id": "2605.14449v1",
+      "abs_url": "http://arxiv.org/abs/2605.14449v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14449v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 3,
+      "anchor_terms": [
+        "domain generalization"
+      ],
+      "matched_terms": [
+        "domain generalization",
+        "large language model",
+        "robust"
+      ],
+      "title_zh": "当答案偏离问题时：通过问答正交分解进行幻觉检测",
+      "summary_zh": "大型语言模型 (LLM) 中的幻觉检测需要平衡准确性、效率和分布偏移的鲁棒性。黑盒一致性方法有效，但需要重复推理；单通道白盒探测非常高效，但孤立地处理答案表示，通常在域转移下急剧退化。我们提出了 QAOD（问题-答案正交分解），这是一种单遍框架，可以将问题对齐方向从答案表示中投影出来，以获得抑制域条件变化的问题正交分量。为了识别信息信号，QAOD 通过多样性惩罚 Fisher 评分进一步选择层，并通过 Fisher 重要性进行区分神经元。为了解决域内检测和跨域泛化问题，我们设计了两种互补的探测策略：将正交分量与问题上下文配对产生一个联合探测，最大限度地提高域内可辨别性，而单独使用正交分量可以保留与域无关的事实信号以实现稳健的传输。 QAOD 的联合探针在所有评估的模型-数据集对中实现了最佳的域内 AUROC，而纯正交探针提供了最强的 OOD 传输，在 BioASQ 上以低于 25% 的生成成本超过最佳白盒基线高达 21%。"
+    },
+    {
+      "title": "GeoViSTA: Geospatial Vision-Tabular Transformer for Multimodal Environment Representation",
+      "authors": [
+        "Yuhao Liu",
+        "Sadeer Al-Kindi",
+        "Ashok Veeraraghavan",
+        "Guha Balakrishnan"
+      ],
+      "summary": "Large-scale pretraining on Earth observation imagery has yielded powerful representations of the natural and built environment. However, most existing geospatial foundation models do not directly model the structured socioeconomic covariates typically stored in tabular form. This modality gap limits their ability to capture the complete total environment, which is critical for reasoning about complex environmental, social, and health-related outcomes. In this work, we propose GeoViSTA (Geospatial Vision-Tabular Transformer), a vision-tabular architecture that learns unified geospatial embeddings from co-registered gridded imagery and tabular data. GeoViSTA utilizes bilateral cross-attention to exchange spatial and semantic information across modalities, guided by a geography-aware attention mechanism that aligns continuous image patches with irregular census-tract tokens. We train GeoViSTA with a self-supervised joint masked-autoencoding objective, forcing it to recover missing image patches and tabular rows using local spatial context and cross-modal cues. Empirically, GeoViSTA's unified embeddings improve linear probing performance on high-impact downstream tasks, outperforming baselines in predicting disease-specific mortality and fire hazard frequency across held-out regions. These results demonstrate that jointly modeling the physical environment alongside structured socioeconomic context yields highly transferable representations for holistic geospatial inference.",
+      "published": "2026-05-14T05:46:07Z",
+      "updated": "2026-05-14T05:46:07Z",
+      "arxiv_id": "2605.14406v1",
+      "abs_url": "http://arxiv.org/abs/2605.14406v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14406v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "无监督与弱监督",
+        "多模态融合"
+      ],
+      "topic": "基础模型",
+      "score": 15,
+      "anchor_terms": [
+        "earth observation",
+        "foundation model",
+        "geospatial",
+        "geospatial foundation",
+        "geospatial foundation model"
+      ],
+      "matched_terms": [
+        "attention mechanism",
+        "cross-attention",
+        "earth observation",
+        "foundation model",
+        "geospatial",
+        "geospatial foundation",
+        "geospatial foundation model",
+        "self-supervised",
+        "transformer"
+      ],
+      "title_zh": "GeoViSTA：用于多模态环境表示的地理空间视觉表格转换器",
+      "summary_zh": "对地球观测图像的大规模预训练产生了自然和建筑环境的有力表示。然而，大多数现有的地理空间基础模型并不直接对通常以表格形式存储的结构化社会经济协变量进行建模。这种模式差距限制了他们捕捉完整总体环境的能力，这对于推理复杂的环境、社会和健康相关结果至关重要。在这项工作中，我们提出了 GeoViSTA（地理空间视觉表格转换器），这是一种视觉表格架构，可以从共同配准的网格图像和表格数据中学习统一的地理空间嵌入。 GeoViSTA 利用双边交叉注意力来跨模式交换空间和语义信息，并由地理感知注意力机制引导，该机制将连续图像块与不规则的人口普查区标记对齐。我们使用自监督联合屏蔽自动编码目标来训练 GeoViSTA，迫使它使用局部空间上下文和跨模式线索来恢复丢失的图像块和表格行。根据经验，GeoViSTA 的统一嵌入提高了高影响下游任务的线性探测性能，在预测特定疾病死亡率和跨区域火灾危险频率方面优于基线。这些结果表明，对物理环境和结构化社会经济背景进行联合建模可以为整体地理空间推理产生高度可转移的表示。"
+    },
+    {
+      "title": "AnyBand-Diff: A Unified Remote Sensing Image Generation and Band Repair Framework with Spectral Priors",
+      "authors": [
+        "Zuopeng Zhao",
+        "Ying Liu",
+        "Xiaoyu Li",
+        "Su Luo",
+        "Lu Li",
+        "Wenwen Liu"
+      ],
+      "summary": "Existing diffusion models have made significant progress in generating realistic images. However, their direct adaptation to remote sensing imagery often disregards intrinsic physical laws. This oversight frequently leads to spectral distortion and radiometric inconsistency, severely limiting the scientific utility of generated data. To address this issue, this paper introduces AnyBand-Diff, a novel spectral-prior-guided diffusion framework tailored for robust spectral reconstruction. Specifically, we design a Masked Conditional Diffusion backbone integrated with a dual stochastic masking strategy, empowering the model to recover complete spectral information from arbitrary band subsets. Subsequently, to ensure radiometric fidelity, a Physics-Guided Sampling mechanism is proposed, leveraging gradients from a differentiable physical model to explicitly steer the denoising trajectory toward the manifold of physically plausible solutions. Furthermore, a Multi-Scale Physical Loss is formulated to enforce rigorous constraints across pixel, region, and global levels in a joint manner. Extensive experiments confirm the effectiveness of AnyBand-Diff in generating reliable imagery and achieving accurate spectral reconstruction, contributing to the advancement of physics-aware generative methods for Earth observation.",
+      "published": "2026-05-14T04:04:34Z",
+      "updated": "2026-05-14T04:04:34Z",
+      "arxiv_id": "2605.14341v1",
+      "abs_url": "http://arxiv.org/abs/2605.14341v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14341v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "高光谱/多光谱"
+      ],
+      "topic": "图像生成与重建",
+      "score": 17,
+      "anchor_terms": [
+        "diffusion model",
+        "earth observation",
+        "image generation",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "denoising",
+        "diffusion model",
+        "earth observation",
+        "image generation",
+        "multi-scale",
+        "remote sensing",
+        "remote sensing image generation",
+        "robust"
+      ],
+      "title_zh": "AnyBand-Diff：具有光谱先验的统一遥感图像生成和波段修复框架",
+      "summary_zh": "现有的扩散模型在生成真实图像方面取得了重大进展。然而，它们对遥感图像的直接适应常常忽视内在的物理定律。这种疏忽经常导致光谱失真和辐射不一致，严重限制了生成数据的科学效用。为了解决这个问题，本文引入了 AnyBand-Diff，这是一种专为鲁棒光谱重建而定制的新型光谱先验引导扩散框架。具体来说，我们设计了一个与双随机掩蔽策略集成的掩蔽条件扩散主干，使模型能够从任意波段子集中恢复完整的光谱信息。随后，为了确保辐射保真度，提出了一种物理引导采样机制，利用可微分物理模型的梯度来明确地将降噪轨迹转向多种物理上合理的解决方案。此外，制定了多尺度物理损失，以联合方式在像素、区域和全局级别上实施严格的约束。大量实验证实了 AnyBand-Diff 在生成可靠图像和实现精确光谱重建方面的有效性，有助于推进地球观测的物理感知生成方法。"
+    },
+    {
+      "title": "D2-CDIG: Controlled Diffusion Remote Sensing Image Generation with Dual Priors of DEM and Cloud-Fog",
+      "authors": [
+        "Zuopeng Zhao",
+        "Ying Liu",
+        "Kanyaphakphachsorn Pharksuwan",
+        "Su Luo",
+        "Xiaoyu Li",
+        "Maocai Ning"
+      ],
+      "summary": "Remote sensing image generation provides a reliable data foundation for remote sensing large models and downstream tasks. However, existing controllable remote sensing image generation methods typically rely on traditional techniques such as segmentation and edge detection, which do not fully leverage terrain or atmospheric conditions. As a result, the generated images often lack accuracy and naturalness when dealing with complex terrains and atmospheric phenomena. In this paper, we propose a novel remote sensing image generation framework, D2-CDIG, which integrates diffusion models with a dual-prior control mechanism. By incorporating both Digital Elevation Model (DEM) and cloud-fog information as dual prior knowledge, D2-CDIG precisely controls ground features and atmospheric phenomena within the generated images. Specifically, D2-CDIG decouples the terrain and atmospheric generation processes through independent control of ground and atmospheric branches. Additionally, a refined cloud-fog slider is introduced to flexibly adjust cloud thickness and distribution. During training, ground and atmospheric control signals are injected in layers to ensure a seamless transition within the images. Compared to traditional methods based on segmentation or edge detection, D2-CDIG shows significant improvements in image quality, detail richness, and realism. D2-CDIG offers a flexible and precise solution for remote sensing image generation, providing high-quality data for training large remote sensing models and downstream tasks.",
+      "published": "2026-05-14T03:41:46Z",
+      "updated": "2026-05-14T03:41:46Z",
+      "arxiv_id": "2605.14326v1",
+      "abs_url": "http://arxiv.org/abs/2605.14326v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14326v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "基础模型",
+        "LiDAR/点云"
+      ],
+      "topic": "图像生成与重建",
+      "score": 19,
+      "anchor_terms": [
+        "diffusion model",
+        "image generation",
+        "remote sensing",
+        "remote sensing large model"
+      ],
+      "matched_terms": [
+        "DEM",
+        "diffusion model",
+        "digital elevation model",
+        "image generation",
+        "large model",
+        "remote sensing",
+        "remote sensing image generation",
+        "remote sensing large model"
+      ],
+      "title_zh": "D2-CDIG：利用 DEM 和云雾双先验的受控扩散遥感图像生成",
+      "summary_zh": "遥感图像生成为遥感大模型和下游任务提供可靠的数据基础。然而，现有的可控遥感图像生成方法通常依赖于分割和边缘检测等传统技术，这些技术没有充分利用地形或大气条件。因此，在处理复杂地形和大气现象时，生成的图像往往缺乏准确性和自然度。在本文中，我们提出了一种新颖的遥感图像生成框架D2-CDIG，它将扩散模型与双先验控制机制相结合。通过将数字高程模型 (DEM) 和云雾信息作为双重先验知识，D2-CDIG 可以精确控制生成图像中的地面特征和大气现象。具体来说，D2-CDIG通过对地面和大气分支的独立控制来解耦地形和大气生成过程。此外，还引入了精致的云雾滑块，可以灵活调整云的厚度和分布。在训练期间，地面和大气控制信号分层注入，以确保图像内的无缝过渡。与基于分割或边缘检测的传统方法相比，D2-CDIG 在图像质量、细节丰富度和真实感方面显示出显着改进。 D2-CDIG为遥感图像生成提供了灵活、精确的解决方案，为训练大型遥感模型和下游任务提供高质量的数据。"
+    },
+    {
+      "title": "Diagnosing and Correcting Concept Omission in Multimodal Diffusion Transformers",
+      "authors": [
+        "Kanghyun Baek",
+        "Jaihyun Lew",
+        "Chaehun Shin",
+        "Jungbeom Lee",
+        "Sungroh Yoon"
+      ],
+      "summary": "Multimodal Diffusion Transformers (MM-DiTs) have achieved remarkable progress in text-to-image generation, yet they frequently suffer from concept omission, where specified objects or attributes fail to emerge in the generated image. By performing linear probing on text tokens, we demonstrate that text embeddings can distinguish a characteristic `omission signal' representing the absence of target concepts. Leveraging this insight, we propose Omission Signal Intervention (OSI), which amplifies the omission signal to actively catalyze the generation of missing concepts. Comprehensive experiments on FLUX.1-Dev and SD3.5-Medium demonstrate that OSI significantly alleviates concept omission even in extreme scenarios.",
+      "published": "2026-05-14T02:14:09Z",
+      "updated": "2026-05-14T02:14:09Z",
+      "arxiv_id": "2605.14270v1",
+      "abs_url": "http://arxiv.org/abs/2605.14270v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14270v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted to ICML 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "多模态融合"
+      ],
+      "topic": "图像生成与重建",
+      "score": 4,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "image generation",
+        "transformer"
+      ],
+      "title_zh": "诊断和纠正多模态扩散变压器中的概念遗漏",
+      "summary_zh": "多模态扩散变换器（MM-DiT）在文本到图像的生成方面取得了显着的进步，但它们经常遭受概念遗漏，即指定的对象或属性无法出现在生成的图像中。通过对文本标记执行线性探测，我们证明文本嵌入可以区分代表目标概念不存在的特征“遗漏信号”。利用这种洞察力，我们提出了遗漏信号干预（OSI），它放大遗漏信号以积极催化缺失概念的生成。在 FLUX.1-Dev 和 SD3.5-Medium 上的综合实验表明，即使在极端场景下，OSI 也能显着减少概念遗漏。"
+    },
+    {
+      "title": "Implicit spatial-frequency fusion of hyperspectral and lidar data via kolmogorov-arnold networks",
+      "authors": [
+        "Zekun Long",
+        "Judy X. Yang",
+        "Jing Wang",
+        "Ali Zia",
+        "Guanyiman Fu",
+        "Jun Zhou"
+      ],
+      "summary": "Hyperspectral image (HSI) classification is challenging in complex scenes due to spectral ambiguity, spatial heterogeneity, and the strong coupling between material properties and geometric structures. Although LiDAR provides complementary elevation information, most HSI-LiDAR fusion methods rely on CNNs or MLPs with fixed activation functions and linear weights. These methods struggle to model structural discontinuities in LiDAR data, intricate spectral features of HSI, and their interactions. In addition, fusion of the two modalities in both spatial and frequency domains with LiDAR guidance remains underexplored. To address these issues, we propose the Implicit Frequency-Geometry Fusion Network (IFGNet), which leverages Kolmogorov-Arnold Networks (KANs) with learnable spline-based functions to adaptively capture highly nonlinear relationships between hyperspectral and LiDAR features. Furthermore, IFGNet introduces a LiDAR-guided implicit aggregation module in both spatial and frequency domains, enhancing geometry-aware spatial representations while capturing global structural patterns. Experiments on the Houston 2013 and MUUFL benchmarks demonstrate that IFGNet consistently outperforms existing fusion methods in overall accuracy, average accuracy, and Cohen's Kappa, while maintaining an efficient architecture.",
+      "published": "2026-05-14T01:12:12Z",
+      "updated": "2026-05-14T01:12:12Z",
+      "arxiv_id": "2605.14239v1",
+      "abs_url": "http://arxiv.org/abs/2605.14239v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.14239v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "6 pages, 1 figure, conference",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "多模态融合",
+        "高光谱/多光谱",
+        "LiDAR/点云",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 5,
+      "anchor_terms": [
+        "hyperspectral image"
+      ],
+      "matched_terms": [
+        "hyperspectral",
+        "hyperspectral image",
+        "LiDAR"
+      ],
+      "title_zh": "通过柯尔莫哥洛夫-阿诺德网络进行高光谱和激光雷达数据的隐式空间频率融合",
+      "summary_zh": "由于光谱模糊性、空间异质性以及材料属性和几何结构之间的强耦合，高光谱图像（HSI）分类在复杂场景中具有挑战性。尽管 LiDAR 提供了补充的高程信息，但大多数 HSI-LiDAR 融合方法依赖于具有固定激活函数和线性权重的 CNN 或 MLP。这些方法很难对 LiDAR 数据中的结构不连续性、HSI 复杂的光谱特征及其相互作用进行建模。此外，空间和频率域中两种模式与激光雷达引导的融合仍有待探索。为了解决这些问题，我们提出了隐式频率-几何融合网络（IFGNet），它利用带有可学习样条函数的柯尔莫哥洛夫-阿诺德网络（KAN）来自适应捕获高光谱和激光雷达特征之间的高度非线性关系。此外，IFGNet 在空间和频域引入了激光雷达引导的隐式聚合模块，增强了几何感知的空间表示，同时捕获全局结构模式。在 Houston 2013 和 MUUFL 基准测试上的实验表明，IFGNet 在总体精度、平均精度和 Cohen's Kappa 方面始终优于现有的融合方法，同时保持了高效的架构。"
+    }
+  ]
+}
