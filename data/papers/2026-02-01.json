@@ -1,0 +1,608 @@
+{
+  "date": "2026-02-01",
+  "generated_at": "2026-06-01T12:41:35.910655+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202602010000 TO 202602012359]",
+  "total_fetched": 271,
+  "total_matched": 14,
+  "papers": [
+    {
+      "title": "PromptRL: Prompt Matters in RL for Flow-Based Image Generation",
+      "authors": [
+        "Fu-Yun Wang",
+        "Han Zhang",
+        "Michael Gharbi",
+        "Hongsheng Li",
+        "Taesung Park"
+      ],
+      "summary": "Flow matching models (FMs) have revolutionized text-to-image (T2I) generation, with reinforcement learning (RL) serving as a critical post-training strategy for alignment with reward objectives. In this research, we show that current RL pipelines for FMs suffer from two underappreciated yet important limitations: sample inefficiency due to insufficient generation diversity, and pronounced prompt overfitting, where models memorize specific training formulations and exhibit dramatic performance collapse when evaluated on semantically equivalent but stylistically varied prompts. We present PromptRL (Prompt Matters in RL for Flow-Based Image Generation), a framework that incorporates language models (LMs) as trainable prompt refinement agents directly within the flow-based RL optimization loop. This design yields two complementary benefits: rapid development of sophisticated prompt rewriting capabilities and, critically, a synergistic training regime that reshapes the optimization dynamics. PromptRL achieves state-of-the-art performance across multiple benchmarks, obtaining scores of 0.97 on GenEval, 0.98 on OCR accuracy, and 24.05 on PickScore. Furthermore, we validate the effectiveness of our RL approach on large-scale image editing models, improving the EditReward of FLUX.1-Kontext from 1.19 to 1.43 with only 0.06 million rollouts, surpassing Gemini 2.5 Flash Image (also known as Nano Banana), which scores 1.37, and achieving comparable performance with ReasonNet (1.44), which relied on fine-grained data annotations along with a complex multi-stage training. Our extensive experiments empirically demonstrate that PromptRL consistently achieves higher performance ceilings while requiring over 2$\\times$ fewer rollouts compared to naive flow-only RL. Our code is available at https://github.com/G-U-N/UniRL.",
+      "published": "2026-02-01T18:31:06Z",
+      "updated": "2026-02-01T18:31:06Z",
+      "arxiv_id": "2602.01382v1",
+      "abs_url": "http://arxiv.org/abs/2602.01382v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.01382v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/G-U-N/UniRL",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像生成与重建",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 3,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "image generation"
+      ],
+      "title_zh": "PromptRL：强化学习中基于流的图像生成的提示事项",
+      "summary_zh": "流匹配模型 (FM) 彻底改变了文本到图像 (T2I) 的生成，强化学习 (RL) 是与奖励目标保持一致的关键训练后策略。在这项研究中，我们表明，当前 FM 的 RL 管道存在两个未被充分认识但很重要的局限性：由于生成多样性不足而导致样本效率低下，以及明显的提示过度拟合，其中模型会记住特定的训练公式，并在对语义等效但风格不同的提示进行评估时表现出戏剧性的性能崩溃。我们提出了 PromptRL（Prompt Matters in RL for Flow-Based Image Generation），这是一个框架，它将语言模型 (LM) 作为可训练的提示细化代理直接纳入基于流的 RL 优化循环中。这种设计产生了两个互补的好处：复杂的即时重写功能的快速开发，以及最重要的是重塑优化动态的协同训练机制。 PromptRL 在多个基准测试中实现了最先进的性能，在 GenEval 上获得了 0.97 的分数，在 OCR 准确性上获得了 0.98 的分数，在 PickScore 上获得了 24.05 的分数。此外，我们验证了我们的 RL 方法在大规模图像编辑模型上的有效性，仅在 6 万次部署的情况下将 FLUX.1-Kontext 的 EditReward 从 1.19 提高到 1.43，超过了得分 1.37 的 Gemini 2.5 Flash Image（也称为 Nano Banana），并实现了与 ReasonNet（1.44）相当的性能，ReasonNet 依赖于细粒度的数据注释和复杂的多阶段培训。我们大量的实验凭经验证明，与朴素的仅流 RL 相比，PromptRL 始终能够实现更高的性能上限，同时需要的部署次数减少 2 美元\\倍$。我们的代码可在 https://github.com/G-U-N/UniRL 获取。"
+    },
+    {
+      "title": "StoryState: Agent-Based State Control for Consistent and Editable Storybooks",
+      "authors": [
+        "Ayushman Sarkar",
+        "Zhenyu Yu",
+        "Wei Tang",
+        "Chu Chen",
+        "Kangning Cui",
+        "Mohd Yamani Idna Idris"
+      ],
+      "summary": "Large multimodal models have enabled one-click storybook generation, where users provide a short description and receive a multi-page illustrated story. However, the underlying story state, such as characters, world settings, and page-level objects, remains implicit, making edits coarse-grained and often breaking visual consistency. We present StoryState, an agent-based orchestration layer that introduces an explicit and editable story state on top of training-free text-to-image generation. StoryState represents each story as a structured object composed of a character sheet, global settings, and per-page scene constraints, and employs a small set of LLM agents to maintain this state and derive 1Prompt1Story-style prompts for generation and editing. Operating purely through prompts, StoryState is model-agnostic and compatible with diverse generation backends. System-level experiments on multi-page editing tasks show that StoryState enables localized page edits, improves cross-page consistency, and reduces unintended changes, interaction turns, and editing time compared to 1Prompt1Story, while approaching the one-shot consistency of Gemini Storybook. Code is available at https://github.com/YuZhenyuLindy/StoryState",
+      "published": "2026-02-01T16:06:10Z",
+      "updated": "2026-02-01T16:06:10Z",
+      "arxiv_id": "2602.01305v1",
+      "abs_url": "http://arxiv.org/abs/2602.01305v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.01305v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/YuZhenyuLindy/StoryState",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像生成与重建",
+        "视觉-语言模型",
+        "多模态融合"
+      ],
+      "topic": "图像生成与重建",
+      "score": 3,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "image generation",
+        "LLM"
+      ],
+      "title_zh": "StoryState：基于代理的状态控制，实现一致且可编辑的故事书",
+      "summary_zh": "大型多模式模型支持一键生成故事书，用户提供简短的描述并收到多页插图故事。然而，底层的故事状态，例如角色、世界设置和页面级对象，仍然是隐式的，这使得编辑变得粗粒度，并且常常破坏视觉一致性。我们提出了 StoryState，一个基于代理的编排层，它在免训练的文本到图像生成之上引入了明确且可编辑的故事状态。 StoryState 将每个故事表示为由角色表、全局设置和每页场景约束组成的结构化对象，并采用一小组 LLM 代理来维护此状态并派生 1Prompt1Story 风格的提示以进行生成和编辑。 StoryState 完全通过提示进行操作，与模型无关，并且与不同世代的后端兼容。多页面编辑任务的系统级实验表明，与 1Prompt1Story 相比，StoryState 能够实现本地化页面编辑，提高跨页面一致性，减少意外更改、交互次数和编辑时间，同时接近 Gemini Storybook 的一次性一致性。代码可在 https://github.com/YuZhenyuLindy/StoryState 获取"
+    },
+    {
+      "title": "Modeling Topological Impact on Node Attribute Distributions in Attributed Graphs",
+      "authors": [
+        "Amirreza Shiralinasab Langari",
+        "Leila Yeganeh",
+        "Kim Khoa Nguyen"
+      ],
+      "summary": "We investigate how the topology of attributed graphs influences the distribution of node attributes. This work offers a novel perspective by treating topology and attributes as structurally distinct but interacting components. We introduce an algebraic approach that combines a graph's topology with the probability distribution of node attributes, resulting in topology-influenced distributions. First, we develop a categorical framework to formalize how a node perceives the graph's topology. We then quantify this point of view and integrate it with the distribution of node attributes to capture topological effects. We interpret these topology-conditioned distributions as approximations of the posteriors $P(\\cdot \\mid v)$ and $P(\\cdot \\mid \\mathcal{G})$. We further establish a principled sufficiency condition by showing that, on complete graphs, where topology carries no informative structure, our construction recovers the original attribute distribution. To evaluate our approach, we introduce an intentionally simple testbed model, $\\textbf{ID}$, and use unsupervised graph anomaly detection as a probing task.",
+      "published": "2026-02-01T21:47:10Z",
+      "updated": "2026-02-01T21:47:10Z",
+      "arxiv_id": "2602.01454v1",
+      "abs_url": "http://arxiv.org/abs/2602.01454v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.01454v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无监督与弱监督"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 2,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "unsupervised"
+      ],
+      "title_zh": "建模拓扑对属性图中节点属性分布的影响",
+      "summary_zh": "我们研究属性图的拓扑如何影响节点属性的分布。这项工作通过将拓扑和属性视为结构上不同但相互作用的组件，提供了一种新颖的视角。我们引入了一种代数方法，它将图的拓扑与节点属性的概率分布相结合，从而产生受拓扑影响的分布。首先，我们开发一个分类框架来形式化节点如何感知图的拓扑。然后我们量化这个观点并将其与节点属性的分布相结合以捕获拓扑效应。我们将这些拓扑条件分布解释为后验概率 $P(\\cdot \\mid v)$ 和 $P(\\cdot \\mid \\mathcal{G})$ 的近似值。我们进一步建立了一个原则上的充分性条件，表明在拓扑不包含信息结构的完整图上，我们的构造恢复了原始属性分布。为了评估我们的方法，我们特意引入了一个简单的测试床模型 $\\textbf{ID}$，并使用无监督图异常检测作为探测任务。"
+    },
+    {
+      "title": "When Domains Interact: Asymmetric and Order-Sensitive Cross-Domain Effects in Reinforcement Learning for Reasoning",
+      "authors": [
+        "Wang Yang",
+        "Shouren Wang",
+        "Chaoda Song",
+        "Chuang Ma",
+        "Xinpeng Li",
+        "Nengbo Wang",
+        "Kaixiong Zhou",
+        "Vipin Chaudhary",
+        "Xiaotian Han"
+      ],
+      "summary": "Group Relative Policy Optimization (GRPO) has become a key technique for improving reasoning abilities in large language models, yet its behavior under different domain sequencing strategies is poorly understood. In particular, the impact of sequential (one domain at a time) versus mixed-domain (multiple domain at a time) training in GRPO has not been systematically studied. We provide the first systematic analysis of training-order effects across math, science, logic, and puzzle reasoning tasks. We found (1) single-domain generalization is highly asymmetric: training on other domains improves math reasoning by approximately 25\\% accuracy, while yielding negligible transfer to logic and puzzle; (2) cross-domain interactions are highly order-dependent: training in the order math$\\rightarrow$science achieves 83\\% / 41\\% accuracy on math / science, while reversing the order to science$\\rightarrow$math degrades performance to 77\\% / 25\\%; (3) no single strategy is universally optimal in multi-domain training: sequential training favors math (up to 84\\%), mixed training favors science and logic, and poor ordering can incur large performance gaps (from 70\\% to 56\\%). Overall, our findings demonstrate that GRPO under multi-domain settings exhibits pronounced asymmetry, order sensitivity, and strategy dependence, highlighting the necessity of domain-aware and order-aware training design.",
+      "published": "2026-02-01T18:04:07Z",
+      "updated": "2026-02-01T18:04:07Z",
+      "arxiv_id": "2602.01365v1",
+      "abs_url": "http://arxiv.org/abs/2602.01365v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.01365v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "小样本与域泛化"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 2,
+      "anchor_terms": [
+        "domain generalization"
+      ],
+      "matched_terms": [
+        "domain generalization",
+        "large language model"
+      ],
+      "title_zh": "当域交互时：推理强化学习中的不对称和顺序敏感的跨域效应",
+      "summary_zh": "组相对策略优化（GRPO）已成为提高大型语言模型推理能力的关键技术，但其在不同领域排序策略下的行为却知之甚少。特别是，GRPO 中顺序（一次一个域）训练与混合域（一次多个域）训练的影响尚未得到系统研究。我们首次对数学、科学、逻辑和谜题推理任务中的训练顺序效应进行系统分析。我们发现（1）单域泛化是高度不对称的：在其他域上的训练将数学推理的准确率提高了大约 25%，而对逻辑和谜题的转移可以忽略不计； (2) 跨域交互高度依赖于顺序：按照 math$\\rightarrow$science 的顺序进行训练，在 math/science 上的准确率达到 83\\% / 41\\%，而将顺序反转为 science$\\rightarrow$math 时，性能会下降到 77\\% / 25\\%； (3) 在多领域训练中，没有单一策略是普遍最优的：顺序训练有利于数学（高达 84%），混合训练有利于科学和逻辑，糟糕的排序会导致较大的性能差距（从 70% 到 56%）。总的来说，我们的研究结果表明，多域设置下的 GRPO 表现出明显的不对称性、顺序敏感性和策略依赖性，凸显了域感知和顺序感知训练设计的必要性。"
+    },
+    {
+      "title": "PaAno: Patch-Based Representation Learning for Time-Series Anomaly Detection",
+      "authors": [
+        "Jinju Park",
+        "Seokho Kang"
+      ],
+      "summary": "Although recent studies on time-series anomaly detection have increasingly adopted ever-larger neural network architectures such as transformers and foundation models, they incur high computational costs and memory usage, making them impractical for real-time and resource-constrained scenarios. Moreover, they often fail to demonstrate significant performance gains over simpler methods under rigorous evaluation protocols. In this study, we propose Patch-based representation learning for time-series Anomaly detection (PaAno), a lightweight yet effective method for fast and efficient time-series anomaly detection. PaAno extracts short temporal patches from time-series training data and uses a 1D convolutional neural network to embed each patch into a vector representation. The model is trained using a combination of triplet loss and pretext loss to ensure the embeddings capture informative temporal patterns from input patches. During inference, the anomaly score at each time step is computed by comparing the embeddings of its surrounding patches to those of normal patches extracted from the training time-series. Evaluated on the TSB-AD benchmark, PaAno achieved state-of-the-art performance, significantly outperforming existing methods, including those based on heavy architectures, on both univariate and multivariate time-series anomaly detection across various range-wise and point-wise performance measures.",
+      "published": "2026-02-01T17:52:59Z",
+      "updated": "2026-05-14T12:01:12Z",
+      "arxiv_id": "2602.01359v2",
+      "abs_url": "http://arxiv.org/abs/2602.01359v2",
+      "pdf_url": "https://arxiv.org/pdf/2602.01359v2",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "Accepted by the 14th International Conference on Learning Representations (ICLR 2026)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "基础模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "时间序列与视频",
+      "score": 7,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "convolutional neural network",
+        "foundation model",
+        "temporal",
+        "time-series",
+        "transformer"
+      ],
+      "title_zh": "PaAno：用于时间序列异常检测的基于补丁的表示学习",
+      "summary_zh": "尽管最近关于时间序列异常检测的研究越来越多地采用越来越大的神经网络架构，例如变压器和基础模型，但它们会产生高昂的计算成本和内存使用量，使得它们对于实时和资源受限的场景来说不切实际。此外，在严格的评估协议下，它们通常无法证明比更简单的方法有显着的性能提升。在这项研究中，我们提出了用于时间序列异常检测的基于补丁的表示学习（PaAno），这是一种轻量级但有效的方法，用于快速高效的时间序列异常检测。 PaAno 从时间序列训练数据中提取短时间补丁，并使用一维卷积神经网络将每个补丁嵌入到向量表示中。该模型使用三元组损失和借口损失的组合进行训练，以确保嵌入从输入补丁中捕获信息丰富的时间模式。在推理过程中，每个时间步的异常分数是通过将其周围补丁的嵌入与从训练时间序列中提取的正常补丁的嵌入进行比较来计算的。根据 TSB-AD 基准进行评估，PaAno 实现了最先进的性能，在跨各种范围和点性能测量的单变量和多变量时间序列异常检测方面，显着优于现有方法，包括基于重型架构的方法。"
+    },
+    {
+      "title": "T2M Mamba: Motion Periodicity-Saliency Coupling Approach for Stable Text-Driven Motion Generation",
+      "authors": [
+        "Xingzu Zhan",
+        "Chen Xie",
+        "Honghang Chen",
+        "Yixun Lin",
+        "Xiaochun Mai"
+      ],
+      "summary": "Text-to-motion generation, which converts motion language descriptions into coherent 3D human motion sequences, has attracted increasing attention in fields, such as avatar animation and humanoid robotic interaction. Though existing models have achieved significant fidelity, they still suffer from two core limitations: (i) They treat motion periodicity and keyframe saliency as independent factors, overlooking their coupling and causing generation drift in long sequences. (ii) They are fragile to semantically equivalent paraphrases, where minor synonym substitutions distort textual embeddings, propagating through the decoder and producing unstable or erroneous motions. In this work, we propose T2M Mamba to address these limitations by (i) proposing Periodicity-Saliency Aware Mamba, which utilizes novel algorithms for keyframe weight estimation via enhanced Density Peaks Clustering and motion periodicity estimation via FFT-accelerated autocorrelation to capture coupled dynamics with minimal computational overhead, and (ii) constructing a Periodic Differential Cross-modal Alignment Module (PDCAM) to enhance robust alignment of textual and motion embeddings. Extensive experiments on HumanML3D and KIT-ML datasets have been conducted, confirming the effectiveness of our approach, achieving an FID of 0.068 and consistent gains on all other metrics.",
+      "published": "2026-02-01T17:42:53Z",
+      "updated": "2026-02-01T17:42:53Z",
+      "arxiv_id": "2602.01352v1",
+      "abs_url": "http://arxiv.org/abs/2602.01352v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.01352v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "8 pages,5 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "无监督与弱监督",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 4,
+      "anchor_terms": [
+        "Mamba"
+      ],
+      "matched_terms": [
+        "Mamba",
+        "robust"
+      ],
+      "title_zh": "T2M Mamba：用于稳定文本驱动运动生成的运动周期性-显着性耦合方法",
+      "summary_zh": "文本到动作生成将动作语言描述转换为连贯的 3D 人体动作序列，在阿凡达动画和人形机器人交互等领域引起了越来越多的关注。尽管现有模型已经实现了显着的保真度，但它们仍然存在两个核心局限性：（i）它们将运动周期性和关键帧显着性视为独立因素，忽略了它们的耦合并导致长序列中的生成漂移。 (ii) 它们对于语义等效的释义很脆弱，其中较小的同义词替换会扭曲文本嵌入，通过解码器传播并产生不稳定或错误的动作。在这项工作中，我们提出 T2M Mamba 来解决这些限制，方法是 (i) 提出周期性显着性感知 Mamba，它利用新算法通过增强的密度峰值聚类进行关键帧权重估计，并通过 FFT 加速自相关进行运动周期性估计，以最小的计算开销捕获耦合动态，以及 (ii) 构建周期性差分跨模态对齐模块 (PDCAM) 以增强文本和运动嵌入的鲁棒对齐。我们已经在 HumanML3D 和 KIT-ML 数据集上进行了广泛的实验，证实了我们方法的有效性，实现了 0.068 的 FID 以及所有其他指标的一致增益。"
+    },
+    {
+      "title": "DSFC-Net: A Dual-Encoder Spatial and Frequency Co-Awareness Network for Rural Road Extraction",
+      "authors": [
+        "Zhengbo Zhang",
+        "Yihe Tian",
+        "Wanke Xia",
+        "Lin Chen",
+        "Yue Sun",
+        "Kun Ding",
+        "Ying Wang",
+        "Bing Xu",
+        "Shiming Xiang"
+      ],
+      "summary": "Accurate extraction of rural roads from high-resolution remote sensing imagery is essential for infrastructure planning and sustainable development. However, this task presents unique challenges in rural settings due to several factors. These include high intra-class variability and low inter-class separability from diverse surface materials, frequent vegetation occlusions that disrupt spatial continuity, and narrow road widths that exacerbate detection difficulties. Existing methods, primarily optimized for structured urban environments, often underperform in these scenarios as they overlook such distinctive characteristics. To address these challenges, we propose DSFC-Net, a dual-encoder framework that synergistically fuses spatial and frequency-domain information. Specifically, a CNN branch is employed to capture fine-grained local road boundaries and short-range continuity, while a novel Spatial-Frequency Hybrid Transformer (SFT) is introduced to robustly model global topological dependencies against vegetation occlusions. Distinct from standard attention mechanisms that suffer from frequency bias, the SFT incorporates a Cross-Frequency Interaction Attention (CFIA) module that explicitly decouples high- and low-frequency information via a Laplacian Pyramid strategy. This design enables the dynamic interaction between spatial details and frequency-aware global contexts, effectively preserving the connectivity of narrow roads. Furthermore, a Channel Feature Fusion Module (CFFM) is proposed to bridge the two branches by adaptively recalibrating channel-wise feature responses, seamlessly integrating local textures with global semantics for accurate segmentation. Comprehensive experiments on the WHU-RuR+, DeepGlobe, and Massachusetts datasets validate the superiority of DSFC-Net over state-of-the-art approaches.",
+      "published": "2026-02-01T15:23:42Z",
+      "updated": "2026-02-01T15:23:42Z",
+      "arxiv_id": "2602.01278v1",
+      "abs_url": "http://arxiv.org/abs/2602.01278v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.01278v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "语义分割",
+        "多模态融合",
+        "城市与基础设施",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 12,
+      "anchor_terms": [
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "attention mechanism",
+        "CNN",
+        "DeepGlobe",
+        "feature fusion",
+        "remote sensing",
+        "road extraction",
+        "robust",
+        "transformer",
+        "WHU"
+      ],
+      "title_zh": "DSFC-Net：用于乡村道路提取的双编码器空间和频率协同感知网络",
+      "summary_zh": "从高分辨率遥感图像中准确提取农村道路对于基础设施规划和可持续发展至关重要。然而，由于多种因素，这项任务在农村环境中提出了独特的挑战。这些包括类内变异性高、类间可分离性低、表面材料不同、频繁的植被遮挡会破坏空间连续性，以及道路宽度狭窄会加剧检测难度。现有的方法主要针对结构化城市环境进行优化，但在这些场景中往往表现不佳，因为它们忽略了这些独特的特征。为了应对这些挑战，我们提出了 DSFC-Net，这是一种协同融合空间和频域信息的双编码器框架。具体来说，采用 CNN 分支来捕获细粒度的局部道路边界和短程连续性，同时引入新型空间频率混合变压器 (SFT) 来稳健地模拟针对植被遮挡的全局拓扑依赖性。与受频率偏差影响的标准注意力机制不同，SFT 结合了跨频交互注意力（CFIA）模块，该模块通过拉普拉斯金字塔策略明确解耦高频和低频信息。这种设计实现了空间细节和频率感知的全局环境之间的动态交互，有效地保留了狭窄道路的连通性。此外，提出了通道特征融合模块（CFFM），通过自适应地重新校准通道特征响应来桥接两个分支，将局部纹理与全局语义无缝集成以实现准确分割。对 WHU-RuR+、DeepGlobe 和 Massachusetts 数据集的综合实验验证了 DSFC-Net 相对于最先进方法的优越性。"
+    },
+    {
+      "title": "Bridging Lexical Ambiguity and Vision: A Mini Review on Visual Word Sense Disambiguation",
+      "authors": [
+        "Shashini Nilukshi",
+        "Deshan Sumanathilaka"
+      ],
+      "summary": "This paper offers a mini review of Visual Word Sense Disambiguation (VWSD), which is a multimodal extension of traditional Word Sense Disambiguation (WSD). VWSD helps tackle lexical ambiguity in vision-language tasks. While conventional WSD depends only on text and lexical resources, VWSD uses visual cues to find the right meaning of ambiguous words with minimal text input. The review looks at developments from early multimodal fusion methods to new frameworks that use contrastive models like CLIP, diffusion-based text-to-image generation, and large language model (LLM) support. Studies from 2016 to 2025 are examined to show the growth of VWSD through feature-based, graph-based, and contrastive embedding techniques. It focuses on prompt engineering, fine-tuning, and adapting to multiple languages. Quantitative results show that CLIP-based fine-tuned models and LLM-enhanced VWSD systems consistently perform better than zero-shot baselines, achieving gains of up to 6-8\\% in Mean Reciprocal Rank (MRR). However, challenges still exist, such as limitations in context, model bias toward common meanings, a lack of multilingual datasets, and the need for better evaluation frameworks. The analysis highlights the growing overlap of CLIP alignment, diffusion generation, and LLM reasoning as the future path for strong, context-aware, and multilingual disambiguation systems.",
+      "published": "2026-02-01T12:36:01Z",
+      "updated": "2026-02-01T12:36:01Z",
+      "arxiv_id": "2602.01193v1",
+      "abs_url": "http://arxiv.org/abs/2602.01193v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.01193v1",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.CV"
+      ],
+      "comment": "2 figures, 2 Tables, Accepted at IEEE TIC 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 9,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "CLIP",
+        "fine-tuning",
+        "image generation",
+        "large language model",
+        "LLM",
+        "modal fusion",
+        "prompt engineering",
+        "zero-shot"
+      ],
+      "title_zh": "弥合词汇歧义和视觉：视觉词义消歧的迷你回顾",
+      "summary_zh": "本文对视觉词义消歧（VWSD）进行了简要回顾，它是传统词义消歧（WSD）的多模态扩展。 VWSD 有助于解决视觉语言任务中的词汇歧义。传统的 WSD 仅依赖于文本和词汇资源，而 VWSD 使用视觉提示以最少的文本输入找到模糊单词的正确含义。该综述着眼于从早期多模态融合方法到使用 CLIP 等对比模型、基于扩散的文本到图像生成和大语言模型 (LLM) 支持的新框架的发展。对 2016 年至 2025 年的研究进行了检查，以显示 VWSD 通过基于特征、基于图形和对比嵌入技术的增长。它专注于快速工程、微调和适应多种语言。定量结果表明，基于 CLIP 的微调模型和 LLM 增强型 VWSD 系统的性能始终优于零样本基线，在平均倒数排名 (MRR) 方面实现了高达 6-8\\% 的增益。然而，挑战仍然存在，例如上下文的限制、模型对常见含义的偏见、缺乏多语言数据集以及需要更好的评估框架。该分析强调了 CLIP 对齐、扩散生成和法学硕士推理的日益重叠，这是强大的上下文感知和多语言消歧系统的未来路径。"
+    },
+    {
+      "title": "Analyzing and Improving Diffusion Models for Time-Series Data Imputation: A Proximal Recursion Perspective",
+      "authors": [
+        "Zhichao Chen",
+        "Hao Wang",
+        "Fangyikang Wang",
+        "Licheng Pan",
+        "Zhengnan Li",
+        "Yunfei Teng",
+        "Haoxuan Li",
+        "Zhouchen Lin"
+      ],
+      "summary": "Diffusion models (DMs) have shown promise for Time-Series Data Imputation (TSDI); however, their performance remains inconsistent in complex scenarios. We attribute this to two primary obstacles: (1) non-stationary temporal dynamics, which can bias the inference trajectory and lead to outlier-sensitive imputations; and (2) objective inconsistency, since imputation favors accurate pointwise recovery whereas DMs are inherently trained to generate diverse samples. To better understand these issues, we analyze DM-based TSDI process through a proximal-operator perspective and uncover that an implicit Wasserstein distance regularization inherent in the process hinders the model's ability to counteract non-stationarity and dissipative regularizer, thereby amplifying diversity at the expense of fidelity. Building on this insight, we propose a novel framework called SPIRIT (Semi-Proximal Transport Regularized time-series Imputation). Specifically, we introduce entropy-induced Bregman divergence to relax the mass preserving constraint in the Wasserstein distance, formulate the semi-proximal transport (SPT) discrepancy, and theoretically prove the robustness of SPT against non-stationarity. Subsequently, we remove the dissipative structure and derive the complete SPIRIT workflow, with SPT serving as the proximal operator. Extensive experiments demonstrate the effectiveness of the proposed SPIRIT approach.",
+      "published": "2026-02-01T12:11:57Z",
+      "updated": "2026-02-01T12:11:57Z",
+      "arxiv_id": "2602.01182v1",
+      "abs_url": "http://arxiv.org/abs/2602.01182v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.01182v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "时间序列与视频"
+      ],
+      "topic": "图像生成与重建",
+      "score": 5,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "diffusion model",
+        "robust",
+        "temporal",
+        "time-series"
+      ],
+      "title_zh": "分析和改进时间序列数据插补的扩散模型：近端递归视角",
+      "summary_zh": "扩散模型 (DM) 已显示出时间序列数据插补 (TSDI) 的前景；然而，它们在复杂场景下的表现仍然不一致。我们将此归因于两个主要障碍：（1）非平稳时间动态，这可能会使推理轨迹产生偏差并导致异常值敏感的插补； (2) 客观不一致，因为插补有利于精确的逐点恢复，而 DM 本质上是经过训练来生成不同样本的。为了更好地理解这些问题，我们从近端算子的角度分析基于 DM 的 TSDI 过程，并发现该过程中固有的隐式 Wasserstein 距离正则化阻碍了模型抵消非平稳性和耗散正则化器的能力，从而以保真度为代价放大了多样性。基于这一见解，我们提出了一个名为 SPIRIT（半邻近传输正则化时间序列插补）的新颖框架。具体来说，我们引入熵诱导的 Bregman 散度来放松 Wasserstein 距离中的质量保持约束，制定半近端传输 (SPT) 差异，并从理论上证明 SPT 对非平稳性的鲁棒性。随后，我们去除耗散结构并导出完整的 SPIRIT 工作流程，其中 SPT 作为近端算子。大量实验证明了所提出的 SPIRIT 方法的有效性。"
+    },
+    {
+      "title": "Semantically Aware UAV Landing Site Assessment from Remote Sensing Imagery via Multimodal Large Language Models",
+      "authors": [
+        "Chunliang Hua",
+        "Zeyuan Yang",
+        "Lei Zhang",
+        "Jiayang Sun",
+        "Fengwen Chen",
+        "Chunlan Zeng",
+        "Xiao Hu"
+      ],
+      "summary": "Safe UAV emergency landing requires more than just identifying flat terrain; it demands understanding complex semantic risks (e.g., crowds, temporary structures) invisible to traditional geometric sensors. In this paper, we propose a novel framework leveraging Remote Sensing (RS) imagery and Multimodal Large Language Models (MLLMs) for global context-aware landing site assessment. Unlike local geometric methods, our approach employs a coarse-to-fine pipeline: first, a lightweight semantic segmentation module efficiently pre-screens candidate areas; second, a vision-language reasoning agent fuses visual features with Point-of-Interest (POI) data to detect subtle hazards. To validate this approach, we construct and release the Emergency Landing Site Selection (ELSS) benchmark. Experiments demonstrate that our framework significantly outperforms geometric baselines in risk identification accuracy. Furthermore, qualitative results confirm its ability to generate human-like, interpretable justifications, enhancing trust in automated decision-making. The benchmark dataset is publicly accessible at https://anonymous.4open.science/r/ELSS-dataset-43D7.",
+      "published": "2026-02-01T11:30:03Z",
+      "updated": "2026-02-01T11:30:03Z",
+      "arxiv_id": "2602.01163v1",
+      "abs_url": "http://arxiv.org/abs/2602.01163v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.01163v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "语义分割",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "多模态融合",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 12,
+      "anchor_terms": [
+        "MLLM",
+        "multimodal large language model",
+        "remote sensing",
+        "semantic segmentation",
+        "UAV"
+      ],
+      "matched_terms": [
+        "large language model",
+        "MLLM",
+        "multimodal large language model",
+        "remote sensing",
+        "semantic segmentation",
+        "UAV"
+      ],
+      "title_zh": "通过多模态大语言模型从遥感图像进行语义感知无人机着陆点评估",
+      "summary_zh": "安全的无人机紧急着陆需要的不仅仅是识别平坦的地形；它需要理解传统几何传感器看不见的复杂语义风险（例如人群、临时结构）。在本文中，我们提出了一种利用遥感（RS）图像和多模态大语言模型（MLLM）进行全球上下文感知着陆点评估的新颖框架。与局部几何方法不同，我们的方法采用从粗到细的流程：首先，轻量级语义分割模块有效地预筛选候选区域；其次，视觉语言推理代理将视觉特征与兴趣点 (POI) 数据融合，以检测细微的危险。为了验证这种方法，我们构建并发布了紧急着陆地点选择 (ELSS) 基准。实验表明，我们的框架在风险识别准确性方面显着优于几何基线。此外，定性结果证实了其生成类人的、可解释的理由的能力，从而增强了对自动化决策的信任。基准数据集可通过 https://anonymous.4open.science/r/ELSS-dataset-43D7 公开访问。"
+    },
+    {
+      "title": "Lyapunov Stability-Aware Stackelberg Game for Low-Altitude Economy: A Control-Oriented Pruning-Based DRL Approach",
+      "authors": [
+        "Yue Zhong",
+        "Jiawen Kang",
+        "Yongju Tong",
+        "Hong-Ning Dai",
+        "Dong In Kim",
+        "Abbas Jamalipour",
+        "Shengli Xie"
+      ],
+      "summary": "With the rapid expansion of the low-altitude economy, Unmanned Aerial Vehicles (UAVs) serve as pivotal aerial base stations supporting diverse services from users, ranging from latency-sensitive critical missions to bandwidth-intensive data streaming. However, the efficacy of such heterogeneous networks is often compromised by the conflict between limited onboard resources and stringent stability requirements. Moving beyond traditional throughput-centric designs, we propose a Sensing-Communication-Computing-Control closed-loop framework that explicitly models the impact of communication latency on physical control stability. To guarantee mission reliability, we leverage the Lyapunov stability theory to derive an intrinsic mapping between the state evolution of the control system and communication constraints, transforming abstract stability requirements into quantifiable resource boundaries. Then, we formulate the resource allocation problem as a Stackelberg game, where UAVs (as leaders) dynamically price resources to balance load and ensure stability, while users (as followers) optimize requests based on service urgency. Furthermore, addressing the prohibitive computational overhead of standard Deep Reinforcement Learning (DRL) on energy-constrained edge platforms, we propose a novel and lightweight pruning-based Proximal Policy Optimization (PPO) algorithm. By integrating a dynamic structured pruning mechanism, the proposed algorithm significantly compresses the neural network scale during training, enabling the UAV to rapidly approximate the game equilibrium with minimal inference latency. Simulation results demonstrate that the proposed scheme effectively secures control loop stability while maximizing system utility in dynamic low-altitude environments.",
+      "published": "2026-02-01T10:01:07Z",
+      "updated": "2026-02-01T10:01:07Z",
+      "arxiv_id": "2602.01131v1",
+      "abs_url": "http://arxiv.org/abs/2602.01131v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.01131v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "无人机/UAV"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 4,
+      "anchor_terms": [
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "UAV",
+        "unmanned aerial vehicle"
+      ],
+      "title_zh": "低空经济的 Lyapunov 稳定性感知 Stackelberg 博弈：一种面向控制的基于剪枝的 DRL 方法",
+      "summary_zh": "随着低空经济的快速扩张，无人机（UAV）作为关键的空中基站，支持用户的各种服务，从延迟敏感的关键任务到带宽密集型数据流。然而，这种异构网络的功效常常因有限的机载资源和严格的稳定性要求之间的冲突而受到损害。超越传统的以吞吐量为中心的设计，我们提出了一种传感-通信-计算-控制闭环框架，该框架明确模拟了通信延迟对物理控制稳定性的影响。为了保证任务的可靠性，我们利用李亚普诺夫稳定性理论推导出控制系统的状态演化和通信约束之间的内在映射，将抽象的稳定性要求转化为可量化的资源边界。然后，我们将资源分配问题表述为 Stackelberg 博弈，其中无人机（作为领导者）动态定价资源以平衡负载并确保稳定性，而用户（作为追随者）根据服务紧急程度优化请求。此外，为了解决能量受限边缘平台上标准深度强化学习（DRL）令人望而却步的计算开销，我们提出了一种新颖且轻量级的基于剪枝的近端策略优化（PPO）算法。通过集成动态结构化剪枝机制，该算法在训练过程中显着压缩神经网络规模，使无人机能够以最小的推理延迟快速逼近博弈均衡。仿真结果表明，该方案有效保证了控制回路的稳定性，同时最大限度地提高了动态低空环境中的系统效用。"
+    },
+    {
+      "title": "LightCity: An Urban Dataset for Outdoor Inverse Rendering and Reconstruction under Multi-illumination Conditions",
+      "authors": [
+        "Jingjing Wang",
+        "Qirui Hu",
+        "Chong Bao",
+        "Yuke Zhu",
+        "Hujun Bao",
+        "Zhaopeng Cui",
+        "Guofeng Zhang"
+      ],
+      "summary": "Inverse rendering in urban scenes is pivotal for applications like autonomous driving and digital twins. Yet, it faces significant challenges due to complex illumination conditions, including multi-illumination and indirect light and shadow effects. However, the effects of these challenges on intrinsic decomposition and 3D reconstruction have not been explored due to the lack of appropriate datasets. In this paper, we present LightCity, a novel high-quality synthetic urban dataset featuring diverse illumination conditions with realistic indirect light and shadow effects. LightCity encompasses over 300 sky maps with highly controllable illumination, varying scales with street-level and aerial perspectives over 50K images, and rich properties such as depth, normal, material components, light and indirect light, etc. Besides, we leverage LightCity to benchmark three fundamental tasks in the urban environments and conduct a comprehensive analysis of these benchmarks, laying a robust foundation for advancing related research.",
+      "published": "2026-02-01T09:37:00Z",
+      "updated": "2026-02-01T09:37:00Z",
+      "arxiv_id": "2602.01118v1",
+      "abs_url": "http://arxiv.org/abs/2602.01118v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.01118v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "LiDAR/点云",
+        "城市与基础设施",
+        "数据集/评测"
+      ],
+      "topic": "LiDAR/点云",
+      "score": 4,
+      "anchor_terms": [
+        "3D reconstruction"
+      ],
+      "matched_terms": [
+        "3D reconstruction",
+        "aerial",
+        "robust"
+      ],
+      "title_zh": "LightCity：多光照条件下室外逆渲染与重建的城市数据集",
+      "summary_zh": "城市场景中的逆渲染对于自动驾驶和数字孪生等应用至关重要。然而，由于复杂的照明条件，包括多重照明和间接光影效果，它面临着巨大的挑战。然而，由于缺乏适当的数据集，这些挑战对内在分解和 3D 重建的影响尚未得到探索。在本文中，我们提出了 LightCity，这是一种新颖的高质量合成城市数据集，具有多种照明条件和逼真的间接光影效果。 LightCity包含超过300张天空图，这些天空图具有高度可控的照明，超过50K图像的不同比例的街道和空中视角，以及丰富的属性，如深度、法线、材质成分、光线和间接光等。此外，我们利用LightCity对城市环境中的三个基本任务进行基准测试，并对这些基准测试进行全面分析，为推进相关研究奠定了坚实的基础。"
+    },
+    {
+      "title": "EvoOpt-LLM: Evolving industrial optimization models with large language models",
+      "authors": [
+        "Yiliu He",
+        "Tianle Li",
+        "Binghao Ji",
+        "Zhiyuan Liu",
+        "Di Huang"
+      ],
+      "summary": "Optimization modeling via mixed-integer linear programming (MILP) is fundamental to industrial planning and scheduling, yet translating natural-language requirements into solver-executable models and maintaining them under evolving business rules remains highly expertise-intensive. While large language models (LLMs) offer promising avenues for automation, existing methods often suffer from low data efficiency, limited solver-level validity, and poor scalability to industrial-scale problems. To address these challenges, we present EvoOpt-LLM, a unified LLM-based framework supporting the full lifecycle of industrial optimization modeling, including automated model construction, dynamic business-constraint injection, and end-to-end variable pruning. Built on a 7B-parameter LLM and adapted via parameter-efficient LoRA fine-tuning, EvoOpt-LLM achieves a generation rate of 91% and an executability rate of 65.9% with only 3,000 training samples, with critical performance gains emerging under 1,500 samples. The constraint injection module reliably augments existing MILP models while preserving original objectives, and the variable pruning module enhances computational efficiency, achieving an F1 score of ~0.56 on medium-sized LP models with only 400 samples. EvoOpt-LLM demonstrates a practical, data-efficient approach to industrial optimization modeling, reducing reliance on expert intervention while improving adaptability and solver efficiency.",
+      "published": "2026-02-01T07:58:55Z",
+      "updated": "2026-03-23T13:10:36Z",
+      "arxiv_id": "2602.01082v2",
+      "abs_url": "http://arxiv.org/abs/2602.01082v2",
+      "pdf_url": "https://arxiv.org/pdf/2602.01082v2",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 6,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA"
+      ],
+      "title_zh": "EvoOpt-LLM：使用大型语言模型发展工业优化模型",
+      "summary_zh": "通过混合整数线性规划 (MILP) 进行优化建模是工业规划和调度的基础，但将自然语言需求转换为求解器可执行模型并在不断发展的业务规则下维护它们仍然需要高度专业知识密集型。虽然大型语言模型 (LLM) 为自动化提供了有前景的途径，但现有方法往往存在数据效率低、求解器级有效性有限以及工业规模问题的可扩展性差等问题。为了应对这些挑战，我们推出了 EvoOpt-LLM，这是一个基于 LLM 的统一框架，支持工业优化建模的整个生命周期，包括自动化模型构建、动态业务约束注入和端到端变量修剪。 EvoOpt-LLM 基于 7B 参数 LLM 构建，并通过参数高效的 LoRA 微调进行调整，仅用 3,000 个训练样本即可实现 91% 的生成率和 65.9% 的可执行率，并在 1,500 个样本下实现关键性能提升。约束注入模块可靠地增强了现有的 MILP 模型，同时保留了原始目标，变量剪枝模块提高了计算效率，在只有 400 个样本的中型 LP 模型上实现了约 0.56 的 F1 分数。 EvoOpt-LLM 展示了一种实用、数据高效的工业优化建模方法，减少对专家干预的依赖，同时提高适应性和求解器效率。"
+    },
+    {
+      "title": "Offline Discovery of Interpretable Skills from Multi-Task Trajectories",
+      "authors": [
+        "Chongyu Zhu",
+        "Mithun Vanniasinghe",
+        "Jiayu Chen",
+        "Chi-Guhn Lee"
+      ],
+      "summary": "Hierarchical Imitation Learning is a powerful paradigm for acquiring complex robot behaviors from demonstrations. A central challenge, however, lies in discovering reusable skills from long-horizon, multi-task offline data, especially when the data lacks explicit rewards or subtask annotations. In this work, we introduce LOKI, a three-stage end-to-end learning framework designed for offline skill discovery and hierarchical imitation. The framework commences with a two-stage, weakly supervised skill discovery process: Stage one performs coarse, task-aware macro-segmentation by employing an alignment-enforced Vector Quantized VAE guided by weak task labels. Stage two then refines these segments at a micro-level using a self-supervised sequential model, followed by an iterative clustering process to consolidate skill boundaries. The third stage then leverages these precise boundaries to construct a hierarchical policy within an option-based framework-complete with a learned termination condition beta for explicit skill switching. LOKI achieves high success rates on the challenging D4RL Kitchen benchmark and outperforms standard HIL baselines. Furthermore, we demonstrate that the discovered skills are semantically meaningful, aligning with human intuition, and exhibit compositionality by successfully sequencing them to solve a novel, unseen task.",
+      "published": "2026-02-01T05:03:58Z",
+      "updated": "2026-02-01T05:03:58Z",
+      "arxiv_id": "2602.01018v1",
+      "abs_url": "http://arxiv.org/abs/2602.01018v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.01018v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 2,
+      "anchor_terms": [
+        "weakly supervised"
+      ],
+      "matched_terms": [
+        "self-supervised",
+        "weakly supervised"
+      ],
+      "title_zh": "从多任务轨迹中离线发现可解释的技能",
+      "summary_zh": "分层模仿学习是从演示中获取复杂机器人行为的强大范例。然而，一个核心挑战在于从长期、多任务离线数据中发现可重用的技能，特别是当数据缺乏明确的奖励或子任务注释时。在这项工作中，我们介绍了 LOKI，这是一个专为离线技能发现和分层模仿而设计的三阶段端到端学习框架。该框架从一个两阶段的弱监督技能发现过程开始：第一阶段通过采用由弱任务标签引导的对齐强制矢量量化 VAE 来执行粗略的任务感知宏观分割。然后，第二阶段使用自监督顺序模型在微观层面上细化这些细分，然后进行迭代聚类过程以巩固技能边界。然后，第三阶段利用这些精确的边界在基于选项的框架内构建分层策略，并提供用于显式技能切换的学习终止条件 beta。 LOKI 在具有挑战性的 D4RL Kitchen 基准测试中取得了很高的成功率，并且优于标准 HIL 基准。此外，我们证明所发现的技能在语义上是有意义的，与人类直觉一致，并通过成功地对它们进行排序以解决新的、看不见的任务来展示组合性。"
+    }
+  ]
+}

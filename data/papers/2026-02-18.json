@@ -1,0 +1,474 @@
+{
+  "date": "2026-02-18",
+  "generated_at": "2026-06-01T12:56:30.256723+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202602180000 TO 202602182359]",
+  "total_fetched": 292,
+  "total_matched": 11,
+  "papers": [
+    {
+      "title": "StereoAdapter-2: Globally Structure-Consistent Underwater Stereo Depth Estimation",
+      "authors": [
+        "Zeyu Ren",
+        "Xiang Li",
+        "Yiran Wang",
+        "Zeyu Zhang",
+        "Hao Tang"
+      ],
+      "summary": "Stereo depth estimation is fundamental to underwater robotic perception, yet suffers from severe domain shifts caused by wavelength-dependent light attenuation, scattering, and refraction. Recent approaches leverage monocular foundation models with GRU-based iterative refinement for underwater adaptation; however, the sequential gating and local convolutional kernels in GRUs necessitate multiple iterations for long-range disparity propagation, limiting performance in large-disparity and textureless underwater regions. In this paper, we propose StereoAdapter-2, which replaces the conventional ConvGRU updater with a novel ConvSS2D operator based on selective state space models. The proposed operator employs a four-directional scanning strategy that naturally aligns with epipolar geometry while capturing vertical structural consistency, enabling efficient long-range spatial propagation within a single update step at linear computational complexity. Furthermore, we construct UW-StereoDepth-80K, a large-scale synthetic underwater stereo dataset featuring diverse baselines, attenuation coefficients, and scattering parameters through a two-stage generative pipeline combining semantic-aware style transfer and geometry-consistent novel view synthesis. Combined with dynamic LoRA adaptation inherited from StereoAdapter, our framework achieves state-of-the-art zero-shot performance on underwater benchmarks with 17% improvement on TartanAir-UW and 7.2% improvment on SQUID, with real-world validation on the BlueROV2 platform demonstrates the robustness of our approach. Code: https://github.com/AIGeeksGroup/StereoAdapter-2. Website: https://aigeeksgroup.github.io/StereoAdapter-2.",
+      "published": "2026-02-18T22:12:08Z",
+      "updated": "2026-02-18T22:12:08Z",
+      "arxiv_id": "2602.16915v1",
+      "abs_url": "http://arxiv.org/abs/2602.16915v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.16915v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/AIGeeksGroup/StereoAdapter-2",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "基础模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "LiDAR/点云",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 8,
+      "anchor_terms": [
+        "depth estimation",
+        "LoRA"
+      ],
+      "matched_terms": [
+        "adapter",
+        "depth estimation",
+        "foundation model",
+        "LoRA",
+        "robust",
+        "state space model",
+        "zero-shot"
+      ],
+      "title_zh": "StereoAdapter-2：全局结构一致的水下立体深度估计",
+      "summary_zh": "立体深度估计是水下机器人感知的基础，但由于波长相关的光衰减、散射和折射而导致严重的域偏移。最近的方法利用单目基础模型和基于 GRU 的迭代细化来实现水下适应；然而，GRU 中的顺序门控和局部卷积核需要多次迭代才能实现长距离视差传播，从而限制了大视差和无纹理水下区域的性能。在本文中，我们提出了 StereoAdapter-2，它用基于选择性状态空间模型的新型 ConvSS2D 算子取代了传统的 ConvGRU 更新器。所提出的算子采用四向扫描策略，该策略自然地与对极几何结构对齐，同时捕获垂直结构一致性，从而以线性计算复杂度在单个更新步骤内实现高效的远程空间传播。此外，我们通过结合语义感知风格传输和几何一致的新颖视图合成的两阶段生成管道构建了 UW-StereoDepth-80K，这是一个大规模合成水下立体数据集，具有不同的基线、衰减系数和散射参数。结合继承自 StereoAdapter 的动态 LoRA 自适应，我们的框架在水下基准测试中实现了最先进的零样本性能，在 TartanAir-UW 上提高了 17%，在 SQUID 上提高了 7.2%，在 BlueROV2 平台上的实际验证证明了我们方法的稳健性。代码：https://github.com/AIGeeksGroup/StereoAdapter-2。网站：https://aigeeksgroup.github.io/StereoAdapter-2。"
+    },
+    {
+      "title": "VETime: Vision Enhanced Zero-Shot Time Series Anomaly Detection",
+      "authors": [
+        "Yingyuan Yang",
+        "Tian Lan",
+        "Yifei Gao",
+        "Yimeng Lu",
+        "Wenjun He",
+        "Meng Wang",
+        "Chenghao Liu",
+        "Chen Zhang"
+      ],
+      "summary": "Time-series anomaly detection (TSAD) requires identifying both immediate Point Anomalies and long-range Context Anomalies. However, existing foundation models face a fundamental trade-off: 1D temporal models provide fine-grained pointwise localization but lack a global contextual perspective, while 2D vision-based models capture global patterns but suffer from information bottlenecks due to a lack of temporal alignment and coarse-grained pointwise detection. To resolve this dilemma, we propose VETime, the first TSAD framework that unifies temporal and visual modalities through fine-grained visual-temporal alignment and dynamic fusion. VETime introduces a Reversible Image Conversion and a Patch-Level Temporal Alignment module to establish a shared visual-temporal timeline, preserving discriminative details while maintaining temporal sensitivity. Furthermore, we design an Anomaly Window Contrastive Learning mechanism and a Task-Adaptive Multi-Modal Fusion to adaptively integrate the complementary perceptual strengths of both modalities. Extensive experiments demonstrate that VETime significantly outperforms state-of-the-art models in zero-shot scenarios, achieving superior localization precision with lower computational overhead than current vision-based approaches. Code available at: https://github.com/yyyangcoder/VETime.",
+      "published": "2026-02-18T18:22:22Z",
+      "updated": "2026-02-18T18:22:22Z",
+      "arxiv_id": "2602.16681v1",
+      "abs_url": "http://arxiv.org/abs/2602.16681v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.16681v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/yyyangcoder/VETime",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "时间序列与视频",
+        "基础模型",
+        "小样本与域泛化",
+        "无监督与弱监督",
+        "多模态融合"
+      ],
+      "topic": "时间序列与视频",
+      "score": 9,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "contrastive learning",
+        "foundation model",
+        "modal fusion",
+        "temporal",
+        "time-series",
+        "zero-shot"
+      ],
+      "title_zh": "VETime：视觉增强零样本时间序列异常检测",
+      "summary_zh": "时间序列异常检测 (TSAD) 需要识别即时点异常和远程上下文异常。然而，现有的基础模型面临着一个基本的权衡：一维时间模型提供细粒度的逐点定位，但缺乏全局上下文视角，而基于视觉的二维模型捕获全局模式，但由于缺乏时间对齐和粗粒度的逐点检测而遭受信息瓶颈。为了解决这个困境，我们提出了 VETime，这是第一个 TSAD 框架，它通过细粒度的视觉-时间对齐和动态融合来统一时间和视觉模式。 VETime 引入了可逆图像转换和块级时间对齐模块来建立共享的视觉时间时间线，在保持时间敏感性的同时保留有区别的细节。此外，我们设计了异常窗口对比学习机制和任务自适应多模态融合，以自适应地整合两种模态的互补感知优势。大量实验表明，VETime 在零样本场景中显着优于最先进的模型，与当前基于视觉的方法相比，以更低的计算开销实现了卓越的定位精度。代码位于：https://github.com/yyyangcoder/VETime。"
+    },
+    {
+      "title": "GPSBench: Do Large Language Models Understand GPS Coordinates?",
+      "authors": [
+        "Thinh Hung Truong",
+        "Jey Han Lau",
+        "Jianzhong Qi"
+      ],
+      "summary": "Large Language Models (LLMs) are increasingly deployed in applications that interact with the physical world, such as navigation, robotics, or mapping, making robust geospatial reasoning a critical capability. Despite that, LLMs' ability to reason about GPS coordinates and real-world geography remains underexplored. We introduce GPSBench, a dataset of 57,800 samples across 17 tasks for evaluating geospatial reasoning in LLMs, spanning geometric coordinate operations (e.g., distance and bearing computation) and reasoning that integrates coordinates with world knowledge. Focusing on intrinsic model capabilities rather than tool use, we evaluate 14 state-of-the-art LLMs and find that GPS reasoning remains challenging, with substantial variation across tasks: models are generally more reliable at real-world geographic reasoning than at geometric computations. Geographic knowledge degrades hierarchically, with strong country-level performance but weak city-level localization, while robustness to coordinate noise suggests genuine coordinate understanding rather than memorization. We further show that GPS-coordinate augmentation can improve in downstream geospatial tasks, and that finetuning induces trade-offs between gains in geometric computation and degradation in world knowledge. Our dataset and reproducible code are available at https://github.com/joey234/gpsbench",
+      "published": "2026-02-18T00:33:26Z",
+      "updated": "2026-02-18T00:33:26Z",
+      "arxiv_id": "2602.16105v1",
+      "abs_url": "http://arxiv.org/abs/2602.16105v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.16105v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/joey234/gpsbench",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像描述与视觉推理",
+        "视觉-语言模型",
+        "数据集/评测"
+      ],
+      "topic": "图像描述与视觉推理",
+      "score": 6,
+      "anchor_terms": [
+        "geospatial"
+      ],
+      "matched_terms": [
+        "geospatial",
+        "large language model",
+        "robust",
+        "spatial reasoning"
+      ],
+      "title_zh": "GPSBench：大型语言模型能理解 GPS 坐标吗？",
+      "summary_zh": "大型语言模型 (LLM) 越来越多地部署在与物理世界交互的应用程序中，例如导航、机器人或地图，这使得强大的地理空间推理成为一项关键功能。尽管如此，法学硕士推理 GPS 坐标和现实世界地理的能力仍未得到充分探索。我们引入了 GPSBench，这是一个包含 17 个任务的 57,800 个样本的数据集，用于评估法学硕士中的地理空间推理，涵盖几何坐标操作（例如距离和方位计算）以及将坐标与世界知识相结合的推理。我们专注于内在模型功能而不是工具使用，评估了 14 个最先进的法学硕士，发现 GPS 推理仍然具有挑战性，不同任务之间存在很大差异：模型在现实世界地理推理中通常比在几何计算中更可靠。地理知识按层次退化，国家层面的表现较强，但城市层面的本地化较弱，而对坐标噪声的鲁棒性表明真正的坐标理解而不是记忆。我们进一步表明，GPS 坐标增强可以改善下游地理空间任务，并且微调会导致几何计算增益和世界知识退化之间的权衡。我们的数据集和可重现的代码可在 https://github.com/joey234/gpsbench 获取"
+    },
+    {
+      "title": "HS-3D-NeRF: 3D Surface and Hyperspectral Reconstruction From Stationary Hyperspectral Images Using Multi-Channel NeRFs",
+      "authors": [
+        "Kibon Ku",
+        "Talukder Z. Jubery",
+        "Adarsh Krishnamurthy",
+        "Baskar Ganapathysubramanian"
+      ],
+      "summary": "Advances in hyperspectral imaging (HSI) and 3D reconstruction have enabled accurate, high-throughput characterization of agricultural produce quality and plant phenotypes, both essential for advancing agricultural sustainability and breeding programs. HSI captures detailed biochemical features of produce, while 3D geometric data substantially improves morphological analysis. However, integrating these two modalities at scale remains challenging, as conventional approaches involve complex hardware setups incompatible with automated phenotyping systems. Recent advances in neural radiance fields (NeRF) offer computationally efficient 3D reconstruction but typically require moving-camera setups, limiting throughput and reproducibility in standard indoor agricultural environments. To address these challenges, we introduce HSI-SC-NeRF, a stationary-camera multi-channel NeRF framework for high-throughput hyperspectral 3D reconstruction targeting postharvest inspection of agricultural produce. Multi-view hyperspectral data is captured using a stationary camera while the object rotates within a custom-built Teflon imaging chamber providing diffuse, uniform illumination. Object poses are estimated via ArUco calibration markers and transformed to the camera frame of reference through simulated pose transformations, enabling standard NeRF training on stationary-camera data. A multi-channel NeRF formulation optimizes reconstruction across all hyperspectral bands jointly using a composite spectral loss, supported by a two-stage training protocol that decouples geometric initialization from radiometric refinement. Experiments on three agricultural produce samples demonstrate high spatial reconstruction accuracy and strong spectral fidelity across the visible and near-infrared spectrum, confirming the suitability of HSI-SC-NeRF for integration into automated agricultural workflows.",
+      "published": "2026-02-18T23:29:04Z",
+      "updated": "2026-02-18T23:29:04Z",
+      "arxiv_id": "2602.16950v1",
+      "abs_url": "http://arxiv.org/abs/2602.16950v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.16950v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "16 pages, 14 figures, 3 tables",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "高光谱/多光谱",
+        "LiDAR/点云"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 3,
+      "anchor_terms": [
+        "hyperspectral image"
+      ],
+      "matched_terms": [
+        "hyperspectral",
+        "hyperspectral image"
+      ],
+      "title_zh": "HS-3D-NeRF：使用多通道 NeRF 从固定高光谱图像进行 3D 表面和高光谱重建",
+      "summary_zh": "高光谱成像 (HSI) 和 3D 重建的进步使得能够对农产品质量和植物表型进行准确、高通量的表征，这对于推进农业可持续发展和育种计划至关重要。 HSI 捕获农产品的详细生化特征，而 3D 几何数据则大大改进了形态分析。然而，大规模整合这两种模式仍然具有挑战性，因为传统方法涉及与自动化表型系统不兼容的复杂硬件设置。神经辐射场 (NeRF) 的最新进展提供了计算高效的 3D 重建，但通常需要移动摄像机设置，限制了标准室内农业环境中的吞吐量和再现性。为了应对这些挑战，我们推出了 HSI-SC-NeRF，这是一种固定相机多通道 NeRF 框架，用于针对农产品采后检验的高通量高光谱 3D 重建。使用固定相机捕获多视图高光谱数据，同时物体在定制的聚四氟乙烯成像室中旋转，提供漫射、均匀的照明。物体姿态通过 ArUco 校准标记进行估计，并通过模拟姿态变换转换为相机参考系，从而实现对固定相机数据的标准 NeRF 训练。多通道 NeRF 公式使用复合光谱损失联合优化所有高光谱波段的重建，并由两阶段训练协议支持，该协议将几何初始化与辐射细化分离。对三个农产品样本的实验表明，在可见光和近红外光谱范围内具有高空间重建精度和强大的光谱保真度，证实了 HSI-SC-NeRF 适合集成到自动化农业工作流程中。"
+    },
+    {
+      "title": "Narrow Fine-Tuning Erodes Safety Alignment in Vision-Language Agents",
+      "authors": [
+        "Idhant Gulati",
+        "Shivam Raval"
+      ],
+      "summary": "Lifelong multimodal agents must continuously adapt to new tasks through post-training, but this creates a fundamental tension between acquiring capabilities and preserving safety alignment. We demonstrate that fine-tuning aligned vision-language models on narrow-domain harmful datasets induces severe emergent misalignment that generalizes broadly across unrelated tasks and modalities. Through experiments on Gemma3-4B, we show that misalignment scales monotonically with LoRA rank, and that multimodal evaluation reveals substantially higher misalignment ($70.71 \\pm 1.22$ at $r=128$) than text-only evaluation ($41.19 \\pm 2.51$), suggesting that unimodal safety benchmarks may underestimate alignment degradation in vision-language models. Critically, even 10\\% harmful data in the training mixture induces substantial alignment degradation. Geometric analysis reveals that harmful behaviors occupy a remarkably low-dimensional subspace, with the majority of misalignment information captured in 10 principal components. To mitigate misalignment, we evaluate two strategies: benign narrow fine-tuning and activation-based steering. While both approaches substantially reduce misalignment, neither completely removes the learned harmful behaviors. Our findings highlight the need for robust continual learning frameworks, as current post-training paradigms may not sufficiently preserve alignment in post-deployment settings.",
+      "published": "2026-02-18T22:47:28Z",
+      "updated": "2026-03-15T07:56:14Z",
+      "arxiv_id": "2602.16931v2",
+      "abs_url": "http://arxiv.org/abs/2602.16931v2",
+      "pdf_url": "https://arxiv.org/pdf/2602.16931v2",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "25 pages, 14 figures, Published at the Lifelong Agent Workshop at ICLR 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 5,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "continual learning",
+        "fine-tuning",
+        "LoRA",
+        "robust"
+      ],
+      "title_zh": "狭窄的微调削弱了视觉语言代理的安全一致性",
+      "summary_zh": "终身多模式代理必须通过后期培训不断适应新任务，但这在获取能力和保持安全一致性之间造成了根本的紧张关系。我们证明，在窄域有害数据集上微调对齐的视觉语言模型会导致严重的紧急失调，这种失调广泛地普遍存在于不相关的任务和模式中。通过 Gemma3-4B 上的实验，我们表明错位与 LoRA 等级单调缩放，并且多模态评估显示比纯文本评估（$41.19 \\pm 2.51$）显着更高的错位（$70.71 \\pm 1.22$ at $r=128$），这表明单峰安全基准可能低估了视觉语言模型中的对齐退化。至关重要的是，即使训练混合物中含有 10% 的有害数据，也会引起严重的对齐退化。几何分析表明，有害行为占据了一个非常低维的子空间，大部分失准信息被捕获在 10 个主成分中。为了减轻错位，我们评估了两种策略：良性窄微调和基于激活的转向。虽然这两种方法都大大减少了偏差，但都没有完全消除习得的有害行为。我们的研究结果强调了对强大的持续学习框架的需求，因为当前的培训后范式可能不足以保持部署后环境中的一致性。"
+    },
+    {
+      "title": "Training Large Reasoning Models Efficiently via Progressive Thought Encoding",
+      "authors": [
+        "Zeliang Zhang",
+        "Xiaodong Liu",
+        "Hao Cheng",
+        "Hao Sun",
+        "Chenliang Xu",
+        "Jianfeng Gao"
+      ],
+      "summary": "Large reasoning models (LRMs) excel on complex problems but face a critical barrier to efficiency: reinforcement learning (RL) training requires long rollouts for outcome-based rewards, where autoregressive decoding dominates time and memory usage. While sliding-window cache strategies can bound memory, they disrupt long-context reasoning and degrade performance. We introduce Progressive Thought Encoding, a parameter-efficient fine-tuning method that enables LRMs to reason effectively under fixed-size caches. By progressively encoding intermediate reasoning into fixed-size vector representations, our approach eliminates the need to backpropagate through full-cache rollouts, thereby reducing memory usage, while maintaining constant memory during inference. Experiments on three models, including Qwen2.5-3B-Instruct, Qwen2.5-7B-Instruct, and DeepSeek-R1-Distill-Llama-8B, on six widely used challenging mathematical benchmarks show consistent gains: our method achieves +19.3% improvement over LoRA-based fine-tuning and +29.9% over LRMs without fine-tuning on average, with up to +23.4 accuracy improvement on AIME2024/2025 under the same tight cache budgets. These results demonstrate that Progressive Thought Encoding not only improves reasoning accuracy but also makes RL training of LRMs substantially more efficient and scalable under real-world memory constraints.",
+      "published": "2026-02-18T20:03:38Z",
+      "updated": "2026-02-18T20:03:38Z",
+      "arxiv_id": "2602.16839v1",
+      "abs_url": "http://arxiv.org/abs/2602.16839v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.16839v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "comment": "ICLR 2026, 15 pages",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 2,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "LoRA"
+      ],
+      "title_zh": "通过渐进式思维编码有效训练大型推理模型",
+      "summary_zh": "大型推理模型 (LRM) 擅长解决复杂问题，但面临着效率的关键障碍：强化学习 (RL) 训练需要长时间推出基于结果的奖励，其中自回归解码主导时间和内存使用。虽然滑动窗口缓存策略可以限制内存，但它们会破坏长上下文推理并降低性能。我们引入了渐进式思维编码，这是一种参数高效的微调方法，使 LRM 能够在固定大小的缓存下进行有效的推理。通过逐步将中间推理编码为固定大小的向量表示，我们的方法消除了通过全缓存推出进行反向传播的需要，从而减少了内存使用，同时在推理期间保持恒定的内存。在三个模型（包括 Qwen2.5-3B-Instruct、Qwen2.5-7B-Instruct 和 DeepSeek-R1-Distill-Llama-8B）上对六个广泛使用的具有挑战性的数学基准进行的实验显示出一致的增益：我们的方法比基于 LoRA 的微调提高了 19.3%，比没有微调的 LRM 平均提高了 29.9%，平均精度提高了 23.4%。 AIME2024/2025 在同样紧张的缓存预算下。这些结果表明，渐进式思维编码不仅提高了推理准确性，而且使 LRM 的 RL 训练在现实世界的内存限制下变得更加高效和可扩展。"
+    },
+    {
+      "title": "NeST: Neuron Selective Tuning for LLM Safety",
+      "authors": [
+        "Sasha Behrouzi",
+        "Lichao Wu",
+        "Mohamadreza Rostami",
+        "Ahmad-Reza Sadeghi"
+      ],
+      "summary": "Safety alignment is essential for the responsible deployment of large language models (LLMs). Yet, existing approaches often rely on heavyweight fine-tuning that is costly to update, audit, and maintain across model families. Full fine-tuning incurs substantial computational and storage overhead, while parameter-efficient methods such as LoRA trade efficiency for inconsistent safety gains and sensitivity to design choices. Safety intervention mechanisms such as circuit breakers reduce unsafe outputs without modifying model weights, but do not directly shape or preserve the internal representations that govern safety behavior. These limitations hinder rapid and reliable safety updates, particularly in settings where models evolve frequently or must adapt to new policies and domains. We present NeST, a lightweight, structure-aware safety alignment framework that strengthens refusal behavior by selectively adapting a small subset of safety-relevant neurons while freezing the remainder of the model. NeST aligns parameter updates with the internal organization of safety behavior by clustering functionally coherent safety neurons and enforcing shared updates within each cluster, enabling targeted and stable safety adaptation without broad model modification or inference-time overhead. We benchmark NeST against three dominant baselines: full fine-tuning, LoRA-based fine-tuning, and circuit breakers across 10 open-weight LLMs spanning multiple model families and sizes. Across all evaluated models, NeST reduces the attack success rate from an average of 44.5% to 4.36%, corresponding to a 90.2% reduction in unsafe generations, while requiring only 0.44 million trainable parameters on average. This amounts to a 17,310x decrease in updated parameters compared to full fine-tuning and a 9.25x reduction relative to LoRA, while consistently achieving stronger safety performance for alignment.",
+      "published": "2026-02-18T20:01:01Z",
+      "updated": "2026-02-18T20:01:01Z",
+      "arxiv_id": "2602.16835v1",
+      "abs_url": "http://arxiv.org/abs/2602.16835v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.16835v1",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 5,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA"
+      ],
+      "title_zh": "NeST：神经元选择性调整以确保 LLM 安全",
+      "summary_zh": "安全对齐对于负责任地部署大型语言模型 (LLM) 至关重要。然而，现有方法通常依赖于重量级微调，而跨模型系列的更新、审核和维护成本高昂。完全微调会产生大量计算和存储开销，而 LoRA 等参数高效方法会以效率换取不一致的安全增益和对设计选择的敏感性。断路器等安全干预机制可以在不修改模型权重的情况下减少不安全输出，但不会直接塑造或保留控制安全行为的内部表示。这些限制阻碍了快速可靠的安全更新，特别是在模型频繁发展或必须适应新政策和领域的环境中。我们提出了 NeST，一种轻量级、结构感知的安全对齐框架，它通过选择性地适应一小部分安全相关神经元，同时冻结模型的其余部分来增强拒绝行为。 NeST 通过对功能一致的安全神经元进行聚类并在每个集群内强制执行共享更新，使参数更新与安全行为的内部组织保持一致，从而实现有针对性且稳定的安全适应，而无需广泛的模型修改或推理时间开销。我们根据三个主要基线对 NeST 进行基准测试：全面微调、基于 LoRA 的微调以及跨越多个模型系列和规模的 10 个开放权重 LLM 的断路器。在所有评估的模型中，NeST 将攻击成功率从平均 44.5% 降低到 4.36%，相当于不安全代数减少 90.2%，而平均只需要 44 万个可训练参数。与完全微调相比，更新参数减少了 17,310 倍，与 LoRA 相比，更新参数减少了 9.25 倍，同时始终实现更强的对准安全性能。"
+    },
+    {
+      "title": "Beyond SGD, Without SVD: Proximal Subspace Iteration LoRA with Diagonal Fractional K-FAC",
+      "authors": [
+        "Abdulla Jasem Almansoori",
+        "Maria Ivanova",
+        "Andrey Veprikov",
+        "Aleksandr Beznosikov",
+        "Samuel Horváth",
+        "Martin Takáč"
+      ],
+      "summary": "Low-Rank Adaptation (LoRA) fine-tunes large models by learning low-rank updates on top of frozen weights, dramatically reducing trainable parameters and memory. In this work, we address the gap between training with full steps with low-rank projections (SVDLoRA) and LoRA fine-tuning. We propose LoRSum, a memory-efficient subroutine that closes this gap for gradient descent by casting LoRA optimization as a proximal sub-problem and solving it efficiently with alternating least squares updates, which we prove to be an implicit block power method. We recover several recently proposed preconditioning methods for LoRA as special cases, and show that LoRSum can also be used for updating a low-rank momentum. In order to address full steps with preconditioned gradient descent, we propose a scaled variant of LoRSum that uses structured metrics such as K-FAC and Shampoo, and we show that storing the diagonal of these metrics still allows them to perform well while remaining memory-efficient. Experiments on a synthetic task, CIFAR-100, and language-model fine-tuning on GLUE, SQuAD v2, and WikiText-103, show that our method can match or improve LoRA baselines given modest compute overhead, while avoiding full-matrix SVD projections and retaining LoRA-style parameter efficiency.",
+      "published": "2026-02-18T13:41:41Z",
+      "updated": "2026-02-18T13:41:41Z",
+      "arxiv_id": "2602.16456v1",
+      "abs_url": "http://arxiv.org/abs/2602.16456v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.16456v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "20 pages, 5 figures, 4 tables",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "基础模型",
+      "score": 4,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large model",
+        "LoRA"
+      ],
+      "title_zh": "超越 SGD，无需 SVD：使用对角分式 K-FAC 的近端子空间迭代 LoRA",
+      "summary_zh": "低秩适应 (LoRA) 通过在冻结权重之上学习低秩更新来微调大型模型，从而显着减少可训练参数和内存。在这项工作中，我们解决了低秩投影（SVDLoRA）全步训练与 LoRA 微调之间的差距。我们提出了 LoRSum，这是一种内存高效的子例程，它通过将 LoRA 优化作为近端子问题并通过交替最小二乘更新有效地解决它来缩小梯度下降的差距，我们证明这是一种隐式块幂方法。我们恢复了最近提出的几种 LoRA 预处理方法作为特殊情况，并表明 LoRSum 也可以用于更新低秩动量。为了解决预条件梯度下降的完整步骤，我们提出了 LoRSum 的缩放变体，它使用 K-FAC 和 Shampoo 等结构化指标，并且我们表明，存储这些指标的对角线仍然允许它们表现良好，同时保持内存效率。对合成任务 CIFAR-100 以及 GLUE、SQuAD v2 和 WikiText-103 上的语言模型微调的实验表明，我们的方法可以在适当的计算开销下匹配或改进 LoRA 基线，同时避免全矩阵 SVD 投影并保留 LoRA 风格的参数效率。"
+    },
+    {
+      "title": "SCAR: Satellite Imagery-Based Calibration for Aerial Recordings",
+      "authors": [
+        "Henry Hölzemann",
+        "Michael Schleiss"
+      ],
+      "summary": "We introduce SCAR, a method for long-term auto-calibration refinement of aerial visual-inertial systems that exploits georeferenced satellite imagery as a persistent global reference. SCAR estimates both intrinsic and extrinsic parameters by aligning aerial images with 2D--3D correspondences derived from publicly available orthophotos and elevation models. In contrast to existing approaches that rely on dedicated calibration maneuvers or manually surveyed ground control points, our method leverages external geospatial data to detect and correct calibration degradation under field deployment conditions. We evaluate our approach on six large-scale aerial campaigns conducted over two years under diverse seasonal and environmental conditions. Across all sequences, SCAR consistently outperforms established baselines (Kalibr, COLMAP, VINS-Mono), reducing median reprojection error by a large margin, and translating these calibration gains into substantially lower visual localization rotation errors and higher pose accuracy. These results demonstrate that SCAR provides accurate, robust, and reproducible calibration over long-term aerial operations without the need for manual intervention.",
+      "published": "2026-02-18T10:33:24Z",
+      "updated": "2026-02-18T10:33:24Z",
+      "arxiv_id": "2602.16349v1",
+      "abs_url": "http://arxiv.org/abs/2602.16349v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.16349v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无人机/UAV"
+      ],
+      "topic": "无人机/UAV",
+      "score": 10,
+      "anchor_terms": [
+        "aerial image",
+        "aerial images",
+        "satellite image",
+        "satellite imagery"
+      ],
+      "matched_terms": [
+        "aerial",
+        "aerial image",
+        "aerial images",
+        "geospatial",
+        "robust",
+        "satellite",
+        "satellite image",
+        "satellite imagery"
+      ],
+      "title_zh": "SCAR：基于卫星图像的航空记录校准",
+      "summary_zh": "我们介绍 SCAR，这是一种对航空视觉惯性系统进行长期自动校准细化的方法，利用地理参考卫星图像作为持久的全球参考。 SCAR 通过将航空图像与源自公开可用的正射影像和高程模型的 2D--3D 对应关系对齐来估计内在和外在参数。与依赖专用校准操作或手动测量地面控制点的现有方法相比，我们的方法利用外部地理空间数据来检测和纠正现场部署条件下的校准退化。我们对两年来在不同季节和环境条件下进行的六次大规模空中活动评估了我们的方法。在所有序列中，SCAR 始终优于既定基线（Kalibr、COLMAP、VINS-Mono），大幅降低中值重投影误差，并将这些校准增益转化为显着更低的视觉定位旋转误差和更高的姿态精度。这些结果表明，SCAR 可以在长期空中作业中提供准确、稳健且可重复的校准，而无需人工干预。"
+    },
+    {
+      "title": "EasyControlEdge: A Foundation-Model Fine-Tuning for Edge Detection",
+      "authors": [
+        "Hiroki Nakamura",
+        "Hiroto Iino",
+        "Masashi Okada",
+        "Tadahiro Taniguchi"
+      ],
+      "summary": "We propose EasyControlEdge, adapting an image-generation foundation model to edge detection. In real-world edge detection (e.g., floor-plan walls, satellite roads/buildings, and medical organ boundaries), crispness and data efficiency are crucial, yet producing crisp raw edge maps with limited training samples remains challenging. Although image-generation foundation models perform well on many downstream tasks, their pretrained priors for data-efficient transfer and iterative refinement for high-frequency detail preservation remain underexploited for edge detection. To enable crisp and data-efficient edge detection using these capabilities, we introduce an edge-specialized adaptation of image-generation foundation models. To better specialize the foundation model for edge detection, we incorporate an edge-oriented objective with an efficient pixel-space loss. At inference, we introduce guidance based on unconditional dynamics, enabling a single model to control the edge density through a guidance scale. Experiments on BSDS500, NYUDv2, BIPED, and CubiCasa compare against state-of-the-art methods and show consistent gains, particularly under no-post-processing crispness evaluation and with limited training data.",
+      "published": "2026-02-18T07:28:09Z",
+      "updated": "2026-02-18T07:28:09Z",
+      "arxiv_id": "2602.16238v1",
+      "abs_url": "http://arxiv.org/abs/2602.16238v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.16238v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 6,
+      "anchor_terms": [
+        "foundation model"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "foundation model",
+        "satellite"
+      ],
+      "title_zh": "EasyControlEdge：边缘检测的基础模型微调",
+      "summary_zh": "我们提出了 EasyControlEdge，将图像生成基础模型应用于边缘检测。在现实世界的边缘检测（例如，平面图墙、卫星道路/建筑物和医疗器官边界）中，清晰度和数据效率至关重要，但用有限的训练样本生成清晰的原始边缘图仍然具有挑战性。尽管图像生成基础模型在许多下游任务上表现良好，但其用于数据高效传输的预训练先验和用于高频细节保留的迭代细化在边缘检测方面仍未得到充分利用。为了使用这些功能实现清晰且数据高效的边缘检测，我们引入了图像生成基础模型的边缘专用适应。为了更好地专门化边缘检测的基础模型，我们将面向边缘的目标与有效的像素空间损失结合起来。在推理时，我们引入了基于无条件动力学的引导，使单个模型能够通过引导尺度来控制边缘密度。 BSDS500、NYUDv2、BIPED 和 CubiCasa 上的实验与最先进的方法进行了比较，并显示出一致的增益，特别是在无后处理脆度评估和有限训练数据的情况下。"
+    },
+    {
+      "title": "Axle Sensor Fusion for Online Continual Wheel Fault Detection in Wayside Railway Monitoring",
+      "authors": [
+        "Afonso Lourenço",
+        "Francisca Osório",
+        "Diogo Risca",
+        "Goreti Marreiros"
+      ],
+      "summary": "Reliable and cost-effective maintenance is essential for railway safety, particularly at the wheel-rail interface, which is prone to wear and failure. Predictive maintenance frameworks increasingly leverage sensor-generated time-series data, yet traditional methods require manual feature engineering, and deep learning models often degrade in online settings with evolving operational patterns. This work presents a semantic-aware, label-efficient continual learning framework for railway fault diagnostics. Accelerometer signals are encoded via a Variational AutoEncoder into latent representations capturing the normal operational structure in a fully unsupervised manner. Importantly, semantic metadata, including axle counts, wheel indexes, and strain-based deformations, is extracted via AI-driven peak detection on fiber Bragg grating sensors (resistant to electromagnetic interference) and fused with the VAE embeddings, enhancing anomaly detection under unknown operational conditions. A lightweight gradient boosting supervised classifier stabilizes anomaly scoring with minimal labels, while a replay-based continual learning strategy enables adaptation to evolving domains without catastrophic forgetting. Experiments show the model detects minor imperfections due to flats and polygonization, while adapting to evolving operational conditions, such as changes in train type, speed, load, and track profiles, captured using a single accelerometer and strain gauge in wayside monitoring.",
+      "published": "2026-02-18T00:14:18Z",
+      "updated": "2026-02-18T00:14:18Z",
+      "arxiv_id": "2602.16101v1",
+      "abs_url": "http://arxiv.org/abs/2602.16101v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.16101v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "多模态融合"
+      ],
+      "topic": "时间序列与视频",
+      "score": 5,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "catastrophic forgetting",
+        "continual learning",
+        "time-series",
+        "unsupervised"
+      ],
+      "title_zh": "用于路边铁路监控中在线连续车轮故障检测的车轴传感器融合",
+      "summary_zh": "可靠且经济有效的维护对于铁路安全至关重要，特别是在容易磨损和故障的轮轨界面。预测维护框架越来越多地利用传感器生成的时间序列数据，但传统方法需要手动特征工程，而深度学习模型通常会随着不断变化的操作模式而在在线环境中退化。这项工作提出了一种用于铁路故障诊断的语义感知、标签高效的持续学习框架。加速度计信号通过变分自动编码器编码为潜在表示，以完全无监督的方式捕获正常操作结构。重要的是，语义元数据（包括轴数、车轮索引和基于应变的变形）是通过人工智能驱动的光纤布拉格光栅传感器（抗电磁干扰）峰值检测提取的，并与 VAE 嵌入融合，增强了未知操作条件下的异常检测。轻量级梯度增强监督分类器可以用最少的标签稳定异常评分，而基于重放的持续学习策略可以适应不断发展的领域，而不会发生灾难性遗忘。实验表明，该模型可以检测由于平坦和多边形而产生的微小缺陷，同时适应不断变化的运行条件，例如列车类型、速度、负载和轨道轮廓的变化，这些变化是在路边监测中使用单个加速度计和应变仪捕获的。"
+    }
+  ]
+}

@@ -1,0 +1,827 @@
+{
+  "date": "2026-02-13",
+  "generated_at": "2026-06-01T12:54:34.644050+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202602130000 TO 202602132359]",
+  "total_fetched": 306,
+  "total_matched": 19,
+  "papers": [
+    {
+      "title": "Frequency-Enhanced Hilbert Scanning Mamba for Short-Term Arctic Sea Ice Concentration Prediction",
+      "authors": [
+        "Feng Gao",
+        "Zheng Gong",
+        "Wenli Liu",
+        "Yanhai Gan",
+        "Zhuoran Zheng",
+        "Junyu Dong",
+        "Qian Du"
+      ],
+      "summary": "While Mamba models offer efficient sequence modeling, vanilla versions struggle with temporal correlations and boundary details in Arctic sea ice concentration (SIC) prediction. To address these limitations, we propose Frequency-enhanced Hilbert scanning Mamba Framework (FH-Mamba) for short-term Arctic SIC prediction. Specifically, we introduce a 3D Hilbert scan mechanism that traverses the 3D spatiotemporal grid along a locality-preserving path, ensuring that adjacent indices in the flattened sequence correspond to neighboring voxels in both spatial and temporal dimensions. Additionally, we incorporate wavelet transform to amplify high-frequency details and we also design a Hybrid Shuffle Attention module to adaptively aggregate sequence and frequency features. Experiments conducted on the OSI-450a1 and AMSR2 datasets demonstrate that our FH-Mamba achieves superior prediction performance compared with state-of-the-art baselines. The results confirm the effectiveness of Hilbert scanning and frequency-aware attention in improving both temporal consistency and edge reconstruction for Arctic SIC forecasting. Our codes are publicly available at https://github.com/oucailab/FH-Mamba.",
+      "published": "2026-02-13T23:19:39Z",
+      "updated": "2026-02-13T23:19:39Z",
+      "arxiv_id": "2602.13522v1",
+      "abs_url": "http://arxiv.org/abs/2602.13522v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.13522v1",
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "cs.CV"
+      ],
+      "comment": "Accepted for publication in IEEE TGRS 2026",
+      "code_url": "https://github.com/oucailab/FH-Mamba",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "基础模型",
+        "高效微调与轻量化",
+        "LiDAR/点云",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 4,
+      "anchor_terms": [
+        "Mamba"
+      ],
+      "matched_terms": [
+        "Mamba"
+      ],
+      "title_zh": "用于短期北极海冰浓度预测的频率增强希尔伯特扫描曼巴",
+      "summary_zh": "虽然 Mamba 模型提供了高效的序列建模，但普通版本在北极海冰浓度 (SIC) 预测中难以应对时间相关性和边界细节。为了解决这些限制，我们提出了用于短期北极 SIC 预测的频率增强希尔伯特扫描曼巴框架（FH-Mamba）。具体来说，我们引入了一种 3D 希尔伯特扫描机制，该机制沿着保留局部性的路径遍历 3D 时空网格，确保展平序列中的相邻索引对应于空间和时间维度上的相邻体素。此外，我们结合小波变换来放大高频细节，我们还设计了一个混合洗牌注意力模块来自适应聚合序列和频率特征。在 OSI-450a1 和 AMSR2 数据集上进行的实验表明，与最先进的基线相比，我们的 FH-Mamba 实现了卓越的预测性能。结果证实了希尔伯特扫描和频率感知注意力在改善北极 SIC 预测的时间一致性和边缘重建方面的有效性。我们的代码可在 https://github.com/oucailab/FH-Mamba 上公开获取。"
+    },
+    {
+      "title": "Curriculum-DPO++: Direct Preference Optimization via Data and Model Curricula for Text-to-Image Generation",
+      "authors": [
+        "Florinel-Alin Croitoru",
+        "Vlad Hondru",
+        "Radu Tudor Ionescu",
+        "Nicu Sebe",
+        "Mubarak Shah"
+      ],
+      "summary": "Direct Preference Optimization (DPO) has been proposed as an effective and efficient alternative to reinforcement learning from human feedback (RLHF). However, neither RLHF nor DPO take into account the fact that learning certain preferences is more difficult than learning other preferences, rendering the optimization process suboptimal. To address this gap in text-to-image generation, we recently proposed Curriculum-DPO, a method that organizes image pairs by difficulty. In this paper, we introduce Curriculum-DPO++, an enhanced method that combines the original data-level curriculum with a novel model-level curriculum. More precisely, we propose to dynamically increase the learning capacity of the denoising network as training advances. We implement this capacity increase via two mechanisms. First, we initialize the model with only a subset of the trainable layers used in the original Curriculum-DPO. As training progresses, we sequentially unfreeze layers until the configuration matches the full baseline architecture. Second, as the fine-tuning is based on Low-Rank Adaptation (LoRA), we implement a progressive schedule for the dimension of the low-rank matrices. Instead of maintaining a fixed capacity, we initialize the low-rank matrices with a dimension significantly smaller than that of the baseline. As training proceeds, we incrementally increase their rank, allowing the capacity to grow until it converges to the same rank value as in Curriculum-DPO. Furthermore, we propose an alternative ranking strategy to the one employed by Curriculum-DPO. Finally, we compare Curriculum-DPO++ against Curriculum-DPO and other state-of-the-art preference optimization approaches on nine benchmarks, outperforming the competing methods in terms of text alignment, aesthetics and human preference. Our code is available at https://github.com/CroitoruAlin/Curriculum-DPO.",
+      "published": "2026-02-13T16:09:31Z",
+      "updated": "2026-02-13T16:09:31Z",
+      "arxiv_id": "2602.13055v1",
+      "abs_url": "http://arxiv.org/abs/2602.13055v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.13055v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "arXiv admin note: substantial text overlap with arXiv:2405.13637",
+      "code_url": "https://github.com/CroitoruAlin/Curriculum-DPO",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像生成与重建",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 6,
+      "anchor_terms": [
+        "image generation",
+        "LoRA"
+      ],
+      "matched_terms": [
+        "denoising",
+        "fine-tuning",
+        "image generation",
+        "LoRA"
+      ],
+      "title_zh": "课程-DPO++：通过数据和模型课程直接偏好优化，生成文本到图像",
+      "summary_zh": "直接偏好优化（DPO）已被提议作为人类反馈强化学习（RLHF）的有效且高效的替代方案。然而，RLHF 和 DPO 都没有考虑到学习某些偏好比学习其他偏好更困难的事实，导致优化过程不是最优的。为了解决文本到图像生成中的这一差距，我们最近提出了 Curriculum-DPO，一种按难度组织图像对的方法。在本文中，我们介绍了 Curriculum-DPO++，这是一种将原始数据级课程与新颖的模型级课程相结合的增强方法。更准确地说，我们建议随着训练的进展动态增加去噪网络的学习能力。我们通过两种机制实现容量增加。首先，我们仅使用原始 Curriculum-DPO 中使用的可训练层的子集来初始化模型。随着训练的进行，我们依次解冻层，直到配置与完整的基线架构匹配。其次，由于微调基于低秩适应（LoRA），因此我们对低秩矩阵的维度实施了渐进式调度。我们没有保持固定的容量，而是初始化维度明显小于基线的低秩矩阵。随着训练的进行，我们逐渐提高他们的等级，从而使容量不断增长，直到收敛到与 Curriculum-DPO 中相同的等级值。此外，我们提出了一种替代 Curriculum-DPO 采用的排名策略。最后，我们在九个基准上将 Curriculum-DPO++ 与 Curriculum-DPO 和其他最先进的偏好优化方法进行比较，在文本对齐、美观和人类偏好方面优于竞争方法。我们的代码可在 https://github.com/CroitoruAlin/Curriculum-DPO 获取。"
+    },
+    {
+      "title": "CBEN -- A Multimodal Machine Learning Dataset for Cloud Robust Remote Sensing Image Understanding",
+      "authors": [
+        "Marco Stricker",
+        "Masakazu Iwamura",
+        "Koichi Kise"
+      ],
+      "summary": "Clouds are a common phenomenon that distorts optical satellite imagery, which poses a challenge for remote sensing. However, in the literature cloudless analysis is often performed where cloudy images are excluded from machine learning datasets and methods. Such an approach cannot be applied to time sensitive applications, e.g., during natural disasters. A possible solution is to apply cloud removal as a preprocessing step to ensure that cloudfree solutions are not failing under such conditions. But cloud removal methods are still actively researched and suffer from drawbacks, such as generated visual artifacts. Therefore, it is desirable to develop cloud robust methods that are less affected by cloudy weather. Cloud robust methods can be achieved by combining optical data with radar, a modality unaffected by clouds. While many datasets for machine learning combine optical and radar data, most researchers exclude cloudy images. We identify this exclusion from machine learning training and evaluation as a limitation that reduces applicability to cloudy scenarios. To investigate this, we assembled a dataset, named CloudyBigEarthNet (CBEN), of paired optical and radar images with cloud occlusion for training and evaluation. Using average precision (AP) as the evaluation metric, we show that state-of-the-art methods trained on combined clear-sky optical and radar imagery suffer performance drops of 23-33 percentage points when evaluated on cloudy images. We then adapt these methods to cloudy optical data during training, achieving relative improvement of 17.2-28.7 percentage points on cloudy test cases compared with the original approaches. Code and dataset are publicly available at: https://github.com/mstricker13/CBEN",
+      "published": "2026-02-13T06:24:55Z",
+      "updated": "2026-04-30T01:43:16Z",
+      "arxiv_id": "2602.12652v2",
+      "abs_url": "http://arxiv.org/abs/2602.12652v2",
+      "pdf_url": "https://arxiv.org/pdf/2602.12652v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "We are currently in the process of selecting an appropriate journal for submission",
+      "code_url": "https://github.com/mstricker13/CBEN",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "场景分类",
+        "图像生成与重建",
+        "多模态融合",
+        "SAR遥感",
+        "数据集/评测"
+      ],
+      "topic": "场景分类",
+      "score": 13,
+      "anchor_terms": [
+        "BigEarthNet",
+        "cloud removal",
+        "remote sensing",
+        "satellite image",
+        "satellite imagery"
+      ],
+      "matched_terms": [
+        "BigEarthNet",
+        "cloud removal",
+        "remote sensing",
+        "robust",
+        "satellite",
+        "satellite image",
+        "satellite imagery"
+      ],
+      "title_zh": "CBEN——用于云鲁棒遥感图像理解的多模态机器学习数据集",
+      "summary_zh": "云是一种扭曲光学卫星图像的常见现象，这给遥感带来了挑战。然而，在文献中，通常会执行无云分析，其中将多云图像排除在机器学习数据集和方法之外。这种方法不能应用于时间敏感的应用，例如在自然灾害期间。一种可能的解决方案是将云去除作为预处理步骤，以确保无云解决方案在这种情况下不会失败。但云去除方法仍在积极研究中，并且存在一些缺点，例如生成的视觉伪影。因此，需要开发受多云天气影响较小的云稳健方法。云稳健方法可以通过将光学数据与雷达相结合来实现，雷达是一种不受云影响的模式。虽然许多机器学习数据集结合了光学和雷达数据，但大多数研究人员排除了阴天图像。我们将机器学习训练和评估中的这种排除视为一种限制，降低了对多云场景的适用性。为了研究这个问题，我们组装了一个名为 CloudyBigEarthNet (CBEN) 的数据集，其中包含具有云遮挡的配对光学和雷达图像，用于训练和评估。使用平均精度 (AP) 作为评估指标，我们发现，在晴空光学和雷达图像组合上训练的最先进方法在阴天图像上进行评估时，性能下降了 23-33 个百分点。然后，我们在训练期间将这些方法应用于多云光学数据，与原始方法相比，在多云测试用例上实现了 17.2-28.7 个百分点的相对改进。代码和数据集可公开获取：https://github.com/mstricker13/CBEN"
+    },
+    {
+      "title": "A real-time UAS hyperspectral anomaly detection system",
+      "authors": [
+        "Thomas P. Watson",
+        "Kevin McKenzie",
+        "Joseph Conroy",
+        "Eddie L. Jacobs"
+      ],
+      "summary": "Detecting anomalies in hyperspectral image data, i.e. regions which are spectrally distinct from the image background, is a common task in hyperspectral imaging. Such regions may represent interesting objects to human operators, but obtaining results often requires post-processing of captured data, delaying insight. To address this limitation, we apply an anomaly detection algorithm to a visible and near-infrared (VNIR) push-broom hyperspectral image sensor in real time onboard a small uncrewed aerial system (UAS), exploring how UAS limitations affect the algorithm. As the generated anomaly information is much more concise than the raw hyperspectral data, it can feasibly be transmitted wirelessly. To detection, we couple an innovative and fast georectification algorithm that enables anomalous areas to be interactively investigated and characterized immediately by a human operator receiving the anomaly data at a ground station. Using these elements, we demonstrate a novel and complete end-to-end solution from data capture and preparation, through anomaly detection and transmission, to ground station display and interaction, all in real time and with relatively low cost components.",
+      "published": "2026-02-13T22:38:27Z",
+      "updated": "2026-02-13T22:38:27Z",
+      "arxiv_id": "2602.13509v1",
+      "abs_url": "http://arxiv.org/abs/2602.13509v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.13509v1",
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV"
+      ],
+      "comment": "21 pages, 14 figures. source code available after peer-reviewed publication",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高光谱/多光谱"
+      ],
+      "topic": "高光谱/多光谱",
+      "score": 13,
+      "anchor_terms": [
+        "anomaly detection",
+        "hyperspectral image"
+      ],
+      "matched_terms": [
+        "aerial",
+        "anomaly detection",
+        "hyperspectral",
+        "hyperspectral anomaly detection",
+        "hyperspectral image"
+      ],
+      "title_zh": "实时无人机高光谱异常检测系统",
+      "summary_zh": "检测高光谱图像数据中的异常，即光谱上与图像背景不同的区域，是高光谱成像中的一项常见任务。这些区域可能代表人类操作员感兴趣的对象，但获得结果通常需要对捕获的数据进行后处理，从而延迟了洞察力。为了解决这一限制，我们将异常检测算法实时应用于小型无人航空系统（UAS）上的可见光和近红外（VNIR）推扫式高光谱图像传感器，探索 UAS 限制如何影响算法。由于生成的异常信息比原始高光谱数据简洁得多，因此可以进行无线传输。为了进行检测，我们结合了一种创新且快速的地理校正算法，该算法使得在地面站接收异常数据的操作员能够立即对异常区域进行交互式调查和表征。利用这些元素，我们展示了一种新颖且完整的端到端解决方案，从数据捕获和准备，到异常检测和传输，再到地面站显示和交互，所有这些都是实时的，并且组件成本相对较低。"
+    },
+    {
+      "title": "Preventing Rank Collapse in Federated Low-Rank Adaptation with Client Heterogeneity",
+      "authors": [
+        "Fei Wu",
+        "Jia Hu",
+        "Geyong Min",
+        "Shiqiang Wang"
+      ],
+      "summary": "Federated low-rank adaptation (FedLoRA) has facilitated communication-efficient and privacy-preserving fine-tuning of foundation models for downstream tasks. In practical federated learning scenarios, client heterogeneity in system resources and data distributions motivates the use of heterogeneous LoRA ranks across clients. However, we identify a previously overlooked phenomenon in heterogeneous FedLoRA with SVD-based allocation, termed rank collapse, where the energy of the global update becomes concentrated in the minimum shared rank, resulting in suboptimal performance and high sensitivity to rank configurations. Through theoretical analysis, we reveal the root cause of rank collapse: a mismatch between rank-agnostic aggregation weights and rank-dependent client contributions, which systematically suppresses higher-rank updates at a geometric rate over rounds. Motivated by this insight, we propose raFLoRA, a rank-partitioned aggregation method that decomposes local updates into rank partitions and then aggregates each partition weighted by its effective client contributions. Extensive experiments across vision, language, and reasoning tasks show that raFLoRA prevents rank collapse, improves model performance, and enhances robustness across diverse heterogeneous configurations compared with strong FedLoRA baselines.",
+      "published": "2026-02-13T21:42:06Z",
+      "updated": "2026-05-09T19:00:33Z",
+      "arxiv_id": "2602.13486v2",
+      "abs_url": "http://arxiv.org/abs/2602.13486v2",
+      "pdf_url": "https://arxiv.org/pdf/2602.13486v2",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.DC"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "基础模型",
+      "score": 4,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "foundation model",
+        "LoRA",
+        "robust"
+      ],
+      "title_zh": "防止具有客户端异构性的联合低等级适应中的等级崩溃",
+      "summary_zh": "联合低秩适应（FedLoRA）促进了下游任务基础模型的通信效率和隐私保护微调。在实际的联邦学习场景中，客户端系统资源和数据分布的异构性促使客户端使用异构 LoRA 排名。然而，我们在基于 SVD 分配的异构 FedLoRA 中发现了一个先前被忽视的现象，称为排名崩溃，其中全局更新的能量集中在最小共享排名上，导致性能次优和对排名配置的高度敏感。通过理论分析，我们揭示了排名崩溃的根本原因：与排名无关的聚合权重与排名相关的客户端贡献之间的不匹配，这会在轮次中以几何速率系统地抑制更高排名的更新。受这种见解的启发，我们提出了 raFLoRA，一种排名分区聚合方法，它将本地更新分解为排名分区，然后根据其有效客户端贡献加权聚合每个分区。跨视觉、语言和推理任务的广泛实验表明，与强大的 FedLoRA 基线相比，raFLoRA 可以防止排名崩溃，提高模型性能，并增强跨不同异构配置的稳健性。"
+    },
+    {
+      "title": "Learning on the Fly: Replay-Based Continual Object Perception for Indoor Drones",
+      "authors": [
+        "Sebastian-Ion Nae",
+        "Mihai-Eugen Barbu",
+        "Sebastian Mocanu",
+        "Marius Leordeanu"
+      ],
+      "summary": "Autonomous agents such as indoor drones must learn new object classes in real-time while limiting catastrophic forgetting, motivating Class-Incremental Learning (CIL). However, most unmanned aerial vehicle (UAV) datasets focus on outdoor scenes and offer limited temporally coherent indoor videos. We introduce an indoor dataset of $14,400$ frames capturing inter-drone and ground vehicle footage, annotated via a semi-automatic workflow with a $98.6\\%$ first-pass labeling agreement before final manual verification. Using this dataset, we benchmark 3 replay-based CIL strategies: Experience Replay (ER), Maximally Interfered Retrieval (MIR), and Forgetting-Aware Replay (FAR), using YOLOv11-nano as a resource-efficient detector for deployment-constrained UAV platforms. Under tight memory budgets ($5-10\\%$ replay), FAR performs better than the rest, achieving an average accuracy (ACC, $mAP_{50-95}$ across increments) of $82.96\\%$ with $5\\%$ replay. Gradient-weighted class activation mapping (Grad-CAM) analysis shows attention shifts across classes in mixed scenes, which is associated with reduced localization quality for drones. The experiments further demonstrate that replay-based continual learning can be effectively applied to edge aerial systems. Overall, this work contributes an indoor UAV video dataset with preserved temporal coherence and an evaluation of replay-based CIL under limited replay budgets. Project page: https://spacetime-vision-robotics-laboratory.github.io/learning-on-the-fly-cl",
+      "published": "2026-02-13T20:34:01Z",
+      "updated": "2026-02-13T20:34:01Z",
+      "arxiv_id": "2602.13440v1",
+      "abs_url": "http://arxiv.org/abs/2602.13440v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.13440v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "comment": "Accepted at European Robotics Forum (ERF) 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "高效微调与轻量化",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 12,
+      "anchor_terms": [
+        "continual learning",
+        "drone",
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "catastrophic forgetting",
+        "class-incremental",
+        "continual learning",
+        "drone",
+        "incremental learning",
+        "UAV",
+        "unmanned aerial vehicle",
+        "YOLO"
+      ],
+      "title_zh": "动态学习：室内无人机基于重放的持续物体感知",
+      "summary_zh": "室内无人机等自主代理必须实时学习新的对象类别，同时限制灾难性遗忘，激发类别增量学习（CIL）。然而，大多数无人机 (UAV) 数据集侧重于室外场景，并提供有限的时间相干室内视频。我们引入了一个包含 14,400 美元帧的室内数据集，捕获无人机和地面车辆之间的镜头，并通过半自动工作流程进行注释，在最终手动验证之前，首次通过标签协议为 98.6\\%$。使用此数据集，我们使用 YOLOv11-nano 作为部署受限的无人机平台的资源高效型检测器，对 3 种基于重放的 CIL 策略进行了基准测试：体验重放 (ER)、最大干扰检索 (MIR) 和遗忘感知重放 (FAR)。在内存预算紧张（$5-10\\%$ 重放）的情况下，FAR 的表现比其他方法更好，在 $5\\%$ 重放的情况下实现了 $82.96\\%$ 的平均准确度（ACC、$mAP_{50-95}$ 增量）。梯度加权类别激活映射 (Grad-CAM) 分析显示混合场景中类别之间的注意力转移，这与无人机定位质量的降低有关。实验进一步证明基于重放的持续学习可以有效地应用于边缘航空系统。总体而言，这项工作提供了一个保留时间相干性的室内无人机视频数据集，并在有限的重播预算下对基于重播的 CIL 进行了评估。项目页面：https://spacetime-vision-robotics-laboratory.github.io/learning-on-the-fly-cl"
+    },
+    {
+      "title": "LAF-YOLOv10 with Partial Convolution Backbone, Attention-Guided Feature Pyramid, Auxiliary P2 Head, and Wise-IoU Loss for Small Object Detection in Drone Aerial Imagery",
+      "authors": [
+        "Sohail Ali Farooqui",
+        "Zuhair Ahmed Khan Taha",
+        "Mohammed Mudassir Uddin",
+        "Shahnawaz Alam"
+      ],
+      "summary": "Unmanned aerial vehicles serve as primary sensing platforms for surveillance, traffic monitoring, and disaster response, making aerial object detection a central problem in applied computer vision. Current detectors struggle with UAV-specific challenges: targets spanning only a few pixels, cluttered backgrounds, heavy occlusion, and strict onboard computational budgets. This study introduces LAF-YOLOv10, built on YOLOv10n, integrating four complementary techniques to improve small-object detection in drone imagery. A Partial Convolution C2f (PC-C2f) module restricts spatial convolution to one quarter of backbone channels, reducing redundant computation while preserving discriminative capacity. An Attention-Guided Feature Pyramid Network (AG-FPN) inserts Squeeze-and-Excitation channel gates before multi-scale fusion and replaces nearest-neighbor upsampling with DySample for content-aware interpolation. An auxiliary P2 detection head at 160$\\times$160 resolution extends localization to objects below 8$\\times$8 pixels, while the P5 head is removed to redistribute parameters. Wise-IoU v3 replaces CIoU for bounding box regression, attenuating gradients from noisy annotations in crowded aerial scenes. The four modules address non-overlapping bottlenecks: PC-C2f compresses backbone computation, AG-FPN refines cross-scale fusion, the P2 head recovers spatial resolution, and Wise-IoU stabilizes regression under label noise. No individual component is novel; the contribution is the joint integration within a single YOLOv10 framework. Across three training runs (seeds 42, 123, 256), LAF-YOLOv10 achieves 35.1$\\pm$0.3\\% mAP@0.5 on VisDrone-DET2019 with 2.3\\,M parameters, exceeding YOLOv10n by 3.3 points. Cross-dataset evaluation on UAVDT yields 35.8$\\pm$0.4\\% mAP@0.5. Benchmarks on NVIDIA Jetson Orin Nano confirm 24.3 FPS at FP16, demonstrating viability for embedded UAV deployment.",
+      "published": "2026-02-13T18:23:54Z",
+      "updated": "2026-02-13T18:23:54Z",
+      "arxiv_id": "2602.13378v1",
+      "abs_url": "http://arxiv.org/abs/2602.13378v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.13378v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "小样本与域泛化",
+        "无监督与弱监督",
+        "无人机/UAV",
+        "灾害与应急监测",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 20,
+      "anchor_terms": [
+        "aerial image",
+        "aerial imagery",
+        "drone",
+        "object detection",
+        "small object",
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "aerial image",
+        "aerial imagery",
+        "aerial object detection",
+        "drone",
+        "feature pyramid",
+        "multi-scale",
+        "object detection",
+        "small object",
+        "UAV",
+        "unmanned aerial vehicle",
+        "YOLO"
+      ],
+      "title_zh": "LAF-YOLOv10 具有部分卷积主干、注意力引导特征金字塔、辅助 P2 头和 Wise-IoU 损失，用于无人机航拍图像中的小物体检测",
+      "summary_zh": "无人机作为监视、交通监控和灾难响应的主要传感平台，使空中物体检测成为应用计算机视觉的中心问题。当前的探测器正在努力应对无人机特有的挑战：目标仅跨越几个像素、杂乱的背景、严重的遮挡以及严格的机载计算预算。本研究介绍了基于 YOLOv10n 构建的 LAF-YOLOv10，集成了四种互补技术来改进无人机图像中的小物体检测。部分卷积 C2f (PC-C2f) 模块将空间卷积限制在主干通道的四分之一，减少冗余计算，同时保留判别能力。注意力引导特征金字塔网络 (AG-FPN) 在多尺度融合之前插入挤压和激励通道门，并用 DySample 替换最近邻上采样以进行内容感知插值。分辨率为 160$\\times$160 的辅助 P2 检测头可将定位扩展到低于 8$\\times$8 像素的物体，同时移除 P5 检测头以重新分配参数。 Wise-IoU v3 取代了 CIoU 进行边界框回归，衰减了拥挤空中场景中噪声注释的梯度。这四个模块解决了非重叠瓶颈：PC-C2f 压缩主干计算，AG-FPN 细化跨尺度融合，P2 头恢复空间分辨率，Wise-IoU 稳定标签噪声下的回归。没有哪个单独的组件是新颖的；贡献在于单个 YOLOv10 框架内的联合集成。在三个训练运行中（种子 42、123、256），LAF-YOLOv10 在 VisDrone-DET2019 上以 2.3\\,M 个参数实现了 35.1$\\pm$0.3\\% mAP@0.5，比 YOLOv10n 多了 3.3 个点。 UAVDT 的跨数据集评估得出 35.8$\\pm$0.4\\% mAP@0.5。 NVIDIA Jetson Orin Nano 的基准测试确认 FP16 时的帧速率为 24.3 FPS，证明了嵌入式无人机部署的可行性。"
+    },
+    {
+      "title": "Quantization-Robust LLM Unlearning via Low-Rank Adaptation",
+      "authors": [
+        "João Vitor Boer Abitante",
+        "Joana Meneguzzo Pasquali",
+        "Luan Fonseca Garcia",
+        "Ewerton de Oliveira",
+        "Thomas da Silva Paula",
+        "Rodrigo C. Barros",
+        "Lucas S. Kupssinskü"
+      ],
+      "summary": "Large Language Model (LLM) unlearning aims to remove targeted knowledge from a trained model, but practical deployments often require post-training quantization (PTQ) for efficient inference. However, aggressive low-bit PTQ can mask unlearning updates, causing quantized models to revert to pre-unlearning behavior. We show that standard full-parameter fine-tuning often induces parameter changes that are too small to survive 4-bit quantization. We propose quantization-robust unlearning via low-rank adaptation (LoRA): we freeze the base model and concentrate unlearning into trainable adapters so that the effective update is preserved after quantization. On Llama-2-7B evaluated with MUSE dataset (BOOKS and NEWS), LoRA improves 4-bit utility by up to 7.93 points (NPO+GDR on BOOKS: 50.17 to 58.10) and yields higher 4-bit utility on NEWS for GA+GDR (40.06 to 44.82, increase of 4.76). LoRA also substantially reduces privacy leakage under 4-bit PTQ, e.g., for GA+KLR on BOOKS, PrivLeak moves from -25.68 to -5.86 (closer to ideal 0), while maintaining strong forgetting (VerMem and KnowMem near 0). Thus, using LoRA for Machine Unlearning is beneficial for scenarios where quantization is necessary for model deployment.",
+      "published": "2026-02-13T18:01:40Z",
+      "updated": "2026-04-07T09:36:22Z",
+      "arxiv_id": "2602.13151v3",
+      "abs_url": "http://arxiv.org/abs/2602.13151v3",
+      "pdf_url": "https://arxiv.org/pdf/2602.13151v3",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "comment": "Accepted to IJCNN 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 8,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "adapter",
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA",
+        "robust"
+      ],
+      "title_zh": "通过低阶适应实现量化稳健的 LLM 忘却",
+      "summary_zh": "大型语言模型（LLM）取消学习的目的是从经过训练的模型中删除目标知识，但实际部署通常需要训练后量化（PTQ）以进行有效的推理。然而，激进的低位 PTQ 可能会掩盖遗忘更新，导致量化模型恢复到遗忘前的行为。我们表明，标准全参数微调通常会引起参数变化，这些变化太小而无法承受 4 位量化。我们提出通过低秩适应（LoRA）进行量化鲁棒去学习：我们冻结基本模型并将去学习集中到可训练的适配器中，以便在量化后保留有效的更新。在使用 MUSE 数据集（BOOKS 和 NEWS）评估的 Llama-2-7B 上，LoRA 将 4 位效用提高了 7.93 个点（BOOKS 上的 NPO+GDR：50.17 到 58.10），并且在 NEWS 上为 GA+GDR 产生了更高的 4 位效用（40.06 到 44.82，增加了 4.76）。 LoRA 还大大减少了 4 位 PTQ 下的隐私泄漏，例如，对于 BOOKS 上的 GA+KLR，PrivLeak 从 -25.68 移动到 -5.86（接近理想 0），同时保持强遗忘（VerMem 和 KnowMem 接近 0）。因此，使用 LoRA 进行机器取消学习对于模型部署需要量化的场景是有益的。"
+    },
+    {
+      "title": "BAAF: Universal Transformation of One-Class Classifiers for Unsupervised Image Anomaly Detection",
+      "authors": [
+        "Declan McIntosh",
+        "Alexandra Branzan Albu"
+      ],
+      "summary": "Detecting anomalies in images and video is an essential task for multiple real-world problems, including industrial inspection, computer-assisted diagnosis, and environmental monitoring. Anomaly detection is typically formulated as a one-class classification problem, where the training data consists solely of nominal values, leaving methods built on this assumption susceptible to training label noise. We present Bootstrap Aggregation Anomaly Filtering (BAAF), a method that transforms an arbitrary one-class classifier-based anomaly detector into a fully unsupervised method. This is achieved by leveraging the unique intrinsic properties of anomaly detection: anomalies are uncommon in the sampled data and generally heterogeneous. These properties enable us to design a modified Bootstrap Aggregation method that uses multiple independently trained instances of supervised one-class classifiers to filter the training dataset for anomalies. This transformation requires no modifications to the underlying anomaly detector; only the algorithmically selected data bags used for training change. We demonstrate empirically that our method can transform a wide variety of one-class classifier-based image anomaly detectors into unsupervised ones. Consequently, we present the first unsupervised logical anomaly detectors for images. We also demonstrate that our method achieves state-of-the-art performance in fully unsupervised anomaly detection on the MVTec AD, ViSA, and MVTec Loco AD datasets. As improvements to one-class classifiers are made, our method directly transfers those improvements to the unsupervised domain, linking the domains.",
+      "published": "2026-02-13T16:54:12Z",
+      "updated": "2026-03-22T21:26:16Z",
+      "arxiv_id": "2602.13091v2",
+      "abs_url": "http://arxiv.org/abs/2602.13091v2",
+      "pdf_url": "https://arxiv.org/pdf/2602.13091v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "6 figures, 14 pages main paper, 25 pages total with supplemental",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 5,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "unsupervised"
+      ],
+      "title_zh": "BAAF：用于无监督图像异常检测的一类分类器的通用变换",
+      "summary_zh": "检测图像和视频中的异常是解决多种现实问题的一项重要任务，包括工业检查、计算机辅助诊断和环境监测。异常检测通常被表述为一类分类问题，其中训练数据仅由标称值组成，使得基于此假设构建的方法容易受到训练标签噪声的影响。我们提出了引导聚合异常过滤（BAAF），一种将任意基于一类分类器的异常检测器转换为完全无监督方法的方法。这是通过利用异常检测独特的内在属性来实现的：异常在采样数据中并不常见，而且通常是异构的。这些属性使我们能够设计一种修改后的引导聚合方法，该方法使用监督一类分类器的多个独立训练的实例来过滤训练数据集的异常情况。这种转换不需要修改底层异常检测器；仅用于训练的算法选择的数据包发生变化。我们凭经验证明，我们的方法可以将各种基于一类分类器的图像异常检测器转换为无监督的检测器。因此，我们提出了第一个无监督的图像逻辑异常检测器。我们还证明，我们的方法在 MVTec AD、ViSA 和 MVTec Loco AD 数据集上的完全无监督异常检测中实现了最先进的性能。随着对一类分类器的改进，我们的方法直接将这些改进转移到无监督域，链接这些域。"
+    },
+    {
+      "title": "LCSB: Layer-Cyclic Selective Backpropagation for Memory-Efficient On-Device LLM Fine-Tuning",
+      "authors": [
+        "Juneyoung Park",
+        "Eunbeen Yoon",
+        "Seongwan Kim. Jaeho Lee"
+      ],
+      "summary": "Memory-efficient backpropagation (MeBP) has enabled first-order fine-tuning of large language models (LLMs) on mobile devices with less than 1GB memory. However, MeBP requires backward computation through all transformer layers at every step, where weight decompression alone accounts for 32--42% of backward time. We propose Layer-Cyclic Selective Backpropagation (LCSB), which computes gradients for only a subset of layers per step. Our key insight is that residual connections guarantee gradient flow through identity paths, while AdamW momentum provides implicit updates for non-selected layers. We interpret LCSB as Block Coordinate Descent on the LoRA parameter space, providing theoretical justification for convergence. LCSB achieves up to 1.40$\\times$ speedup with less than 2\\% quality degradation across five models and three tasks. Surprisingly, in 4-bit quantized settings, LCSB exhibits superior stability: a 3B model that completely diverges under full backpropagation converges smoothly with LCSB, suggesting an implicit regularization effect from selective gradient computation.",
+      "published": "2026-02-13T16:32:53Z",
+      "updated": "2026-02-13T16:32:53Z",
+      "arxiv_id": "2602.13073v1",
+      "abs_url": "http://arxiv.org/abs/2602.13073v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.13073v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "comment": "Under the review, 13 pages",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 7,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA",
+        "transformer"
+      ],
+      "title_zh": "LCSB：层循环选择性反向传播，用于内存高效的设备上 LLM 微调",
+      "summary_zh": "内存高效的反向传播 (MeBP) 可以在内存小于 1GB 的移动设备上对大型语言模型 (LLM) 进行一阶微调。然而，MeBP 需要在每一步中通过所有 Transformer 层进行反向计算，其中仅权重解压就占了反向时间的 32--42%。我们提出了层循环选择性反向传播（LCSB），它每步仅计算层子集的梯度​​。我们的主要见解是，残差连接保证了通过身份路径的梯度流，而 AdamW 动量为未选择的层提供隐式更新。我们将 LCSB 解释为 LoRA 参数空间上的块坐标下降，为收敛提供了理论依据。 LCSB 在五个模型和三个任务中实现了高达 1.40$\\times$ 的加速，而质量下降不到 2\\%。令人惊讶的是，在 4 位量化设置中，LCSB 表现出卓越的稳定性：在完全反向传播下完全发散的 3B 模型与 LCSB 平滑收敛，这表明选择性梯度计算具有隐式正则化效果。"
+    },
+    {
+      "title": "Memory-Efficient Structured Backpropagation for On-Device LLM Fine-Tuning",
+      "authors": [
+        "Juneyoung Park",
+        "Yuri Hong",
+        "Seongwan Kim",
+        "Jaeho Lee"
+      ],
+      "summary": "On-device fine-tuning enables privacy-preserving personalization of large language models, but mobile devices impose severe memory constraints, typically 6--12GB shared across all workloads. Existing approaches force a trade-off between exact gradients with high memory (MeBP) and low memory with noisy estimates (MeZO). We propose Memory-efficient Structured Backpropagation (MeSP), which bridges this gap by manually deriving backward passes that exploit LoRA's low-rank structure. Our key insight is that the intermediate projection $h = xA$ can be recomputed during backward at minimal cost since rank $r \\ll d_{in}$, eliminating the need to store it. MeSP achieves 49\\% average memory reduction compared to MeBP on Qwen2.5 models (0.5B--3B) while computing mathematically identical gradients. Our analysis also reveals that MeZO's gradient estimates show near-zero correlation with true gradients (cosine similarity $\\approx$0.001), explaining its slow convergence. MeSP reduces peak memory from 361MB to 136MB for Qwen2.5-0.5B, enabling fine-tuning scenarios previously infeasible on memory-constrained devices.",
+      "published": "2026-02-13T16:24:33Z",
+      "updated": "2026-05-29T03:43:18Z",
+      "arxiv_id": "2602.13069v2",
+      "abs_url": "http://arxiv.org/abs/2602.13069v2",
+      "pdf_url": "https://arxiv.org/pdf/2602.13069v2",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "comment": "ACL2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 6,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA"
+      ],
+      "title_zh": "用于设备上 LLM 微调的内存高效结构化反向传播",
+      "summary_zh": "设备上的微调可以实现大型语言模型的隐私保护个性化，但移动设备会施加严格的内存限制，通常在所有工作负载之间共享 6--12GB。现有的方法迫使在具有高内存的精确梯度（MeBP）和具有噪声估计的低内存（MeZO）之间进行权衡。我们提出了内存高效的结构化反向传播 (MeSP)，它通过手动导出利用 LoRA 低秩结构的反向传播来弥补这一差距。我们的主要见解是，中间投影 $h = xA$ 可以在向后过程中以最小成本重新计算，因为等级 $r \\ll d_{in}$，从而无需存储它。与 Qwen2.5 模型 (0.5B--3B) 上的 MeBP 相比，MeSP 实现了 49% 的平均内存减少，同时计算数学上相同的梯度。我们的分析还表明，MeZO 的梯度估计与真实梯度的相关性接近于零（余弦相似度 $\\approx$0.001），这解释了其收敛缓慢的原因。 MeSP 将 Qwen2.5-0.5B 的峰值内存从 361MB 减少到 136MB，从而实现了以前在内存受限设备上无法实现的微调场景。"
+    },
+    {
+      "title": "Backdoor Attacks on Contrastive Continual Learning for IoT Systems",
+      "authors": [
+        "Alfous Tim",
+        "Kuniyilh Simi D"
+      ],
+      "summary": "The Internet of Things (IoT) systems increasingly depend on continual learning to adapt to non-stationary environments. These environments can include factors such as sensor drift, changing user behavior, device aging, and adversarial dynamics. Contrastive continual learning (CCL) combines contrastive representation learning with incremental adaptation, enabling robust feature reuse across tasks and domains. However, the geometric nature of contrastive objectives, when paired with replay-based rehearsal and stability-preserving regularization, introduces new security vulnerabilities. Notably, backdoor attacks can exploit embedding alignment and replay reinforcement, enabling the implantation of persistent malicious behaviors that endure through updates and deployment cycles. This paper provides a comprehensive analysis of backdoor attacks on CCL within IoT systems. We formalize the objectives of embedding-level attacks, examine persistence mechanisms unique to IoT deployments, and develop a layered taxonomy tailored to IoT. Additionally, we compare vulnerabilities across various learning paradigms and evaluate defense strategies under IoT constraints, including limited memory, edge computing, and federated aggregation. Our findings indicate that while CCL is effective for enhancing adaptive IoT intelligence, it may also elevate long-lived representation-level threats if not adequately secured.",
+      "published": "2026-02-13T16:17:25Z",
+      "updated": "2026-02-13T16:17:25Z",
+      "arxiv_id": "2602.13062v1",
+      "abs_url": "http://arxiv.org/abs/2602.13062v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.13062v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CR",
+        "cs.NI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [],
+      "topic": "其他",
+      "score": 3,
+      "anchor_terms": [
+        "continual learning"
+      ],
+      "matched_terms": [
+        "continual learning",
+        "robust"
+      ],
+      "title_zh": "针对物联网系统对比持续学习的后门攻击",
+      "summary_zh": "物联网 (IoT) 系统越来越依赖于持续学习来适应非静态环境。这些环境可能包括传感器漂移、用户行为变化、设备老化和对抗动态等因素。对比持续学习 (CCL) 将对比表示学习与增量适应相结合，实现跨任务和领域的稳健特征重用。然而，对比目标的几何性质，当与基于重播的演练和保持稳定性的正则化相结合时，会引入新的安全漏洞。值得注意的是，后门攻击可以利用嵌入对齐和重放强化，从而实现持久恶意行为的植入，并在更新和部署周期中持续存在。本文对物联网系统中 CCL 的后门攻击进行了全面分析。我们将嵌入级攻击的目标形式化，检查物联网部署特有的持久性机制，并开发适合物联网的分层分类法。此外，我们还比较了各种学习范式的漏洞，并评估了物联网限制下的防御策略，包括有限的内存、边缘计算和联合聚合。我们的研究结果表明，虽然 CCL 可有效增强自适应物联网智能，但如果没有得到充分保护，它也可能会加剧长期存在的表示级威胁。"
+    },
+    {
+      "title": "Learning Image-based Tree Crown Segmentation from Enhanced Lidar-based Pseudo-labels",
+      "authors": [
+        "Julius Pesonen",
+        "Stefan Rua",
+        "Josef Taher",
+        "Niko Koivumäki",
+        "Xiaowei Yu",
+        "Eija Honkavaara"
+      ],
+      "summary": "Mapping individual tree crowns is essential for tasks such as maintaining urban tree inventories and monitoring forest health, which help us understand and care for our environment. However, automatically separating the crowns from each other in aerial imagery is challenging due to factors such as the texture and partial tree crown overlaps. In this study, we present a method to train deep learning models that segment and separate individual trees from RGB and multispectral images, using pseudo-labels derived from aerial laser scanning (ALS) data. Our study shows that the ALS-derived pseudo-labels can be enhanced using a zero-shot instance segmentation model, Segment Anything Model 2 (SAM 2). Our method offers a way to obtain domain-specific training annotations for optical image-based models without any manual annotation cost, leading to segmentation models which outperform any available models which have been targeted for general domain deployment on the same task.",
+      "published": "2026-02-13T15:26:38Z",
+      "updated": "2026-02-13T15:26:38Z",
+      "arxiv_id": "2602.13022v1",
+      "abs_url": "http://arxiv.org/abs/2602.13022v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.13022v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "实例分割",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "光学遥感",
+        "高光谱/多光谱",
+        "LiDAR/点云",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "实例分割",
+      "score": 10,
+      "anchor_terms": [
+        "aerial image",
+        "aerial imagery",
+        "instance segmentation",
+        "multispectral image",
+        "SAM"
+      ],
+      "matched_terms": [
+        "aerial",
+        "aerial image",
+        "aerial imagery",
+        "instance segmentation",
+        "LiDAR",
+        "multispectral",
+        "multispectral image",
+        "SAM",
+        "Segment Anything Model",
+        "zero-shot"
+      ],
+      "title_zh": "从增强型基于激光雷达的伪标签学习基于图像的树冠分割",
+      "summary_zh": "绘制单个树冠的地图对于维护城市树木库存和监测森林健康等任务至关重要，这有助于我们了解和爱护我们的环境。然而，由于纹理和部分树冠重叠等因素，在航空图像中自动将树冠相互分离具有挑战性。在这项研究中，我们提出了一种训练深度学习模型的方法，该模型使用从航空激光扫描 (ALS) 数据派生的伪标签，从 RGB 和多光谱图像中分割和分离单个树木。我们的研究表明，可以使用零样本实例分割模型 Segment Anything Model 2 (SAM 2) 来增强 ALS 派生的伪标签。我们的方法提供了一种无需任何手动注释成本即可获得基于光学图像的模型的特定于领域的训练注释的方法，从而使分割模型优于针对同一任务的一般域部署的任何可用模型。"
+    },
+    {
+      "title": "The Speed-up Factor: A Quantitative Multi-Iteration Active Learning Performance Metric",
+      "authors": [
+        "Hannes Kath",
+        "Thiago S. Gouvêa",
+        "Daniel Sonntag"
+      ],
+      "summary": "Machine learning models excel with abundant annotated data, but annotation is often costly and time-intensive. Active learning (AL) aims to improve the performance-to-annotation ratio by using query methods (QMs) to iteratively select the most informative samples. While AL research focuses mainly on QM development, the evaluation of this iterative process lacks appropriate performance metrics. This work reviews eight years of AL evaluation literature and formally introduces the speed-up factor, a quantitative multi-iteration QM performance metric that indicates the fraction of samples needed to match random sampling performance. Using four datasets from diverse domains and seven QMs of various types, we empirically evaluate the speed-up factor and compare it with state-of-the-art AL performance metrics. The results confirm the assumptions underlying the speed-up factor, demonstrate its accuracy in capturing the described fraction, and reveal its superior stability across iterations.",
+      "published": "2026-02-13T10:33:02Z",
+      "updated": "2026-02-13T10:33:02Z",
+      "arxiv_id": "2602.13359v1",
+      "abs_url": "http://arxiv.org/abs/2602.13359v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.13359v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 2,
+      "anchor_terms": [
+        "active learning"
+      ],
+      "matched_terms": [
+        "active learning"
+      ],
+      "title_zh": "加速因素：定量的多次迭代主动学习性能指标",
+      "summary_zh": "机器学习模型擅长处理丰富的注释数据，但注释通常成本高昂且耗时。主动学习（AL）旨在通过使用查询方法（QM）迭代选择信息最丰富的样本来提高性能与注释比。虽然 AL 研究主要集中在 QM 开发上，但对该迭代过程的评估缺乏适当的绩效指标。这项工作回顾了八年的 AL 评估文献，并正式引入了加速因子，这是一种定量的多次迭代 QM 性能指标，用于指示匹配随机采样性能所需的样本比例。使用来自不同领域的四个数据集和七个不同类型的 QM，我们凭经验评估加速因子并将其与最先进的 AL 性能指标进行比较。结果证实了加速因子的假设，证明了其捕获所描述分数的准确性，并揭示了其在迭代过程中的卓越稳定性。"
+    },
+    {
+      "title": "PixelRush: Ultra-Fast, Training-Free High-Resolution Image Generation via One-step Diffusion",
+      "authors": [
+        "Hong-Phuc Lai",
+        "Phong Nguyen",
+        "Anh Tran"
+      ],
+      "summary": "Pre-trained diffusion models excel at generating high-quality images but remain inherently limited by their native training resolution. Recent training-free approaches have attempted to overcome this constraint by introducing interventions during the denoising process; however, these methods incur substantial computational overhead, often requiring more than five minutes to produce a single 4K image. In this paper, we present PixelRush, the first tuning-free framework for practical high-resolution text-to-image generation. Our method builds upon the established patch-based inference paradigm but eliminates the need for multiple inversion and regeneration cycles. Instead, PixelRush enables efficient patch-based denoising within a low-step regime. To address artifacts introduced by patch blending in few-step generation, we propose a seamless blending strategy. Furthermore, we mitigate over-smoothing effects through a noise injection mechanism. PixelRush delivers exceptional efficiency, generating 4K images in approximately 20 seconds representing a 10$\\times$ to 35$\\times$ speedup over state-of-the-art methods while maintaining superior visual fidelity. Extensive experiments validate both the performance gains and the quality of outputs achieved by our approach.",
+      "published": "2026-02-13T09:54:27Z",
+      "updated": "2026-02-27T04:29:09Z",
+      "arxiv_id": "2602.12769v2",
+      "abs_url": "http://arxiv.org/abs/2602.12769v2",
+      "pdf_url": "https://arxiv.org/pdf/2602.12769v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted to CVPR 2026 (Main Conference)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "基础模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "图像生成与重建",
+      "score": 5,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "denoising",
+        "diffusion model",
+        "image generation"
+      ],
+      "title_zh": "PixelRush：通过一步扩散实现超快速、免训练高分辨率图像生成",
+      "summary_zh": "预训练的扩散模型擅长生成高质量图像，但本质上仍受到其本机训练分辨率的限制。最近的免训练方法试图通过在去噪过程中引入干预措施来克服这一限制；然而，这些方法会产生大量的计算开销，通常需要五分钟以上才能生成单个 4K 图像。在本文中，我们介绍了 PixelRush，这是第一个用于实际高分辨率文本到图像生成的免调整框架。我们的方法建立在已建立的基于补丁的推理范式的基础上，但消除了多个反转和再生循环的需要。相反，PixelRush 可在低步长范围内实现高效的基于补丁的去噪。为了解决在几步生成中由补丁混合引入的伪像，我们提出了一种无缝混合策略。此外，我们通过噪声注入机制减轻过度平滑效应。 PixelRush 具有卓越的效率，可在大约 20 秒内生成 4K 图像，与最先进的方法相比，速度提高 10 美元到 35 美元，同时保持卓越的视觉保真度。大量的实验验证了我们的方法所实现的性能提升和输出质量。"
+    },
+    {
+      "title": "ImageRAGTurbo: Towards One-step Text-to-Image Generation with Retrieval-Augmented Diffusion Models",
+      "authors": [
+        "Peijie Qiu",
+        "Hariharan Ramshankar",
+        "Arnau Ramisa",
+        "René Vidal",
+        "Amit Kumar K C",
+        "Vamsi Salaka",
+        "Rahul Bhagat"
+      ],
+      "summary": "Diffusion models have emerged as the leading approach for text-to-image generation. However, their iterative sampling process, which gradually morphs random noise into coherent images, introduces significant latency that limits their applicability. While recent few-step diffusion models reduce the number of sampling steps to as few as one to four steps, they often compromise image quality and prompt alignment, especially in one-step generation. Additionally, these models require computationally expensive training procedures. To address these limitations, we propose ImageRAGTurbo, a novel approach to efficiently finetune few-step diffusion models via retrieval augmentation. Given a text prompt, we retrieve relevant text-image pairs from a database and use them to condition the generation process. We argue that such retrieved examples provide rich contextual information to the UNet denoiser that helps reduce the number of denoising steps without compromising image quality. Indeed, our initial investigations show that using the retrieved content to edit the denoiser's latent space ($\\mathcal{H}$-space) without additional finetuning already improves prompt fidelity. To further improve the quality of the generated images, we augment the UNet denoiser with a trainable adapter in the $\\mathcal{H}$-space, which efficiently blends the retrieved content with the target prompt using a cross-attention mechanism. Experimental results on fast text-to-image generation demonstrate that our approach produces high-fidelity images without compromising latency compared to existing methods.",
+      "published": "2026-02-13T05:59:57Z",
+      "updated": "2026-02-13T05:59:57Z",
+      "arxiv_id": "2602.12640v1",
+      "abs_url": "http://arxiv.org/abs/2602.12640v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.12640v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "11 pages, 7 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "图像描述与视觉推理",
+        "高效微调与轻量化"
+      ],
+      "topic": "图像生成与重建",
+      "score": 9,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "adapter",
+        "attention mechanism",
+        "cross-attention",
+        "denoising",
+        "diffusion model",
+        "image generation"
+      ],
+      "title_zh": "ImageRAGTurbo：利用检索增强扩散模型实现一步式文本到图像生成",
+      "summary_zh": "扩散模型已成为文本到图像生成的主要方法。然而，它们的迭代采样过程逐渐将随机噪声转变为相干图像，引入了显着的延迟，限制了它们的适用性。虽然最近的几步扩散模型将采样步骤数量减少到一到四步，但它们通常会损害图像质量并提示对齐，尤其是在一步生成中。此外，这些模型需要计算成本高昂的训练过程。为了解决这些限制，我们提出了 ImageRAGTurbo，这是一种通过检索增强有效微调少步扩散模型的新方法。给定文本提示，我们从数据库中检索相关的文本图像对，并使用它们来调节生成过程。我们认为，此类检索到的示例为 UNet 降噪器提供了丰富的上下文信息，有助于减少降噪步骤的数量，而不会影响图像质量。事实上，我们的初步调查表明，使用检索到的内容来编辑降噪器的潜在空间（$\\mathcal{H}$-space）而无需额外的微调，已经提高了提示保真度。为了进一步提高生成图像的质量，我们在 $\\mathcal{H}$ 空间中使用可训练的适配器来增强 UNet 降噪器，该适配器使用交叉注意机制有效地将检索到的内容与目标提示混合在一起。快速文本到图像生成的实验结果表明，与现有方法相比，我们的方法可以生成高保真图像，而不会影响延迟。"
+    },
+    {
+      "title": "Monte Carlo Tree Search with Reasoning Path Refinement for Small Language Models in Conversational Text-to-NoSQL",
+      "authors": [
+        "Xubang Xiong",
+        "Raymond Chi-Wing Wong",
+        "Yuanfeng Song"
+      ],
+      "summary": "NoSQL databases have been widely adopted in big data analytics, geospatial applications, and healthcare services, due to their flexibility and scalability. However, querying NoSQL databases requires specialized technical expertise, creating a high barrier for users. While recent studies have explored text-to-NoSQL problem, they primarily focus on single-turn interactions, ignoring the conversational nature of real-world queries. To bridge this gap, we introduce the Conversational Text-to-NoSQL task, which generates NoSQL queries given a natural language question, a NoSQL database, and the dialogue history. To address this task, we propose Stage-MCTS, a framework that endows small language models (SLMs) with NoSQL-specific reasoning capabilities by formulating query generation as a search problem. The framework employs Monte Carlo Tree Search (MCTS) guided by a rule-based reward to produce stepwise reasoning data, followed by progressive supervised fine-tuning (SFT) and self-training strategies. We further construct CoNoSQL, a cross-domain dataset with over 2,000 dialogues and 150 databases, to support evaluation. Experiments demonstrate that our approach outperforms state-of-the-art large reasoning models, improving execution value match (EVM) accuracy by up to 7.93%.",
+      "published": "2026-02-13T03:35:38Z",
+      "updated": "2026-02-13T03:35:38Z",
+      "arxiv_id": "2602.12574v1",
+      "abs_url": "http://arxiv.org/abs/2602.12574v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.12574v1",
+      "primary_category": "cs.DB",
+      "categories": [
+        "cs.DB",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 3,
+      "anchor_terms": [
+        "geospatial"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "geospatial"
+      ],
+      "title_zh": "对话文本到 NoSQL 中小语言模型的蒙特卡罗树搜索和推理路径细化",
+      "summary_zh": "由于其灵活性和可扩展性，NoSQL 数据库已广泛应用于大数据分析、地理空间应用和医疗保健服务。然而，查询NoSQL数据库需要专门的技术知识，这给用户带来了很高的门槛。虽然最近的研究探讨了文本到 NoSQL 的问题，但它们主要关注单轮交互，忽略了现实世界查询的会话性质。为了弥补这一差距，我们引入了会话文本到 NoSQL 任务，该任务根据自然语言问题、NoSQL 数据库和对话历史记录生成 NoSQL 查询。为了解决这个任务，我们提出了 Stage-MCTS，这是一个框架，通过将查询生成制定为搜索问题，赋予小型语言模型（SLM）特定于 NoSQL 的推理能力。该框架采用基于规则的奖励引导的蒙特卡罗树搜索（MCTS）来生成逐步推理数据，然后是渐进式监督微调（SFT）和自我训练策略。我们进一步构建了 CoNoSQL，一个包含 2000 多个对话和 150 个数据库的跨域数据集，以支持评估。实验表明，我们的方法优于最先进的大型推理模型，将执行值匹配 (EVM) 准确性提高高达 7.93%。"
+    },
+    {
+      "title": "Matching of SAR and optical images based on transformation to shared modality",
+      "authors": [
+        "Alexey Borisov",
+        "Evgeny Myasnikov",
+        "Vladislav Myasnikov"
+      ],
+      "summary": "Significant differences in optical images and Synthetic Aperture Radar (SAR) images are caused by fundamental differences in the physical principles underlying their acquisition by Earth remote sensing platforms. These differences make precise image matching (co-registration) of these two types of images difficult. In this paper, we propose a new approach to image matching of optical and SAR images, which is based on transforming the images to a new modality. The new image modality is common to both optical and SAR images and satisfies the following conditions. First, the transformed images must have an equal pre-defined number of channels. Second, the transformed and co-registered images must be as similar as possible. Third, the transformed images must be non-degenerate, meaning they must preserve the significant features of the original images. To further match images transformed to this shared modality, we train the RoMa image matching model, which is one of the leading solutions for matching of regular digital photographs. We evaluated the proposed approach on the publicly available MultiSenGE dataset containing both optical and SAR images. We demonstrated its superiority over alternative approaches based on image translation between original modalities and various feature matching algorithms. The proposed solution not only provides better quality of matching, but is also more versatile. It enables the use of ready-made RoMa and DeDoDe models, pre-trained for regular images, without retraining for a new modality, while maintaining high-quality matching of optical and SAR images.",
+      "published": "2026-02-13T01:41:24Z",
+      "updated": "2026-02-13T01:41:24Z",
+      "arxiv_id": "2602.12515v1",
+      "abs_url": "http://arxiv.org/abs/2602.12515v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.12515v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "光学遥感",
+        "SAR遥感",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 6,
+      "anchor_terms": [
+        "remote sensing",
+        "SAR",
+        "SAR image",
+        "synthetic aperture radar"
+      ],
+      "matched_terms": [
+        "remote sensing",
+        "SAR",
+        "SAR image",
+        "synthetic aperture radar"
+      ],
+      "title_zh": "基于共享模态转换的 SAR 和光学图像匹配",
+      "summary_zh": "光学图像和合成孔径雷达（SAR）图像的显着差异是由地球遥感平台采集的物理原理的根本差异造成的。这些差异使得这两种类型的图像的精确图像匹配（共同配准）变得困难。在本文中，我们提出了一种光学图像和 SAR 图像图像匹配的新方法，该方法基于将图像转换为新的模态。新的图像模态对于光学图像和 SAR 图像是通用的，并且满足以下条件。首先，变换后的图像必须具有相同的预定义通道数。其次，变换后和共同配准的图像必须尽可能相似。第三，转换后的图像必须是非退化的，这意味着它们必须保留原始图像的重要特征。为了进一步匹配转换为这种共享模式的图像，我们训练了 RoMa 图像匹配模型，它是匹配常规数码照片的领先解决方案之一。我们在包含光学和 SAR 图像的公开 MultiSenGE 数据集上评估了所提出的方法。我们证明了它相对于基于原始模态和各种特征匹配算法之间的图像转换的替代方法的优越性。所提出的解决方案不仅提供更好的匹配质量，而且更通用。它支持使用现成的 RoMa 和 DeDoDe 模型，针对常规图像进行预训练，无需针对新模态进行重新训练，同时保持光学和 SAR 图像的高质量匹配。"
+    },
+    {
+      "title": "A Theoretical Analysis of Mamba's Training Dynamics: Filtering Relevant Features for Generalization in State Space Models",
+      "authors": [
+        "Mugunthan Shandirasegaran",
+        "Hongkang Li",
+        "Songyang Zhang",
+        "Meng Wang",
+        "Shuai Zhang"
+      ],
+      "summary": "The recent empirical success of Mamba and other selective state space models (SSMs) has renewed interest in non-attention architectures for sequence modeling, yet their theoretical foundations remain underexplored. We present a first-step analysis of generalization and learning dynamics for a simplified but representative Mamba block: a single-layer, single-head selective SSM with input-dependent gating, followed by a two-layer MLP trained via gradient descent (GD). Our study adopts a structured data model with tokens that include both class-relevant and class-irrelevant patterns under token-level noise and examines two canonical regimes: majority-voting and locality-structured data sequences. We prove that the model achieves guaranteed generalization by establishing non-asymptotic sample complexity and convergence rate bounds, which improve as the effective signal increases and the noise decreases. Furthermore, we show that the gating vector aligns with class-relevant features while ignoring irrelevant ones, thereby formalizing a feature-selection role similar to attention but realized through selective recurrence. Numerical experiments on synthetic data justify our theoretical results. Overall, our results provide principled insight into when and why Mamba-style selective SSMs learn efficiently, offering a theoretical counterpoint to Transformer-centric explanations.",
+      "published": "2026-02-13T00:44:26Z",
+      "updated": "2026-02-13T00:44:26Z",
+      "arxiv_id": "2602.12499v1",
+      "abs_url": "http://arxiv.org/abs/2602.12499v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.12499v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "基础模型",
+      "score": 6,
+      "anchor_terms": [
+        "Mamba"
+      ],
+      "matched_terms": [
+        "Mamba",
+        "SSM",
+        "state space model",
+        "transformer"
+      ],
+      "title_zh": "Mamba 训练动力学的理论分析：过滤相关特征以在状态空间模型中进行泛化",
+      "summary_zh": "Mamba 和其他选择性状态空间模型 (SSM) 最近的实证成功重新激发了人们对序列建模的非注意力架构的兴趣，但其理论基础仍未得到充分探索。我们对简化但具有代表性的 Mamba 模块的泛化和学习动态进行了第一步分析：具有输入相关门控的单层、单头选择性 SSM，然后是通过梯度下降 (GD) 训练的两层 MLP。我们的研究采用了带有令牌的结构化数据模型，其中包括令牌级噪声下的类相关和类不相关模式，并检查了两种规范制度：多数投票和局部结构化数据序列。我们证明该模型通过建立非渐近样本复杂度和收敛速度界限来实现有保证的泛化，这些复杂度和收敛速度界限随着有效信号的增加和噪声的减少而提高。此外，我们表明门向量与类相关特征对齐，同时忽略不相关特征，从而形式化类似于注意力的特征选择角色，但通过选择性递归实现。合成数据的数值实验证明了我们的理论结果。总的来说，我们的结果提供了关于 Mamba 式选择性 SSM 何时以及为何高效学习的原则性见解，为以 Transformer 为中心的解释提供了理论对立。"
+    }
+  ]
+}

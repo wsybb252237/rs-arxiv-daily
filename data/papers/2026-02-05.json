@@ -1,0 +1,976 @@
+{
+  "date": "2026-02-05",
+  "generated_at": "2026-06-01T12:49:14.952318+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202602050000 TO 202602052359]",
+  "total_fetched": 459,
+  "total_matched": 22,
+  "papers": [
+    {
+      "title": "Layer-wise LoRA fine-tuning: a similarity metric approach",
+      "authors": [
+        "Keith Ando Ogawa",
+        "Bruno Lopes Yamamoto",
+        "Lucas Lauton de Alcantara",
+        "Lucas Pellicer",
+        "Rosimeire Pereira Costa",
+        "Edson Bollis",
+        "Anna Helena Reali Costa",
+        "Artur Jordao"
+      ],
+      "summary": "Pre-training Large Language Models (LLMs) on web-scale datasets becomes fundamental for advancing general-purpose AI. In contrast, enhancing their predictive performance on downstream tasks typically involves adapting their knowledge through fine-tuning. Parameter-efficient fine-tuning techniques, such as Low-Rank Adaptation (LoRA), aim to reduce the computational cost of this process by freezing the pre-trained model and updating a smaller number of parameters. In comparison to full fine-tuning, these methods achieve over 99\\% reduction in trainable parameter count, depending on the configuration. Unfortunately, such a reduction may prove insufficient as LLMs continue to grow in scale. In this work, we address the previous problem by systematically selecting only a few layers to fine-tune using LoRA or its variants. We argue that not all layers contribute equally to the model adaptation. Leveraging this, we identify the most relevant layers to fine-tune by measuring their contribution to changes in internal representations. Our method is orthogonal to and readily compatible with existing low-rank adaptation techniques. We reduce the trainable parameters in LoRA-based techniques by up to 50\\%, while maintaining the predictive performance across different models and tasks. Specifically, on encoder-only architectures, this reduction in trainable parameters leads to a negligible predictive performance drop on the GLUE benchmark. On decoder-only architectures, we achieve a small drop or even improvements in the predictive performance on mathematical problem-solving capabilities and coding tasks. Finally, this effectiveness extends to multimodal models, for which we also observe competitive results relative to fine-tuning with LoRA modules in all layers. Code is available at: https://github.com/c2d-usp/Layer-wise-LoRA-with-CKA",
+      "published": "2026-02-05T18:38:53Z",
+      "updated": "2026-02-05T18:38:53Z",
+      "arxiv_id": "2602.05988v1",
+      "abs_url": "http://arxiv.org/abs/2602.05988v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.05988v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "Code is available at https://github.com/c2d-usp/Layer-wise-LoRA-with-CKA",
+      "code_url": "https://github.com/c2d-usp/Layer-wise-LoRA-with-CKA",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "基础模型",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 6,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LoRA",
+        "pre-training"
+      ],
+      "title_zh": "逐层 LoRA 微调：相似性度量方法",
+      "summary_zh": "在网络规模数据集上预训练大型语言模型 (LLM) 成为推进通用人工智能的基础。相比之下，增强他们对下游任务的预测性能通常需要通过微调来调整他们的知识。参数高效的微调技术，例如低秩适应（LoRA），旨在通过冻结预训练模型并更新较少数量的参数来降低此过程的计算成本。与完全微调相比，这些方法可减少超过 99% 的可训练参数数量，具体取决于配置。不幸的是，随着法学硕士规模的不断扩大，这种减少可能是不够的。在这项工作中，我们通过使用 LoRA 或其变体系统地仅选择几个层进行微调来解决前面的问题。我们认为并非所有层对模型适应的贡献均等。利用这一点，我们通过测量它们对内部表示变化的贡献来确定最相关的层进行微调。我们的方法与现有的低秩适应技术正交并且易于兼容。我们将基于 LoRA 的技术中的可训练参数减少了高达 50%，同时保持了不同模型和任务的预测性能。具体来说，在仅编码器架构上，可训练参数的减少导致 GLUE 基准的预测性能下降可以忽略不计。在仅解码器架构上，我们在数学问题解决能力和编码任务的预测性能方面实现了小幅下降甚至改进。最后，这种有效性扩展到多模态模型，我们还观察到与所有层中 LoRA 模块的微调相关的竞争结果。代码位于：https://github.com/c2d-usp/Layer-wise-LoRA-with-CKA"
+    },
+    {
+      "title": "Depth as Prior Knowledge for Object Detection",
+      "authors": [
+        "Moussa Kassem Sbeyti",
+        "Nadja Klein"
+      ],
+      "summary": "Detecting small and distant objects remains challenging for object detectors due to scale variation, low resolution, and background clutter. Safety-critical applications require reliable detection of these objects for safe planning. Depth information can improve detection, but existing approaches require complex, model-specific architectural modifications. We provide a theoretical analysis followed by an empirical investigation of the depth-detection relationship. Together, they explain how depth causes systematic performance degradation and why depth-informed supervision mitigates it. We introduce DepthPrior, a framework that uses depth as prior knowledge rather than as a fused feature, providing comparable benefits without modifying detector architectures. DepthPrior consists of Depth-Based Loss Weighting (DLW) and Depth-Based Loss Stratification (DLS) during training, and Depth-Aware Confidence Thresholding (DCT) during inference. The only overhead is the initial cost of depth estimation. Experiments across four benchmarks (KITTI, MS COCO, VisDrone, SUN RGB-D) and two detectors (YOLOv11, EfficientDet) demonstrate the effectiveness of DepthPrior, achieving up to +9% mAP$_S$ and +7% mAR$_S$ for small objects, with inference recovery rates as high as 95:1 (true vs. false detections). DepthPrior offers these benefits without additional sensors, architectural changes, or performance costs. Code is available at https://github.com/mos-ks/DepthPrior.",
+      "published": "2026-02-05T14:52:39Z",
+      "updated": "2026-02-05T14:52:39Z",
+      "arxiv_id": "2602.05730v1",
+      "abs_url": "http://arxiv.org/abs/2602.05730v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.05730v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "This work has been submitted to the IEEE for possible publication",
+      "code_url": "https://github.com/mos-ks/DepthPrior",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "目标检测",
+        "高效微调与轻量化",
+        "LiDAR/点云",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 6,
+      "anchor_terms": [
+        "depth estimation",
+        "drone",
+        "object detection",
+        "small object"
+      ],
+      "matched_terms": [
+        "depth estimation",
+        "drone",
+        "object detection",
+        "small object",
+        "YOLO"
+      ],
+      "title_zh": "深度作为物体检测的先验知识",
+      "summary_zh": "由于尺度变化、低分辨率和背景杂乱，检测小而远的物体对于物体检测器来说仍然具有挑战性。安全关键型应用需要可靠地检测这些物体以进行安全规划。深度信息可以改进检测，但现有方法需要复杂的、特定于模型的架构修改。我们提供了理论分析，然后对深度检测关系进行了实证研究。他们共同解释了深度如何导致系统性能下降，以及为什么深度知情监督可以缓解这种情况。我们引入了 DepthPrior，一个使用深度作为先验知识而不是融合特征的框架，在不修改检测器架构的情况下提供类似的好处。 DepthPrior 由训练期间的基于深度的损失加权（DLW）和基于深度的损失分层（DLS）以及推理期间的深度感知置信度阈值（DCT）组成。唯一的开销是深度估计的初始成本。四个基准测试（KITTI、MS COCO、VisDrone、SUN RGB-D）和两个检测器（YOLOv11、EfficientDet）的实验证明了 DepthPrior 的有效性，对于小物体实现了高达 +9% mAP$_S$ 和 +7% mAR$_S$，推理恢复率高达 95:1（真实与错误检测）。 DepthPrior 无需额外的传感器、架构更改或性能成本即可提供这些优势。代码可在 https://github.com/mos-ks/DepthPrior 获取。"
+    },
+    {
+      "title": "SOMA-1M: A Large-Scale SAR-Optical Multi-resolution Alignment Dataset for Multi-Task Remote Sensing",
+      "authors": [
+        "Peihao Wu",
+        "Yongxiang Yao",
+        "Yi Wan",
+        "Wenfei Zhang",
+        "Ruipeng Zhao",
+        "Jiayuan Li",
+        "Yongjun Zhang"
+      ],
+      "summary": "Synthetic Aperture Radar (SAR) and optical imagery provide complementary strengths that constitute the critical foundation for transcending single-modality constraints and facilitating cross-modal collaborative processing and intelligent interpretation. However, existing benchmark datasets often suffer from limitations such as single spatial resolution, insufficient data scale, and low alignment accuracy, making them inadequate for supporting the training and generalization of multi-scale foundation models. To address these challenges, we introduce SOMA-1M (SAR-Optical Multi-resolution Alignment), a pixel-level precisely aligned dataset containing over 1.3 million pairs of georeferenced images with a specification of 512 x 512 pixels. This dataset integrates imagery from Sentinel-1, PIESAT-1, Capella Space, and Google Earth, achieving global multi-scale coverage from 0.5 m to 10 m. It encompasses 12 typical land cover categories, effectively ensuring scene diversity and complexity. To address multimodal projection deformation and massive data registration, we designed a rigorous coarse-to-fine image matching framework ensuring pixel-level alignment. Based on this dataset, we established comprehensive evaluation benchmarks for four hierarchical vision tasks, including image matching, image fusion, SAR-assisted cloud removal, and cross-modal translation, involving over 30 mainstream algorithms. Experimental results demonstrate that supervised training on SOMA-1M significantly enhances performance across all tasks. Notably, multimodal remote sensing image (MRSI) matching performance achieves current state-of-the-art (SOTA) levels. SOMA-1M serves as a foundational resource for robust multimodal algorithms and remote sensing foundation models. The dataset will be released publicly at: https://github.com/PeihaoWu/SOMA-1M.",
+      "published": "2026-02-05T09:39:49Z",
+      "updated": "2026-02-05T09:39:49Z",
+      "arxiv_id": "2602.05480v1",
+      "abs_url": "http://arxiv.org/abs/2602.05480v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.05480v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/PeihaoWu/SOMA-1M",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "语义分割",
+        "图像生成与重建",
+        "基础模型",
+        "多模态融合",
+        "光学遥感",
+        "SAR遥感",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 17,
+      "anchor_terms": [
+        "cloud removal",
+        "foundation model",
+        "image fusion",
+        "remote sensing",
+        "remote sensing foundation model",
+        "SAR",
+        "Sentinel-1",
+        "synthetic aperture radar"
+      ],
+      "matched_terms": [
+        "cloud removal",
+        "foundation model",
+        "image fusion",
+        "land cover",
+        "multi-scale",
+        "remote sensing",
+        "remote sensing foundation model",
+        "robust",
+        "SAR",
+        "Sentinel-1",
+        "synthetic aperture radar"
+      ],
+      "title_zh": "SOMA-1M：用于多任务遥感的大规模SAR光学多分辨率对准数据集",
+      "summary_zh": "合成孔径雷达（SAR）和光学图像提供了互补的优势，构成了超越单一模态限制、促进跨模态协作处理和智能解释的关键基础。然而，现有的基准数据集往往存在空间分辨率单一、数据规模不足、对齐精度低等限制，不足以支持多尺度基础模型的训练和泛化。为了应对这些挑战，我们引入了 SOMA-1M（SAR 光学多分辨率对齐），这是一个像素级精确对齐的数据集，包含超过 130 万对地理参考图像，规格为 512 x 512 像素。该数据集集成了来自Sentinel-1、PIESAT-1、Capella Space和Google Earth的图像，实现了0.5 m至10 m的全球多尺度覆盖。它涵盖了12个典型的土地覆盖类别，有效保证了场景的多样性和复杂性。为了解决多模态投影变形和海量数据配准，我们设计了严格的从粗到精的图像匹配框架，确保像素级对齐。基于该数据集，我们建立了图像匹配、图像融合、SAR辅助去云、跨模态翻译等四个层次视觉任务的综合评估基准，涉及30多种主流算法。实验结果表明，SOMA-1M 的监督训练显着提高了所有任务的性能。值得注意的是，多模态遥感图像（MRSI）匹配性能达到了当前最先进（SOTA）水平。 SOMA-1M 是强大的多模态算法和遥感基础模型的基础资源。该数据集将公开发布于：https://github.com/PeihaoWu/SOMA-1M。"
+    },
+    {
+      "title": "AnyThermal: Towards Learning Universal Representations for Thermal Perception",
+      "authors": [
+        "Parv Maheshwari",
+        "Jay Karhade",
+        "Yogesh Chawla",
+        "Isaiah Adu",
+        "Florian Heisen",
+        "Andrew Porco",
+        "Andrew Jong",
+        "Yifei Liu",
+        "Santosh Pitla",
+        "Sebastian Scherer",
+        "Wenshan Wang"
+      ],
+      "summary": "We present AnyThermal, a thermal backbone that captures robust task-agnostic thermal features suitable for a variety of tasks such as cross-modal place recognition, thermal segmentation, and monocular depth estimation using thermal images. Existing thermal backbones that follow task-specific training from small-scale data result in utility limited to a specific environment and task. Unlike prior methods, AnyThermal can be used for a wide range of environments (indoor, aerial, off-road, urban) and tasks, all without task-specific training. Our key insight is to distill the feature representations from visual foundation models such as DINOv2 into a thermal encoder using thermal data from these multiple environments. To bridge the diversity gap of the existing RGB-Thermal datasets, we introduce the TartanRGBT platform, the first open-source data collection platform with synced RGB-Thermal image acquisition. We use this payload to collect the TartanRGBT dataset - a diverse and balanced dataset collected in 4 environments. We demonstrate the efficacy of AnyThermal and TartanRGBT, achieving state-of-the-art results with improvements of up to 36% across diverse environments and downstream tasks on existing datasets.",
+      "published": "2026-02-05T21:27:26Z",
+      "updated": "2026-02-05T21:27:26Z",
+      "arxiv_id": "2602.06203v1",
+      "abs_url": "http://arxiv.org/abs/2602.06203v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.06203v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "comment": "Accepted at IEEE ICRA (International Conference on Robotics & Automation) 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "多模态融合",
+        "LiDAR/点云",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 5,
+      "anchor_terms": [
+        "depth estimation",
+        "foundation model"
+      ],
+      "matched_terms": [
+        "aerial",
+        "depth estimation",
+        "foundation model",
+        "robust"
+      ],
+      "title_zh": "AnyThermal：学习热感知的通用表示",
+      "summary_zh": "我们推出了 AnyThermal，这是一种热主干，可捕获鲁棒的与任务无关的热特征，适用于各种任务，例如跨模式位置识别、热分割和使用热图像的单目深度估计。现有的热骨干遵循小规模数据的特定任务训练，导致实用性仅限于特定环境和任务。与之前的方法不同，AnyThermal 可用于各种环境（室内、空中、越野、城市）和任务，所有这些都无需针对特定任务的培训。我们的主要见解是使用来自这些多个环境的热数据将 DINOv2 等视觉基础模型的特征表示提取到热编码器中。为了弥补现有 RGB-Thermal 数据集的多样性差距，我们引入了 TartanRGBT 平台，这是第一个具有同步 RGB-Thermal 图像采集功能的开源数据收集平台。我们使用此有效负载来收集 TartanRGBT 数据集 - 在 4 个环境中收集的多样化且平衡的数据集。我们展示了 AnyThermal 和 TartanRGBT 的功效，在现有数据集的不同环境和下游任务中实现了最先进的结果，性能提升高达 36%。"
+    },
+    {
+      "title": "DeDPO: Debiased Direct Preference Optimization for Diffusion Models",
+      "authors": [
+        "Khiem Pham",
+        "Quang Nguyen",
+        "Tung Nguyen",
+        "Jingsen Zhu",
+        "Michele Santacatterina",
+        "Dimitris Metaxas",
+        "Ramin Zabih"
+      ],
+      "summary": "Direct Preference Optimization (DPO) has emerged as a predominant alignment method for diffusion models, facilitating off-policy training without explicit reward modeling. However, its reliance on large-scale, high-quality human preference labels presents a severe cost and scalability bottleneck. To overcome this, We propose a semi-supervised framework augmenting limited human data with a large corpus of unlabeled pairs annotated via cost-effective synthetic AI feedback. Our paper introduces Debiased DPO (DeDPO), which uniquely integrates a debiased estimation technique from causal inference into the DPO objective. By explicitly identifying and correcting the systematic bias and noise inherent in synthetic annotators, DeDPO ensures robust learning from imperfect feedback sources, including self-training and Vision-Language Models (VLMs). Experiments demonstrate that DeDPO is robust to the variations in synthetic labeling methods, achieving performance that matches and occasionally exceeds the theoretical upper bound of models trained on fully human-labeled data. This establishes DeDPO as a scalable solution for human-AI alignment using inexpensive synthetic supervision.",
+      "published": "2026-02-05T21:11:00Z",
+      "updated": "2026-02-05T21:11:00Z",
+      "arxiv_id": "2602.06195v1",
+      "abs_url": "http://arxiv.org/abs/2602.06195v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.06195v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "视觉-语言模型",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 5,
+      "anchor_terms": [
+        "semi-supervised"
+      ],
+      "matched_terms": [
+        "diffusion model",
+        "robust",
+        "semi-supervised"
+      ],
+      "title_zh": "DeDPO：扩散模型的去偏直接偏好优化",
+      "summary_zh": "直接偏好优化（DPO）已成为扩散模型的主要对齐方法，无需显式奖励建模即可促进离策略训练。然而，它对大规模、高质量人类偏好标签的依赖带来了严重的成本和可扩展性瓶颈。为了克服这个问题，我们提出了一个半监督框架，通过具有成本效益的合成人工智能反馈注释的大量未标记对的语料库来增强有限的人类数据。我们的论文介绍了去偏 DPO (DeDPO)，它独特地将因果推理的去偏估计技术集成到 DPO 目标中。通过明确识别和纠正合成注释器固有的系统偏差和噪声，DeDPO 确保从不完善的反馈源（包括自我训练和视觉语言模型 (VLM)）中进行稳健的学习。实验表明，DeDPO 对于合成标记方法的变化具有鲁棒性，其性能可以匹配甚至偶尔超过在完全人类标记数据上训练的模型的理论上限。这使得 DeDPO 成为一种可扩展的解决方案，使用廉价的综合监督进行人类与人工智能的匹配。"
+    },
+    {
+      "title": "MetaSSP: Enhancing Semi-supervised Implicit 3D Reconstruction through Meta-adaptive EMA and SDF-aware Pseudo-label Evaluation",
+      "authors": [
+        "Luoxi Zhang",
+        "Chun Xie",
+        "Itaru Kitahara"
+      ],
+      "summary": "Implicit SDF-based methods for single-view 3D reconstruction achieve high-quality surfaces but require large labeled datasets, limiting their scalability. We propose MetaSSP, a novel semi-supervised framework that exploits abundant unlabeled images. Our approach introduces gradient-based parameter importance estimation to regularize adaptive EMA updates and an SDF-aware pseudo-label weighting mechanism combining augmentation consistency with SDF variance. Beginning with a 10% supervised warm-up, the unified pipeline jointly refines labeled and unlabeled data. On the Pix3D benchmark, our method reduces Chamfer Distance by approximately 20.61% and increases IoU by around 24.09% compared to existing semi-supervised baselines, setting a new state of the art.",
+      "published": "2026-02-05T20:07:46Z",
+      "updated": "2026-02-05T20:07:46Z",
+      "arxiv_id": "2602.06163v1",
+      "abs_url": "http://arxiv.org/abs/2602.06163v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.06163v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无监督与弱监督",
+        "LiDAR/点云",
+        "数据集/评测"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 3,
+      "anchor_terms": [
+        "semi-supervised"
+      ],
+      "matched_terms": [
+        "semi-supervised"
+      ],
+      "title_zh": "MetaSSP：通过元自适应 EMA 和 SDF 感知伪标签评估增强半监督隐式 3D 重建",
+      "summary_zh": "用于单视图 3D 重建的基于隐式 SDF 的方法可实现高质量表面，但需要大量标记数据集，从而限制了其可扩展性。我们提出了 MetaSSP，一种新颖的半监督框架，它利用了大量的未标记图像。我们的方法引入了基于梯度的参数重要性估计来规范自适应 EMA 更新，以及将增强一致性与 SDF 方差相结合的 SDF 感知伪标签加权机制。从 10% 的监督预热开始，统一管道联合细化标记和未标记数据。在 Pix3D 基准上，与现有的半监督基线相比，我们的方法将 Chamfer Distance 减少了约 20.61%，IoU 增加了约 24.09%，创下了新的最先进水平。"
+    },
+    {
+      "title": "Geographically-aware Transformer-based Traffic Forecasting for Urban Motorway Digital Twins",
+      "authors": [
+        "Krešimir Kušić",
+        "Vinny Cahill",
+        "Ivana Dusparic"
+      ],
+      "summary": "The operational effectiveness of digital-twin technology in motorway traffic management depends on the availability of a continuous flow of high-resolution real-time traffic data. To function as a proactive decision-making support layer within traffic management, a digital twin must also incorporate predicted traffic conditions in addition to real-time observations. Due to the spatio-temporal complexity and the time-variant, non-linear nature of traffic dynamics, predicting motorway traffic remains a difficult problem. Sequence-based deep-learning models offer clear advantages over classical machine learning and statistical models in capturing long-range, temporal dependencies in time-series traffic data, yet limitations in forecasting accuracy and model complexity point to the need for further improvements. To improve motorway traffic forecasting, this paper introduces a Geographically-aware Transformer-based Traffic Forecasting GATTF model, which exploits the geographical relationships between distributed sensors using their mutual information (MI). The model has been evaluated using real-time data from the Geneva motorway network in Switzerland and results confirm that incorporating geographical awareness through MI enhances the accuracy of GATTF forecasting compared to a standard Transformer, without increasing model complexity.",
+      "published": "2026-02-05T18:33:03Z",
+      "updated": "2026-02-05T18:33:03Z",
+      "arxiv_id": "2602.05983v1",
+      "abs_url": "http://arxiv.org/abs/2602.05983v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.05983v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "IEEE IV2026 37th IEEE Intelligent Vehicles Symposium",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频"
+      ],
+      "topic": "时间序列与视频",
+      "score": 3,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "temporal",
+        "time-series",
+        "transformer"
+      ],
+      "title_zh": "基于地理感知变压器的城市高速公路数字孪生交通预测",
+      "summary_zh": "数字孪生技术在高速公路交通管理中的运行有效性取决于高分辨率实时交通数据的连续流的可用性。为了在交通管理中发挥主动决策支持层的作用，除了实时观测之外，数字孪生还必须纳入预测的交通状况。由于交通动态的时空复杂性和时变、非线性性质，预测高速公路交通仍然是一个难题。与经典机器学习和统计模型相比，基于序列的深度学习模型在捕获时间序列流量数据中的长期时间依赖性方面具有明显的优势，但预测准确性和模型复杂性的限制表明需要进一步改进。为了改进高速公路交通预测，本文引入了一种基于地理感知 Transformer 的交通预测 GATTF 模型，该模型利用分布式传感器之间的互信息 (MI) 来利用地理关系。该模型已使用瑞士日内瓦高速公路网络的实时数据进行了评估，结果证实，与标准 Transformer 相比，通过 MI 纳入地理意识可提高 GATTF 预测的准确性，而不会增加模型复杂性。"
+    },
+    {
+      "title": "Better Source, Better Flow: Learning Condition-Dependent Source Distribution for Flow Matching",
+      "authors": [
+        "Junwan Kim",
+        "Jiho Park",
+        "Seonghu Jeon",
+        "Seungryong Kim"
+      ],
+      "summary": "Flow matching has recently emerged as a promising alternative to diffusion-based generative models, particularly for text-to-image generation. Despite its flexibility in allowing arbitrary source distributions, most existing approaches rely on a standard Gaussian distribution, a choice inherited from diffusion models, and rarely consider the source distribution itself as an optimization target in such settings. In this work, we show that principled design of the source distribution is not only feasible but also beneficial at the scale of modern text-to-image systems. Specifically, we propose learning a condition-dependent source distribution under flow matching objective that better exploit rich conditioning signals. We identify key failure modes that arise when directly incorporating conditioning into the source, including distributional collapse and instability, and show that appropriate variance regularization and directional alignment between source and target are critical for stable and effective learning. We further analyze how the choice of target representation space impacts flow matching with structured sources, revealing regimes in which such designs are most effective. Extensive experiments across multiple text-to-image benchmarks demonstrate consistent and robust improvements, including up to a 3x faster convergence in FID, highlighting the practical benefits of a principled source distribution design for conditional flow matching.",
+      "published": "2026-02-05T18:08:20Z",
+      "updated": "2026-02-05T18:08:20Z",
+      "arxiv_id": "2602.05951v1",
+      "abs_url": "http://arxiv.org/abs/2602.05951v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.05951v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "Project Page: https://junwankimm.github.io/CSFM",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 4,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "diffusion model",
+        "image generation",
+        "robust"
+      ],
+      "title_zh": "更好的源，更好的流量：学习条件相关的源分布以进行流量匹配",
+      "summary_zh": "流匹配最近已成为基于扩散的生成模型的有前途的替代方案，特别是对于文本到图像的生成。尽管其在允许任意源分布方面具有灵活性，但大多数现有方法依赖于标准高斯分布，这是从扩散模型继承的选择，并且很少将源分布本身视为此类设置中的优化目标。在这项工作中，我们证明了源分布的原则性设计不仅是可行的，而且在现代文本到图像系统的规模上也是有益的。具体来说，我们建议在流量匹配目标下学习条件相关的源分布，以更好地利用丰富的调节信号。我们确定了直接将条件合并到源中时出现的关键故障模式，包括分布崩溃和不稳定性，并表明适当的方差正则化和源与目标之间的方向对齐对于稳定有效的学习至关重要。我们进一步分析了目标表示空间的选择如何影响与结构化源的流匹配，揭示了此类设计最有效的机制。跨多个文本到图像基准的广泛实验证明了一致和稳健的改进，包括 FID 收敛速度提高了 3 倍，突出了用于条件流匹配的原则性源分布设计的实际优势。"
+    },
+    {
+      "title": "CLIP-Map: Structured Matrix Mapping for Parameter-Efficient CLIP Compression",
+      "authors": [
+        "Kangjie Zhang",
+        "Wenxuan Huang",
+        "Xin Zhou",
+        "Boxiang Zhou",
+        "Dejia Song",
+        "Yuan Xie",
+        "Baochang Zhang",
+        "Lizhuang Ma",
+        "Nemo Chen",
+        "Xu Tang",
+        "Yao Hu",
+        "Shaohui Lin"
+      ],
+      "summary": "Contrastive Language-Image Pre-training (CLIP) has achieved widely applications in various computer vision tasks, e.g., text-to-image generation, Image-Text retrieval and Image captioning. However, CLIP suffers from high memory and computation cost, which prohibits its usage to the resource-limited application scenarios. Existing CLIP compression methods typically reduce the size of pre-trained CLIP weights by selecting their subset as weight inheritance for further retraining via mask optimization or important weight measurement. However, these select-based weight inheritance often compromises the feature presentation ability, especially on the extreme compression. In this paper, we propose a novel mapping-based CLIP compression framework, CLIP-Map. It leverages learnable matrices to map and combine pretrained weights by Full-Mapping with Kronecker Factorization, aiming to preserve as much information from the original weights as possible. To mitigate the optimization challenges introduced by the learnable mapping, we propose Diagonal Inheritance Initialization to reduce the distribution shifting problem for efficient and effective mapping learning. Extensive experimental results demonstrate that the proposed CLIP-Map outperforms select-based frameworks across various compression ratios, with particularly significant gains observed under high compression settings.",
+      "published": "2026-02-05T17:25:16Z",
+      "updated": "2026-02-05T17:25:16Z",
+      "arxiv_id": "2602.05909v1",
+      "abs_url": "http://arxiv.org/abs/2602.05909v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.05909v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "图像描述与视觉推理",
+        "基础模型",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化"
+      ],
+      "topic": "图像生成与重建",
+      "score": 6,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "CLIP",
+        "image captioning",
+        "image generation",
+        "pre-training"
+      ],
+      "title_zh": "CLIP-Map：用于参数高效 CLIP 压缩的结构化矩阵映射",
+      "summary_zh": "对比语言-图像预训练（CLIP）在各种计算机视觉任务中取得了广泛的应用，例如文本到图像生成、图像文本检索和图像字幕。然而，CLIP的内存和计算成本较高，这限制了其在资源有限的应用场景中的使用。现有的 CLIP 压缩方法通常通过选择其子集作为权重继承来减小预训练 CLIP 权重的大小，以便通过掩模优化或重要权重测量进一步重新训练。然而，这些基于选择的权重继承通常会损害特征呈现能力，尤其是在极端压缩时。在本文中，我们提出了一种新颖的基于映射的 CLIP 压缩框架，CLIP-Map。它利用可学习矩阵通过全映射和克罗内克分解来映射和组合预训练权重，旨在保留尽可能多的原始权重信息。为了减轻可学习映射带来的优化挑战，我们提出对角继承初始化来减少分布移位问题，从而实现高效且有效的映射学习。大量的实验结果表明，所提出的 CLIP-Map 在各种压缩比上都优于基于选择的框架，在高压缩设置下观察到特别显着的增益。"
+    },
+    {
+      "title": "A Guide to Large Language Models in Modeling and Simulation: From Core Techniques to Critical Challenges",
+      "authors": [
+        "Philippe J. Giabbanelli"
+      ],
+      "summary": "Large language models (LLMs) have rapidly become familiar tools to researchers and practitioners. Concepts such as prompting, temperature, or few-shot examples are now widely recognized, and LLMs are increasingly used in Modeling & Simulation (M&S) workflows. However, practices that appear straightforward may introduce subtle issues, unnecessary complexity, or may even lead to inferior results. Adding more data can backfire (e.g., deteriorating performance through model collapse or inadvertently wiping out existing guardrails), spending time on fine-tuning a model can be unnecessary without a prior assessment of what it already knows, setting the temperature to 0 is not sufficient to make LLMs deterministic, providing a large volume of M&S data as input can be excessive (LLMs cannot attend to everything) but naive simplifications can lose information. We aim to provide comprehensive and practical guidance on how to use LLMs, with an emphasis on M&S applications. We discuss common sources of confusion, including non-determinism, knowledge augmentation (including RAG and LoRA), decomposition of M&S data, and hyper-parameter settings. We emphasize principled design choices, diagnostic strategies, and empirical evaluation, with the goal of helping modelers make informed decisions about when, how, and whether to rely on LLMs.",
+      "published": "2026-02-05T17:00:07Z",
+      "updated": "2026-02-05T17:00:07Z",
+      "arxiv_id": "2602.05883v1",
+      "abs_url": "http://arxiv.org/abs/2602.05883v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.05883v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "Book chapter. Accepted in Artificial Intelligence in Modeling and Simulation, Philippe J. Giabbanelli and Istvan David (eds). Series on Simulation Foundations, Methods and Applications. Springer, Cham. Series ISSN: 2195-2817",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 4,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LoRA"
+      ],
+      "title_zh": "建模和仿真中的大型语言模型指南：从核心技术到关键挑战",
+      "summary_zh": "大型语言模型（LLM）已迅速成为研究人员和从业者熟悉的工具。提示、温度或少样本示例等概念现已得到广泛认可，法学硕士越来越多地用于建模与仿真 (M&S) 工作流程。然而，看似简单的做法可能会带来微妙的问题、不必要的复杂性，甚至可能导致较差的结果。添加更多数据可能会适得其反（例如，通过模型崩溃或无意中消除现有护栏而导致性能恶化），如果没有事先评估已知的信息，则没有必要花时间对模型进行微调，将温度设置为 0 不足以使 LLM 具有确定性，提供大量的 M&S 数据，因为输入可能过多（LLM 无法处理所有事情），但天真的简化可能会丢失信息。我们的目标是就如何使用法学硕士提供全面且实用的指导，重点是马萨诸塞州法学硕士的申请。我们讨论常见的混乱来源，包括非确定性、知识增强（包括 RAG 和 LoRA）、M&S 数据分解和超参数设置。我们强调原则性的设计选择、诊断策略和实证评估，目的是帮助建模者就何时、如何以及是否依赖法学硕士做出明智的决定。"
+    },
+    {
+      "title": "EoCD: Encoder only Remote Sensing Change Detection",
+      "authors": [
+        "Mubashir Noman",
+        "Mustansar Fiaz",
+        "Hiyam Debary",
+        "Abdul Hannan",
+        "Shah Nawaz",
+        "Fahad Shahbaz Khan",
+        "Salman Khan"
+      ],
+      "summary": "Being a cornerstone of temporal analysis, change detection has been playing a pivotal role in modern earth observation. Existing change detection methods rely on the Siamese encoder to individually extract temporal features followed by temporal fusion. Subsequently, these methods design sophisticated decoders to improve the change detection performance without taking into consideration the complexity of the model. These aforementioned issues intensify the overall computational cost as well as the network's complexity which is undesirable. Alternatively, few methods utilize the early fusion scheme to combine the temporal images. These methods prevent the extra overhead of Siamese encoder, however, they also rely on sophisticated decoders for better performance. In addition, these methods demonstrate inferior performance as compared to late fusion based methods. To bridge these gaps, we introduce encoder only change detection (EoCD) that is a simple and effective method for the change detection task. The proposed method performs the early fusion of the temporal data and replaces the decoder with a parameter-free multiscale feature fusion module thereby significantly reducing the overall complexity of the model. EoCD demonstrate the optimal balance between the change detection performance and the prediction speed across a variety of encoder architectures. Additionally, EoCD demonstrate that the performance of the model is predominantly dependent on the encoder network, making the decoder an additional component. Extensive experimentation on four challenging change detection datasets reveals the effectiveness of the proposed method.",
+      "published": "2026-02-05T16:58:42Z",
+      "updated": "2026-02-05T16:58:42Z",
+      "arxiv_id": "2602.05882v1",
+      "abs_url": "http://arxiv.org/abs/2602.05882v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.05882v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "变化检测",
+        "时间序列与视频",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "变化检测",
+      "score": 15,
+      "anchor_terms": [
+        "change detection",
+        "earth observation",
+        "remote sensing",
+        "temporal"
+      ],
+      "matched_terms": [
+        "change detection",
+        "earth observation",
+        "feature fusion",
+        "remote sensing",
+        "remote sensing change detection",
+        "temporal",
+        "temporal analysis"
+      ],
+      "title_zh": "EoCD：仅编码器遥感变化检测",
+      "summary_zh": "作为时间分析的基石，变化检测在现代地球观测中一直发挥着关键作用。现有的变化检测方法依赖于连体编码器来单独提取时间特征，然后进行时间融合。随后，这些方法设计了复杂的解码器来提高变化检测性能，而不考虑模型的复杂性。上述这些问题加剧了总体计算成本以及网络的复杂性，这是不希望的。或者，很少有方法利用早期融合方案来组合时间图像。这些方法避免了暹罗编码器的额外开销，但是，它们也依赖于复杂的解码器来获得更好的性能。此外，与基于后期融合的方法相比，这些方法表现出较差的性能。为了弥补这些差距，我们引入了仅编码器变化检测（EoCD），这是一种简单有效的变化检测任务方法。所提出的方法执行时间数据的早期融合，并用无参数多尺度特征融合模块替换解码器，从而显着降低模型的整体复杂度。 EoCD 展示了各种编码器架构中变化检测性能和预测速度之间的最佳平衡。此外，EoCD 表明模型的性能主要取决于编码器网络，这使得解码器成为一个额外的组件。对四个具有挑战性的变化检测数据集的广泛实验揭示了所提出方法的有效性。"
+    },
+    {
+      "title": "Nonlinearity as Rank: Generative Low-Rank Adapter with Radial Basis Functions",
+      "authors": [
+        "Yihao Ouyang",
+        "Shiwei Li",
+        "Haozhao Wang",
+        "Xiandi Luo",
+        "Zhuoqi Hu",
+        "Yuetong Song",
+        "Qiyu Qin",
+        "Yichen Li",
+        "Ruixuan Li"
+      ],
+      "summary": "Low-rank adaptation (LoRA) approximates the update of a pretrained weight matrix using the product of two low-rank matrices. However, standard LoRA follows an explicit-rank paradigm, where increasing model capacity requires adding more rows or columns (i.e., basis vectors) to the low-rank matrices, leading to substantial parameter growth. In this paper, we find that these basis vectors exhibit significant parameter redundancy and can be compactly represented by lightweight nonlinear functions. Therefore, we propose Generative Low-Rank Adapter (GenLoRA), which replaces explicit basis vector storage with nonlinear basis vector generation. Specifically, GenLoRA maintains a latent vector for each low-rank matrix and employs a set of lightweight radial basis functions (RBFs) to synthesize the basis vectors. Each RBF requires far fewer parameters than an explicit basis vector, enabling higher parameter efficiency in GenLoRA. Extensive experiments across multiple datasets and architectures show that GenLoRA attains higher effective LoRA ranks under smaller parameter budgets, resulting in superior fine-tuning performance. The code is available at https://anonymous.4open.science/r/GenLoRA.",
+      "published": "2026-02-05T14:36:44Z",
+      "updated": "2026-05-19T02:24:28Z",
+      "arxiv_id": "2602.05709v2",
+      "abs_url": "http://arxiv.org/abs/2602.05709v2",
+      "pdf_url": "https://arxiv.org/pdf/2602.05709v2",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 4,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "adapter",
+        "fine-tuning",
+        "LoRA"
+      ],
+      "title_zh": "非线性作为秩：具有径向基函数的生成低秩适配器",
+      "summary_zh": "低秩自适应 (LoRA) 使用两个低秩矩阵的乘积来近似更新预训练权重矩阵。然而，标准 LoRA 遵循显式秩范式，其中增加模型容量需要向低秩矩阵添加更多行或列（即基向量），从而导致参数大幅增长。在本文中，我们发现这些基向量表现出显着的参数冗余，并且可以用轻量级非线性函数紧凑地表示。因此，我们提出了生成低秩适配器（GenLoRA），它用非线性基向量生成代替显式基向量存储。具体来说，GenLoRA 为每个低秩矩阵维护一个潜在向量，并采用一组轻量级径向基函数（RBF）来合成基向量。每个 RBF 需要的参数比显式基向量少得多，从而在 GenLoRA 中实现更高的参数效率。跨多个数据集和架构的大量实验表明，GenLoRA 在较小的参数预算下获得了更高的有效 LoRA 排名，从而实现了卓越的微调性能。该代码可在 https://anonymous.4open.science/r/GenLoRA 获取。"
+    },
+    {
+      "title": "End-to-End Compression for Tabular Foundation Models",
+      "authors": [
+        "Guri Zabërgja",
+        "Rafiq Kamel",
+        "Arlind Kadra",
+        "Christian M. M. Frey",
+        "Josif Grabocka"
+      ],
+      "summary": "The long-standing dominance of gradient-boosted decision trees for tabular data has recently been challenged by in-context learning tabular foundation models. In-context learning methods fit and predict in one forward pass without parameter updates by leveraging the training data as context for predicting on query test points. While recent tabular foundation models achieve state-of-the-art performance, their transformer architecture based on the attention mechanism has quadratic complexity regarding dataset size, which in turn increases the overhead on training and inference time, and limits the capacity of the models to handle large-scale datasets. In this work, we propose TACO, an end-to-end tabular compression model that compresses the training dataset in a latent space. We test our method on the TabArena benchmark, where our proposed method is up to 94x faster in inference time, while consuming up to 97\\% less memory compared to the state-of-the-art tabular transformer architecture, all while retaining performance without significant degradation. Lastly, our method not only scales better with increased dataset sizes, but it also achieves better performance compared to other baselines.",
+      "published": "2026-02-05T13:33:58Z",
+      "updated": "2026-05-29T14:22:08Z",
+      "arxiv_id": "2602.05649v2",
+      "abs_url": "http://arxiv.org/abs/2602.05649v2",
+      "pdf_url": "https://arxiv.org/pdf/2602.05649v2",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "Accepted as Spotlight at ICML 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 5,
+      "anchor_terms": [
+        "in-context learning"
+      ],
+      "matched_terms": [
+        "attention mechanism",
+        "foundation model",
+        "in-context learning",
+        "transformer"
+      ],
+      "title_zh": "表格基础模型的端到端压缩",
+      "summary_zh": "梯度增强决策树在表格数据中的长期主导地位最近受到上下文学习表格基础模型的挑战。上下文学习方法利用训练数据作为预测查询测试点的上下文，在一次前向传递中进行拟合和预测，无需更新参数。虽然最近的表格基础模型实现了最先进的性能，但它们基于注意力机制的变压器架构在数据集大小方面具有二次复杂度，这反过来又增加了训练和推理时间的开销，并限制了模型处理大规模数据集的能力。在这项工作中，我们提出了 TACO，一种端到端的表格压缩模型，可在潜在空间中压缩训练数据集。我们在 TabArena 基准测试上测试了我们的方法，与最先进的表格转换器架构相比，我们提出的方法的推理时间提高了 94 倍，同时消耗的内存减少了 97%，同时保留了性能而没有显着下降。最后，我们的方法不仅随着数据集大小的增加而更好地扩展，而且与其他基线相比，它还实现了更好的性能。"
+    },
+    {
+      "title": "UAV Trajectory Optimization via Improved Noisy Deep Q-Network",
+      "authors": [
+        "Zhang Hengyu",
+        "Maryam Cheraghy",
+        "Liu Wei",
+        "Armin Farhadi",
+        "Meysam Soltanpour",
+        "Zhong Zhuoqing"
+      ],
+      "summary": "This paper proposes an Improved Noisy Deep Q-Network (Noisy DQN) to enhance the exploration and stability of Unmanned Aerial Vehicle (UAV) when applying deep reinforcement learning in simulated environments. This method enhances the exploration ability by combining the residual NoisyLinear layer with an adaptive noise scheduling mechanism, while improving training stability through smooth loss and soft target network updates. Experiments show that the proposed model achieves faster convergence and up to $+40$ higher rewards compared to standard DQN and quickly reach to the minimum number of steps required for the task 28 in the 15 * 15 grid navigation environment set up. The results show that our comprehensive improvements to the network structure of NoisyNet, exploration control, and training stability contribute to enhancing the efficiency and reliability of deep Q-learning.",
+      "published": "2026-02-05T13:23:47Z",
+      "updated": "2026-02-05T13:23:47Z",
+      "arxiv_id": "2602.05644v1",
+      "abs_url": "http://arxiv.org/abs/2602.05644v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.05644v1",
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "无人机/UAV"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 6,
+      "anchor_terms": [
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "LoRA",
+        "UAV",
+        "unmanned aerial vehicle"
+      ],
+      "title_zh": "通过改进的噪声深度 Q 网络进行无人机轨迹优化",
+      "summary_zh": "本文提出了一种改进的噪声深度 Q 网络（噪声 DQN），以增强无人机（UAV）在模拟环境中应用深度强化学习时的探索性和稳定性。该方法通过将残差NoisyLinear层与自适应噪声调度机制相结合来增强探索能力，同时通过平滑损失和软目标网络更新来提高训练稳定性。实验表明，与标准 DQN 相比，所提出的模型实现了更快的收敛和高达 $+40$ 的更高奖励，并且在设置的 15 * 15 网格导航环境中快速达到任务 28 所需的最小步骤数。结果表明，我们对NoisyNet的网络结构、探索控制和训练稳定性的全面改进有助于提高深度Q学习的效率和可靠性。"
+    },
+    {
+      "title": "LoGoSeg: Integrating Local and Global Features for Open-Vocabulary Semantic Segmentation",
+      "authors": [
+        "Junyang Chen",
+        "Xiangbo Lv",
+        "Zhiqiang Kou",
+        "Xingdong Sheng",
+        "Ning Xu",
+        "Yiguo Qiao"
+      ],
+      "summary": "Open-vocabulary semantic segmentation (OVSS) extends traditional closed-set segmentation by enabling pixel-wise annotation for both seen and unseen categories using arbitrary textual descriptions. While existing methods leverage vision-language models (VLMs) like CLIP, their reliance on image-level pretraining often results in imprecise spatial alignment, leading to mismatched segmentations in ambiguous or cluttered scenes. However, most existing approaches lack strong object priors and region-level constraints, which can lead to object hallucination or missed detections, further degrading performance. To address these challenges, we propose LoGoSeg, an efficient single-stage framework that integrates three key innovations: (i) an object existence prior that dynamically weights relevant categories through global image-text similarity, effectively reducing hallucinations; (ii) a region-aware alignment module that establishes precise region-level visual-textual correspondences; and (iii) a dual-stream fusion mechanism that optimally combines local structural information with global semantic context. Unlike prior works, LoGoSeg eliminates the need for external mask proposals, additional backbones, or extra datasets, ensuring efficiency. Extensive experiments on six benchmarks (A-847, PC-459, A-150, PC-59, PAS-20, and PAS-20b) demonstrate its competitive performance and strong generalization in open-vocabulary settings.",
+      "published": "2026-02-05T12:03:11Z",
+      "updated": "2026-02-12T13:43:33Z",
+      "arxiv_id": "2602.05578v2",
+      "abs_url": "http://arxiv.org/abs/2602.05578v2",
+      "pdf_url": "https://arxiv.org/pdf/2602.05578v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "语义分割",
+        "开放词汇与开放集",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 8,
+      "anchor_terms": [
+        "open-vocabulary",
+        "semantic segmentation"
+      ],
+      "matched_terms": [
+        "CLIP",
+        "open-vocabulary",
+        "semantic segmentation"
+      ],
+      "title_zh": "LoGoSeg：集成本地和全局特征以实现开放词汇语义分割",
+      "summary_zh": "开放词汇语义分割 (OVSS) 通过使用任意文本描述对已见和未见类别进行像素级注释，扩展了传统的封闭集分割。虽然现有方法利用 CLIP 等视觉语言模型 (VLM)，但它们对图像级预训练的依赖通常会导致空间对齐不精确，从而导致模糊或混乱场景中的分割不匹配。然而，大多数现有方法缺乏强大的对象先验和区域级约束，这可能导致对象幻觉或漏检，进一步降低性能。为了应对这些挑战，我们提出了LoGoSeg，这是一种高效的单阶段框架，它集成了三个关键创新：（i）对象存在先验，通过全局图像文本相似性动态加权相关类别，有效减少幻觉； (ii) 区域感知对齐模块，可建立精确的区域级视觉文本对应关系； (iii)双流融合机制，将局部结构信息与全局语义上下文最佳地结合起来。与之前的工作不同，LoGoSeg 消除了对外部掩模建议、额外骨干网或额外数据集的需要，从而确保了效率。对六个基准（A-847、PC-459、A-150、PC-59、PAS-20 和 PAS-20b）的广泛实验证明了其在开放词汇设置中的竞争性能和强大的泛化能力。"
+    },
+    {
+      "title": "ALIVE: Awakening LLM Reasoning via Adversarial Learning and Instructive Verbal Evaluation",
+      "authors": [
+        "Yiwen Duan",
+        "Jing Ye",
+        "Xinpei Zhao"
+      ],
+      "summary": "The quest for expert-level reasoning in Large Language Models (LLMs) has been hampered by a persistent \\textit{reward bottleneck}: traditional reinforcement learning (RL) relies on scalar rewards that are \\textbf{costly} to scale, \\textbf{brittle} across domains, and \\textbf{blind} to the underlying logic of a solution. This reliance on external, impoverished signals prevents models from developing a deep, self-contained understanding of reasoning principles. We introduce \\textbf{ALIVE} (\\emph{Adversarial Learning with Instructive Verbal Evaluation}), a hands-free alignment framework that moves beyond scalar reward optimization toward intrinsic reasoning acquisition. Grounded in the principle of \\emph{Cognitive Synergy}, ALIVE unifies problem posing, solving, and judging within a single policy model to internalize the logic of correctness. By coupling adversarial learning with instructive verbal feedback, ALIVE enables models to internalize evaluative criteria directly from raw corpora, effectively transforming external critiques into an endogenous reasoning faculty. Empirical evaluations across mathematical reasoning, code generation, and general logical inference benchmarks demonstrate that ALIVE consistently mitigates reward signal limitations. With identical data and compute, it achieves accuracy gains, markedly improved cross-domain generalization, and higher self-correction rates. These results indicate that the reasoning trinity fosters a self-sustaining trajectory of capability growth, positioning ALIVE as a scalable foundation for general-purpose reasoning alignment without human-in-the-loop supervision.",
+      "published": "2026-02-05T09:20:23Z",
+      "updated": "2026-05-22T07:53:50Z",
+      "arxiv_id": "2602.05472v2",
+      "abs_url": "http://arxiv.org/abs/2602.05472v2",
+      "pdf_url": "https://arxiv.org/pdf/2602.05472v2",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 4,
+      "anchor_terms": [
+        "domain generalization"
+      ],
+      "matched_terms": [
+        "domain generalization",
+        "large language model",
+        "LLM"
+      ],
+      "title_zh": "ALIVE：通过对抗性学习和指导性口头评估唤醒法学硕士推理",
+      "summary_zh": "在大型语言模型（LLM）中对专家级推理的追求一直受到持续的\\textit{奖励瓶颈}的阻碍：传统的强化学习（RL）依赖于标量奖励，这些标量奖励的扩展成本高昂，跨领域的脆弱性，并且对解决方案的底层逻辑盲目。这种对外部贫乏信号的依赖阻碍了模型对推理原理产生深刻的、独立的理解。我们引入了 \\textbf{ALIVE} （\\emph{具有指导性言语评估的对抗性学习}），这是一种免提对齐框架，它超越了标量奖励优化，转向了内在推理获取。基于 \\emph{认知协同} 原则，ALIVE 将问题提出、解决和判断统一在一个策略模型中，以内化正确性的逻辑。通过将对抗性学习与指导性口头反馈相结合，ALIVE 使模型能够直接从原始语料库中内化评估标准，有效地将外部批评转化为内生推理能力。数学推理、代码生成和一般逻辑推理基准的实证评估表明，ALIVE 始终减轻奖励信号的限制。通过相同的数据和计算，它可以实现准确度增益、显着提高的跨域泛化能力以及更高的自我纠正率。这些结果表明，推理三位一体促进了能力增长的自我维持轨迹，将 ALIVE 定位为无需人在环监督的通用推理对齐的可扩展基础。"
+    },
+    {
+      "title": "NeVStereo: A NeRF-Driven NVS-Stereo Architecture for High-Fidelity 3D Tasks",
+      "authors": [
+        "Pengcheng Chen",
+        "Yue Hu",
+        "Wenhao Li",
+        "Nicole M Gunderson",
+        "Andrew Feng",
+        "Zhenglong Sun",
+        "Peter Beerel",
+        "Eric J Seibel"
+      ],
+      "summary": "In modern dense 3D reconstruction, feed-forward systems (e.g., VGGT, pi3) focus on end-to-end matching and geometry prediction but do not explicitly output the novel view synthesis (NVS). Neural rendering-based approaches offer high-fidelity NVS and detailed geometry from posed images, yet they typically assume fixed camera poses and can be sensitive to pose errors. As a result, it remains non-trivial to obtain a single framework that can offer accurate poses, reliable depth, high-quality rendering, and accurate 3D surfaces from casually captured views. We present NeVStereo, a NeRF-driven NVS-stereo architecture that aims to jointly deliver camera poses, multi-view depth, novel view synthesis, and surface reconstruction from multi-view RGB-only inputs. NeVStereo combines NeRF-based NVS for stereo-friendly renderings, confidence-guided multi-view depth estimation, NeRF-coupled bundle adjustment for pose refinement, and an iterative refinement stage that updates both depth and the radiance field to improve geometric consistency. This design mitigated the common NeRF-based issues such as surface stacking, artifacts, and pose-depth coupling. Across indoor, outdoor, tabletop, and aerial benchmarks, our experiments indicate that NeVStereo achieves consistently strong zero-shot performance, with up to 36% lower depth error, 10.4% improved pose accuracy, 4.5% higher NVS fidelity, and state-of-the-art mesh quality (F1 91.93%, Chamfer 4.35 mm) compared to existing prestigious methods.",
+      "published": "2026-02-05T08:15:06Z",
+      "updated": "2026-02-05T08:15:06Z",
+      "arxiv_id": "2602.05423v1",
+      "abs_url": "http://arxiv.org/abs/2602.05423v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.05423v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "小样本与域泛化",
+        "LiDAR/点云",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 4,
+      "anchor_terms": [
+        "3D reconstruction",
+        "depth estimation"
+      ],
+      "matched_terms": [
+        "3D reconstruction",
+        "aerial",
+        "depth estimation",
+        "zero-shot"
+      ],
+      "title_zh": "NeVStereo：用于高保真 3D 任务的 NeRF 驱动的 NVS 立体架构",
+      "summary_zh": "在现代密集 3D 重建中，前馈系统（例如 VGGT、pi3）专注于端到端匹配和几何预测，但不明确输出新颖的视图合成 (NVS)。基于神经渲染的方法提供高保真 NVS 和来自姿势图像的详细几何形状，但它们通常假设固定的相机姿势，并且可能对姿势错误敏感。因此，获得一个能够从随意捕获的视图中提供准确姿势、可靠深度、高质量渲染和准确 3D 表面的单一框架仍然很重要。我们推出 NeVStereo，这是一种 NeRF 驱动的 NVS 立体架构，旨在联合提供相机姿势、多视图深度、新颖的视图合成以及仅从多视图 RGB 输入进行表面重建。 NeVStereo 结合了基于 NeRF 的 NVS（用于立体友好渲染）、置信引导的多视图深度估计、用于姿态细化的 NeRF 耦合束调整，以及更新深度和辐射场以提高几何一致性的迭代细化阶段。这种设计缓解了常见的基于 NeRF 的问题，例如表面堆叠、伪影和姿势深度耦合。在室内、室外、桌面和空中基准测试中，我们的实验表明，与现有的著名方法相比，NeVStereo 始终实现了强大的零射击性能，深度误差降低了 36%，姿势精度提高了 10.4%，NVS 保真度提高了 4.5%，网格质量达到最先进的水平（F1 91.93%，倒角 4.35 mm）。"
+    },
+    {
+      "title": "A Decomposition-based State Space Model for Multivariate Time-Series Forecasting",
+      "authors": [
+        "Shunya Nagashima",
+        "Shuntaro Suzuki",
+        "Shuitsu Koyama",
+        "Shinnosuke Hirano"
+      ],
+      "summary": "Multivariate time series (MTS) forecasting is crucial for decision-making in domains such as weather, energy, and finance. It remains challenging because real-world sequences intertwine slow trends, multi-rate seasonalities, and irregular residuals. Existing methods often rely on rigid, hand-crafted decompositions or generic end-to-end architectures that entangle components and underuse structure shared across variables. To address these limitations, we propose DecompSSM, an end-to-end decomposition framework using three parallel deep state space model branches to capture trend, seasonal, and residual components. The model features adaptive temporal scales via an input-dependent predictor, a refinement module for shared cross-variable context, and an auxiliary loss that enforces reconstruction and orthogonality. Across standard benchmarks (ECL, Weather, ETTm2, and PEMS04), DecompSSM outperformed strong baselines, indicating the effectiveness of combining component-wise deep state space models and global context refinement.",
+      "published": "2026-02-05T07:17:08Z",
+      "updated": "2026-02-05T07:17:08Z",
+      "arxiv_id": "2602.05389v1",
+      "abs_url": "http://arxiv.org/abs/2602.05389v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.05389v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "ICASSP2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "基础模型",
+        "数据集/评测"
+      ],
+      "topic": "时间序列与视频",
+      "score": 4,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "state space model",
+        "temporal",
+        "time-series"
+      ],
+      "title_zh": "用于多元时间序列预测的基于分解的状态空间模型",
+      "summary_zh": "多元时间序列 (MTS) 预测对于天气、能源和金融等领域的决策至关重要。它仍然具有挑战性，因为现实世界的序列将​​缓慢的趋势、多速率季节性和不规则残差交织在一起。现有的方法通常依赖于严格的、手工分解或通用的端到端架构，这些架构使跨变量共享的组件和未充分利用的结构纠缠在一起。为了解决这些限制，我们提出了 DecompSSM，这是一种端到端分解框架，使用三个并行的深度状态空间模型分支来捕获趋势、季节性和残差分量。该模型通过依赖于输入的预测器、用于共享跨变量上下文的细化模块以及强制重建和正交性的辅助损失来实现自适应时间尺度。在标准基准（ECL、Weather、ETTm2 和 PEMS04）中，DecompSSM 的表现优于强大的基准，表明将组件深度状态空间模型和全局上下文细化相结合的有效性。"
+    },
+    {
+      "title": "HealthMamba: An Uncertainty-aware Spatiotemporal Graph State Space Model for Effective and Reliable Healthcare Facility Visit Prediction",
+      "authors": [
+        "Dahai Yu",
+        "Lin Jiang",
+        "Rongchao Xu",
+        "Guang Wang"
+      ],
+      "summary": "Healthcare facility visit prediction is essential for optimizing healthcare resource allocation and informing public health policy. Despite advanced machine learning methods being employed for better prediction performance, existing works usually formulate this task as a time-series forecasting problem without considering the intrinsic spatial dependencies of different types of healthcare facilities, and they also fail to provide reliable predictions under abnormal situations such as public emergencies. To advance existing research, we propose HealthMamba, an uncertainty-aware spatiotemporal framework for accurate and reliable healthcare facility visit prediction. HealthMamba comprises three key components: (i) a Unified Spatiotemporal Context Encoder that fuses heterogeneous static and dynamic information, (ii) a novel Graph State Space Model called GraphMamba for hierarchical spatiotemporal modeling, and (iii) a comprehensive uncertainty quantification module integrating three uncertainty quantification mechanisms for reliable prediction. We evaluate HealthMamba on four large-scale real-world datasets from California, New York, Texas, and Florida. Results show HealthMamba achieves around 6.0% improvement in prediction accuracy and 3.5% improvement in uncertainty quantification over state-of-the-art baselines.",
+      "published": "2026-02-05T04:14:27Z",
+      "updated": "2026-05-21T03:03:56Z",
+      "arxiv_id": "2602.05286v3",
+      "abs_url": "http://arxiv.org/abs/2602.05286v3",
+      "pdf_url": "https://arxiv.org/pdf/2602.05286v3",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "IJCAI 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "基础模型",
+        "数据集/评测"
+      ],
+      "topic": "时间序列与视频",
+      "score": 5,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "Mamba",
+        "state space model",
+        "temporal",
+        "time-series"
+      ],
+      "title_zh": "HealthMamba：一种不确定性感知时空图​​状态空间模型，用于有效且可靠的医疗机构就诊预测",
+      "summary_zh": "医疗机构就诊预测对于优化医疗资源分配和为公共卫生政策提供信息至关重要。尽管采用先进的机器学习方法来获得更好的预测性能，但现有的工作通常将此任务表述为时间序列预测问题，没有考虑不同类型医疗机构的内在空间依赖性，而且它们也无法在突发公共事件等异常情况下提供可靠的预测。为了推进现有研究，我们提出了 HealthMamba，这是一种不确定性感知的时空框架，用于准确可靠的医疗机构就诊预测。 HealthMamba 包含三个关键组件：(i) 融合异构静态和动态信息的统一时空上下文编码器，(ii) 一种称为 GraphMamba 的新型图状态空间模型，用于分层时空建模，以及 (iii) 集成三种不确定性量化机制以进行可靠预测的综合不确定性量化模块。我们在来自加利福尼亚州、纽约州、德克萨斯州和佛罗里达州的四个大型现实世界数据集上评估 HealthMamba。结果显示，与最先进的基线相比，HealthMamba 的预测准确性提高了约 6.0%，不确定性量化提高了 3.5%。"
+    },
+    {
+      "title": "Active Label Cleaning for Reliable Detection of Electron Dense Deposits in Transmission Electron Microscopy Images",
+      "authors": [
+        "Jieyun Tan",
+        "Shuo Liu",
+        "Guibin Zhang",
+        "Ziqi Li",
+        "Jian Geng",
+        "Lei Zhang",
+        "Lei Cao"
+      ],
+      "summary": "Automated detection of electron dense deposits (EDD) in glomerular disease is hindered by the scarcity of high-quality labeled data. While crowdsourcing reduces annotation cost, it introduces label noise. We propose an active label cleaning method to efficiently denoise crowdsourced datasets. Our approach uses active learning to select the most valuable noisy samples for expert re-annotation, building high-accuracy cleaning models. A Label Selection Module leverages discrepancies between crowdsourced labels and model predictions for both sample selection and instance-level noise grading. Experiments show our method achieves 67.18% AP\\textsubscript{50} on a private dataset, an 18.83% improvement over training on noisy labels. This performance reaches 95.79% of that with full expert annotation while reducing annotation cost by 73.30%. The method provides a practical, cost-effective solution for developing reliable medical AI with limited expert resources.",
+      "published": "2026-02-05T03:08:02Z",
+      "updated": "2026-02-05T03:08:02Z",
+      "arxiv_id": "2602.05250v1",
+      "abs_url": "http://arxiv.org/abs/2602.05250v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.05250v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "10 pages, 6 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 2,
+      "anchor_terms": [
+        "active learning"
+      ],
+      "matched_terms": [
+        "active learning"
+      ],
+      "title_zh": "主动标签清洁可可靠检测透射电子显微镜图像中的电子致密沉积物",
+      "summary_zh": "缺乏高质量标记数据阻碍了肾小球疾病中电子致密沉积物 (EDD) 的自动检测。虽然众包降低了注释成本，但它引入了标签噪音。我们提出了一种主动标签清理方法来有效地对众包数据集进行去噪。我们的方法使用主动学习来选择最有价值的噪声样本进行专家重新注释，构建高精度清洁模型。标签选择模块利用众包标签和模型预测之间的差异来进行样本选择和实例级噪声分级。实验表明，我们的方法在私有数据集上实现了 67.18% AP\\textsubscript{50}，比在噪声标签上的训练提高了 18.83%。性能达到专家全程标注的95.79%，同时标注成本降低73.30%。该方法为利用有限的专家资源开发可靠的医疗人工智能提供了实用、经济高效的解决方案。"
+    },
+    {
+      "title": "Boosting SAM for Cross-Domain Few-Shot Segmentation via Conditional Point Sparsification",
+      "authors": [
+        "Jiahao Nie",
+        "Yun Xing",
+        "Wenbin An",
+        "Qingsong Zhao",
+        "Jiawei Shao",
+        "Yap-Peng Tan",
+        "Alex C. Kot",
+        "Shijian Lu",
+        "Xuelong Li"
+      ],
+      "summary": "Motivated by the success of the Segment Anything Model (SAM) in promptable segmentation, recent studies leverage SAM to develop training-free solutions for few-shot segmentation, which aims to predict object masks in the target image based on a few reference exemplars. These SAM-based methods typically rely on point matching between reference and target images and use the matched dense points as prompts for mask prediction. However, we observe that dense points perform poorly in Cross-Domain Few-Shot Segmentation (CD-FSS), where target images are from medical or satellite domains. We attribute this issue to large domain shifts that disrupt the point-image interactions learned by SAM, and find that point density plays a crucial role under such conditions. To address this challenge, we propose Conditional Point Sparsification (CPS), a training-free approach that adaptively guides SAM interactions for cross-domain images based on reference exemplars. Leveraging ground-truth masks, the reference images provide reliable guidance for adaptively sparsifying dense matched points, enabling more accurate segmentation results. Extensive experiments demonstrate that CPS outperforms existing training-free SAM-based methods across diverse CD-FSS datasets.",
+      "published": "2026-02-05T02:17:38Z",
+      "updated": "2026-02-05T02:17:38Z",
+      "arxiv_id": "2602.05218v1",
+      "abs_url": "http://arxiv.org/abs/2602.05218v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.05218v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "实例分割",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "数据集/评测"
+      ],
+      "topic": "实例分割",
+      "score": 6,
+      "anchor_terms": [
+        "SAM"
+      ],
+      "matched_terms": [
+        "SAM",
+        "satellite",
+        "Segment Anything Model"
+      ],
+      "title_zh": "通过条件点稀疏增强 SAM 以实现跨域少样本分割",
+      "summary_zh": "受分段任意模型 (SAM) 在快速分割方面取得成功的推动，最近的研究利用 SAM 开发用于少样本分割的免训练解决方案，旨在基于一些参考样本来预测目标图像中的对象掩模。这些基于 SAM 的方法通常依赖于参考图像和目标图像之间的点匹配，并使用匹配的密集点作为掩模预测的提示。然而，我们观察到密集点在跨域少镜头分割（CD-FSS）中表现不佳，其中目标图像来自医学或卫星领域。我们将此问题归因于较大的域变化，这些变化破坏了 SAM 学习到的点图像交互，并发现点密度在这种条件下起着至关重要的作用。为了应对这一挑战，我们提出了条件点稀疏化（CPS），这是一种无需训练的方法，可以根据参考样本自适应地指导跨域图像的 SAM 交互。利用地面实况掩模，参考图像为自适应稀疏密集匹配点提供可靠的指导，从而实现更准确的分割结果。大量实验表明，CPS 在不同的 CD-FSS 数据集上优于现有的基于 SAM 的免训练方法。"
+    },
+    {
+      "title": "CoSA: Compressed Sensing-Based Adaptation of Large Language Models",
+      "authors": [
+        "Songtao Wei",
+        "Yi Li",
+        "Bohan Zhang",
+        "Zhichun Guo",
+        "Ying Huang",
+        "Yuede Ji",
+        "Miao Yin",
+        "Guanpeng Li",
+        "Bingzhe Li"
+      ],
+      "summary": "Parameter-Efficient Fine-Tuning (PEFT) has emerged as a practical paradigm for adapting large language models (LLMs) without updating all parameters. Most existing approaches, such as LoRA and PiSSA, rely on low-rank decompositions of weight updates. However, the low-rank assumption may restrict expressivity, particularly in task-specific adaptation scenarios where singular values are distributed relatively uniformly. To address this limitation, we propose CoSA (Compressed Sensing-Based Adaptation), a new PEFT method extended from compressed sensing theory. Instead of constraining weight updates to a low-rank subspace, CoSA expresses them through fixed random projection matrices and a compact learnable core. We provide a formal theoretical analysis of CoSA as a synthesis process, proving that weight updates can be compactly encoded into a low-dimensional space and mapped back through random projections. Extensive experimental results show that CoSA provides a principled perspective for efficient and expressive multi-scale model adaptation. Specifically, we evaluate CoSA on 10 diverse tasks, including natural language understanding and generation, employing 5 models of different scales from RoBERTa, Llama, and Qwen families. Across these settings, CoSA consistently matches or outperforms state-of-the-art PEFT methods.",
+      "published": "2026-02-05T00:11:43Z",
+      "updated": "2026-02-11T19:07:23Z",
+      "arxiv_id": "2602.05148v2",
+      "abs_url": "http://arxiv.org/abs/2602.05148v2",
+      "pdf_url": "https://arxiv.org/pdf/2602.05148v2",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 6,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LoRA",
+        "multi-scale",
+        "PEFT"
+      ],
+      "title_zh": "CoSA：基于压缩感知的大型语言模型自适应",
+      "summary_zh": "参数高效微调 (PEFT) 已成为一种在不更新所有参数的情况下适应大型语言模型 (LLM) 的实用范例。大多数现有方法，例如 LoRA 和 PiSSA，都依赖于权重更新的低秩分解。然而，低秩假设可能会限制表达能力，特别是在奇异值分布相对均匀的特定任务适应场景中。为了解决这个限制，我们提出了 CoSA（基于压缩感知的自适应），这是一种从压缩感知理论扩展而来的新 PEFT 方法。 CoSA 没有将权重更新限制在低秩子空间，而是通过固定的随机投影矩阵和紧凑的可学习核心来表达它们。我们提供了 CoSA 作为综合过程的正式理论分析，证明权重更新可以紧凑地编码到低维空间中，并通过随机投影映射回来。大量的实验结果表明，CoSA 为高效且富有表现力的多尺度模型适应提供了原则性的视角。具体来说，我们使用 RoBERTa、Llama 和 Qwen 系列的 5 个不同规模的模型，在 10 项不同的任务上评估 CoSA，包括自然语言理解和生成。在这些设置中，CoSA 始终匹配或优于最先进的 PEFT 方法。"
+    }
+  ]
+}

@@ -1,0 +1,567 @@
+{
+  "date": "2026-02-28",
+  "generated_at": "2026-06-01T13:09:28.333436+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202602280000 TO 202602282359]",
+  "total_fetched": 216,
+  "total_matched": 13,
+  "papers": [
+    {
+      "title": "RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation",
+      "authors": [
+        "Jin Zeng",
+        "Yupeng Qi",
+        "Hui Li",
+        "Chengming Li",
+        "Ziyu Lyu",
+        "Lixin Cui",
+        "Lu Bai"
+      ],
+      "summary": "Large language models (LLMs) are increasingly adopted as the backbone of recommender systems. However, user-item interactions in real-world scenarios are non-stationary, making preference drift over time inevitable. Existing model update strategies mainly rely on global fine-tuning or pointwise editing, but they face two fundamental challenges: (i) imbalanced update granularity, where global updates perturb behaviors unrelated to the target while pointwise edits fail to capture broader preference shifts; (ii) unstable incremental updates, where repeated edits interfere with prior adaptations, leading to catastrophic forgetting and inconsistent recommendations. To address these issues, we propose Region-Aware Incremental Editing (RAIE), a plug-in framework that freezes the backbone model and performs region-level updates. RAIE first constructs semantically coherent preference regions via spherical k-means in the representation space. It then assigns incoming sequences to regions via confidence-aware gating and performs three localized edit operations - Update, Expand, and Add - to dynamically revise the affected region. Each region is equipped with a dedicated Low-Rank Adaptation (LoRA) module, which is trained only on the region's updated data. During inference, RAIE routes each user sequence to its corresponding region and activates the region-specific adapter for prediction. Experiments on two benchmark datasets under a time-sliced protocol that segments data into Set-up (S), Finetune (F), and Test (T) show that RAIE significantly outperforms state-of-the-art baselines while effectively mitigating forgetting. These results demonstrate that region-aware editing offers an accurate and scalable mechanism for continual adaptation in dynamic recommendation scenarios. Our code is available at https://github.com/fengaogao/RAIE.",
+      "published": "2026-02-28T13:12:38Z",
+      "updated": "2026-03-21T11:36:43Z",
+      "arxiv_id": "2603.00638v2",
+      "abs_url": "http://arxiv.org/abs/2603.00638v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.00638v2",
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "comment": "Published on WWW'26: In Proceedings of the ACM Web Conference 2026",
+      "code_url": "https://github.com/fengaogao/RAIE",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 8,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "adapter",
+        "catastrophic forgetting",
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA"
+      ],
+      "title_zh": "RAIE：使用 LoRA 进行区域感知增量偏好编辑，以实现基于 LLM 的推荐",
+      "summary_zh": "大型语言模型 (LLM) 越来越多地被采用作为推荐系统的支柱。然而，现实场景中的用户-项目交互是非平稳的，使得偏好随时间的推移不可避免地发生漂移。现有的模型更新策略主要依赖于全局微调或逐点编辑，但它们面临两个基本挑战：（i）更新粒度不平衡，全局更新扰乱与目标无关的行为，而逐点编辑无法捕获更广泛的偏好变化； (ii) 不稳定的增量更新，重复的编辑会干扰之前的适应，导致灾难性的遗忘和不一致的建议。为了解决这些问题，我们提出了区域感知增量编辑（RAIE），这是一个插件框架，可以冻结骨干模型并执行区域级更新。 RAIE 首先通过表示空间中的球形 k 均值构建语义一致的偏好区域。然后，它通过置信感知门控将传入序列分配给区域，并执行三个本地化编辑操作 - 更新、扩展和添加 - 以动态修改受影响的区域。每个区域都配备了专用的低秩适应（LoRA）模块，该模块仅根据该区域的更新数据进行训练。在推理过程中，RAIE 将每个用户序列路由到其相应的区域，并激活区域特定的适配器进行预测。在时间切片协议下对两个基准数据集进行的实验表明，RAIE 显着优于最先进的基线，同时有效地减轻了遗忘。这些结果表明，区域感知编辑为动态推荐场景中的持续适应提供了准确且可扩展的机制。我们的代码可在 https://github.com/fengaogao/RAIE 获取。"
+    },
+    {
+      "title": "Exploring Spatiotemporal Feature Propagation for Video-Level Compressive Spectral Reconstruction: Dataset, Model and Benchmark",
+      "authors": [
+        "Lijing Cai",
+        "Zhan Shi",
+        "Chenglong Huang",
+        "Jinyao Wu",
+        "Qiping Li",
+        "Zikang Huo",
+        "Linsen Chen",
+        "Chongde Zi",
+        "Xun Cao"
+      ],
+      "summary": "Recently, Spectral Compressive Imaging (SCI) has achieved remarkable success, unlocking significant potential for dynamic spectral vision. However, existing reconstruction methods, primarily image-based, suffer from two limitations: (i) Encoding process masks spatial-spectral features, leading to uncertainty in reconstructing missing information from single compressed measurements, and (ii) The frame-by-frame reconstruction paradigm fails to ensure temporal consistency, which is crucial in the video perception. To address these challenges, this paper seeks to advance spectral reconstruction from the image level to the video level, leveraging the complementary features and temporal continuity across adjacent frames in dynamic scenes. Initially, we construct the first high-quality dynamic hyperspectral image dataset (DynaSpec), comprising 30 sequences obtained through frame-scanning acquisition. Subsequently, we propose the Propagation-Guided Spectral Video Reconstruction Transformer (PG-SVRT), which employs a spatial-then-temporal attention to effectively reconstruct spectral features from abundant video information, while using a bridged token to reduce computational complexity. Finally, we conduct simulation experiments to assess the performance of four SCI systems, and construct a DD-CASSI prototype for real-world data collection and benchmarking. Extensive experiments demonstrate that PG-SVRT achieves superior performance in reconstruction quality, spectral fidelity, and temporal consistency, while maintaining minimal FLOPs. Project page: https://github.com/nju-cite/DynaSpec",
+      "published": "2026-02-28T12:11:13Z",
+      "updated": "2026-02-28T12:11:13Z",
+      "arxiv_id": "2603.00611v1",
+      "abs_url": "http://arxiv.org/abs/2603.00611v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00611v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted by CVPR 2026",
+      "code_url": "https://github.com/nju-cite/DynaSpec",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "高光谱/多光谱",
+        "数据集/评测"
+      ],
+      "topic": "高光谱/多光谱",
+      "score": 3,
+      "anchor_terms": [
+        "hyperspectral image"
+      ],
+      "matched_terms": [
+        "hyperspectral",
+        "hyperspectral image",
+        "transformer"
+      ],
+      "title_zh": "探索视频级压缩谱重建的时空特征传播：数据集、模型和基准",
+      "summary_zh": "最近，光谱压缩成像（SCI）取得了巨大的成功，释放了动态光谱视觉的巨大潜力。然而，现有的重建方法（主要是基于图像的）存在两个局限性：（i）编码过程掩盖了空间光谱特征，导致从单个压缩测量中重建丢失信息的不确定性；（ii）逐帧重建范例无法确保时间一致性，这在视频感知中至关重要。为了应对这些挑战，本文寻求利用动态场景中相邻帧之间的互补特征和时间连续性，将光谱重建从图像级别推进到视频级别。最初，我们构建了第一个高质量动态高光谱图像数据集（DynaSpec），包含通过帧扫描采集获得的 30 个序列。随后，我们提出了传播引导光谱视频重建变压器（PG-SVRT），它采用先空后时的注意力机制，从丰富的视频信息中有效地重建光谱特征，同时使用桥接令牌来降低计算复杂度。最后，我们进行模拟实验来评估四个 SCI 系统的性能，并构建 DD-CASSI 原型用于实际数据收集和基准测试。大量实验表明，PG-SVRT 在重建质量、光谱保真度和时间一致性方面实现了卓越的性能，同时保持了最小的 FLOP。项目页面：https://github.com/nju-cite/DynaSpec"
+    },
+    {
+      "title": "Data-Centric Benchmark for Label Noise Estimation and Ranking in Remote Sensing Image Segmentation",
+      "authors": [
+        "Keiller Nogueira",
+        "Codrut-Andrei Diaconu",
+        "Dávid Kerekes",
+        "Jakob Gawlikowski",
+        "Cédric Léonard",
+        "Nassim Ait Ali Braham",
+        "June Moh Goo",
+        "Zichao Zeng",
+        "Zhipeng Liu",
+        "Pallavi Jain",
+        "Andrea Nascetti",
+        "Ronny Hänsch"
+      ],
+      "summary": "High-quality pixel-level annotations are essential for the semantic segmentation of remote sensing imagery. However, such labels are expensive to obtain and often affected by noise due to the labor-intensive and time-consuming nature of pixel-wise annotation, which makes it challenging for human annotators to label every pixel accurately. Annotation errors can significantly degrade the performance and robustness of modern segmentation models, motivating the need for reliable mechanisms to identify and quantify noisy training samples. This paper introduces a novel Data-Centric benchmark, together with a novel, publicly available dataset and two techniques for identifying, quantifying, and ranking training samples according to their level of label noise in remote sensing semantic segmentation. Such proposed methods leverage complementary strategies based on model uncertainty, prediction consistency, and representation analysis, and consistently outperform established baselines across a range of experimental settings. The outcomes of this work are publicly available at https://github.com/keillernogueira/label_noise_segmentation.",
+      "published": "2026-02-28T11:46:56Z",
+      "updated": "2026-02-28T11:46:56Z",
+      "arxiv_id": "2603.00604v1",
+      "abs_url": "http://arxiv.org/abs/2603.00604v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00604v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/keillernogueira/label_noise_segmentation",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "语义分割",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 9,
+      "anchor_terms": [
+        "remote sensing",
+        "semantic segmentation"
+      ],
+      "matched_terms": [
+        "remote sensing",
+        "remote sensing semantic segmentation",
+        "robust",
+        "semantic segmentation"
+      ],
+      "title_zh": "遥感图像分割中标签噪声估计和排名的以数据为中心的基准",
+      "summary_zh": "高质量的像素级注释对于遥感图像的语义分割至关重要。然而，由于像素级注释的劳动密集型和耗时性，此类标签的获取成本很高，并且经常受到噪声的影响，这使得人类注释者很难准确地标记每个像素。注释错误会显着降低现代分割模型的性能和鲁棒性，从而需要可靠的机制来识别和量化噪声训练样本。本文介绍了一种新颖的以数据为中心的基准，以及一种新颖的公开数据集，以及两种根据遥感语义分割中的标签噪声水平来识别、量化和排序训练样本的技术。此类提出的方法利用基于模型不确定性、预测一致性和表示分析的补充策略，并在一系列实验设置中始终优于既定基线。这项工作的成果可在 https://github.com/keillernogueira/label_noise_segmentation 上公开获取。"
+    },
+    {
+      "title": "RAISE: Requirement-Adaptive Evolutionary Refinement for Training-Free Text-to-Image Alignment",
+      "authors": [
+        "Liyao Jiang",
+        "Ruichen Chen",
+        "Chao Gao",
+        "Di Niu"
+      ],
+      "summary": "Recent text-to-image (T2I) diffusion models achieve remarkable realism, yet faithful prompt-image alignment remains challenging, particularly for complex prompts with multiple objects, relations, and fine-grained attributes. Existing training-free inference-time scaling methods rely on fixed iteration budgets that cannot adapt to prompt difficulty, while reflection-tuned models require carefully curated reflection datasets and extensive joint fine-tuning of diffusion and vision-language models, often overfitting to reflection paths data and lacking transferability across models. We introduce RAISE (Requirement-Adaptive Self-Improving Evolution), a training-free, requirement-driven evolutionary framework for adaptive T2I generation. RAISE formulates image generation as a requirement-driven adaptive scaling process, evolving a population of candidates at inference time through a diverse set of refinement actions-including prompt rewriting, noise resampling, and instructional editing. Each generation is verified against a structured checklist of requirements, enabling the system to dynamically identify unsatisfied items and allocate further computation only where needed. This achieves adaptive test-time scaling that aligns computational effort with semantic query complexity. On GenEval and DrawBench, RAISE attains state-of-the-art alignment (0.94 overall GenEval) while incurring fewer generated samples (reduced by 30-40%) and VLM calls (reduced by 80%) than prior scaling and reflection-tuned baselines, demonstrating efficient, generalizable, and model-agnostic multi-round self-improvement. Code is available at https://github.com/LiyaoJiang1998/RAISE.",
+      "published": "2026-02-28T05:53:01Z",
+      "updated": "2026-02-28T05:53:01Z",
+      "arxiv_id": "2603.00483v1",
+      "abs_url": "http://arxiv.org/abs/2603.00483v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00483v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "CVPR 2026",
+      "code_url": "https://github.com/LiyaoJiang1998/RAISE",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像生成与重建",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 6,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "diffusion model",
+        "fine-tuning",
+        "generalizable",
+        "image generation",
+        "VLM"
+      ],
+      "title_zh": "RAISE：无需训练的文本到图像对齐的需求自适应进化细化",
+      "summary_zh": "最近的文本到图像（T2I）扩散模型实现了显着的真实感，但忠实的提示图像对齐仍然具有挑战性，特别是对于具有多个对象、关系和细粒度属性的复杂提示。现有的免训练推理时间缩放方法依赖于固定的迭代预算，无法适应即时困难，而反射调整模型需要精心策划的反射数据集以及扩散和视觉语言模型的广泛联合微调，通常会过度拟合反射路径数据，并且缺乏跨模型的可迁移性。我们引入了 RAISE（需求自适应自我改进进化），这是一种无需训练、需求驱动的自适应 T2I 生成进化框架。 RAISE 将图像生成制定为需求驱动的自适应缩放过程，通过一系列不同的细化操作（包括提示重写、噪声重采样和指令编辑）在推理时进化候选群体。每一代都根据结构化的需求清单进行验证，使系统能够动态识别不满足的项目，并仅在需要时分配进一步的计算。这实现了自适应测试时间缩放，使计算工作量与语义查询复杂性保持一致。在 GenEval 和 DrawBench 上，RAISE 实现了最先进的对齐（总体 GenEval 为 0.94），同时比之前的缩放和反射调整基线产生更少的生成样本（减少了 30-40%）和 VLM 调用（减少了 80%），展示了高效、可泛化和与模型无关的多轮自我改进。代码可在 https://github.com/LiyaoJiang1998/RAISE 获取。"
+    },
+    {
+      "title": "Mamba-CAD: State Space Model For 3D Computer-Aided Design Generative Modeling",
+      "authors": [
+        "Xueyang Li",
+        "Yunzhong Lou",
+        "Yu Song",
+        "Xiangdong Zhou"
+      ],
+      "summary": "Computer-Aided Design (CAD) generative modeling has a strong and long-term application in the industry. Recently, the parametric CAD sequence as the design logic of an object has been widely mined by sequence models. However, the industrial CAD models, especially in component objects, are fine-grained and complex, requiring a longer parametric CAD sequence to define. To address the problem, we introduce Mamba-CAD, a self-supervised generative modeling for complex CAD models in the industry, which can model on a longer parametric CAD sequence. Specifically, we first design an encoder-decoder framework based on a Mamba architecture and pair it with a CAD reconstruction task for pre-training to model the latent representation of CAD models; and then we utilize the learned representation to guide a generative adversarial network to produce the fake representation of CAD models, which would be finally recovered into parametric CAD sequences via the decoder of MambaCAD. To train Mamba-CAD, we further create a new dataset consisting of 77,078 CAD models with longer parametric CAD sequences. Comprehensive experiments are conducted to demonstrate the effectiveness of our model under various evaluation metrics, especially in the generation length of valid parametric CAD sequences. The code and dataset can be achieved from https://github.com/Sunny-Hack/Code-for-Mamba-CAD-AAAI-2025-.",
+      "published": "2026-02-28T03:38:26Z",
+      "updated": "2026-02-28T03:38:26Z",
+      "arxiv_id": "2603.00439v1",
+      "abs_url": "http://arxiv.org/abs/2603.00439v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00439v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "Accepted to AAAI 2025",
+      "code_url": "https://github.com/Sunny-Hack/Code-for-Mamba-CAD-AAAI-2025-",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像生成与重建",
+        "基础模型",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 8,
+      "anchor_terms": [
+        "Mamba"
+      ],
+      "matched_terms": [
+        "generative adversarial network",
+        "Mamba",
+        "pre-training",
+        "self-supervised",
+        "state space model"
+      ],
+      "title_zh": "Mamba-CAD：用于 3D 计算机辅助设计生成建模的状态空间模型",
+      "summary_zh": "计算机辅助设计（CAD）生成建模在业界有着强大而长期的应用。近年来，参数化CAD序列作为对象的设计逻辑已被序列模型广泛挖掘。然而，工业 CAD 模型（尤其是组件对象）细粒度且复杂，需要更长的参数化 CAD 序列来定义。为了解决这个问题，我们引入了 Mamba-CAD，这是一种针对行业中复杂 CAD 模型的自监督生成建模，它可以对更长的参数化 CAD 序列进行建模。具体来说，我们首先设计一个基于 Mamba 架构的编码器-解码器框架，并将其与 CAD 重建任务配对进行预训练，以对 CAD 模型的潜在表示进行建模；然后，我们利用学习到的表示来指导生成对抗网络生成 CAD 模型的假表示，最终通过 MambaCAD 解码器将其恢复为参数化 CAD 序列。为了训练 Mamba-CAD，我们进一步创建了一个新数据集，其中包含 77,078 个 CAD 模型以及更长的参数化 CAD 序列。进行了全面的实验来证明我们的模型在各种评估指标下的有效性，特别是在有效参数化 CAD 序列的生成长度方面。代码和数据集可以从https://github.com/Sunny-Hack/Code-for-Mamba-CAD-AAAI-2025-获得。"
+    },
+    {
+      "title": "MARS: Harmonizing Multimodal Convergence via Adaptive Rank Search",
+      "authors": [
+        "Minkyoung Cho",
+        "Insu Jang",
+        "Shuowei Jin",
+        "Zesen Zhao",
+        "Adityan Jothi",
+        "Ethem F. Can",
+        "Min-Hung Chen",
+        "Z. Morley Mao"
+      ],
+      "summary": "Fine-tuning Multimodal Large Language Models (MLLMs) with parameter-efficient methods like Low-Rank Adaptation (LoRA) is crucial for task adaptation. However, imbalanced training dynamics across modalities often lead to suboptimal accuracy due to negative interference, a challenge typically addressed with inefficient heuristic methods such as manually tuning separate learning rates. To overcome this, we introduce MARS (Multimodal Adaptive Rank Search), an approach to discover optimal rank pairs that balance training dynamics while maximizing performance. Our key innovation, a proposed framework of dual scaling laws, enables this search: one law models module-specific convergence time to prune the search space to candidates with aligned dynamics, while the other predicts final task performance to select the optimal pair from the pruned set. By re-purposing the LoRA rank as a controller for modality-specific convergence speed, MARS outperforms baseline methods and provides a robust, automated strategy for optimizing MLLM fine-tuning.",
+      "published": "2026-02-28T15:58:28Z",
+      "updated": "2026-02-28T15:58:28Z",
+      "arxiv_id": "2603.00720v1",
+      "abs_url": "http://arxiv.org/abs/2603.00720v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00720v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "17 pages; Project Page: this https URL: https://minkyoungcho.github.io/mars/",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "多模态融合"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 6,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LoRA",
+        "MLLM",
+        "multimodal large language model",
+        "robust"
+      ],
+      "title_zh": "MARS：通过自适应排名搜索协调多模态融合",
+      "summary_zh": "使用低秩适应 (LoRA) 等参数有效的方法微调多模态大型语言模型 (MLLM) 对于任务适应至关重要。然而，由于负面干扰，跨模式的训练动态不平衡常常导致准确性不理想，这一挑战通常通过低效的启发式方法（例如手动调整单独的学习率）来解决。为了克服这个问题，我们引入了 MARS（多模态自适应排名搜索），这是一种发现最佳排名对的方法，可以平衡训练动态，同时最大化性能。我们的关键创新是提出的双缩放法则框架，使这种搜索成为可能：一个法则对特定于模块的收敛时间进行建模，以将搜索空间修剪为具有对齐动态的候选者，而另一个法则则预测最终任务性能以从修剪集中选择最佳对。通过重新利用 LoRA 等级作为特定模态收敛速度的控制器，MARS 优于基线方法，并为优化 MLLM 微调提供了强大的自动化策略。"
+    },
+    {
+      "title": "A Parameter-efficient Convolutional Approach for Weed Detection in Multispectral Aerial Imagery",
+      "authors": [
+        "Leo Thomas Ramos",
+        "Angel D. Sappa"
+      ],
+      "summary": "We introduce FCBNet, an efficient model designed for weed segmentation. The architecture is based on a fully frozen ConvNeXt backbone, the proposed Feature Correction Block (FCB), which leverages efficient convolutions for feature refinement, and a lightweight decoder. FCBNet is evaluated on the WeedBananaCOD and WeedMap datasets under both RGB and multispectral modalities, showing that FCBNet outperforms models such as U-Net, DeepLabV3+, SK-U-Net, SegFormer, and WeedSense in terms of mIoU, exceeding 85%, while also achieving superior computational efficiency, requiring only 0.06 to 0.2 hours for training. Furthermore, the frozen backbone strategy reduces the number of trainable parameters by more than 90%, significantly lowering memory requirements.",
+      "published": "2026-02-28T15:49:16Z",
+      "updated": "2026-02-28T15:49:16Z",
+      "arxiv_id": "2603.06655v1",
+      "abs_url": "http://arxiv.org/abs/2603.06655v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.06655v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "10 pages, 6 figures, 9 tables",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "语义分割",
+        "高效微调与轻量化",
+        "高光谱/多光谱",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 7,
+      "anchor_terms": [
+        "aerial image",
+        "aerial imagery"
+      ],
+      "matched_terms": [
+        "aerial",
+        "aerial image",
+        "aerial imagery",
+        "multispectral",
+        "U-Net"
+      ],
+      "title_zh": "多光谱航空图像中杂草检测的参数高效卷积方法",
+      "summary_zh": "我们介绍 FCBNet，这是一种专为杂草分割而设计的高效模型。该架构基于完全冻结的 ConvNeXt 主干、提出的特征校正块 (FCB)（利用高效卷积进行特征细化）和轻量级解码器。 FCBNet 在 RGB 和多光谱模式下的 WeedBananaCOD 和 WeedMap 数据集上进行评估，结果表明 FCBNet 在 mIoU 方面优于 U-Net、DeepLabV3+、SK-U-Net、SegFormer 和 WeedSense 等模型，超过 85%，同时还实现了卓越的计算效率，仅需要 0.06 至 0.2 小时的训练时间。此外，冻结主干策略将可训练参数的数量减少了 90% 以上，从而显着降低了内存需求。"
+    },
+    {
+      "title": "Learning to Explore: Policy-Guided Outlier Synthesis for Graph Out-of-Distribution Detection",
+      "authors": [
+        "Li Sun",
+        "Lanxu Yang",
+        "Jiayu Tian",
+        "Bowen Fang",
+        "Xiaoyan Yu",
+        "Junda Ye",
+        "Peng Tang",
+        "Hao Peng",
+        "Philip S. Yu"
+      ],
+      "summary": "Detecting out-of-distribution (OOD) graphs is crucial for ensuring the safety and reliability of Graph Neural Networks. In unsupervised graph-level OOD detection, models are typically trained using only in-distribution (ID) data, resulting in incomplete feature space characterization and weak decision boundaries. Although synthesizing outliers offers a promising solution, existing approaches rely on fixed, non-adaptive sampling heuristics (e.g., distance- or density-based), limiting their ability to explore informative OOD regions. We propose a Policy-Guided Outlier Synthesis (PGOS) framework that replaces static heuristics with a learned exploration strategy. Specifically, PGOS trains a reinforcement learning agent to navigate low-density regions in a structured latent space and sample representations that most effectively refine the OOD decision boundary. These representations are then decoded into high-quality pseudo-OOD graphs to improve detector robustness. Extensive experiments demonstrate that PGOS achieves state-of-the-art performance on multiple graph OOD and anomaly detection benchmarks.",
+      "published": "2026-02-28T11:40:18Z",
+      "updated": "2026-02-28T11:40:18Z",
+      "arxiv_id": "2603.00602v1",
+      "abs_url": "http://arxiv.org/abs/2603.00602v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00602v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "Accepted by AAAI'26, 9 pages",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "小样本与域泛化",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 5,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "graph neural network",
+        "LoRA",
+        "robust",
+        "unsupervised"
+      ],
+      "title_zh": "学习探索：用于图分布外检测的策略引导异常值合成",
+      "summary_zh": "检测分布外（OOD）图对于确保图神经网络的安全性和可靠性至关重要。在无监督的图级 OOD 检测中，通常仅使用分布内 (ID) 数据来训练模型，导致特征空间表征不完整且决策边界较弱。尽管合成异常值提供了一个有前途的解决方案，但现有方法依赖于固定的、非自适应的采样启发式（例如，基于距离或密度），限制了它们探索信息丰富的 OOD 区域的能力。我们提出了一个策略引导的离群值综合（PGOS）框架，用学习的探索策略取代静态启发式方法。具体来说，PGOS 训练强化学习代理在结构化潜在空间和样本表示中导航低密度区域，从而最有效地细化 OOD 决策边界。然后将这些表示解码为高质量的伪 OOD 图，以提高检测器的鲁棒性。大量实验表明 PGOS 在多个图 OOD 和异常检测基准上实现了最先进的性能。"
+    },
+    {
+      "title": "Weakly Supervised Video Anomaly Detection with Anomaly-Connected Components and Intention Reasoning",
+      "authors": [
+        "Yu Wang",
+        "Shengjie Zhao"
+      ],
+      "summary": "Weakly supervised video anomaly detection (WS-VAD) involves identifying the temporal intervals that contain anomalous events in untrimmed videos, where only video-level annotations are provided as supervisory signals. However, a key limitation persists in WS-VAD, as dense frame-level annotations are absent, which often leaves existing methods struggling to learn anomaly semantics effectively. To address this issue, we propose a novel framework named LAS-VAD, short for Learning Anomaly Semantics for WS-VAD, which integrates anomaly-connected component mechanism and intention awareness mechanism. The former is designed to assign video frames into distinct semantic groups within a video, and frame segments within the same group are deemed to share identical semantic information. The latter leverages an intention-aware strategy to distinguish between similar normal and abnormal behaviors (e.g., taking items and stealing). To further model the semantic information of anomalies, as anomaly occurrence is accompanied by distinct characteristic attributes (i.e., explosions are characterized by flames and thick smoke), we additionally incorporate anomaly attribute information to guide accurate detection. Extensive experiments on two benchmark datasets, XD-Violence and UCF-Crime, demonstrate that our LAS-VAD outperforms current state-of-the-art methods with remarkable gains.",
+      "published": "2026-02-28T08:57:33Z",
+      "updated": "2026-02-28T08:57:33Z",
+      "arxiv_id": "2603.00550v1",
+      "abs_url": "http://arxiv.org/abs/2603.00550v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00550v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted by CVPR 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 5,
+      "anchor_terms": [
+        "weakly supervised"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "weakly supervised"
+      ],
+      "title_zh": "具有异常连接组件和意图推理的弱监督视频异常检测",
+      "summary_zh": "弱监督视频异常检测（WS-VAD）涉及识别未修剪视频中包含异常事件的时间间隔，其中仅提供视频级注释作为监督信号。然而，WS-VAD 仍然存在一个关键限制，因为缺乏密集的帧级注释，这通常使得现有方法难以有效地学习异常语义。为了解决这个问题，我们提出了一种名为 LAS-VAD 的新颖框架，它是 Learning Anomaly Semantics for WS-VAD 的缩写，它集成了异常连接组件机制和意图感知机制。前者旨在将视频帧分配到视频内不同的语义组中，并且同一组内的帧片段被认为共享相同的语义信息。后者利用意图感知策略来区分类似的正常和异常行为（例如，拿走物品和偷窃）。为了进一步对异常的语义信息进行建模，由于异常的发生伴随着不同的特征属性（即爆炸的特征是火焰和浓烟），我们还结合了异常属性信息来指导准确的检测。对两个基准数据集 XD-Violence 和 UCF-Crime 的广泛实验表明，我们的 LAS-VAD 优于当前最先进的方法，并取得了显着的成果。"
+    },
+    {
+      "title": "Why Not? Solver-Grounded Certificates for Explainable Mission Planning",
+      "authors": [
+        "Najeeb Khan"
+      ],
+      "summary": "Operators of Earth observation satellites need justifications for scheduling decisions: why a request was selected, rejected, or what changes would make it schedulable. Existing approaches construct post-hoc reasoning layers independent of the optimizer, risking non-causal attributions, incomplete constraint conjunctions, and solver-path dependence. We take a faithfulness-first approach: every explanation is a certificate derived from the optimization model itself: minimal infeasible subsets for rejections, tight constraints and contrastive trade-offs for selections, and inverse solves for what-if queries. On a scheduling instance with structurally distinct constraint interactions, certificates achieve perfect soundness with respect to the solver's constraint model (15/15 cited-constraint checks), counterfactual validity (7/7), and stability (Jaccard = 1.0 across 28 seed-pairs), while a post-hoc baseline produces non-causal attributions in 29% of cases and misses constraint conjunctions in every multi-cause rejection. A scalability analysis up to 200 orders and 30 satellites confirms practical extraction times for operational batches.",
+      "published": "2026-02-28T05:08:55Z",
+      "updated": "2026-02-28T05:08:55Z",
+      "arxiv_id": "2603.00469v1",
+      "abs_url": "http://arxiv.org/abs/2603.00469v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00469v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "math.OC"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [],
+      "topic": "其他",
+      "score": 4,
+      "anchor_terms": [
+        "earth observation"
+      ],
+      "matched_terms": [
+        "earth observation",
+        "satellite"
+      ],
+      "title_zh": "为什么不呢？用于可解释任务规划的基于求解器的证书",
+      "summary_zh": "地球观测卫星的运营商需要调度决策的理由：为什么选择、拒绝请求，或者哪些更改可以使其可调度。现有方法构建独立于优化器的事后推理层，存在非因果归因、不完整约束连接和求解器路径依赖性的风险。我们采用忠实第一的方法：每个解释都是从优化模型本身派生的证书：拒绝的最小不可行子集、选择的严格约束和对比权衡，以及假设查询的逆解。在具有结构上不同的约束交互的调度实例上，证书在求解器的约束模型（15/15 引用约束检查）、反事实有效性（7/7）和稳定性（28 个种子对中 Jaccard = 1.0）方面实现了完美的可靠性，而事后基线在 29% 的情况下产生非因果归因，并在每次多原因拒绝中错过约束连词。对多达 200 个订单和 30 个卫星的可扩展性分析确认了操作批次的实际提取时间。"
+    },
+    {
+      "title": "Weight Updates as Activation Shifts: A Principled Framework for Steering",
+      "authors": [
+        "Dyah Adila",
+        "John Cooper",
+        "Alexander Yun",
+        "Avi Trost",
+        "Frederic Sala"
+      ],
+      "summary": "Activation steering promises to be an extremely parameter-efficient form of adaptation, but its effectiveness depends on critical design choices -- such as intervention location and parameterization -- that currently rely on empirical heuristics rather than a principled foundation. We establish a first-order equivalence between activation-space interventions and weight-space updates, deriving the conditions under which activation steering can replicate fine-tuning behavior. This equivalence yields a principled framework for steering design and identifies the post-block output as a theoretically-backed and highly expressive intervention site. We further explain why certain intervention locations outperform others and show that weight updates and activation updates play distinct, complementary functional roles. This analysis motivates a new approach -- joint adaptation -- that trains in both spaces simultaneously. Our post-block steering achieves accuracy within 0.2%-0.9%$ of full-parameter tuning, on average across tasks and models, while training only 0.04% of model parameters. It consistently outperforms prior activation steering methods such as ReFT and PEFT approaches including LoRA, while using significantly fewer parameters. Finally, we show that joint adaptation often surpasses the performance ceilings of weight and activation updates in isolation, introducing a new paradigm for efficient model adaptation.",
+      "published": "2026-02-28T02:50:04Z",
+      "updated": "2026-03-06T14:43:36Z",
+      "arxiv_id": "2603.00425v2",
+      "abs_url": "http://arxiv.org/abs/2603.00425v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.00425v2",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 3,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "LoRA",
+        "PEFT"
+      ],
+      "title_zh": "权重随着激活的变化而更新：指导的原则框架",
+      "summary_zh": "激活引导有望成为一种参数效率极高的适应形式，但其有效性取决于关键的设计选择——例如干预位置和参数化——目前依赖于经验启发法而不是原则性基础。我们在激活空间干预和权重空间更新之间建立一阶等价关系，推导激活控制可以复制微调行为的条件。这种等价性产生了指导设计的原则框架，并将块后输出识别为有理论支持且高度表达的干预站点。我们进一步解释了为什么某些干预位置优于其他位置，并表明重量更新和激活更新发挥着独特的、互补的功能作用。这一分析激发了一种新方法——联合适应——同时在两个空间中进行训练。我们的块后控制在整个任务和模型中平均达到全参数调整 0.2%-0.9%$ 的精度，同时仅训练 0.04% 的模型参数。它始终优于先前的激活控制方法，例如 ReFT 和 PEFT 方法（包括 LoRA），同时使用的参数显着减少。最后，我们表明联合适应通常会超越单独的权重和激活更新的性能上限，从而引入了高效模型适应的新范式。"
+    },
+    {
+      "title": "Station2Radar: query conditioned gaussian splatting for precipitation field",
+      "authors": [
+        "Doyi Kim",
+        "Minseok Seo",
+        "Changick Kim"
+      ],
+      "summary": "Precipitation forecasting relies on heterogeneous data. Weather radar is accurate, but coverage is geographically limited and costly to maintain. Weather stations provide accurate but sparse point measurements, while satellites offer dense, high-resolution coverage without direct rainfall retrieval. To overcome these limitations, we propose Query-Conditioned Gaussian Splatting (QCGS), the first framework to fuse automatic weather station (AWS) observations with satellite imagery for generating precipitation fields. Unlike conventional 2D Gaussian splatting, which renders the entire image plane, QCGS selectively renders only queried precipitation regions, avoiding unnecessary computation in non-precipitating areas while preserving sharp precipitation structures. The framework combines a radar point proposal network that identifies rainfall-support locations with an implicit neural representation (INR) network that predicts Gaussian parameters for each point. QCGS enables efficient, resolution-flexible precipitation field generation in real time. Through extensive evaluation with benchmark precipitation products, QCGS demonstrates over 50\\% improvement in RMSE compared to conventional gridded precipitation products, and consistently maintains high performance across multiple spatiotemporal scales.",
+      "published": "2026-02-28T02:35:18Z",
+      "updated": "2026-02-28T02:35:18Z",
+      "arxiv_id": "2603.00418v1",
+      "abs_url": "http://arxiv.org/abs/2603.00418v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00418v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "This paper was accepted to ICLR 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 3,
+      "anchor_terms": [
+        "satellite image",
+        "satellite imagery",
+        "temporal"
+      ],
+      "matched_terms": [
+        "satellite",
+        "satellite image",
+        "satellite imagery",
+        "temporal"
+      ],
+      "title_zh": "Station2Radar：查询降水场的条件高斯泼溅",
+      "summary_zh": "降水预报依赖于异构数据。天气雷达很准确，但覆盖范围受地理限制且维护成本高昂。气象站提供准确但稀疏的点测量，而卫星提供密集、高分辨率的覆盖范围，无需直接检索降雨量。为了克服这些限制，我们提出了查询条件高斯分布（QCGS），这是第一个将自动气象站（AWS）观测与卫星图像融合以生成降水场的框架。与渲染整个图像平面的传统二维高斯泼溅不同，QCGS 有选择地仅渲染查询的降水区域，避免在非降水区域进行不必要的计算，同时保留清晰的降水结构。该框架结合了识别降雨支持位置的雷达点提议网络和预测每个点的高斯参数的隐式神经表示（INR）网络。 QCGS 可实时生成高效、分辨率灵活的降水场。通过对基准降水产品的广泛评估，QCGS 与传统网格降水产品相比，RMSE 提高了 50% 以上，并且在多个时空尺度上始终保持高性能。"
+    },
+    {
+      "title": "USE: Uncertainty Structure Estimation for Robust Semi-Supervised Learning",
+      "authors": [
+        "Tsao-Lun Chen",
+        "Chien-Liang Liu",
+        "Tzu-Ming Harry Hsu",
+        "Tai-Hsien Wu",
+        "Chi-Cheng Fu",
+        "Han-Yi E. Chou",
+        "Shun-Feng Su"
+      ],
+      "summary": "In this study, a novel idea, Uncertainty Structure Estimation (USE), a lightweight, algorithm-agnostic procedure that emphasizes the often-overlooked role of unlabeled data quality is introduced for Semi-supervised learning (SSL). SSL has achieved impressive progress, but its reliability in deployment is limited by the quality of the unlabeled pool. In practice, unlabeled data are almost always contaminated by out-of-distribution (OOD) samples, where both near-OOD and far-OOD can negatively affect performance in different ways. We argue that the bottleneck does not lie in algorithmic design, but rather in the absence of principled mechanisms to assess and curate the quality of unlabeled data. The proposed USE trains a proxy model on the labeled set to compute entropy scores for unlabeled samples, and then derives a threshold, via statistical comparison against a reference distribution, that separates informative (structured) from uninformative (structureless) samples. This enables assessment as a preprocessing step, removing uninformative or harmful unlabeled data before SSL training begins. Through extensive experiments on imaging (CIFAR-100) and NLP (Yelp Review) data, it is evident that USE consistently improves accuracy and robustness under varying levels of OOD contamination. Thus, it can be concluded that the proposed approach reframes unlabeled data quality control as a structural assessment problem, and considers it as a necessary component for reliable and efficient SSL in realistic mixed-distribution environments.",
+      "published": "2026-02-28T01:31:46Z",
+      "updated": "2026-02-28T01:31:46Z",
+      "arxiv_id": "2603.00404v1",
+      "abs_url": "http://arxiv.org/abs/2603.00404v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.00404v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "Revised mathematical derivations",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "小样本与域泛化",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 4,
+      "anchor_terms": [
+        "semi-supervised"
+      ],
+      "matched_terms": [
+        "robust",
+        "semi-supervised"
+      ],
+      "title_zh": "用途：鲁棒半监督学习的不确定性结构估计",
+      "summary_zh": "在这项研究中，为半监督学习（SSL）引入了一个新颖的想法，即不确定性结构估计（USE），这是一种轻量级的、与算法无关的过程，强调未标记数据质量经常被忽视的作用。 SSL 取得了令人瞩目的进步，但其部署可靠性受到未标记池质量的限制。在实践中，未标记的数据几乎总是受到分布外 (OOD) 样本的污染，其中近 OOD 和远 OOD 都会以不同的方式对性能产生负面影响。我们认为，瓶颈并不在于算法设计，而在于缺乏评估和管理未标记数据质量的原则机制。所提出的 USE 在标记集上训练代理模型，以计算未标记样本的熵分数，然后通过与参考分布的统计比较得出阈值，将信息丰富的（结构化）样本与非信息（无结构）样本分开。这使得评估成为预处理步骤，在 SSL 训练开始之前删除无信息或有害的未标记数据。通过对成像 (CIFAR-100) 和 NLP (Yelp Review) 数据进行大量实验，很明显，USE 在不同程度的 OOD 污染下持续提高了准确性和鲁棒性。因此，可以得出结论，所提出的方法将无标签数据质量控制重新定义为结构评估问题，并将其视为现实混合分布环境中可靠且高效的 SSL 的必要组成部分。"
+    }
+  ]
+}

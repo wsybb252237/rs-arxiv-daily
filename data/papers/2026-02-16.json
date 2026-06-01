@@ -1,0 +1,319 @@
+{
+  "date": "2026-02-16",
+  "generated_at": "2026-06-01T12:55:43.003013+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202602160000 TO 202602162359]",
+  "total_fetched": 281,
+  "total_matched": 7,
+  "papers": [
+    {
+      "title": "Generalization from Low- to Moderate-Resolution Spectra with Neural Networks for Stellar Parameter Estimation: A Case Study with DESI",
+      "authors": [
+        "Xiaosheng Zhao",
+        "Yuan-Sen Ting",
+        "Rosemary F. G. Wyse",
+        "Alexander S. Szalay",
+        "Yang Huang",
+        "László Dobos",
+        "Tamás Budavári",
+        "Viska Wei"
+      ],
+      "summary": "Cross-survey generalization is a critical challenge in stellar spectral analysis, particularly in cases such as transferring from low- to moderate-resolution surveys. We investigate this problem using pre-trained models, focusing on simple neural networks such as multilayer perceptrons (MLPs), with a case study transferring from LAMOST low-resolution spectra (LRS) to DESI medium-resolution spectra (MRS). Specifically, we pre-train MLPs on either LRS or their embeddings and fine-tune them for application to DESI stellar spectra. We compare MLPs trained directly on spectra with those trained on embeddings derived from transformer-based models (self-supervised foundation models pre-trained for multiple downstream tasks). We also evaluate different fine-tuning strategies, including residual-head adapters, LoRA, and full fine-tuning. We find that MLPs pre-trained on LAMOST LRS achieve strong performance, even without fine-tuning, and that modest fine-tuning with DESI spectra further improves the results. For iron abundance, embeddings from a transformer-based model yield advantages in the metal-rich ([Fe/H] > -1.0) regime, but underperform in the metal-poor regime compared to MLPs trained directly on LRS. We also show that the optimal fine-tuning strategy depends on the specific stellar parameter under consideration. These results highlight that simple pre-trained MLPs can provide competitive cross-survey generalization, while the role of spectral foundation models for cross-survey stellar parameter estimation requires further exploration.",
+      "published": "2026-02-16T18:58:47Z",
+      "updated": "2026-02-16T18:58:47Z",
+      "arxiv_id": "2602.15021v1",
+      "abs_url": "http://arxiv.org/abs/2602.15021v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.15021v1",
+      "primary_category": "astro-ph.SR",
+      "categories": [
+        "astro-ph.SR",
+        "astro-ph.GA",
+        "cs.LG"
+      ],
+      "comment": "20 pages, 13 figures, 4 tables. Submitted to AAS journals. Comments welcome",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "高光谱/多光谱"
+      ],
+      "topic": "基础模型",
+      "score": 6,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "adapter",
+        "fine-tuning",
+        "foundation model",
+        "LoRA",
+        "self-supervised",
+        "transformer"
+      ],
+      "title_zh": "利用神经网络从低到中分辨率光谱进行恒星参数估计的推广：DESI 的案例研究",
+      "summary_zh": "交叉调查泛化是恒星光谱分析中的一个关键挑战，特别是在从低分辨率调查转向中分辨率调查的情况下。我们使用预先训练的模型来研究这个问题，重点关注简单的神经网络，例如多层感知器 (MLP)，并通过案例研究从 LAMOST 低分辨率光谱 (LRS) 转移到 DESI 中分辨率光谱 (MRS)。具体来说，我们在 LRS 或其嵌入上预训练 MLP，并对它们进行微调以应用于 DESI 恒星光谱。我们将直接在频谱上训练的 MLP 与在基于 Transformer 的模型（针对多个下游任务预训练的自监督基础模型）派生的嵌入上训练的 MLP 进行比较。我们还评估了不同的微调策略，包括剩余头适配器、LoRA 和完全微调。我们发现，即使没有微调，在 LAMOST LRS 上预训练的 MLP 也能实现强大的性能，并且使用 DESI 光谱进行适度的微调可以进一步改善结果。对于铁丰度，与直接在 LRS 上训练的 MLP 相比，基于变压器的模型的嵌入在富金属 ([Fe/H] > -1.0) 区域中具有优势，但在贫金属区域中表现不佳。我们还表明，最佳微调策略取决于所考虑的特定恒星参数。这些结果强调，简单的预训练 MLP 可以提供有竞争力的交叉调查泛化，而光谱基础模型在交叉调查恒星参数估计中的作用需要进一步探索。"
+    },
+    {
+      "title": "Wrivinder: Towards Spatial Intelligence for Geo-locating Ground Images onto Satellite Imagery",
+      "authors": [
+        "Chandrakanth Gudavalli",
+        "Tajuddin Manhar Mohammed",
+        "Abhay Yadav",
+        "Ananth Vishnu Bhaskar",
+        "Hardik Prajapati",
+        "Cheng Peng",
+        "Rama Chellappa",
+        "Shivkumar Chandrasekaran",
+        "B. S. Manjunath"
+      ],
+      "summary": "Aligning ground-level imagery with geo-registered satellite maps is crucial for mapping, navigation, and situational awareness, yet remains challenging under large viewpoint gaps or when GPS is unreliable. We introduce Wrivinder, a zero-shot, geometry-driven framework that aggregates multiple ground photographs to reconstruct a consistent 3D scene and align it with overhead satellite imagery. Wrivinder combines SfM reconstruction, 3D Gaussian Splatting, semantic grounding, and monocular depth--based metric cues to produce a stable zenith-view rendering that can be directly matched to satellite context for metrically accurate camera geo-localization. To support systematic evaluation of this task, which lacks suitable benchmarks, we also release MC-Sat, a curated dataset linking multi-view ground imagery with geo-registered satellite tiles across diverse outdoor environments. Together, Wrivinder and MC-Sat provide a first comprehensive baseline and testbed for studying geometry-centered cross-view alignment without paired supervision. In zero-shot experiments, Wrivinder achieves sub-30\\,m geolocation accuracy across both dense and large-area scenes, highlighting the promise of geometry-based aggregation for robust ground-to-satellite localization.",
+      "published": "2026-02-16T17:06:54Z",
+      "updated": "2026-02-16T17:06:54Z",
+      "arxiv_id": "2602.14929v1",
+      "abs_url": "http://arxiv.org/abs/2602.14929v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.14929v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "小样本与域泛化",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 6,
+      "anchor_terms": [
+        "satellite image",
+        "satellite imagery"
+      ],
+      "matched_terms": [
+        "robust",
+        "satellite",
+        "satellite image",
+        "satellite imagery",
+        "zero-shot"
+      ],
+      "title_zh": "Wrivinder：迈向空间智能，将地面图像地理定位到卫星图像上",
+      "summary_zh": "将地面图像与地理注册卫星地图对齐对于测绘、导航和态势感知至关重要，但在视点间隙较大或 GPS 不可靠的情况下仍然具有挑战性。我们引入了 Wrivinder，这是一个零镜头、几何驱动的框架，它聚合多个地面照片以重建一致的 3D 场景并将其与头顶卫星图像对齐。 Wrivinder 结合了 SfM 重建、3D 高斯分布、语义基础和基于单目深度的度量线索，生成稳定的天顶视图渲染，可以直接与卫星环境匹配，以实现度量精确的相机地理定位。为了支持对这项缺乏合适基准的任务进行系统评估，我们还发布了 MC-Sat，这是一个精心策划的数据集，将多视图地面图像与跨不同户外环境的地理注册卫星图块链接起来。 Wrivinder 和 MC-Sat 共同提供了第一个全面的基线和测试平台，用于研究以几何为中心的交叉视图对齐，无需配对监督。在零样本实验中，Wrivinder 在密集和大面积场景中实现了低于 30 米的地理定位精度，凸显了基于几何的聚合对于稳健的地面到卫星定位的前景。"
+    },
+    {
+      "title": "Triplet Feature Fusion for Equipment Anomaly Prediction : An Open-Source Methodology Using Small Foundation Models",
+      "authors": [
+        "Takato Yasuno"
+      ],
+      "summary": "Predicting equipment anomalies before they escalate into failures is a critical challenge in industrial facility management. Existing approaches rely either on hand-crafted threshold rules, which lack generalizability, or on large neural models that are impractical for on-site, air-gapped deployments. We present an industrial methodology that resolves this tension by combining open-source small foundation models into a unified 1,116-dimensional Triplet Feature Fusion pipeline. This pipeline integrates: (1) statistical features (x in $R^{28}$) derived from 90-day sensor histories, (2) time-series embeddings (y in $R^{64}$) from a LoRA-adapted IBM Granite TinyTimeMixer (TTM, 133K parameters), and (3) multilingual text embeddings (z in $R^{1024}$) extracted from Japanese equipment master records via multilingual-e5-large. The concatenated triplet h = [x; y; z] is processed by a LightGBM classifier (< 3 MB) trained to predict anomalies at 30-, 60-, and 90-day horizons. All components use permissive open-source licenses (Apache 2.0 / MIT). The inference-time pipeline runs entirely on CPU in under 2 ms, enabling edge deployment on co-located hardware without cloud dependency. On a dataset of 64 HVAC units comprising 67,045 samples, the triplet model achieves Precision = 0.992, F1 = 0.958, and ROC-AUC = 0.998 at the 30-day horizon. Crucially, it reduces the False Positive Rate from 0.6 percent (baseline) to 0.1 percent - an 83 percent reduction attributable to equipment-type conditioning via text embedding z. Cluster analysis reveals that the embeddings align time-series signatures with distinct fault archetypes, explaining how compact multilingual representations improve discrimination without explicit categorical encoding.",
+      "published": "2026-02-16T15:00:15Z",
+      "updated": "2026-04-07T09:55:13Z",
+      "arxiv_id": "2602.15089v2",
+      "abs_url": "http://arxiv.org/abs/2602.15089v2",
+      "pdf_url": "https://arxiv.org/pdf/2602.15089v2",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "comment": "15 pages, 8 figures, 7 table",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "基础模型",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "时间序列与视频",
+      "score": 6,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "feature fusion",
+        "foundation model",
+        "LoRA",
+        "time-series"
+      ],
+      "title_zh": "用于设备异常预测的三元组特征融合：一种使用小型基础模型的开源方法",
+      "summary_zh": "在设备异常升级为故障之前对其进行预测是工业设施管理中的一项关键挑战。现有的方法要么依赖于缺乏通用性的手工制定的阈值规则，要么依赖于对于现场、气隙部署来说不切实际的大型神经模型。我们提出了一种工业方法，通过将开源小型基础模型结合到统一的 1,116 维三重特征融合管道中来解决这种紧张关系。该管道集成了：(1) 来自 90 天传感器历史记录的统计特征（$R^{28}$ 中的 x），(2) 来自适应 LoRA 的 IBM Granite TinyTimeMixer（TTM，133K 参数）的时间序列嵌入（$R^{64}$ 中的 y），以及 (3) 从日本设备提取的多语言文本嵌入（$R^{1024}$ 中的 z）通过 multilingual-e5-large 进行主记录。连接的三元组 h = [x; y； z] 由经过训练的 LightGBM 分类器 (< 3 MB) 处理，用于预测 30 天、60 天和 90 天范围内的异常。所有组件均使用宽松的开源许可证（Apache 2.0 / MIT）。推理时间管道完全在 CPU 上运行，运行时间不到 2 毫秒，从而可以在不依赖云的情况下在共置硬件上进行边缘部署。在包含 67,045 个样本的 64 个 HVAC 单元的数据集上，三元组模型在 30 天范围内达到 Precision = 0.992、F1 = 0.958 和 ROC-AUC = 0.998。至关重要的是，它将误报率从 0.6%（基线）降低到 0.1%，由于通过文本嵌入 z 进行设备类型调节，误报率降低了 83%。聚类分析表明，嵌入将时间序列特征与不同的故障原型对齐，解释了紧凑的多语言表示如何在没有显式分类编码的情况下提高区分度。"
+    },
+    {
+      "title": "SAILS: Segment Anything with Incrementally Learned Semantics for Task-Invariant and Training-Free Continual Learning",
+      "authors": [
+        "Shishir Muralidhara",
+        "Didier Stricker",
+        "René Schuster"
+      ],
+      "summary": "Continual learning remains constrained by the need for repeated retraining, high computational costs, and the persistent challenge of forgetting. These factors significantly limit the applicability of continuous learning in real-world settings, as iterative model updates require significant computational resources and inherently exacerbate forgetting. We present SAILS -- Segment Anything with Incrementally Learned Semantics, a training-free framework for Class-Incremental Semantic Segmentation (CISS) that sidesteps these challenges entirely. SAILS leverages foundational models to decouple CISS into two stages: Zero-shot region extraction using Segment Anything Model (SAM), followed by semantic association through prototypes in a fixed feature space. SAILS incorporates selective intra-class clustering, resulting in multiple prototypes per class to better model intra-class variability. Our results demonstrate that, despite requiring no incremental training, SAILS typically surpasses the performance of existing training-based approaches on standard CISS datasets, particularly in long and challenging task sequences where forgetting tends to be most severe. By avoiding parameter updates, SAILS completely eliminates forgetting and maintains consistent, task-invariant performance. Furthermore, SAILS exhibits positive backward transfer, where the introduction of new classes can enhance performance on previous classes.",
+      "published": "2026-02-16T14:14:02Z",
+      "updated": "2026-02-16T14:14:02Z",
+      "arxiv_id": "2602.14767v1",
+      "abs_url": "http://arxiv.org/abs/2602.14767v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.14767v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted at IEEE CAI 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "语义分割",
+        "实例分割",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 8,
+      "anchor_terms": [
+        "continual learning"
+      ],
+      "matched_terms": [
+        "class-incremental",
+        "continual learning",
+        "SAM",
+        "Segment Anything Model",
+        "semantic segmentation",
+        "zero-shot"
+      ],
+      "title_zh": "SAILS：使用增量学习语义来分割任何内容，以实现任务不变和免训练的持续学习",
+      "summary_zh": "持续学习仍然受到重复再训练的需要、高计算成本和持续的遗忘挑战的限制。这些因素极大地限制了持续学习在现实世界中的适用性，因为迭代模型更新需要大量的计算资源，并且本质上会加剧遗忘。我们提出了 SAILS——用增量学习语义分割任何东西，这是一种无需培训的类增量语义分割 (CISS) 框架，可以完全回避这些挑战。 SAILS 利用基础模型将 CISS 解耦为两个阶段：使用分段任意模型 (SAM) 进行零样本区域提取，然后通过固定特征空间中的原型进行语义关联。 SAILS 结合了选择性的类内聚类，导致每个类有多个原型，以更好地模拟类内变异性。我们的结果表明，尽管不需要增量训练，SAILS 通常超越了标准 CISS 数据集上现有的基于训练的方法的性能，特别是在遗忘往往最严重的长且具有挑战性的任务序列中。通过避免参数更新，SAILS 完全消除了遗忘并保持一致的、任务不变的性能。此外，SAILS 表现出正向后迁移，其中新类别的引入可以提高先前类别的性能。"
+    },
+    {
+      "title": "Depth Completion as Parameter-Efficient Test-Time Adaptation",
+      "authors": [
+        "Bingxin Ke",
+        "Qunjie Zhou",
+        "Jiahui Huang",
+        "Xuanchi Ren",
+        "Tianchang Shen",
+        "Konrad Schindler",
+        "Laura Leal-Taixé",
+        "Shengyu Huang"
+      ],
+      "summary": "We introduce CAPA, a parameter-efficient test-time optimization framework that adapts pre-trained 3D foundation models (FMs) for depth completion, using sparse geometric cues. Unlike prior methods that train task-specific encoders for auxiliary inputs, which often overfit and generalize poorly, CAPA freezes the FM backbone. Instead, it updates only a minimal set of parameters using Parameter-Efficient Fine-Tuning (e.g. LoRA or VPT), guided by gradients calculated directly from the sparse observations available at inference time. This approach effectively grounds the foundation model's geometric prior in the scene-specific measurements, correcting distortions and misplaced structures. For videos, CAPA introduces sequence-level parameter sharing, jointly adapting all frames to exploit temporal correlations, improve robustness, and enforce multi-frame consistency. CAPA is model-agnostic, compatible with any ViT-based FM, and achieves state-of-the-art results across diverse condition patterns on both indoor and outdoor datasets. Project page: research.nvidia.com/labs/dvl/projects/capa.",
+      "published": "2026-02-16T13:53:23Z",
+      "updated": "2026-02-16T13:53:23Z",
+      "arxiv_id": "2602.14751v1",
+      "abs_url": "http://arxiv.org/abs/2602.14751v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.14751v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 6,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "foundation model",
+        "LoRA",
+        "robust",
+        "ViT"
+      ],
+      "title_zh": "深度完成作为参数高效的测试时间适应",
+      "summary_zh": "我们引入了 CAPA，这是一种参数高效的测试时优化框架，它使用稀疏几何线索，采用预先训练的 3D 基础模型 (FM) 来完成深度完成。与之前为辅助输入训练特定任务编码器的方法不同，CAPA 冻结了 FM 主干网，而这些方法通常会过度拟合且泛化能力较差。相反，它仅使用参数高效微调（例如 LoRA 或 VPT）更新最小的参数集，并由直接从推理时可用的稀疏观测值计算出的梯度引导。这种方法有效地在特定场景的测量中奠定了基础模型几何先验的基础，纠正了扭曲和错位的结构。对于视频，CAPA 引入了序列级参数共享，联合调整所有帧以利用时间相关性、提高鲁棒性并强制多帧一致性。 CAPA 与模型无关，与任何基于 ViT 的 FM 兼容，并在室内和室外数据集上的不同条件模式下实现了最先进的结果。项目页面：research.nvidia.com/labs/dvl/projects/capa。"
+    },
+    {
+      "title": "D2-LoRA: A Synergistic Approach to Differential and Directional Low-Rank Adaptation",
+      "authors": [
+        "Nozomu Fujisawa",
+        "Masaaki Kondo"
+      ],
+      "summary": "We systematically investigate the parameter-efficient fine-tuning design space under practical data and compute constraints, and propose D2-LoRA. D2-LoRA achieves 76.4 percent average accuracy across eight question answering and reading comprehension benchmarks using only 5k training samples per task and two epochs, while preserving algebraic mergeability at inference with near-exact numerical equivalence. The method combines signed low-rank residual updates with additive and subtractive components, together with a train-time column-wise projection that keeps each column close to its original norm. After training, the adapter is merged into a single weight matrix, adding zero inference latency. Compared with LoRA, D2-LoRA improves average accuracy by 2.2 percentage points; at matched parameter counts (LoRA rank 2r versus D2-LoRA rank r), the improvement is 1.6 points, indicating gains from architectural design rather than increased parameterization. Compared with DoRA, it matches or exceeds performance on most tasks. Beyond QA and reading comprehension, D2-LoRA improves generative tasks (plus 1.2 ROUGE-L and plus 1.1 percent win rate) and shows 36 percent lower training volatility. The merge preserves numerical fidelity (mean gap about 0.03 percentage points) and recovers about 1.91x evaluation throughput. Training overhead is 19 percent, comparable to DoRA, and decreases with longer input sequences. We provide a geometric analysis explaining how the projection stabilizes training, together with ablation studies isolating the contribution of each design component.",
+      "published": "2026-02-16T13:19:42Z",
+      "updated": "2026-02-16T13:19:42Z",
+      "arxiv_id": "2602.14728v1",
+      "abs_url": "http://arxiv.org/abs/2602.14728v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.14728v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "19 pages, 3 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 4,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "adapter",
+        "fine-tuning",
+        "LoRA"
+      ],
+      "title_zh": "D2-LoRA：差分和定向低秩适应的协同方法",
+      "summary_zh": "我们系统地研究了实际数据和计算约束下的参数高效微调设计空间，并提出了 D2-LoRA。 D2-LoRA 在每个任务和两个 epoch 中仅使用 5k 个训练样本，在 8 个问答和阅读理解基准测试中实现了 76.4% 的平均准确率，同时在推理时保持了代数可合并性，具有近乎精确的数值等价性。该方法将带符号的低秩残差更新与加法和减法组件相结合，以及训练时间按列投影，使每列接近其原始范数。训练后，适配器被合并到单个权重矩阵中，增加零推理延迟。与LoRA相比，D2-LoRA平均准确率提高了2.2个百分点；在匹配的参数计数（LoRA 等级 2r 与 D2-LoRA 等级 r）下，改进为 1.6 个点，表明架构设计带来的收益而不是参数化的增加。与 DoRA 相比，它在大多数任务上的性能达到或超过了。除了 QA 和阅读理解之外，D2-LoRA 还改善了生成任务（加上 1.2 ROUGE-L 和 1.1% 的获胜率），并且训练波动性降低了 36%。合并保留了数值保真度（平均差距约为 0.03 个百分点）并恢复了约 1.91 倍的评估吞吐量。训练开销为 19%，与 DoRA 相当，并且随着输入序列的延长而减少。我们提供了几何分析来解释投影如何稳定训练，以及消融研究来隔离每个设计组件的贡献。"
+    },
+    {
+      "title": "Parameter-Efficient Fine-Tuning of LLMs with Mixture of Space Experts",
+      "authors": [
+        "Buze Zhang",
+        "Jinkai Tao",
+        "Zilang Zeng",
+        "Neil He",
+        "Ali Maatouk",
+        "Menglin Yang",
+        "Rex Ying"
+      ],
+      "summary": "Large Language Models (LLMs) have achieved remarkable progress, with Parameter-Efficient Fine-Tuning (PEFT) emerging as a key technique for downstream task adaptation. However, existing PEFT methods mainly operate in Euclidean space, fundamentally limiting their capacity to capture complex geometric structures inherent in language data. While alternative geometric spaces, like hyperbolic geometries for hierarchical data and spherical manifolds for circular patterns, offer theoretical advantages, forcing representations into a single manifold type ultimately limits expressiveness, even when curvature parameters are learnable. To address this, we propose Mixture of Space (MoS), a unified framework that leverages multiple geometric spaces simultaneously to learn richer, curvature-aware representations. Building on this scheme, we develop MoSLoRA, which extends Low-Rank Adaptation (LoRA) with heterogeneous geometric experts, enabling models to dynamically select or combine appropriate geometric spaces based on input context. Furthermore, to address the computational overhead of frequent manifold switching, we develop a lightweight routing mechanism. Moreover, we provide empirical insights into how curvature optimization impacts training stability and model performance. Our experiments across diverse benchmarks demonstrate that MoSLoRA consistently outperforms strong baselines, achieving up to 5.6% improvement on MATH500 and 15.9% on MAWPS.",
+      "published": "2026-02-16T06:07:32Z",
+      "updated": "2026-02-16T06:07:32Z",
+      "arxiv_id": "2602.14490v1",
+      "abs_url": "http://arxiv.org/abs/2602.14490v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.14490v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.NE"
+      ],
+      "comment": "15 pages, 11 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 5,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LoRA",
+        "PEFT"
+      ],
+      "title_zh": "空间专家混合的法学硕士参数高效微调",
+      "summary_zh": "大型语言模型（LLM）取得了显着的进步，参数高效微调（PEFT）成为下游任务适应的关键技术。然而，现有的 PEFT 方法主要在欧几里德空间中运行，从根本上限制了它们捕获语言数据固有的复杂几何结构的能力。虽然替代几何空间（例如用于分层数据的双曲几何和用于圆形图案的球流形）提供了理论上的优势，但将表示强制转换为单一流形类型最终会限制表达能力，即使曲率参数是可学习的。为了解决这个问题，我们提出了空间混合（MoS），这是一个统一的框架，它同时利用多个几何空间来学习更丰富的、曲率感知的表示。在此方案的基础上，我们开发了 MoSLoRA，它通过异构几何专家扩展了低秩适应（LoRA），使模型能够根据输入上下文动态选择或组合适当的几何空间。此外，为了解决频繁流形切换的计算开销，我们开发了一种轻量级路由机制。此外，我们还提供了关于曲率优化如何影响训练稳定性和模型性能的实证见解。我们在不同基准上的实验表明，MoSLoRA 始终优于强大的基准，在 MATH500 上实现了高达 5.6% 的改进，在 MAWPS 上实现了 15.9% 的改进。"
+    }
+  ]
+}
