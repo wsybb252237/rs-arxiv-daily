@@ -1,0 +1,513 @@
+{
+  "date": "2026-01-04",
+  "generated_at": "2026-06-03T04:35:14.700739+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202601040000 TO 202601042359]",
+  "total_fetched": 149,
+  "total_matched": 11,
+  "papers": [
+    {
+      "title": "Trustworthy Data-Driven Wildfire Risk Prediction and Understanding in Western Canada",
+      "authors": [
+        "Zhengsen Xu",
+        "Lanying Wang",
+        "Sibo Cheng",
+        "Xue Rui",
+        "Kyle Gao",
+        "Yimin Zhu",
+        "Mabel Heffring",
+        "Zack Dewis",
+        "Saeid Taleghanidoozdoozan",
+        "Megan Greenwood",
+        "Motasem Alkayid",
+        "Quinn Ledingham",
+        "Hongjie He",
+        "Jonathan Li",
+        "Lincoln Linlin Xu"
+      ],
+      "summary": "In recent decades, the intensification of wildfire activity in western Canada has resulted in substantial socio-economic and environmental losses. Accurate wildfire risk prediction is hindered by the intrinsic stochasticity of ignition and spread and by nonlinear interactions among fuel conditions, meteorology, climate variability, topography, and human activities, challenging the reliability and interpretability of purely data-driven models. We propose a trustworthy data-driven wildfire risk prediction framework based on long-sequence, multi-scale temporal modeling, which integrates heterogeneous drivers while explicitly quantifying predictive uncertainty and enabling process-level interpretation. Evaluated over western Canada during the record-breaking 2023 and 2024 fire seasons, the proposed model outperforms existing time-series approaches, achieving an F1 score of 0.90 and a PR-AUC of 0.98 with low computational cost. Uncertainty-aware analysis reveals structured spatial and seasonal patterns in predictive confidence, highlighting increased uncertainty associated with ambiguous predictions and spatiotemporal decision boundaries. SHAP-based interpretation provides mechanistic understanding of wildfire controls, showing that temperature-related drivers dominate wildfire risk in both years, while moisture-related constraints play a stronger role in shaping spatial and land-cover-specific contrasts in 2024 compared to the widespread hot and dry conditions of 2023. Data and code are available at https://github.com/SynUW/mmFire.",
+      "published": "2026-01-04T22:05:17Z",
+      "updated": "2026-01-04T22:05:17Z",
+      "arxiv_id": "2601.01677v1",
+      "abs_url": "http://arxiv.org/abs/2601.01677v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.01677v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/SynUW/mmFire",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "时间序列与视频"
+      ],
+      "topic": "时间序列与视频",
+      "score": 3,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "multi-scale",
+        "temporal",
+        "time-series"
+      ],
+      "title_zh": "加拿大西部值得信赖的数据驱动野火风险预测和理解",
+      "summary_zh": "近几十年来，加拿大西部山火活动加剧，造成了巨大的社会经济和环境损失。准确的野火风险预测受到点火和蔓延的内在随机性以及燃料条件、气象、气候变化、地形和人类活动之间的非线性相互作用的阻碍，这对纯数据驱动模型的可靠性和可解释性提出了挑战。我们提出了一个基于长序列、多尺度时间建模的值得信赖的数据驱动的野火风险预测框架，该框架集成了异构驱动因素，同时明确量化预测不确定性并实现过程级解释。在破纪录的 2023 年和 2024 年火灾季节对加拿大西部进行了评估，所提出的模型优于现有的时间序列方法，以较低的计算成本实现了 0.90 的 F1 分数和 0.98 的 PR-AUC 。不确定性感知分析揭示了预测置信度中的结构化空间和季节模式，突出了与模糊预测和时空决策边界相关的不确定性增加。基于 SHAP 的解释提供了对野火控制的机制理解，表明与温度相关的驱动因素在这两年中主导着野火风险，而与 2023 年普遍的炎热和干燥条件相比，与湿度相关的限制在形成 2024 年空间和土地覆盖特定对比方面发挥着更强的作用。数据和代码可在 https://github.com/SynUW/mmFire 上获取。"
+    },
+    {
+      "title": "UniCrop: A Universal, Multi-Source Data Engineering Pipeline for Scalable Crop Yield Prediction",
+      "authors": [
+        "Emiliya Khidirova",
+        "Oktay Karakuş"
+      ],
+      "summary": "Accurate crop yield prediction relies on diverse data streams, including satellite, meteorological, soil, and topographic information. However, despite rapid advances in machine learning, existing approaches remain crop- or region-specific and require data engineering efforts. This limits scalability, reproducibility, and operational deployment. This study introduces UniCrop, a universal and reusable data pipeline designed to automate the acquisition, cleaning, harmonisation, and engineering of multi-source environmental data for crop yield prediction. For any given location, crop type, and temporal window, UniCrop automatically retrieves, harmonises, and engineers over 200 environmental variables (Sentinel-1/2, MODIS, ERA5-Land, NASA POWER, SoilGrids, and SRTM), reducing them to a compact, analysis-ready feature set utilising a structured feature reduction workflow with minimum redundancy maximum relevance (mRMR). To validate, UniCrop was applied to a rice yield dataset comprising 557 field observations. Using only the selected 15 features, four baseline machine learning models (LightGBM, Random Forest, Support Vector Regression, and Elastic Net) were trained. LightGBM achieved the best single-model performance (RMSE = 465.1 kg/ha, $R^2 = 0.6576$), while a constrained ensemble of all baselines further improved accuracy (RMSE = 463.2 kg/ha, $R^2 = 0.6604$). UniCrop contributes a scalable and transparent data-engineering framework that addresses the primary bottleneck in operational crop yield modelling: the preparation of consistent and harmonised multi-source data. By decoupling data specification from implementation and supporting any crop, region, and time frame through simple configuration updates, UniCrop provides a practical foundation for scalable agricultural analytics. The code and implementation documentation are shared in https://github.com/CoDIS-Lab/UniCrop.",
+      "published": "2026-01-04T20:17:32Z",
+      "updated": "2026-01-04T20:17:32Z",
+      "arxiv_id": "2601.01655v1",
+      "abs_url": "http://arxiv.org/abs/2601.01655v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.01655v1",
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/CoDIS-Lab/UniCrop",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "SAR遥感",
+        "农业与生态",
+        "数据集/评测"
+      ],
+      "topic": "SAR遥感",
+      "score": 6,
+      "anchor_terms": [
+        "crop",
+        "Sentinel-1",
+        "temporal"
+      ],
+      "matched_terms": [
+        "crop",
+        "MODIS",
+        "satellite",
+        "Sentinel-1",
+        "temporal"
+      ],
+      "title_zh": "UniCrop：用于可扩展作物产量预测的通用、多源数据工程管道",
+      "summary_zh": "准确的作物产量预测依赖于多种数据流，包括卫星、气象、土壤和地形信息。然而，尽管机器学习取得了快速进展，现有方法仍然针对特定作物或地区，并且需要数据工程工作。这限制了可扩展性、可重复性和操作部署。本研究介绍了 UniCrop，这是一种通用且可重复使用的数据管道，旨在自动采集、清理、协调和设计用于作物产量预测的多源环境数据。对于任何给定位置、作物类型和时间窗口，UniCrop 自动检索、协调和设计 200 多个环境变量（Sentinel-1/2、MODIS、ERA5-Land、NASA POWER、SoilGrids 和 SRTM），利用具有最小冗余最大相关性 (mRMR) 的结构化特征缩减工作流程，将它们缩减为紧凑、可分析的特征集。为了进行验证，UniCrop 应用于包含 557 个田间观测的水稻产量数据集。仅使用选定的 15 个特征，训练了四种基线机器学习模型（LightGBM、随机森林、支持向量回归和弹性网络）。 LightGBM 实现了最佳的单模型性能（RMSE = 465.1 kg/ha，$R^2 = 0.6576$），而所有基线的约束集合进一步提高了准确性（RMSE = 463.2 kg/ha，$R^2 = 0.6604$）。 UniCrop 提供了一个可扩展且透明的数据工程框架，该框架解决了作物产量建模操作中的主要瓶颈：准备一致且统一的多源数据。通过将数据规范与实施分离，并通过简单的配置更新支持任何作物、区域和时间范围，UniCrop 为可扩展的农业分析提供了实用的基础。代码和实现文档在 https://github.com/CoDIS-Lab/UniCrop 中共享。"
+    },
+    {
+      "title": "Higher-Order Domain Generalization in Magnetic Resonance-Based Assessment of Alzheimer's Disease",
+      "authors": [
+        "Zobia Batool",
+        "Diala Lteif",
+        "Vijaya B. Kolachalama",
+        "Huseyin Ozkan",
+        "Erchan Aptoula"
+      ],
+      "summary": "Despite progress in deep learning for Alzheimer's disease (AD) diagnostics, models trained on structural magnetic resonance imaging (sMRI) often do not perform well when applied to new cohorts due to domain shifts from varying scanners, protocols and patient demographics. AD, the primary driver of dementia, manifests through progressive cognitive and neuroanatomical changes like atrophy and ventricular expansion, making robust, generalizable classification essential for real-world use. While convolutional neural networks and transformers have advanced feature extraction via attention and fusion techniques, single-domain generalization (SDG) remains underexplored yet critical, given the fragmented nature of AD datasets. To bridge this gap, we introduce Extended MixStyle (EM), a framework for blending higher-order feature moments (skewness and kurtosis) to mimic diverse distributional variations. Trained on sMRI data from the National Alzheimer's Coordinating Center (NACC; n=4,647) to differentiate persons with normal cognition (NC) from those with mild cognitive impairment (MCI) or AD and tested on three unseen cohorts (total n=3,126), EM yields enhanced cross-domain performance, improving macro-F1 on average by 2.4 percentage points over state-of-the-art SDG benchmarks, underscoring its promise for invariant, reliable AD detection in heterogeneous real-world settings. The source code will be made available upon acceptance at https://github.com/zobia111/Extended-Mixstyle.",
+      "published": "2026-01-04T11:25:36Z",
+      "updated": "2026-01-09T17:01:49Z",
+      "arxiv_id": "2601.01485v2",
+      "abs_url": "http://arxiv.org/abs/2601.01485v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.01485v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/zobia111/Extended-Mixstyle",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "小样本与域泛化",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 7,
+      "anchor_terms": [
+        "domain generalization"
+      ],
+      "matched_terms": [
+        "convolutional neural network",
+        "domain generalization",
+        "generalizable",
+        "robust",
+        "transformer"
+      ],
+      "title_zh": "基于磁共振的阿尔茨海默病评估中的高阶域泛化",
+      "summary_zh": "尽管阿尔茨海默病 (AD) 诊断的深度学习取得了进展，但由于不同的扫描仪、协议和患者人口统计数据的领域变化，结构磁共振成像 (sMRI) 训练的模型在应用于新队列时通常表现不佳。 AD 是痴呆症的主要驱动因素，通过渐进性认知和神经解剖学变化（例如萎缩和心室扩张）表现出来，因此稳健、可概括的分类对于现实世界的使用至关重要。虽然卷积神经网络和 Transformer 通过注意力和融合技术进行了高级特征提取，但考虑到 AD 数据集的碎片性质，单域泛化 (SDG) 仍未得到充分探索，但仍然至关重要。为了弥补这一差距，我们引入了 Extended MixStyle (EM)，这是一个混合高阶特征矩（偏度和峰度）以模拟不同分布变化的框架。根据国家阿尔茨海默病协调中心 (NACC；n=4,647) 的 sMRI 数据进行训练，以区分认知正常 (NC) 的人与轻度认知障碍 (MCI) 或 AD 的人，并在三个未见过的队列（总共 n=3,126）上进行测试，EM 产生了增强的跨域性能，与最先进的 SDG 基准相比，平均将宏观 F1 提高了 2.4 个百分点，强调了其在以下领域的前景：在异构现实环境中进行不变、可靠的 AD 检测。源代码将在接受后在 https://github.com/zobia111/Extended-Mixstyle 上提供。"
+    },
+    {
+      "title": "AirSpatialBot: A Spatially-Aware Aerial Agent for Fine-Grained Vehicle Attribute Recognization and Retrieval",
+      "authors": [
+        "Yue Zhou",
+        "Ran Ding",
+        "Xue Yang",
+        "Xue Jiang",
+        "Xingzhao Liu"
+      ],
+      "summary": "Despite notable advancements in remote sensing vision-language models (VLMs), existing models often struggle with spatial understanding, limiting their effectiveness in real-world applications. To push the boundaries of VLMs in remote sensing, we specifically address vehicle imagery captured by drones and introduce a spatially-aware dataset AirSpatial, which comprises over 206K instructions and introduces two novel tasks: Spatial Grounding and Spatial Question Answering. It is also the first remote sensing grounding dataset to provide 3DBB. To effectively leverage existing image understanding of VLMs to spatial domains, we adopt a two-stage training strategy comprising Image Understanding Pre-training and Spatial Understanding Fine-tuning. Utilizing this trained spatially-aware VLM, we develop an aerial agent, AirSpatialBot, which is capable of fine-grained vehicle attribute recognition and retrieval. By dynamically integrating task planning, image understanding, spatial understanding, and task execution capabilities, AirSpatialBot adapts to diverse query requirements. Experimental results validate the effectiveness of our approach, revealing the spatial limitations of existing VLMs while providing valuable insights. The model, code, and datasets will be released at https://github.com/VisionXLab/AirSpatialBot",
+      "published": "2026-01-04T07:38:51Z",
+      "updated": "2026-01-04T07:38:51Z",
+      "arxiv_id": "2601.01416v1",
+      "abs_url": "http://arxiv.org/abs/2601.01416v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.01416v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "12 pages, 9 figures",
+      "code_url": "https://github.com/VisionXLab/AirSpatialBot",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "基础模型",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 10,
+      "anchor_terms": [
+        "drone",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "aerial",
+        "drone",
+        "fine-tuning",
+        "pre-training",
+        "remote sensing",
+        "VLM"
+      ],
+      "title_zh": "AirSpatialBot：用于细粒度车辆属性识别和检索的空间感知空中代理",
+      "summary_zh": "尽管遥感视觉语言模型（VLM）取得了显着进步，但现有模型常常难以理解空间，从而限制了它们在现实世界应用中的有效性。为了突破 VLM 在遥感方面的界限，我们专门处理无人机捕获的车辆图像，并引入了空间感知数据集 AirSpatial，该数据集包含超过 206K 条指令，并引入了两项新颖的任务：空间接地和空间问答。这也是第一个提供3DBB的遥感接地数据集。为了有效利用 VLM 对空间域的现有图像理解，我们采用了两阶段训练策略，包括图像理解预训练和空间理解微调。利用这种训练有素的空间感知 VLM，我们开发了一种空中代理 AirSpatialBot，它能够进行细粒度的车辆属性识别和检索。通过动态集成任务规划、图像理解、空间理解和任务执行能力，AirSpatialBot 能够适应多样化的查询需求。实验结果验证了我们方法的有效性，揭示了现有 VLM 的空间限制，同时提供了有价值的见解。模型、代码和数据集将在 https://github.com/VisionXLab/AirSpatialBot 发布"
+    },
+    {
+      "title": "LabelAny3D: Label Any Object 3D in the Wild",
+      "authors": [
+        "Jin Yao",
+        "Radowan Mahmud Redoy",
+        "Sebastian Elbaum",
+        "Matthew B. Dwyer",
+        "Zezhou Cheng"
+      ],
+      "summary": "Detecting objects in 3D space from monocular input is crucial for applications ranging from robotics to scene understanding. Despite advanced performance in the indoor and autonomous driving domains, existing monocular 3D detection models struggle with in-the-wild images due to the lack of 3D in-the-wild datasets and the challenges of 3D annotation. We introduce LabelAny3D, an \\emph{analysis-by-synthesis} framework that reconstructs holistic 3D scenes from 2D images to efficiently produce high-quality 3D bounding box annotations. Built on this pipeline, we present COCO3D, a new benchmark for open-vocabulary monocular 3D detection, derived from the MS-COCO dataset and covering a wide range of object categories absent from existing 3D datasets. Experiments show that annotations generated by LabelAny3D improve monocular 3D detection performance across multiple benchmarks, outperforming prior auto-labeling approaches in quality. These results demonstrate the promise of foundation-model-driven annotation for scaling up 3D recognition in realistic, open-world settings.",
+      "published": "2026-01-04T22:03:45Z",
+      "updated": "2026-01-04T22:03:45Z",
+      "arxiv_id": "2601.01676v1",
+      "abs_url": "http://arxiv.org/abs/2601.01676v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.01676v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "NeurIPS 2025. Project page: https://uva-computer-vision-lab.github.io/LabelAny3D/",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "场景分类",
+        "开放词汇与开放集",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "场景分类",
+      "score": 3,
+      "anchor_terms": [
+        "open-vocabulary"
+      ],
+      "matched_terms": [
+        "open-vocabulary"
+      ],
+      "title_zh": "LabelAny3D：在野外为任何对象添加 3D 标签",
+      "summary_zh": "从单眼输入检测 3D 空间中的物体对于从机器人到场景理解等应用至关重要。尽管在室内和自动驾驶领域具有先进的性能，但由于缺乏 3D 野外数据集以及 3D 注释的挑战，现有的单目 3D 检测模型在处理野外图像方面遇到了困难。我们引入了 LabelAny3D，这是一个 \\emph{综合分析} 框架，它可以从 2D 图像重建整体 3D 场景，以有效地生成高质量的 3D 边界框注释。在此基础上，我们提出了 COCO3D，这是开放词汇单目 3D 检测的新基准，源自 MS-COCO 数据集，涵盖了现有 3D 数据集中缺少的广泛对象类别。实验表明，LabelAny3D 生成的注释提高了多个基准中的单目 3D 检测性能，在质量上优于先前的自动标记方法。这些结果证明了基础模型驱动注释在现实、开放世界环境中扩展 3D 识别的前景。"
+    },
+    {
+      "title": "NitroGen: An Open Foundation Model for Generalist Gaming Agents",
+      "authors": [
+        "Loïc Magne",
+        "Anas Awadalla",
+        "Guanzhi Wang",
+        "Yinzhen Xu",
+        "Joshua Belofsky",
+        "Fengyuan Hu",
+        "Joohwan Kim",
+        "Ludwig Schmidt",
+        "Georgia Gkioxari",
+        "Jan Kautz",
+        "Yisong Yue",
+        "Yejin Choi",
+        "Yuke Zhu",
+        "Linxi \"Jim\" Fan"
+      ],
+      "summary": "We introduce NitroGen, a vision-action foundation model for generalist gaming agents that is trained on 40,000 hours of gameplay videos across more than 1,000 games. We incorporate three key ingredients: 1) an internet-scale video-action dataset constructed by automatically extracting player actions from publicly available gameplay videos, 2) a multi-game benchmark environment that can measure cross-game generalization, and 3) a unified vision-action model trained with large-scale behavior cloning. NitroGen exhibits strong competence across diverse domains, including combat encounters in 3D action games, high-precision control in 2D platformers, and exploration in procedurally generated worlds. It transfers effectively to unseen games, achieving up to 52% relative improvement in task success rates over models trained from scratch. We release the dataset, evaluation suite, and model weights to advance research on generalist embodied agents.",
+      "published": "2026-01-04T16:24:50Z",
+      "updated": "2026-01-04T16:24:50Z",
+      "arxiv_id": "2601.02427v1",
+      "abs_url": "http://arxiv.org/abs/2601.02427v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.02427v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "16 pages, 7 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 4,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "LoRA"
+      ],
+      "title_zh": "NitroGen：通用游戏代理的开放基础模型",
+      "summary_zh": "我们推出了 NitroGen，这是一种针对多面手游戏代理的视觉动作基础模型，该模型经过 1,000 多款游戏中 40,000 小时的游戏视频的训练。我们整合了三个关键要素：1）通过从公开的游戏视频中自动提取玩家动作而构建的互联网规模的视频动作数据集，2）可以衡量跨游戏泛化的多游戏基准环境，以及3）通过大规模行为克隆训练的统一视觉动作模型。 NitroGen 在不同领域展现了强大的能力，包括 3D 动作游戏中的战斗遭遇、2D 平台游戏中的高精度控制以及程序生成世界中的探索。它可以有效地转移到未见过的游戏中，与从头开始训练的模型相比，任务成功率相对提​​高了 52%。我们发布数据集、评估套件和模型权重，以推进对通用实体代理的研究。"
+    },
+    {
+      "title": "Utilizing Earth Foundation Models to Enhance the Simulation Performance of Hydrological Models with AlphaEarth Embeddings",
+      "authors": [
+        "Pengfei Qu",
+        "Wenyu Ouyang",
+        "Chi Zhang",
+        "Yikai Chai",
+        "Shuolong Xu",
+        "Lei Ye",
+        "Yongri Piao",
+        "Miao Zhang",
+        "Huchuan Lu"
+      ],
+      "summary": "Predicting river flow in places without streamflow records is challenging because basins respond differently to climate, terrain, vegetation, and soils. Traditional basin attributes describe some of these differences, but they cannot fully represent the complexity of natural environments. This study examines whether AlphaEarth Foundation embeddings, which are learned from large collections of satellite images rather than designed by experts, offer a more informative way to describe basin characteristics. These embeddings summarize patterns in vegetation, land surface properties, and long-term environmental dynamics. We find that models using them achieve higher accuracy when predicting flows in basins not used for training, suggesting that they capture key physical differences more effectively than traditional attributes. We further investigate how selecting appropriate donor basins influences prediction in ungauged regions. Similarity based on the embeddings helps identify basins with comparable environmental and hydrological behavior, improving performance, whereas adding many dissimilar basins can reduce accuracy. The results show that satellite-informed environmental representations can strengthen hydrological forecasting and support the development of models that adapt more easily to different landscapes.",
+      "published": "2026-01-04T15:14:16Z",
+      "updated": "2026-01-04T15:14:16Z",
+      "arxiv_id": "2601.01558v1",
+      "abs_url": "http://arxiv.org/abs/2601.01558v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.01558v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "12 pages, 11 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型"
+      ],
+      "topic": "基础模型",
+      "score": 4,
+      "anchor_terms": [
+        "foundation model",
+        "satellite image",
+        "satellite images"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "satellite",
+        "satellite image",
+        "satellite images"
+      ],
+      "title_zh": "利用地球基础模型通过 AlphaEarth 嵌入增强水文模型的模拟性能",
+      "summary_zh": "在没有径流记录的地方预测河流流量具有挑战性，因为流域对气候、地形、植被和土壤的反应不同。传统的流域属性描述了其中的一些差异，但它们不能完全代表自然环境的复杂性。这项研究检验了 AlphaEarth Foundation 嵌入（从大量卫星图像中学习而不是由专家设计）是否提供了一种描述盆地特征的信息更丰富的方式。这些嵌入总结了植被、地表特性和长期环境动态的模式。我们发现，使用它们的模型在预测未用于训练的流域中的流量时可以获得更高的准确度，这表明它们比传统属性更有效地捕获关键的物理差异。我们进一步研究选择适当的供体盆地如何影响未测量区域的预测。基于嵌入的相似性有助于识别具有可比环境和水文行为的流域，从而提高性能，而添加许多不同的流域可能会降低准确性。结果表明，卫星环境表征可以加强水文预报，并支持开发更容易适应不同景观的模型。"
+    },
+    {
+      "title": "Sim2Real SAR Image Restoration: Metadata-Driven Models for Joint Despeckling and Sidelobes Reduction",
+      "authors": [
+        "Antoine De Paepe",
+        "Pascal Nguyen",
+        "Michael Mabelle",
+        "Cédric Saleun",
+        "Antoine Jouadé",
+        "Jean-Christophe Louvigne"
+      ],
+      "summary": "Synthetic aperture radar (SAR) provides valuable information about the Earth's surface under all weather and illumination conditions. However, the inherent phenomenon of speckle and the presence of sidelobes around bright targets pose challenges for accurate interpretation of SAR imagery. Most existing SAR image restoration methods address despeckling and sidelobes reduction as separate tasks. In this paper, we propose a unified framework that jointly performs both tasks using neural networks (NNs) trained on a realistic SAR simulated dataset generated with MOCEM. Inference can then be performed on real SAR images, demonstrating effective simulation to real (Sim2Real) transferability. Additionally, we incorporate acquisition metadata as auxiliary input to the NNs, demonstrating improved restoration performance.",
+      "published": "2026-01-04T14:32:04Z",
+      "updated": "2026-01-04T14:32:04Z",
+      "arxiv_id": "2601.01541v1",
+      "abs_url": "http://arxiv.org/abs/2601.01541v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.01541v1",
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "cs.CV",
+        "eess.SP"
+      ],
+      "comment": "Accepted at the Conference on Artificial Intelligence for Defense (CAID), 2025, Rennes, France",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "SAR遥感",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 9,
+      "anchor_terms": [
+        "SAR",
+        "SAR image",
+        "SAR imagery",
+        "synthetic aperture radar"
+      ],
+      "matched_terms": [
+        "despeckling",
+        "image restoration",
+        "SAR",
+        "SAR image",
+        "SAR imagery",
+        "synthetic aperture radar"
+      ],
+      "title_zh": "Sim2Real SAR 图像恢复：用于联合去斑和旁瓣减少的元数据驱动模型",
+      "summary_zh": "合成孔径雷达 (SAR) 可在所有天气和光照条件下提供有关地球表面的宝贵信息。然而，散斑的固有现象和明亮目标周围旁瓣的存在给SAR图像的准确解释带来了挑战。大多数现有的 SAR 图像恢复方法将去斑和旁瓣减少作为单独的任务来解决。在本文中，我们提出了一个统一的框架，使用在 MOCEM 生成的真实 SAR 模拟数据集上训练的神经网络 (NN) 联合执行这两项任务。然后可以对真实 SAR 图像进行推理，展示对真实 (Sim2Real) 的有效模拟可迁移性。此外，我们将采集元数据作为神经网络的辅助输入，展示了改进的恢复性能。"
+    },
+    {
+      "title": "A Graph-based Framework for Online Time Series Anomaly Detection Using Model Ensemble",
+      "authors": [
+        "Zewei Yu",
+        "Jianqiu Xu",
+        "Caimin Li"
+      ],
+      "summary": "With the increasing volume of streaming data in industrial systems, online anomaly detection has become a critical task. The diverse and rapidly evolving data patterns pose significant challenges for online anomaly detection. Many existing anomaly detection methods are designed for offline settings or have difficulty in handling heterogeneous streaming data effectively. This paper proposes GDME, an unsupervised graph-based framework for online time series anomaly detection using model ensemble. GDME maintains a dynamic model pool that is continuously updated by pruning underperforming models and introducing new ones. It utilizes a dynamic graph structure to represent relationships among models and employs community detection on the graph to select an appropriate subset for ensemble. The graph structure is also used to detect concept drift by monitoring structural changes, allowing the framework to adapt to evolving streaming data. Experiments on seven heterogeneous time series demonstrate that GDME outperforms existing online anomaly detection methods, achieving improvements of up to 24%. In addition, its ensemble strategy provides superior detection performance compared with both individual models and average ensembles, with competitive computational efficiency.",
+      "published": "2026-01-04T06:51:46Z",
+      "updated": "2026-01-04T06:51:46Z",
+      "arxiv_id": "2601.01403v1",
+      "abs_url": "http://arxiv.org/abs/2601.01403v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.01403v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "8 pages",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无监督与弱监督",
+        "高效微调与轻量化"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 3,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "unsupervised"
+      ],
+      "title_zh": "使用模型集成进行在线时间序列异常检测的基于图的框架",
+      "summary_zh": "随着工业系统中流数据量的不断增加，在线异常检测已成为一项关键任务。多样化且快速发展的数据模式给在线异常检测带来了重大挑战。许多现有的异常检测方法都是为离线设置而设计的，或者难以有效处理异构流数据。本文提出了 GDME，这是一种基于无监督图的框架，用于使用模型集成进行在线时间序列异常检测。 GDME 维护着一个动态模型池，通过修剪表现不佳的模型并引入新模型来不断更新。它利用动态图结构来表示模型之间的关系，并在图上采用社区检测来选择适当的集成子集。图结构还用于通过监视结构变化来检测概念漂移，从而使框架能够适应不断变化的流数据。对七个异构时间序列的实验表明，GDME 优于现有的在线异常检测方法，实现了高达 24% 的改进。此外，与单个模型和平均集成相比，其集成策略提供了卓越的检测性能，并具有具有竞争力的计算效率。"
+    },
+    {
+      "title": "ShadowGS: Shadow-Aware 3D Gaussian Splatting for Satellite Imagery",
+      "authors": [
+        "Feng Luo",
+        "Hongbo Pan",
+        "Xiang Yang",
+        "Baoyu Jiang",
+        "Fengqing Liu",
+        "Tao Huang"
+      ],
+      "summary": "3D Gaussian Splatting (3DGS) has emerged as a novel paradigm for 3D reconstruction from satellite imagery. However, in multi-temporal satellite images, prevalent shadows exhibit significant inconsistencies due to varying illumination conditions. To address this, we propose ShadowGS, a novel framework based on 3DGS. It leverages a physics-based rendering equation from remote sensing, combined with an efficient ray marching technique, to precisely model geometrically consistent shadows while maintaining efficient rendering. Additionally, it effectively disentangles different illumination components and apparent attributes in the scene. Furthermore, we introduce a shadow consistency constraint that significantly enhances the geometric accuracy of 3D reconstruction. We also incorporate a novel shadow map prior to improve performance with sparse-view inputs. Extensive experiments demonstrate that ShadowGS outperforms current state-of-the-art methods in shadow decoupling accuracy, 3D reconstruction precision, and novel view synthesis quality, with only a few minutes of training. ShadowGS exhibits robust performance across various settings, including RGB, pansharpened, and sparse-view satellite inputs.",
+      "published": "2026-01-04T06:33:59Z",
+      "updated": "2026-01-04T06:33:59Z",
+      "arxiv_id": "2601.00939v1",
+      "abs_url": "http://arxiv.org/abs/2601.00939v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.00939v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "高效微调与轻量化",
+        "LiDAR/点云"
+      ],
+      "topic": "时间序列与视频",
+      "score": 8,
+      "anchor_terms": [
+        "3D reconstruction",
+        "remote sensing",
+        "satellite image",
+        "satellite imagery",
+        "satellite images",
+        "temporal"
+      ],
+      "matched_terms": [
+        "3D reconstruction",
+        "multi-temporal",
+        "remote sensing",
+        "robust",
+        "satellite",
+        "satellite image",
+        "satellite imagery",
+        "satellite images",
+        "temporal"
+      ],
+      "title_zh": "ShadowGS：用于卫星图像的阴影感知 3D 高斯泼溅",
+      "summary_zh": "3D 高斯分布 (3DGS) 已成为卫星图像 3D 重建的一种新颖范例。然而，在多时相卫星图像中，由于光照条件的变化，普遍存在的阴影表现出明显的不一致。为了解决这个问题，我们提出了 ShadowGS，一种基于 3DGS 的新颖框架。它利用遥感基于物理的渲染方程，结合高效的光线行进技术，精确建模几何一致的阴影，同时保持高效的渲染。此外，它还可以有效地分解场景中的不同照明组件和明显属性。此外，我们引入了阴影一致性约束，显着提高了 3D 重建的几何精度。我们还结合了一种新颖的阴影贴图，以提高稀疏视图输入的性能。大量实验表明，ShadowGS 只需几分钟的训练，就在阴影解耦精度、3D 重建精度和新颖的视图合成质量方面优于当前最先进的方法。 ShadowGS 在各种设置下表现出强大的性能，包括 RGB、全色锐化和稀疏视图卫星输入。"
+    },
+    {
+      "title": "COVR:Collaborative Optimization of VLMs and RL Agent for Visual-Based Control",
+      "authors": [
+        "Canming Xia",
+        "Peixi Peng",
+        "Guang Tan",
+        "Zhan Su",
+        "Haoran Xu",
+        "Zhenxian Liu",
+        "Luntong Li"
+      ],
+      "summary": "Visual reinforcement learning (RL) suffers from poor sample efficiency due to high-dimensional observations in complex tasks. While existing works have shown that vision-language models (VLMs) can assist RL, they often focus on knowledge distillation from the VLM to RL, overlooking the potential of RL-generated interaction data to enhance the VLM. To address this, we propose COVR, a collaborative optimization framework that enables the mutual enhancement of the VLM and RL policies. Specifically, COVR fine-tunes the VLM with RL-generated data to enhance the semantic reasoning ability consistent with the target task, and uses the enhanced VLM to further guide policy learning via action priors. To improve fine-tuning efficiency, we introduce two key modules: (1) an Exploration-Driven Dynamic Filter module that preserves valuable exploration samples using adaptive thresholds based on the degree of exploration, and (2) a Return-Aware Adaptive Loss Weight module that improves the stability of training by quantifying the inconsistency of sampling actions via return signals of RL. We further design a progressive fine-tuning strategy to reduce resource consumption. Extensive experiments show that COVR achieves strong performance across various challenging visual control tasks.",
+      "published": "2026-01-04T03:53:05Z",
+      "updated": "2026-01-04T03:53:05Z",
+      "arxiv_id": "2601.06122v1",
+      "abs_url": "http://arxiv.org/abs/2601.06122v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.06122v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "The paper was accepted by the Fortieth AAAI Conference on Artificial Intelligence (AAAI-26)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "基础模型",
+      "score": 6,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "knowledge distillation",
+        "LoRA",
+        "VLM"
+      ],
+      "title_zh": "COVR：基于视觉的控制的 VLM 和 RL Agent 的协同优化",
+      "summary_zh": "由于复杂任务中的高维观察，视觉强化学习（RL）的样本效率较低。虽然现有的工作已经表明视觉语言模型 (VLM) 可以辅助强化学习，但它们通常侧重于从 VLM 到强化学习的知识蒸馏，而忽视了强化学习生成的交互数据增强 VLM 的潜力。为了解决这个问题，我们提出了 COVR，一种协作优化框架，可以实现 VLM 和 RL 策略的相互增强。具体来说，COVR利用RL生成的数据对VLM进行微调，以增强与目标任务一致的语义推理能力，并使用增强的VLM通过动作先验进一步指导策略学习。为了提高微调效率，我们引入了两个关键模块：（1）探索驱动动态滤波器模块，根据探索程度使用自适应阈值保留有价值的探索样本；（2）返回感知自适应损失权重模块，通过强化学习的返回信号量化采样动作的不一致性，提高训练的稳定性。我们进一步设计了渐进式微调策略来减少资源消耗。大量实验表明，COVR 在各种具有挑战性的视觉控制任务中均取得了出色的性能。"
+    }
+  ]
+}

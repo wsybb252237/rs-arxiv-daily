@@ -1,0 +1,1004 @@
+{
+  "date": "2026-01-12",
+  "generated_at": "2026-06-03T04:41:11.379045+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202601120000 TO 202601122359]",
+  "total_fetched": 313,
+  "total_matched": 23,
+  "papers": [
+    {
+      "title": "Exchange Is All You Need for Remote Sensing Change Detection",
+      "authors": [
+        "Sijun Dong",
+        "Siming Fu",
+        "Kaiyu Li",
+        "Xiangyong Cao",
+        "Xiaoliang Meng",
+        "Bo Du"
+      ],
+      "summary": "Remote sensing change detection fundamentally relies on the effective fusion and discrimination of bi-temporal features. Prevailing paradigms typically utilize Siamese encoders bridged by explicit difference computation modules, such as subtraction or concatenation, to identify changes. In this work, we challenge this complexity with SEED (Siamese Encoder-Exchange-Decoder), a streamlined paradigm that replaces explicit differencing with parameter-free feature exchange. By sharing weights across both Siamese encoders and decoders, SEED effectively operates as a single parameter set model. Theoretically, we formalize feature exchange as an orthogonal permutation operator and prove that, under pixel consistency, this mechanism preserves mutual information and Bayes optimal risk, whereas common arithmetic fusion methods often introduce information loss. Extensive experiments across five benchmarks, including SYSU-CD, LEVIR-CD, PX-CLCD, WaterCD, and CDD, and three backbones, namely SwinT, EfficientNet, and ResNet, demonstrate that SEED matches or surpasses state of the art methods despite its simplicity. Furthermore, we reveal that standard semantic segmentation models can be transformed into competitive change detectors solely by inserting this exchange mechanism, referred to as SEG2CD. The proposed paradigm offers a robust, unified, and interpretable framework for change detection, demonstrating that simple feature exchange is sufficient for high performance information fusion. Code and full training and evaluation protocols will be released at https://github.com/dyzy41/open-rscd.",
+      "published": "2026-01-12T18:36:51Z",
+      "updated": "2026-01-12T18:36:51Z",
+      "arxiv_id": "2601.07805v1",
+      "abs_url": "http://arxiv.org/abs/2601.07805v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07805v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/dyzy41/open-rscd",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "语义分割",
+        "变化检测",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 16,
+      "anchor_terms": [
+        "change detection",
+        "remote sensing",
+        "semantic segmentation",
+        "temporal"
+      ],
+      "matched_terms": [
+        "change detection",
+        "change detection remote sensing",
+        "remote sensing",
+        "remote sensing change detection",
+        "robust",
+        "semantic segmentation",
+        "temporal"
+      ],
+      "title_zh": "Exchange 是您进行遥感变化检测所需的一切",
+      "summary_zh": "遥感变化检测从根本上依赖于双时态特征的有效融合和判别。流行的范例通常利用由显式差异计算模块（例如减法或串联）桥接的连体编码器来识别变化。在这项工作中，我们用 SEED（连体编码器-交换-解码器）挑战这种复杂性，这是一种简化的范例，用无参数特征交换代替显式差分。通过在 Siamese 编码器和解码器之间共享权重，SEED 可以有效地作为单个参数集模型运行。理论上，我们将特征交换形式化为正交排列算子，并证明在像素一致性下，该机制保留了互信息和贝叶斯最优风险，而常见的算术融合方法经常引入信息丢失。涵盖 SYSU-CD、LEVIR-CD、PX-CLCD、WaterCD 和 CDD 等五个基准以及 SwinT、EfficientNet 和 ResNet 三个主干网的广泛实验表明，SEED 尽管简单，但仍能匹配或超越最先进的方法。此外，我们还发现，仅通过插入这种交换机制（称为 SEG2CD），标准语义分割模型就可以转变为竞争性变化检测器。所提出的范例为变化检测提供了一个强大的、统一的和可解释的框架，证明简单的特征交换足以实现高性能信息融合。代码以及完整的培训和评估协议将在 https://github.com/dyzy41/open-rscd 发布。"
+    },
+    {
+      "title": "Self-transcendence: Is External Feature Guidance Indispensable for Accelerating Diffusion Transformer Training?",
+      "authors": [
+        "Lingchen Sun",
+        "Rongyuan Wu",
+        "Zhengqiang Zhang",
+        "Ruibin Li",
+        "Yujing Sun",
+        "Shuaizheng Liu",
+        "Lei Zhang"
+      ],
+      "summary": "Recent works such as REPA have shown that guiding diffusion models with external semantic features (e.g., DINO) can significantly accelerate the training of diffusion transformers (DiTs). However, the use of pretrained external features as guidance signals introduces additional dependencies. We argue that DiTs actually have the power to guide the training of themselves, and propose SelfTranscendence, an effective method that achieves fast convergence using internal feature supervision only. The desired internal guidance features should meet two requirements: structurally clean to help shallow blocks separate noise from signal, and semantically discriminative to help shallow layers learn effective representations. With this consideration, we first align the DiT features with the clean VAE latent features, a native component of latent diffusion, for a short training phase (e.g., 40 epochs) to improve their structural representations, then apply the classifier-free guidance to the intermediate features, enhancing their discriminative capability and semantic expressiveness. These enriched internal features, learned entirely within the model, are used as supervision signals to guide a new DiT training from scratch. Compared to existing self-contained methods, our approach achieves a significant performance boost. It can even surpass REPA, which uses the external DINO features as guidance, in both generation quality and convergence speed for both class-to-image and text-to-image generation tasks. The source code of our method can be found at https://github.com/csslc/Self-Transcendence.",
+      "published": "2026-01-12T17:52:11Z",
+      "updated": "2026-03-15T07:32:05Z",
+      "arxiv_id": "2601.07773v2",
+      "abs_url": "http://arxiv.org/abs/2601.07773v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.07773v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/csslc/Self-Transcendence",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像生成与重建"
+      ],
+      "topic": "图像生成与重建",
+      "score": 5,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "diffusion model",
+        "image generation",
+        "transformer"
+      ],
+      "title_zh": "自我超越：加速扩散变压器训练离不开外部特征引导吗？",
+      "summary_zh": "最近的研究（例如 REPA）表明，利用外部语义特征（例如 DINO）引导扩散模型可以显着加速扩散变压器（DiT）的训练。然而，使用预训练的外部特征作为引导信号会引入额外的依赖性。我们认为 DiT 实际上有能力指导自己的训练，并提出了 SelfTranscendence，这是一种仅使用内部特征监督即可实现快速收敛的有效方法。所需的内部引导特征应满足两个要求：结构清晰，以帮助浅层块将噪声与信号分离，以及语义区分，以帮助浅层学习有效的表示。考虑到这一点，我们首先将 DiT 特征与干净的 VAE 潜在特征（潜在扩散的原生组成部分）进行短训练阶段（例如 40 个时期）对齐，以改善其结构表示，然后将无分类器指导应用于中间特征，增强其判别能力和语义表达能力。这些丰富的内部特征完全在模型中学习，被用作监督信号来指导从头开始的新 DiT 训练。与现有的独立方法相比，我们的方法实现了显着的性能提升。它甚至可以在类到图像和文本到图像生成任务的生成质量和收敛速度方面超越使用外部 DINO 特征作为指导的 REPA。我们方法的源代码可以在 https://github.com/csslc/Self-Transcendence 找到。"
+    },
+    {
+      "title": "TFEC: Multivariate Time-Series Clustering via Temporal-Frequency Enhanced Contrastive Learning",
+      "authors": [
+        "Zexi Tan",
+        "Tao Xie",
+        "Haoyi Xiao",
+        "Baoyao Yang",
+        "Yuzhu Ji",
+        "An Zeng",
+        "Xiang Zhang",
+        "Yiqun Zhang"
+      ],
+      "summary": "Multivariate Time-Series (MTS) clustering is crucial for signal processing and data analysis. Although deep learning approaches, particularly those leveraging Contrastive Learning (CL), are prominent for MTS representation, existing CL-based models face two key limitations: 1) neglecting clustering information during positive/negative sample pair construction, and 2) introducing unreasonable inductive biases, e.g., destroying time dependence and periodicity through augmentation strategies, compromising representation quality. This paper, therefore, proposes a Temporal-Frequency Enhanced Contrastive (TFEC) learning framework. To preserve temporal structure while generating low-distortion representations, a temporal-frequency Co-EnHancement (CoEH) mechanism is introduced. Accordingly, a synergistic dual-path representation and cluster distribution learning framework is designed to jointly optimize cluster structure and representation fidelity. Experiments on six real-world benchmark datasets demonstrate TFEC's superiority, achieving 4.48% average NMI gains over SOTA methods, with ablation studies validating the design. The code of the paper is available at: https://github.com/yueliangy/TFEC.",
+      "published": "2026-01-12T13:59:27Z",
+      "updated": "2026-01-12T13:59:27Z",
+      "arxiv_id": "2601.07550v1",
+      "abs_url": "http://arxiv.org/abs/2601.07550v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07550v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "Submitted to ICASSP 2026",
+      "code_url": "https://github.com/yueliangy/TFEC",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "时间序列与视频",
+        "基础模型",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "时间序列与视频",
+      "score": 4,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "contrastive learning",
+        "temporal",
+        "time-series"
+      ],
+      "title_zh": "TFEC：通过时频增强对比学习进行多元时间序列聚类",
+      "summary_zh": "多元时间序列 (MTS) 聚类对于信号处理和数据分析至关重要。尽管深度学习方法，特别是利用对比学习（CL）的深度学习方法，在 MTS 表示中很突出，但现有的基于 CL 的模型面临两个关键限制：1）在正/负样本对构建过程中忽略聚类信息，2）引入不合理的归纳偏差，例如通过增强策略破坏时间依赖性和周期性，从而损害表示质量。因此，本文提出了一种时频增强对比（TFEC）学习框架。为了在生成低失真表示的同时保留时间结构，引入了时间频率协同增强（CoEH）机制。因此，设计了协同双路径表示和聚类分布学习框架来共同优化聚类结构和表示保真度。对六个真实世界基准数据集的实验证明了 TFEC 的优越性，与 SOTA 方法相比，平均 NMI 提高了 4.48%，消融研究验证了该设计。论文代码可参见：https://github.com/yueliangy/TFEC。"
+    },
+    {
+      "title": "SDHSI-Net: Learning Better Representations for Hyperspectral Images via Self-Distillation",
+      "authors": [
+        "Prachet Dev Singh",
+        "Shyamsundar Paramasivam",
+        "Sneha Barman",
+        "Mainak Singha",
+        "Ankit Jha",
+        "Girish Mishra",
+        "Biplab Banerjee"
+      ],
+      "summary": "Hyperspectral image (HSI) classification presents unique challenges due to its high spectral dimensionality and limited labeled data. Traditional deep learning models often suffer from overfitting and high computational costs. Self-distillation (SD), a variant of knowledge distillation where a network learns from its own predictions, has recently emerged as a promising strategy to enhance model performance without requiring external teacher networks. In this work, we explore the application of SD to HSI by treating earlier outputs as soft targets, thereby enforcing consistency between intermediate and final predictions. This process improves intra-class compactness and inter-class separability in the learned feature space. Our approach is validated on two benchmark HSI datasets and demonstrates significant improvements in classification accuracy and robustness, highlighting the effectiveness of SD for spectral-spatial learning. Codes are available at https://github.com/Prachet-Dev-Singh/SDHSI.",
+      "published": "2026-01-12T10:57:24Z",
+      "updated": "2026-01-12T10:57:24Z",
+      "arxiv_id": "2601.07416v1",
+      "abs_url": "http://arxiv.org/abs/2601.07416v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07416v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted at InGARSS 2025",
+      "code_url": "https://github.com/Prachet-Dev-Singh/SDHSI",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "基础模型",
+        "高效微调与轻量化",
+        "高光谱/多光谱",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 5,
+      "anchor_terms": [
+        "hyperspectral image"
+      ],
+      "matched_terms": [
+        "hyperspectral",
+        "hyperspectral image",
+        "knowledge distillation",
+        "robust"
+      ],
+      "title_zh": "SDHSI-Net：通过自蒸馏学习更好的高光谱图像表示",
+      "summary_zh": "高光谱图像 (HSI) 分类由于其高光谱维数和有限的标记数据而面临独特的挑战。传统的深度学习模型经常遭受过度拟合和高计算成本的困扰。自蒸馏（SD）是知识蒸馏的一种变体，网络从自己的预测中学习，最近已成为一种有前途的策略，可以在不需要外部教师网络的情况下增强模型性能。在这项工作中，我们通过将早期输出视为软目标来探索 SD 在 HSI 中的应用，从而加强中间和最终预测之间的一致性。这个过程提高了学习特征空间中的类内紧凑性和类间可分离性。我们的方法在两个基准 HSI 数据集上进行了验证，并展示了分类准确性和鲁棒性的显着改进，突出了 SD 对于光谱空间学习的有效性。代码可在 https://github.com/Prachet-Dev-Singh/SDHSI 获取。"
+    },
+    {
+      "title": "Learning Dynamic Collaborative Network for Semi-supervised 3D Vessel Segmentation",
+      "authors": [
+        "Jiao Xu",
+        "Xin Chen",
+        "Lihe Zhang"
+      ],
+      "summary": "In this paper, we present a new dynamic collaborative network for semi-supervised 3D vessel segmentation, termed DiCo. Conventional mean teacher (MT) methods typically employ a static approach, where the roles of the teacher and student models are fixed. However, due to the complexity of 3D vessel data, the teacher model may not always outperform the student model, leading to cognitive biases that can limit performance. To address this issue, we propose a dynamic collaborative network that allows the two models to dynamically switch their teacher-student roles. Additionally, we introduce a multi-view integration module to capture various perspectives of the inputs, mirroring the way doctors conduct medical analysis. We also incorporate adversarial supervision to constrain the shape of the segmented vessels in unlabeled data. In this process, the 3D volume is projected into 2D views to mitigate the impact of label inconsistencies. Experiments demonstrate that our DiCo method sets new state-of-the-art performance on three 3D vessel segmentation benchmarks. The code repository address is https://github.com/xujiaommcome/DiCo",
+      "published": "2026-01-12T09:57:48Z",
+      "updated": "2026-01-12T09:57:48Z",
+      "arxiv_id": "2601.07377v1",
+      "abs_url": "http://arxiv.org/abs/2601.07377v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07377v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "Accepted to the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025",
+      "code_url": "https://github.com/xujiaommcome/DiCo",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 3,
+      "anchor_terms": [
+        "semi-supervised"
+      ],
+      "matched_terms": [
+        "semi-supervised"
+      ],
+      "title_zh": "学习用于半监督 3D 血管分割的动态协作网络",
+      "summary_zh": "在本文中，我们提出了一种用于半监督 3D 血管分割的新动态协作网络，称为 DiCo。传统的平均教师（MT）方法通常采用静态方法，其中教师和学生模型的角色是固定的。然而，由于 3D 血管数据的复杂性，教师模型可能并不总是优于学生模型，从而导致认知偏差，从而限制性能。为了解决这个问题，我们提出了一个动态协作网络，允许两个模型动态切换教师和学生的角色。此外，我们引入了多视图集成模块来捕获输入的各种视角，反映了医生进行医学分析的方式。我们还采用对抗性监督来限制未标记数据中分段血管的形状。在此过程中，3D 体积被投影到 2D 视图中，以减轻标签不一致的影响。实验表明，我们的 DiCo 方法在三个 3D 血管分割基准上设置了新的最先进性能。代码仓库地址为https://github.com/xujiaommcome/DiCo"
+    },
+    {
+      "title": "Reconstruction Guided Few-shot Network For Remote Sensing Image Classification",
+      "authors": [
+        "Mohit Jaiswal",
+        "Naman Jain",
+        "Shivani Pathak",
+        "Mainak Singha",
+        "Nikunja Bihari Kar",
+        "Ankit Jha",
+        "Biplab Banerjee"
+      ],
+      "summary": "Few-shot remote sensing image classification is challenging due to limited labeled samples and high variability in land-cover types. We propose a reconstruction-guided few-shot network (RGFS-Net) that enhances generalization to unseen classes while preserving consistency for seen categories. Our method incorporates a masked image reconstruction task, where parts of the input are occluded and reconstructed to encourage semantically rich feature learning. This auxiliary task strengthens spatial understanding and improves class discrimination under low-data settings. We evaluated the efficacy of EuroSAT and PatternNet datasets under 1-shot and 5-shot protocols, our approach consistently outperforms existing baselines. The proposed method is simple, effective, and compatible with standard backbones, offering a robust solution for few-shot remote sensing classification. Codes are available at https://github.com/stark0908/RGFS.",
+      "published": "2026-01-12T09:02:30Z",
+      "updated": "2026-01-12T09:02:30Z",
+      "arxiv_id": "2601.07335v1",
+      "abs_url": "http://arxiv.org/abs/2601.07335v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07335v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted at InGARSS 2025",
+      "code_url": "https://github.com/stark0908/RGFS",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "场景分类",
+        "开放词汇与开放集",
+        "小样本与域泛化",
+        "数据集/评测"
+      ],
+      "topic": "场景分类",
+      "score": 14,
+      "anchor_terms": [
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "EuroSAT",
+        "few-shot remote sensing",
+        "image classification",
+        "remote sensing",
+        "robust"
+      ],
+      "title_zh": "用于遥感图像分类的重建引导少样本网络",
+      "summary_zh": "由于标记样本有限和土地覆盖类型的高度可变性，少镜头遥感图像分类具有挑战性。我们提出了一种重建引导的少镜头网络（RGFS-Net），它增强了对未见类别的泛化，同时保持了已见类别的一致性。我们的方法结合了掩模图像重建任务，其中部分输入被遮挡并重建，以鼓励语义丰富的特征学习。这项辅助任务增强了空间理解并改善了低数据设置下的阶级歧视。我们评估了 EuroSAT 和 PatternNet 数据集在 1-shot 和 5-shot 协议下的功效，我们的方法始终优于现有基线。所提出的方法简单、有效且与标准主干网兼容，为少样本遥感分类提供了稳健的解决方案。代码可在 https://github.com/stark0908/RGFS 获取。"
+    },
+    {
+      "title": "Beyond the Next Port: A Multi-Task Transformer for Forecasting Future Voyage Segment Durations",
+      "authors": [
+        "Nairui Liu",
+        "Fang He",
+        "Xindi Tang",
+        "Yineng Wang"
+      ],
+      "summary": "Accurate forecasts of segment-level sailing durations are fundamental to enhancing maritime schedule reliability and optimizing long-term port operations. However, conventional estimated time of arrival (ETA) models are primarily designed for the immediate next port of call and rely heavily on real-time automatic identification system (AIS) data, which is inherently unavailable for future voyage segments. To address this gap, the study reformulates future-port ETA prediction as a segment-level time-series forecasting problem. We develop a transformer-based architecture that integrates historical sailing durations, destination port congestion proxies, and static vessel descriptors. The proposed framework employs a causally masked attention mechanism to capture long-range temporal dependencies and a multi-task learning head to jointly predict segment sailing durations and port congestion states, leveraging shared latent signals to mitigate high uncertainty. Evaluation on a real-world global dataset from 2021 demonstrates the proposed model consistently outperforms a comprehensive suite of competitive baselines. The result shows a relative reduction of 4.70% in mean absolute error (MAE), 4.95% in mean absolute percentage error (MAPE) and 2.59% in root mean squared error (RMSE) compared with sequential deep learning models. The relative reductions compared with gradient boosting machines are 7.03% in MAE, 39.49% in MAPE and 4.37% in RMSE. The case study conducted on one major destination port further illustrates the model's superior accuracy.",
+      "published": "2026-01-12T21:32:05Z",
+      "updated": "2026-05-17T08:41:41Z",
+      "arxiv_id": "2601.08013v2",
+      "abs_url": "http://arxiv.org/abs/2601.08013v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.08013v2",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "基础模型",
+        "数据集/评测"
+      ],
+      "topic": "时间序列与视频",
+      "score": 5,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "attention mechanism",
+        "MAE",
+        "temporal",
+        "time-series",
+        "transformer"
+      ],
+      "title_zh": "超越下一个港口：用于预测未来航段持续时间的多任务变压器",
+      "summary_zh": "准确预测航段级航行时间对于提高海运时间表可靠性和优化长期港口运营至关重要。然而，传统的预计到达时间 (ETA) 模型主要是为下一个停靠港设计的，并且严重依赖实时自动识别系统 (AIS) 数据，而这些数据本质上无法用于未来航段。为了解决这一差距，该研究将未来港口 ETA 预测重新表述为分段级时间序列预测问题。我们开发了一个基于变压器的架构，集成了历史航行持续时间、目的地港口拥堵代理和静态船舶描述符。所提出的框架采用因果屏蔽注意力机制来捕获长程时间依赖性，并采用多任务学习头来共同预测航段航行持续时间和港口拥堵状态，利用共享的潜在信号来减轻高度不确定性。对 2021 年现实世界全球数据集的评估表明，所提出的模型始终优于一套全面的竞争基线。结果显示，与顺序深度学习模型相比，平均绝对误差（MAE）相对减少了 4.70%，平均绝对百分比误差（MAPE）相对减少了 4.95%，均方根误差（RMSE）相对减少了 2.59%。与梯度增强机相比，MAE 相对降低了 7.03%，MAPE 降低了 39.49%，RMSE 降低了 4.37%。对一个主要目的港进行的案例研究进一步说明了该模型的卓越准确性。"
+    },
+    {
+      "title": "A Dataset of Dengue Hospitalizations in Brazil (1999 to 2021) with Weekly Disaggregation from Monthly Counts",
+      "authors": [
+        "Lucas M. Morello",
+        "Matheus Lima Castro",
+        "Pedro Cesar M. G. Camargo",
+        "Liliane Moreira Nery",
+        "Darllan Collins da Cunha e Silva",
+        "Leopoldo Lusquino Filho"
+      ],
+      "summary": "This data paper describes and publicly releases this dataset (v1.0.0), published on Zenodo under DOI 10.5281/zenodo.18189192. Motivated by the need to increase the temporal granularity of originally monthly data to enable more effective training of AI models for epidemiological forecasting, the dataset harmonizes municipal-level dengue hospitalization time series across Brazil and disaggregates them to weekly resolution (epidemiological weeks) through an interpolation protocol with a correction step that preserves monthly totals. The statistical and temporal validity of this disaggregation was assessed using a high-resolution reference dataset from the state of Sao Paulo (2024), which simultaneously provides monthly and epidemiological-week counts, enabling a direct comparison of three strategies: linear interpolation, jittering, and cubic spline. Results indicated that cubic spline interpolation achieved the highest adherence to the reference data, and this strategy was therefore adopted to generate weekly series for the 1999 to 2021 period. In addition to hospitalization time series, the dataset includes a comprehensive set of explanatory variables commonly used in epidemiological and environmental modeling, such as demographic density, CH4, CO2, and NO2 emissions, poverty and urbanization indices, maximum temperature, mean monthly precipitation, minimum relative humidity, and municipal latitude and longitude, following the same temporal disaggregation scheme to ensure multivariate compatibility. The paper documents the datasets provenance, structure, formats, licenses, limitations, and quality metrics (MAE, RMSE, R2, KL, JSD, DTW, and the KS test), and provides usage recommendations for multivariate time-series analysis, environmental health studies, and the development of machine learning and deep learning models for outbreak forecasting.",
+      "published": "2026-01-12T20:27:57Z",
+      "updated": "2026-01-12T20:27:57Z",
+      "arxiv_id": "2601.16994v1",
+      "abs_url": "http://arxiv.org/abs/2601.16994v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.16994v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "基础模型",
+        "数据集/评测"
+      ],
+      "topic": "时间序列与视频",
+      "score": 2,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "MAE",
+        "temporal",
+        "time-series"
+      ],
+      "title_zh": "巴西登革热住院数据集（1999 年至 2021 年），按月计数进行每周分类",
+      "summary_zh": "本数据论文描述并公开发布了该数据集 (v1.0.0)，该数据集发布在 Zenodo 上，编号为 DOI 10.5281/zenodo.18189192。由于需要增加最初每月数据的时间粒度，以便更有效地训练用于流行病学预测的人工智能模型，该数据集协调了巴西各地市级登革热住院时间序列，并通过插值协议将其分解为每周分辨率（流行病学周），并具有保留每月总数的校正步骤。使用圣保罗州（2024 年）的高分辨率参考数据集评估了这种分类的统计和时间有效性，该数据集同时提供每月和流行病学周计数，从而可以直接比较三种策略：线性插值、抖动和三次样条。结果表明，三次样条插值法与参考数据的一致性最高，因此采用该策略来生成 1999 年至 2021 年期间的每周序列。除了住院时间序列外，该数据集还包括流行病学和环境建模中常用的一整套解释变量，例如人口密度、CH4、CO2和NO2排放量、贫困和城市化指数、最高温度、月平均降水量、最低相对湿度以及城市纬度和经度，遵循相同的时间分解方案以确保多变量兼容性。该论文记录了数据集的来源、结构、格式、许可证、限制和质量指标（MAE、RMSE、R2、KL、JSD、DTW 和 KS 测试），并为多元时间序列分析、环境健康研究以及用于疫情预测的机器学习和深度学习模型的开发提供使用建议。"
+    },
+    {
+      "title": "An Efficient Additive Kolmogorov-Arnold Transformer for Point-Level Maize Localization in Unmanned Aerial Vehicle Imagery",
+      "authors": [
+        "Fei Li",
+        "Lang Qiao",
+        "Jiahao Fan",
+        "Yijia Xu",
+        "Shawn M. Kaeppler",
+        "Zhou Zhang"
+      ],
+      "summary": "High-resolution UAV photogrammetry has become a key technology for precision agriculture, enabling centimeter-level crop monitoring and point-level plant localization. However, point-level maize localization in UAV imagery remains challenging due to (1) extremely small object-to-pixel ratios, typically less than 0.1%, (2) prohibitive computational costs of quadratic attention on ultra-high-resolution images larger than 3000 x 4000 pixels, and (3) agricultural scene-specific complexities such as sparse object distribution and environmental variability that are poorly handled by general-purpose vision models. To address these challenges, we propose the Additive Kolmogorov-Arnold Transformer (AKT), which replaces conventional multilayer perceptrons with Pade Kolmogorov-Arnold Network (PKAN) modules to enhance functional expressivity for small-object feature extraction, and introduces PKAN Additive Attention (PAA) to model multiscale spatial dependencies with reduced computational complexity. In addition, we present the Point-based Maize Localization (PML) dataset, consisting of 1,928 high-resolution UAV images with approximately 501,000 point annotations collected under real field conditions. Extensive experiments show that AKT achieves an average F1-score of 62.8%, outperforming state-of-the-art methods by 4.2%, while reducing FLOPs by 12.6% and improving inference throughput by 20.7%. For downstream tasks, AKT attains a mean absolute error of 7.1 in stand counting and a root mean square error of 1.95-1.97 cm in interplant spacing estimation. These results demonstrate that integrating Kolmogorov-Arnold representation theory with efficient attention mechanisms offers an effective framework for high-resolution agricultural remote sensing.",
+      "published": "2026-01-12T20:16:10Z",
+      "updated": "2026-01-12T20:16:10Z",
+      "arxiv_id": "2601.07975v1",
+      "abs_url": "http://arxiv.org/abs/2601.07975v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07975v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "高效微调与轻量化",
+        "无人机/UAV",
+        "农业与生态",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 14,
+      "anchor_terms": [
+        "crop",
+        "remote sensing",
+        "small object",
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "attention mechanism",
+        "crop",
+        "photogrammetry",
+        "remote sensing",
+        "small object",
+        "transformer",
+        "UAV",
+        "unmanned aerial vehicle"
+      ],
+      "title_zh": "用于无人机图像中点级玉米定位的高效加法 Kolmogorov-Arnold 变压器",
+      "summary_zh": "高分辨率无人机摄影测量已成为精准农业的关键技术，可实现厘米级作物监测和点级植物定位。然而，无人机图像中的点级玉米定位仍然具有挑战性，因为（1）物体与像素之比极小，通常小于0.1％，（2）大于3000 x 4000像素的超高分辨率图像的二次关注的计算成本过高，以及（3）农业场景特定的复杂性，例如稀疏物体分布和环境变化，通用视觉模型很难处理这些复杂性。为了应对这些挑战，我们提出了加法柯尔莫哥洛夫-阿诺德变换器（AKT），它用 Pade Kolmogorov-Arnold 网络（PKAN）模块取代传统的多层感知器，以增强小目标特征提取的功能表达能力，并引入 PKAN 加法注意（PAA）来建模多尺度空间依赖性，同时降低计算复杂性。此外，我们还提供了基于点的玉米定位 (PML) 数据集，其中包含 1,928 张高分辨率无人机图像以及在真实现场条件下收集的约 501,000 个点注释。大量实验表明，AKT 的平均 F1 分数为 62.8%，比最先进的方法高出 4.2%，同时将 FLOP 减少 12.6%，推理吞吐量提高 20.7%。对于下游任务，AKT 在林分计数中获得了 7.1 的平均绝对误差，在株间间距估计中获得了 1.95-1.97 厘米的均方根误差。这些结果表明，将柯尔莫哥洛夫-阿诺德表示理论与有效的注意力机制相结合，为高分辨率农业遥感提供了有效的框架。"
+    },
+    {
+      "title": "LWMSCNN-SE: A Lightweight Multi-Scale Network for Efficient Maize Disease Classification on Edge Devices",
+      "authors": [
+        "Fikadu Weloday",
+        "Jianmei Su"
+      ],
+      "summary": "Maize disease classification plays a vital role in mitigating yield losses and ensuring food security. However, the deployment of traditional disease detection models in resource-constrained environments, such as those using smartphones and drones, faces challenges due to high computational costs. To address these challenges, we propose LWMSCNN-SE, a lightweight convolutional neural network (CNN) that integrates multi-scale feature extraction, depthwise separable convolutions, and squeeze-and-Excitation (SE) attention mechanisms. This novel combination enables the model to achieve 96.63% classification accuracy with only 241,348 parameters and 0.666 GFLOPs, making it suitable for real-time deployment in field applications. Our approach addresses the accuracy--efficiency trade-off by delivering high accuracy while maintaining low computational costs, demonstrating its potential for efficient maize disease diagnosis on edge devices in precision farming systems.",
+      "published": "2026-01-12T19:45:10Z",
+      "updated": "2026-01-12T19:45:10Z",
+      "arxiv_id": "2601.07957v1",
+      "abs_url": "http://arxiv.org/abs/2601.07957v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07957v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "无人机/UAV"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 8,
+      "anchor_terms": [
+        "drone"
+      ],
+      "matched_terms": [
+        "attention mechanism",
+        "CNN",
+        "convolutional neural network",
+        "drone",
+        "multi-scale"
+      ],
+      "title_zh": "LWMSCNN-SE：用于在边缘设备上进行高效玉米病害分类的轻量级多尺度网络",
+      "summary_zh": "玉米病害分类在减轻产量损失和确保粮食安全方面发挥着至关重要的作用。然而，在资源有限的环境中（例如使用智能手机和无人机的环境）部署传统疾病检测模型，由于计算成本高昂而面临挑战。为了应对这些挑战，我们提出了 LWMSCNN-SE，这是一种轻量级卷积神经网络 (CNN)，集成了多尺度特征提取、深度可分离卷积和挤压和激励 (SE) 注意力机制。这种新颖的组合使模型仅用 241,348 个参数和 0.666 GFLOPs 即可实现 96.63% 的分类精度，适合现场应用中的实时部署。我们的方法通过提供高精度同时保持较低的计算成本来解决准确性与效率的权衡，展示了其在精准农业系统中的边缘设备上进行高效玉米病害诊断的潜力。"
+    },
+    {
+      "title": "Compressing Vision Transformers in Geospatial Transfer Learning with Manifold-Constrained Optimization",
+      "authors": [
+        "Thomas Snyder",
+        "H. Lexie Yang",
+        "Stefan Schnake",
+        "Steffen Schotthöfer"
+      ],
+      "summary": "Deploying geospatial foundation models on resource-constrained edge devices demands compact architectures that maintain high downstream performance. However, their large parameter counts and the accuracy loss often induced by compression limit practical adoption. In this work, we leverage manifold-constrained optimization framework DLRT to compress large vision transformer-based geospatial foundation models during transfer learning. By enforcing structured low-dimensional parameterizations aligned with downstream objectives, this approach achieves strong compression while preserving task-specific accuracy. We show that the method outperforms of-the-shelf low-rank methods as LoRA. Experiments on diverse geospatial benchmarks confirm substantial parameter reduction with minimal accuracy loss, enabling high-performing, on-device geospatial models.",
+      "published": "2026-01-12T18:41:39Z",
+      "updated": "2026-01-12T18:41:39Z",
+      "arxiv_id": "2601.08882v1",
+      "abs_url": "http://arxiv.org/abs/2601.08882v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.08882v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 15,
+      "anchor_terms": [
+        "foundation model",
+        "geospatial",
+        "geospatial foundation",
+        "geospatial foundation model",
+        "LoRA",
+        "vision transformer"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "geospatial",
+        "geospatial foundation",
+        "geospatial foundation model",
+        "LoRA",
+        "transfer learning",
+        "transformer",
+        "vision transformer"
+      ],
+      "title_zh": "使用流形约束优化来压缩地理空间迁移学习中的视觉变换器",
+      "summary_zh": "在资源受限的边缘设备上部署地理空间基础模型需要紧凑的架构来保持较高的下游性能。然而，它们的大量参数和压缩通常引起的精度损失限制了实际采用。在这项工作中，我们利用流形约束优化框架 DLRT 在迁移学习期间压缩基于大型视觉变压器的地理空间基础模型。通过强制执行与下游目标一致的结构化低维参数化，该方法实现了强大的压缩，同时保持了特定于任务的准确性。我们证明该方法优于 LoRA 等现成的低秩方法。对各种地理空间基准的实验证实，参数大幅减少，精度损失最小，从而实现高性能的设备上地理空间模型。"
+    },
+    {
+      "title": "Vision-Language Model for Accurate Crater Detection",
+      "authors": [
+        "Patrick Bauer",
+        "Marius Schwinning",
+        "Florian Renk",
+        "Andreas Weinmann",
+        "Hichem Snoussi"
+      ],
+      "summary": "The European Space Agency (ESA), driven by its ambitions on planned lunar missions with the Argonaut lander, has a profound interest in reliable crater detection, since craters pose a risk to safe lunar landings. This task is usually addressed with automated crater detection algorithms (CDA) based on deep learning techniques. It is non-trivial due to the vast amount of craters of various sizes and shapes, as well as challenging conditions such as varying illumination and rugged terrain. Therefore, we propose a deep-learning CDA based on the OWLv2 model, which is built on a Vision Transformer, that has proven highly effective in various computer vision tasks. For fine-tuning, we utilize a manually labeled dataset fom the IMPACT project, that provides crater annotations on high-resolution Lunar Reconnaissance Orbiter Camera Calibrated Data Record images. We insert trainable parameters using a parameter-efficient fine-tuning strategy with Low-Rank Adaptation, and optimize a combined loss function consisting of Complete Intersection over Union (CIoU) for localization and a contrastive loss for classification. We achieve satisfactory visual results, along with a maximum recall of 94.0% and a maximum precision of 73.1% on a test dataset from IMPACT. Our method achieves reliable crater detection across challenging lunar imaging conditions, paving the way for robust crater analysis in future lunar exploration.",
+      "published": "2026-01-12T18:08:17Z",
+      "updated": "2026-01-12T18:08:17Z",
+      "arxiv_id": "2601.07795v1",
+      "abs_url": "http://arxiv.org/abs/2601.07795v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07795v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 6,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "LoRA",
+        "robust",
+        "transformer",
+        "vision transformer"
+      ],
+      "title_zh": "用于准确检测弹坑的视觉语言模型",
+      "summary_zh": "欧洲航天局 (ESA) 受其计划中的阿尔戈登陆器登月任务的雄心所驱动，对可靠的陨石坑探测有着浓厚的兴趣，因为陨石坑对安全登陆月球构成了风险。此任务通常通过基于深度学习技术的自动弹坑检测算法 (CDA) 来解决。由于存在大量不同大小和形状的陨石坑，以及变化的光照和崎岖的地形等具有挑战性的条件，这并非易事。因此，我们提出了一种基于 OWLv2 模型的深度学习 CDA，该模型建立在 Vision Transformer 之上，已被证明在各种计算机视觉任务中非常有效。为了进行微调，我们利用 IMPACT 项目中的手动标记数据集，该数据集在高分辨率月球勘测轨道飞行器相机校准数据记录图像上提供陨石坑注释。我们使用具有低秩适应的参数高效微调策略插入可训练参数，并优化由用于定位的完全交集（CIoU）和用于分类的对比损失组成的组合损失函数。我们在 IMPACT 测试数据集上获得了令人满意的视觉结果，最大召回率为 94.0%，最大精确度为 73.1%。我们的方法在具有挑战性的月球成像条件下实现了可靠的陨石坑检测，为未来月球探索中强大的陨石坑分析铺平了道路。"
+    },
+    {
+      "title": "GRPO with State Mutations: Improving LLM-Based Hardware Test Plan Generation",
+      "authors": [
+        "Dimple Vijay Kochar",
+        "Nathaniel Pinckney",
+        "Guan-Ting Liu",
+        "Chia-Tung Ho",
+        "Chenhui Deng",
+        "Haoxing Ren",
+        "Brucek Khailany"
+      ],
+      "summary": "RTL design often relies heavily on ad-hoc testbench creation early in the design cycle. While large language models (LLMs) show promise for RTL code generation, their ability to reason about hardware specifications and generate targeted test plans remains largely unexplored. We present the first systematic study of LLM reasoning capabilities for RTL verification stimuli generation, establishing a two-stage framework that decomposes test plan generation from testbench execution. Our benchmark reveals that state-of-the-art models, including DeepSeek-R1 and Claude-4.0-Sonnet, achieve only 15.7-21.7% success rates on generating stimuli that pass golden RTL designs. To improve LLM generated stimuli, we develop a comprehensive training methodology combining supervised fine-tuning with a novel reinforcement learning approach, GRPO with State Mutation (GRPO-SMu), which enhances exploration by varying input mutations. Our approach leverages a tree-based branching mutation strategy to construct training data comprising equivalent and mutated trees, moving beyond linear mutation approaches to provide rich learning signals. Training on this curated dataset, our 7B parameter model achieves a 33.3% golden test pass rate and a 13.9% mutation detection rate, representing a 17.6% absolute improvement over baseline and outperforming much larger general-purpose models. These results demonstrate that specialized training methodologies can significantly enhance LLM reasoning capabilities for hardware verification tasks, establishing a foundation for automated sub-unit testing in semiconductor design workflows.",
+      "published": "2026-01-12T14:42:42Z",
+      "updated": "2026-01-12T14:42:42Z",
+      "arxiv_id": "2601.07593v1",
+      "abs_url": "http://arxiv.org/abs/2601.07593v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07593v1",
+      "primary_category": "cs.AR",
+      "categories": [
+        "cs.AR",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 5,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA"
+      ],
+      "title_zh": "具有状态突变的 GRPO：改进基于 LLM 的硬件测试计划生成",
+      "summary_zh": "RTL 设计通常严重依赖于设计周期早期的临时测试平台创建。虽然大型语言模型 (LLM) 在 RTL 代码生成方面表现出了良好的前景，但它们推理硬件规格和生成目标测试计划的能力在很大程度上仍未得到探索。我们首次系统地研究了用于 RTL 验证激励生成的 LLM 推理能力，建立了一个两阶段框架，将测试计划生成从测试平台执行中分解出来。我们的基准测试显示，包括 DeepSeek-R1 和 Claude-4.0-Sonnet 在内的最先进模型在生成通过黄金 RTL 设计的刺激方面的成功率仅为 15.7-21.7%。为了改善 LLM 生成的刺激，我们开发了一种综合训练方法，将监督微调与新颖的强化学习方法相结合，即带有状态突变的 GRPO（GRPO-SMu），该方法通过改变输入突变来增强探索。我们的方法利用基于树的分支突变策略来构建包含等效树和突变树的训练数据，超越线性突变方法来提供丰富的学习信号。在这个精选数据集上进行训练，我们的 7B 参数模型实现了 33.3% 的黄金测试通过率和 13.9% 的突变检测率，比基线提高了 17.6%，并且性能优于更大的通用模型。这些结果表明，专门的培训方法可以显着增强硬件验证任务的 LLM 推理能力，为半导体设计工作流程中的自动化子单元测试奠定基础。"
+    },
+    {
+      "title": "A Unified Framework for Emotion Recognition and Sentiment Analysis via Expert-Guided Multimodal Fusion with Large Language Models",
+      "authors": [
+        "Jiaqi Qiao",
+        "Xiujuan Xu",
+        "Xinran Li",
+        "Yu Liu"
+      ],
+      "summary": "Multimodal emotion understanding requires effective integration of text, audio, and visual modalities for both discrete emotion recognition and continuous sentiment analysis. We present EGMF, a unified framework combining expert-guided multimodal fusion with large language models. Our approach features three specialized expert networks--a fine-grained local expert for subtle emotional nuances, a semantic correlation expert for cross-modal relationships, and a global context expert for long-range dependencies--adaptively integrated through hierarchical dynamic gating for context-aware feature selection. Enhanced multimodal representations are integrated with LLMs via pseudo token injection and prompt-based conditioning, enabling a single generative framework to handle both classification and regression through natural language generation. We employ LoRA fine-tuning for computational efficiency. Experiments on bilingual benchmarks (MELD, CHERMA, MOSEI, SIMS-V2) demonstrate consistent improvements over state-of-the-art methods, with superior cross-lingual robustness revealing universal patterns in multimodal emotional expressions across English and Chinese. We will release the source code publicly.",
+      "published": "2026-01-12T14:21:32Z",
+      "updated": "2026-01-12T14:21:32Z",
+      "arxiv_id": "2601.07565v1",
+      "abs_url": "http://arxiv.org/abs/2601.07565v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07565v1",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 7,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LoRA",
+        "modal fusion",
+        "robust"
+      ],
+      "title_zh": "通过专家引导的多模态融合与大型语言模型的情感识别和情感分析的统一框架",
+      "summary_zh": "多模态情感理解需要有效集成文本、音频和视觉模态，以实现离散情感识别和连续情感分析。我们提出了 EGMF，这是一个将专家指导的多模态融合与大型语言模型相结合的统一框架。我们的方法具有三个专门的专家网络 - 一个负责微妙情感细微差别的细粒度本地专家，一个负责跨模式关系的语义相关专家，以及一个负责远程依赖关系的全局上下文专家 - 通过分层动态门控进行自适应集成，以进行上下文感知特征选择。增强的多模态表示通过伪令牌注入和基于提示的调节与 LLM 集成，使单个生成框架能够通过自然语言生成处理分类和回归。我们采用 LoRA 微调来提高计算效率。双语基准（MELD、CHERMA、MOSEI、SIMS-V2）的实验表明，与最先进的方法相比，取得了一致的改进，卓越的跨语言鲁棒性揭示了英语和汉语多模态情感表达的普遍模式。我们将公开发布源代码。"
+    },
+    {
+      "title": "OceanSAR-2: A Universal Feature Extractor for SAR Ocean Observation",
+      "authors": [
+        "Alexandre Tuel",
+        "Thomas Kerdreux",
+        "Quentin Febvre",
+        "Alexis Mouche",
+        "Antoine Grouazel",
+        "Jean-Renaud Miadana",
+        "Antoine Audras",
+        "Chen Wang",
+        "Bertrand Chapron"
+      ],
+      "summary": "We present OceanSAR-2, the second generation of our foundation model for SAR-based ocean observation. Building on our earlier release, which pioneered self-supervised learning on Sentinel-1 Wave Mode data, OceanSAR-2 relies on improved SSL training and dynamic data curation strategies, which enhances performance while reducing training cost. OceanSAR-2 demonstrates strong transfer performance across downstream tasks, including geophysical pattern classification, ocean surface wind vector and significant wave height estimation, and iceberg detection. We release standardized benchmark datasets, providing a foundation for systematic evaluation and advancement of SAR models for ocean applications.",
+      "published": "2026-01-12T10:20:43Z",
+      "updated": "2026-01-12T10:20:43Z",
+      "arxiv_id": "2601.07392v1",
+      "abs_url": "http://arxiv.org/abs/2601.07392v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07392v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "comment": "accepted at EUSAR 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "无监督与弱监督",
+        "SAR遥感",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 7,
+      "anchor_terms": [
+        "foundation model",
+        "SAR",
+        "Sentinel-1"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "SAR",
+        "self-supervised",
+        "self-supervised learning",
+        "Sentinel-1"
+      ],
+      "title_zh": "OceanSAR-2：SAR海洋观测通用特征提取器",
+      "summary_zh": "我们推出了 OceanSAR-2，这是我们基于 SAR 的海洋观测的第二代基础模型。 OceanSAR-2 建立在我们早期版本的基础上，该版本率先对 Sentinel-1 波浪模式数据进行自我监督学习，OceanSAR-2 依赖于改进的 SSL 训练和动态数据管理策略，从而提高了性能，同时降低了训练成本。 OceanSAR-2 在下游任务中展示了强大的传输性能，包括地球物理模式分类、海洋表面风矢量和有效波高估计以及冰山检测。我们发布标准化基准数据集，为海洋应用SAR模型的系统评估和改进提供基础。"
+    },
+    {
+      "title": "CompNO: A Novel Foundation Model approach for solving Partial Differential Equations",
+      "authors": [
+        "Hamda Hmida",
+        "Hsiu-Wen Chang Joly",
+        "Youssef Mesri"
+      ],
+      "summary": "Partial differential equations (PDEs) govern a wide range of physical phenomena, but their numerical solution remains computationally demanding, especially when repeated simulations are required across many parameter settings. Recent Scientific Foundation Models (SFMs) aim to alleviate this cost by learning universal surrogates from large collections of simulated systems, yet they typically rely on monolithic architectures with limited interpretability and high pretraining expense. In this work we introduce Compositional Neural Operators (CompNO), a compositional neural operator framework for parametric PDEs. Instead of pretraining a single large model on heterogeneous data, CompNO first learns a library of Foundation Blocks, where each block is a parametric Fourier neural operator specialized to a fundamental differential operator (e.g. convection, diffusion, nonlinear convection). These blocks are then assembled, via lightweight Adaptation Blocks, into task-specific solvers that approximate the temporal evolution operator for target PDEs. A dedicated boundary-condition operator further enforces Dirichlet constraints exactly at inference time. We validate CompNO on one-dimensional convection, diffusion, convection--diffusion and Burgers' equations from the PDEBench suite. The proposed framework achieves lower relative L2 error than strong baselines (PFNO, PDEFormer and in-context learning based models) on linear parametric systems, while remaining competitive on nonlinear Burgers' flows. The model maintains exact boundary satisfaction with zero loss at domain boundaries, and exhibits robust generalization across a broad range of Peclet and Reynolds numbers. These results demonstrate that compositional neural operators provide a scalable and physically interpretable pathway towards foundation models for PDEs.",
+      "published": "2026-01-12T10:04:48Z",
+      "updated": "2026-01-12T10:04:48Z",
+      "arxiv_id": "2601.07384v1",
+      "abs_url": "http://arxiv.org/abs/2601.07384v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07384v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "Under review at MDPI",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 5,
+      "anchor_terms": [
+        "in-context learning"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "in-context learning",
+        "large model",
+        "robust"
+      ],
+      "title_zh": "CompNO：一种求解偏微分方程的新型基础模型方法",
+      "summary_zh": "偏微分方程 (PDE) 控制着广泛的物理现象，但它们的数值解仍然需要大量计算，特别是当需要在许多参数设置上进行重复模拟时。最近的科学基础模型（SFM）旨在通过从大量模拟系统中学习通用代理来减轻这种成本，但它们通常依赖于可解释性有限且预训练费用较高的整体架构。在这项工作中，我们介绍了组合神经算子（CompNO），这是一种用于参数偏微分方程的组合神经算子框架。 CompNO 不是在异构数据上预训练单个大型模型，而是首先学习基础块库，其中每个块都是专门用于基本微分算子（例如对流、扩散、非线性对流）的参数傅里叶神经算子。然后，通过轻量级适应块将这些块组装成特定于任务的求解器，以近似目标偏微分方程的时间演化算子。专用的边界条件运算符进一步在推理时精确地强制实施狄利克雷约束。我们在 PDEBench 套件中的一维对流、扩散、对流-扩散和 Burgers 方程上验证了 CompNO。所提出的框架在线性参数系统上实现了比强基线（PFNO、PDEFormer 和基于上下文学习的模型）更低的相对 L2 误差，同时在非线性 Burgers 流上保持竞争力。该模型在域边界处保持精确的边界满意度和零损失，并在广泛的佩克莱特和雷诺数中表现出强大的泛化能力。这些结果表明，组合神经算子为偏微分方程的基础模型提供了一条可扩展且物理上可解释的途径。"
+    },
+    {
+      "title": "OpenTinker: Separating Concerns in Agentic Reinforcement Learning",
+      "authors": [
+        "Siqi Zhu",
+        "Jiaxuan You"
+      ],
+      "summary": "We introduce OpenTinker, an infrastructure for reinforcement learning (RL) of large language model (LLM) agents built around a separation of concerns across algorithm design, execution, and agent-environment interaction. Rather than relying on monolithic, end-to-end RL pipelines, OpenTinker decomposes agentic learning systems into lightweight, composable components with clearly defined abstraction boundaries. Users specify agents, environments, and interaction protocols, while inference and training are delegated to a managed execution runtime. OpenTinker introduces a centralized scheduler for managing training and inference workloads, including LoRA-based and full-parameter RL, supervised fine-tuning, and inference, over shared resources. We further discuss design principles for extending OpenTinker to multi-agent training. Finally, we present a set of RL use cases that demonstrate the effectiveness of the framework in practical agentic learning scenarios.",
+      "published": "2026-01-12T09:57:46Z",
+      "updated": "2026-01-12T09:57:46Z",
+      "arxiv_id": "2601.07376v1",
+      "abs_url": "http://arxiv.org/abs/2601.07376v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07376v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.DC"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 4,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA"
+      ],
+      "title_zh": "OpenTinker：分离代理强化学习中的关注点",
+      "summary_zh": "我们引入了 OpenTinker，这是一种大型语言模型 (LLM) 代理的强化学习 (RL) 基础设施，围绕算法设计、执行和代理与环境交互的关注点分离而构建。 OpenTinker 不依赖于单一的、端到端的 RL 管道，而是将代理学习系统分解为具有明确定义的抽象边界的轻量级、可组合组件。用户指定代理、环境和交互协议，而推理和训练则委托给托管执行运行时。 OpenTinker 引入了一个集中式调度程序，用于管理训练和推理工作负载，包括基于 LoRA 的全参数 RL、监督微调和共享资源上的推理。我们进一步讨论将 OpenTinker 扩展到多智能体训练的设计原则。最后，我们提出了一组 RL 用例，展示了该框架在实际代理学习场景中的有效性。"
+    },
+    {
+      "title": "The Semantic Lifecycle in Embodied AI: Acquisition, Representation and Storage via Foundation Models",
+      "authors": [
+        "Shuai Chen",
+        "Hao Chen",
+        "Yuanchen Bei",
+        "Tianyang Zhao",
+        "Zhibo Zhou",
+        "Feiran Huang"
+      ],
+      "summary": "Semantic information in embodied AI is inherently multi-source and multi-stage, making it challenging to fully leverage for achieving stable perception-to-action loops in real-world environments. Early studies have combined manual engineering with deep neural networks, achieving notable progress in specific semantic-related embodied tasks. However, as embodied agents encounter increasingly complex environments and open-ended tasks, the demand for more generalizable and robust semantic processing capabilities has become imperative. Recent advances in foundation models (FMs) address this challenge through their cross-domain generalization abilities and rich semantic priors, reshaping the landscape of embodied AI research. In this survey, we propose the Semantic Lifecycle as a unified framework to characterize the evolution of semantic knowledge within embodied AI driven by foundation models. Departing from traditional paradigms that treat semantic processing as isolated modules or disjoint tasks, our framework offers a holistic perspective that captures the continuous flow and maintenance of semantic knowledge. Guided by this embodied semantic lifecycle, we further analyze and compare recent advances across three key stages: acquisition, representation, and storage. Finally, we summarize existing challenges and outline promising directions for future research.",
+      "published": "2026-01-12T08:58:39Z",
+      "updated": "2026-01-12T08:58:39Z",
+      "arxiv_id": "2601.08876v1",
+      "abs_url": "http://arxiv.org/abs/2601.08876v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.08876v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "小样本与域泛化"
+      ],
+      "topic": "基础模型",
+      "score": 6,
+      "anchor_terms": [
+        "domain generalization"
+      ],
+      "matched_terms": [
+        "domain generalization",
+        "foundation model",
+        "generalizable",
+        "robust"
+      ],
+      "title_zh": "嵌入式人工智能中的语义生命周期：通过基础模型获取、表示和存储",
+      "summary_zh": "Semantic information in embodied AI is inherently multi-source and multi-stage, making it challenging to fully leverage for achieving stable perception-to-action loops in real-world environments. Early studies have combined manual engineering with deep neural networks, achieving notable progress in specific semantic-related embodied tasks. However, as embodied agents encounter increasingly complex environments and open-ended tasks, the demand for more generalizable and robust semantic processing capabilities has become imperative.基础模型（FM）的最新进展通过其跨领域泛化能力和丰富的语义先验解决了这一挑战，重塑了具体人工智能研究的格局。在本次调查中，我们提出语义生命周期作为一个统一的框架来描述由基础模型驱动的具体人工智能中语义知识的演变。 Departing from traditional paradigms that treat semantic processing as isolated modules or disjoint tasks, our framework offers a holistic perspective that captures the continuous flow and maintenance of semantic knowledge.在这个具体语义生命周期的指导下，我们进一步分析和比较了三个关键阶段的最新进展：获取、表示和存储。最后，我们总结了现有的挑战并概述了未来研究的有希望的方向。"
+    },
+    {
+      "title": "Heterogeneous Multi-Expert Reinforcement Learning for Long-Horizon Multi-Goal Tasks in Autonomous Forklifts",
+      "authors": [
+        "Yun Chen",
+        "Bowei Huang",
+        "Fan Guo",
+        "Kang Song"
+      ],
+      "summary": "Autonomous mobile manipulation in unstructured warehouses requires a balance between efficient large-scale navigation and high-precision object interaction. Traditional end-to-end learning approaches often struggle to handle the conflicting demands of these distinct phases. Navigation relies on robust decision-making over large spaces, while manipulation needs high sensitivity to fine local details. Forcing a single network to learn these different objectives simultaneously often causes optimization interference, where improving one task degrades the other. To address these limitations, we propose a Heterogeneous Multi-Expert Reinforcement Learning (HMER) framework tailored for autonomous forklifts. HMER decomposes long-horizon tasks into specialized sub-policies controlled by a Semantic Task Planner. This structure separates macro-level navigation from micro-level manipulation, allowing each expert to focus on its specific action space without interference. The planner coordinates the sequential execution of these experts, bridging the gap between task planning and continuous control. Furthermore, to solve the problem of sparse exploration, we introduce a Hybrid Imitation-Reinforcement Training Strategy. This method uses expert demonstrations to initialize the policy and Reinforcement Learning for fine-tuning. Experiments in Gazebo simulations show that HMER significantly outperforms sequential and end-to-end baselines. Our method achieves a task success rate of 94.2\\% (compared to 62.5\\% for baselines), reduces operation time by 21.4\\%, and maintains placement error within 1.5 cm, validating its efficacy for precise material handling.",
+      "published": "2026-01-12T08:27:24Z",
+      "updated": "2026-01-12T08:27:24Z",
+      "arxiv_id": "2601.07304v1",
+      "abs_url": "http://arxiv.org/abs/2601.07304v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07304v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "comment": "9 pages",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 3,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "LoRA",
+        "robust"
+      ],
+      "title_zh": "自主叉车长视野多目标任务的异构多专家强化学习",
+      "summary_zh": "非结构化仓库中的自主移动操纵需要在高效的大规模导航和高精度的对象交互之间取得平衡。传统的端到端学习方法常常难以处理这些不同阶段的相互冲突的需求。导航依赖于对大空间的稳健决策，而操作则需要对局部细节的高度敏感。迫使单个网络同时学习这些不同的目标通常会导致优化干扰，其中改进一项任务会降低另一项任务的性能。为了解决这些限制，我们提出了一种专为自动叉车量身定制的异构多专家强化学习（HMER）框架。 HMER 将长期任务分解为由语义任务规划器控制的专门子策略。这种结构将宏观层面的导航与微观层面的操作分开，使每个专家都能够专注于其特定的行动空间而不受干扰。规划器协调这些专家的顺序执行，弥合任务规划和持续控制之间的差距。此外，为了解决稀疏探索问题，我们引入了混合模仿强化训练策略。该方法使用专家演示来初始化策略并使用强化学习进行微调。 Gazebo 模拟实验表明，HMER 显着优于顺序和端到端基线。我们的方法实现了 94.2% 的任务成功率（基准为 62.5%），减少了 21.4% 的操作时间，并将放置误差保持在 1.5 厘米以内，验证了其精确物料搬运的功效。"
+    },
+    {
+      "title": "From Landslide Conditioning Factors to Satellite Embeddings: Evaluating the Utilisation of Google AlphaEarth for Landslide Susceptibility Mapping using Deep Learning",
+      "authors": [
+        "Yusen Cheng",
+        "Qinfeng Zhu",
+        "Lei Fan"
+      ],
+      "summary": "Data-driven landslide susceptibility mapping (LSM) typically relies on landslide conditioning factors (LCFs), whose availability, heterogeneity, and preprocessing-related uncertainties can constrain mapping reliability. Recently, Google AlphaEarth (AE) embeddings, derived from multi-source geospatial observations, have emerged as a unified representation of Earth surface conditions. This study evaluated the potential of AE embeddings as alternative predictors for LSM. Two AE representations, including retained principal components and the full set of 64 embedding bands, were systematically compared with conventional LCFs across three study areas (Nantou County, Taiwan; Hong Kong; and part of Emilia-Romagna, Italy) using three deep learning models (CNN1D, CNN2D, and Vision Transformer). Performance was assessed using multiple evaluation metrics, ROC-AUC analysis, error statistics, and spatial pattern assessment. Results showed that AE-based models consistently outperformed LCFs across all regions and models, yielding higher F1-scores, AUC values, and more stable error distributions. Such improvement was most pronounced when using the full 64-band AE representation, with F1-score improvements of approximately 4% to 15% and AUC increased ranging from 0.04 to 0.11, depending on the study area and model. AE-based susceptibility maps also exhibited clearer spatial correspondence with observed landslide occurrences and enhanced sensitivity to localised landslide-prone conditions. Performance improvements were more evident in Nantou and Emilia than in Hong Kong, revealing that closer temporal alignment between AE embeddings and landslide inventories may lead to more effective LSM outcomes. These findings highlight the strong potential of AE embeddings as a standardised and information-rich alternative to conventional LCFs for LSM.",
+      "published": "2026-01-12T07:17:43Z",
+      "updated": "2026-01-12T07:17:43Z",
+      "arxiv_id": "2601.07268v1",
+      "abs_url": "http://arxiv.org/abs/2601.07268v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07268v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 8,
+      "anchor_terms": [
+        "geospatial",
+        "temporal",
+        "vision transformer"
+      ],
+      "matched_terms": [
+        "geospatial",
+        "satellite",
+        "temporal",
+        "transformer",
+        "vision transformer"
+      ],
+      "title_zh": "从滑坡调节因素到卫星嵌入：使用深度学习评估 Google AlphaEarth 在滑坡敏感性绘图中的使用情况",
+      "summary_zh": "数据驱动的滑坡敏感性测绘（LSM）通常依赖于滑坡调节因子（LCF），其可用性、异质性和预处理相关的不确定性会限制测绘的可靠性。最近，源自多源地理空间观测的 Google AlphaEarth (AE) 嵌入已成为地球表面状况的统一表示。这项研究评估了 AE 嵌入作为 LSM 替代预测因子的潜力。使用三种深度学习模型（CNN1D、CNN2D 和 Vision Transformer），将两个 AE 表示（包括保留的主成分和全套 64 个嵌入带）与三个研究区域（台湾南投县、香港和意大利艾米利亚-罗马涅部分地区）的传统 LCF 进行系​​统比较。使用多种评估指标、ROC-AUC 分析、错误统计和空间模式评估来评估性能。结果表明，基于 AE 的模型在所有区域和模型中始终优于 LCF，产生更高的 F1 分数、AUC 值和更稳定的误差分布。当使用完整的 64 波段 AE 表示时，这种改进最为明显，F1 分数改进约为 4% 至 15%，AUC 增加范围为 0.04 至 0.11，具体取决于研究领域和模型。基于 AE 的敏感性图还表现出与观察到的滑坡发生情况更清晰的空间对应性，并增强了对局部滑坡易发条件的敏感性。南投和艾米利亚的性能改进比香港更明显，这表明 AE 嵌入和滑坡清单之间更紧密的时间一致性可能会带来更有效的 LSM 结果。这些发现凸显了 AE 嵌入作为 LSM 传统 LCF 的标准化且信息丰富的替代方案的巨大潜力。"
+    },
+    {
+      "title": "DDT: A Dual-Masking Dual-Expert Transformer for Energy Time-Series Forecasting",
+      "authors": [
+        "Mingnan Zhu",
+        "Qixuan Zhang",
+        "Yixuan Cheng",
+        "Fangzhou Gu",
+        "Shiming Lin"
+      ],
+      "summary": "Accurate energy time-series forecasting is crucial for ensuring grid stability and promoting the integration of renewable energy, yet it faces significant challenges from complex temporal dependencies and the heterogeneity of multi-source data. To address these issues, we propose DDT, a novel and robust deep learning framework for high-precision time-series forecasting. At its core, DDT introduces two key innovations. First, we design a dual-masking mechanism that synergistically combines a strict causal mask with a data-driven dynamic mask. This novel design ensures theoretical causal consistency while adaptively focusing on the most salient historical information, overcoming the rigidity of traditional masking techniques. Second, our architecture features a dual-expert system that decouples the modeling of temporal dynamics and cross-variable correlations into parallel, specialized pathways, which are then intelligently integrated through a dynamic gated fusion module. We conducted extensive experiments on 7 challenging energy benchmark datasets, including ETTh, Electricity, and Solar. The results demonstrate that DDT consistently outperforms strong state-of-the-art baselines across all prediction horizons, establishing a new benchmark for the task.",
+      "published": "2026-01-12T06:36:36Z",
+      "updated": "2026-01-12T06:36:36Z",
+      "arxiv_id": "2601.07250v1",
+      "abs_url": "http://arxiv.org/abs/2601.07250v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07250v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "数据集/评测"
+      ],
+      "topic": "时间序列与视频",
+      "score": 5,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "robust",
+        "temporal",
+        "time-series",
+        "transformer"
+      ],
+      "title_zh": "DDT：用于能源时间序列预测的双屏蔽双专家变压器",
+      "summary_zh": "准确的能源时间序列预测对于确保电网稳定和促进可再生能源并网至关重要，但它面临着复杂的时间依赖性和多源数据异构性的重大挑战。为了解决这些问题，我们提出了 DDT，这是一种新颖且强大的深度学习框架，用于高精度时间序列预测。 DDT 的核心引入了两项关键创新。首先，我们设计了一种双重屏蔽机制，将严格的因果屏蔽与数据驱动的动态屏蔽协同结合。这种新颖的设计确保了理论因果一致性，同时自适应地关注最显着的历史信息，克服了传统屏蔽技术的僵化性。其次，我们的架构采用双专家系统，将时间动态和跨变量相关性的建模解耦为并行的专用路径，然后通过动态门控融合模块智能集成。我们对 7 个具有挑战性的能源基准数据集（包括 ETTh、电力和太阳能）进行了广泛的实验。结果表明，DDT 在所有预测范围内始终优于最先进的基线，为该任务建立了新的基准。"
+    },
+    {
+      "title": "Consolidation or Adaptation? PRISM: Disentangling SFT and RL Data via Gradient Concentration",
+      "authors": [
+        "Yang Zhao",
+        "Yangou Ouyang",
+        "Xiao Ding",
+        "Hepeng Wang",
+        "Bibo Cai",
+        "Kai Xiong",
+        "Jinglong Gao",
+        "Zhouhao Sun",
+        "Li Du",
+        "Bing Qin",
+        "Ting Liu"
+      ],
+      "summary": "While Hybrid Supervised Fine-Tuning (SFT) followed by Reinforcement Learning (RL) has become the standard paradigm for training LLM agents, effective mechanisms for data allocation between these stages remain largely underexplored. Current data arbitration strategies often rely on surface-level heuristics that fail to diagnose intrinsic learning needs. Since SFT targets pattern consolidation through imitation while RL drives structural adaptation via exploration, misaligning data with these functional roles causes severe optimization interference. We propose PRISM, a dynamics-aware framework grounded in Schema Theory that arbitrates data based on its degree of cognitive conflict with the model's existing knowledge. By analyzing the spatial geometric structure of gradients, PRISM identifies data triggering high spatial concentration as high-conflict signals that require RL for structural restructuring. In contrast, data yielding diffuse updates is routed to SFT for efficient consolidation. Extensive experiments on WebShop and ALFWorld demonstrate that PRISM achieves a Pareto improvement, outperforming state-of-the-art hybrid methods while reducing computational costs by up to 3.22$\\times$. Our findings suggest that disentangling data based on internal optimization regimes is crucial for scalable and robust agent alignment.",
+      "published": "2026-01-12T05:43:20Z",
+      "updated": "2026-04-12T15:49:11Z",
+      "arxiv_id": "2601.07224v2",
+      "abs_url": "http://arxiv.org/abs/2601.07224v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.07224v2",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "ACL2026 Main Conference",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 4,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "LLM",
+        "LoRA",
+        "robust"
+      ],
+      "title_zh": "整合还是适应？ PRISM：通过梯度浓度解开 SFT 和 RL 数据",
+      "summary_zh": "虽然混合监督微调 (SFT) 和强化学习 (RL) 已成为训练 LLM 代理的标准范例，但这些阶段之间数据分配的有效机制在很大程度上仍未得到充分探索。当前的数据仲裁策略通常依赖于表面启发法，无法诊断内在的学习需求。由于 SFT 的目标是通过模仿进行模式整合，而 RL 通过探索来推动结构适应，因此数据与这些功能角色的不一致会导致严重的优化干扰。我们提出了 PRISM，这是一个基于图式理论的动态感知框架，它根据数据与模型现有知识的认知冲突程度来仲裁数据。通过分析梯度的空间几何结构，PRISM 将触发高空间集中的数据识别为需要 RL 进行结构重组的高冲突信号。相比之下，产生分散更新的数据被路由到 SFT 以进行有效整合。 WebShop 和 ALFWorld 上的大量实验表明，PRISM 实现了帕累托改进，优于最先进的混合方法，同时将计算成本降低高达 3.22$\\times$。我们的研究结果表明，基于内部优化机制解开数据对于可扩展和稳健的代理对齐至关重要。"
+    },
+    {
+      "title": "A Safety-Constrained Reinforcement Learning Framework for Reliable Wireless Autonomy",
+      "authors": [
+        "Abdikarim Mohamed Ibrahim",
+        "Rosdiadee Nordin"
+      ],
+      "summary": "Artificial intelligence (AI) and reinforcement learning (RL) have shown significant promise in wireless systems, enabling dynamic spectrum allocation, traffic management, and large-scale Internet of Things (IoT) coordination. However, their deployment in mission-critical applications introduces the risk of unsafe emergent behaviors, such as UAV collisions, denial-of-service events, or instability in vehicular networks. Existing safety mechanisms are predominantly reactive, relying on anomaly detection or fallback controllers that intervene only after unsafe actions occur, which cannot guarantee reliability in ultra-reliable low-latency communication (URLLC) settings. In this work, we propose a proactive safety-constrained RL framework that integrates proof-carrying control (PCC) with empowerment-budgeted (EB) enforcement. Each agent action is verified through lightweight mathematical certificates to ensure compliance with interference constraints, while empowerment budgets regulate the frequency of safety overrides to balance safety and autonomy. We implement this framework on a wireless uplink scheduling task using Proximal Policy Optimization (PPO). Simulation results demonstrate that the proposed PCC+EB controller eliminates unsafe transmissions while preserving system throughput and predictable autonomy. Compared with unconstrained and reactive baselines, our method achieves provable safety guarantees with minimal performance degradation. These results highlight the potential of proactive safety constrained RL to enable trustworthy wireless autonomy in future 6G networks.",
+      "published": "2026-01-12T02:02:52Z",
+      "updated": "2026-01-12T02:02:52Z",
+      "arxiv_id": "2602.13207v1",
+      "abs_url": "http://arxiv.org/abs/2602.13207v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.13207v1",
+      "primary_category": "cs.NI",
+      "categories": [
+        "cs.NI",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "无人机/UAV"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 2,
+      "anchor_terms": [
+        "UAV"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "UAV"
+      ],
+      "title_zh": "用于可靠无线自治的安全约束强化学习框架",
+      "summary_zh": "人工智能 (AI) 和强化学习 (RL) 在无线系统中显示出巨大的前景，可实现动态频谱分配、流量管理和大规模物联网 (IoT) 协调。然而，它们在关键任务应用程序中的部署会带来不安全紧急行为的风险，例如无人机碰撞、拒绝服务事件或车辆网络不稳定。现有的安全机制主要是反应性的，依赖于异常检测或后备控制器，仅在不安全操作发生后进行干预，这无法保证超可靠低延迟通信（URLLC）设置的可靠性。在这项工作中，我们提出了一个主动的安全约束强化学习框架，它将证明控制（PCC）与授权预算（EB）执行相结合。每个代理动作都通过轻量级数学证书进行验证，以确保符合干扰约束，同时授权预算调节安全覆盖的频率，以平衡安全性和自主性。我们使用近端策略优化（PPO）在无线上行链路调度任务上实现该框架。仿真结果表明，所提出的 PCC+EB 控制器消除了不安全的传输，同时保留了系统吞吐量和可预测的自主性。与无约束和反应性基线相比，我们的方法以最小的性能下降实现了可证明的安全保证。这些结果凸显了主动安全约束强化学习在未来 6G 网络中实现值得信赖的无线自治的潜力。"
+    }
+  ]
+}

@@ -1,0 +1,851 @@
+{
+  "date": "2026-01-16",
+  "generated_at": "2026-06-03T04:43:59.952470+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202601160000 TO 202601162359]",
+  "total_fetched": 253,
+  "total_matched": 18,
+  "papers": [
+    {
+      "title": "PRISM-CAFO: Prior-conditioned Remote-sensing Infrastructure Segmentation and Mapping for CAFOs",
+      "authors": [
+        "Oishee Bintey Hoque",
+        "Nibir Chandra Mandal",
+        "Kyle Luong",
+        "Amanda Wilson",
+        "Samarth Swarup",
+        "Madhav Marathe",
+        "Abhijin Adiga"
+      ],
+      "summary": "Large-scale livestock operations pose significant risks to human health and the environment, while also being vulnerable to threats such as infectious diseases and extreme weather events. As the number of such operations continues to grow, accurate and scalable mapping has become increasingly important. In this work, we present an infrastructure-first, explainable pipeline for identifying and characterizing Concentrated Animal Feeding Operations (CAFOs) from aerial and satellite imagery. Our method (i) detects candidate infrastructure (e.g., barns, feedlots, manure lagoons, silos) with a domain-tuned YOLOv8 detector, then derives SAM2 masks from these boxes and filters component-specific criteria; (ii) extracts structured descriptors (e.g., counts, areas, orientations, and spatial relations) and fuses them with deep visual features using a lightweight spatial cross-attention classifier; and (iii) outputs both CAFO type predictions and mask-level attributions that link decisions to visible infrastructure. Through comprehensive evaluation, we show that our approach achieves state-of-the-art performance, with Swin-B+PRISM-CAFO surpassing the best performing baseline by up to 15\\%. Beyond strong predictive performance across diverse U.S. regions, we run systematic gradient--activation analyses that quantify the impact of domain priors and show how specific infrastructure (e.g., barns, lagoons) shapes classification decisions. We release code, infrastructure masks, and descriptors to support transparent, scalable monitoring of livestock infrastructure, enabling risk modeling, change detection, and targeted regulatory action. Github: https://github.com/Nibir088/PRISM-CAFO.",
+      "published": "2026-01-16T17:16:26Z",
+      "updated": "2026-01-26T03:39:10Z",
+      "arxiv_id": "2601.11451v2",
+      "abs_url": "http://arxiv.org/abs/2601.11451v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.11451v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/Nibir088/PRISM-CAFO",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "目标检测",
+        "变化检测",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 8,
+      "anchor_terms": [
+        "change detection",
+        "satellite image",
+        "satellite imagery"
+      ],
+      "matched_terms": [
+        "aerial",
+        "change detection",
+        "cross-attention",
+        "satellite",
+        "satellite image",
+        "satellite imagery",
+        "YOLO"
+      ],
+      "title_zh": "PRISM-CAFO：CAFO 的先决条件遥感基础设施分割和绘图",
+      "summary_zh": "大规模畜牧业对人类健康和环境构成重大风险，同时也容易受到传染病和极端天气事件等威胁。随着此类操作数量的持续增长，准确且可扩展的绘图变得越来越重要。在这项工作中，我们提出了一个基础设施优先、可解释的管道，用于从航空和卫星图像中识别和描述集中动物饲养作业 (CAFO)。我们的方法 (i) 使用域调整的 YOLOv8 检测器检测候选基础设施（例如谷仓、饲养场、粪肥泻湖、筒仓），然后从这些盒子中导出 SAM2 掩模并过滤组件特定的标准； (ii) 提取结构化描述符（例如计数、面积、方向和空间关系），并使用轻量级空间交叉注意分类器将它们与深层视觉特征融合； (iii) 输出 CAFO 类型预测和将决策与可见基础设施联系起来的掩模级归因。通过综合评估，我们表明我们的方法实现了最先进的性能，Swin-B+PRISM-CAFO 超过最佳性能基线高达 15%。除了在美国不同地区的强大预测性能之外，我们还进行了系统的梯度激活分析，以量化领域先验的影响，并显示特定基础设施（例如谷仓、泻湖）如何影响分类决策。我们发布代码、基础设施掩码和描述符，以支持对畜牧基础设施进行透明、可扩展的监控，从而实现风险建模、变化检测和有针对性的监管行动。 Github：https://github.com/Nibir088/PRISM-CAFO。"
+    },
+    {
+      "title": "Context-Aware Semantic Segmentation via Stage-Wise Attention",
+      "authors": [
+        "Antoine Carreaud",
+        "Elias Naha",
+        "Arthur Chansel",
+        "Nina Lahellec",
+        "Jan Skaloud",
+        "Adrien Gressin"
+      ],
+      "summary": "Semantic ultra-high-resolution (UHR) image segmentation is essential in remote sensing applications such as aerial mapping and environmental monitoring. Transformer-based models remain challenging in this setting because memory grows quadratically with the number of tokens, limiting either spatial resolution or contextual scope. We introduce CASWiT (Context-Aware Stage-Wise Transformer), a dual-branch Swin-based architecture that injects low-resolution contextual information into fine-grained high-resolution features through lightweight stage-wise cross-attention. To strengthen cross-scale learning, we also propose a SimMIM-style pretraining strategy based on masked reconstruction of the high-resolution image. Extensive experiments on the large-scale FLAIR-HUB aerial dataset demonstrate the effectiveness of CASWiT. Under our RGB-only UHR protocol, CASWiT reaches 66.37% mIoU with a SegFormer decoder, improving over strong RGB baselines while also improving boundary quality. On the URUR benchmark, CASWiT reaches 49.2% mIoU under the official evaluation protocol, and it also transfers effectively to medical UHR segmentation benchmarks. Code and pretrained models are available at https://huggingface.co/collections/heig-vd-geo/caswit",
+      "published": "2026-01-16T14:06:46Z",
+      "updated": "2026-04-10T18:50:16Z",
+      "arxiv_id": "2601.11310v2",
+      "abs_url": "http://arxiv.org/abs/2601.11310v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.11310v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://huggingface.co/collections/heig-vd-geo/caswit",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "语义分割",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 9,
+      "anchor_terms": [
+        "remote sensing",
+        "semantic segmentation"
+      ],
+      "matched_terms": [
+        "aerial",
+        "cross-attention",
+        "remote sensing",
+        "semantic segmentation",
+        "transformer"
+      ],
+      "title_zh": "通过阶段关注进行上下文感知语义分割",
+      "summary_zh": "语义超高分辨率（UHR）图像分割对于航空测绘和环境监测等遥感应用至关重要。在这种情况下，基于 Transformer 的模型仍然具有挑战性，因为内存随着标记数量呈二次方增长，限制了空间分辨率或上下文范围。我们引入了 CASWiT（Context-Aware Stage-Wise Transformer），这是一种基于 Swin 的双分支架构，通过轻量级的 stage-wise 交叉注意力将低分辨率上下文信息注入细粒度的高分辨率特征。为了加强跨尺度学习，我们还提出了一种基于高分辨率图像掩模重建的 SimMIM 式预训练策略。在大规模 FLAIR-HUB 航空数据集上进行的大量实验证明了 CASWiT 的有效性。在我们的纯 RGB UHR 协议下，CASWiT 通过 SegFormer 解码器达到 66.37% mIoU，在强 RGB 基线的基础上进行了改进，同时还提高了边界质量。在 URUR 基准上，CASWiT 在官方评估协议下达到了 49.2% mIoU，并且它也有效地转移到医学 UHR 分割基准上。代码和预训练模型可在 https://huggingface.co/collections/heig-vd-geo/caswit 获取"
+    },
+    {
+      "title": "FTDMamba: Frequency-Assisted Temporal Dilation Mamba for Unmanned Aerial Vehicle Video Anomaly Detection",
+      "authors": [
+        "Cheng-Zhuang Liu",
+        "Si-Bao Chen",
+        "Qing-Ling Shu",
+        "Chris Ding",
+        "Jin Tang",
+        "Bin Luo"
+      ],
+      "summary": "Recent advances in video anomaly detection (VAD) mainly focus on ground-based surveillance or unmanned aerial vehicle (UAV) videos with static backgrounds, whereas research on UAV videos with dynamic backgrounds remains limited. Unlike static scenarios, dynamically captured UAV videos exhibit multi-source motion coupling, where the motion of objects and UAV-induced global motion are intricately intertwined. Consequently, existing methods may misclassify normal UAV movements as anomalies or fail to capture true anomalies concealed within dynamic backgrounds. Moreover, many approaches do not adequately address the joint modeling of inter-frame continuity and local spatial correlations across diverse temporal scales. To overcome these limitations, we propose the Frequency-Assisted Temporal Dilation Mamba (FTDMamba) network for UAV VAD, including two core components: (1) a Frequency Decoupled Spatiotemporal Correlation Module, which disentangles coupled motion patterns and models global spatiotemporal dependencies through frequency analysis; and (2) a Temporal Dilation Mamba Module, which leverages Mamba's sequence modeling capability to jointly learn fine-grained temporal dynamics and local spatial structures across multiple temporal receptive fields. Additionally, unlike existing UAV VAD datasets which focus on static backgrounds, we construct a large-scale Moving UAV VAD dataset (MUVAD), comprising 222,736 frames with 240 anomaly events across 12 anomaly types. Extensive experiments demonstrate that FTDMamba achieves state-of-the-art (SOTA) performance on two public static benchmarks and the new MUVAD dataset. The code and MUVAD dataset will be available at: https://github.com/uavano/FTDMamba.",
+      "published": "2026-01-16T13:01:53Z",
+      "updated": "2026-01-16T13:01:53Z",
+      "arxiv_id": "2601.11254v1",
+      "abs_url": "http://arxiv.org/abs/2601.11254v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.11254v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/uavano/FTDMamba",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "基础模型",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 11,
+      "anchor_terms": [
+        "anomaly detection",
+        "Mamba",
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "anomaly detection",
+        "Mamba",
+        "UAV",
+        "unmanned aerial vehicle"
+      ],
+      "title_zh": "FTDMamba：用于无人机视频异常检测的频率辅助时间扩张 Mamba",
+      "summary_zh": "视频异常检测（VAD）的最新进展主要集中在具有静态背景的地面监控或无人机（UAV）视频，而对具有动态背景的无人机视频的研究仍然有限。与静态场景不同，动态捕获的无人机视频表现出多源运动耦合，其中物体的运动和无人机引起的全局运动错综复杂地交织在一起。因此，现有方法可能会将正常的无人机运动错误地分类为异常，或者无法捕获隐藏在动态背景中的真正异常。此外，许多方法没有充分解决跨不同时间尺度的帧间连续性和局部空间相关性的联合建模。为了克服这些限制，我们提出了用于无人机VAD的频率辅助时间扩张曼巴（FTDMamba）网络，包括两个核心组件：（1）频率解耦时空相关模块，它解开耦合运动模式并通过频率分析对全局时空依赖性进行建模； (2) 时间扩张 Mamba 模块，利用 Mamba 的序列建模功能来共同学习跨多个时间感受野的细粒度时间动态和局部空间结构。此外，与专注于静态背景的现有无人机 VAD 数据集不同，我们构建了一个大规模移动无人机 VAD 数据集 (MUVAD)，其中包含 222,736 帧，其中包含 12 种异常类型的 240 个异常事件。大量实验表明，FTDMamba 在两个公共静态基准测试和新的 MUVAD 数据集上实现了最先进的 (SOTA) 性能。代码和 MUVAD 数据集可在以下网址获取：https://github.com/uavano/FTDMamba。"
+    },
+    {
+      "title": "GMM-COMET: Continual Source-Free Universal Domain Adaptation via a Mean Teacher and Gaussian Mixture Model-Based Pseudo-Labeling",
+      "authors": [
+        "Pascal Schlachter",
+        "Bin Yang"
+      ],
+      "summary": "Unsupervised domain adaptation tackles the problem that domain shifts between training and test data impair the performance of neural networks in many real-world applications. Thereby, in realistic scenarios, the source data may no longer be available during adaptation, and the label space of the target domain may differ from the source label space. This setting, known as source-free universal domain adaptation (SF-UniDA), has recently gained attention, but all existing approaches only assume a single domain shift from source to target. In this work, we present the first study on continual SF-UniDA, where the model must adapt sequentially to a stream of multiple different unlabeled target domains. Building upon our previous methods for online SF-UniDA, we combine their key ideas by integrating Gaussian mixture model-based pseudo-labeling within a mean teacher framework for improved stability over long adaptation sequences. Additionally, we introduce consistency losses for further robustness. The resulting method GMM-COMET provides a strong first baseline for continual SF-UniDA and is the only approach in our experiments to consistently improve upon the source-only model across all evaluated scenarios. Our code is available at https://github.com/pascalschlachter/GMM-COMET.",
+      "published": "2026-01-16T10:23:19Z",
+      "updated": "2026-01-16T10:23:19Z",
+      "arxiv_id": "2601.11161v1",
+      "abs_url": "http://arxiv.org/abs/2601.11161v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.11161v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/pascalschlachter/GMM-COMET",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "小样本与域泛化",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 5,
+      "anchor_terms": [
+        "source-free"
+      ],
+      "matched_terms": [
+        "domain adaptation",
+        "robust",
+        "source-free",
+        "unsupervised"
+      ],
+      "title_zh": "GMM-COMET：通过平均教师和基于高斯混合模型的伪标签进行持续无源通用域适应",
+      "summary_zh": "无监督域适应解决了训练和测试数据之间的域转换会损害许多现实应用中神经网络性能的问题。因此，在现实场景中，源数据在适配期间可能不再可用，并且目标域的标签空间可能与源标签空间不同。这种设置称为无源通用域适应（SF-UniDA），最近引起了人们的关注，但所有现有方法仅假设从源到目标的单个域转换。在这项工作中，我们提出了第一个关于连续 SF-UniDA 的研究，其中模型必须顺序适应多个不同的未标记目标域的流。在我们之前的在线 SF-UniDA 方法的基础上，我们通过将基于高斯混合模型的伪标记集成到平均教师框架内来结合它们的关键思想，以提高长适应序列的稳定性。此外，我们引入了一致性损失以进一步增强鲁棒性。由此产生的方法 GMM-COMET 为持续的 SF-UniDA 提供了强大的第一基线，并且是我们实验中在所有评估场景中持续改进纯源模型的唯一方法。我们的代码可在 https://github.com/pascalschlachter/GMM-COMET 获取。"
+    },
+    {
+      "title": "Physics-Constrained Denoising Autoencoders for Data-Scarce Wildfire UAV Sensing",
+      "authors": [
+        "Abdelrahman Ramadan",
+        "Zahra Dorbeigi Namaghi",
+        "Emily Taylor",
+        "Lucas Edwards",
+        "Xan Giuliani",
+        "David S. McLagan",
+        "Sidney Givigi",
+        "Melissa Greeff"
+      ],
+      "summary": "Wildfire monitoring requires high-resolution atmospheric measurements, yet low-cost sensors on Unmanned Aerial Vehicles (UAVs) exhibit baseline drift, cross-sensitivity, and response lag that corrupt concentration estimates. Traditional deep learning denoising approaches demand large datasets impractical to obtain from limited UAV flight campaigns. We present PC$^2$DAE, a physics-informed denoising autoencoder that addresses data scarcity by embedding physical constraints directly into the network architecture. Non-negative concentration estimates are enforced via softplus activations and physically plausible temporal smoothing, ensuring outputs are physically admissible by construction rather than relying on loss function penalties. The architecture employs hierarchical decoder heads for Black Carbon, Gas, and CO$_2$ sensor families, with two variants: PC$^2$DAE-Lean (21k parameters) for edge deployment and PC$^2$DAE-Wide (204k parameters) for offline processing. We evaluate on 7,894 synchronized 1 Hz samples collected from UAV flights during prescribed burns in Saskatchewan, Canada (approximately 2.2 hours of flight data), two orders of magnitude below typical deep learning requirements. PC$^2$DAE-Lean achieves 67.3\\% smoothness improvement and 90.7\\% high-frequency noise reduction with zero physics violations. Five baselines (LSTM-AE, U-Net, Transformer, CBDAE, DeSpaWN) produce 15--23\\% negative outputs. The lean variant outperforms wide (+5.6\\% smoothness), suggesting reduced capacity with strong inductive bias prevents overfitting in data-scarce regimes. Training completes in under 65 seconds on consumer hardware.",
+      "published": "2026-01-16T21:40:39Z",
+      "updated": "2026-01-16T21:40:39Z",
+      "arxiv_id": "2601.11794v1",
+      "abs_url": "http://arxiv.org/abs/2601.11794v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.11794v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CV",
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "语义分割",
+        "图像生成与重建",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 10,
+      "anchor_terms": [
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "denoising",
+        "transformer",
+        "U-Net",
+        "UAV",
+        "unmanned aerial vehicle"
+      ],
+      "title_zh": "用于数据稀缺野火无人机传感的物理约束去噪自动编码器",
+      "summary_zh": "野火监测需要高分辨率大气测量，但无人机 (UAV) 上的低成本传感器表现出基线漂移、交叉敏感性和响应滞后，从而影响了浓度估计。传统的深度学习去噪方法需要大量数据集，而从有限的无人机飞行活动中获取数据集是不切实际的。我们提出了 PC$^2$DAE，一种基于物理的去噪自动编码器，它通过将物理约束直接嵌入到网络架构中来解决数据稀缺问题。非负浓度估计是通过 softplus 激活和物理上合理的时间平滑来强制执行的，确保输出在构造上是物理上可接受的，而不是依赖于损失函数惩罚。该架构采用 Black Carbon、Gas 和 CO$_2$ 传感器系列的分层解码器头，有两种变体：用于边缘部署的 PC$^2$DAE-Lean（21k 参数）和用于离线处理的 PC$^2$DAE-Wide（204k 参数）。我们评估了在加拿大萨斯喀彻温省规定燃烧期间从无人机飞行中收集的 7,894 个同步 1 Hz 样本（大约 2.2 小时的飞行数据），比典型的深度学习要求低两个数量级。 PC$^2$DAE-Lean 实现了 67.3% 的平滑度提升和 90.7% 的高频降噪，且物理违规为零。五个基线（LSTM-AE、U-Net、Transformer、CBDAE、DeSpaWN）产生 15--23% 的负输出。精益变体的表现优于宽变体（+5.6\\% 平滑度），这表明强归纳偏差的容量减少可以防止数据稀缺状态下的过度拟合。在消费类硬件上，培训可在 65 秒内完成。"
+    },
+    {
+      "title": "Anisotropic Tensor Deconvolution of Hyperspectral Images",
+      "authors": [
+        "Xinjue Wang",
+        "Xiuheng Wang",
+        "Esa Ollila",
+        "Sergiy A. Vorobyov"
+      ],
+      "summary": "Hyperspectral image (HSI) deconvolution is a challenging ill-posed inverse problem, made difficult by the data's high dimensionality.We propose a parameter-parsimonious framework based on a low-rank Canonical Polyadic Decomposition (CPD) of the entire latent HSI $\\mathbf{\\mathcal{X}} \\in \\mathbb{R}^{P\\times Q \\times N}$.This approach recasts the problem from recovering a large-scale image with $PQN$ variables to estimating the CPD factors with $(P+Q+N)R$ variables.This model also enables a structure-aware, anisotropic Total Variation (TV) regularization applied only to the spatial factors, preserving the smooth spectral signatures.An efficient algorithm based on the Proximal Alternating Linearized Minimization (PALM) framework is developed to solve the resulting non-convex optimization problem.Experiments confirm the model's efficiency, showing a numerous parameter reduction of over two orders of magnitude and a compelling trade-off between model compactness and reconstruction accuracy.",
+      "published": "2026-01-16T16:29:13Z",
+      "updated": "2026-01-16T16:29:13Z",
+      "arxiv_id": "2601.11694v1",
+      "abs_url": "http://arxiv.org/abs/2601.11694v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.11694v1",
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "cs.CV",
+        "cs.LG",
+        "eess.SP"
+      ],
+      "comment": "To appear in ICASSP 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "高光谱/多光谱"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 4,
+      "anchor_terms": [
+        "hyperspectral image"
+      ],
+      "matched_terms": [
+        "hyperspectral",
+        "hyperspectral image"
+      ],
+      "title_zh": "高光谱图像的各向异性张量反卷积",
+      "summary_zh": "高光谱图像 (HSI) 反卷积是一个具有挑战性的不适定反问题，由于数据的高维度而变得困难。我们提出了一种基于整个潜在 HSI $\\mathbf{\\mathcal{X}} \\in \\mathbb{R}^{P\\times Q \\times N}$ 的低秩正则多元分解 (CPD) 的参数简约框架。这种方法将问题从恢复具有 $PQN$ 变量的大规模图像，以估计具有 $(P+Q+N)R$ 变量的 CPD 因子。该模型还支持仅应用于空间因子的结构感知、各向异性全变分 (TV) 正则化，保留平滑的光谱特征。开发了一种基于近端交替线性化最小化 (PALM) 框架的高效算法来解决由此产生的非凸优化问题。实验证实了模型的效率，显示出大量的参数减少超过两个数量级，并且在模型紧凑性和重建精度之间进行令人信服的权衡。"
+    },
+    {
+      "title": "Wetland mapping from sparse annotations with satellite image time series and temporal-aware segment anything model",
+      "authors": [
+        "Shuai Yuan",
+        "Tianwu Lin",
+        "Shuang Chen",
+        "Yu Xia",
+        "Peng Qin",
+        "Xiangyu Liu",
+        "Xiaoqing Xu",
+        "Nan Xu",
+        "Hongsheng Zhang",
+        "Jie Wang",
+        "Peng Gong"
+      ],
+      "summary": "Accurate wetland mapping is essential for ecosystem monitoring, yet dense pixel-level annotation is prohibitively expensive and practical applications usually rely on sparse point labels, under which existing deep learning models perform poorly, while strong seasonal and inter-annual wetland dynamics further render single-date imagery inadequate and lead to significant mapping errors; although foundation models such as SAM show promising generalization from point prompts, they are inherently designed for static images and fail to model temporal information, resulting in fragmented masks in heterogeneous wetlands. To overcome these limitations, we propose WetSAM, a SAM-based framework that integrates satellite image time series for wetland mapping from sparse point supervision through a dual-branch design, where a temporally prompted branch extends SAM with hierarchical adapters and dynamic temporal aggregation to disentangle wetland characteristics from phenological variability, and a spatial branch employs a temporally constrained region-growing strategy to generate reliable dense pseudo-labels, while a bidirectional consistency regularization jointly optimizes both branches. Extensive experiments across eight global regions of approximately 5,000 km2 each demonstrate that WetSAM substantially outperforms state-of-the-art methods, achieving an average F1-score of 85.58%, and delivering accurate and structurally consistent wetland segmentation with minimal labeling effort, highlighting its strong generalization capability and potential for scalable, low-cost, high-resolution wetland mapping.",
+      "published": "2026-01-16T16:10:32Z",
+      "updated": "2026-01-16T16:10:32Z",
+      "arxiv_id": "2601.11400v1",
+      "abs_url": "http://arxiv.org/abs/2601.11400v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.11400v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "实例分割",
+        "基础模型",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "农业与生态",
+        "数据集/评测"
+      ],
+      "topic": "实例分割",
+      "score": 9,
+      "anchor_terms": [
+        "foundation model",
+        "SAM",
+        "satellite image",
+        "temporal",
+        "time series"
+      ],
+      "matched_terms": [
+        "adapter",
+        "foundation model",
+        "SAM",
+        "satellite",
+        "satellite image",
+        "Segment Anything Model",
+        "temporal",
+        "time series"
+      ],
+      "title_zh": "使用卫星图像时间序列和时间感知分段任何模型的稀疏注释进行湿地绘图",
+      "summary_zh": "准确的湿地测绘对于生态系统监测至关重要，但密集的像素级注释成本高昂，实际应用通常依赖于稀疏的点标签，现有的深度学习模型表现不佳，而强大的季节性和年际湿地动态进一步导致单日期图像不足并导致严重的测绘错误；尽管 SAM 等基础模型显示出有希望的点提示泛化能力，但它们本质上是为静态图像设计的，无法对时间信息进行建模，从而导致异质湿地中出现碎片化的掩模。为了克服这些限制，我们提出了WetSAM，一个基于SAM的框架，通过双分支设计，从稀疏点监督集成了用于湿地测绘的卫星图像时间序列，其中时间提示分支通过分层适配器和动态时间聚合来扩展SAM，以将湿地特征与物候变化分开，空间分支采用时间约束区域生长策略来生成可靠的密集伪标签，而双向一致性正则化联合优化两个分支。在全球八个区域（每个区域约 5,000 平方公里）进行的广泛实验表明，WetSAM 的性能大大优于最先进的方法，平均 F1 分数达到 85.58%，并以最少的标记工作提供准确且结构一致的湿地分割，突出了其强大的泛化能力和可扩展、低成本、高分辨率湿地测绘的潜力。"
+    },
+    {
+      "title": "Assessing Building Heat Resilience Using UAV and Street-View Imagery with Coupled Global Context Vision Transformer",
+      "authors": [
+        "Steffen Knoblauch",
+        "Ram Kumar Muthusamy",
+        "Hao Li",
+        "Iddy Chazua",
+        "Benedcto Adamu",
+        "Innocent Maholi",
+        "Alexander Zipf"
+      ],
+      "summary": "Climate change is intensifying human heat exposure, particularly in densely built urban centers of the Global South. Low-cost construction materials and high thermal-mass surfaces further exacerbate this risk. Yet scalable methods for assessing such heat-relevant building attributes remain scarce. We propose a machine learning framework that fuses openly available unmanned aerial vehicle (UAV) and street-view (SV) imagery via a coupled global context vision transformer (CGCViT) to learn heat-relevant representations of urban structures. Thermal infrared (TIR) measurements from HotSat-1 are used to quantify the relationship between building attributes and heat-associated health risks. Our dual-modality cross-view learning approach outperforms the best single-modality models by up to $9.3\\%$, demonstrating that UAV and SV imagery provide valuable complementary perspectives on urban structures. The presence of vegetation surrounding buildings (versus no vegetation), brighter roofing (versus darker roofing), and roofing made of concrete, clay, or wood (versus metal or tarpaulin) are all significantly associated with lower HotSat-1 TIR values. Deployed across the city of Dar es Salaam, Tanzania, the proposed framework illustrates how household-level inequalities in heat exposure - often linked to socio-economic disadvantage and reflected in building materials - can be identified and addressed using machine learning. Our results point to the critical role of localized, data-driven risk assessment in shaping climate adaptation strategies that deliver equitable outcomes.",
+      "published": "2026-01-16T15:13:30Z",
+      "updated": "2026-01-16T15:13:30Z",
+      "arxiv_id": "2601.11357v1",
+      "abs_url": "http://arxiv.org/abs/2601.11357v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.11357v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "无人机/UAV"
+      ],
+      "topic": "基础模型",
+      "score": 11,
+      "anchor_terms": [
+        "UAV",
+        "vision transformer"
+      ],
+      "matched_terms": [
+        "aerial",
+        "thermal infrared",
+        "transformer",
+        "UAV",
+        "unmanned aerial vehicle",
+        "vision transformer"
+      ],
+      "title_zh": "使用无人机和街景图像以及耦合的全局上下文视觉变压器来评估建筑的耐热性",
+      "summary_zh": "气候变化正在加剧人类的热暴露，特别是在南半球人口密集的城市中心。低成本的建筑材料和高热质量表面进一步加剧了这种风险。然而，评估此类与热相关的建筑属性的可扩展方法仍然很少。我们提出了一种机器学习框架，通过耦合的全局上下文视觉变换器（CGCViT）融合公开可用的无人机（UAV）和街景（SV）图像，以学习城市结构的热相关表示。 HotSat-1 的热红外 (TIR) 测量用于量化建筑属性与热相关健康风险之间的关系。我们的双模态交叉视图学习方法比最好的单模态模型性能高出 9.3%$，这表明无人机和 SV 图像为城市结构提供了有价值的互补视角。建筑物周围有植被（与没有植被相比）、较亮的屋顶（与较暗的屋顶相比）以及由混凝土、粘土或木材制成的屋顶（与金属或防水油布相比）都与较低的 HotSat-1 TIR 值显着相关。拟议的框架部署在坦桑尼亚达累斯萨拉姆市，它说明了如何使用机器学习来识别和解决家庭层面的热暴露不平等（通常与社会经济劣势相关并反映在建筑材料中）。我们的结果表明，本地化、数据驱动的风险评估在制定可带来公平结果的气候适应战略方面发挥着关键作用。"
+    },
+    {
+      "title": "AstroReason-Bench: Evaluating Unified Agentic Planning across Heterogeneous Space Planning Problems",
+      "authors": [
+        "Weiyi Wang",
+        "Xinchi Chen",
+        "Jingjing Gong",
+        "Xuanjing Huang",
+        "Xipeng Qiu"
+      ],
+      "summary": "Recent advances in agentic Large Language Models (LLMs) have positioned them as generalist planners capable of reasoning and acting across diverse tasks. However, existing agent benchmarks largely focus on symbolic or weakly grounded environments, leaving their performance in physics-constrained real-world domains underexplored. We introduce AstroReason-Bench, a comprehensive benchmark for evaluating agentic planning in Space Planning Problems (SPP), a family of high-stakes problems with heterogeneous objectives, strict physical constraints, and long-horizon decision-making. AstroReason-Bench integrates multiple scheduling regimes, including ground station communication and agile Earth observation, and provides a unified agent-oriented interaction protocol. Evaluating on a range of state-of-the-art open- and closed-source agentic LLM systems, we find that current agents substantially underperform specialized solvers, highlighting key limitations of generalist planning under realistic constraints. AstroReason-Bench offers a challenging and diagnostic testbed for future agentic research.",
+      "published": "2026-01-16T15:02:41Z",
+      "updated": "2026-01-16T15:02:41Z",
+      "arxiv_id": "2601.11354v1",
+      "abs_url": "http://arxiv.org/abs/2601.11354v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.11354v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 4,
+      "anchor_terms": [
+        "earth observation"
+      ],
+      "matched_terms": [
+        "earth observation",
+        "large language model",
+        "LLM"
+      ],
+      "title_zh": "AstroReason-Bench：评估跨异构空间规划问题的统一代理规划",
+      "summary_zh": "代理大语言模型（LLM）的最新进展使它们成为能够跨不同任务进行推理和行动的通才规划者。然而，现有的代理基准测试主要集中在符号或弱基础环境上，使其在物理约束的现实世界领域中的性能尚未得到充分探索。我们引入了 AstroReason-Bench，这是一个用于评估空间规划问题 (SPP) 中的代理规划的综合基准，空间规划问题是一系列具有异构目标、严格的物理约束和长期决策的高风险问题。 AstroReason-Bench集成了多种调度机制，包括地面站通信和敏捷地球观测，并提供统一的面向代理的交互协议。通过对一系列最先进的开源和闭源代理 LLM 系统进行评估，我们发现当前代理的性能远远低于专业求解器，这凸显了现实约束下通才规划的关键局限性。 AstroReason-Bench 为未来的代理研究提供了一个具有挑战性的诊断测试平台。"
+    },
+    {
+      "title": "FEATHer: Fourier-Efficient Adaptive Temporal Hierarchy Forecaster for Time-Series Forecasting",
+      "authors": [
+        "Jaehoon Lee",
+        "Seungwoo Lee",
+        "Younghwi Kim",
+        "Dohee Kim",
+        "Sunghyun Sim"
+      ],
+      "summary": "Time-series forecasting is fundamental in industrial domains like manufacturing and smart factories. As systems evolve toward automation, models must operate on edge devices (e.g., PLCs, microcontrollers) with strict constraints on latency and memory, limiting parameters to a few thousand. Conventional deep architectures are often impractical here. We propose the Fourier-Efficient Adaptive Temporal Hierarchy Forecaster (FEATHer) for accurate long-term forecasting under severe limits. FEATHer introduces: (i) ultra-lightweight multiscale decomposition into frequency pathways; (ii) a shared Dense Temporal Kernel using projection-depthwise convolution-projection without recurrence or attention; (iii) frequency-aware branch gating that adaptively fuses representations based on spectral characteristics; and (iv) a Sparse Period Kernel reconstructing outputs via period-wise downsampling to capture seasonality. FEATHer maintains a compact architecture (as few as 400 parameters) while outperforming baselines. Across eight benchmarks, it achieves the best ranking, recording 60 first-place results with an average rank of 2.05. These results demonstrate that reliable long-range forecasting is achievable on constrained edge hardware, offering a practical direction for industrial real-time inference.",
+      "published": "2026-01-16T14:57:41Z",
+      "updated": "2026-01-16T14:57:41Z",
+      "arxiv_id": "2601.11350v1",
+      "abs_url": "http://arxiv.org/abs/2601.11350v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.11350v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "Submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "高效微调与轻量化",
+        "高光谱/多光谱",
+        "数据集/评测"
+      ],
+      "topic": "时间序列与视频",
+      "score": 2,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "temporal",
+        "time-series"
+      ],
+      "title_zh": "FEATHer：用于时间序列预测的傅里叶高效自适应时间层次预测器",
+      "summary_zh": "时间序列预测是制造业和智能工厂等工业领域的基础。随着系统向自动化发展，模型必须在边缘设备（例如 PLC、微控制器）上运行，并严格限制延迟和内存，将参数限制为几千个。传统的深度架构在这里通常是不切实际的。我们提出了傅里叶高效自适应时间层次预测器（FEATHer），用于在严格限制下进行准确的长期预测。 FEATHer 介绍：（i）超轻量级多尺度分解为频率路径； (ii) 使用投影深度卷积投影的共享密集时间内核，无需递归或注意； (iii) 频率感知分支选通，根据频谱特性自适应地融合表示； (iv) 稀疏周期内核通过按周期下采样重建输出以捕获季节性。 FEATHER 保持紧凑的架构（少至 400 个参数），同时超越基线。在八个基准测试中，它取得了最好的排名，取得了 60 个第一名的成绩，平均排名为 2.05。这些结果表明，在受限边缘硬件上可以实现可靠的长期预测，为工业实时推理提供了实用方向。"
+    },
+    {
+      "title": "Efficient On-Board Processing of Oblique UAV Video for Rapid Flood Extent Mapping",
+      "authors": [
+        "Vishisht Sharma",
+        "Sam Leroux",
+        "Lisa Landuyt",
+        "Nick Witvrouwen",
+        "Pieter Simoens"
+      ],
+      "summary": "Effective disaster response relies on rapid disaster response, where oblique aerial video is the primary modality for initial scouting due to its ability to maximize spatial coverage and situational awareness in limited flight time. However, the on-board processing of high-resolution oblique streams is severely bottlenecked by the strict Size, Weight, and Power (SWaP) constraints of Unmanned Aerial Vehicles (UAVs). The computational density required to process these wide-field-of-view streams precludes low-latency inference on standard edge hardware. To address this, we propose Temporal Token Reuse (TTR), an adaptive inference framework capable of accelerating video segmentation on embedded devices. TTR exploits the intrinsic spatiotemporal redundancy of aerial video by formulating image patches as tokens; it utilizes a lightweight similarity metric to dynamically identify static regions and propagate their precomputed deep features, thereby bypassing redundant backbone computations. We validate the framework on standard benchmarks and a newly curated Oblique Floodwater Dataset designed for hydrological monitoring. Experimental results on edge-grade hardware demonstrate that TTR achieves a 30% reduction in inference latency with negligible degradation in segmentation accuracy (< 0.5% mIoU). These findings confirm that TTR effectively shifts the operational Pareto frontier, enabling high-fidelity, real-time oblique video understanding for time-critical remote sensing missions",
+      "published": "2026-01-16T13:41:56Z",
+      "updated": "2026-01-16T13:41:56Z",
+      "arxiv_id": "2601.11290v1",
+      "abs_url": "http://arxiv.org/abs/2601.11290v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.11290v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "无人机/UAV",
+        "灾害与应急监测",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 8,
+      "anchor_terms": [
+        "flood",
+        "remote sensing",
+        "temporal",
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "flood",
+        "remote sensing",
+        "temporal",
+        "UAV",
+        "unmanned aerial vehicle"
+      ],
+      "title_zh": "倾斜无人机视频的高效机载处理，用于快速洪水范围测绘",
+      "summary_zh": "有效的灾害响应依赖于快速的灾害响应，倾斜航拍视频因其能够在有限的飞行时间内最大化空间覆盖和态势感知而成为初始侦察的主要方式。然而，高分辨率倾斜流的机载处理受到无人机（UAV）严格的尺寸、重量和功率（SWaP）限制的严重瓶颈。处理这些宽视场流所需的计算密度阻碍了标准边缘硬件上的低延迟推理。为了解决这个问题，我们提出了临时令牌重用（TTR），这是一种自适应推理框架，能够加速嵌入式设备上的视频分割。 TTR 通过将图像块制定为标记来利用航拍视频固有的时空冗余；它利用轻量级相似性度量来动态识别静态区域并传播其预先计算的深层特征，从而绕过冗余的骨干计算。我们根据标准基准和新策划的用于水文监测的倾斜洪水数据集验证了该框架。边缘级硬件上的实验结果表明，TTR 的推理延迟减少了 30%，而分割精度的下降可以忽略不计（< 0.5% mIoU）。这些发现证实，TTR 有效地改变了操作帕累托前沿，为时间关键的遥感任务提供高保真、实时倾斜视频理解"
+    },
+    {
+      "title": "SDFLoRA: Selective Decoupled Federated LoRA for Privacy-preserving Fine-tuning with Heterogeneous Clients",
+      "authors": [
+        "Zhikang Shen",
+        "Jianrong Lu",
+        "Haiyuan Wan",
+        "Jianhai Chen"
+      ],
+      "summary": "Federated learning (FL) for large language models (LLMs) has attracted increasing attention as a privacy-preserving approach for adapting models over distributed data, where parameter-efficient methods such as Low-Rank Adaptation (LoRA) are widely adopted to reduce communication and memory costs. However, practical deployments often exhibit rank and data heterogeneity: clients operate under different low-rank budgets and data distributions, making direct aggregation of LoRA updates biased and unstable. Existing approaches either enforce a unified rank or align heterogeneous updates into a single shared subspace, which tends to mix transferable and client-specific directions and consequently undermines personalization. Moreover, under differential privacy (DP), perturbing such structurally mixed updates injects noise into directions that should remain purely local, leading to unnecessary utility degradation. To address these issues, we propose Selective Decoupled Federated LoRA (SDFLoRA), a structure-aware LoRA framework that decouples each client update into a shared component for aggregation and a private component that preserves client-specific semantics. Only the shared component participates in subspace alignment, while the private component remains local and uncommunicated, making the training DP-compatible and stabilizing aggregation under rank heterogeneity. By injecting noise only into the aggregated shareable update, this approach avoids perturbations to local directions and improves the utility-privacy trade-off. Experiments on multiple benchmarks demonstrate that SDFLoRA outperforms federated LoRA baselines and achieves a strong utility-privacy trade-off.",
+      "published": "2026-01-16T11:53:38Z",
+      "updated": "2026-01-29T06:50:08Z",
+      "arxiv_id": "2601.11219v2",
+      "abs_url": "http://arxiv.org/abs/2601.11219v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.11219v2",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 5,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LoRA"
+      ],
+      "title_zh": "SDFLoRA：选择性解耦联合 LoRA，用于异构客户端的隐私保护微调",
+      "summary_zh": "大型语言模型 (LLM) 的联邦学习 (FL) 作为一种在分布式数据上调整模型的隐私保护方法越来越受到关注，其中广泛采用参数高效的方法，例如低秩适应 (LoRA)，以减少通信和内存成本。然而，实际部署通常表现出等级和数据异构性：客户端在不同的低等级预算和数据分布下运行，使得 LoRA 更新的直接聚合存在偏差和不稳定。现有的方法要么强制执行统一的排名，要么将异构更新对齐到单个共享子空间中，这往往会混合可转移的方向和特定于客户的方向，从而破坏个性化。此外，在差分隐私（DP）下，扰乱这种结构混合的更新会将噪声注入到本应保持纯粹本地的方向，从而导致不必要的效用下降。为了解决这些问题，我们提出了选择性解耦联合 LoRA (SDFLoRA)，这是一种结构感知的 LoRA 框架，它将每个客户端更新解耦为用于聚合的共享组件和保留客户端特定语义的私有组件。只有共享组件参与子空间对齐，而私有组件保持本地且不通信，使得训练DP兼容并在等级异质性下稳定聚合。通过仅将噪声注入聚合的可共享更新中，这种方法避免了对本地方向的干扰并改善了实用程序与隐私的权衡。多个基准的实验表明，SDFLoRA 的性能优于联邦 LoRA 基线，并实现了强大的实用程序与隐私权衡。"
+    },
+    {
+      "title": "Democratizing planetary-scale analysis: An ultra-lightweight Earth embedding database for accurate and flexible global land monitoring",
+      "authors": [
+        "Shuang Chen",
+        "Jie Wang",
+        "Shuai Yuan",
+        "Jiayang Li",
+        "Yu Xia",
+        "Yuanhong Liao",
+        "Junbo Wei",
+        "Jincheng Yuan",
+        "Xiaoqing Xu",
+        "Xiaolin Zhu",
+        "Peng Zhu",
+        "Hongsheng Zhang",
+        "Yuyu Zhou",
+        "Haohuan Fu",
+        "Huabing Huang",
+        "Bin Chen",
+        "Fan Dai",
+        "Peng Gong"
+      ],
+      "summary": "The rapid evolution of satellite-borne Earth Observation (EO) systems has revolutionized terrestrial monitoring, yielding petabyte-scale archives. However, the immense computational and storage requirements for global-scale analysis often preclude widespread use, hindering planetary-scale studies. To address these barriers, we present Embedded Seamless Data (ESD), an ultra-lightweight, 30-m global Earth embedding database spanning the 25-year period from 2000 to 2024. By transforming high-dimensional, multi-sensor observations from the Landsat series (5, 7, 8, and 9) and MODIS Terra into information-dense, quantized latent vectors, ESD distills essential geophysical and semantic features into a unified latent space. Utilizing the ESDNet architecture and Finite Scalar Quantization (FSQ), the dataset achieves a transformative ~340-fold reduction in data volume compared to raw archives. This compression allows the entire global land surface for a single year to be encapsulated within approximately 2.4 TB, enabling decadal-scale global analysis on standard local workstations. Rigorous validation demonstrates high reconstructive fidelity (MAE: 0.0130; RMSE: 0.0179; CC: 0.8543). By condensing the annual phenological cycle into 12 temporal steps, the embeddings provide inherent denoising and a semantically organized space that outperforms raw reflectance in land-cover classification, achieving 79.74% accuracy (vs. 76.92% for raw fusion). With robust few-shot learning capabilities and longitudinal consistency, ESD provides a versatile foundation for democratizing planetary-scale research and advancing next-generation geospatial artificial intelligence.",
+      "published": "2026-01-16T10:59:43Z",
+      "updated": "2026-01-16T10:59:43Z",
+      "arxiv_id": "2601.11183v1",
+      "abs_url": "http://arxiv.org/abs/2601.11183v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.11183v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "基础模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "光学遥感",
+        "高光谱/多光谱",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 13,
+      "anchor_terms": [
+        "earth observation",
+        "geospatial",
+        "Landsat",
+        "temporal"
+      ],
+      "matched_terms": [
+        "denoising",
+        "earth observation",
+        "few-shot learning",
+        "geospatial",
+        "Landsat",
+        "MAE",
+        "MODIS",
+        "robust",
+        "satellite",
+        "temporal"
+      ],
+      "title_zh": "行星尺度分析大众化：超轻量级地球嵌入数据库，用于准确、灵活的全球土地监测",
+      "summary_zh": "星载地球观测 (EO) 系统的快速发展彻底改变了地面监测，产生了 PB 级档案。然而，全球规模分析的巨大计算和存储需求往往阻碍了广泛使用，从而阻碍了行星规模的研究。为了解决这些障碍，我们提出了嵌入式无缝数据 (ESD)，这是一个超轻量级、30 米的全球地球嵌入数据库，跨越 2000 年至 2024 年的 25 年时间。通过将 Landsat 系列（5、7、8 和 9）和 MODIS Terra 的高维多传感器观测数据转换为信息密集的量化潜在向量，ESD 将基本的地球物理和语义特征提炼为统一的潜在向量。空间。该数据集利用 ESDNet 架构和有限标量量化 (FSQ)，与原始档案相比，数据量减少了约 340 倍。这种压缩使得一年内的整个全球陆地表面被封装在大约 2.4 TB 内，从而能够在标准本地工作站上进行十年尺度的全球分析。严格的验证证明了高重建保真度（MAE：0.0130；RMSE：0.0179；CC：0.8543）。通过将年度物候周期压缩为 12 个时间步骤，嵌入提供了固有的去噪和语义组织的空间，其性能优于土地覆盖分类中的原始反射率，实现了 79.74% 的准确度（原始融合的准确度为 76.92%）。凭借强大的少样本学习能力和纵向一致性，ESD 为全球范围的研究民主化和推进下一代地理空间人工智能提供了多功能基础。"
+    },
+    {
+      "title": "Assesing the Viability of Unsupervised Learning with Autoencoders for Predictive Maintenance in Helicopter Engines",
+      "authors": [
+        "P. Sánchez",
+        "K. Reyes",
+        "B. Radu",
+        "E. Fernández"
+      ],
+      "summary": "Unplanned engine failures in helicopters can lead to severe operational disruptions, safety hazards, and costly repairs. To mitigate these risks, this study compares two predictive maintenance strategies for helicopter engines: a supervised classification pipeline and an unsupervised anomaly detection approach based on autoencoders (AEs). The supervised method relies on labelled examples of both normal and faulty behaviour, while the unsupervised approach learns a model of normal operation using only healthy engine data, flagging deviations as potential faults. Both methods are evaluated on a real-world dataset comprising labelled snapshots of helicopter engine telemetry. While supervised models demonstrate strong performance when annotated failures are available, the AE achieves effective detection without requiring fault labels, making it particularly well suited for settings where failure data are scarce or incomplete. The comparison highlights the practical trade-offs between accuracy, data availability, and deployment feasibility, and underscores the potential of unsupervised learning as a viable solution for early fault detection in aerospace applications.",
+      "published": "2026-01-16T10:11:28Z",
+      "updated": "2026-01-16T10:11:28Z",
+      "arxiv_id": "2601.11154v1",
+      "abs_url": "http://arxiv.org/abs/2601.11154v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.11154v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 3,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "unsupervised"
+      ],
+      "title_zh": "使用自动编码器评估用于直升机发动机预测维护的无监督学习的可行性",
+      "summary_zh": "直升机的意外发动机故障可能会导致严重的运行中断、安全隐患和昂贵的维修费用。为了减轻这些风险，本研究比较了直升机发动机的两种预测性维护策略：监督分类管道和基于自动编码器 (AE) 的无监督异常检测方法。监督方法依赖于正常和错误行为的标记示例，而无监督方法仅使用健康的发动机数据来学习正常运行的模型，将偏差标记为潜在故障。这两种方法都在包含直升机发动机遥测标记快照的真实数据集上进行评估。虽然监督模型在有注释的故障可用时表现出强大的性能，但 AE 无需故障标签即可实现有效检测，使其特别适合故障数据稀缺或不完整的设置。该比较突出了准确性、数据可用性和部署可行性之间的实际权衡，并强调了无监督学习作为航空航天应用中早期故障检测的可行解决方案的潜力。"
+    },
+    {
+      "title": "Visual Marker Search for Autonomous Drone Landing in Diverse Urban Environments",
+      "authors": [
+        "Jiaohong Yao",
+        "Linfeng Liang",
+        "Yao Deng",
+        "Xi Zheng",
+        "Richard Han",
+        "Yuankai Qi"
+      ],
+      "summary": "Marker-based landing is widely used in drone delivery and return-to-base systems for its simplicity and reliability. However, most approaches assume idealized landing site visibility and sensor performance, limiting robustness in complex urban settings. We present a simulation-based evaluation suite on the AirSim platform with systematically varied urban layouts, lighting, and weather to replicate realistic operational diversity. Using onboard camera sensors (RGB for marker detection and depth for obstacle avoidance), we benchmark two heuristic coverage patterns and a reinforcement learning-based agent, analyzing how exploration strategy and scene complexity affect success rate, path efficiency, and robustness. Results underscore the need to evaluate marker-based autonomous landing under diverse, sensor-relevant conditions to guide the development of reliable aerial navigation systems.",
+      "published": "2026-01-16T08:24:23Z",
+      "updated": "2026-01-16T08:24:23Z",
+      "arxiv_id": "2601.11078v1",
+      "abs_url": "http://arxiv.org/abs/2601.11078v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.11078v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 6,
+      "anchor_terms": [
+        "drone"
+      ],
+      "matched_terms": [
+        "aerial",
+        "drone",
+        "LoRA",
+        "robust"
+      ],
+      "title_zh": "不同城市环境中自主无人机着陆的视觉标记搜索",
+      "summary_zh": "基于标记的着陆因其简单性和可靠性而广泛应用于无人机交付和返回基地系统。然而，大多数方法都假设理想的着陆点可见度和传感器性能，限制了复杂城市环境中的鲁棒性。我们在 AirSim 平台上提供了一个基于模拟的评估套件，具有系统变化的城市布局、照明和天气，以复制现实的操作多样性。使用机载摄像头传感器（用于标记检测的 RGB 和用于避障的深度），我们对两种启发式覆盖模式和基于强化学习的代理进行基准测试，分析探索策略和场景复杂性如何影响成功率、路径效率和鲁棒性。结果强调需要在各种传感器相关条件下评估基于标记的自主着陆，以指导可靠的空中导航系统的开发。"
+    },
+    {
+      "title": "Sparse Data Tree Canopy Segmentation: Fine-Tuning Leading Pretrained Models on Only 150 Images",
+      "authors": [
+        "David Szczecina",
+        "Hudson Sun",
+        "Anthony Bertnyk",
+        "Niloofar Azad",
+        "Kyle Gao",
+        "Lincoln Linlin Xu"
+      ],
+      "summary": "Tree canopy detection from aerial imagery is an important task for environmental monitoring, urban planning, and ecosystem analysis. Simulating real-life data annotation scarcity, the Solafune Tree Canopy Detection competition provides a small and imbalanced dataset of only 150 annotated images, posing significant challenges for training deep models without severe overfitting. In this work, we evaluate five representative architectures, YOLOv11, Mask R-CNN, DeepLabv3, Swin-UNet, and DINOv2, to assess their suitability for canopy segmentation under extreme data scarcity. Our experiments show that pretrained convolution-based models, particularly YOLOv11 and Mask R-CNN, generalize significantly better than pretrained transformer-based models. DeeplabV3, Swin-UNet and DINOv2 underperform likely due to differences between semantic and instance segmentation tasks, the high data requirements of Vision Transformers, and the lack of strong inductive biases. These findings confirm that transformer-based architectures struggle in low-data regimes without substantial pretraining or augmentation and that differences between semantic and instance segmentation further affect model performance. We provide a detailed analysis of training strategies, augmentation policies, and model behavior under the small-data constraint and demonstrate that lightweight CNN-based methods remain the most reliable for canopy detection on limited imagery.",
+      "published": "2026-01-16T01:20:32Z",
+      "updated": "2026-05-05T14:29:56Z",
+      "arxiv_id": "2601.10931v2",
+      "abs_url": "http://arxiv.org/abs/2601.10931v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.10931v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "Published in the 2026 IEEE International Geoscience and Remote Sensing Symposium (IGARSS 2026) 4 pages, 2 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "语义分割",
+        "实例分割",
+        "基础模型",
+        "高效微调与轻量化",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 13,
+      "anchor_terms": [
+        "aerial image",
+        "aerial imagery",
+        "instance segmentation",
+        "remote sensing",
+        "vision transformer"
+      ],
+      "matched_terms": [
+        "aerial",
+        "aerial image",
+        "aerial imagery",
+        "CNN",
+        "fine-tuning",
+        "instance segmentation",
+        "Mask R-CNN",
+        "remote sensing",
+        "transformer",
+        "vision transformer",
+        "YOLO"
+      ],
+      "title_zh": "稀疏数据树 Canopy 分割：仅在 150 张图像上微调领先的预训练模型",
+      "summary_zh": "从航空图像中检测树冠是环境监测、城市规划和生态系统分析的一项重要任务。 Solafune Tree Canopy 检测竞赛模拟现实生活中数据注释的稀缺性，提供了一个仅包含 150 张注释图像的小型且不平衡的数据集，这对训练深度模型而不会严重过度拟合提出了重大挑战。在这项工作中，我们评估了五种代表性架构：YOLOv11、Mask R-CNN、DeepLabv3、Swin-UNet 和 DINOv2，以评估它们在极端数据稀缺情况下对冠层分割的适用性。我们的实验表明，预训练的基于卷积的模型，特别是 YOLOv11 和 Mask R-CNN，比预训练的基于 Transformer 的模型具有更好的泛化能力。 DeeplabV3、Swin-UNet 和 DINOv2 表现不佳可能是由于语义和实例分割任务之间的差异、视觉 Transformer 的高数据要求以及缺乏强归纳偏差。这些发现证实，基于 Transformer 的架构在没有大量预训练或增强的情况下在低数据环境中举步维艰，并且语义和实例分割之间的差异进一步影响模型性能。我们对小数据约束下的训练策略、增强策略和模型行为进行了详细分析，并证明基于 CNN 的轻量级方法对于有限图像上的树冠检测仍然是最可靠的。"
+    },
+    {
+      "title": "UAV-Based Infrastructure Inspections: A Literature Review and Proposed Framework for AEC+FM",
+      "authors": [
+        "Amir Farzin Nikkhah",
+        "Dong Chen",
+        "Bradford Campbell",
+        "Somayeh Asadi",
+        "Arsalan Heydarian"
+      ],
+      "summary": "Unmanned Aerial Vehicles (UAVs) are transforming infrastructure inspections in the Architecture, Engineering, Construction, and Facility Management (AEC+FM) domain. By synthesizing insights from over 150 studies, this review paper highlights UAV-based methodologies for data acquisition, photogrammetric modeling, defect detection, and decision-making support. Key innovations include path optimization, thermal integration, and advanced machine learning (ML) models such as YOLO and Faster R-CNN for anomaly detection. UAVs have demonstrated value in structural health monitoring (SHM), disaster response, urban infrastructure management, energy efficiency evaluations, and cultural heritage preservation. Despite these advancements, challenges in real-time processing, multimodal data fusion, and generalizability remain. A proposed workflow framework, informed by literature and a case study, integrates RGB imagery, LiDAR, and thermal sensing with transformer-based architectures to improve accuracy and reliability in detecting structural defects, thermal anomalies, and geometric inconsistencies. The proposed framework ensures precise and actionable insights by fusing multimodal data and dynamically adapting path planning for complex environments, presented as a comprehensive step-by-step guide to address these challenges effectively. This paper concludes with future research directions emphasizing lightweight AI models, adaptive flight planning, synthetic datasets, and richer modality fusion to streamline modern infrastructure inspections.",
+      "published": "2026-01-16T00:16:42Z",
+      "updated": "2026-02-01T00:04:31Z",
+      "arxiv_id": "2601.11665v2",
+      "abs_url": "http://arxiv.org/abs/2601.11665v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.11665v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "comment": "Withdrawn at the request of the authors to allow further revisions",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "高效微调与轻量化",
+        "多模态融合",
+        "LiDAR/点云",
+        "无人机/UAV",
+        "灾害与应急监测",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 11,
+      "anchor_terms": [
+        "anomaly detection",
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "anomaly detection",
+        "CNN",
+        "LiDAR",
+        "transformer",
+        "UAV",
+        "unmanned aerial vehicle",
+        "YOLO"
+      ],
+      "title_zh": "基于无人机的基础设施检查：AEC+FM 的文献综述和拟议框架",
+      "summary_zh": "无人机 (UAV) 正在改变建筑、工程、施工和设施管理 (AEC+FM) 领域的基础设施检查。通过综合 150 多项研究的见解，本文重点介绍了基于无人机的数据采集、摄影测量建模、缺陷检测和决策支持方法。主要创新包括路径优化、热集成和先进的机器学习 (ML) 模型，例如用于异常检测的 YOLO 和 Faster R-CNN。无人机在结构健康监测（SHM）、灾害响应、城市基础设施管理、能源效率评估和文化遗产保护等方面展现了价值。尽管取得了这些进步，实时处理、多模式数据融合和通用性方面的挑战仍然存在。根据文献和案例研究，提出的工作流程框架将 RGB 图像、激光雷达和热传感与基于变压器的架构集成在一起，以提高检测结构缺陷、热异常和几何不一致的准确性和可靠性。所提出的框架通过融合多模式数据并动态适应复杂环境的路径规划，确保提供精确且可操作的见解，并作为有效应对这些挑战的全面分步指南。本文总结了未来的研究方向，强调轻量级人工智能模型、自适应飞行计划、合成数据集和更丰富的模态融合，以简化现代基础设施检查。"
+    },
+    {
+      "title": "FAConvLSTM: Factorized-Attention ConvLSTM for Efficient Feature Extraction in Multivariate Climate Data",
+      "authors": [
+        "Francis Ndikum Nji",
+        "Jianwu Wang"
+      ],
+      "summary": "Learning physically meaningful spatiotemporal representations from high-resolution multivariate Earth observation data is challenging due to strong local dynamics, long-range teleconnections, multi-scale interactions, and nonstationarity. While ConvLSTM2D is a commonly used baseline, its dense convolutional gating incurs high computational cost and its strictly local receptive fields limit the modeling of long-range spatial structure and disentangled climate dynamics. To address these limitations, we propose FAConvLSTM, a Factorized-Attention ConvLSTM layer designed as a drop-in replacement for ConvLSTM2D that simultaneously improves efficiency, spatial expressiveness, and physical interpretability. FAConvLSTM factorizes recurrent gate computations using lightweight [1 times 1] bottlenecks and shared depthwise spatial mixing, substantially reducing channel complexity while preserving recurrent dynamics. Multi-scale dilated depthwise branches and squeeze-and-excitation recalibration enable efficient modeling of interacting physical processes across spatial scales, while peephole connections enhance temporal precision. To capture teleconnection-scale dependencies without incurring global attention cost, FAConvLSTM incorporates a lightweight axial spatial attention mechanism applied sparsely in time. A dedicated subspace head further produces compact per timestep embeddings refined through temporal self-attention with fixed seasonal positional encoding. Experiments on multivariate spatiotemporal climate data shows superiority demonstrating that FAConvLSTM yields more stable, interpretable, and robust latent representations than standard ConvLSTM, while significantly reducing computational overhead.",
+      "published": "2026-01-16T00:07:46Z",
+      "updated": "2026-01-16T00:07:46Z",
+      "arxiv_id": "2601.10914v1",
+      "abs_url": "http://arxiv.org/abs/2601.10914v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.10914v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 6,
+      "anchor_terms": [
+        "earth observation",
+        "temporal"
+      ],
+      "matched_terms": [
+        "attention mechanism",
+        "earth observation",
+        "multi-scale",
+        "robust",
+        "self-attention",
+        "temporal"
+      ],
+      "title_zh": "FAConvLSTM：用于多元气候数据中高效特征提取的因子化注意力ConvLSTM",
+      "summary_zh": "由于强大的局部动力学、远程遥相关、多尺度相互作用和非平稳性，从高分辨率多元地球观测数据中学习物理上有意义的时空表示具有挑战性。虽然 ConvLSTM2D 是常用的基线，但其密集的卷积门控会产生高昂的计算成本，并且其严格的局部感受野限制了远程空间结构和解开的气候动力学的建模。为了解决这些限制，我们提出了 FAConvLSTM，这是一个因子化注意力 ConvLSTM 层，旨在作为 ConvLSTM2D 的直接替代品，同时提高效率、空间表达力和物理可解释性。 FAConvLSTM 使用轻量级 [1 × 1] 瓶颈和共享深度空间混合来分解循环门计算，从而在保留循环动态的同时显着降低通道复杂性。多尺度扩张的深度分支和挤压和激励重新校准能够对跨空间尺度的相互作用物理过程进行有效建模，而窥视孔连接则增强了时间精度。为了捕获远程连接规模的依赖性而不产生全局注意力成本，FAConvLSTM 结合了一种及时稀疏应用的轻量级轴向空间注意力机制。专用的子空间头进一步产生紧凑的每个时间步嵌入，通过具有固定季节位置编码的时间自注意力进行细化。多变量时空气候数据的实验显示出优越性，证明 FAConvLSTM 比标准 ConvLSTM 产生更稳定、可解释和稳健的潜在表示，同时显着减少计算开销。"
+    }
+  ]
+}

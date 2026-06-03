@@ -1,0 +1,546 @@
+{
+  "date": "2026-01-09",
+  "generated_at": "2026-06-03T04:39:22.035126+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202601090000 TO 202601092359]",
+  "total_fetched": 243,
+  "total_matched": 13,
+  "papers": [
+    {
+      "title": "Affect and Effect: Limitations of regularisation-based continual learning in EEG-based emotion classification",
+      "authors": [
+        "Nina Peire",
+        "Yupei Li",
+        "Björn Schuller"
+      ],
+      "summary": "Generalisation to unseen subjects in EEG-based emotion classification remains a challenge due to high inter-and intra-subject variability. Continual learning (CL) poses a promising solution by learning from a sequence of tasks while mitigating catastrophic forgetting. Regularisation-based CL approaches, such as Elastic Weight Consolidation (EWC), Synaptic Intelligence (SI), and Memory Aware Synapses (MAS), are commonly used as baselines in EEG-based CL studies, yet their suitability for this problem remains underexplored. This study theoretically and empirically finds that regularisation-based CL methods show limited performance for EEG-based emotion classification on the DREAMER and SEED datasets. We identify a fundamental misalignment in the stability-plasticity trade-off, where regularisation-based methods prioritise mitigating catastrophic forgetting (backward transfer) over adapting to new subjects (forward transfer). We investigate this limitation under subject-incremental sequences and observe that: (1) the heuristics for estimating parameter importance become less reliable under noisy data and covariate shift, (2) gradients on parameters deemed important by these heuristics often interfere with gradient updates required for new subjects, moving optimisation away from the minimum, (3) importance values accumulated across tasks over-constrain the model, and (4) performance is sensitive to subject order. Forward transfer showed no statistically significant improvement over sequential fine-tuning (p > 0.05 across approaches and datasets). The high variability of EEG signals means past subjects provide limited value to future subjects. Regularisation-based continual learning approaches are therefore limited for robust generalisation to unseen subjects in EEG-based emotion classification.",
+      "published": "2026-01-09T17:09:54Z",
+      "updated": "2026-01-09T17:09:54Z",
+      "arxiv_id": "2601.07858v1",
+      "abs_url": "http://arxiv.org/abs/2601.07858v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07858v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "20 pages, 16 figures, not including Appendix. Code can be found at: https://github.com/glam-imperial/AffectEffect",
+      "code_url": "https://github.com/glam-imperial/AffectEffect",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 5,
+      "anchor_terms": [
+        "continual learning"
+      ],
+      "matched_terms": [
+        "catastrophic forgetting",
+        "continual learning",
+        "fine-tuning",
+        "robust"
+      ],
+      "title_zh": "影响和效果：基于正则化的持续学习在基于脑电图的情绪分类中的局限性",
+      "summary_zh": "由于受试者间和受试者内的高度变异性，基于脑电图的情绪分类中对看不见的受试者的推广仍然是一个挑战。持续学习（CL）通过从一系列任务中学习，同时减少灾难性遗忘，提出了一种有前途的解决方案。基于正则化的 CL 方法，例如弹性权重合并 (EWC)、突触智能 (SI) 和记忆感知突触 (MAS)，通常用作基于脑电图的 CL 研究的基线，但它们对此问题的适用性仍未得到充分探索。这项研究从理论上和实证上发现，基于正则化的 CL 方法在 DREAMER 和 SEED 数据集上基于 EEG 的情绪分类表现出有限的性能。我们发现稳定性与可塑性权衡中存在根本性的错位，其中基于正则化的方法优先考虑减轻灾难性遗忘（向后迁移）而不是适应新主题（向前迁移）。我们研究了主题增量序列下的这一限制，并观察到：（1）用于估计参数重要性的启发式在噪声数据和协变量偏移的情况下变得不太可靠，（2）这些启发式认为重要的参数的梯度通常会干扰新主题所需的梯度更新，使优化远离最小值，（3）跨任务累积的重要性值过度约束模型，以及（4）性能对主题顺序敏感。与顺序微调相比，前向传输没有显示出统计上显着的改进（在方法和数据集中，p > 0.05）。脑电图信号的高度可变性意味着过去的受试者对未来的受试者提供的价值有限。因此，基于正则化的持续学习方法仅限于对基于脑电图的情绪分类中未见过的受试者进行稳健的泛化。"
+    },
+    {
+      "title": "MoGen: A Unified Collaborative Framework for Controllable Multi-Object Image Generation",
+      "authors": [
+        "Yanfeng Li",
+        "Yue Sun",
+        "Keren Fu",
+        "Sio-Kei Im",
+        "Xiaoming Liu",
+        "Guangtao Zhai",
+        "Xiaohong Liu",
+        "Tao Tan"
+      ],
+      "summary": "Existing multi-object image generation methods face difficulties in achieving precise alignment between localized image generation regions and their corresponding semantics based on language descriptions, frequently resulting in inconsistent object quantities and attribute aliasing. To mitigate this limitation, mainstream approaches typically rely on external control signals to explicitly constrain the spatial layout, local semantic and visual attributes of images. However, this strong dependency makes the input format rigid, rendering it incompatible with the heterogeneous resource conditions of users and diverse constraint requirements. To address these challenges, we propose MoGen, a user-friendly multi-object image generation method. First, we design a Regional Semantic Anchor (RSA) module that precisely anchors phrase units in language descriptions to their corresponding image regions during the generation process, enabling text-to-image generation that follows quantity specifications for multiple objects. Building upon this foundation, we further introduce an Adaptive Multi-modal Guidance (AMG) module, which adaptively parses and integrates various combinations of multi-source control signals to formulate corresponding structured intent. This intent subsequently guides selective constraints on scene layouts and object attributes, achieving dynamic fine-grained control. Experimental results demonstrate that MoGen significantly outperforms existing methods in generation quality, quantity consistency, and fine-grained control, while exhibiting superior accessibility and control flexibility. Code is available at: https://github.com/Tear-kitty/MoGen/tree/master.",
+      "published": "2026-01-09T05:57:48Z",
+      "updated": "2026-01-09T05:57:48Z",
+      "arxiv_id": "2601.05546v1",
+      "abs_url": "http://arxiv.org/abs/2601.05546v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.05546v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/Tear-kitty/MoGen/tree/master",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像生成与重建",
+        "多模态融合"
+      ],
+      "topic": "图像生成与重建",
+      "score": 3,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "image generation"
+      ],
+      "title_zh": "MoGen：可控多目标图像生成的统一协作框架",
+      "summary_zh": "现有的多目标图像生成方法难以实现基于语言描述的局部图像生成区域与其相应语义之间的精确对齐，经常导致对象数量不一致和属性混叠。为了减轻这种限制，主流方法通常依赖外部控制信号来明确约束图像的空间布局、局部语义和视觉属性。然而，这种强依赖性使得输入格式变得僵化，无法兼容用户的异构资源条件和多样化的约束需求。为了应对这些挑战，我们提出了 MoGen，一种用户友好的多对象图像生成方法。首先，我们设计了一个区域语义锚（RSA）模块，该模块在生成过程中将语言描述中的短语单元精确锚定到其相应的图像区域，从而实现遵循多个对象的数量规范的文本到图像的生成。在此基础上，我们进一步引入了自适应多模态指导（AMG）模块，该模块自适应地解析和集成多源控制信号的各种组合，以制定相应的结构化意图。此意图随后指导对场景布局和对象属性的选择性约束，实现动态细粒度控制。实验结果表明，MoGen 在发电质量、数量一致性和细粒度控制方面显着优于现有方法，同时表现出卓越的可访问性和控制灵活性。代码位于：https://github.com/Tear-kitty/MoGen/tree/master。"
+    },
+    {
+      "title": "Circuit Mechanisms for Spatial Relation Generation in Diffusion Transformers",
+      "authors": [
+        "Binxu Wang",
+        "Jingxuan Fan",
+        "Xu Pan"
+      ],
+      "summary": "Diffusion Transformers (DiTs) have greatly advanced text-to-image generation, but models still struggle to generate the correct spatial relations between objects as specified in the text prompt. In this study, we adopt a mechanistic interpretability approach to investigate how a DiT can generate correct spatial relations between objects. We train, from scratch, DiTs of different sizes with different text encoders to learn to generate images containing two objects whose attributes and spatial relations are specified in the text prompt. We find that, although all the models can learn this task to near-perfect accuracy, the underlying mechanisms differ drastically depending on the choice of text encoder. When using random text embeddings, we find that the spatial-relation information is passed to image tokens through a two-stage circuit, involving two cross-attention heads that separately read the spatial relation and single-object attributes in the text prompt. When using a pretrained text encoder (T5), we find that the DiT uses a different circuit that leverages information fusion in the text tokens, reading spatial-relation and single-object information together from a single text token. We further show that, although the in-domain performance is similar for the two settings, their robustness to out-of-domain perturbations differs, potentially suggesting the difficulty of generating correct relations in real-world scenarios.",
+      "published": "2026-01-09T22:17:46Z",
+      "updated": "2026-04-04T04:12:32Z",
+      "arxiv_id": "2601.06338v2",
+      "abs_url": "http://arxiv.org/abs/2601.06338v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.06338v2",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "comment": "45 pages, 30 figures, accepted in CVPR 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建"
+      ],
+      "topic": "图像生成与重建",
+      "score": 6,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "cross-attention",
+        "image generation",
+        "robust",
+        "transformer"
+      ],
+      "title_zh": "扩散变压器中空间关系生成的电路机制",
+      "summary_zh": "扩散变压器 (DiT) 极大地改进了文本到图像的生成，但模型仍然难以生成文本提示中指定的对象之间的正确空间关系。在本研究中，我们采用机械可解释性方法来研究 DiT 如何在对象之间生成正确的空间关系。我们从头开始训练使用不同文本编码器的不同大小的 DiT，以学习生成包含两个对象的图像，这些对象的属性和空间关系在文本提示中指定。我们发现，虽然所有模型都可以以近乎完美的精度学习这项任务，但根据文本编码器的选择，底层机制存在很大差异。当使用随机文本嵌入时，我们发现空间关系信息通过两级电路传递到图像标记，涉及两个交叉注意头，分别读取文本提示中的空间关系和单个对象属性。当使用预训练的文本编码器（T5）时，我们发现 DiT 使用不同的电路，利用文本标记中的信息融合，从单个文本标记中一起读取空间关系和单个对象信息。我们进一步表明，尽管两种设置的域内性能相似，但它们对域外扰动的鲁棒性不同，这可能表明在现实场景中生成正确关系的困难。"
+    },
+    {
+      "title": "Foundational Analysis of Safety Engineering Requirements (SAFER)",
+      "authors": [
+        "Noga Chemo",
+        "Yaniv Mordecai",
+        "Yoram Reich"
+      ],
+      "summary": "We introduce a framework for Foundational Analysis of Safety Engineering Requirements (SAFER), a model-driven methodology supported by Generative AI to improve the generation and analysis of safety requirements for complex safety-critical systems. Safety requirements are often specified by multiple stakeholders with uncoordinated objectives, leading to gaps, duplications, and contradictions that jeopardize system safety and compliance. Existing approaches are largely informal and insufficient for addressing these challenges. SAFER enhances Model-Based Systems Engineering (MBSE) by consuming requirement specification models and generating the following results: (1) mapping requirements to system functions, (2) identifying functions with insufficient requirement specifications, (3) detecting duplicate requirements, and (4) identifying contradictions within requirement sets. SAFER provides structured analysis, reporting, and decision support for safety engineers. We demonstrate SAFER on an autonomous drone system, significantly improving the detection of requirement inconsistencies, enhancing both efficiency and reliability of the safety engineering process. We show that Generative AI must be augmented by formal models and queried systematically, to provide meaningful early-stage safety requirement specifications and robust safety architectures.",
+      "published": "2026-01-09T22:13:35Z",
+      "updated": "2026-01-09T22:13:35Z",
+      "arxiv_id": "2601.06335v1",
+      "abs_url": "http://arxiv.org/abs/2601.06335v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.06335v1",
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无人机/UAV"
+      ],
+      "topic": "无人机/UAV",
+      "score": 2,
+      "anchor_terms": [
+        "drone"
+      ],
+      "matched_terms": [
+        "drone",
+        "robust"
+      ],
+      "title_zh": "安全工程要求的基础分析（SAFER）",
+      "summary_zh": "我们引入了安全工程要求基础分析 (SAFER) 框架，这是一种由生成式 AI 支持的模型驱动方法，可改进复杂安全关键系统的安全要求的生成和分析。安全要求通常由目标不协调的多个利益相关者指定，从而导致差距、重复和矛盾，从而危及系统安全性和合规性。现有的方法大多是非正式的，不足以应对这些挑战。 SAFER 通过使用需求规范模型并生成以下结果来增强基于模型的系统工程 (MBSE)：(1) 将需求映射到系统功能，(2) 识别需求规范不足的功能，(3) 检测重复需求，以及 (4) 识别需求集中的矛盾。 SAFER 为安全工程师提供结构化分析、报告和决策支持。我们在自主无人机系统上演示了 SAFER，显着改进了对需求不一致的检测，提高了安全工程流程的效率和可靠性。我们表明，生成式人工智能必须通过正式模型进行增强并进行系统查询，以提供有意义的早期安全要求规范和强大的安全架构。"
+    },
+    {
+      "title": "CyberGFM: Graph Foundation Models for Lateral Movement Detection in Enterprise Networks",
+      "authors": [
+        "Isaiah J. King",
+        "Bernardo Trindade",
+        "Benjamin Bowman",
+        "H. Howie Huang"
+      ],
+      "summary": "Representing networks as a graph and training a link prediction model using benign connections is an effective method of anomaly-based intrusion detection. Existing works using this technique have shown great success using temporal graph neural networks and skip-gram-based approaches on random walks. However, random walk-based approaches are unable to incorporate rich edge data, while the GNN-based approaches require large amounts of memory to train. In this work, we propose extending the original insight from random walk-based skip-grams--that random walks through a graph are analogous to sentences in a corpus--to the more modern transformer-based foundation models. Using language models that take advantage of GPU optimizations, we can quickly train a graph foundation model to predict missing tokens in random walks through a network of computers. The graph foundation model is then finetuned for link prediction and used as a network anomaly detector. This new approach allows us to combine the efficiency of random walk-based methods and the rich semantic representation of deep learning methods. This system, which we call CyberGFM, achieved state-of-the-art results on three widely used network anomaly detection datasets, delivering a up to 2$\\times$ improvement in average precision. We found that CyberGFM outperforms all prior works in unsupervised link prediction for network anomaly detection, using the same number of parameters, and with equal or better efficiency than the previous best approaches.",
+      "published": "2026-01-09T18:08:47Z",
+      "updated": "2026-01-09T18:08:47Z",
+      "arxiv_id": "2601.05988v1",
+      "abs_url": "http://arxiv.org/abs/2601.05988v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.05988v1",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "comment": "17 pages; 11 figures; 8 tables",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 7,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "foundation model",
+        "GNN",
+        "graph neural network",
+        "transformer",
+        "unsupervised"
+      ],
+      "title_zh": "Cyber​​GFM：企业网络中横向移动检测的图基础模型",
+      "summary_zh": "将网络表示为图并使用良性连接训练链路预测模型是基于异常的入侵检测的有效方法。使用这种技术的现有工作已经在随机游走上使用时态图神经网络和基于skip-gram的方法取得了巨大成功。然而，基于随机游走的方法无法合并丰富的边缘数据，而基于 GNN 的方法需要大量内存进行训练。在这项工作中，我们建议将基于随机游走的 Skip-gram 的原始见解（即通过图形的随机游走类似于语料库中的句子）扩展到更现代的基于 Transformer 的基础模型。使用利用 GPU 优化的语言模型，我们可以快速训练图基础模型来预测计算机网络中随机游走中丢失的标记。然后对图基础模型进行微调以进行链接预测并用作网络异常检测器。这种新方法使我们能够将基于随机游走的方法的效率和深度学习方法的丰富语义表示结合起来。这个系统，我们称之为 Cyber​​GFM，在三个广泛使用的网络异常检测数据集上取得了最先进的结果，平均精度提高了 2 美元\\倍$。我们发现，Cyber​​GFM 在网络异常检测的无监督链接预测方面优于所有先前的工作，使用相同数量的参数，并且与以前的最佳方法具有相同或更好的效率。"
+    },
+    {
+      "title": "Kidney Cancer Detection Using 3D-Based Latent Diffusion Models",
+      "authors": [
+        "Jen Dusseljee",
+        "Sarah de Boer",
+        "Alessa Hering"
+      ],
+      "summary": "In this work, we present a novel latent diffusion-based pipeline for 3D kidney anomaly detection on contrast-enhanced abdominal CT. The method combines Denoising Diffusion Probabilistic Models (DDPMs), Denoising Diffusion Implicit Models (DDIMs), and Vector-Quantized Generative Adversarial Networks (VQ-GANs). Unlike prior slice-wise approaches, our method operates directly on an image volume and leverages weak supervision with only case-level pseudo-labels. We benchmark our approach against state-of-the-art supervised segmentation and detection models. This study demonstrates the feasibility and promise of 3D latent diffusion for weakly supervised anomaly detection. While the current results do not yet match supervised baselines, they reveal key directions for improving reconstruction fidelity and lesion localization. Our findings provide an important step toward annotation-efficient, generative modeling of complex abdominal anatomy.",
+      "published": "2026-01-09T15:30:00Z",
+      "updated": "2026-01-09T15:30:00Z",
+      "arxiv_id": "2601.05852v1",
+      "abs_url": "http://arxiv.org/abs/2601.05852v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.05852v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "8 pages, 2 figures. This paper has been accepted at Bildverarbeitung für die Medizin (BVM) 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 7,
+      "anchor_terms": [
+        "weakly supervised"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "denoising",
+        "diffusion model",
+        "generative adversarial network",
+        "weakly supervised"
+      ],
+      "title_zh": "使用基于 3D 的潜在扩散模型检测肾癌",
+      "summary_zh": "在这项工作中，我们提出了一种新型的基于潜在扩散的管道，用于在增强腹部 CT 上进行 3D 肾脏异常检测。该方法结合了去噪扩散概率模型 (DDPM)、去噪扩散隐式模型 (DDIM) 和矢量量化生成对抗网络 (VQ-GAN)。与之前的切片方法不同，我们的方法直接在图像体积上运行，并利用仅案例级伪标签的弱监督。我们将我们的方法与最先进的监督分割和检测模型进行基准测试。这项研究证明了 3D 潜在扩散用于弱监督异常检测的可行性和前景。虽然目前的结果尚未与监督基线相匹配，但它们揭示了提高重建保真度和病变定位的关键方向。我们的研究结果为复杂腹部解剖结构的高效注释、生成建模迈出了重要一步。"
+    },
+    {
+      "title": "PCoKG: Personality-aware Commonsense Reasoning with Debate",
+      "authors": [
+        "Weijie Li",
+        "Zhongqing Wang",
+        "Guodong Zhou"
+      ],
+      "summary": "Most commonsense reasoning models overlook the influence of personality traits, limiting their effectiveness in personalized systems such as dialogue generation. To address this limitation, we introduce the Personality-aware Commonsense Knowledge Graph (PCoKG), a structured dataset comprising 521,316 quadruples. We begin by employing three evaluators to score and filter events from the ATOMIC dataset, selecting those that are likely to elicit diverse reasoning patterns across different personality types. For knowledge graph construction, we leverage the role-playing capabilities of large language models (LLMs) to perform reasoning tasks. To enhance the quality of the generated knowledge, we incorporate a debate mechanism consisting of a proponent, an opponent, and a judge, which iteratively refines the outputs through feedback loops. We evaluate the dataset from multiple perspectives and conduct fine-tuning and ablation experiments using multiple LLM backbones to assess PCoKG's robustness and the effectiveness of its construction pipeline. Our LoRA-based fine-tuning results indicate a positive correlation between model performance and the parameter scale of the base models. Finally, we apply PCoKG to persona-based dialogue generation, where it demonstrates improved consistency between generated responses and reference outputs. This work bridges the gap between commonsense reasoning and individual cognitive differences, enabling the development of more personalized and context-aware AI systems.",
+      "published": "2026-01-09T15:05:01Z",
+      "updated": "2026-01-09T15:05:01Z",
+      "arxiv_id": "2601.06234v1",
+      "abs_url": "http://arxiv.org/abs/2601.06234v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.06234v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "Accept by AAAI-2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 5,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA",
+        "robust"
+      ],
+      "title_zh": "PCoKG：个性意识常识推理与辩论",
+      "summary_zh": "大多数常识推理模型忽视了人格特质的影响，限制了它们在对话生成等个性化系统中的有效性。为了解决这个限制，我们引入了个性感知常识知识图（PCoKG），这是一个包含 521,316 个四元组的结构化数据集。我们首先使用三个评估者对 ATOMIC 数据集中的事件进行评分和过滤，选择那些可能在不同性格类型中引发不同推理模式的事件。对于知识图构建，我们利用大型语言模型（LLM）的角色扮演功能来执行推理任务。为了提高生成知识的质量，我们采用了由支持者、反对者和法官组成的辩论机制，通过反馈循环迭代地完善输出。我们从多个角度评估数据集，并使用多个 LLM 主干进行微调和消融实验，以评估 PCoKG 的稳健性及其构建管道的有效性。我们基于 LoRA 的微调结果表明模型性能与基础模型的参数规模之间呈正相关。最后，我们将 PCoKG 应用于基于角色的对话生成，它证明了生成的响应和参考输出之间的一致性得到了提高。这项工作弥合了常识推理和个体认知差异之间的差距，从而能够开发出更加个性化和情境感知的人工智能系统。"
+    },
+    {
+      "title": "GenCtrl -- A Formal Controllability Toolkit for Generative Models",
+      "authors": [
+        "Emily Cheng",
+        "Carmen Amo Alonso",
+        "Federico Danieli",
+        "Arno Blaas",
+        "Luca Zappella",
+        "Pau Rodriguez",
+        "Xavier Suau"
+      ],
+      "summary": "As generative models become ubiquitous, there is a critical need for fine-grained control over the generation process. Yet, while controlled generation methods from prompting to fine-tuning proliferate, a fundamental question remains unanswered: are these models truly controllable in the first place? In this work, we provide a theoretical framework to formally answer this question. Framing human-model interaction as a control process, we propose a novel algorithm to estimate the controllable sets of models in a dialogue setting. Notably, we provide formal guarantees on the estimation error as a function of sample complexity: we derive probably-approximately correct bounds for controllable set estimates that are distribution-free, employ no assumptions except for output boundedness, and work for any black-box nonlinear control system (i.e., any generative model). We empirically demonstrate the theoretical framework on different tasks in controlling dialogue processes, for both language models and text-to-image generation. Our results show that model controllability is surprisingly fragile and highly dependent on the experimental setting. This highlights the need for rigorous controllability analysis, shifting the focus from simply attempting control to first understanding its fundamental limits.",
+      "published": "2026-01-09T08:50:02Z",
+      "updated": "2026-01-09T08:50:02Z",
+      "arxiv_id": "2601.05637v1",
+      "abs_url": "http://arxiv.org/abs/2601.05637v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.05637v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "高效微调与轻量化"
+      ],
+      "topic": "图像生成与重建",
+      "score": 2,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "image generation"
+      ],
+      "title_zh": "GenCtrl——生成模型的形式可控性工具包",
+      "summary_zh": "随着生成模型变得无处不在，迫切需要对生成过程进行细粒度控制。然而，虽然从提示到微调的受控生成方法激增，但一个基本问题仍未得到解答：这些模型首先真的是可控的吗？在这项工作中，我们提供了一个理论框架来正式回答这个问题。将人类模型交互视为一个控制过程，我们提出了一种新颖的算法来估计对话设置中的可控模型集。值得注意的是，我们对估计误差作为样本复杂度的函数提供了形式保证：我们为无分布的可控集估计推导了可能近似正确的界限，除了输出有界性之外不采用任何假设，并且适用于任何黑盒非线性控制系统（即任何生成模型）。我们凭经验证明了控制对话过程中不同任务的理论框架，包括语言模型和文本到图像的生成。我们的结果表明，模型的可控性出奇地脆弱，并且高度依赖于实验设置。这凸显了严格的可控性分析的必要性，将重点从简单地尝试控制转移到首先了解其基本限制。"
+    },
+    {
+      "title": "SAPL: Semantic-Agnostic Prompt Learning in CLIP for Weakly Supervised Image Manipulation Localization",
+      "authors": [
+        "Xinghao Wang",
+        "Changtao Miao",
+        "Dianmo Sheng",
+        "Tao Gong",
+        "Qi Chu",
+        "Nenghai Yu",
+        "Quanchen Zou",
+        "Deyue Zhang",
+        "Xiangzheng Zhang"
+      ],
+      "summary": "Malicious image manipulation threatens public safety and requires efficient localization methods. Existing approaches depend on costly pixel-level annotations which make training expensive. Existing weakly supervised methods rely only on image-level binary labels and focus on global classification, often overlooking local edge cues that are critical for precise localization. We observe that feature variations at manipulated boundaries are substantially larger than in interior regions. To address this gap, we propose Semantic-Agnostic Prompt Learning (SAPL) in CLIP, which learns text prompts that intentionally encode non-semantic, boundary-centric cues so that CLIPs multimodal similarity highlights manipulation edges rather than high-level object semantics. SAPL combines two complementary modules Edge-aware Contextual Prompt Learning (ECPL) and Hierarchical Edge Contrastive Learning (HECL) to exploit edge information in both textual and visual spaces. The proposed ECPL leverages edge-enhanced image features to generate learnable textual prompts via an attention mechanism, embedding semantic-irrelevant information into text features, to guide CLIP focusing on manipulation edges. The proposed HECL extract genuine and manipulated edge patches, and utilize contrastive learning to boost the discrimination between genuine edge patches and manipulated edge patches. Finally, we predict the manipulated regions from the similarity map after processing. Extensive experiments on multiple public benchmarks demonstrate that SAPL significantly outperforms existing approaches, achieving state-of-the-art localization performance.",
+      "published": "2026-01-09T07:25:55Z",
+      "updated": "2026-01-09T07:25:55Z",
+      "arxiv_id": "2601.06222v1",
+      "abs_url": "http://arxiv.org/abs/2601.06222v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.06222v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 7,
+      "anchor_terms": [
+        "weakly supervised"
+      ],
+      "matched_terms": [
+        "attention mechanism",
+        "CLIP",
+        "contrastive learning",
+        "weakly supervised"
+      ],
+      "title_zh": "SAPL：CLIP 中的语义不可知提示学习，用于弱监督图像操作定位",
+      "summary_zh": "恶意图像处理威胁公共安全，需要有效的本地化方法。现有方法依赖于昂贵的像素级注释，这使得训练成本高昂。现有的弱监督方法仅依赖于图像级二进制标签并专注于全局分类，通常忽略对精确定位至关重要的局部边缘线索。我们观察到，操纵边界处的特征变化明显大于内部区域。为了解决这一差距，我们在 CLIP 中提出了语义无关提示学习（SAPL），它学习有意编码非语义、以边界为中心的提示的文本提示，以便 CLIP 的多模态相似性突出操作边缘而不是高级对象语义。 SAPL 结合了两个互补模块：边缘感知上下文提示学习 (ECPL) 和分层边缘对比学习 (HECL)，以利用文本和视觉空间中的边缘信息。所提出的 ECPL 利用边缘增强的图像特征，通过注意力机制生成可学习的文本提示，将语义无关的信息嵌入到文本特征中，以引导 CLIP 专注于操作边缘。所提出的 HECL 提取真实边缘补丁和操纵边缘补丁，并利用对比学习来增强真实边缘补丁和操纵边缘补丁之间的区分。最后，我们从处理后的相似度图中预测被操纵的区域。对多个公共基准的大量实验表明 SAPL 显着优于现有方法，实现了最先进的本地化性能。"
+    },
+    {
+      "title": "LDTC: Lifelong deep temporal clustering for multivariate time series",
+      "authors": [
+        "Zhi Wang",
+        "Yanni Li",
+        "Pingping Zheng",
+        "Yiyuan Jiao"
+      ],
+      "summary": "Clustering temporal and dynamically changing multivariate time series from real-world fields, called temporal clustering for short, has been a major challenge due to inherent complexities. Although several deep temporal clustering algorithms have demonstrated a strong advantage over traditional methods in terms of model learning and clustering results, the accuracy of the few algorithms are not satisfactory. None of the existing algorithms can continuously learn new tasks and deal with the dynamic data effectively and efficiently in the sequential tasks learning. To bridge the gap and tackle these issues, this paper proposes a novel algorithm \\textbf{L}ifelong \\textbf{D}eep \\textbf{T}emporal \\textbf{C}lustering (\\textbf{LDTC}), which effectively integrates dimensionality reduction and temporal clustering into an end-to-end deep unsupervised learning framework. Using a specifically designed autoencoder and jointly optimizing for both the latent representation and clustering objective, the LDTC can achieve high-quality clustering results. Moreover, unlike any previous work, the LDTC is uniquely equipped with the fully dynamic model expansion and rehearsal-based techniques to effectively learn new tasks and to tackle the dynamic data in the sequential tasks learning without the catastrophic forgetting or degradation of the model accuracy. Experiments on seven real-world multivariate time series datasets show that the LDTC is a promising method for dealing with temporal clustering issues effectively and efficiently.",
+      "published": "2026-01-09T07:05:31Z",
+      "updated": "2026-01-09T07:05:31Z",
+      "arxiv_id": "2601.06221v1",
+      "abs_url": "http://arxiv.org/abs/2601.06221v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.06221v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 2,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "catastrophic forgetting",
+        "unsupervised"
+      ],
+      "title_zh": "LDTC：多元时间序列的终身深度时间聚类",
+      "summary_zh": "由于固有的复杂性，对现实世界中的时间和动态变化的多元时间序列进行聚类（简称时间聚类）一直是一个重大挑战。尽管几种深度时间聚类算法在模型学习和聚类结果方面表现出了比传统方法强大的优势，但少数算法的准确性并不令人满意。现有的算法都无法在顺序任务学习中持续学习新任务并有效且高效地处理动态数据。为了弥补这一差距并解决这些问题，本文提出了一种新算法 \\textbf{L}ifelong \\textbf{D}eep \\textbf{T}emporal \\textbf{C}lustering (\\textbf{LDTC})，该算法有效地将降维和时间聚类集成到端到端深度无监督学习框架中。使用专门设计的自动编码器并针对潜在表示和聚类目标进行联合优化，LDTC 可以获得高质量的聚类结果。此外，与之前的任何工作不同，LDTC 独特地配备了完全动态模型扩展和基于演练的技术，可以有效地学习新任务并处理顺序任务学习中的动态数据，而不会出现灾难性遗忘或模型精度下降的情况。对七个真实世界多元时间序列数据集的实验表明，LDTC 是一种有效且高效地处理时间聚类问题的有前途的方法。"
+    },
+    {
+      "title": "DIFF-MF: A Difference-Driven Channel-Spatial State Space Model for Multi-Modal Image Fusion",
+      "authors": [
+        "Yiming Sun",
+        "Zifan Ye",
+        "Qinghua Hu",
+        "Pengfei Zhu"
+      ],
+      "summary": "Multi-modal image fusion aims to integrate complementary information from multiple source images to produce high-quality fused images with enriched content. Although existing approaches based on state space model have achieved satisfied performance with high computational efficiency, they tend to either over-prioritize infrared intensity at the cost of visible details, or conversely, preserve visible structure while diminishing thermal target salience. To overcome these challenges, we propose DIFF-MF, a novel difference-driven channel-spatial state space model for multi-modal image fusion. Our approach leverages feature discrepancy maps between modalities to guide feature extraction, followed by a fusion process across both channel and spatial dimensions. In the channel dimension, a channel-exchange module enhances channel-wise interaction through cross-attention dual state space modeling, enabling adaptive feature reweighting. In the spatial dimension, a spatial-exchange module employs cross-modal state space scanning to achieve comprehensive spatial fusion. By efficiently capturing global dependencies while maintaining linear computational complexity, DIFF-MF effectively integrates complementary multi-modal features. Experimental results on the driving scenarios and low-altitude UAV datasets demonstrate that our method outperforms existing approaches in both visual quality and quantitative evaluation.",
+      "published": "2026-01-09T05:26:54Z",
+      "updated": "2026-01-09T05:26:54Z",
+      "arxiv_id": "2601.05538v1",
+      "abs_url": "http://arxiv.org/abs/2601.05538v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.05538v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "基础模型",
+        "高效微调与轻量化",
+        "多模态融合",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 7,
+      "anchor_terms": [
+        "UAV"
+      ],
+      "matched_terms": [
+        "cross-attention",
+        "image fusion",
+        "state space model",
+        "UAV"
+      ],
+      "title_zh": "DIFF-MF：用于多模态图像融合的差分驱动通道空间状态空间模型",
+      "summary_zh": "多模态图像融合旨在集成多个源图像的互补信息，以产生内容丰富的高质量融合图像。尽管基于状态空间模型的现有方法已经获得了令人满意的性能和高计算效率，但它们往往要么以可见细节为代价过度优先考虑红外强度，要么相反，在减少热目标显着性的同时保留可见结构。为了克服这些挑战，我们提出了 DIFF-MF，一种用于多模态图像融合的新型差异驱动通道空间状态空间模型。我们的方法利用模态之间的特征差异图来指导特征提取，然后进行跨通道和空间维度的融合过程。在通道维度中，通道交换模块通过交叉注意力双状态空间建模增强通道交互，从而实现自适应特征重新加权。在空间维度上，空间交换模块采用跨模态状态空间扫描，实现全面的空间融合。通过有效捕获全局依赖性，同时保持线性计算复杂性，DIFF-MF 有效地集成了互补的多模态特征。驾驶场景和低空无人机数据集的实验结果表明，我们的方法在视觉质量和定量评估方面均优于现有方法。"
+    },
+    {
+      "title": "Hi-ZFO: Hierarchical Zeroth- and First-Order LLM Fine-Tuning via Importance-Guided Tensor Selection",
+      "authors": [
+        "Feihu Jin",
+        "Ying Tan"
+      ],
+      "summary": "Fine-tuning large language models (LLMs) using standard first-order (FO) optimization often drives training toward sharp, poorly generalizing minima. Conversely, zeroth-order (ZO) methods offer stronger exploratory behavior without relying on explicit gradients, yet suffer from slow convergence. More critically, our analysis reveals that in generative tasks, the vast output and search space significantly amplify estimation variance, rendering ZO methods both noisy and inefficient. To address these challenges, we propose \\textbf{Hi-ZFO} (\\textbf{Hi}erarchical \\textbf{Z}eroth- and \\textbf{F}irst-\\textbf{O}rder optimization), a hybrid framework designed to synergize the precision of FO gradients with the exploratory capability of ZO estimation. Hi-ZFO adaptively partitions the model through layer-wise importance profiling, applying precise FO updates to critical layers while leveraging ZO optimization for less sensitive ones. Notably, ZO in Hi-ZFO is not merely a memory-saving surrogate; it is intentionally introduced as a source of \"beneficial stochasticity\" to help the model escape the local minima where pure FO optimization tends to stagnate. Validated across diverse generative, mathematical, and code reasoning tasks, Hi-ZFO consistently achieves superior performance while significantly reducing the training time. These results demonstrate the effectiveness of hierarchical hybrid optimization for LLM fine-tuning.",
+      "published": "2026-01-09T03:20:54Z",
+      "updated": "2026-01-09T03:20:54Z",
+      "arxiv_id": "2601.05501v1",
+      "abs_url": "http://arxiv.org/abs/2601.05501v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.05501v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "comment": "13 pages, 4 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 6,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA"
+      ],
+      "title_zh": "Hi-ZFO：通过重要性引导张量选择进行分层零阶和一阶 LLM 微调",
+      "summary_zh": "使用标准一阶 (FO) 优化对大型语言模型 (LLM) 进行微调通常会导致训练趋向尖锐、泛化性差的最小值。相反，零阶 (ZO) 方法在不依赖显式梯度的情况下提供更强的探索行为，但收敛速度较慢。更重要的是，我们的分析表明，在生成任务中，巨大的输出和搜索空间显着放大了估计方差，使得​​ ZO 方法既嘈杂又低效。为了应对这些挑战，我们提出了 \\textbf{Hi-ZFO} （\\textbf{Hi}erarchical \\textbf{Z}eroth- 和 \\textbf{F}irst-\\textbf{O}rder optimization），这是一种混合框架，旨在将 FO 梯度的精度与 ZO 估计的探索能力相结合。 Hi-ZFO 通过逐层重要性分析对模型进行自适应分区，对关键层应用精确的 FO 更新，同时对不太敏感的层利用 ZO 优化。值得注意的是，Hi-ZFO 中的 ZO 不仅是一种节省内存的替代品，而且还可以作为替代品。它被有意引入作为“有益随机性”的来源，以帮助模型摆脱纯 FO 优化趋于停滞的局部最小值。 Hi-ZFO 经过各种生成、数学和代码推理任务的验证，始终如一地实现卓越的性能，同时显着减少训练时间。这些结果证明了层次混合优化对于 LLM 微调的有效性。"
+    },
+    {
+      "title": "MMUEChange: A Generalized LLM Agent Framework for Intelligent Multi-Modal Urban Environment Change Analysis",
+      "authors": [
+        "Zixuan Xiao",
+        "Jun Ma",
+        "Siwei Zhang"
+      ],
+      "summary": "Understanding urban environment change is essential for sustainable development. However, current approaches, particularly remote sensing change detection, often rely on rigid, single-modal analysis. To overcome these limitations, we propose MMUEChange, a multi-modal agent framework that flexibly integrates heterogeneous urban data via a modular toolkit and a core module, Modality Controller for cross- and intra-modal alignment, enabling robust analysis of complex urban change scenarios. Case studies include: a shift toward small, community-focused parks in New York, reflecting local green space efforts; the spread of concentrated water pollution across districts in Hong Kong, pointing to coordinated water management; and a notable decline in open dumpsites in Shenzhen, with contrasting links between nighttime economic activity and waste types, indicating differing urban pressures behind domestic and construction waste. Compared to the best-performing baseline, the MMUEChange agent achieves a 46.7% improvement in task success rate and effectively mitigates hallucination, demonstrating its capacity to support complex urban change analysis tasks with real-world policy implications.",
+      "published": "2026-01-09T02:34:35Z",
+      "updated": "2026-05-25T04:13:39Z",
+      "arxiv_id": "2601.05483v2",
+      "abs_url": "http://arxiv.org/abs/2601.05483v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.05483v2",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "变化检测",
+        "视觉-语言模型",
+        "多模态融合",
+        "城市与基础设施"
+      ],
+      "topic": "变化检测",
+      "score": 10,
+      "anchor_terms": [
+        "change detection",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "change detection",
+        "LLM",
+        "remote sensing",
+        "remote sensing change detection",
+        "robust",
+        "urban change"
+      ],
+      "title_zh": "MMUEChange：用于智能多模式城市环境变化分析的通用 LLM 代理框架",
+      "summary_zh": "了解城市环境变化对于可持续发展至关重要。然而，当前的方法，特别是遥感变化检测，通常依赖于严格的单模态分析。为了克服这些限制，我们提出了 MMUEChange，这是一种多模式代理框架，它通过模块化工具包和核心模块（用于跨模式和内部模式对齐的模态控制器）灵活地集成异构城市数据，从而能够对复杂的城市变化场景进行稳健分析。案例研究包括：纽约向小型、以社区为中心的公园的转变，反映了当地在绿色空间方面的努力；香港集中水污染在各区蔓延，需要协调水资源管理；深圳的露天垃圾场显着减少，夜间经济活动与垃圾类型之间的联系形成鲜明对比，表明生活垃圾和建筑垃圾背后的城市压力不同。与表现最佳的基线相比，MMUEChange 代理的任务成功率提高了 46.7%，并有效减轻了幻觉，展示了其支持具有现实世界政策影响的复杂城市变化分析任务的能力。"
+    }
+  ]
+}

@@ -1,0 +1,754 @@
+{
+  "date": "2026-01-08",
+  "generated_at": "2026-06-03T04:38:44.598032+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202601080000 TO 202601082359]",
+  "total_fetched": 351,
+  "total_matched": 17,
+  "papers": [
+    {
+      "title": "A Two-Stage Multitask Vision-Language Framework for Explainable Crop Disease Visual Question Answering",
+      "authors": [
+        "Md. Zahid Hossain",
+        "Most. Sharmin Sultana Samu",
+        "Md. Rakibul Islam",
+        "Md. Siam Ansary"
+      ],
+      "summary": "Visual question answering (VQA) for crop disease analysis requires accurate visual understanding and reliable language generation. In this work, we present a lightweight and explainable vision-language framework for crop and disease identification from leaf images. The proposed approach integrates a Swin Transformer vision encoder with sequence-to-sequence language decoders. The vision encoder is first trained in a multitask setup for both plant and disease classification, and then frozen while the text decoders are trained, forming a two-stage training strategy that enhances visual representation learning and cross-modal alignment. We evaluate the model on the large-scale Crop Disease Domain Multimodal (CDDM) dataset using both classification and natural language generation metrics. Experimental results demonstrate near-perfect recognition performance, achieving 99.94% plant classification accuracy and 99.06% disease classification accuracy, along with strong BLEU, ROUGE and BERTScore results. Without fine-tuning, the model further generalizes well to the external PlantVillageVQA benchmark, achieving 83.18% micro accuracy in the VQA task. Our lightweight design outperforms larger vision-language baselines while using significantly fewer parameters. Explainability is assessed through Grad-CAM and token-level attribution, providing interpretable visual and textual evidence for predictions. Qualitative results demonstrate robust performance under diverse user-driven queries, highlighting the effectiveness of task-specific visual pretraining and the two-stage training methodology for crop disease visual question answering. An interactive demo of the proposed Swin-T5 model is publicly available as a Gradio-based application at https://huggingface.co/spaces/Zahid16/PlantDiseaseVQAwithSwinT5 for community use.",
+      "published": "2026-01-08T17:31:09Z",
+      "updated": "2026-03-07T17:36:32Z",
+      "arxiv_id": "2601.05143v2",
+      "abs_url": "http://arxiv.org/abs/2601.05143v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.05143v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "comment": "Preprint, manuscript is under review",
+      "code_url": "https://huggingface.co/spaces/Zahid16/PlantDiseaseVQAwithSwinT5",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像描述与视觉推理",
+        "基础模型",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "图像描述与视觉推理",
+      "score": 5,
+      "anchor_terms": [
+        "crop"
+      ],
+      "matched_terms": [
+        "crop",
+        "fine-tuning",
+        "robust",
+        "Swin Transformer",
+        "transformer"
+      ],
+      "title_zh": "用于可解释作物疾病视觉问答的两阶段多任务视觉语言框架",
+      "summary_zh": "用于作物病害分析的视觉问答 (VQA) 需要准确的视觉理解和可靠的语言生成。在这项工作中，我们提出了一个轻量级且可解释的视觉语言框架，用于从叶子图像中识别作物和疾病。所提出的方法将 Swin Transformer 视觉编码器与序列到序列语言解码器集成。视觉编码器首先在植物和疾病分类的多任务设置中进行训练，然后在训练文本解码器时进行冻结，形成增强视觉表示学习和跨模式对齐的两阶段训练策略。我们使用分类和自然语言生成指标在大规模作物疾病域多模态（CDDM）数据集上评估模型。实验结果证明了近乎完美的识别性能，实现了 99.94% 的植物分类准确率和 99.06% 的疾病分类准确率，以及强大的 BLEU、ROUGE 和 BERTScore 结果。在不进行微调的情况下，该模型进一步很好地推广到了外部 PlantVillageVQA 基准，在 VQA 任务中实现了 83.18% 的微观准确率。我们的轻量级设计优于更大的视觉语言基线，同时使用的参数显着减少。可解释性通过 Grad-CAM 和标记级归因进行评估，为预测提供可解释的视觉和文本证据。定性结果证明了在不同的用户驱动查询下的稳健性能，突出了特定于任务的视觉预训练和农作物病害视觉问答的两阶段训练方法的有效性。所提议的 Swin-T5 模型的交互式演示作为基于 Gradio 的应用程序在 https://huggingface.co/spaces/Zahid16/PlantDiseaseVQAwithSwinT5 上公开提供，供社区使用。"
+    },
+    {
+      "title": "TEA: Temporal Adaptive Satellite Image Semantic Segmentation",
+      "authors": [
+        "Juyuan Kang",
+        "Hao Zhu",
+        "Yan Zhu",
+        "Wei Zhang",
+        "Jianing Chen",
+        "Tianxiang Xiao",
+        "Yike Ma",
+        "Hao Jiang",
+        "Feng Dai"
+      ],
+      "summary": "Crop mapping based on satellite images time-series (SITS) holds substantial economic value in agricultural production settings, in which parcel segmentation is an essential step. Existing approaches have achieved notable advancements in SITS segmentation with predetermined sequence lengths. However, we found that these approaches overlooked the generalization capability of models across scenarios with varying temporal length, leading to markedly poor segmentation results in such cases. To address this issue, we propose TEA, a TEmporal Adaptive SITS semantic segmentation method to enhance the model's resilience under varying sequence lengths. We introduce a teacher model that encapsulates the global sequence knowledge to guide a student model with adaptive temporal input lengths. Specifically, teacher shapes the student's feature space via intermediate embedding, prototypes and soft label perspectives to realize knowledge transfer, while dynamically aggregating student model to mitigate knowledge forgetting. Finally, we introduce full-sequence reconstruction as an auxiliary task to further enhance the quality of representations across inputs of varying temporal lengths. Through extensive experiments, we demonstrate that our method brings remarkable improvements across inputs of different temporal lengths on common benchmarks. Our code will be publicly available.",
+      "published": "2026-01-08T14:02:28Z",
+      "updated": "2026-01-08T14:02:28Z",
+      "arxiv_id": "2601.04956v1",
+      "abs_url": "http://arxiv.org/abs/2601.04956v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.04956v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Under review. Code will be available at \\href{https://github.com/KeplerKang/TEA}{this https URL}",
+      "code_url": "https://github.com/KeplerKang/TEA}{this",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "语义分割",
+        "时间序列与视频",
+        "农业与生态",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 8,
+      "anchor_terms": [
+        "crop",
+        "satellite image",
+        "satellite images",
+        "semantic segmentation",
+        "temporal"
+      ],
+      "matched_terms": [
+        "crop",
+        "crop mapping",
+        "satellite",
+        "satellite image",
+        "satellite images",
+        "semantic segmentation",
+        "temporal",
+        "time-series"
+      ],
+      "title_zh": "TEA：时间自适应卫星图像语义分割",
+      "summary_zh": "基于卫星图像时间序列（SITS）的作物测绘在农业生产环境中具有巨大的经济价值，其中地块分割是一个重要的步骤。现有方法在具有预定序列长度的 SITS 分割方面取得了显着的进步。然而，我们发现这些方法忽视了模型在不同时间长度场景下的泛化能力，导致在这种情况下分割结果明显较差。为了解决这个问题，我们提出了 TEA，一种 TEmporal 自适应 SITS 语义分割方法，以增强模型在不同序列长度下的弹性。我们引入了一个封装全局序列知识的教师模型，以指导具有自适应时间输入长度的学生模型。具体来说，教师通过中间嵌入、原型和软标签视角来塑造学生的特征空间，以实现知识迁移，同时动态聚合学生模型以减少知识遗忘。最后，我们引入全序列重建作为辅助任务，以进一步提高不同时间长度输入的表示质量。通过大量的实验，我们证明了我们的方法在通用基准上对不同时间长度的输入带来了显着的改进。我们的代码将公开。"
+    },
+    {
+      "title": "Agri-R1: Agricultural Reasoning for Disease Diagnosis via Automated-Synthesis and Reinforcement Learning",
+      "authors": [
+        "Wentao Zhang",
+        "Mingkun Xu",
+        "Qi Zhang",
+        "Shangyang Li",
+        "Derek F. Wong",
+        "Lifei Wang",
+        "Yanchao Yang",
+        "Lina Lu",
+        "Tao Fang"
+      ],
+      "summary": "Agricultural disease diagnosis challenges VLMs, as conventional fine-tuning requires extensive labels, lacks interpretability, and generalizes poorly. While reasoning improves model robustness, existing methods rely on costly expert annotations and rarely address the open-ended, diverse nature of agricultural queries. To address these limitations, we propose \\textbf{Agri-R1}, a reasoning-enhanced large model for agriculture. Our framework automates high-quality reasoning data generation via vision-language synthesis and LLM-based filtering, using only 19\\% of available samples. Training employs Group Relative Policy Optimization (GRPO) with a novel reward function that integrates domain-specific lexicons and fuzzy matching to assess both correctness and linguistic flexibility in open-ended responses. Evaluated on CDDMBench, our resulting 3B-parameter model achieves performance competitive with 7B- to 13B-parameter baselines, showing a +27.9\\% relative gain in disease recognition accuracy, +33.3\\% in agricultural knowledge QA, and a +26.10-point improvement in cross-domain generalization over standard fine-tuning. These results suggest that automated reasoning synthesis paired with domain-aware reward design may provide a broadly applicable paradigm for RL-based VLM adaptation in data-scarce specialized domains. Our code and data are publicly available at: https://github.com/CPJ-Agricultural/Agri-R1.",
+      "published": "2026-01-08T07:34:37Z",
+      "updated": "2026-04-13T05:20:06Z",
+      "arxiv_id": "2601.04672v2",
+      "abs_url": "http://arxiv.org/abs/2601.04672v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.04672v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "comment": "This paper is submitted for review to the 2026 ACM MM Conference. The corresponding authors are Tao Fang and Lina Lu, where Tao Fang is the senior Corresponding Author (Last Author) and the principal supervisor of this work, having led the research design, guided the methodology, and overseen the entire project",
+      "code_url": "https://github.com/CPJ-Agricultural/Agri-R1",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "基础模型",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 7,
+      "anchor_terms": [
+        "domain generalization"
+      ],
+      "matched_terms": [
+        "domain generalization",
+        "fine-tuning",
+        "large model",
+        "LLM",
+        "robust",
+        "VLM"
+      ],
+      "title_zh": "Agri-R1：通过自动合成和强化学习进行疾病诊断的农业推理",
+      "summary_zh": "农业病害诊断对 VLM 提出了挑战，因为传统的微调需要大量标签、缺乏可解释性且概括性差。虽然推理提高了模型的稳健性，但现有方法依赖于昂贵的专家注释，并且很少解决农业查询的开放式、多样化的性质。为了解决这些限制，我们提出了 \\textbf{Agri-R1}，一种推理增强型农业大型模型。我们的框架通过视觉语言合成和基于 LLM 的过滤自动生成高质量推理数据，仅使用 19% 的可用样本。训练采用组相对策略优化 (GRPO) 和新颖的奖励函数，该函数集成了特定领域的词典和模糊匹配，以评估开放式响应的正确性和语言灵活性。在 CDDMBench 上进行评估，我们得到的 3B 参数模型实现了与 7B 至 13B 参数基线竞争的性能，显示出疾病识别准确率相对提高了 27.9%，农业知识 QA 提高了 33.3%，跨领域泛化能力比标准微调提高了 26.10 点。这些结果表明，自动推理综合与领域感知奖励设计相结合，可以为数据稀缺专业领域中基于强化学习的 VLM 适应提供广泛适用的范例。我们的代码和数据可公开获取：https://github.com/CPJ-Agriculture/Agri-R1。"
+    },
+    {
+      "title": "Vision-Language Agents for Interactive Forest Change Analysis",
+      "authors": [
+        "James Brock",
+        "Ce Zhang",
+        "Nantheera Anantrasirichai"
+      ],
+      "summary": "Modern forest monitoring workflows increasingly benefit from the growing availability of high-resolution satellite imagery and advances in deep learning. Two persistent challenges in this context are accurate pixel-level change detection and meaningful semantic change captioning for complex forest dynamics. While large language models (LLMs) are being adapted for interactive data exploration, their integration with vision-language models (VLMs) for remote sensing image change interpretation (RSICI) remains underexplored. To address this gap, we introduce an LLM-driven agent for integrated forest change analysis that supports natural language querying across multiple RSICI tasks. The proposed system builds upon a multi-level change interpretation (MCI) vision-language backbone with LLM-based orchestration. To facilitate adaptation and evaluation in forest environments, we further introduce the Forest-Change dataset, which comprises bi-temporal satellite imagery, pixel-level change masks, and multi-granularity semantic change captions generated using a combination of human annotation and rule-based methods. Experimental results show that the proposed system achieves mIoU and BLEU-4 scores of 67.10% and 40.17% on the Forest-Change dataset, and 88.13% and 34.41% on LEVIR-MCI-Trees, a tree-focused subset of LEVIR-MCI benchmark for joint change detection and captioning. These results highlight the potential of interactive, LLM-driven RSICI systems to improve accessibility, interpretability, and efficiency of forest change analysis. All data and code are publicly available at https://github.com/JamesBrockUoB/ForestChat.",
+      "published": "2026-01-08T02:02:36Z",
+      "updated": "2026-03-30T17:23:33Z",
+      "arxiv_id": "2601.04497v2",
+      "abs_url": "http://arxiv.org/abs/2601.04497v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.04497v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "comment": "5 pages, 4 figures, Accepted into IGARSS 2026",
+      "code_url": "https://github.com/JamesBrockUoB/ForestChat",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "变化检测",
+        "图像描述与视觉推理",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "农业与生态",
+        "数据集/评测"
+      ],
+      "topic": "变化检测",
+      "score": 9,
+      "anchor_terms": [
+        "change detection",
+        "LoRA",
+        "remote sensing",
+        "satellite image",
+        "satellite imagery",
+        "temporal"
+      ],
+      "matched_terms": [
+        "change detection",
+        "large language model",
+        "LLM",
+        "LoRA",
+        "remote sensing",
+        "satellite",
+        "satellite image",
+        "satellite imagery",
+        "temporal"
+      ],
+      "title_zh": "用于交互式森林变化分析的视觉语言代理",
+      "summary_zh": "现代森林监测工作流程越来越受益于高分辨率卫星图像的不断增加和深度学习的进步。在这种情况下，两个持续存在的挑战是准确的像素级变化检测和复杂森林动态的有意义的语义变化字幕。虽然大型语言模型 (LLM) 正在适应交互式数据探索，但它们与用于遥感图像变化解释 (RSICI) 的视觉语言模型 (VLM) 的集成仍处于探索之中。为了解决这一差距，我们引入了一个 LLM 驱动的代理，用于集成森林变化分析，支持跨多个 RSICI 任务的自然语言查询。所提出的系统建立在多级变更解释（MCI）视觉语言骨干和基于法学硕士的编排之上。为了促进森林环境的适应和评估，我们进一步引入了 Forest-Change 数据集，其中包括双时态卫星图像、像素级变化掩模以及使用人工注释和基于规则的方法相结合生成的多粒度语义变化标题。实验结果表明，所提出的系统在 Forest-Change 数据集上实现了 67.10% 和 40.17% 的 mIoU 和 BLEU-4 分数，在 LEVIR-MCI-Trees 上实现了 88.13% 和 34.41%，LEVIR-MCI-Trees 是用于联合变化检测和字幕的 LEVIR-MCI 基准的以树为中心的子集。这些结果凸显了法学硕士驱动的交互式 RSICI 系统在提高森林变化分析的可访问性、可解释性和效率方面的潜力。所有数据和代码均可在 https://github.com/JamesBrockUoB/ForestChat 上公开获取。"
+    },
+    {
+      "title": "EdgeLDR: Quaternion Low-Displacement Rank Neural Networks for Edge-Efficient Deep Learning",
+      "authors": [
+        "Vladimir Frants",
+        "Sos Agaian",
+        "Karen Panetta"
+      ],
+      "summary": "Deploying deep neural networks on edge devices is often limited by the memory traffic and compute cost of dense linear operators. While quaternion neural networks improve parameter efficiency by coupling multiple channels through Hamilton products, they typically retain unstructured dense weights; conversely, structured matrices enable fast computation but are usually applied in the real domain. This paper introduces EdgeLDR, a practical framework for quaternion block-circulant linear and convolutional layers that combines quaternion channel mixing with block-circulant parameter structure and enables FFT-based evaluation through the complex adjoint representation. We present reference implementations of EdgeLDR layers and compare FFT-based computation against a naive spatial-domain realization of quaternion circulant products. FFT evaluation yields large empirical speedups over the naive implementation and keeps latency stable as block size increases, making larger compression factors computationally viable. We further integrate EdgeLDR layers into compact CNN and Transformer backbones and evaluate accuracy-compression trade-offs on 32x32 RGB classification (CIFAR-10/100, SVHN) and hyperspectral image classification (Houston 2013, Pavia University), reporting parameter counts and CPU/GPU latency. The results show that EdgeLDR layers provide significant compression with competitive accuracy.",
+      "published": "2026-01-08T21:04:07Z",
+      "updated": "2026-01-08T21:04:07Z",
+      "arxiv_id": "2601.05379v1",
+      "abs_url": "http://arxiv.org/abs/2601.05379v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.05379v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "场景分类",
+        "高效微调与轻量化",
+        "高光谱/多光谱",
+        "数据集/评测"
+      ],
+      "topic": "场景分类",
+      "score": 8,
+      "anchor_terms": [
+        "hyperspectral image"
+      ],
+      "matched_terms": [
+        "CNN",
+        "hyperspectral",
+        "hyperspectral image",
+        "hyperspectral image classification",
+        "image classification",
+        "transformer"
+      ],
+      "title_zh": "EdgeLDR：用于边缘高效深度学习的四元数低位移秩神经网络",
+      "summary_zh": "在边缘设备上部署深度神经网络通常受到密集线性算子的内存流量和计算成本的限制。虽然四元数神经网络通过哈密尔顿乘积耦合多个通道来提高参数效率，但它们通常保留非结构化的密集权重；相反，结构化矩阵可以实现快速计算，但通常应用于实数域。本文介绍了 EdgeLDR，这是一种四元数块循环线性和卷积层的实用框架，它将四元数通道混合与块循环参数结构相结合，并通过复杂的伴随表示实现基于 FFT 的评估。我们提出了 EdgeLDR 层的参考实现，并将基于 FFT 的计算与四元数循环乘积的简单空间域实现进行了比较。 FFT 评估比简单的实现产生了很大的经验加速，并且随着块大小的增加保持延迟稳定，使得更大的压缩因子在计算上可行。我们进一步将 EdgeLDR 层集成到紧凑的 CNN 和 Transformer 主干中，并评估 32x32 RGB 分类（CIFAR-10/100，SVHN）和高光谱图像分类（Houston 2013，帕维亚大学）的精度压缩权衡，报告参数计数和 CPU/GPU 延迟。结果表明，EdgeLDR 层提供了显着的压缩和具有竞争力的精度。"
+    },
+    {
+      "title": "Sparsity-Aware Low-Rank Representation for Efficient Fine-Tuning of Large Language Models",
+      "authors": [
+        "Longteng Zhang",
+        "Sen Wu",
+        "Shuai Hou",
+        "Zhengyu Qing",
+        "Zhuo Zheng",
+        "Danning Ke",
+        "Qihong Lin",
+        "Qiang Wang",
+        "Shaohuai Shi",
+        "Xiaowen Chu"
+      ],
+      "summary": "Adapting large pre-trained language models to downstream tasks often entails fine-tuning millions of parameters or deploying costly dense weight updates, which hinders their use in resource-constrained environments. Low-rank Adaptation (LoRA) reduces trainable parameters by factorizing weight updates, yet the underlying dense weights still impose high storage and computation costs. Magnitude-based pruning can yield sparse models but typically degrades LoRA's performance when applied naively. In this paper, we introduce SALR (Sparsity-Aware Low-Rank Representation), a novel fine-tuning paradigm that unifies low-rank adaptation with sparse pruning under a rigorous mean-squared-error framework. We prove that statically pruning only the frozen base weights minimizes the pruning error bound, and we recover the discarded residual information via a truncated-SVD low-rank adapter, which provably reduces per-entry MSE by a factor of $(1 - r/\\min(d,k))$. To maximize hardware efficiency, we fuse multiple low-rank adapters into a single concatenated GEMM, and we adopt a bitmap-based encoding with a two-stage pipelined decoding + GEMM design to achieve true model compression and speedup. Empirically, SALR attains 50\\% sparsity on various LLMs while matching the performance of LoRA on GSM8K and MMLU, reduces model size by $2\\times$, and delivers up to a $1.7\\times$ inference speedup.",
+      "published": "2026-01-08T20:34:12Z",
+      "updated": "2026-01-28T10:53:31Z",
+      "arxiv_id": "2601.16991v2",
+      "abs_url": "http://arxiv.org/abs/2601.16991v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.16991v2",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "基础模型",
+      "score": 6,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "adapter",
+        "fine-tuning",
+        "large language model",
+        "LoRA"
+      ],
+      "title_zh": "用于高效微调大型语言模型的稀疏感知低秩表示",
+      "summary_zh": "将大型预训练语言模型适应下游任务通常需要微调数百万个参数或部署昂贵的密集权重更新，这阻碍了它们在资源有限的环境中的使用。低秩适应（LoRA）通过分解权重更新来减少可训练参数，但底层的密集权重仍然会带来较高的存储和计算成本。基于幅度的修剪可以产生稀疏模型，但如果简单应用，通常会降低 LoRA 的性能。在本文中，我们介绍了 SALR（稀疏感知低秩表示），这是一种新颖的微调范式，它将低秩自适应与稀疏剪枝在严格的均方误差框架下统一起来。我们证明，仅静态剪枝冻结的基本权重可以最小化剪枝误差范围，并且我们通过截断的 SVD 低秩适配器恢复丢弃的残差信息，这可以证明将每个条目的 MSE 降低了 $(1 - r/\\min(d,k))$ 倍。为了最大限度地提高硬件效率，我们将多个低秩适配器融合到单个串联的 GEMM 中，并采用基于位图的编码和两级流水线解码 + GEMM 设计，以实现真正的模型压缩和加速。根据经验，SALR 在各种 LLM 上实现了 50% 的稀疏性，同时与 GSM8K 和 MMLU 上的 LoRA 的性能相匹配，将模型大小减少了 2 美元，并提供高达 1.7 美元的推理加速。"
+    },
+    {
+      "title": "Scalable neural pushbroom architectures for real-time denoising of hyperspectral images onboard satellites",
+      "authors": [
+        "Ziyao Yi",
+        "Davide Piccinini",
+        "Diego Valsesia",
+        "Tiziano Bianchi",
+        "Enrico Magli"
+      ],
+      "summary": "The next generation of Earth observation satellites will seek to deploy intelligent models directly onboard the payload in order to minimize the latency incurred by the transmission and processing chain of the ground segment, for time-critical applications. Designing neural architectures for onboard execution, particularly for satellite-based hyperspectral imagers, poses novel challenges due to the unique constraints of this environment and imaging system that are largely unexplored by the traditional computer vision literature. In this paper, we show that this setting requires addressing three competing objectives, namely high-quality inference with low complexity, dynamic power scalability and fault tolerance. We focus on the problem of hyperspectral image denoising, which is a critical task to enable effective downstream inference, and highlights the constraints of the onboard processing scenario. We propose a neural network design that addresses the three aforementioned objectives with several novel contributions. In particular, we propose a mixture of denoisers that can be resilient to radiation-induced faults as well as allowing for time-varying power scaling. Moreover, each denoiser employs an innovative architecture where an image is processed line-by-line in a causal way, with a memory of past lines, in order to match the acquisition process of pushbroom hyperspectral sensors and greatly limit memory requirements. We show that the proposed architecture can run in real-time, i.e., process one line in the time it takes to acquire the next one, on low-power hardware and provide competitive denoising quality with respect to significantly more complex state-of-the-art models. We also show that the power scalability and fault tolerance objectives provide a design space with multiple tradeoffs between those properties and denoising quality.",
+      "published": "2026-01-08T15:28:39Z",
+      "updated": "2026-01-08T15:28:39Z",
+      "arxiv_id": "2601.05020v1",
+      "abs_url": "http://arxiv.org/abs/2601.05020v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.05020v1",
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "高光谱/多光谱"
+      ],
+      "topic": "图像生成与重建",
+      "score": 11,
+      "anchor_terms": [
+        "earth observation",
+        "hyperspectral image"
+      ],
+      "matched_terms": [
+        "denoising",
+        "earth observation",
+        "hyperspectral",
+        "hyperspectral image",
+        "satellite"
+      ],
+      "title_zh": "用于卫星上高光谱图像实时去噪的可扩展神经推扫架构",
+      "summary_zh": "下一代地球观测卫星将寻求直接在有效载荷上部署智能模型，以最大限度地减少地面部分传输和处理链产生的延迟，以适应时间关键的应用。设计用于机载执行的神经架构，特别是基于卫星的高光谱成像仪，由于这种环境和成像系统的独特限制而提出了新的挑战，而传统计算机视觉文献在很大程度上尚未对此进行探索。在本文中，我们表明这种设置需要解决三个相互竞争的目标，即低复杂度的高质量推理、动态功率可扩展性和容错能力。我们重点关注高光谱图像去噪问题，这是实现有效下游推理的关键任务，并强调了机载处理场景的限制。我们提出了一种神经网络设计，通过一些新颖的贡献来解决上述三个目标。特别是，我们提出了一种混合降噪器，可以抵抗辐射引起的故障，并允许随时间变化的功率缩放。此外，每个降噪器都采用创新的架构，以因果方式逐行处理图像，并存储过去的行，以匹配推扫式高光谱传感器的采集过程并极大地限制内存需求。我们表明，所提出的架构可以在低功耗硬件上实时运行，即在获取下一行所需的时间内处理一条线，并提供相对于更复杂的最先进模型而言具有竞争力的降噪质量。我们还表明，功率可扩展性和容错目标提供了一个在这些属性和降噪质量之间进行多重权衡的设计空间。"
+    },
+    {
+      "title": "DR-LoRA: Dynamic Rank LoRA for Fine-Tuning Mixture-of-Experts Models",
+      "authors": [
+        "Guanzhi Deng",
+        "Bo Li",
+        "Ronghao Chen",
+        "Xiujin Liu",
+        "Zhuo Han",
+        "Huacan Wang",
+        "Lijie Wen",
+        "Linqi Song"
+      ],
+      "summary": "Mixture-of-Experts (MoE) has become a prominent paradigm for scaling Large Language Models (LLMs). Parameter-efficient fine-tuning methods, such as LoRA, are widely adopted to adapt pretrained MoE LLMs to downstream tasks. However, existing approaches typically assign identical LoRA ranks to all expert modules, ignoring the heterogeneous specialization of pretrained experts. This uniform allocation leads to a resource mismatch: task-relevant experts are under-provisioned, while less relevant ones receive redundant parameters. To address this, we propose DR-LoRA, a Dynamic Rank LoRA framework for fine-tuning pretrained MoE models. Specifically, DR-LoRA initializes all expert LoRA modules with a small active rank and uses an expert saliency score, which combines routing frequency and gradient-based rank importance, to identify which experts would benefit most from additional capacity. It then periodically expands the active ranks of the task-critical expert LoRA, progressively constructing a heterogeneous rank distribution tailored to the target task. Experiments on three MoE models across six tasks show that DR-LoRA consistently outperforms LoRA and other strong baselines, demonstrating that task-adaptive heterogeneous rank allocation is an effective strategy to improve active capacity utilization in MoE fine-tuning.",
+      "published": "2026-01-08T10:58:51Z",
+      "updated": "2026-04-02T02:30:08Z",
+      "arxiv_id": "2601.04823v5",
+      "abs_url": "http://arxiv.org/abs/2601.04823v5",
+      "pdf_url": "https://arxiv.org/pdf/2601.04823v5",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 5,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LoRA"
+      ],
+      "title_zh": "DR-LoRA：用于微调混合专家模型的动态排名 LoRA",
+      "summary_zh": "专家混合 (MoE) 已成为扩展大型语言模型 (LLM) 的重要范例。 LoRA 等参数高效的微调方法被广泛采用，使预训练的 MoE LLM 适应下游任务。然而，现有方法通常为所有专家模块分配相同的 LoRA 等级，而忽略了预训练专家的异构专业化。这种统一分配会导致资源不匹配：与任务相关的专家配置不足，而相关性较低的专家则收到冗余参数。为了解决这个问题，我们提出了 DR-LoRA，一种动态排名 LoRA 框架，用于微调预训练的 MoE 模型。具体来说，DR-LoRA 使用较小的活跃排名初始化所有专家 LoRA 模块，并使用专家显着性评分（结合路由频率和基于梯度的排名重要性）来确定哪些专家将从额外容量中受益最多。然后，它定期扩展关键任务专家 LoRA 的活跃等级，逐步构建适合目标任务的异构等级分布。对六个任务的三个 MoE 模型的实验表明，DR-LoRA 始终优于 LoRA 和其他强大的基线，这表明任务自适应异构排名分配是提高 MoE 微调中主动容量利用率的有效策略。"
+    },
+    {
+      "title": "Comparison of Maximum Likelihood Classification Before and After Applying Weierstrass Transform",
+      "authors": [
+        "Muhammad Shoaib",
+        "Zaka Ur Rehman",
+        "Muhammad Qasim"
+      ],
+      "summary": "The aim of this paper is to use Maximum Likelihood (ML) Classification on multispectral data by means of qualitative and quantitative approaches. Maximum Likelihood is a supervised classification algorithm which is based on the Classical Bayes theorem. It makes use of a discriminant function to assign pixel to the class with the highest likelihood. Class means vector and covariance matrix are the key inputs to the function and can be estimated from training pixels of a particular class. As Maximum Likelihood need some assumptions before it has to be applied on the data. In this paper we will compare the results of Maximum Likelihood Classification (ML) before apply the Weierstrass Transform and apply Weierstrass Transform and will see the difference between the accuracy on training pixels of high resolution Quickbird satellite image. Principle Component analysis (PCA) is also used for dimension reduction and also used to check the variation in bands. The results shows that the separation between mean of the classes in the decision space is to be the main factor that leads to the high classification accuracy of Maximum Likelihood (ML) after using Weierstrass Transform than without using it.",
+      "published": "2026-01-08T10:41:07Z",
+      "updated": "2026-01-08T10:41:07Z",
+      "arxiv_id": "2601.04808v1",
+      "abs_url": "http://arxiv.org/abs/2601.04808v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.04808v1",
+      "primary_category": "stat.AP",
+      "categories": [
+        "stat.AP",
+        "cs.LG",
+        "math.PR"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高光谱/多光谱"
+      ],
+      "topic": "高光谱/多光谱",
+      "score": 3,
+      "anchor_terms": [
+        "satellite image"
+      ],
+      "matched_terms": [
+        "multispectral",
+        "satellite",
+        "satellite image"
+      ],
+      "title_zh": "应用 Weierstrass 变换前后最大似然分类的比较",
+      "summary_zh": "本文的目的是通过定性和定量方法对多光谱数据使用最大似然 (ML) 分类。最大似然是一种基于经典贝叶斯定理的监督分类算法。它利用判别函数将像素分配给可能性最高的类别。类均值向量和协方差矩阵是函数的关键输入，可以根据特定类的训练像素进行估计。由于最大似然法在应用于数据之前需要一些假设。在本文中，我们将比较应用 Weierstrass 变换之前和应用 Weierstrass 变换之前的最大似然分类 (ML) 结果，并观察高分辨率 Quickbird 卫星图像训练像素的准确性之间的差异。主成分分析 (PCA) 也用于降维，也用于检查频带的变化。结果表明，决策空间中类均值之间的分离是导致使用Weierstrass Transform比不使用Weierstrass Transform后最大似然（ML）分类精度高的主要因素。"
+    },
+    {
+      "title": "Detector-Augmented SAMURAI for Long-Duration Drone Tracking",
+      "authors": [
+        "Tamara R. Lenhard",
+        "Andreas Weinmann",
+        "Hichem Snoussi",
+        "Tobias Koch"
+      ],
+      "summary": "Robust long-term tracking of drone is a critical requirement for modern surveillance systems, given their increasing threat potential. While detector-based approaches typically achieve strong frame-level accuracy, they often suffer from temporal inconsistencies caused by frequent detection dropouts. Despite its practical relevance, research on RGB-based drone tracking is still limited and largely reliant on conventional motion models. Meanwhile, foundation models like SAMURAI have established their effectiveness across other domains, exhibiting strong category-agnostic tracking performance. However, their applicability in drone-specific scenarios has not been investigated yet. Motivated by this gap, we present the first systematic evaluation of SAMURAI's potential for robust drone tracking in urban surveillance settings. Furthermore, we introduce a detector-augmented extension of SAMURAI to mitigate sensitivity to bounding-box initialization and sequence length. Our findings demonstrate that the proposed extension significantly improves robustness in complex urban environments, with pronounced benefits in long-duration sequences - especially under drone exit-re-entry events. The incorporation of detector cues yields consistent gains over SAMURAI's zero-shot performance across datasets and metrics, with success rate improvements of up to +0.393 and FNR reductions of up to -0.475.",
+      "published": "2026-01-08T10:27:05Z",
+      "updated": "2026-01-08T10:27:05Z",
+      "arxiv_id": "2601.04798v1",
+      "abs_url": "http://arxiv.org/abs/2601.04798v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.04798v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted at the WACV 2026 Workshop on \"Real World Surveillance: Applications and Challenges\"",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "小样本与域泛化",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 6,
+      "anchor_terms": [
+        "drone"
+      ],
+      "matched_terms": [
+        "drone",
+        "foundation model",
+        "robust",
+        "zero-shot"
+      ],
+      "title_zh": "用于长时间无人机跟踪的探测器增强型 SAMURAI",
+      "summary_zh": "鉴于无人机潜在的威胁日益增加，对无人机进行稳健的长期跟踪是现代监控系统的关键要求。虽然基于检测器的方法通常可以实现很强的帧级精度，但它们经常会因频繁的检测丢失而导致时间不一致。尽管具有实际意义，但基于 RGB 的无人机跟踪研究仍然有限，并且在很大程度上依赖于传统的运动模型。与此同时，像 SAMURAI 这样的基础模型已经在其他领域建立了有效性，表现出强大的与类别无关的跟踪性能。然而，它们在无人机特定场景中的适用性尚未得到研究。受这一差距的推动，我们对 SAMURAI 在城市监控环境中强大的无人机跟踪潜力进行了首次系统评估。此外，我们引入了 SAMURAI 的检测器增强扩展，以减轻对边界框初始化和序列长度的敏感性。我们的研究结果表明，所提出的扩展显着提高了复杂城市环境中的鲁棒性，在长时间序列中具有明显的好处 - 特别是在无人机退出-再进入事件下。检测器线索的结合在数据集和指标上比 SAMURAI 的零样本性能获得了一致的增益，成功率提高了高达 +0.393，FNR 降低了高达 -0.475。"
+    },
+    {
+      "title": "Intraday spatiotemporal PV power prediction at national scale using satellite-based solar forecast models",
+      "authors": [
+        "Luca Lanzilao",
+        "Angela Meyer"
+      ],
+      "summary": "We present a novel framework for spatiotemporal photovoltaic (PV) power forecasting and use it to evaluate the reliability, sharpness, and overall performance of seven intraday PV power nowcasting models. The model suite includes satellite-based deep learning and optical-flow approaches and physics-based numerical weather prediction models, covering both deterministic and probabilistic formulations. Forecasts are first validated against satellite-derived surface solar irradiance (SSI). Irradiance fields are then converted into PV power using station-specific machine learning models, enabling comparison with production data from 6434 PV stations across Switzerland. To our knowledge, this is the first study to investigate spatiotemporal PV forecasting at a national scale. We additionally provide the first visualizations of how mesoscale cloud systems shape national PV production on hourly and sub-hourly timescales. Our results show that satellite-based approaches outperform the Integrated Forecast System (IFS-ENS), particularly at short lead times. Among them, SolarSTEPS and SHADECast deliver the most accurate SSI and PV power predictions, with SHADECast providing the most reliable ensemble spread. The deterministic model IrradianceNet achieves the lowest root mean square error, while probabilistic forecasts of SolarSTEPS and SHADECast provide better-calibrated uncertainty. Forecast skill generally decreases with elevation. At a national scale, satellite-based models forecast the daily total PV generation with relative errors below 10% for 82% of the days in 2019-2020, demonstrating robustness and their potential for operational use.",
+      "published": "2026-01-08T09:15:14Z",
+      "updated": "2026-01-08T09:15:14Z",
+      "arxiv_id": "2601.04751v1",
+      "abs_url": "http://arxiv.org/abs/2601.04751v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.04751v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "数据集/评测"
+      ],
+      "topic": "数据集/评测",
+      "score": 4,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "robust",
+        "satellite",
+        "temporal"
+      ],
+      "title_zh": "使用基于卫星的太阳能预测模型在全国范围内进行日内时空光伏发电预测",
+      "summary_zh": "我们提出了一种新颖的时空光伏（PV）电力预测框架，并用它来评估七个日内光伏发电临近预报模型的可靠性、清晰度和整体性能。该模型套件包括基于卫星的深度学习和光流方法以及基于物理的数值天气预报模型，涵盖确定性和概率公式。首先根据卫星衍生的表面太阳辐照度 (SSI) 验证预测。然后，使用特定于电站的机器学习模型将辐照度场转换为光伏发电，从而可以与瑞士 6434 个光伏电站的生产数据进行比较。据我们所知，这是第一项在全国范围内调查时空光伏预测的研究。我们还首次提供了中尺度云系统如何在每小时和次小时时间尺度上塑造国家光伏发电的可视化结果。我们的结果表明，基于卫星的方法优于综合预报系统 (IFS-ENS)，特别是在较短的交付周期内。其中，SolarSTEPS 和 SHADECast 提供最准确的 SSI 和 PV 功率预测，SHADECast 提供最可靠的集合分布。确定性模型 IrradianceNet 实现了最低的均方根误差，而 SolarSTEPS 和 SHADECast 的概率预测提供了更好校准的不确定性。预测能力通常随着海拔的升高而降低。在全国范围内，基于卫星的模型预测 2019-2020 年 82% 的每日光伏发电总量相对误差低于 10%，这证明了其稳健性及其运营使用潜力。"
+    },
+    {
+      "title": "Leveraging Membership Inference Attacks for Privacy Measurement in Federated Learning for Remote Sensing Images",
+      "authors": [
+        "Anh-Kiet Duong",
+        "Petra Gomez-Krämer",
+        "Hoàng-Ân Lê",
+        "Minh-Tan Pham"
+      ],
+      "summary": "Federated Learning (FL) enables collaborative model training while keeping training data localized, allowing us to preserve privacy in various domains including remote sensing. However, recent studies show that FL models may still leak sensitive information through their outputs, motivating the need for rigorous privacy evaluation. In this paper, we leverage membership inference attacks (MIA) as a quantitative privacy measurement framework for FL applied to remote sensing image classification. We evaluate multiple black-box MIA techniques, including entropy-based attacks, modified entropy attacks, and the likelihood ratio attack, across different FL algorithms and communication strategies. Experiments conducted on two public scene classification datasets demonstrate that MIA effectively reveals privacy leakage not captured by accuracy alone. Our results show that communication-efficient FL strategies reduce MIA success rates while maintaining competitive performance. These findings confirm MIA as a practical metric and highlight the importance of integrating privacy measurement into FL system design for remote sensing applications.",
+      "published": "2026-01-08T08:58:33Z",
+      "updated": "2026-01-08T08:58:33Z",
+      "arxiv_id": "2601.06200v1",
+      "abs_url": "http://arxiv.org/abs/2601.06200v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.06200v1",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "comment": "5 pages",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "场景分类",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "场景分类",
+      "score": 6,
+      "anchor_terms": [
+        "remote sensing",
+        "scene classification"
+      ],
+      "matched_terms": [
+        "image classification",
+        "remote sensing",
+        "scene classification"
+      ],
+      "title_zh": "利用成员推理攻击进行遥感图像联邦学习中的隐私测量",
+      "summary_zh": "联邦学习 (FL) 支持协作模型训练，同时保持训练数据本地化，使我们能够保护包括遥感在内的各个领域的隐私。然而，最近的研究表明，FL 模型仍然可能通过其输出泄露敏感信息，因此需要进行严格的隐私评估。在本文中，我们利用成员推理攻击（MIA）作为应用于遥感图像分类的 FL 的定量隐私测量框架。我们在不同的 FL 算法和通信策略中评估了多种黑盒 MIA 技术，包括基于熵的攻击、修改熵攻击和似然比攻击。在两个公共场景分类数据集上进行的实验表明，MIA 有效地揭示了仅靠准确性无法捕获的隐私泄露。我们的结果表明，高效沟通的 FL 策略可降低 MIA 成功率，同时保持竞争力。这些发现证实了 MIA 是一种实用的指标，并强调了将隐私测量集成到遥感应用的 FL 系统设计中的重要性。"
+    },
+    {
+      "title": "AIVD: Adaptive Edge-Cloud Collaboration for Accurate and Efficient Industrial Visual Detection",
+      "authors": [
+        "Yunqing Hu",
+        "Zheming Yang",
+        "Chang Zhao",
+        "Qi Guo",
+        "Meng Gao",
+        "Pengcheng Li",
+        "Wen Ji"
+      ],
+      "summary": "Multimodal large language models (MLLMs) demonstrate exceptional capabilities in semantic understanding and visual reasoning, yet they still face challenges in precise object localization and resource-constrained edge-cloud deployment. To address this, this paper proposes the AIVD framework, which achieves unified precise localization and high-quality semantic generation through the collaboration between lightweight edge detectors and cloud-based MLLMs. To enhance the cloud MLLM's robustness against edge cropped-box noise and scenario variations, we design an efficient fine-tuning strategy with visual-semantic collaborative augmentation, significantly improving classification accuracy and semantic consistency. Furthermore, to maintain high throughput and low latency across heterogeneous edge devices and dynamic network conditions, we propose a heterogeneous resource-aware dynamic scheduling algorithm. Experimental results demonstrate that AIVD substantially reduces resource consumption while improving MLLM classification performance and semantic generation quality. The proposed scheduling strategy also achieves higher throughput and lower latency across diverse scenarios.",
+      "published": "2026-01-08T08:56:07Z",
+      "updated": "2026-01-08T08:56:07Z",
+      "arxiv_id": "2601.04734v1",
+      "abs_url": "http://arxiv.org/abs/2601.04734v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.04734v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像描述与视觉推理",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "多模态融合"
+      ],
+      "topic": "图像描述与视觉推理",
+      "score": 6,
+      "anchor_terms": [
+        "crop"
+      ],
+      "matched_terms": [
+        "crop",
+        "fine-tuning",
+        "large language model",
+        "MLLM",
+        "multimodal large language model",
+        "robust"
+      ],
+      "title_zh": "AIVD：自适应边缘云协作，实现准确高效的工业视觉检测",
+      "summary_zh": "多模态大语言模型（MLLM）在语义理解和视觉推理方面表现出卓越的能力，但它们在精确的对象定位和资源受限的边缘云部署方面仍然面临挑战。为了解决这个问题，本文提出了AIVD框架，该框架通过轻量级边缘检测器和基于云的MLLM之间的协作实现了统一的精确定位和高质量的语义生成。为了增强云 MLLM 对边缘裁剪框噪声和场景变化的鲁棒性，我们设计了一种具有视觉语义协作增强功能的高效微调策略，显着提高了分类准确性和语义一致性。此外，为了在异构边缘设备和动态网络条件下保持高吞吐量和低延迟，我们提出了一种异构资源感知动态调度算法。实验结果表明，AIVD 大幅降低了资源消耗，同时提高了 MLLM 分类性能和语义生成质量。所提出的调度策略还可以在不同场景中实现更高的吞吐量和更低的延迟。"
+    },
+    {
+      "title": "Bridging Temporal and Textual Modalities: A Multimodal Framework for Automated Cloud Failure Root Cause Analysis",
+      "authors": [
+        "Gijun Park"
+      ],
+      "summary": "Root cause analysis in modern cloud infrastructure demands sophisticated understanding of heterogeneous data sources, particularly time-series performance metrics that involve core failure signatures. While large language models demonstrate remarkable capabilities in textual reasoning, their discrete token-based architecture creates fundamental incompatibilities with continuous numerical sequences exhibiting temporal dependencies. Current methodologies inadequately address this modality mismatch, constraining the potential of language model-driven automation in incident management workflows. This paper presents a multimodal diagnostic framework that harmonizes time-series representations with pretrained language model embedding spaces. Our approach contributes three technical advances: (1) a semantic compression technique that distills temporal segments into single-token abstractions while preserving pattern semantics, (2) an alignment encoder utilizing gated cross-attention to project time-series features into language model latent space, and (3) a retrieval-augmented diagnostic pipeline that synthesizes aligned embeddings with historical incident knowledge for expert-level failure attribution. Comprehensive evaluation across six cloud system benchmarks demonstrates that our framework achieves leading performance, reaching 48.75% diagnostic accuracy with notable improvements on scenarios involving compound failure modes. The results validate embedding-space alignment as an effective strategy for enabling language models to reason over multimodal telemetry data in production incident response contexts.",
+      "published": "2026-01-08T08:20:44Z",
+      "updated": "2026-01-08T08:20:44Z",
+      "arxiv_id": "2601.04709v1",
+      "abs_url": "http://arxiv.org/abs/2601.04709v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.04709v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "视觉-语言模型",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "时间序列与视频",
+      "score": 3,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "cross-attention",
+        "large language model",
+        "temporal",
+        "time-series"
+      ],
+      "title_zh": "桥接时间和文本模态：用于自动化云故障根本原因分析的多模态框架",
+      "summary_zh": "现代云基础设施中的根本原因分析需要对异构数据源的深入理解，特别是涉及核心故障签名的时间序列性能指标。虽然大型语言模型在文本推理方面表现出卓越的能力，但它们基于离散标记的架构与表现出时间依赖性的连续数字序列产生了根本的不兼容性。当前的方法不足以解决这种模式不匹配的问题，限制了事件管理工作流程中语言模型驱动的自动化的潜力。本文提出了一种多模式诊断框架，该框架将时间序列表示与预训练的语言模型嵌入空间相协调。我们的方法贡献了三项技术进步：（1）语义压缩技术，将时间段提炼为单标记抽象，同时保留模式语义；（2）对齐编码器，利用门控交叉注意力将时间序列特征投影到语言模型潜在空间中；（3）检索增强诊断管道，将对齐嵌入与历史事件知识合成，以实现专家级故障归因。对六个云系统基准的综合评估表明，我们的框架实现了领先的性能，达到了 48.75% 的诊断准确率，并且在涉及复合故障模式的场景上有显着改进。结果验证了嵌入空间对齐是一种有效的策略，使语言模型能够在生产事件响应上下文中对多模态遥测数据进行推理。"
+    },
+    {
+      "title": "HyperAlign: Hyperbolic Entailment Cones for Adaptive Text-to-Image Alignment Assessment",
+      "authors": [
+        "Wenzhi Chen",
+        "Bo Hu",
+        "Leida Li",
+        "Lihuo He",
+        "Wen Lu",
+        "Xinbo Gao"
+      ],
+      "summary": "With the rapid development of text-to-image generation technology, accurately assessing the alignment between generated images and text prompts has become a critical challenge. Existing methods rely on Euclidean space metrics, neglecting the structured nature of semantic alignment, while lacking adaptive capabilities for different samples. To address these limitations, we propose HyperAlign, an adaptive text-to-image alignment assessment framework based on hyperbolic entailment geometry. First, we extract Euclidean features using CLIP and map them to hyperbolic space. Second, we design a dynamic-supervision entailment modeling mechanism that transforms discrete entailment logic into continuous geometric structure supervision. Finally, we propose an adaptive modulation regressor that utilizes hyperbolic geometric features to generate sample-level modulation parameters, adaptively calibrating Euclidean cosine similarity to predict the final score. HyperAlign achieves highly competitive performance on both single database evaluation and cross-database generalization tasks, fully validating the effectiveness of hyperbolic geometric modeling for image-text alignment assessment.",
+      "published": "2026-01-08T05:41:06Z",
+      "updated": "2026-03-19T08:12:22Z",
+      "arxiv_id": "2601.04614v2",
+      "abs_url": "http://arxiv.org/abs/2601.04614v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.04614v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "视觉-语言模型",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 3,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "CLIP",
+        "image generation"
+      ],
+      "title_zh": "HyperAlign：用于自适应文本到图像对齐评估的双曲蕴含锥",
+      "summary_zh": "随着文本到图像生成技术的快速发展，准确评估生成的图像和文本提示之间的对齐情况已成为一项关键挑战。现有方法依赖于欧几里得空间度量，忽略了语义对齐的结构化本质，同时缺乏对不同样本的自适应能力。为了解决这些限制，我们提出了 HyperAlign，一种基于双曲蕴涵几何的自适应文本到图像对齐评估框架。首先，我们使用 CLIP 提取欧几里得特征并将其映射到双曲空间。其次，我们设计了一种动态监督蕴涵建模机制，将离散蕴涵逻辑转化为连续的几何结构监督。最后，我们提出了一种自适应调制回归器，它利用双曲几何特征来生成样本级调制参数，自适应校准欧几里德余弦相似度来预测最终分数。 HyperAlign在单数据库评估和跨数据库泛化任务上均取得了极具竞争力的性能，充分验证了双曲几何建模用于图文对齐评估的有效性。"
+    },
+    {
+      "title": "Integrating Distribution Matching into Semi-Supervised Contrastive Learning for Labeled and Unlabeled Data",
+      "authors": [
+        "Shogo Nakayama",
+        "Masahiro Okuda"
+      ],
+      "summary": "The advancement of deep learning has greatly improved supervised image classification. However, labeling data is costly, prompting research into unsupervised learning methods such as contrastive learning. In real-world scenarios, fully unlabeled datasets are rare, making semi-supervised learning (SSL) highly relevant in scenarios where a small amount of labeled data coexists with a large volume of unlabeled data. A well-known semi-supervised contrastive learning approach involves assigning pseudo-labels to unlabeled data. This study aims to enhance pseudo-label-based SSL by incorporating distribution matching between labeled and unlabeled feature embeddings to improve image classification accuracy across multiple datasets.",
+      "published": "2026-01-08T02:32:12Z",
+      "updated": "2026-01-08T02:32:12Z",
+      "arxiv_id": "2601.04518v1",
+      "abs_url": "http://arxiv.org/abs/2601.04518v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.04518v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "ITC-CSCC accepted",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "场景分类",
+        "基础模型",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "场景分类",
+      "score": 6,
+      "anchor_terms": [
+        "semi-supervised"
+      ],
+      "matched_terms": [
+        "contrastive learning",
+        "image classification",
+        "semi-supervised",
+        "unsupervised"
+      ],
+      "title_zh": "将分布匹配集成到标记和未标记数据的半监督对比学习中",
+      "summary_zh": "深度学习的进步极大地提高了监督图像分类。然而，标记数据的成本很高，这促使人们研究对比学习等无监督学习方法。在现实场景中，完全未标记的数据集很少见，这使得半监督学习（SSL）在少量标记数据与大量未标记数据共存的场景中具有高度相关性。一种著名的半监督对比学习方法涉及将伪标签分配给未标记的数据。本研究旨在通过结合标记和未标记特征嵌入之间的分布匹配来增强基于伪标签的 SSL，以提高跨多个数据集的图像分类准确性。"
+    },
+    {
+      "title": "Specific Emitter Identification via Active Learning",
+      "authors": [
+        "Jingyi Wang",
+        "Fanggang Wang"
+      ],
+      "summary": "With the rapid growth of wireless communications, specific emitter identification (SEI) is significant for communication security. However, its model training relies heavily on the large-scale labeled data, which are costly and time-consuming to obtain. To address this challenge, we propose an SEI approach enhanced by active learning (AL), which follows a three-stage semi-supervised training scheme. In the first stage, self-supervised contrastive learning is employed with a dynamic dictionary update mechanism to extract robust representations from large amounts of the unlabeled data. In the second stage, supervised training on a small labeled dataset is performed, where the contrastive and cross-entropy losses are jointly optimized to improve the feature separability and strengthen the classification boundaries. In the third stage, an AL module selects the most valuable samples from the unlabeled data for annotation based on the uncertainty and representativeness criteria, further enhancing generalization under limited labeling budgets. Experimental results on the ADS-B and WiFi datasets demonstrate that the proposed SEI approach significantly outperforms the conventional supervised and semi-supervised methods under limited annotation conditions, achieving higher recognition accuracy with lower labeling cost.",
+      "published": "2026-01-08T02:16:04Z",
+      "updated": "2026-01-08T02:16:04Z",
+      "arxiv_id": "2601.04502v1",
+      "abs_url": "http://arxiv.org/abs/2601.04502v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.04502v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 6,
+      "anchor_terms": [
+        "active learning",
+        "semi-supervised"
+      ],
+      "matched_terms": [
+        "active learning",
+        "contrastive learning",
+        "robust",
+        "self-supervised",
+        "semi-supervised"
+      ],
+      "title_zh": "通过主动学习识别特定发射源",
+      "summary_zh": "随着无线通信的快速发展，特定发射器识别（SEI）对于通信安全具有重要意义。然而，其模型训练严重依赖于大规模标记数据，获取这些数据成本高昂且耗时。为了应对这一挑战，我们提出了一种通过主动学习（AL）增强的 SEI 方法，该方法遵循三阶段半监督训练方案。在第一阶段，采用自监督对比学习和动态字典更新机制，从大量未标记数据中提取鲁棒的表示。在第二阶段，对小型标记数据集进行监督训练，联合优化对比损失和交叉熵损失，以提高特征可分离性并加强分类边界。第三阶段，AL模块根据不确定性和代表性标准从未标记数据中选择最有价值的样本进行注释，进一步增强有限标记预算下的泛化能力。 ADS-B和WiFi数据集上的实验结果表明，所提出的SEI方法在有限的注释条件下显着优于传统的监督和半监督方法，以更低的标记成本实现了更高的识别精度。"
+    }
+  ]
+}

@@ -1,0 +1,787 @@
+{
+  "date": "2026-01-06",
+  "generated_at": "2026-06-03T04:37:12.552143+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202601060000 TO 202601062359]",
+  "total_fetched": 295,
+  "total_matched": 18,
+  "papers": [
+    {
+      "title": "Edit2Restore:Few-Shot Image Restoration via Parameter-Efficient Adaptation of Pre-trained Editing Models",
+      "authors": [
+        "M. Akın Yılmaz",
+        "Ahmet Bilican",
+        "Burak Can Biner",
+        "A. Murat Tekalp"
+      ],
+      "summary": "Image restoration has traditionally required training specialized models on thousands of paired examples per degradation type. We challenge this paradigm by demonstrating that powerful pre-trained text-conditioned image editing models can be efficiently adapted for multiple restoration tasks through parameter-efficient fine-tuning with remarkably few examples. Our approach fine-tunes LoRA adapters on FLUX.1 Kontext, a state-of-the-art 12B parameter flow matching model for image-to-image translation, using only 16-128 paired images per task, guided by simple text prompts that specify the restoration operation. Unlike existing methods that train specialized restoration networks from scratch with thousands of samples, we leverage the rich visual priors already encoded in large-scale pre-trained editing models, dramatically reducing data requirements while maintaining high perceptual quality. A single unified LoRA adapter, conditioned on task-specific text prompts, effectively handles multiple degradations including denoising, deraining, and dehazing. Through comprehensive ablation studies, we analyze: (i) the impact of training set size on restoration quality, (ii) trade-offs between task-specific versus unified multi-task adapters, (iii) the role of text encoder fine-tuning, and (iv) zero-shot baseline performance. While our method prioritizes perceptual quality over pixel-perfect reconstruction metrics like PSNR/SSIM, our results demonstrate that pre-trained image editing models, when properly adapted, offer a compelling and data-efficient alternative to traditional image restoration approaches, opening new avenues for few-shot, prompt-guided image enhancement. The code to reproduce our results are available at: https://github.com/makinyilmaz/Edit2Restore",
+      "published": "2026-01-06T19:56:16Z",
+      "updated": "2026-01-20T08:08:33Z",
+      "arxiv_id": "2601.03391v2",
+      "abs_url": "http://arxiv.org/abs/2601.03391v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.03391v2",
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/makinyilmaz/Edit2Restore",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像生成与重建",
+        "基础模型",
+        "小样本与域泛化",
+        "高效微调与轻量化"
+      ],
+      "topic": "图像生成与重建",
+      "score": 9,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "adapter",
+        "denoising",
+        "fine-tuning",
+        "image restoration",
+        "LoRA",
+        "zero-shot"
+      ],
+      "title_zh": "Edit2Restore：通过预训练编辑模型的参数高效适应实现少镜头图像恢复",
+      "summary_zh": "传统上，图像恢复需要针对每种退化类型的数千个配对示例来训练专门的模型。我们通过证明强大的预训练文本条件图像编辑模型可以通过参数有效的微调和非常少的示例来有效地适应多种恢复任务，从而挑战这一范式。我们的方法在 FLUX.1 Kontext 上微调 LoRA 适配器，FLUX.1 Kontext 是一种用于图像到图像转换的最先进的 12B 参数流匹配模型，每个任务仅使用 16-128 个配对图像，并由指定恢复操作的简单文本提示引导。与使用数千个样本从头开始训练专门的恢复网络的现有方法不同，我们利用大规模预训练编辑模型中已编码的丰富视觉先验，显着减少数据需求，同时保持高感知质量。单个统一的 LoRA 适配器以特定于任务的文本提示为条件，可有效处理多种降级，包括去噪、去雨和去雾。通过全面的消融研究，我们分析：（i）训练集大小对恢复质量的影响，（ii）特定任务适配器与统一多任务适配器之间的权衡，（iii）文本编码器微调的作用，以及（iv）零样本基线性能。虽然我们的方法优先考虑感知质量而不是 PSNR/SSIM 等像素完美重建指标，但我们的结果表明，经过适当调整的预训练图像编辑模型可以为传统图像恢复方法提供令人信服且数据高效的替代方案，为少量镜头、提示引导的图像增强开辟新途径。重现结果的代码位于：https://github.com/makinyilmaz/Edit2Restore"
+    },
+    {
+      "title": "Chronicals: A High-Performance Framework for LLM Fine-Tuning with 3.51x Speedup over Unsloth",
+      "authors": [
+        "Arjun S. Nair"
+      ],
+      "summary": "Large language model fine-tuning is bottlenecked by memory: a 7B parameter model requires 84GB--14GB for weights, 14GB for gradients, and 56GB for FP32 optimizer states--exceeding even A100-40GB capacity. We present Chronicals, an open-source training framework achieving 3.51x speedup over Unsloth through four synergistic optimizations: (1) fused Triton kernels eliminating 75% of memory traffic via RMSNorm (7x), SwiGLU (5x), and QK-RoPE (2.3x) fusion; (2) Cut Cross-Entropy reducing logit memory from 5GB to 135MB through online softmax computation; (3) LoRA+ with theoretically-derived 16x differential learning rates between adapter matrices; and (4) Best-Fit Decreasing sequence packing recovering 60-75% of compute wasted on padding. On Qwen2.5-0.5B with A100-40GB, Chronicals achieves 41,184 tokens/second for full fine-tuning versus Unsloth's 11,736 tokens/second (3.51x). For LoRA at rank 32, we reach 11,699 tokens/second versus Unsloth MAX's 2,857 tokens/second (4.10x). Critically, we discovered that Unsloth's reported 46,000 tokens/second benchmark exhibited zero gradient norms--the model was not training. We provide complete mathematical foundations: online softmax correctness proofs, FlashAttention IO complexity bounds O(N^2 d^2 M^{-1}), LoRA+ learning rate derivations from gradient magnitude analysis, and bin-packing approximation guarantees. All implementations, benchmarks, and proofs are available at https://github.com/Ajwebdevs/Chronicals with pip installation via https://pypi.org/project/chronicals/.",
+      "published": "2026-01-06T00:00:55Z",
+      "updated": "2026-01-06T00:00:55Z",
+      "arxiv_id": "2601.02609v1",
+      "abs_url": "http://arxiv.org/abs/2601.02609v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.02609v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.DC",
+        "stat.ML"
+      ],
+      "comment": "61 pages, 25 figures, open-source framework available at https://github.com/Ajwebdevs/Chronicals and pip install chronicals",
+      "code_url": "https://github.com/Ajwebdevs/Chronicals",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 7,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "adapter",
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA"
+      ],
+      "title_zh": "Chronicals：LLM 微调的高性能框架，比 Unsloth 加速 3.51 倍",
+      "summary_zh": "大型语言模型微调受到内存瓶颈：7B 参数模型需要 84GB——权重需要 14GB，梯度需要 14GB，FP32 优化器状态需要 56GB——甚至超过了 A100-40GB 的容量。我们推出 Chronicals，这是一个开源训练框架，通过四种协同优化，比 Unsloth 实现了 3.51 倍的加速：(1) 融合 Triton 内核，通过 RMSNorm (7x)、SwiGLU (5x) 和 QK-RoPE (2.3x) 融合消除了 75% 的内存流量； （2）通过在线softmax计算，Cut Cross-Entropy将logit内存从5GB减少到135MB； (3) LoRA+，理论上推导出适配器矩阵之间有 16 倍的差异学习率； (4) 最佳拟合递减序列打包恢复了填充上浪费的 60-75% 的计算。在配备 A100-40GB 的 Qwen2.5-0.5B 上，Chronicals 的完全微调达到了 41,184 个令牌/秒，而 Unsloth 达到了 11,736 个令牌/秒 (3.51x)。对于排名 32 的 LoRA，我们达到了 11,699 个令牌/秒，而 Unsloth MAX 为 2,857 个令牌/秒（4.10 倍）。至关重要的是，我们发现 Unsloth 报告的每秒 46,000 个令牌的基准表现出零梯度范数——该模型没有经过训练。我们提供完整的数学基础：在线 softmax 正确性证明、FlashAttention IO 复杂度边界 O(N^2 d^2 M^{-1})、来自梯度幅度分析的 LoRA+ 学习率推导以及装箱近似保证。所有实现、基准测试和证明均可在 https://github.com/Ajwebdevs/Chronicals 上找到，并通过 https://pypi.org/project/chronicals/ 进行 pip 安装。"
+    },
+    {
+      "title": "Understanding Reward Hacking in Text-to-Image Reinforcement Learning",
+      "authors": [
+        "Yunqi Hong",
+        "Kuei-Chun Kao",
+        "Hengguang Zhou",
+        "Cho-Jui Hsieh"
+      ],
+      "summary": "Reinforcement learning (RL) has become a standard approach for post-training large language models and, more recently, for improving image generation models, which uses reward functions to enhance generation quality and human preference alignment. However, existing reward designs are often imperfect proxies for true human judgment, making models prone to reward hacking--producing unrealistic or low-quality images that nevertheless achieve high reward scores. In this work, we systematically analyze reward hacking behaviors in text-to-image (T2I) RL post-training. We investigate how both aesthetic/human preference rewards and prompt-image consistency rewards individually contribute to reward hacking and further show that ensembling multiple rewards can only partially mitigate this issue. Across diverse reward models, we identify a common failure mode: the generation of artifact-prone images. To address this, we propose a lightweight and adaptive artifact reward model, trained on a small curated dataset of artifact-free and artifact-containing samples. This model can be integrated into existing RL pipelines as an effective regularizer for commonly used reward models. Experiments demonstrate that incorporating our artifact reward significantly improves visual realism and reduces reward hacking across multiple T2I RL setups, demonstrating the effectiveness of lightweight reward augment serving as a safeguard against reward hacking.",
+      "published": "2026-01-06T23:43:47Z",
+      "updated": "2026-01-06T23:43:47Z",
+      "arxiv_id": "2601.03468v1",
+      "abs_url": "http://arxiv.org/abs/2601.03468v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.03468v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 3,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "image generation",
+        "large language model"
+      ],
+      "title_zh": "了解文本到图像强化学习中的奖励黑客",
+      "summary_zh": "强化学习 (RL) 已成为大型语言模型训练后的标准方法，最近还成为改进图像生成模型的标准方法，该模型使用奖励函数来提高生成质量和人类偏好一致性。然而，现有的奖励设计通常不能完美地代表人类的真实判断，使得模型容易受到奖励黑客攻击——产生不切实际或低质量的图像，但仍能获得高奖励分数。在这项工作中，我们系统地分析了文本到图像（T2I）强化学习训练后的奖励黑客行为。我们研究了审美/人类偏好奖励和提示图像一致性奖励如何单独导致奖励黑客行为，并进一步表明，组合多个奖励只能部分缓解这个问题。在不同的奖励模型中，我们确定了一种常见的失败模式：生成容易出现伪影的图像。为了解决这个问题，我们提出了一种轻量级的自适应工件奖励模型，该模型在无工件和包含工件的样本的小型精选数据集上进行训练。该模型可以集成到现有的 RL 管道中，作为常用奖励模型的有效正则化器。实验表明，结合我们的工件奖励可以显着提高视觉真实感，并减少跨多个 T2I RL 设置的奖励黑客攻击，从而证明轻量级奖励增强作为防止奖励黑客攻击的有效性。"
+    },
+    {
+      "title": "PET-TURTLE: Deep Unsupervised Support Vector Machines for Imbalanced Data Clusters",
+      "authors": [
+        "Javier Salazar Cavazos"
+      ],
+      "summary": "Foundation vision, audio, and language models enable zero-shot performance on downstream tasks via their latent representations. Recently, unsupervised learning of data group structure with deep learning methods has gained popularity. TURTLE, a state of the art deep clustering algorithm, uncovers data labeling without supervision by alternating label and hyperplane updates, maximizing the hyperplane margin, in a similar fashion to support vector machines (SVMs). However, TURTLE assumes clusters are balanced; when data is imbalanced, it yields non-ideal hyperplanes that cause higher clustering error. We propose PET-TURTLE, which generalizes the cost function to handle imbalanced data distributions by a power law prior. Additionally, by introducing sparse logits in the labeling process, PET-TURTLE optimizes a simpler search space that in turn improves accuracy for balanced datasets. Experiments on synthetic and real data show that PET-TURTLE improves accuracy for imbalanced sources, prevents over-prediction of minority clusters, and enhances overall clustering.",
+      "published": "2026-01-06T18:30:25Z",
+      "updated": "2026-01-06T18:30:25Z",
+      "arxiv_id": "2601.03237v1",
+      "abs_url": "http://arxiv.org/abs/2601.03237v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.03237v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "eess.IV",
+        "stat.ML"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "小样本与域泛化",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 5,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "unsupervised",
+        "zero-shot"
+      ],
+      "title_zh": "PET-TURTLE：用于不平衡数据集群的深度无监督支持向量机",
+      "summary_zh": "基础视觉、音频和语言模型通过其潜在表示实现下游任务的零样本性能。最近，利用深度学习方法对数据组结构进行无监督学习越来越受欢迎。 TURTLE 是一种最先进的深度聚类算法，通过交替标签和超平面更新来揭示数据标签，无需监督，从而最大化超平面边缘，其方式与支持向量机 (SVM) 类似。然而，TURTLE 假设集群是平衡的；当数据不平衡时，会产生非理想超平面，从而导致更高的聚类误差。我们提出了 PET-TURTLE，它概括了通过幂律先验处理不平衡数据分布的成本函数。此外，通过在标记过程中引入稀疏逻辑，PET-TURTLE 优化了更简单的搜索空间，从而提高了平衡数据集的准确性。对合成数据和真实数据的实验表明，PET-TURTLE 提高了不平衡源的准确性，防止少数聚类的过度预测，并增强了整体聚类。"
+    },
+    {
+      "title": "The Sonar Moment: Benchmarking Audio-Language Models in Audio Geo-Localization",
+      "authors": [
+        "Ruixing Zhang",
+        "Zihan Liu",
+        "Leilei Sun",
+        "Tongyu Zhu",
+        "Weifeng Lv"
+      ],
+      "summary": "Geo-localization aims to infer the geographic origin of a given signal. In computer vision, geo-localization has served as a demanding benchmark for compositional reasoning and is relevant to public safety. In contrast, progress on audio geo-localization has been constrained by the lack of high-quality audio-location pairs. To address this gap, we introduce AGL1K, the first audio geo-localization benchmark for audio language models (ALMs), spanning 72 countries and territories. To extract reliably localizable samples from a crowd-sourced platform, we propose the Audio Localizability metric that quantifies the informativeness of each recording, yielding 1,444 curated audio clips. Evaluations on 16 ALMs show that ALMs have emerged with audio geo-localization capability. We find that closed-source models substantially outperform open-source models, and that linguistic clues often dominate as a scaffold for prediction. We further analyze ALMs' reasoning traces, regional bias, error causes, and the interpretability of the localizability metric. Overall, AGL1K establishes a benchmark for audio geo-localization and may advance ALMs with better geospatial reasoning capability.",
+      "published": "2026-01-06T18:13:24Z",
+      "updated": "2026-01-06T18:13:24Z",
+      "arxiv_id": "2601.03227v1",
+      "abs_url": "http://arxiv.org/abs/2601.03227v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.03227v1",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像描述与视觉推理",
+        "视觉-语言模型",
+        "数据集/评测"
+      ],
+      "topic": "图像描述与视觉推理",
+      "score": 4,
+      "anchor_terms": [
+        "CLIP",
+        "geospatial"
+      ],
+      "matched_terms": [
+        "CLIP",
+        "geospatial",
+        "spatial reasoning"
+      ],
+      "title_zh": "声纳时刻：音频地理定位中音频语言模型的基准测试",
+      "summary_zh": "地理定位旨在推断给定信号的地理起源。在计算机视觉中，地理定位已成为组合推理的严格基准，并且与公共安全相关。相比之下，音频地理定位的进展因缺乏高质量音频定位对而受到限制。为了弥补这一差距，我们推出了 AGL1K，这是第一个针对音频语言模型 (ALM) 的音频地理定位基准，涵盖 72 个国家和地区。为了从众包平台中提取可靠的可本地化样本，我们提出了音频本地化指标，该指标可以量化每个录音的信息量，从而生成 1,444 个精选的音频剪辑。对 16 个 ALM 的评估表明，ALM 已具备音频地理定位功能。我们发现闭源模型的性能大大优于开源模型，并且语言线索通常作为预测的支架占据主导地位。我们进一步分析 ALM 的推理轨迹、区域偏差、错误原因以及本地化指标的可解释性。总体而言，AGL1K 为音频地理定位建立了基准，并可能以更好的地理空间推理能力推进 ALM。"
+    },
+    {
+      "title": "Unified Thinker: A General Reasoning Modular Core for Image Generation",
+      "authors": [
+        "Sashuai Zhou",
+        "Qiang Zhou",
+        "Jijin Hu",
+        "Hanqing Yang",
+        "Yue Cao",
+        "Junpeng Ma",
+        "Yinchao Ma",
+        "Jun Song",
+        "Tiezheng Ge",
+        "Cheng Yu",
+        "Bo Zheng",
+        "Zhou Zhao"
+      ],
+      "summary": "Despite impressive progress in high-fidelity image synthesis, generative models still struggle with logic-intensive instruction following, exposing a persistent reasoning--execution gap. Meanwhile, closed-source systems (e.g., Nano Banana) have demonstrated strong reasoning-driven image generation, highlighting a substantial gap to current open-source models. We argue that closing this gap requires not merely better visual generators, but executable reasoning: decomposing high-level intents into grounded, verifiable plans that directly steer the generative process. To this end, we propose Unified Thinker, a task-agnostic reasoning architecture for general image generation, designed as a unified planning core that can plug into diverse generators and workflows. Unified Thinker decouples a dedicated Thinker from the image Generator, enabling modular upgrades of reasoning without retraining the entire generative model. We further introduce a two-stage training paradigm: we first build a structured planning interface for the Thinker, then apply reinforcement learning to ground its policy in pixel-level feedback, encouraging plans that optimize visual correctness over textual plausibility. Extensive experiments on text-to-image generation and image editing show that Unified Thinker substantially improves image reasoning and generation quality.",
+      "published": "2026-01-06T15:59:33Z",
+      "updated": "2026-04-03T14:36:47Z",
+      "arxiv_id": "2601.03127v2",
+      "abs_url": "http://arxiv.org/abs/2601.03127v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.03127v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建"
+      ],
+      "topic": "图像生成与重建",
+      "score": 3,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "image generation"
+      ],
+      "title_zh": "Unified Thinker：用于图像生成的通用推理模块化核心",
+      "summary_zh": "尽管在高保真图像合成方面取得了令人印象深刻的进展，但生成模型仍然难以遵循逻辑密集型指令，暴露出持续存在的推理-执行差距。与此同时，闭源系统（例如 Nano Banana）已经表现出强大的推理驱动图像生成能力，凸显了与当前开源模型的巨大差距。我们认为，缩小这一差距不仅需要更好的视觉生成器，还需要可执行的推理：将高级意图分解为扎根的、可验证的计划，直接引导生成过程。为此，我们提出了 Unified Thinker，一种用于一般图像生成的任务无关推理架构，被设计为一个统一的规划核心，可以插入不同的生成器和工作流程。 Unified Thinker 将专用 Thinker 与图像生成器解耦，从而实现推理的模块化升级，而无需重新训练整个生成模型。我们进一步引入了一个两阶段的训练范例：我们首先为 Thinker 构建一个结构化的规划界面，然后应用强化学习将其策略建立在像素级反馈的基础上，鼓励优化视觉正确性而不是文本合理性的计划。对文本到图像生成和图像编辑的大量实验表明，Unified Thinker 极大地提高了图像推理和生成质量。"
+    },
+    {
+      "title": "LeafLife: An Explainable Deep Learning Framework with Robustness for Grape Leaf Disease Recognition",
+      "authors": [
+        "B. M. Shahria Alam",
+        "Md. Nasim Ahmed"
+      ],
+      "summary": "Plant disease diagnosis is essential to farmers' management choices because plant diseases frequently lower crop yield and product quality. For harvests to flourish and agricultural productivity to boost, grape leaf disease detection is important. The plant disease dataset contains grape leaf diseases total of 9,032 images of four classes, among them three classes are leaf diseases, and the other one is healthy leaves. After rigorous pre-processing dataset was split (70% training, 20% validation, 10% testing), and two pre-trained models were deployed: InceptionV3 and Xception. Xception shows a promising result of 96.23% accuracy, which is remarkable than InceptionV3. Adversarial Training is used for robustness, along with more transparency. Grad-CAM is integrated to confirm the leaf disease. Finally deployed a web application using Streamlit with a heatmap visualization and prediction with confidence level for robust grape leaf disease classification.",
+      "published": "2026-01-06T15:55:22Z",
+      "updated": "2026-01-06T15:55:22Z",
+      "arxiv_id": "2601.03124v1",
+      "abs_url": "http://arxiv.org/abs/2601.03124v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.03124v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "4 pages, 8 figures, 2025 IEEE International Conference on Signal Processing, Information, Communication and Systems (SPICSCON)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 3,
+      "anchor_terms": [
+        "crop"
+      ],
+      "matched_terms": [
+        "crop",
+        "robust"
+      ],
+      "title_zh": "LeafLife：一种可解释的深度学习框架，具有鲁棒性，可用于葡萄叶病识别",
+      "summary_zh": "植物病害诊断对于农民的管理选择至关重要，因为植物病害经常降低作物产量和产品质量。为了丰收和提高农业生产力，葡萄叶病检测非常重要。植物病害数据集包含四类葡萄叶病共 9,032 张图像，其中三类是叶病，另一类是健康叶子。在严格的预处理数据集被分割（70% 训练、20% 验证、10% 测试）后，部署了两个预训练模型：InceptionV3 和 Xception。 Xception 显示了 96.23% 准确率的可喜结果，这比 InceptionV3 显着。对抗性训练用于提高鲁棒性和透明度。整合 Grad-CAM 来确认叶病。最后使用 Streamlit 部署了一个 Web 应用程序，具有热图可视化和可信度预测，可实现稳健的葡萄叶病分类。"
+    },
+    {
+      "title": "Listen to Rhythm, Choose Movements: Autoregressive Multimodal Dance Generation via Diffusion and Mamba with Decoupled Dance Dataset",
+      "authors": [
+        "Oran Duan",
+        "Yinghua Shen",
+        "Yingzhu Lv",
+        "Luyang Jie",
+        "Yaxin Liu",
+        "Qiong Wu"
+      ],
+      "summary": "Advances in generative models and sequence learning have greatly promoted research in dance motion generation, yet current methods still suffer from coarse semantic control and poor coherence in long sequences. In this work, we present Listen to Rhythm, Choose Movements (LRCM), a multimodal-guided diffusion framework supporting both diverse input modalities and autoregressive dance motion generation. We explore a feature decoupling paradigm for dance datasets and generalize it to the Motorica Dance dataset, separating motion capture data, audio rhythm, and professionally annotated global and local text descriptions. Our diffusion architecture integrates an audio-latent Conformer and a text-latent Cross-Conformer, and incorporates a Motion Temporal Mamba Module (MTMM) to enable smooth, long-duration autoregressive synthesis. Experimental results indicate that LRCM delivers strong performance in both functional capability and quantitative metrics, demonstrating notable potential in multimodal input scenarios and extended sequence generation. The project page is available at https://oranduanstudy.github.io/LRCM/.",
+      "published": "2026-01-06T14:59:22Z",
+      "updated": "2026-04-07T04:22:26Z",
+      "arxiv_id": "2601.03323v3",
+      "abs_url": "http://arxiv.org/abs/2601.03323v3",
+      "pdf_url": "https://arxiv.org/pdf/2601.03323v3",
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR",
+        "cs.CV",
+        "cs.HC",
+        "cs.LG",
+        "cs.SD"
+      ],
+      "comment": "12 pages, 13 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 3,
+      "anchor_terms": [
+        "Mamba"
+      ],
+      "matched_terms": [
+        "Mamba"
+      ],
+      "title_zh": "聆听节奏，选择动作：通过扩散和曼巴舞与解耦舞蹈数据集生成自回归多模态舞蹈",
+      "summary_zh": "生成模型和序列学习的进步极大地促进了舞蹈动作生成的研究，但目前的方法仍然存在语义控制粗糙和长序列一致性差的问题。在这项工作中，我们提出了聆听节奏，选择动作（LRCM），这是一个多模式引导的扩散框架，支持不同的输入模式和自回归舞蹈动作生成。我们探索了舞蹈数据集的特征解耦范例，并将其推广到 Motorica Dance 数据集，分离动作捕捉数据、音频节奏以及专业注释的全局和本地文本描述。我们的扩散架构集成了音频潜在Conformer和文本潜在Cross-Conformer，并结合了运动颞曼巴模块（MTMM）以实现平滑、长时间的自回归合成。实验结果表明，LRCM 在功能能力和定量指标方面都具有强大的性能，在多模态输入场景和扩展序列生成方面展现出显着的潜力。该项目页面位于 https://oranduanstudy.github.io/LRCM/。"
+    },
+    {
+      "title": "From Memorization to Creativity: LLM as a Designer of Novel Neural Architectures",
+      "authors": [
+        "Waleed Khalid",
+        "Dmitry Ignatov",
+        "Radu Timofte"
+      ],
+      "summary": "Large language models (LLMs) excel in program synthesis, yet their capacity for neural architecture design -- balancing syntactic reliability, performance, and structural novelty -- remains underexplored. We present a closed-loop architecture synthesis pipeline within the NNGPT framework, in which a code-oriented LLM evolves over 22 supervised fine-tuning cycles. At each cycle, the LLM synthesizes PyTorch convolutional networks, validated via low-fidelity performance signals and filtered via a MinHash--Jaccard criterion to prevent structural redundancy before being incorporated into the LEMUR dataset. High-performing candidates with novel architectures are converted into prompt--code pairs for parameter-efficient LoRA fine-tuning. This feedback loop drives a measurable distributional shift, progressively internalizing empirical architectural priors such that valid and high-performing outputs evolve from scarce to dominant across cycles. On CIFAR-10, the valid generation rate stabilizes at 50.6% (peaking at 74.5%), mean first-epoch accuracy rises from 28.1% to 51.0%, and candidates exceeding 40% accuracy grow from 2.0% to 96.8%. Cross-dataset transfer to CIFAR-100 and SVHN confirms that improved validity, shifted accuracy distributions, and sustained novelty generalize across benchmarks of varying difficulty and visual domain. Across 22 cycles, 455 unique architectures absent from the original corpus are admitted under the novelty filter. By grounding synthesis in execution feedback and novelty filtering, we demonstrate that iterative self-supervised fine-tuning reshapes an LLM into a task-specialized architectural prior -- improving generation reliability, proxy performance, and structural diversity -- offering a reproducible, annotation-free alternative to hand-crafted search spaces.",
+      "published": "2026-01-06T13:20:28Z",
+      "updated": "2026-04-16T12:15:11Z",
+      "arxiv_id": "2601.02997v2",
+      "abs_url": "http://arxiv.org/abs/2601.02997v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.02997v2",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 7,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "large language model",
+        "LLM",
+        "LoRA",
+        "self-supervised"
+      ],
+      "title_zh": "从记忆到创造力：法学硕士作为新型神经架构的设计师",
+      "summary_zh": "大型语言模型（LLM）在程序综合方面表现出色，但它们的神经架构设计能力（平衡句法可靠性、性能和结构新颖性）仍未得到充分开发。我们在 NNGPT 框架内提出了一个闭环架构综合管道，其中面向代码的 LLM 发展了超过 22 个监督微调周期。在每个周期，LLM 都会合成 PyTorch 卷积网络，通过低保真性能信号进行验证，并通过 MinHash-Jaccard 标准进行过滤，以防止在合并到 LEMUR 数据集之前出现结构冗余。具有新颖架构的高性能候选者被转换为提示代码对，以进行参数高效的 LoRA 微调。这种反馈循环推动了可测量的分配转变，逐渐内化经验架构先验，从而使有效且高性能的输出在整个周期中从稀缺演变为主导。在 CIFAR-10 上，有效生成率稳定在 50.6%（峰值为 74.5%），平均第一纪准确率从 28.1% 上升到 51.0%，超过 40% 准确率的候选准确率从 2.0% 上升到 96.8%。跨数据集传输到 CIFAR-100 和 SVHN 证实了不同难度和视觉域的基准测试中有效性的提高、准确性分布的变化和持续的新颖性。在 22 个周期中，原始语料库中缺少的 455 个独特架构被新颖性过滤器接纳。通过在执行反馈和新颖性过滤中进行综合，我们证明了迭代的自我监督微调将法学硕士重塑为任务专用的架构先验——提高了生成可靠性、代理性能和结构多样性——为手工制作的搜索空间提供了可重复的、无注释的替代方案。"
+    },
+    {
+      "title": "LAMS-Edit: Latent and Attention Mixing with Schedulers for Improved Content Preservation in Diffusion-Based Image and Style Editing",
+      "authors": [
+        "Wingwa Fu",
+        "Takayuki Okatani"
+      ],
+      "summary": "Text-to-Image editing using diffusion models faces challenges in balancing content preservation with edit application and handling real-image editing. To address these, we propose LAMS-Edit, leveraging intermediate states from the inversion process--an essential step in real-image editing--during edited image generation. Specifically, latent representations and attention maps from both processes are combined at each step using weighted interpolation, controlled by a scheduler. This technique, Latent and Attention Mixing with Schedulers (LAMS), integrates with Prompt-to-Prompt (P2P) to form LAMS-Edit--an extensible framework that supports precise editing with region masks and enables style transfer via LoRA. Extensive experiments demonstrate that LAMS-Edit effectively balances content preservation and edit application.",
+      "published": "2026-01-06T12:57:05Z",
+      "updated": "2026-01-06T12:57:05Z",
+      "arxiv_id": "2601.02987v1",
+      "abs_url": "http://arxiv.org/abs/2601.02987v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.02987v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "高效微调与轻量化"
+      ],
+      "topic": "图像生成与重建",
+      "score": 4,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "diffusion model",
+        "image generation",
+        "LoRA"
+      ],
+      "title_zh": "LAMS-Edit：与调度程序混合潜在和注意力，以改进基于扩散的图像和样式编辑中的内容保存",
+      "summary_zh": "使用扩散模型的文本到图像编辑面临着平衡内容保存与编辑应用程序以及处理真实图像编辑的挑战。为了解决这些问题，我们提出了 LAMS-Edit，在编辑图像生成期间利用反转过程（真实图像编辑的重要步骤）中的中间状态。具体来说，来自两个过程的潜在表示和注意力图在每个步骤中使用加权插值进行组合，并由调度程序控制。这种技术，即潜在和注意力与调度程序混合 (LAMS)，与提示到提示 (P2P) 集成，形成 LAMS-Edit——一个可扩展框架，支持使用区域蒙版进行精确编辑，并通过 LoRA 实现风格传输。大量实验表明，LAMS-Edit 有效地平衡了内容保存和编辑应用。"
+    },
+    {
+      "title": "HybridSolarNet: A Lightweight and Explainable EfficientNet-CBAM Architecture for Real-Time Solar Panel Fault Detection",
+      "authors": [
+        "Md. Asif Hossain",
+        "G M Mota-Tahrin Tayef",
+        "Nabil Subhan"
+      ],
+      "summary": "Manual inspections for solar panel systems are a tedious, costly, and error-prone task, making it desirable for Unmanned Aerial Vehicle (UAV) based monitoring. Though deep learning models have excellent fault detection capabilities, almost all methods either are too large and heavy for edge computing devices or involve biased estimation of accuracy due to ineffective learning techniques. We propose a new solar panel fault detection model called HybridSolarNet. It integrates EfficientNet-B0 with Convolutional Block Attention Module (CBAM). We implemented it on the Kaggle Solar Panel Images competition dataset with a tight split-before-augmentation protocol. It avoids leakage in accuracy estimation. We introduced focal loss and cosine annealing. Ablation analysis validates that accuracy boosts due to added benefits from CBAM (+1.53%) and that there are benefits from recognition of classes with imbalanced samples via focal loss. Overall average accuracy on 5-fold stratified cross-validation experiments on the given competition dataset topped 92.37% +/- 0.41 and an F1-score of 0.9226 +/- 0.39 compared to baselines like VGG19, requiring merely 16.3 MB storage, i.e., 32 times less. Its inference speed measured at 54.9 FPS with GPU support makes it a successful candidate for real-time UAV implementation. Moreover, visualization obtained from Grad-CAM illustrates that HybridSolarNet focuses on actual locations instead of irrelevant ones.",
+      "published": "2026-01-06T11:15:35Z",
+      "updated": "2026-01-06T11:15:35Z",
+      "arxiv_id": "2601.02928v1",
+      "abs_url": "http://arxiv.org/abs/2601.02928v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.02928v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "5 page , 6 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 5,
+      "anchor_terms": [
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "UAV",
+        "unmanned aerial vehicle"
+      ],
+      "title_zh": "HybridSolarNet：用于实时太阳能电池板故障检测的轻量级且可解释的 EfficientNet-CBAM 架构",
+      "summary_zh": "太阳能电池板系统的手动检查是一项繁琐、成本高昂且容易出错的任务，因此非常适合基于无人机 (UAV) 的监控。尽管深度学习模型具有出色的故障检测能力，但几乎所有方法对于边缘计算设备来说都太大太重，或者由于无效的学习技术而导致对准确性的估计存在偏差。我们提出了一种新的太阳能电池板故障检测模型，称为 HybridSolarNet。它将 EfficientNet-B0 与卷积块注意力模块 (CBAM) 集成。我们通过严格的增强前分割协议在 Kaggle Solar Panel Images 竞赛数据集上实现了它。它避免了精度估计中的泄漏。我们引入了焦点损失和余弦退火。消融分析验证了由于 CBAM (+1.53%) 的额外好处而提高了准确性，并且通过焦点损失识别具有不平衡样本的类别也带来了好处。与 VGG19 等基线相比，在给定竞争数据集上进行 5 倍分层交叉验证实验的总体平均准确度高达 92.37% +/- 0.41，F1 分数为 0.9226 +/- 0.39，仅需要 16.3 MB 存储空间，即减少了 32 倍。在 GPU 支持下，其推理速度为 54.9 FPS，使其成为实时无人机实施的成功候选者。此外，从 Grad-CAM 获得的可视化结果表明，HybridSolarNet 专注于实际位置，而不是不相关的位置。"
+    },
+    {
+      "title": "PrismVAU: Prompt-Refined Inference System for Multimodal Video Anomaly Understanding",
+      "authors": [
+        "Iñaki Erregue",
+        "Kamal Nasrollahi",
+        "Sergio Escalera"
+      ],
+      "summary": "Video Anomaly Understanding (VAU) extends traditional Video Anomaly Detection (VAD) by not only localizing anomalies but also describing and reasoning about their context. Existing VAU approaches often rely on fine-tuned multimodal large language models (MLLMs) or external modules such as video captioners, which introduce costly annotations, complex training pipelines, and high inference overhead. In this work, we introduce PrismVAU, a lightweight yet effective system for real-time VAU that leverages a single off-the-shelf MLLM for anomaly scoring, explanation, and prompt optimization. PrismVAU operates in two complementary stages: (1) a coarse anomaly scoring module that computes frame-level anomaly scores via similarity to textual anchors, and (2) an MLLM-based refinement module that contextualizes anomalies through system and user prompts. Both textual anchors and prompts are optimized with a weakly supervised Automatic Prompt Engineering (APE) framework. Extensive experiments on standard VAD benchmarks demonstrate that PrismVAU delivers competitive detection performance and interpretable anomaly explanations -- without relying on instruction tuning, frame-level annotations, and external modules or dense processing -- making it an efficient and practical solution for real-world applications.",
+      "published": "2026-01-06T11:11:06Z",
+      "updated": "2026-01-07T08:16:35Z",
+      "arxiv_id": "2601.02927v2",
+      "abs_url": "http://arxiv.org/abs/2601.02927v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.02927v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "This paper has been accepted to the 6th Workshop on Real-World Surveillance: Applications and Challenges (WACV 2026)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像描述与视觉推理",
+        "视觉-语言模型",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "图像描述与视觉推理",
+      "score": 8,
+      "anchor_terms": [
+        "weakly supervised"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "instruction tuning",
+        "large language model",
+        "MLLM",
+        "multimodal large language model",
+        "prompt engineering",
+        "weakly supervised"
+      ],
+      "title_zh": "PrismVAU：用于多模态视频异常理解的快速精细推理系统",
+      "summary_zh": "视频异常理解 (VAU) 扩展了传统的视频异常检测 (VAD)，不仅可以定位异常，还可以描述和推理其上下文。现有的 VAU 方法通常依赖于微调的多模态大语言模型 (MLLM) 或视频字幕器等外部模块，这会带来昂贵的注释、复杂的训练管道和高推理开销。在这项工作中，我们介绍了 PrismVAU，这是一种轻量级但有效的实时 VAU 系统，它利用单个现成的 MLLM 进行异常评分、解释和提示优化。 PrismVAU 在两个互补的阶段运行：(1) 粗略异常评分模块，通过与文本锚点的相似性计算帧级异常评分；(2) 基于 MLLM 的细化模块，通过系统和用户提示将异常置于上下文中。文本锚点和提示都通过弱监督的自动提示工程（APE）框架进行了优化。对标准 VAD 基准的大量实验表明，PrismVAU 提供有竞争力的检测性能和可解释的异常解释——无需依赖指令调整、帧级注释和外部模块或密集处理——使其成为现实应用的高效实用解决方案。"
+    },
+    {
+      "title": "Zoom-IQA: Image Quality Assessment with Reliable Region-Aware Reasoning",
+      "authors": [
+        "Guoqiang Liang",
+        "Jianyi Wang",
+        "Zhonghua Wu",
+        "Shangchen Zhou"
+      ],
+      "summary": "Image Quality Assessment (IQA) is a long-standing problem in computer vision. Previous methods typically focus on predicting numerical scores without explanation or providing low-level descriptions lacking precise scores. Recent reasoning-based vision language models (VLMs) have shown strong potential for IQA by jointly generating quality descriptions and scores. However, existing VLM-based IQA methods often suffer from unreliable reasoning due to their limited capability of integrating visual and textual cues. In this work, we introduce Zoom-IQA, a VLM-based IQA model to explicitly emulate key cognitive behaviors: uncertainty awareness, region reasoning, and iterative refinement. Specifically, we present a two-stage training pipeline: 1) supervised fine-tuning (SFT) on our Grounded-Rationale-IQA (GR-IQA) dataset to teach the model to ground its assessments in key regions, and 2) reinforcement learning (RL) for dynamic policy exploration, stabilized by our KL-Coverage regularizer to prevent reasoning and scoring diversity collapse, with a Progressive Re-sampling Strategy for mitigating annotation bias. Extensive experiments show that Zoom-IQA achieves improved robustness, explainability, and generalization. The application to downstream tasks, such as image restoration, further demonstrates the effectiveness of Zoom-IQA.",
+      "published": "2026-01-06T11:00:17Z",
+      "updated": "2026-01-15T14:19:47Z",
+      "arxiv_id": "2601.02918v2",
+      "abs_url": "http://arxiv.org/abs/2601.02918v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.02918v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Project Page: https://ethanliang99.github.io/ZOOMIQA-Projectpage",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "视觉-语言模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 7,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "image restoration",
+        "LoRA",
+        "robust",
+        "vision language model",
+        "VLM"
+      ],
+      "title_zh": "Zoom-IQA：通过可靠的区域感​​知推理进行图像质量评估",
+      "summary_zh": "图像质量评估（IQA）是计算机视觉领域长期存在的问题。以前的方法通常侧重于预测数字分数而不进行解释或提供缺乏精确分数的低级描述。最近基于推理的视觉语言模型 (VLM) 通过联合生成质量描述和分数，在 IQA 方面显示出强大的潜力。然而，现有的基于 VLM 的 IQA 方法由于整合视觉和文本线索的能力有限，常常出现推理不可靠的情况。在这项工作中，我们引入了 Zoom-IQA，这是一种基于 VLM 的 IQA 模型，用于显式模拟关键认知行为：不确定性意识、区域推理和迭代细化。具体来说，我们提出了一个两阶段的训练流程：1）对我们的 Grounded-Rationale-IQA （GR-IQA）数据集进行监督微调（SFT），以教导模型在关键区域进行评估，2）用于动态策略探索的强化学习（RL），由我们的 KL-Coverage 正则化器稳定以防止推理和评分多样性崩溃，并采用渐进式重采样策略来减轻注释偏差。大量实验表明 Zoom-IQA 提高了鲁棒性、可解释性和泛化性。在图像修复等下游任务中的应用进一步证明了Zoom-IQA的有效性。"
+    },
+    {
+      "title": "Enhanced 3D Gravity Inversion Using ResU-Net with Density Logging Constraints: A Dual-Phase Training Approach",
+      "authors": [
+        "Siyuan Dong",
+        "Jinghuai Gao",
+        "Shuai Zhou",
+        "Baohai Wu",
+        "Hongfa Jia"
+      ],
+      "summary": "Gravity exploration has become an important geophysical method due to its low cost and high efficiency. With the rise of artificial intelligence, data-driven gravity inversion methods based on deep learning (DL) possess physical property recovery capabilities that conventional regularization methods lack. However, existing DL methods suffer from insufficient prior information constraints, which leads to inversion models with large data fitting errors and unreliable results. Moreover, the inversion results lack constraints and matching from other exploration methods, leading to results that may contradict known geological conditions. In this study, we propose a novel approach that integrates prior density well logging information to address the above issues. First, we introduce a depth weighting function to the neural network (NN) and train it in the weighted density parameter domain. The NN, under the constraint of the weighted forward operator, demonstrates improved inversion performance, with the resulting inversion model exhibiting smaller data fitting errors. Next, we divide the entire network training into two phases: first training a large pre-trained network Net-I, and then using the density logging information as the constraint to get the optimized fine-tuning network Net-II. Through testing and comparison in synthetic models and Bishop Model, the inversion quality of our method has significantly improved compared to the unconstrained data-driven DL inversion method. Additionally, we also conduct a comparison and discussion between our method and both the conventional focusing inversion (FI) method and its well logging constrained variant. Finally, we apply this method to the measured data from the San Nicolas mining area in Mexico, comparing and analyzing it with two recent gravity inversion methods based on DL.",
+      "published": "2026-01-06T10:24:11Z",
+      "updated": "2026-01-06T10:24:11Z",
+      "arxiv_id": "2601.02890v1",
+      "abs_url": "http://arxiv.org/abs/2601.02890v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.02890v1",
+      "primary_category": "physics.geo-ph",
+      "categories": [
+        "physics.geo-ph",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "语义分割",
+        "基础模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "语义分割",
+      "score": 4,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "LoRA",
+        "U-Net"
+      ],
+      "title_zh": "使用具有密度测井约束的 ResU-Net 增强 3D 重力反演：双阶段训练方法",
+      "summary_zh": "重力勘探因其成本低、效率高而成为重要的地球物理方法。随着人工智能的兴起，基于深度学习（DL）的数据驱动重力反演方法具备了传统正则化方法所缺乏的物性恢复能力。然而，现有的深度学习方法由于先验信息约束不足，导致反演模型数据拟合误差较大，结果不可靠。此外，反演结果缺乏其他勘探方法的约束和匹配，导致结果可能与已知的地质条件相矛盾。在本研究中，我们提出了一种整合先验密度测井信息的新方法来解决上述问题。首先，我们向神经网络（NN）引入深度加权函数，并在加权密度参数域中对其进行训练。在加权前向算子的约束下，神经网络表现出改进的反演性能，所得反演模型表现出更小的数据拟合误差。接下来，我们将整个网络训练分为两个阶段：首先训练一个大型预训练网络Net-I，然后使用密度测井信息作为约束得到优化的微调网络Net-II。通过综合模型和Bishop模型的测试和比较，我们的方法的反演质量与无约束数据驱动的深度学习反演方法相比有了显着提高。此外，我们还对我们的方法与传统聚焦反演（FI）方法及其测井约束变体进行了比较和讨论。最后，我们将该方法应用到墨西哥圣尼古拉斯矿区的实测数据中，与目前两种基于深度学习的重力反演方法进行了比较和分析。"
+    },
+    {
+      "title": "EarthVL: A Progressive Earth Vision-Language Understanding and Generation Framework",
+      "authors": [
+        "Junjue Wang",
+        "Yanfei Zhong",
+        "Zihang Chen",
+        "Zhuo Zheng",
+        "Ailong Ma",
+        "Liangpei Zhang"
+      ],
+      "summary": "Earth vision has achieved milestones in geospatial object recognition but lacks exploration in object-relational reasoning, limiting comprehensive scene understanding. To address this, a progressive Earth vision-language understanding and generation framework is proposed, including a multi-task dataset (EarthVLSet) and a semantic-guided network (EarthVLNet). Focusing on city planning applications, EarthVLSet includes 10.9k sub-meter resolution remote sensing images, land-cover masks, and 761.5k textual pairs involving both multiple-choice and open-ended visual question answering (VQA) tasks. In an object-centric way, EarthVLNet is proposed to progressively achieve semantic segmentation, relational reasoning, and comprehensive understanding. The first stage involves land-cover segmentation to generate object semantics for VQA guidance. Guided by pixel-wise semantics, the object awareness based large language model (LLM) performs relational reasoning and knowledge summarization to generate the required answers. As for optimization, the numerical difference loss is proposed to dynamically add difference penalties, addressing the various objects' statistics. Three benchmarks, including semantic segmentation, multiple-choice, and open-ended VQA demonstrated the superiorities of EarthVLNet, yielding three future directions: 1) segmentation features consistently enhance VQA performance even in cross-dataset scenarios; 2) multiple-choice tasks show greater sensitivity to the vision encoder than to the language decoder; and 3) open-ended tasks necessitate advanced vision encoders and language decoders for an optimal performance. We believe this dataset and method will provide a beneficial benchmark that connects ''image-mask-text'', advancing geographical applications for Earth vision.",
+      "published": "2026-01-06T07:41:44Z",
+      "updated": "2026-01-06T07:41:44Z",
+      "arxiv_id": "2601.02783v1",
+      "abs_url": "http://arxiv.org/abs/2601.02783v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.02783v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "语义分割",
+        "场景分类",
+        "图像描述与视觉推理",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 9,
+      "anchor_terms": [
+        "geospatial",
+        "LoRA",
+        "remote sensing",
+        "semantic segmentation",
+        "visual question answering"
+      ],
+      "matched_terms": [
+        "geospatial",
+        "large language model",
+        "LLM",
+        "LoRA",
+        "remote sensing",
+        "semantic segmentation",
+        "visual question answering"
+      ],
+      "title_zh": "EarthVL：渐进式地球视觉语言理解和生成框架",
+      "summary_zh": "地球视觉在地理空间物体识别方面取得了里程碑式的成就，但缺乏对物体关系推理的探索，限制了全面的场景理解。为了解决这个问题，提出了一种渐进式地球视觉语言理解和生成框架，包括多任务数据集（EarthVLSet）和语义引导网络（EarthVLNet）。 EarthVLSet 专注于城市规划应用，包括 10.9k 亚米分辨率遥感图像、土地覆盖掩模和 761.5k 文本对，涉及多项选择和开放式视觉问答 (VQA) 任务。 EarthVLNet以以对象为中心的方式逐步实现语义分割、关系推理和综合理解。第一阶段涉及土地覆盖分割，以生成用于 VQA 指导的对象语义。在像素语义的指导下，基于对象感知的大语言模型（LLM）执行关系推理和知识总结以生成所需的答案。至于优化，提出了数值差异损失来动态添加差异惩罚，解决各种对象的统计数据。包括语义分割、多项选择和开放式 VQA 在内的三个基准测试证明了 EarthVLNet 的优越性，并产生了三个未来方向：1）分割特征即使在跨数据集场景下也能持续增强 VQA 性能； 2）多项选择任务对视觉编码器比对语言解码器表现出更大的敏感性； 3) 开放式任务需要先进的视觉编码器和语言解码器才能获得最佳性能。我们相信这个数据集和方法将提供一个连接“图像-掩模-文本”的有益基准，推进地球视觉的地理应用。"
+    },
+    {
+      "title": "LLM Agent Framework for Intelligent Change Analysis in Urban Environment using Remote Sensing Imagery",
+      "authors": [
+        "Zixuan Xiao",
+        "Jun Ma"
+      ],
+      "summary": "Existing change detection methods often lack the versatility to handle diverse real-world queries and the intelligence for comprehensive analysis. This paper presents a general agent framework, integrating Large Language Models (LLM) with vision foundation models to form ChangeGPT. A hierarchical structure is employed to mitigate hallucination. The agent was evaluated on a curated dataset of 140 questions categorized by real-world scenarios, encompassing various question types (e.g., Size, Class, Number) and complexities. The evaluation assessed the agent's tool selection ability (Precision/Recall) and overall query accuracy (Match). ChangeGPT, especially with a GPT-4-turbo backend, demonstrated superior performance, achieving a 90.71 % Match rate. Its strength lies particularly in handling change-related queries requiring multi-step reasoning and robust tool selection. Practical effectiveness was further validated through a real-world urban change monitoring case study in Qianhai Bay, Shenzhen. By providing intelligence, adaptability, and multi-type change analysis, ChangeGPT offers a powerful solution for decision-making in remote sensing applications.",
+      "published": "2026-01-06T06:49:51Z",
+      "updated": "2026-01-06T06:49:51Z",
+      "arxiv_id": "2601.02757v1",
+      "abs_url": "http://arxiv.org/abs/2601.02757v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.02757v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "变化检测",
+        "基础模型",
+        "视觉-语言模型",
+        "城市与基础设施",
+        "数据集/评测"
+      ],
+      "topic": "变化检测",
+      "score": 10,
+      "anchor_terms": [
+        "change detection",
+        "foundation model",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "change detection",
+        "foundation model",
+        "large language model",
+        "LLM",
+        "remote sensing",
+        "robust",
+        "urban change"
+      ],
+      "title_zh": "利用遥感影像进行城市环境智能变化分析的法学硕士代理框架",
+      "summary_zh": "现有的变化检测方法通常缺乏处理各种现实世界查询的多功能性和进行综合分析的智能。本文提出了一个通用代理框架，将大型语言模型（LLM）与视觉基础模型集成以形成 ChangeGPT。采用分层结构来减轻幻觉。该代理在包含 140 个问题的精选数据集上进行评估，这些问题按现实场景分类，涵盖各种问题类型（例如大小、类别、数量）和复杂性。该评估评估了智能体的工具选择能力（精确度/召回率）和整体查询准确性（匹配）。 ChangeGPT，特别是使用 GPT-4-turbo 后端，表现出了卓越的性能，达到了 90.71% 的匹配率。它的优势尤其在于处理需要多步骤推理和强大工具选择的与变更相关的查询。通过深圳前海湾的真实城市变化监测案例研究进一步验证了实际效果。通过提供智能、适应性和多类型变化分析，ChangeGPT 为遥感应用决策提供了强大的解决方案。"
+    },
+    {
+      "title": "D$^3$R-DETR: DETR with Dual-Domain Density Refinement for Tiny Object Detection in Aerial Images",
+      "authors": [
+        "Zixiao Wen",
+        "Zhen Yang",
+        "Xianjie Bao",
+        "Lei Zhang",
+        "Xiantai Xiang",
+        "Wenshuai Li",
+        "Yuhan Liu"
+      ],
+      "summary": "Detecting tiny objects plays a vital role in remote sensing intelligent interpretation, as these objects often carry critical information for downstream applications. However, due to the extremely limited pixel information and significant variations in object density, mainstream Transformer-based detectors often suffer from slow convergence and inaccurate query-object matching. To address these challenges, we propose D$^3$R-DETR, a novel DETR-based detector with Dual-Domain Density Refinement. By fusing spatial and frequency domain information, our method refines low-level feature maps and utilizes their rich details to predict more accurate object density map, thereby guiding the model to precisely localize tiny objects. Extensive experiments on the AI-TOD-v2 dataset demonstrate that D$^3$R-DETR outperforms existing state-of-the-art detectors for tiny object detection.",
+      "published": "2026-01-06T06:21:50Z",
+      "updated": "2026-01-06T06:21:50Z",
+      "arxiv_id": "2601.02747v1",
+      "abs_url": "http://arxiv.org/abs/2601.02747v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.02747v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "This work has been submitted to the IEEE for possible publication",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 11,
+      "anchor_terms": [
+        "aerial image",
+        "aerial images",
+        "object detection",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "aerial",
+        "aerial image",
+        "aerial images",
+        "DETR",
+        "object detection",
+        "remote sensing",
+        "transformer"
+      ],
+      "title_zh": "D$^3$R-DETR：采用双域密度细化的 DETR，用于航空图像中的微小物体检测",
+      "summary_zh": "检测微小物体在遥感智能解释中起着至关重要的作用，因为这些物体通常为下游应用携带关键信息。然而，由于像素信息极其有限和对象密度的显着变化，主流的基于 Transformer 的检测器经常会遇到收敛速度慢和查询对象匹配不准确的问题。为了应对这些挑战，我们提出了 D$^3$R-DETR，一种具有双域密度细化的新型基于 DETR 的检测器。通过融合空间和频域信息，我们的方法细化了低级特征图，并利用其丰富的细节来预测更准确的物体密度图，从而指导模型精确定位微小物体。 AI-TOD-v2 数据集上的大量实验表明，D$^3$R-DETR 在微小物体检测方面优于现有最先进的检测器。"
+    },
+    {
+      "title": "CageDroneRF: A Large-Scale RF Benchmark and Toolkit for Drone Perception",
+      "authors": [
+        "Mohammad Rostami",
+        "Atik Faysal",
+        "Hongtao Xia",
+        "Hadi Kasasbeh",
+        "Ziang Gao",
+        "Huaxia Wang"
+      ],
+      "summary": "We present CageDroneRF (CDRF), a large-scale benchmark for Radio-Frequency (RF) drone detection and identification built from real-world captures and systematically generated synthetic variants. CDRF addresses the scarcity and limited diversity of existing RF datasets by coupling extensive raw recordings with a principled augmentation pipeline that (i)~precisely controls Signal-to-Noise Ratio (SNR), (ii)~injects interfering emitters, and (iii)~applies frequency shifts with label-consistent bounding-box recomputation for detection. The dataset spans a wide range of contemporary drone models, many of which are unavailable in current public datasets, and diverse acquisition conditions, derived from data collected at the Rowan University campus and within a controlled RF-cage facility. CDRF is released with interoperable open-source tools for data generation, preprocessing, augmentation, and evaluation that also operate on existing public benchmarks. It enables standardized benchmarking for classification, open-set recognition, and object detection, supporting rigorous comparisons and reproducible pipelines. By releasing this comprehensive benchmark and tooling, we aim to accelerate progress toward robust, generalizable RF perception models.",
+      "published": "2026-01-06T03:39:59Z",
+      "updated": "2026-03-19T19:47:43Z",
+      "arxiv_id": "2601.03302v2",
+      "abs_url": "http://arxiv.org/abs/2601.03302v2",
+      "pdf_url": "https://arxiv.org/pdf/2601.03302v2",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "开放词汇与开放集",
+        "小样本与域泛化",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 7,
+      "anchor_terms": [
+        "drone",
+        "object detection",
+        "open-set"
+      ],
+      "matched_terms": [
+        "drone",
+        "generalizable",
+        "object detection",
+        "open-set",
+        "robust"
+      ],
+      "title_zh": "CageDroneRF：无人机感知的大规模 RF 基准测试和工具包",
+      "summary_zh": "我们推出了 CageDroneRF (CDRF)，这是一个基于现实世界捕获和系统生成的合成变体构建的射频 (RF) 无人机检测和识别的大型基准。 CDRF 通过将大量原始记录与原则性增强管道相结合，解决了现有 RF 数据集的稀缺性和有限多样性问题，该增强管道 (i)~ 精确控制信噪比 (SNR)，(ii)~ 注入干扰发射器，以及 (iii)~ 通过标签一致的边界框重新计算来应用频移以进行检测。该数据集涵盖了广泛的当代无人机模型，其中许多模型在当前公共数据集中不可用，并且具有多种采集条件，这些条件源自在罗文大学校园和受控射频笼设施内收集的数据。 CDRF 与可互操作的开源工具一起发布，用于数据生成、预处理、增强和评估，这些工具也可在现有公共基准上运行。它支持分类、开放集识别和对象检测的标准化基准测试，支持严格的比较和可重现的管道。通过发布这一全面的基准测试和工具，我们的目标是加快构建稳健、通用的射频感知模型的进程。"
+    }
+  ]
+}

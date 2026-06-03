@@ -1,0 +1,713 @@
+{
+  "date": "2026-01-31",
+  "generated_at": "2026-06-03T04:56:26.251619+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML) AND submittedDate:[202601310000 TO 202601312359]",
+  "total_fetched": 282,
+  "total_matched": 16,
+  "papers": [
+    {
+      "title": "APEX: A Decoupled Memory-based Explorer for Asynchronous Aerial Object Goal Navigation",
+      "authors": [
+        "Daoxuan Zhang",
+        "Ping Chen",
+        "Xiaobo Xia",
+        "Xiu Su",
+        "Ruichen Zhen",
+        "Jianqiang Xiao",
+        "Shuo Yang"
+      ],
+      "summary": "Aerial Object Goal Navigation, a challenging frontier in Embodied AI, requires an Unmanned Aerial Vehicle (UAV) agent to autonomously explore, reason, and identify a specific target using only visual perception and language description. However, existing methods struggle with the memorization of complex spatial representations in aerial environments, reliable and interpretable action decision-making, and inefficient exploration and information gathering. To address these challenges, we introduce \\textbf{APEX} (Aerial Parallel Explorer), a novel hierarchical agent designed for efficient exploration and target acquisition in complex aerial settings. APEX is built upon a modular, three-part architecture: 1) Dynamic Spatio-Semantic Mapping Memory, which leverages the zero-shot capability of a Vision-Language Model (VLM) to dynamically construct high-resolution 3D Attraction, Exploration, and Obstacle maps, serving as an interpretable memory mechanism. 2) Action Decision Module, trained with reinforcement learning, which translates this rich spatial understanding into a fine-grained and robust control policy. 3) Target Grounding Module, which employs an open-vocabulary detector to achieve definitive and generalizable target identification. All these components are integrated into a hierarchical, asynchronous, and parallel framework, effectively bypassing the VLM's inference latency and boosting the agent's proactivity in exploration. Extensive experiments show that APEX outperforms the previous state of the art by +4.2\\% SR and +2.8\\% SPL on challenging UAV-ON benchmarks, demonstrating its superior efficiency and the effectiveness of its hierarchical asynchronous design. Our source code is provided in \\href{https://github.com/4amGodvzx/apex}{GitHub}",
+      "published": "2026-01-31T06:27:57Z",
+      "updated": "2026-01-31T06:27:57Z",
+      "arxiv_id": "2602.00551v1",
+      "abs_url": "http://arxiv.org/abs/2602.00551v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.00551v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "comment": "15 pages, 8 figures",
+      "code_url": "https://github.com/4amGodvzx/apex}{GitHub",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "开放词汇与开放集",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "开放词汇与开放集",
+      "score": 13,
+      "anchor_terms": [
+        "open-vocabulary",
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "generalizable",
+        "LoRA",
+        "open-vocabulary",
+        "robust",
+        "UAV",
+        "unmanned aerial vehicle",
+        "VLM",
+        "zero-shot"
+      ],
+      "title_zh": "APEX：用于异步空中对象目标导航的基于解耦内存的浏览器",
+      "summary_zh": "空中目标目标导航是嵌入式人工智能领域的一个具有挑战性的前沿领域，它需要无人机 (UAV) 代理仅使用视觉感知和语言描述来自主探索、推理和识别特定目标。然而，现有方法难以记忆空中环境中复杂的空间表示、可靠且可解释的行动决策以及低效的探索和信息收集。为了应对这些挑战，我们引入了 \\textbf{APEX} （空中并行浏览器），这是一种新颖的分层代理，旨在在复杂的空中环境中进行有效的探索和目标获取。 APEX 基于模块化的三部分架构：1) 动态空间语义映射内存，它利用视觉语言模型 (VLM) 的零样本功能动态构建高分辨率 3D 吸引力、探索和障碍图，作为可解释的内存机制。 2）行动决策模块，经过强化学习训练，将丰富的空间理解转化为细粒度和稳健的控制策略。 3）目标接地模块，采用开放词汇检测器来实现明确且可概括的目标识别。所有这些组件都集成到一个分层、异步和并行的框架中，有效地绕过了 VLM 的推理延迟并提高了代理探索的主动性。大量实验表明，APEX 在具有挑战性的 UAV-ON 基准测试中比之前的最佳技术水平高出 +4.2\\% SR 和 +2.8\\% SPL，展示了其卓越的效率和分层异步设计的有效性。我们的源代码在 \\href{https://github.com/4amGodvzx/apex}{GitHub} 中提供"
+    },
+    {
+      "title": "SADER: Structure-Aware Diffusion Framework with DEterministic Resampling for Multi-Temporal Remote Sensing Cloud Removal",
+      "authors": [
+        "Yifan Zhang",
+        "Qian Chen",
+        "Yi Liu",
+        "Wengen Li",
+        "Jihong Guan"
+      ],
+      "summary": "Cloud contamination severely degrades the usability of remote sensing imagery and poses a fundamental challenge for downstream Earth observation tasks. Recently, diffusion-based models have emerged as a dominant paradigm for remote sensing cloud removal due to their strong generative capability and stable optimization. However, existing diffusion-based approaches often suffer from limited sampling efficiency and insufficient exploitation of structural and temporal priors in multi-temporal remote sensing scenarios. In this work, we propose SADER, a structure-aware diffusion framework for multi-temporal remote sensing cloud removal. SADER first develops a scalable Multi-Temporal Conditional Diffusion Network (MTCDN) to fully capture multi-temporal and multimodal correlations via temporal fusion and hybrid attention. Then, a cloud-aware attention loss is introduced to emphasize cloud-dominated regions by accounting for cloud thickness and brightness discrepancies. In addition, a deterministic resampling strategy is designed for continuous diffusion models to iteratively refine samples under fixed sampling steps by replacing outliers through guided correction. Extensive experiments on multiple multi-temporal datasets demonstrate that SADER consistently outperforms state-of-the-art cloud removal methods across all evaluation metrics. The code of SADER is publicly available at https://github.com/zyfzs0/SADER.",
+      "published": "2026-01-31T06:06:18Z",
+      "updated": "2026-01-31T06:06:18Z",
+      "arxiv_id": "2602.00536v1",
+      "abs_url": "http://arxiv.org/abs/2602.00536v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.00536v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/zyfzs0/SADER",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像生成与重建",
+        "时间序列与视频",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 11,
+      "anchor_terms": [
+        "cloud removal",
+        "diffusion model",
+        "earth observation",
+        "remote sensing",
+        "temporal"
+      ],
+      "matched_terms": [
+        "cloud removal",
+        "diffusion model",
+        "earth observation",
+        "multi-temporal",
+        "remote sensing",
+        "temporal"
+      ],
+      "title_zh": "SADER：具有确定性重采样的结构感知扩散框架，用于多时相遥感云去除",
+      "summary_zh": "云污染严重降低了遥感图像的可用性，并对下游地球观测任务构成了根本性挑战。近年来，基于扩散的模型因其强大的生成能力和稳定的优化而成为遥感云去除的主导范式。然而，现有的基于扩散的方法通常受到采样效率有限以及多时相遥感场景中结构和时间先验的利用不足的困扰。在这项工作中，我们提出了SADER，一种用于多时相遥感云去除的结构感知扩散框架。 SADER 首先开发了一个可扩展的多时态条件扩散网络（MTCDN），通过时间融合和混合注意力来充分捕获多时态和多模态相关性。然后，引入云感知注意力损失，通过考虑云厚度和亮度差异来强调云为主的区域。此外，为连续扩散模型设计了确定性重采样策略，通过引导校正替换异常值，在固定采样步骤下迭代细化样本。对多个多时态数据集的大量实验表明，SADER 在所有评估指标上始终优于最先进的云去除方法。 SADER 的代码可在 https://github.com/zyfzs0/SADER 上公开获取。"
+    },
+    {
+      "title": "HSSDCT: Factorized Spatial-Spectral Correlation for Hyperspectral Image Fusion",
+      "authors": [
+        "Chia-Ming Lee",
+        "Yu-Hao Ho",
+        "Yu-Fan Lin",
+        "Jen-Wei Lee",
+        "Li-Wei Kang",
+        "Chih-Chung Hsu"
+      ],
+      "summary": "Hyperspectral image (HSI) fusion aims to reconstruct a high-resolution HSI (HR-HSI) by combining the rich spectral information of a low-resolution HSI (LR-HSI) with the fine spatial details of a high-resolution multispectral image (HR-MSI). Although recent deep learning methods have achieved notable progress, they still suffer from limited receptive fields, redundant spectral bands, and the quadratic complexity of self-attention, which restrict both efficiency and robustness. To overcome these challenges, we propose the Hierarchical Spatial-Spectral Dense Correlation Network (HSSDCT). The framework introduces two key modules: (i) a Hierarchical Dense-Residue Transformer Block (HDRTB) that progressively enlarges windows and employs dense-residue connections for multi-scale feature aggregation, and (ii) a Spatial-Spectral Correlation Layer (SSCL) that explicitly factorizes spatial and spectral dependencies, reducing self-attention to linear complexity while mitigating spectral redundancy. Extensive experiments on benchmark datasets demonstrate that HSSDCT delivers superior reconstruction quality with significantly lower computational costs, achieving new state-of-the-art performance in HSI fusion. Our code is available at https://github.com/jemmyleee/HSSDCT.",
+      "published": "2026-01-31T03:24:03Z",
+      "updated": "2026-01-31T03:24:03Z",
+      "arxiv_id": "2602.00490v1",
+      "abs_url": "http://arxiv.org/abs/2602.00490v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.00490v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Accepted by ICASSP 2026",
+      "code_url": "https://github.com/jemmyleee/HSSDCT",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "图像生成与重建",
+        "高光谱/多光谱",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 10,
+      "anchor_terms": [
+        "hyperspectral image",
+        "image fusion",
+        "multispectral image"
+      ],
+      "matched_terms": [
+        "hyperspectral",
+        "hyperspectral image",
+        "image fusion",
+        "multi-scale",
+        "multispectral",
+        "multispectral image",
+        "robust",
+        "self-attention",
+        "transformer"
+      ],
+      "title_zh": "HSSDCT：高光谱图像融合的分解空间光谱相关性",
+      "summary_zh": "高光谱图像（HSI）融合旨在通过将低分辨率HSI（LR-HSI）丰富的光谱信息与高分辨率多光谱图像（HR-MSI）的精细空间细节相结合来重建高分辨率HSI（HR-HSI）。尽管最近的深度学习方法取得了显着的进展，但它们仍然受到有限的感受野、冗余的谱带和自注意力的二次复杂度的影响，这些限制了效率和鲁棒性。为了克服这些挑战，我们提出了分层空间谱密集相关网络（HSSDCT）。该框架引入了两个关键模块：（i）分层密集残差变换器块（HDRTB），可逐步扩大窗口并采用密集残差连接进行多尺度特征聚合；（ii）空间频谱相关层（SSCL），可显式分解空间和频谱依赖性，减少对线性复杂性的自关注，同时减轻频谱冗余。对基准数据集的大量实验表明，HSSDCT 能够以显着降低的计算成本提供卓越的重建质量，在 HSI 融合中实现新的最先进的性能。我们的代码可在 https://github.com/jemmyleee/HSSDCT 获取。"
+    },
+    {
+      "title": "PyGALAX: An Open-Source Python Toolkit for Advanced Explainable Geospatial Machine Learning",
+      "authors": [
+        "Pingping Wang",
+        "Yihong Yuan",
+        "Lingcheng Li",
+        "Yongmei Lu"
+      ],
+      "summary": "PyGALAX is a Python package for geospatial analysis that integrates automated machine learning (AutoML) and explainable artificial intelligence (XAI) techniques to analyze spatial heterogeneity in both regression and classification tasks. It automatically selects and optimizes machine learning models for different geographic locations and contexts while maintaining interpretability through SHAP (SHapley Additive exPlanations) analysis. PyGALAX builds upon and improves the GALAX framework (Geospatial Analysis Leveraging AutoML and eXplainable AI), which has proven to outperform traditional geographically weighted regression (GWR) methods. Critical enhancements in PyGALAX from the original GALAX framework include automatic bandwidth selection and flexible kernel function selection, providing greater flexibility and robustness for spatial modeling across diverse datasets and research questions. PyGALAX not only inherits all the functionalities of the original GALAX framework but also packages them into an accessible, reproducible, and easily deployable Python toolkit while providing additional options for spatial modeling. It effectively addresses spatial non-stationarity and generates transparent insights into complex spatial relationships at both global and local scales, making advanced geospatial machine learning methods accessible to researchers and practitioners in geography, urban planning, environmental science, and related fields.",
+      "published": "2026-01-31T21:26:24Z",
+      "updated": "2026-01-31T21:26:24Z",
+      "arxiv_id": "2602.00907v1",
+      "abs_url": "http://arxiv.org/abs/2602.00907v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.00907v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "数据集/评测"
+      ],
+      "topic": "数据集/评测",
+      "score": 4,
+      "anchor_terms": [
+        "geospatial"
+      ],
+      "matched_terms": [
+        "geospatial",
+        "robust"
+      ],
+      "title_zh": "PyGALAX：用于高级可解释地理空间机器学习的开源 Python 工具包",
+      "summary_zh": "PyGALAX 是一个用于地理空间分析的 Python 包，它集成了自动化机器学习 (AutoML) 和可解释人工智能 (XAI) 技术，用于分析回归和分类任务中的空间异质性。它针对不同地理位置和环境自动选择和优化机器学习模型，同时通过 SHAPy（SHapley Additive exPlanations）分析保持可解释性。 PyGALAX 基于 GALAX 框架（利用 AutoML 和 eXplainable AI 的地理空间分析）构建并改进，该框架已被证明优于传统的地理加权回归 (GWR) 方法。 PyGALAX 相对于原始 GALAX 框架的关键增强包括自动带宽选择和灵活的核函数选择，为跨不同数据集和研究问题的空间建模提供了更大的灵活性和鲁棒性。 PyGALAX 不仅继承了原始 GALAX 框架的所有功能，还将它们打包成一个可访问、可复制且易于部署的 Python 工具包，同时为空间建模提供了额外的选项。它有效地解决了空间非平稳性问题，并对全球和局部尺度的复杂空间关系产生透明的洞察，使地理学、城市规划、环境科学和相关领域的研究人员和从业者能够使用先进的地理空间机器学习方法。"
+    },
+    {
+      "title": "Distill3R: A Pipeline for Democratizing 3D Foundation Models on Commodity Hardware",
+      "authors": [
+        "Brandon Leblanc",
+        "Charalambos Poullis"
+      ],
+      "summary": "While multi-view 3D reconstruction has shifted toward large-scale foundation models capable of inferring globally consistent geometry, their reliance on massive computational clusters for training has created a significant barrier to entry for most academic laboratories. To bridge this compute divide, we introduce Distill3R, a framework designed to distill the geometric reasoning of 3D foundation models into compact students fully trainable on a single workstation. Our methodology centers on two primary innovations: (1) an offline caching pipeline that decouples heavy teacher inference from the training loop through compressed supervision signals, and (2) a confidence-aware distillation loss that leverages teacher uncertainty to enable training on commodity hardware. We propose a 72M-parameter student model which achieves a 9x reduction in parameters and a 5x inference speedup compared to its 650M-parameter teacher. The student is fully trainable in under 3 days on a single workstation, whereas its teacher requires massive GPU clusters for up to a week. We demonstrate that the student preserves the structural consistency and qualitative geometric understanding required for functional 3D awareness. By providing a reproducible, single-workstation training recipe, Distill3R serves as an exploratory entry point for democratized 3D vision research and efficient edge deployment. This work is not intended to compete with state-of-the-art foundation models, but to provide an accessible research baseline for laboratories without access to large-scale compute to train and specialize models on their own domain-specific data at minimal cost.",
+      "published": "2026-01-31T18:56:45Z",
+      "updated": "2026-01-31T18:56:45Z",
+      "arxiv_id": "2602.00865v1",
+      "abs_url": "http://arxiv.org/abs/2602.00865v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.00865v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "Submitted to the Canadian Conference on Robotics and Vision (CRV). 10 pages, 5 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "高效微调与轻量化",
+        "LiDAR/点云"
+      ],
+      "topic": "基础模型",
+      "score": 4,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "LoRA"
+      ],
+      "title_zh": "Distill3R：商品硬件上 3D 基础模型民主化的管道",
+      "summary_zh": "虽然多视图 3D 重建已转向能够推断全局一致几何形状的大型基础模型，但它们对大规模计算集群进行训练的依赖为大多数学术实验室的进入设置了重大障碍。为了弥合这一计算鸿沟，我们引入了 Distill3R，这是一个框架，旨在将 3D 基础模型的几何推理提炼为可在单个工作站上完全训练的紧凑型学生。我们的方法以两项主要创新为中心：（1）离线缓存管道，通过压缩监督信号将繁重的教师推理与训练循环分离；（2）置信感知蒸馏损失，利用教师的不确定性来实现对商品硬件的培训。我们提出了一个 72M 参数的学生模型，与 650M 参数的教师模型相比，其参数减少了 9 倍，推理速度提高了 5 倍。学生可以在 3 天内在单个工作站上进行完全训练，而其教师则需要大量 GPU 集群长达一周。我们证明学生保留了功能 3D 意识所需的结构一致性和定性几何理解。通过提供可重复的单工作站培训方案，Distill3R 可作为民主化 3D 视觉研究和高效边缘部署的探索性切入点。这项工作的目的并不是与最先进的基础模型竞争，而是为无法使用大规模计算的实验室提供一个可访问的研究基线，以便以最低的成本在自己的特定领域数据上训练和专门化模型。"
+    },
+    {
+      "title": "RMFlow: Refined Mean Flow by a Noise-Injection Step for Multimodal Generation",
+      "authors": [
+        "Yuhao Huang",
+        "Shih-Hsin Wang",
+        "Andrea L. Bertozzi",
+        "Bao Wang"
+      ],
+      "summary": "Mean flow (MeanFlow) enables efficient, high-fidelity image generation, yet its single-function evaluation (1-NFE) generation often cannot yield compelling results. We address this issue by introducing RMFlow, an efficient multimodal generative model that integrates a coarse 1-NFE MeanFlow transport with a subsequent tailored noise-injection refinement step. RMFlow approximates the average velocity of the flow path using a neural network trained with a new loss function that balances minimizing the Wasserstein distance between probability paths and maximizing sample likelihood. RMFlow achieves near state-of-the-art results on text-to-image, context-to-molecule, and time-series generation using only 1-NFE, at a computational cost comparable to the baseline MeanFlows.",
+      "published": "2026-01-31T18:27:05Z",
+      "updated": "2026-01-31T18:27:05Z",
+      "arxiv_id": "2602.00849v1",
+      "abs_url": "http://arxiv.org/abs/2602.00849v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.00849v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.NA"
+      ],
+      "comment": "Accepted to ICLR 2026",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "时间序列与视频",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 2,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "image generation",
+        "time-series"
+      ],
+      "title_zh": "RMFlow：通过噪声注入步骤细化平均流以实现多模态生成",
+      "summary_zh": "平均流 (MeanFlow) 可实现高效、高保真度的图像生成，但其单功能评估 (1-NFE) 生成通常无法产生令人信服的结果。我们通过引入 RMFlow 来解决这个问题，RMFlow 是一种高效的多模态生成模型，它将粗略的 1-NFE MeanFlow 传输与后续定制的噪声注入细化步骤集成在一起。 RMFlow 使用经过新损失函数训练的神经网络来近似流动路径的平均速度，该函数在最小化概率路径之间的 Wasserstein 距离和最大化样本似然之间取得平衡。 RMFlow 仅使用 1-NFE 就在文本到图像、上下文到分子和时间序列生成方面实现了接近最先进的结果，其计算成本与基线 MeanFlow 相当。"
+    },
+    {
+      "title": "Stable Time Series Prediction of Enterprise Carbon Emissions Based on Causal Inference",
+      "authors": [
+        "Zitao Hong",
+        "Zhen Peng",
+        "Xueping Liu"
+      ],
+      "summary": "Against the backdrop of ongoing carbon peaking and carbon neutrality goals, accurate prediction of enterprise carbon emission trends constitutes an essential foundation for energy structure optimization and low-carbon transformation decision-making. Nevertheless, significant heterogeneity persists across regions, industries and individual enterprises regarding energy structure, production scale, policy intensity and governance efficacy, resulting in pronounced distribution shifts and non-stationarity in carbon emission data across both temporal and spatial dimensions. Such cross-regional and cross-enterprise data drift not only compromises the accuracy of carbon emission reporting but substantially undermines the guidance value of predictive models for production planning and carbon quota trading decisions. To address this critical challenge, we integrate causal inference perspectives with stable learning methodologies and time-series modelling, proposing a stable temporal prediction mechanism tailored to distribution shift environments. This mechanism incorporates enterprise-level energy inputs, capital investment, labour deployment, carbon pricing, governmental interventions and policy implementation intensity, constructing a risk consistency-constrained stable learning framework that extracts causal stable features (robust against external perturbations yet demonstrating long-term stable effects on carbon dioxide emissions) from multi-environment samples across diverse policies, regions and industrial sectors. Furthermore, through adaptive normalization and sample reweighting strategies, the approach dynamically rectifies temporal non-stationarity induced by economic fluctuations and policy transitions, ultimately enhancing model generalization capability and explainability in complex environments.",
+      "published": "2026-01-31T15:32:21Z",
+      "updated": "2026-01-31T15:32:21Z",
+      "arxiv_id": "2602.00775v1",
+      "abs_url": "http://arxiv.org/abs/2602.00775v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.00775v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "econ.EM"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "小样本与域泛化"
+      ],
+      "topic": "时间序列与视频",
+      "score": 2,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "robust",
+        "temporal",
+        "time-series"
+      ],
+      "title_zh": "基于因果推理的企业碳排放稳定时间序列预测",
+      "summary_zh": "在碳达峰和碳中和目标不断推进的背景下，准确预测企业碳排放趋势是能源结构优化和低碳转型决策的重要基础。但不同地区、不同行业、不同企业的能源结构、生产规模、政策强度、治理效能等仍存在显着异质性，导致碳排放数据在时空维度上存在明显的分布变化和非平稳性。这种跨地区、跨企业的数据漂移不仅影响碳排放报告的准确性，而且严重损害了预测模型对生产计划和碳配额交易决策的指导价值。为了应对这一关键挑战，我们将因果推理视角与稳定的学习方法和时间序列建模相结合，提出了一种适合分布变化环境的稳定的时间预测机制。该机制融合了企业层面的能源投入、资本投入、劳动力配置、碳定价、政府干预和政策执行强度，构建了风险一致性约束的稳定学习框架，从不同政策、地区和行业的多环境样本中提取因果稳定特征（对外部扰动具有鲁棒性，但对二氧化碳排放具有长期稳定的影响）。此外，通过自适应归一化和样本重新加权策略，该方法动态纠正经济波动和政策转变引起的时间非平稳性，最终增强模型在复杂环境中的泛化能力和可解释性。"
+    },
+    {
+      "title": "HSI-VAR: Rethinking Hyperspectral Restoration through Spatial-Spectral Visual Autoregression",
+      "authors": [
+        "Xiangming Wang",
+        "Benteng Sun",
+        "Yungeng Liu",
+        "Haijin Zeng",
+        "Yongyong Chen",
+        "Jingyong Su",
+        "Jie Liu"
+      ],
+      "summary": "Hyperspectral images (HSIs) capture richer spatial-spectral information beyond RGB, yet real-world HSIs often suffer from a composite mix of degradations, such as noise, blur, and missing bands. Existing generative approaches for HSI restoration like diffusion models require hundreds of iterative steps, making them computationally impractical for high-dimensional HSIs. While regression models tend to produce oversmoothed results, failing to preserve critical structural details. We break this impasse by introducing HSI-VAR, rethinking HSI restoration as an autoregressive generation problem, where spectral and spatial dependencies can be progressively modeled rather than globally reconstructed. HSI-VAR incorporates three key innovations: (1) Latent-condition alignment, which couples semantic consistency between latent priors and conditional embeddings for precise reconstruction; (2) Degradation-aware guidance, which uniquely encodes mixed degradations as linear combinations in the embedding space for automatic control, remarkably achieving a nearly $50\\%$ reduction in computational cost at inference; (3) A spatial-spectral adaptation module that refines details across both domains in the decoding phase. Extensive experiments on nine all-in-one HSI restoration benchmarks confirm HSI-VAR's state-of-the-art performance, achieving a 3.77 dB PSNR improvement on \\textbf{\\textit{ICVL}} and offering superior structure preservation with an inference speed-up of up to $95.5 \\times$ compared with diffusion-based methods, making it a highly practical solution for real-world HSI restoration.",
+      "published": "2026-01-31T14:30:05Z",
+      "updated": "2026-01-31T14:30:05Z",
+      "arxiv_id": "2602.00749v1",
+      "abs_url": "http://arxiv.org/abs/2602.00749v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.00749v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "高光谱/多光谱",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 4,
+      "anchor_terms": [
+        "diffusion model",
+        "hyperspectral image"
+      ],
+      "matched_terms": [
+        "diffusion model",
+        "hyperspectral",
+        "hyperspectral image"
+      ],
+      "title_zh": "HSI-VAR：通过空间光谱视觉自回归重新思考高光谱恢复",
+      "summary_zh": "高光谱图像 (HSI) 可以捕获 RGB 之外更丰富的空间光谱信息，但现实世界的 HSI 常常会遭受噪声、模糊和缺失波段等综合性能下降的影响。现有的 HSI 恢复生成方法（例如扩散模型）需要数百个迭代步骤，这使得它们对于高维 HSI 来说在计算上不切实际。虽然回归模型往往会产生过度平滑的结果，但无法保留关键的结构细节。我们通过引入 HSI-VAR 打破了这一僵局，将 HSI 恢复重新思考为一个自回归生成问题，其中光谱和空间依赖性可以逐步建模，而不是全局重建。 HSI-VAR 包含三个关键创新：（1）潜在条件对齐，它将潜在先验和条件嵌入之间的语义一致性结合起来，以实现精确重建； (2) 退化感知引导，将混合退化独特地编码为嵌入空间中的线性组合以进行自动控制，显着地实现了推理计算成本降低近 50\\%$ ； (3) 空间频谱适应模块，可在解码阶段细化两个域的细节。对九个一体式 HSI 恢复基准的大量实验证实了 HSI-VAR 的最先进性能，在 \\textbf{\\textit{ICVL}} 上实现了 3.77 dB PSNR 改进，并提供了卓越的结构保留，与基于扩散的方法相比，推理加速高达 $95.5 \\times$，使其成为现实世界 HSI 恢复的高度实用的解决方案。"
+    },
+    {
+      "title": "SA-VLA: Spatially-Aware Flow-Matching for Vision-Language-Action Reinforcement Learning",
+      "authors": [
+        "Xu Pan",
+        "Zhenglin Wan",
+        "Xingrui Yu",
+        "Xianwei Zheng",
+        "Youkai Ke",
+        "Ming Sun",
+        "Rui Wang",
+        "Ziwei Wang",
+        "Ivor Tsang"
+      ],
+      "summary": "Vision-Language-Action (VLA) models exhibit strong generalization in robotic manipulation, yet reinforcement learning (RL) fine-tuning often degrades robustness under spatial distribution shifts. For flow-matching VLA policies, this degradation is closely associated with the erosion of spatial inductive bias during RL adaptation, as sparse rewards and spatially agnostic exploration increasingly favor short-horizon visual cues. To address this issue, we propose \\textbf{SA-VLA}, a spatially-aware RL adaptation framework that preserves spatial grounding during policy optimization by aligning representation learning, reward design, and exploration with task geometry. SA-VLA fuses implicit spatial representations with visual tokens, provides dense rewards that reflect geometric progress, and employs \\textbf{SCAN}, a spatially-conditioned annealed exploration strategy tailored to flow-matching dynamics. Across challenging multi-object and cluttered manipulation benchmarks, SA-VLA enables stable RL fine-tuning and improves zero-shot spatial generalization, yielding more robust and transferable behaviors. Code and project page are available at https://xupan.top/Projects/savla.",
+      "published": "2026-01-31T14:16:24Z",
+      "updated": "2026-01-31T14:16:24Z",
+      "arxiv_id": "2602.00743v1",
+      "abs_url": "http://arxiv.org/abs/2602.00743v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.00743v1",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "comment": "Version 1",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 4,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "LoRA",
+        "robust",
+        "zero-shot"
+      ],
+      "title_zh": "SA-VLA：视觉-语言-动作强化学习的空间感知流程匹配",
+      "summary_zh": "视觉-语言-动作（VLA）模型在机器人操作中表现出很强的泛化性，但强化学习（RL）微调通常会降低空间分布变化下的鲁棒性。对于流量匹配的 VLA 策略，这种退化与 RL 适应过程中空间归纳偏差的侵蚀密切相关，因为稀疏的奖励和空间不可知的探索越来越有利于短视界视觉线索。为了解决这个问题，我们提出了 \\textbf{SA-VLA}，这是一种空间感知的 RL 适应框架，它通过将表示学习、奖励设计和探索与任务几何结构相结合，在策略优化期间保留空间基础。 SA-VLA 将隐式空间表示与视觉标记融合，提供反映几何进展的密集奖励，并采用 \\textbf{SCAN}，这是一种针对流匹配动态而定制的空间条件退火探索策略。在具有挑战性的多目标和杂乱操作基准中，SA-VLA 能够实现稳定的 RL 微调并改进零样本空间泛化，从而产生更稳健和可转移的行为。代码和项目页面可在 https://xupan.top/Projects/savla 获取。"
+    },
+    {
+      "title": "Rethinking Zero-Shot Time Series Classification: From Task-specific Classifiers to In-Context Inference",
+      "authors": [
+        "Juntao Fang",
+        "Shifeng Xie",
+        "Shengbin Nie",
+        "Yuhui Ling",
+        "Yuming Liu",
+        "Zijian Li",
+        "Keli Zhang",
+        "Lujia Pan",
+        "Themis Palpanas",
+        "Ruichu Cai"
+      ],
+      "summary": "The zero-shot evaluation of time series foundation models (TSFMs) for classification typically uses a frozen encoder followed by a task-specific classifier. However, this practice violates the training-free premise of zero-shot deployment and introduces evaluation bias due to classifier-dependent training choices. To address this issue, we propose TIC-FM, an in-context learning framework that treats the labeled training set as context and predicts labels for all test instances in a single forward pass, without parameter updates. TIC-FM pairs a time series encoder and a lightweight projection adapter with a split-masked latent memory Transformer. We further provide theoretical justification that in-context inference can subsume trained classifiers and can emulate gradient-based classifier training within a single forward pass. Experiments on 128 UCR datasets show strong accuracy, with consistent gains in the extreme low-label situation, highlighting training-free transfer",
+      "published": "2026-01-31T09:17:45Z",
+      "updated": "2026-01-31T09:17:45Z",
+      "arxiv_id": "2602.00620v1",
+      "abs_url": "http://arxiv.org/abs/2602.00620v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.00620v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 6,
+      "anchor_terms": [
+        "in-context learning"
+      ],
+      "matched_terms": [
+        "adapter",
+        "foundation model",
+        "in-context learning",
+        "transformer",
+        "zero-shot"
+      ],
+      "title_zh": "重新思考零样本时间序列分类：从特定于任务的分类器到上下文推理",
+      "summary_zh": "用于分类的时间序列基础模型 (TSFM) 的零样本评估通常使用冻结编码器，然后使用特定于任务的分类器。然而，这种做法违反了零样本部署的免训练前提，并由于依赖于分类器的训练选择而引入了评估偏差。为了解决这个问题，我们提出了 TIC-FM，这是一种上下文学习框架，它将标记的训练集视为上下文，并在一次前向传递中预测所有测试实例的标签，而无需更新参数。 TIC-FM 将时间序列编码器和轻量级投影适配器与分割屏蔽潜在记忆变压器配对。我们进一步提供了理论依据，证明上下文推理可以包含经过训练的分类器，并且可以在单个前向传递中模拟基于梯度的分类器训练。在 128 个 UCR 数据集上的实验显示出很强的准确性，在极端低标签情况下具有一致的增益，突出了免训练迁移"
+    },
+    {
+      "title": "SPOT: Selective Prompt Projection via Total Variation for Inference-Only Safe Text-to-Image Generation",
+      "authors": [
+        "Minhyuk Lee",
+        "Hyekyung Yoon",
+        "Myungjoo Kang"
+      ],
+      "summary": "Text-to-Image (T2I) diffusion models enable high quality open ended synthesis, but practical use requires suppressing unsafe generations while preserving behavior on benign prompts. We study this tension relative to the frozen generator, using its prompt conditioned distribution as the preservation reference. Since T2I safety is commonly evaluated by bounded risk scores on generated images, total variation (TV) bounds how much expected risk can change from this reference. We call this fixed reference constraint the Safety-Prompt Alignment Tradeoff (SPAT): reducing expected unsafety requires prompt conditioned distributional deviation. To make this deviation selective and adjustable, we define the tau safe set as prompts whose reference risk is at most tau, and cast intervention as projection toward nearby prompts in this set. We propose Selective Prompt prOjecTion (SPOT), an inference time framework that approximates this projection without retraining the generator or learning a category specific rewriter. SPOT uses an LLM to rank candidate rewrites and a safeguard VLM to accept generated images under the same tau. Across four datasets and three diffusion backbones, SPOT achieves relative inappropriate (IP) score reductions from 14.2% to 44.4% over strong safety alignment baselines while keeping benign prompt behavior close to the fixed reference.",
+      "published": "2026-01-31T09:09:48Z",
+      "updated": "2026-05-13T02:26:37Z",
+      "arxiv_id": "2602.00616v3",
+      "abs_url": "http://arxiv.org/abs/2602.00616v3",
+      "pdf_url": "https://arxiv.org/pdf/2602.00616v3",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "视觉-语言模型",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 5,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "diffusion model",
+        "image generation",
+        "LLM",
+        "VLM"
+      ],
+      "title_zh": "SPOT：通过总变分进行选择性提示投影，以实现仅推理的安全文本到图像生成",
+      "summary_zh": "文本到图像 (T2I) 扩散模型可实现高质量的开放式合成，但实际使用需要抑制不安全的生成，同时保留良性提示下的行为。我们研究了相对于冻结发电机的张力，使用其即时条件分布作为保存参考。由于 T2I 安全性通常是通过生成图像的有限风险评分来评估的，因此总变异 (TV) 限制了预期风险相对于该参考的变化程度。我们将这种固定参考约束称为安全提示对齐权衡（SPAT）：减少预期不安全需要提示条件分布偏差。为了使这种偏差具有选择性和可调性，我们将 tau 安全集定义为参考风险至多为 tau 的提示，并将干预视为对该集中附近提示的投影。我们提出了选择性提示投影（SPOT），这是一种推理时间框架，可以近似该投影，而无需重新训练生成器或学习特定于类别的重写器。 SPOT 使用 LLM 对候选重写进行排名，并使用安全 VLM 接受同一 tau 下生成的图像。在四个数据集和三个扩散主干中，SPOT 在强大的安全对齐基线上实现了相对不适当 (IP) 分数从 14.2% 降低到 44.4%，同时保持良性提示行为接近固定参考。"
+    },
+    {
+      "title": "Exploring Information Seeking Agent Consolidation",
+      "authors": [
+        "Guochen Yan",
+        "Jialong Wu",
+        "Zhengwei Tao",
+        "Bo Li",
+        "Qintong Zhang",
+        "Jiahao Xu",
+        "Haitao Mi",
+        "Yuejian Fang",
+        "Qingni Shen",
+        "Wentao Zhang",
+        "Zhonghai Wu"
+      ],
+      "summary": "Information-seeking agents have emerged as a powerful paradigm for solving knowledge-intensive tasks. Existing information-seeking agents are typically specialized for open web, documents, or local knowledge bases, which constrains scalability and cross-domain generalization. In this work, we investigate how to consolidate heterogeneous information-seeking agents into a single foundation agentic model. We study two complementary consolidation strategies: data-level consolidation, which jointly trains a unified model on a mixture of domain-specific datasets, and parameter-level consolidation, which merges independently trained agent models at the parameter level. Our analysis compares these approaches in terms of performance retention, cross-domain generalization, and interference across information-seeking behaviors. Our results show that data-level consolidation remains a strong and stable baseline, while parameter-level consolidation offers a promising, efficient alternative but suffers from interference and robustness challenges. We further identify key design factors for effective agent consolidation at the parameter level, including fine-grained merging granularity, awareness of task heterogeneity, and principled consensus strategy.",
+      "published": "2026-01-31T07:59:31Z",
+      "updated": "2026-01-31T07:59:31Z",
+      "arxiv_id": "2602.00585v1",
+      "abs_url": "http://arxiv.org/abs/2602.00585v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.00585v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 2,
+      "anchor_terms": [
+        "domain generalization"
+      ],
+      "matched_terms": [
+        "domain generalization",
+        "robust"
+      ],
+      "title_zh": "探索信息寻求代理整合",
+      "summary_zh": "信息寻求代理已成为解决知识密集型任务的强大范例。现有的信息查找代理通常专门用于开放网络、文档或本地知识库，这限制了可扩展性和跨域泛化。在这项工作中，我们研究了如何将异构信息搜索代理整合到单个基础代理模型中。我们研究了两种互补的整合策略：数据级整合（在特定领域数据集的混合上联合训练统一模型）和参数级整合（在参数级合并独立训练的代理模型）。我们的分析从性能保留、跨域泛化和信息搜索行为干扰方面对这些方法进行了比较。我们的结果表明，数据级整合仍然是强大而稳定的基线，而参数级整合提供了一种有前途、高效的替代方案，但面临干扰和鲁棒性挑战。我们进一步确定了参数级别有效代理整合的关键设计因素，包括细粒度的合并粒度、任务异构性意识和有原则的共识策略。"
+    },
+    {
+      "title": "Enhancing Open-Vocabulary Object Detection through Multi-Level Fine-Grained Visual-Language Alignment",
+      "authors": [
+        "Tianyi Zhang",
+        "Antoine Simoulin",
+        "Kai Li",
+        "Sana Lakdawala",
+        "Shiqing Yu",
+        "Arpit Mittal",
+        "Hongyu Fu",
+        "Yu Lin"
+      ],
+      "summary": "Traditional object detection systems are typically constrained to predefined categories, limiting their applicability in dynamic environments. In contrast, open-vocabulary object detection (OVD) enables the identification of objects from novel classes not present in the training set. Recent advances in visual-language modeling have led to significant progress of OVD. However, prior works face challenges in either adapting the single-scale image backbone from CLIP to the detection framework or ensuring robust visual-language alignment. We propose Visual-Language Detection (VLDet), a novel framework that revamps feature pyramid for fine-grained visual-language alignment, leading to improved OVD performance. With the VL-PUB module, VLDet effectively exploits the visual-language knowledge from CLIP and adapts the backbone for object detection through feature pyramid. In addition, we introduce the SigRPN block, which incorporates a sigmoid-based anchor-text contrastive alignment loss to improve detection of novel categories. Through extensive experiments, our approach achieves 58.7 AP for novel classes on COCO2017 and 24.8 AP on LVIS, surpassing all state-of-the-art methods and achieving significant improvements of 27.6% and 6.9%, respectively. Furthermore, VLDet also demonstrates superior zero-shot performance on closed-set object detection.",
+      "published": "2026-01-31T05:51:45Z",
+      "updated": "2026-01-31T05:51:45Z",
+      "arxiv_id": "2602.00531v1",
+      "abs_url": "http://arxiv.org/abs/2602.00531v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.00531v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "开放词汇与开放集",
+        "视觉-语言模型",
+        "小样本与域泛化"
+      ],
+      "topic": "目标检测",
+      "score": 11,
+      "anchor_terms": [
+        "object detection",
+        "open-vocabulary"
+      ],
+      "matched_terms": [
+        "CLIP",
+        "feature pyramid",
+        "object detection",
+        "open-vocabulary",
+        "robust",
+        "zero-shot"
+      ],
+      "title_zh": "通过多级细粒度视觉语言对齐增强开放词汇对象检测",
+      "summary_zh": "传统的物体检测系统通常仅限于预定义的类别，限制了它们在动态环境中的适用性。相比之下，开放词汇对象检测（OVD）能够识别训练集中不存在的新类中的对象。视觉语言建模的最新进展导致了 OVD 的重大进展。然而，之前的工作面临着将 CLIP 的单尺度图像主干适应检测框架或确保稳健的视觉语言对齐的挑战。我们提出了视觉语言检测（VLDet），这是一种新颖的框架，它改进了特征金字塔以实现细粒度的视觉语言对齐，从而提高了 OVD 性能。借助 VL-PUB 模块，VLDet 有效地利用 CLIP 的视觉语言知识，并通过特征金字塔调整目标检测的主干网。此外，我们还引入了 SigRPN 块，它结合了基于 sigmoid 的锚文本对比对齐损失，以改进新类别的检测。通过大量的实验，我们的方法在 COCO2017 上的新类获得了 58.7 AP，在 LVIS 上获得了 24.8 AP，超越了所有最先进的方法，分别实现了 27.6% 和 6.9% 的显着改进。此外，VLDet 还在闭集目标检测中展示了卓越的零样本性能。"
+    },
+    {
+      "title": "SPARK: Stochastic Propagation via Affinity-guided Random walK for training-free unsupervised segmentation",
+      "authors": [
+        "Kunal Mahatha",
+        "Jose Dolz",
+        "Christian Desrosiers"
+      ],
+      "summary": "We argue that existing training-free segmentation methods rely on an implicit and limiting assumption, that segmentation is a spectral graph partitioning problem over diffusion-derived affinities. Such approaches, based on global graph partitioning and eigenvector-based formulations of affinity matrices, suffer from several fundamental drawbacks, they require pre-selecting the number of clusters, induce boundary oversmoothing due to spectral relaxation, and remain highly sensitive to noisy or multi-modal affinity distributions. Moreover, many prior works neglect the importance of local neighborhood structure, which plays a crucial role in stabilizing affinity propagation and preserving fine-grained contours. To address these limitations, we reformulate training-free segmentation as a stochastic flow equilibrium problem over diffusion-induced affinity graphs, where segmentation emerges from a stochastic propagation process that integrates global diffusion attention with local neighborhoods extracted from stable diffusion, yielding a sparse yet expressive affinity structure. Building on this formulation, we introduce a Markov propagation scheme that performs random-walk-based label diffusion with an adaptive pruning strategy that suppresses unreliable transitions while reinforcing confident affinity paths. Experiments across seven widely used semantic segmentation benchmarks demonstrate that our method achieves state-of-the-art zero-shot performance, producing sharper boundaries, more coherent regions, and significantly more stable masks compared to prior spectral-clustering-based approaches.",
+      "published": "2026-01-31T05:12:17Z",
+      "updated": "2026-01-31T05:12:17Z",
+      "arxiv_id": "2602.00516v1",
+      "abs_url": "http://arxiv.org/abs/2602.00516v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.00516v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "语义分割",
+        "图像生成与重建",
+        "小样本与域泛化",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "多模态融合",
+        "高光谱/多光谱",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 6,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "semantic segmentation",
+        "stable diffusion",
+        "unsupervised",
+        "zero-shot"
+      ],
+      "title_zh": "SPARK：通过亲和力引导的随机行走进行随机传播，用于免训练的无监督分割",
+      "summary_zh": "我们认为现有的免训练分割方法依赖于隐含的限制性假设，即分割是扩散衍生亲和力上的谱图划分问题。这种基于全局图划分和基于特征向量的亲和力矩阵公式的方法存在几个基本缺点，它们需要预先选择簇的数量，由于谱松弛而导致边界过度平滑，并且对噪声或多模式亲和力分布保持高度敏感。此外，许多先前的工作忽略了局部邻域结构的重要性，局部邻域结构在稳定亲和力传播和保留细粒度轮廓方面起着至关重要的作用。为了解决这些限制，我们将免训练分割重新表述为扩散引起的亲和图上的随机流平衡问题，其中分割是从随机传播过程中产生的，该过程将全局扩散注意力与从稳定扩散中提取的局部邻域相​​结合，产生稀疏但富有表现力的亲和结构。在此基础上，我们引入了一种马尔可夫传播方案，该方案通过自适应修剪策略执行基于随机游走的标签扩散，该策略抑制不可靠的转换，同时增强置信的亲和路径。七个广泛使用的语义分割基准的实验表明，与之前基于谱聚类的方法相比，我们的方法实现了最先进的零样本性能，产生更清晰的边界、更连贯的区域以及明显更稳定的掩模。"
+    },
+    {
+      "title": "Stabilizing Decentralized Federated Fine-Tuning via Topology-Aware Alternating LoRA",
+      "authors": [
+        "Xiaoyu Wang",
+        "Xiaotian Li",
+        "Zhixiang Zhou",
+        "Chen Li",
+        "Yong Liu"
+      ],
+      "summary": "Decentralized federated learning (DFL), a serverless variant of federated learning, poses unique challenges for parameter-efficient fine-tuning due to the factorized structure of low-rank adaptation (LoRA). Unlike linear parameters, decentralized aggregation of LoRA updates introduces topology-dependent cross terms that can destabilize training under dynamic communication graphs. We propose \\texttt{TAD-LoRA}, a Topology-Aware Decentralized Low-Rank Adaptation framework that coordinates the updates and mixing of LoRA factors to control inter-client misalignment. We theoretically prove the convergence of \\texttt{TAD-LoRA} under non-convex objectives, explicitly characterizing the trade-off between topology-induced cross-term error and block-coordinate representation bias governed by the switching interval of alternative training. Experiments under various communication conditions validate our analysis, showing that \\texttt{TAD-LoRA} achieves robust performance across different communication scenarios, remaining competitive in strongly connected topologies and delivering clear gains under moderately and weakly connected topologies, with particularly strong results on the MNLI dataset.",
+      "published": "2026-01-31T01:57:53Z",
+      "updated": "2026-01-31T01:57:53Z",
+      "arxiv_id": "2602.00451v1",
+      "abs_url": "http://arxiv.org/abs/2602.00451v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.00451v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.DC"
+      ],
+      "comment": "17 Pages",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 5,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "LoRA",
+        "robust"
+      ],
+      "title_zh": "通过拓扑感知交替 LoRA 稳定去中心化联合微调",
+      "summary_zh": "去中心化联邦学习 (DFL) 是联邦学习的无服务器变体，由于低秩适应 (LoRA) 的分解结构，对参数高效微调提出了独特的挑战。与线性参数不同，LoRA 更新的分散聚合引入了依赖于拓扑的交叉项，这可能会破坏动态通信图下训练的稳定性。我们提出 \\texttt{TAD-LoRA}，一种拓扑感知的去中心化低阶适应框架，它协调 LoRA 因素的更新和混合，以控制客户端间的错位。我们从理论上证明了 TAD-LoRA 在非凸目标下的收敛性，明确地描述了拓扑引起的交叉项误差与由替代训练的切换间隔控制的块坐标表示偏差之间的权衡。各种通信条件下的实验验证了我们的分析，表明 \\texttt{TAD-LoRA} 在不同的通信场景中实现了稳健的性能，在强连接拓扑中保持竞争力，并在中度和弱连接拓扑下提供明显的收益，在 MNLI 数据集上取得了特别强劲的结果。"
+    },
+    {
+      "title": "Alignment of Diffusion Model and Flow Matching for Text-to-Image Generation",
+      "authors": [
+        "Yidong Ouyang",
+        "Liyan Xie",
+        "Hongyuan Zha",
+        "Guang Cheng"
+      ],
+      "summary": "Diffusion models and flow matching have demonstrated remarkable success in text-to-image generation. While many existing alignment methods primarily focus on fine-tuning pre-trained generative models to maximize a given reward function, these approaches require extensive computational resources and may not generalize well across different objectives. In this work, we propose a novel alignment framework by leveraging the underlying nature of the alignment problem -- sampling from reward-weighted distributions -- and show that it applies to both diffusion models (via score guidance) and flow matching models (via velocity guidance). The score function (velocity field) required for the reward-weighted distribution can be decomposed into the pre-trained score (velocity field) plus a conditional expectation of the reward. For the alignment on the diffusion model, we identify a fundamental challenge: the adversarial nature of the guidance term can introduce undesirable artifacts in the generated images. Therefore, we propose a finetuning-free framework that trains a guidance network to estimate the conditional expectation of the reward. We achieve comparable performance to finetuning-based models with one-step generation with at least a 60% reduction in computational cost. For the alignment on flow matching, we propose a training-free framework that improves the generation quality without additional computational cost.",
+      "published": "2026-01-31T00:06:55Z",
+      "updated": "2026-01-31T00:06:55Z",
+      "arxiv_id": "2602.00413v1",
+      "abs_url": "http://arxiv.org/abs/2602.00413v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.00413v1",
+      "primary_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "基础模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "图像生成与重建",
+      "score": 5,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "diffusion model",
+        "fine-tuning",
+        "image generation"
+      ],
+      "title_zh": "用于文本到图像生成的扩散模型和流匹配的对齐",
+      "summary_zh": "扩散模型和流匹配在文本到图像的生成方面取得了显着的成功。虽然许多现有的对齐方法主要侧重于微调预先训练的生成模型以最大化给定的奖励函数，但这些方法需要大量的计算资源，并且可能无法很好地泛化到不同的目标。在这项工作中，我们通过利用对齐问题的根本性质（从奖励加权分布中采样）提出了一种新颖的对齐框架，并表明它适用于扩散模型（通过分数指导）和流量匹配模型（通过速度指导）。奖励加权分布所需的得分函数（速度场）可以分解为预先训练的得分（速度场）加上奖励的条件期望。对于扩散模型的对齐，我们确定了一个基本挑战：指导项的对抗性可能会在生成的图像中引入不良的伪影。因此，我们提出了一个无需微调的框架，可以训练引导网络来估计奖励的条件期望。我们通过一步生成实现了与基于微调的模型相当的性能，并且计算成本至少降低了 60%。对于流匹配的对齐，我们提出了一个免训练的框架，可以在不增加计算成本的情况下提高生成质量。"
+    }
+  ]
+}
