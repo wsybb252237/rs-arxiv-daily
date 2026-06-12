@@ -74,3 +74,10 @@ jobs:
             git commit -m "Update arXiv archive"
             git push
           fi
+
+      - name: Notify Feishu
+        if: env.FEISHU_WEBHOOK != ''
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+        run: python scripts/notify_feishu.py
+        continue-on-error: true   # 推送失败不影响整体 workflow
