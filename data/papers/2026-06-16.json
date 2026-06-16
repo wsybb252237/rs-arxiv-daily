@@ -1,0 +1,1634 @@
+{
+  "date": "2026-06-16",
+  "generated_at": "2026-06-16T07:16:07.649011+00:00",
+  "timezone": "Asia/Shanghai",
+  "source": "arXiv",
+  "source_url": "https://arxiv.org/",
+  "query": "(cat:cs.CV OR cat:eess.IV OR cat:cs.AI OR cat:cs.LG OR cat:cs.MM OR cat:stat.ML)",
+  "total_fetched": 700,
+  "total_matched": 37,
+  "papers": [
+    {
+      "title": "ActiveSAM: Image-Conditional Class Pruning for Fast and Accurate Open-Vocabulary Segmentation",
+      "authors": [
+        "Tran Dinh Tien",
+        "Zhiqiang Shen"
+      ],
+      "summary": "Segment Anything Model 3 (SAM 3) provides a strong frozen backbone for concept-prompted segmentation, but applying it directly to open-vocabulary semantic segmentation (OVSS) is inefficient: full-resolution decoding is typically run over the entire dataset vocabulary, whereas each image contains only a small active subset of classes. We introduce ActiveSAM, a training-free, zero-shot inference framework that turns SAM 3 into an active-vocabulary segmenter. ActiveSAM first canonicalizes and expands class prompts, then estimates an image-conditioned active set from a low-resolution presence preview. Only the retained classes are decoded at full resolution, using bucketed prompt multiplexing with the frozen SAM 3 decoder. The preview stage uses only class-presence evidence and skips unnecessary segmentation-head computation, while the final stage applies margin-aware background calibration to suppress low-confidence pixels. ActiveSAM requires no target-dataset training, no weight updates, and no oracle class-presence labels. Across eight OVSS benchmarks, ActiveSAM improves the speed-accuracy tradeoff of training-free open-vocabulary semantic segmentation, outperforming the current state-of-the-art SegEarth-OV3 by approximately +1.4 mIoU on average while running up to 5.5x faster on large-vocabulary datasets. ActiveSAM also demonstrates the strongest robustness under image corruption that simulates real-world distribution shift, making it well-suited for deployment in noisy-input domains such as autonomous driving and embodied AI. Code is available at https://github.com/VILA-Lab/ActiveSAM.",
+      "published": "2026-06-15T17:31:30Z",
+      "updated": "2026-06-15T17:31:30Z",
+      "arxiv_id": "2606.16996v1",
+      "abs_url": "http://arxiv.org/abs/2606.16996v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16996v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "comment": "Preprint. Code is available at https://github.com/VILA-Lab/ActiveSAM",
+      "code_url": "https://github.com/VILA-Lab/ActiveSAM",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "语义分割",
+        "实例分割",
+        "开放词汇与开放集",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 11,
+      "anchor_terms": [
+        "open-vocabulary",
+        "semantic segmentation"
+      ],
+      "matched_terms": [
+        "open-vocabulary",
+        "robust",
+        "SAM",
+        "Segment Anything Model",
+        "semantic segmentation",
+        "zero-shot"
+      ],
+      "title_zh": "ActiveSAM：用于快速准确的开放词汇分割的图像条件类修剪",
+      "summary_zh": "Segment Anything Model 3 (SAM 3) 为概念提示分割提供了强大的冻结骨干，但将其直接应用于开放词汇语义分割 (OVSS) 效率很低：全分辨率解码通常在整个数据集词汇上运行，而每个图像仅包含一小部分活跃的类子集。我们推出了 ActiveSAM，这是一种免训练、零样本推理框架，可将 SAM 3 转变为主动词汇分段器。 ActiveSAM 首先规范化并扩展课堂提示，然后从低分辨率存在预览中估计图像调节的活动集。使用冻结 SAM 3 解码器的分桶提示复用，仅以全分辨率解码保留的类。预览阶段仅使用类存在证据并跳过不必要的分割头计算，而最后阶段应用边缘感知背景校准来抑制低置信度像素。 ActiveSAM 不需要目标数据集训练，不需要权重更新，也不需要预言机类存在标签。在八个 OVSS 基准测试中，ActiveSAM 改善了免训练开放词汇语义分割的速度与准确度权衡，平均比当前最先进的 SegEarth-OV3 提高了大约 +1.4 mIoU，同时在大词汇数据集上的运行速度提高了 5.5 倍。 ActiveSAM 还展示了模拟真实世界分布变化的图像损坏情况下最强的鲁棒性，使其非常适合部署在自动驾驶和嵌入式人工智能等噪声输入领域。代码可在 https://github.com/VILA-Lab/ActiveSAM 获取。"
+    },
+    {
+      "title": "UrbanWell: Benchmarking Multimodal Large Language Models for Spatio-Temporal Urban Wellbeing Analytics",
+      "authors": [
+        "Yanxin Xi",
+        "Xiang Su",
+        "Jie Feng",
+        "Yu Liu",
+        "Sasu Tarkoma",
+        "Pan Hui"
+      ],
+      "summary": "Understanding urban wellbeing from multimodal data requires integrating heterogeneous spatial and temporal signals, posing significant challenges for current multimodal large language models (MLLMs). We introduce UrbanWell, a large-scale benchmark designed to systematically evaluate the spatio-temporal reasoning capabilities of MLLMs for urban wellbeing analytics through joint modeling of satellite and street view imagery. UrbanWell spans 38 cities across multiple years and includes diverse indicators covering (1) environmental conditions (CO$_2$, NO$_2$, PM${2.5}$, and Normalized Difference Vegetation Index), (2) spatial accessibility (minimum distance to supermarkets and restaurants), (3) urban form (road length, road density, and land use), (4) urban vitality (population, economic activity diversity, and land use diversity), and (5) subjective perception attributes (e.g., safety, beauty, liveliness, wealth, and quietness). All indicators are aligned at grid level to enable standardized evaluation. Beyond static prediction, UrbanWell defines temporal reasoning tasks, including future value forecasting from historical observations and temporal trend classification. We benchmark 15 state-of-the-art representative MLLMs in a zero-shot setting, providing a comprehensive comparative evaluation across spatial and temporal dimensions. Experimental results indicate that while MLLMs capture salient spatial and perceptual cues, their performance varies substantially across heterogeneous urban indicators spanning environment and subjective perception. UrbanWell serves as a unified benchmark for evaluating multimodal spatial and temporal reasoning in urban wellbeing analytics, offering a standardized testbed for systematic assessment and future research on multimodal urban intelligence. Our codes and datasets are accessible via https://github.com/axin1301/UrbanWell-Benchmark.",
+      "published": "2026-06-14T16:19:21Z",
+      "updated": "2026-06-14T16:19:21Z",
+      "arxiv_id": "2606.15890v1",
+      "abs_url": "http://arxiv.org/abs/2606.15890v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15890v1",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "comment": "accepted by KDD Datasets and Benchmarks Track 2026",
+      "code_url": "https://github.com/axin1301/UrbanWell-Benchmark",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "场景分类",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "场景分类",
+      "score": 9,
+      "anchor_terms": [
+        "land use",
+        "MLLM",
+        "multimodal large language model",
+        "temporal"
+      ],
+      "matched_terms": [
+        "land use",
+        "large language model",
+        "MLLM",
+        "multimodal large language model",
+        "satellite",
+        "temporal",
+        "zero-shot"
+      ],
+      "title_zh": "UrbanWell：时空城市福祉分析的多模式大语言模型基准测试",
+      "summary_zh": "从多模态数据了解城市福祉需要整合异构空间和时间信号，这对当前的多模态大语言模型（MLLM）提出了重大挑战。我们推出了 UrbanWell，这是一个大型基准测试，旨在通过卫星和街景图像的联合建模来系统地评估 MLLM 的时空推理能力，以进行城市福祉分析。 UrbanWell 多年来跨越 38 个城市，包括多种指标，涵盖 (1) 环境条件（CO$_2$、NO$_2$、PM${2.5}$ 和标准化差异植被指数）、(2) 空间可达性（到超市和餐馆的最小距离）、(3) 城市形态（道路长度、道路密度和土地利用）、(4) 城市活力（人口、经济活动多样性和土地利用多样性）和 (5) 主观感知属性（例如安全、美丽、活泼、富裕、安静）。所有指标均在网格层面对齐，以实现标准化评估。除了静态预测之外，UrbanWell 还定义了时间推理任务，包括根据历史观察和时间趋势分类来预测未来值。我们在零样本设置中对 15 个最先进的代表性 MLLM 进行了基准测试，提供了跨空间和时间维度的全面比较评估。实验结果表明，虽然 MLLM 捕获了显着的空间和感知线索，但它们的性能在跨越环境和主观感知的异构城市指标中存在很大差异。 UrbanWell 作为评估城市福祉分析中多模态空间和时间推理的统一基准，为多模态城市智能的系统评估和未来研究提供标准化测试平台。我们的代码和数据集可通过 https://github.com/axin1301/UrbanWell-Benchmark 访问。"
+    },
+    {
+      "title": "Unsupervised Learning for Missing Modalities in Multimodal Learning",
+      "authors": [
+        "Hassan Ismkhan",
+        "Hamid Bouchahcia"
+      ],
+      "summary": "This paper addresses the missing-modality challenge in multi-modal learning by introducing Unsupervised Learning for Missing Modalities in Multi-Modal Learning (UL4M4), a flexible framework that imputes missing feature embeddings in a task-independent manner before supervised prediction. We propose modality-specific normalization and a novel partial-modality distance metric to enable fair clustering of incomplete observations, capturing cross-modal structures while preserving scale-invariance across varying dimensionalities and modality counts. Cluster centers from this unsupervised stage guide an iterative greedy imputation process for any missing modalities during training or inference, supporting arbitrary numbers of modalities and arbitrary missing patterns per sample. The imputation module is lightweight, uses frozen encoders, and decouples from the downstream task, allowing easy integration with any fusion/prediction architecture. Extensive experiments under diverse and highly incomplete regimes demonstrate UL4M4's robustness, achieving, to the best of our knowledge, the first consistent F1-Micro scores above 0.7 on challenging missing configurations even when more than 50\\% of modality slots are missing. Results are also stable across cluster sizes and significantly outperform state-of-the-art baselines. Code is available here: https://github.com/h-ismkhan/Multimodal-Learning-with-Missing-Modalities-via-Unsupervised-Learning.",
+      "published": "2026-06-14T11:04:33Z",
+      "updated": "2026-06-14T11:04:33Z",
+      "arxiv_id": "2606.15743v1",
+      "abs_url": "http://arxiv.org/abs/2606.15743v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15743v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/h-ismkhan/Multimodal-Learning-with-Missing-Modalities-via-Unsupervised-Learning",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "多模态融合"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 3,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "robust",
+        "unsupervised"
+      ],
+      "title_zh": "针对多模态学习中缺失模式的无监督学习",
+      "summary_zh": "本文通过引入多模态学习中缺失模态的无监督学习（UL4M4）来解决多模态学习中缺失模态的挑战，UL4M4是一个灵活的框架，可以在监督预测之前以与任务无关的方式估算缺失的特征嵌入。我们提出了特定于模态的归一化和新颖的部分模态距离度量，以实现不完整观察的公平聚类，捕获跨模态结构，同时保持不同维度和模态计数的尺度不变性。此无监督阶段的聚类中心指导训练或推理过程中任何缺失模态的迭代贪婪插补过程，支持每个样本的任意数量的模态和任意缺失模式。插补模块是轻量级的，使用冻结编码器，并与下游任务解耦，允许与任何融合/预测架构轻松集成。在不同且高度不完整的体系下进行的大量实验证明了 UL4M4 的稳健性，据我们所知，即使在超过 50% 的模态槽缺失的情况下，在挑战缺失配置方面，第一个一致的 F1-Micro 得分也高于 0.7。结果在不同集群大小之间也保持稳定，并且显着优于最先进的基线。代码可在此处获取：https://github.com/h-ismkhan/Multimodal-Learning-with-Missing-Modalities-via-Unsupervised-Learning。"
+    },
+    {
+      "title": "Mutual Distillation of Dual-Foundation Models for Semi-Supervised PET/CT Segmentation",
+      "authors": [
+        "Fuyou Mao",
+        "Beining Wu",
+        "Yanfeng Jiang",
+        "Bohan Xu",
+        "Lixin Lin",
+        "Naye Ji",
+        "Hao Zhang",
+        "Yan Tang"
+      ],
+      "summary": "Organ segmentation from PET/CT is critical for quantitative analysis and radiotherapy planning in oncology. To ease the high annotation cost of PET/CT segmentation, semi-supervised learning (SSL) provides a practical and effective solution for developing deep models with limited labeled data. Recent developments in visual foundation models have demonstrated remarkable adaptability with improved efficiency. In this work, we propose a mutual distillation framework that seamlessly exploits both structural and functional foundation models, which act as modality-specific generalists for distilling knowledge from structural CT and metabolic PET imaging. By bridging the gap between the task-specific precision of student models and the segmentation priors of generalist foundation models, we propose \\textbf{MuDuo}, a mutual distillation framework that synergistically leverages SAM-Med3D for CT and SegAnyPET for PET to distill their knowledge into a lightweight student network. Our approach eliminates the need for manual prompts while maximizing the utility of unlabeled data for automatic segmentation, achieving state-of-the-art performance on the AutoPET dataset with only 5 labeled cases. Our source code is available at https://github.com/Wu-beining/MuDuo.",
+      "published": "2026-06-14T05:34:26Z",
+      "updated": "2026-06-14T05:34:26Z",
+      "arxiv_id": "2606.15611v1",
+      "abs_url": "http://arxiv.org/abs/2606.15611v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15611v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "MICCAI 2026",
+      "code_url": "https://github.com/Wu-beining/MuDuo",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "实例分割",
+        "基础模型",
+        "视觉-语言模型",
+        "无监督与弱监督",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "实例分割",
+      "score": 6,
+      "anchor_terms": [
+        "semi-supervised"
+      ],
+      "matched_terms": [
+        "foundation model",
+        "SAM",
+        "semi-supervised"
+      ],
+      "title_zh": "半监督 PET/CT 分割双基础模型的相互蒸馏",
+      "summary_zh": "PET/CT 器官分割对于肿瘤学的定量分析和放射治疗计划至关重要。为了缓解 PET/CT 分割的高注释成本，半监督学习 (SSL) 为开发具有有限标记数据的深度模型提供了实用且有效的解决方案。视觉基础模型的最新发展已经表现出显着的适应性和效率的提高。在这项工作中，我们提出了一个相互蒸馏框架，该框架无缝地利用结构和功能基础模型，该模型充当从结构 CT 和代谢 PET 成像中提取知识的特定模态通才。通过弥合学生模型的特定任务精度和通才基础模型的分割先验之间的差距，我们提出了 \\textbf{MuDuo}，这是一种相互蒸馏框架，协同利用用于 CT 的 SAM-Med3D 和用于 PET 的 SegAnyPET，将其知识提炼成轻量级学生网络。我们的方法消除了对手动提示的需要，同时最大限度地利用未标记数据进行自动分割，仅用 5 个标记案例就在 AutoPET 数据集上实现了最先进的性能。我们的源代码可在 https://github.com/Wu-beining/MuDuo 获取。"
+    },
+    {
+      "title": "Multi-view feature High-order Fusion for Space Weak Object Detection and Segmentation",
+      "authors": [
+        "Weilong Guo",
+        "Yuhan Sun",
+        "Shengyang Li"
+      ],
+      "summary": "Weak objects are common in images and videos of space applications. However, it is hard to learn proper representations from their limited appearance information. Inspired by multi-view learning, we develop simple multi-view attentions, treating their outputs as multi-view features. We also propose a multi-view feature high-order fusion method (MHF) to aggregate more accurate and richer features of weak objects. Our MHF extends the commonly used low-order feature fusion method to higher orders. It enhances the model's capacity to capture relevant and complementary information about weak objects. This is achieved by introducing high-order multi-view features perception and a recursive task-contribution gated selection of multi-view features. The new operation is highly flexible and customizable. It is compatible with various variants of multi-view feature representations. We conduct extensive experiments on two newly constructed space science datasets and an open, large-scale satellite video dataset. Our MHF serves as a plug-and-play module and significantly improves various vision transformers and convolution-based detection and segmentation models. We achieve all state-of-the-art accuracies on both tasks across three datasets. Our MHF can be a new basic module for visual modeling that effectively represents weak objects in terms of multi-view learning. The code will be available at https://github.com/Kingdroper/MHF.",
+      "published": "2026-06-13T05:11:57Z",
+      "updated": "2026-06-13T05:11:57Z",
+      "arxiv_id": "2606.15118v1",
+      "abs_url": "http://arxiv.org/abs/2606.15118v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15118v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "https://github.com/Kingdroper/MHF",
+      "has_code": true,
+      "labels": [
+        "开源",
+        "目标检测",
+        "时间序列与视频",
+        "基础模型",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 9,
+      "anchor_terms": [
+        "object detection",
+        "satellite video",
+        "vision transformer"
+      ],
+      "matched_terms": [
+        "feature fusion",
+        "object detection",
+        "satellite",
+        "satellite video",
+        "transformer",
+        "vision transformer"
+      ],
+      "title_zh": "用于空间弱目标检测和分割的多视图特征高阶融合",
+      "summary_zh": "弱物体在空间应用的图像和视频中很常见。然而，很难从有限的外观信息中学习正确的表示。受多视图学习的启发，我们开发了简单的多视图注意力，将其输出视为多视图特征。我们还提出了一种多视图特征高阶融合方法（MHF）来聚合更准确和更丰富的弱对象特征。我们的MHF将常用的低阶特征融合方法扩展到更高阶。它增强了模型捕获有关弱对象的相关和补充信息的能力。这是通过引入高阶多视图特征感知和多视图特征的递归任务贡献门控选择来实现的。新操作高度灵活且可定制。它与多视图特征表示的各种变体兼容。我们对两个新构建的空间科学数据集和一个开放的大规模卫星视频数据集进行了广泛的实验。我们的 MHF 作为即插即用模块，显着改进了各种视觉转换器以及基于卷积的检测和分割模型。我们在三个数据集的两项任务上都实现了所有最先进的准确度。我们的MHF可以成为视觉建模的一个新的基本模块，可以有效地表示多视图学习方面的弱对象。该代码可在 https://github.com/Kingdroper/MHF 上获取。"
+    },
+    {
+      "title": "HAMON: Passive Optical Sequence Mixing for Long-Horizon Forecasting",
+      "authors": [
+        "Alper Yıldırım"
+      ],
+      "summary": "Simple linear and frequency-domain models remain surprisingly competitive in long-horizon time-series forecasting, and recent mechanistic evidence suggests that standard forecasting benchmarks may not require the dense superposed representations that make transformers powerful in other domains. This raises a substrate-level question: if the core forecasting operator is often low-complexity and approximately linear, does it need to be implemented as learned digital temporal mixing? We introduce HAMON, a passive diffractive optical forecasting core in which historical values are encoded onto an optical aperture, future positions are left dark, and cascaded trainable phase masks with free-space diffraction shape the forecast directly in the output field. At inference, prediction is performed by a single passive optical propagation pass with no trainable digital sequence-mixing layer. Across standard benchmarks, HAMON outperforms the strongest digital baselines considered on ETTm2 at all horizons and on ETTh2 at all but the longest horizon, improving MSE by up to 14\\% and doing so consistently across horizons rather than at isolated points. It is competitive on Weather and trails the strongest baselines on the remaining ETT settings and on the high-channel-count Traffic and Electricity datasets. Phase encoding, intensity-compatible readout, and phase-scrambling ablations, together with a TorchOptics cross-simulator check, indicate that the forecasts arise from the data-bearing optical field rather than from a digital forecasting head. Because the passive core uses standard Fourier optics, HAMON defines a concrete target for optical hardware and for passive physical sequence mixing.",
+      "published": "2026-06-15T17:51:50Z",
+      "updated": "2026-06-15T17:51:50Z",
+      "arxiv_id": "2606.17028v1",
+      "abs_url": "http://arxiv.org/abs/2606.17028v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.17028v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.AR"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "数据集/评测"
+      ],
+      "topic": "时间序列与视频",
+      "score": 2,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "temporal",
+        "time-series",
+        "transformer"
+      ],
+      "title_zh": "HAMON：用于长视野预测的无源光序列混合",
+      "summary_zh": "简单的线性和频域模型在长期时间序列预测中仍然具有令人惊讶的竞争力，并且最近的机械证据表明标准预测基准可能不需要使变压器在其他领域强大的密集叠加表示。这就提出了一个底层问题：如果核心预测算子通常是低复杂度且近似线性的，那么是否需要将其实现为学习的数字时间混合？我们引入了 HAMON，一种无源衍射光学预测核心，其中历史值被编码到光学孔径上，未来位置保持黑暗，并且具有自由空间衍射的级联可训练相位掩模直接在输出场中形成预测。推断时，预测是通过单个无源光传播通道执行的，没有可训练的数字序列混合层。在标准基准测试中，HAMON 在所有范围内都优于 ETTm2 上考虑的最强数字基线，并且在除最长范围外的所有范围内都优于 ETTh2，将 MSE 提高了高达 14\\%，并且在跨范围内而不是在孤立点上始终如一地做到这一点。它在天气方面具有竞争力，并在剩余 ETT 设置以及高通道数交通和电力数据集上跟踪了最强的基线。相位编码、强度兼容读出和相位扰乱消融，以及 TorchOptics 交叉模拟器检查，表明预测来自承载数据的光场而不是数字预测头。由于无源核心使用标准傅里叶光学，HAMON 为光学硬件和无源物理序列混合定义了具体目标。"
+    },
+    {
+      "title": "FusionRS: A Large-Scale RGB-Infrared Remote Sensing Dataset for Dual-Modal Vision-Language Foundation Models",
+      "authors": [
+        "Jiaju Han",
+        "Ben Zhang",
+        "Xuemeng Sun",
+        "Qike Zhang",
+        "Yuxian Dong",
+        "Chengyin Hu",
+        "Fengyu Zhang",
+        "Yiwei Wei",
+        "Jiujiang Guo"
+      ],
+      "summary": "Remote sensing vision-language models have advanced Earth observation understanding, but most existing work remains centered on RGB imagery, leaving the complementary information in infrared data underexplored. Infrared images provide distinctive cues, including thermal intensity structures, object boundaries, and illumination-invariant scene features, which can enrich visual-language learning beyond conventional RGB observations. However, a large-scale RGB-infrared-text dataset for remote sensing vision-language modeling is still absent. To address this gap, we introduce FusionRS, the first large-scale RGB-infrared-text dataset designed for dual-modal vision-language learning in remote sensing. FusionRS is constructed by translating diverse public RGB remote sensing images into infrared-style counterparts, forming aligned RGB-IR image pairs. Each pair is associated with conventional scene captions and IR-aware captions that explicitly describe infrared-specific visual properties while preserving semantic content. Based on FusionRS, we train dual-modal vision-language foundation models for RGB-IR joint understanding. We first train CLIP-style models for RGB-IR-text alignment, and then fine-tune generative VLMs for dual-modal RGB-IR captioning. Experiments show that FusionRS improves RGB-IR alignment, infrared-to-text retrieval, and dual-modal captioning over RGB-only and non-IR-aware training settings. Ablation studies further verify that IR-aware captions are crucial for strengthening infrared-language alignment, highlighting the importance of modality-specific textual supervision for more scalable RGB-infrared remote sensing vision-language representation learning.",
+      "published": "2026-06-15T17:49:34Z",
+      "updated": "2026-06-15T17:49:34Z",
+      "arxiv_id": "2606.17020v1",
+      "abs_url": "http://arxiv.org/abs/2606.17020v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.17020v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像描述与视觉推理",
+        "基础模型",
+        "视觉-语言模型",
+        "光学遥感",
+        "数据集/评测"
+      ],
+      "topic": "图像描述与视觉推理",
+      "score": 9,
+      "anchor_terms": [
+        "CLIP",
+        "earth observation",
+        "foundation model",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "CLIP",
+        "earth observation",
+        "foundation model",
+        "remote sensing"
+      ],
+      "title_zh": "FusionRS：用于双模态视觉语言基础模型的大规模 RGB 红外遥感数据集",
+      "summary_zh": "遥感视觉语言模型具有先进的地球观测理解能力，但大多数现有工作仍然以 RGB 图像为中心，而红外数据中的补充信息尚未得到充分探索。红外图像提供了独特的线索，包括热强度结构、物体边界和光照不变的场景特征，这可以丰富传统 RGB 观察之外的视觉语言学习。然而，用于遥感视觉语言建模的大规模 RGB 红外文本数据集仍然缺乏。为了解决这一差距，我们引入了 FusionRS，这是第一个专为遥感中双模态视觉语言学习而设计的大型 RGB 红外文本数据集。 FusionRS 的构造方法是将不同的公共 RGB 遥感图像转换为红外类型的对应图像，形成对齐的 RGB-IR 图像对。每对都与传统的场景字幕和红外感知字幕相关联，这些字幕明确描述了红外特定的视觉属性，同时保留了语义内容。基于 FusionRS，我们训练用于 RGB-IR 联合理解的双模态视觉语言基础模型。我们首先训练用于 RGB-IR 文本对齐的 CLIP 式模型，然后微调生成 VLM 以实现双模态 RGB-IR 字幕。实验表明，与仅 RGB 和非 IR 感知的训练设置相比，FusionRS 改进了 RGB-IR 对齐、红外到文本检索和双模式字幕。消融研究进一步证实，红外感知字幕对于加强红外语言对齐至关重要，强调了特定模态的文本监督对于更可扩展的 RGB 红外遥感视觉语言表示学习的重要性。"
+    },
+    {
+      "title": "From Tokens to Policy: Causal and Interpretable Heterogeneous Treatment Effects Identification",
+      "authors": [
+        "Riccardo Cadei",
+        "Frank Otchere",
+        "Nyasha Tirivayi",
+        "Gustavo Angeles Tagliaferro",
+        "Falco J. Bargagli-Stoffi",
+        "Francesco Locatello"
+      ],
+      "summary": "Heterogeneous Treatment Effect (HTE) identification is crucial to explain the impact of an intervention and optimize our policies accordingly. Existing approaches trade expressivity for interpretability, but, if some active heterogeneity drivers are unmeasured, methods at both ends of this spectrum allow for spurious HTE characterization with no causal reading. In this work, we focus on controlled experiments and argue that an oracle HTE causal characterization via the latent interactors is now within reach, thanks to (i) more extensive pre-treatment measurements, i.e., multi-modal and multi-view, and (ii) scalable representations with minimal human supervision. We then re-frame HTE identification as a Markov-blanket discovery problem on a sufficient and aligned pre-treatment representation, and introduce Neural EXposure Interaction Search (NEXIS), an iterative procedure with provable and empirically validated consistent selection. We deploy NEXIS on two anti-poverty programs in Africa, augmenting each with satellite imagery capturing previously unmeasured environmental effect modifiers, leading to novel, interpretable and prescriptive guidelines to optimize the programs' next iterations.",
+      "published": "2026-06-15T17:44:44Z",
+      "updated": "2026-06-15T17:44:44Z",
+      "arxiv_id": "2606.17010v1",
+      "abs_url": "http://arxiv.org/abs/2606.17010v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.17010v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "多模态融合"
+      ],
+      "topic": "多模态融合",
+      "score": 2,
+      "anchor_terms": [
+        "satellite image",
+        "satellite imagery"
+      ],
+      "matched_terms": [
+        "satellite",
+        "satellite image",
+        "satellite imagery"
+      ],
+      "title_zh": "从代币到政策：因果和可解释的异质治疗效果识别",
+      "summary_zh": "异质治疗效应（HTE）识别对于解释干预措施的影响并相应优化我们的政策至关重要。现有方法以表达性换取可解释性，但是，如果某些活跃的异质性驱动因素未测量，则该范围两端的方法都允许在没有因果解读的情况下进行虚假的 HTE 表征。在这项工作中，我们专注于受控实验，并认为通过潜在交互者进行预言机 HTE 因果表征现在已经可以实现，这要归功于 (i) 更广泛的预处理测量，即多模式和多视图，以及 (ii) 在最少的人类监督下进行可扩展的表示。然后，我们将 HTE 识别重新构建为充分且一致的预处理表示上的马尔可夫毯发现问题，并引入神经暴露交互搜索（NEXIS），这是一种具有可证明且经经验验证的一致选择的迭代过程。我们在非洲的两个反贫困项目中部署了 NEXIS，通过捕捉以前未测量的环境影响调节剂的卫星图像来增强每个项目，从而产生新颖的、可解释的和规范性的指导方针，以优化项目的下一次迭代。"
+    },
+    {
+      "title": "Redirecting the Flow: Image Customization through Attention Distribution Shift",
+      "authors": [
+        "Jie Li",
+        "Suorong Yang",
+        "Jian Zhao",
+        "Furao Shen"
+      ],
+      "summary": "Subject-driven image customization aims to generate images that not only follow textual instructions but also preserve the identity of a given reference subject. Existing approaches, including test-time fine-tuning, encoder-based methods, and token competition in shared attention spaces, suffer from limited efficiency, misalignment between extracted reference features and the generative process, and interference from irrelevant information. To address these limitations, we formulate the customization task as a distribution shift induced by incorporating reference images into text-to-image generation, and derive a Conditional Attention Distribution Shift formulation grounded in maximum entropy theory. Building on this formulation, we propose CustomShift, a dual-branch architecture based on Stable Diffusion 3. The Reference-Alignment Branch leverages self-attention between reference images and subject names to achieve layer-wise alignment with latent representations, while the Cross-Guidance Branch integrates textual and reference cues to guide generation. Experiments on the DreamBooth and Custom101 benchmarks demonstrate that our method consistently outperforms state-of-the-art approaches, achieving a better balance between semantic fidelity and subject consistency.",
+      "published": "2026-06-15T15:44:14Z",
+      "updated": "2026-06-15T15:44:14Z",
+      "arxiv_id": "2606.16866v1",
+      "abs_url": "http://arxiv.org/abs/2606.16866v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16866v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 5,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "image generation",
+        "self-attention",
+        "stable diffusion"
+      ],
+      "title_zh": "重定向流程：通过注意力分配转移进行图像定制",
+      "summary_zh": "主题驱动的图像定制旨在生成不仅遵循文本指令而且保留给定参考主题的身份的图像。现有的方法，包括测试时微调、基于编码器的方法和共享注意力空间中的令牌竞争，都受到效率有限、提取的参考特征和生成过程之间的不一致以及不相关信息的干扰的影响。为了解决这些限制，我们将定制任务制定为通过将参考图像合并到文本到图像生成中而引起的分布变化，并推导出基于最大熵理论的条件注意分布变化公式。在此基础上，我们提出了 CustomShift，一种基于稳定扩散 3 的双分支架构。参考对齐分支利用参考图像和主题名称之间的自注意力来实现与潜在表示的分层对齐，而交叉指导分支则集成文本和参考线索来指导生成。 DreamBooth 和 Custom101 基准测试的实验表明，我们的方法始终优于最先进的方法，在语义保真度和主题一致性之间实现了更好的平衡。"
+    },
+    {
+      "title": "WaveDINO: Learning-Based Atmospheric Correction of Unwrapped InSAR Interferograms Validated by GNSS: Results at Laguna del Maule and Campi Flegrei Volcanoes",
+      "authors": [
+        "Robert Popescu",
+        "Juliet Biggs",
+        "Tianyuan Zhu",
+        "Nantheera Anantrasirichai"
+      ],
+      "summary": "Interferometric Synthetic Aperture Radar (InSAR) enables effective monitoring of volcanic deformation; however, the observed signals are often corrupted by atmospheric phase delays, seasonal surface changes, and decorrelation effects. Existing atmospheric correction methods, such as numerical weather model-based methods, can reduce these effects but do not consistently remove atmospheric artefacts and may introduce residual biases. To address these limitations, we propose a novel learning-based method for denoising unwrapped InSAR interferograms, using a hybrid training strategy that combines physically motivated synthetic deformation with real atmospheric noise. Specifically, we introduce WaveDINO, a wavelet-based multi-scale denoising framework conditioned on frozen DINOv3 foundation-model features and terrain information. Training uses synthetic magma-source deformation superimposed on short-term interferograms to expose the network to realistic atmospheric statistics while retaining known ground truth. Performance is evaluated on both controlled synthetic data and long-term real interferograms from Laguna del Maule (Chile) and Campi Flegrei (Italy), with independent GNSS measurements used for validation. WaveDINO consistently outperforms competing models, improving agreement with GNSS measurements, and reducing mean GNSS misfit by approximately 3% and 19% at two sites, respectively, while surpassing weather-model-based corrections.",
+      "published": "2026-06-15T14:38:07Z",
+      "updated": "2026-06-15T14:38:07Z",
+      "arxiv_id": "2606.16795v1",
+      "abs_url": "http://arxiv.org/abs/2606.16795v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16795v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "11 pages, 6 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "SAR遥感"
+      ],
+      "topic": "图像生成与重建",
+      "score": 6,
+      "anchor_terms": [
+        "synthetic aperture radar"
+      ],
+      "matched_terms": [
+        "denoising",
+        "InSAR",
+        "multi-scale",
+        "synthetic aperture radar"
+      ],
+      "title_zh": "WaveDINO：基于学习的未包裹 InSAR 干涉图大气校正经 GNSS 验证：Laguna del Maule 和 Campi Flegrei 火山的结果",
+      "summary_zh": "干涉合成孔径雷达（InSAR）能够有效监测火山形变；然而，观测到的信号经常受到大气相位延迟、季节性地表变化和去相关效应的影响。现有的大气校正方法，例如基于数值天气模型的方法，可以减少这些影响，但不能始终如一地消除大气伪影，并且可能会引入残余偏差。为了解决这些限制，我们提出了一种基于学习的新颖方法，使用将物理驱动的合成变形与真实大气噪声相结合的混合训练策略，对未包裹的 InSAR 干涉图进行去噪。具体来说，我们介绍了 WaveDINO，一种基于小波的多尺度去噪框架，以冻结的 DINOv3 基础模型特征和地形信息为条件。训练使用叠加在短期干涉图上的合成岩浆源变形，使网络暴露于真实的大气统计数据，同时保留已知的地面真相。性能根据来自 Laguna del Maule（智利）和 Campi Flegrei（意大利）的受控合成数据和长期真实干涉图进行评估，并使用独立的 GNSS 测量进行验证。 WaveDINO 始终优于竞争模型，提高了与 GNSS 测量的一致性，并将两个地点的平均 GNSS 失配率分别减少了约 3% 和 19%，同时超越了基于天气模型的校正。"
+    },
+    {
+      "title": "Multi-Modal Spatio-Temporal Graph Neural Network with Mixture of Experts for Soil Organic Carbon Prediction",
+      "authors": [
+        "Daniele Mos",
+        "Felipe Drummond",
+        "Anton Bossenbroek",
+        "Soufiane el Khinifri"
+      ],
+      "summary": "Top-soil organic carbon (SOC) prediction is fundamental to agricultural sustainability, land use policy and fertilization planning. Existing approaches face two limitations: they pair hand-crafted covariates with classical ML or single-modal deep models that miss rich spectral and temporal information, and grid-based architectures ignore the irregular spatial structure of field measurements. We introduce SpTGNN, a multi-modal spatio-temporal graph neural network addressing both. SpTGNN represents soil measurements as nodes in a heterogeneous graph with three edge types (spatial proximity, spectral similarity, elevation), and applies relational graph attention to learn separate patterns per relation. A fine-tuned TerraMind encoder extracts node features from Sentinel-2, Sentinel-1 and DEM signals, combined with per-sample environmental covariates and learned positional and temporal embeddings. A sparse Mixture-of-Experts module fuses the four streams via top-$k$ routing. Uncertainty is captured by pairing heteroscedastic regression (aleatoric) with deep ensembles (epistemic), and a Moran's $I$ penalty regularizes spatial autocorrelation. We evaluate on a global SOC corpus split into three regional instances ($\\sim$49k samples globally, Africa $\\sim$26k, Europe $\\sim$14k). Our 5-member deep ensemble reports $R^2=0.762$, RMSE $=3.51\\pm0.48$ g/kg and MAPE $=22.9\\%$ on the Africa test split, improving over a tabular XGBoost baseline; the best single checkpoint reaches validation $R^2=0.864$. Ablations confirm the heterogeneous graph, MoE fusion and fine-tuned backbone each contribute substantively, and the ensemble UQ stack achieves post-calibration ECE of $0.031$ (hybrid) and $0.026$ ($β$-NLL). To our knowledge, this is the first framework to unify foundation-model feature extraction, heterogeneous graph attention and decomposed uncertainty quantification for SOC estimation.",
+      "published": "2026-06-15T11:25:38Z",
+      "updated": "2026-06-15T11:25:38Z",
+      "arxiv_id": "2606.16580v1",
+      "abs_url": "http://arxiv.org/abs/2606.16580v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16580v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "comment": "Paper is 27 pages, 14 figures, 12 tables",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "场景分类",
+        "多模态融合",
+        "SAR遥感",
+        "高光谱/多光谱",
+        "LiDAR/点云",
+        "数据集/评测"
+      ],
+      "topic": "场景分类",
+      "score": 7,
+      "anchor_terms": [
+        "Sentinel-1",
+        "Sentinel-2",
+        "temporal"
+      ],
+      "matched_terms": [
+        "DEM",
+        "graph neural network",
+        "land use",
+        "Sentinel-1",
+        "Sentinel-2",
+        "temporal"
+      ],
+      "title_zh": "混合专家的多模态时空图神经网络用于土壤有机碳预测",
+      "summary_zh": "表层土壤有机碳 (SOC) 预测对于农业可持续发展、土地利用政策和施肥规划至关重要。现有方法面临两个局限性：它们将手工制作的协变量与经典的机器学习或单模态深度模型配对，而这些模型会丢失丰富的光谱和时间信息，而基于网格的架构则忽略了现场测量的不规则空间结构。我们引入了 SpTGNN，一种解决这两个问题的多模态时空图神经网络。 SpTGNN 将土壤测量结果表示为具有三种边缘类型（空间邻近性、光谱相似性、海拔）的异构图中的节点，并应用关系图注意力来学习每个关系的单独模式。经过微调的 TerraMind 编码器从 Sentinel-2、Sentinel-1 和 DEM 信号中提取节点特征，并结合每个样本的环境协变量以及学习的位置和时间嵌入。稀疏专家混合模块通过 top-$k$ 路由融合四个流。通过将异方差回归（任意）与深度集合（认知）配对来捕获不确定性，并且 Moran's $I$ 惩罚规范了空间自相关。我们对分为三个区域实例的全球 SOC 语料库进行评估（全球 $\\sim$49k 样本，非洲 $\\sim$26k，欧洲 $\\sim$14k）。我们的 5 名成员深度集成报告在非洲测试中的 $R^2=0.762$、RMSE $=3.51\\pm0.48$ g/kg 和 MAPE $=22.9\\%$，比表格 XGBoost 基线有所改进；最好的单个检查点达到验证$R^2=0.864$。消融证实了异构图、MoE 融合和微调骨干网均做出了实质性贡献，并且整体 UQ 堆栈实现了 0.031 美元（混合）和 0.026 美元（$β$-NLL）的校准后 ECE。据我们所知，这是第一个统一基础模型特征提取、异构图注意力和分解不确定性量化以进行 SOC 估计的框架。"
+    },
+    {
+      "title": "Neural Bayesian Anomaly Mitigation: A Robust Loss that Doubles as an Unsupervised Contamination Classifier",
+      "authors": [
+        "S. A. K. Leeney",
+        "W. J. Handley",
+        "H. T. J. Bevins",
+        "E. de Lera Acedo"
+      ],
+      "summary": "Engineered robust losses such as Huber, Student-$t$, and generalised cross-entropy make supervised models tolerant of contamination but cannot answer which observations are corrupted. We introduce Neural Bayesian Anomaly Mitigation (NBAM), a general-purpose drop-in loss derived from a Bayesian latent-switch mixture model: the marginal likelihood defines a robust supervised loss, and the associated posterior defines an unsupervised contamination classifier. Like Huber or Student-$t$, NBAM can replace the standard training loss in any supervised pipeline; unlike them, it additionally learns a structured contamination model and returns a calibrated per-sample contamination posterior. A learned input-dependent prior $π_φ(x)$ captures the spatial locality of contamination, so that samples near known corruptions are more likely to be flagged, while an Occam penalty emerges automatically and regularises against over-flagging. On CIFAR-10 with asymmetric label contamination, NBAM recovers the structure of the corruption process without supervision: the contamination posterior separates clean from corrupted samples, and the learned anomaly head identifies the direction of every label-flip pair. Alongside these capabilities, NBAM outperforms the four robust-loss baselines considered here at contamination rates 0.2-0.6.",
+      "published": "2026-06-15T10:25:19Z",
+      "updated": "2026-06-15T10:25:19Z",
+      "arxiv_id": "2606.16524v1",
+      "abs_url": "http://arxiv.org/abs/2606.16524v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16524v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "astro-ph.CO",
+        "stat.ML"
+      ],
+      "comment": "13 pages, 4 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无监督与弱监督"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 4,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "robust",
+        "unsupervised"
+      ],
+      "title_zh": "神经贝叶斯异常缓解：兼作无监督污染分类器的鲁棒损失",
+      "summary_zh": "Huber、Student-$t$ 和广义交叉熵等工程鲁棒损失使监督模型能够容忍污染，但无法回答哪些观察结果被损坏。我们引入神经贝叶斯异常缓解（NBAM），这是一种源自贝叶斯潜在开关混合模型的通用插入式损失：边际似然定义了鲁棒的监督损失，相关的后验定义了无监督污染分类器。与 Huber 或 Student-$t$ 一样，NBAM 可以替代任何监督管道中的标准训练损失；与它们不同的是，它还学习结构化污染模型并返回校准的每个样本污染后验。学习到的依赖于输入的先验 $π_φ(x)$ 捕获了污染的空间局部性，因此靠近已知损坏的样本更有可能被标记，同时奥卡姆惩罚会自动出现并规范化过度标记。在具有不对称标签污染的 CIFAR-10 上，NBAM 在没有监督的情况下恢复损坏过程的结构：污染后验将干净的样本与损坏的样本分开，学习的异常头识别每个标签翻转对的方向。除了这些功能之外，NBAM 在污染率 0.2-0.6 的情况下优于此处考虑的四个稳健损失基线。"
+    },
+    {
+      "title": "Uncertainty Quality of VGGT: An Analysis on the DTU Benchmark Dataset",
+      "authors": [
+        "Markus Hillemann",
+        "Robert Langendörfer",
+        "Steven Landgraf",
+        "Markus Ulrich"
+      ],
+      "summary": "Visual Geometry Grounded Transformer (VGGT) has already attracted a great deal of attention in a short period of time, not least due to the Best Paper Award at CVPR-2025. Similar to DUSt3R and MASt3R, VGGT aims to bring about a paradigm shift by replacing established methods like bundle adjustment and feature matching with a simple, unified, feed-forward neural network that predicts camera poses, depth maps, and dense 3D structure directly from multiple images of a scene in a few seconds. A key aspect is its ability to process an arbitrary number of views consistently in a single forward pass without any post-processing or iterative optimization. For photogrammetry, this opens new possibilities for real-time, scalable, and accessible 3D reconstruction. In this context, not only high reconstruction accuracy but also high-quality uncertainty estimates are crucial, as they foster trust and enable robust quality assurance. This paper therefore investigates the quality of VGGT's uncertainty predictions. The analysis identifies an effective confidence threshold for filtering VGGT's raw output and demonstrates that enhancing uncertainty quality holds strong potential for improving the accuracy of its 3D reconstructions.",
+      "published": "2026-06-15T09:49:00Z",
+      "updated": "2026-06-15T09:49:00Z",
+      "arxiv_id": "2606.16479v1",
+      "abs_url": "http://arxiv.org/abs/2606.16479v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16479v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "Accepted for publication in the ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "LiDAR/点云",
+        "数据集/评测"
+      ],
+      "topic": "LiDAR/点云",
+      "score": 6,
+      "anchor_terms": [
+        "3D reconstruction",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "3D reconstruction",
+        "photogrammetry",
+        "remote sensing",
+        "robust",
+        "transformer"
+      ],
+      "title_zh": "VGGT 的不确定性质量：DTU 基准数据集分析",
+      "summary_zh": "视觉几何接地变压器（VGGT）在短时间内就引起了广泛关注，尤其是因为获得了 CVPR-2025 最佳论文奖。与 DUSt3R 和 MASt3R 类似，VGGT 的目标是通过用简单、统一的前馈神经网络取代捆绑调整和特征匹配等既定方法来实现范式转变，该神经网络可以在几秒钟内直接从场景的多个图像预测相机姿势、深度图和密集 3D 结构。一个关键方面是它能够在一次前向传递中一致地处理任意数量的视图，而无需任何后处理或迭代优化。对于摄影测量来说，这为实时、可扩展且可访问的 3D 重建开辟了新的可能性。在这种情况下，不仅高重建精度至关重要，而且高质量的不确定性估计也至关重要，因为它们可以促进信任并实现稳健的质量保证。因此，本文研究了 VGGT 不确定性预测的质量。该分析确定了过滤 VGGT 原始输出的有效置信阈值，并表明增强不确定性质量对于提高 3D 重建的准确性具有巨大潜力。"
+    },
+    {
+      "title": "MVOFormer: Flow-Semantic Transformer for Robust Monocular Visual Odometry",
+      "authors": [
+        "Jituo Li",
+        "Shunwang Sun",
+        "Jialu Zhang",
+        "Xinqi Liu",
+        "Jinyao Hu",
+        "Zhicheng Lu",
+        "Sajad Saeedi",
+        "Guodong Lu"
+      ],
+      "summary": "Monocular visual odometry (MVO) is foundational to autonomous navigation and robotic localization. However, existing learning-based MVO approaches often struggle with either a lack of interpretable, complementary features or overly complex multi-stage architectures. These limitations inherently restrict their robustness and cross-domain generalization. In this work, we propose MVOFormer, a novel transformer framework for robust monocular visual odometry. Our architecture features a Flow-Semantic Dual Branch Encoder that synergizes dense geometric motion cues with object-centric semantic priors, explicitly distinguishing static structures from dynamic distractors. These representations are then fused by an Iterative Multimodal Decoder, enabling coarse-to-fine pose refinement while dynamically suppressing attention on unreliable regions. Extensive evaluations demonstrate that, without any target-domain fine-tuning, MVOFormer achieves superior zero-shot generalization and robustness, significantly outperforming prior learning-based frame-to-frame methods across diverse benchmarks including TartanAir, KITTI, TUM-RGBD, and ETH3D-SLAM.",
+      "published": "2026-06-15T09:39:28Z",
+      "updated": "2026-06-15T09:39:28Z",
+      "arxiv_id": "2606.16474v1",
+      "abs_url": "http://arxiv.org/abs/2606.16474v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16474v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "comment": "8 pages, 6 figures. Accepted for publication in IEEE Robotics and Automation Letters (RA-L)",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 8,
+      "anchor_terms": [
+        "domain generalization"
+      ],
+      "matched_terms": [
+        "domain generalization",
+        "fine-tuning",
+        "robust",
+        "transformer",
+        "zero-shot"
+      ],
+      "title_zh": "MVOFormer：用于鲁棒单目视觉里程计的流语义转换器",
+      "summary_zh": "单目视觉里程计 (MVO) 是自主导航和机器人定位的基础。然而，现有的基于学习的 MVO 方法常常因缺乏可解释的互补功能或过于复杂的多阶段架构而苦苦挣扎。这些限制本质上限制了它们的鲁棒性和跨域泛化。在这项工作中，我们提出了 MVOFormer，一种用于鲁棒单目视觉里程计的新型变压器框架。我们的架构采用流语义双分支编码器，可将密集的几何运动线索与以对象为中心的语义先验相结合，明确地区分静态结构与动态干扰因素。然后，这些表示由迭代多模态解码器融合，实现从粗到细的姿态细化，同时动态抑制对不可靠区域的关注。广泛的评估表明，在没有任何目标域微调的情况下，MVOFormer 实现了卓越的零样本泛化和鲁棒性，在包括 TartanAir、KITTI、TUM-RGBD 和 ETH3D-SLAM 在内的各种基准测试中显着优于先前基于学习的帧到帧方法。"
+    },
+    {
+      "title": "SDS-LoRA: Overcoming Anisotropic Gradient Scaling in Low-Rank Adaptation",
+      "authors": [
+        "Junghun Oh",
+        "Sungyong Baik",
+        "Kyoung Mu Lee"
+      ],
+      "summary": "Low-Rank Adaptation (LoRA) enables efficient adaptation of large pre-trained models to downstream tasks by parameterizing weight updates with low-rank matrices. In this paper, we investigate the limitations of the LoRA parameterization from a geometric perspective. Specifically, we show that when a full fine-tuning gradient is backpropagated to the low-rank matrices, it undergoes anisotropic scaling driven by their singular values. We argue that this phenomenon is undesirable because it distorts the full fine-tuning gradient by skewing it toward dominant singular directions while suppressing others. Our analyses demonstrate that anisotropic gradient scaling reduces the effective rank of the low-rank matrices' gradients and results in suboptimal alignment between the full fine-tuning gradient and its low-rank approximation in LoRA, thereby exacerbating the gap to full fine-tuning. To address these limitations, we propose a new low-rank parameterization, SDS-LoRA, which structurally decouples singular values from the backward pass. Our method ensures that the full fine-tuning gradient backpropagates only through the orthonormal bases of the low-rank matrices' subspaces, independent of their scales. Convergence analysis demonstrates that while LoRA's convergence rate degrades with the condition number of the low-rank matrices, SDS-LoRA remains independent of it. Experimental results across natural language and vision benchmarks show that SDS-LoRA improves loss convergence and reduces the gap to full fine-tuning, significantly enhancing adaptation performance.",
+      "published": "2026-06-15T09:27:50Z",
+      "updated": "2026-06-15T09:27:50Z",
+      "arxiv_id": "2606.16454v1",
+      "abs_url": "http://arxiv.org/abs/2606.16454v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16454v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 3,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "LoRA"
+      ],
+      "title_zh": "SDS-LoRA：克服低阶适应中的各向异性梯度缩放",
+      "summary_zh": "低秩适应 (LoRA) 通过使用低秩矩阵参数化权重更新，使大型预训练模型能够有效适应下游任务。在本文中，我们从几何角度研究了 LoRA 参数化的局限性。具体来说，我们表明，当完全微调梯度反向传播到低秩矩阵时，它会经历由奇异值驱动的各向异性缩放。我们认为这种现象是不受欢迎的，因为它通过将梯度偏向主导奇异方向同时抑制其他方向来扭曲整个微调梯度。我们的分析表明，各向异性梯度缩放降低了低秩矩阵梯度的有效秩，并导致 LoRA 中完全微调梯度与其低秩近似之间的次优对齐，从而加剧了与完全微调的差距。为了解决这些限制，我们提出了一种新的低秩参数化 SDS-LoRA，它在结构上将奇异值与后向传递解耦。我们的方法确保完全微调梯度仅通过低秩矩阵子空间的正交基反向传播，与其尺度无关。收敛分析表明，虽然 LoRA 的收敛速度随着低秩矩阵的条件数而降低，但 SDS-LoRA 仍然与其无关。自然语言和视觉基准的实验结果表明，SDS-LoRA 改善了损失收敛并减少了完全微调的差距，显着增强了适应性能。"
+    },
+    {
+      "title": "Hierarchical Fine-Grained Aerial Object Detection",
+      "authors": [
+        "Yan Zhang",
+        "Fang Xu",
+        "Wen Yang",
+        "Gui-Song Xia"
+      ],
+      "summary": "Fine-grained aerial object detection, driven by the intrinsic granularity of real-world object categories, is crucial for advanced scene understanding in remote sensing. Existing methods largely inherit the paradigm of coarse-grained object detection, relying solely on single-label supervision and thus struggling to distinguish model-level categories with subtle structural differences. However, for each specific model (e.g., Boeing 787), structured prior knowledge such as attributes and hierarchies offers discriminative semantics across multiple granularities. Motivated by this, we present ExpertDet, a scheme that incorporates expert-informed cues to enhance fine-grained aerial object detection. Specifically, we design Vision-aware Masked Attribute Modeling (VMAM), which aligns attribute semantics with visual structures by reconstructing randomly masked attributes from visual cues, enabling the detector to capture subtle structural distinctions. We further propose Hierarchical Visual Instance Promotion (HierVIP), which builds a visual prototype tree based on hierarchical relations and imposes taxonomy-aware constraints to preserve cross-level semantic continuity while enhancing category discrimination. Moreover, we curate a new fine-grained object detection benchmark for Precise recognition of model-specific Ships and Planes from aerial imagery, PSP, covering 106 ship classes and 30 airplane models, respectively, featuring the most extensive collection of model-specific categories among existing aerial object detection datasets to date. We benchmark state-of-the-art object detection algorithms on the PSP benchmark. Extensive evaluation demonstrates that ExpertDet consistently outperforms other fine-grained competitors across hierarchy levels. The dataset, benchmark, and code are available at https://nnnnerd.github.io/PSP-Benchmark/.",
+      "published": "2026-06-15T09:20:16Z",
+      "updated": "2026-06-15T09:20:16Z",
+      "arxiv_id": "2606.16448v1",
+      "abs_url": "http://arxiv.org/abs/2606.16448v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16448v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "15 pages",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "场景分类",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 13,
+      "anchor_terms": [
+        "aerial image",
+        "aerial imagery",
+        "object detection",
+        "remote sensing"
+      ],
+      "matched_terms": [
+        "aerial",
+        "aerial image",
+        "aerial imagery",
+        "aerial object detection",
+        "object detection",
+        "remote sensing"
+      ],
+      "title_zh": "分层细粒度空中物体检测",
+      "summary_zh": "由现实世界物体类别的内在粒度驱动的细粒度空中物体检测对于遥感中的高级场景理解至关重要。现有方法很大程度上继承了粗粒度目标检测的范式，仅依赖于单标签监督，因此很难区分具有细微结构差异的模型级类别。然而，对于每个特定模型（例如，波音 787），属性和层次结构等结构化先验知识提供了跨多个粒度的判别语义。受此启发，我们提出了 ExpertDet，这是一种结合了专家知情线索来增强细粒度空中物体检测的方案。具体来说，我们设计了视觉感知屏蔽属性建模（VMAM），它通过从视觉线索重建随机屏蔽属性，使属性语义与视觉结构保持一致，使检测器能够捕获微妙的结构差异。我们进一步提出了分层视觉实例提升（HierVIP），它基于分层关系构建视觉原型树，并施加分类感知约束以保持跨级语义连续性，同时增强类别辨别力。此外，我们还策划了一个新的细粒度目标检测基准，用于从航空图像 PSP 中精确识别模型特定的船舶和飞机，分别涵盖 106 个船舶类别和 30 个飞机模型，具有迄今为止现有航空目标检测数据集中最广泛的模型特定类别集合。我们在 PSP 基准测试上对最先进的对象检测算法进行基准测试。广泛的评估表明，ExpertDet 在各个层次上始终优于其他细粒度竞争对手。数据集、基准测试和代码可在 https://nnnnerd.github.io/PSP-Benchmark/ 上获取。"
+    },
+    {
+      "title": "Beer-Lambert Guided Representation Learning for Unsupervised Anomaly Detection in Sub-THz Food Inspection Images",
+      "authors": [
+        "Gyutae Hwang",
+        "Sang Jun Lee"
+      ],
+      "summary": "Food manufacturing requires reliable inspection systems to detect foreign material contamination and maintain product safety. Sub-THz transmission imaging provides material-dependent attenuation characteristics that are useful for detecting low-density contaminants in food products. However, existing unsupervised anomaly detection methods mainly rely on RGB-pretrained visual representations, which may not adequately capture the transmission behavior of Sub-THz images. This paper proposes a Beer-Lambert guided representation learning framework for unsupervised anomaly detection in Sub-THz food inspection images. The proposed method introduces an attenuation decomposition module as an auxiliary regularization module that constrains student representations through attenuation reconstruction during training. In addition to the conventional one-class setting, we introduce a Leave-One-Food-Out protocol to evaluate generalization capability under unseen food categories. Experimental results on the Inline-Food-Inspection-THz dataset show that the proposed method improves overall anomaly detection performance over the baseline method.",
+      "published": "2026-06-15T08:57:46Z",
+      "updated": "2026-06-15T08:57:46Z",
+      "arxiv_id": "2606.16421v1",
+      "abs_url": "http://arxiv.org/abs/2606.16421v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16421v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "6 pages, 3 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "无监督与弱监督",
+      "score": 5,
+      "anchor_terms": [
+        "unsupervised"
+      ],
+      "matched_terms": [
+        "anomaly detection",
+        "unsupervised"
+      ],
+      "title_zh": "Beer-Lambert 引导表示学习用于亚太赫兹食品检测图像中无监督异常检测",
+      "summary_zh": "食品制造需要可靠的检测系统来检测异物污染并维护产品安全。亚太赫兹透射成像提供与材料相关的衰减特性，可用于检测食品中的低密度污染物。然而，现有的无监督异常检测方法主要依赖于 RGB 预训练的视觉表示，这可能无法充分捕获亚太赫兹图像的传输行为。本文提出了一种 Beer-Lambert 引导表示学习框架，用于亚太赫兹食品检测图像中的无监督异常检测。该方法引入了衰减分解模块作为辅助正则化模块，在训练期间通过衰减重建来约束学生表示。除了传统的一类设置之外，我们还引入了留一食物协议来评估不可见食物类别下的泛化能力。 Inline-Food-Inspection-THz 数据集上的实验结果表明，所提出的方法比基线方法提高了整体异常检测性能。"
+    },
+    {
+      "title": "Towards UAV Image Dehazing: A UAV Atmospheric Scattering Model, Benchmark, and Geometry-Aware Deep Unfolding Network",
+      "authors": [
+        "Wenxuan Fang",
+        "Jiangwei Weng",
+        "Yu Zheng",
+        "Junkai Fan",
+        "Guangfa Wang",
+        "Xiang Chen",
+        "Jian Yang",
+        "Jun Li"
+      ],
+      "summary": "In UAV applications, haze significantly obscures distant details and weaken structural information, hindering the recovery of details. Current UAV scenarios still face two key challenges: (i) paired hazy/clean images from the real world are unobtainable, while the classical atmospheric scattering model is inadequate for modeling the spatially non-uniform haze in UAV imagery; (ii) existing dehazing methods struggle to remove the heavy haze accumulated in the upper regions of UAV images. To address these issues, we first propose a UAV Atmospheric Scattering Model (UASM), which explicitly incorporates flight altitude, viewing pitch, and extinction to characterize the non-uniform haze distribution in UAV imaging. Based on UASM, we develop a physics-driven dehazing framework, termed Geometry-aware Proximal Deep Unfolding Network (GP-DUN). Specifically, GP-DUN consists of three key modules: a Latent Geometry Estimator (LGE) that infers transmittance consistent with UAV imaging geometry, a Geometry-aware Gradient Descent Module (GeoGDM) that embeds UASM into the data-fidelity term and performs physics-consistent closed-form updates, and an Pooling-Expert Proximal Mapping Module (PE-PMM) that learns an implicit prior to restore textures and structures beyond the capability of explicit physical modeling. In addition, we further construct UASM-HazeSet, which provides controllable paired synthetic data together with 2,285 real UAV haze images for testing. Extensive experiments show that GP-DUN consistently outperforms existing methods on both UASM-HazeSet and real UAV haze benchmarks.",
+      "published": "2026-06-15T08:24:51Z",
+      "updated": "2026-06-15T08:24:51Z",
+      "arxiv_id": "2606.16392v1",
+      "abs_url": "http://arxiv.org/abs/2606.16392v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16392v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 3,
+      "anchor_terms": [
+        "UAV"
+      ],
+      "matched_terms": [
+        "UAV"
+      ],
+      "title_zh": "迈向无人机图像去雾：无人机大气散射模型、基准和几何感知深度展开网络",
+      "summary_zh": "在无人机应用中，雾霾显着模糊了远处的细节并削弱了结构信息，阻碍了细节的恢复。当前的无人机场景仍然面临两个关键挑战：（i）无法获得来自现实世界的成对的模糊/干净图像，而经典的大气散射模型不足以模拟无人机图像中空间不均匀的雾霾； (ii)现有的去雾方法难以去除无人机图像上部区域积累的重度雾霾。为了解决这些问题，我们首先提出了无人机大气散射模型（UASM），该模型明确结合了飞行高度、视距和消光来表征无人机成像中的不均匀雾霾分布。基于UASM，我们开发了一个物理驱动的去雾框架，称为几何感知近端深度展开网络（GP-DUN）。具体来说，GP-DUN 由三个关键模块组成：隐含几何估计器 (LGE)，用于推断与无人机成像几何形状一致的透射率；几何感知梯度下降模块 (GeoGDM)，用于将 UASM 嵌入到数据保真度项中并执行物理一致的闭合形式更新；以及池化专家近端映射模块 (PE-PMM)，用于学习隐式先验以恢复超出能力的纹理和结构显式物理建模。此外，我们进一步构建了UASM-HazeSet，它提供了可控的配对合成数据以及2,285张真实的无人机雾霾图像进行测试。大量实验表明，GP-DUN 在 UASM-HazeSet 和真实无人机雾霾基准测试上始终优于现有方法。"
+    },
+    {
+      "title": "Chronological Blindness: Benchmarking Temporal Reasoning in Vision-Language Models with CHRONOSIGHT",
+      "authors": [
+        "Parthaw Goswami",
+        "Jaynto Goswami Deep"
+      ],
+      "summary": "Human perception of visual scenes is inherently temporal. We instinctively recognise whether a fruit is ripening or rotting, whether construction is progressing or being demolished, and approximately how much time separates two photographs of the same subject. Whether large vision-language models (VLMs) share this competence remains an open and practically important question. We introduce CHRONOSIGHT, a rigorously controlled benchmark evaluating five dimensions of visual temporal reasoning: CHRONORANK (chronological ordering of image sequences), CHRONOLOCATE (ordinal stage localisation from a single image), CHRONODELTA (estimation of time elapsed between two images on a logarithmic scale), CHRONOREVERSE (detection of temporally reversed sequences), and CHRONOODD (identification of a temporal outlier within a set). The benchmark comprises 1{,}000 items across eight process families (biological growth, food transformation, physical weathering, construction, environmental change, human ageing, astronomical phenomena, and urban dynamics) spanning timescales from minutes to millennia. We evaluate eight open-source VLMs (500 M to 19 B parameters) under two prompting regimes and collect human performance baselines. Human performance averages 0.89 across tasks; the best open model (Qwen2.5-VL-7B) reaches 0.40 under direct prompting, a gap we term chronological blindness. Lightweight LoRA fine-tuning on 151 examples raises CHRONODELTA accuracy from near-zero to 0.43, transferring zero-shot to related tasks (CHRONOODD: 0.37; CHRONOREVERSE: 0.64)suggesting the bottleneck is partly instruction following rather than visual perception. Benchmark, code, and predictions will be released upon acceptance.",
+      "published": "2026-06-15T07:38:27Z",
+      "updated": "2026-06-15T07:38:27Z",
+      "arxiv_id": "2606.16334v1",
+      "abs_url": "http://arxiv.org/abs/2606.16334v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16334v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 4,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "LoRA",
+        "zero-shot"
+      ],
+      "title_zh": "时间盲点：使用 CHRONOSIGHT 对视觉语言模型中的时间推理进行基准测试",
+      "summary_zh": "人类对视觉场景的感知本质上是暂时的。我们本能地识别出水果是否正在成熟或腐烂，建筑是否正在进行或正在拆除，以及同一主题的两张照片大约相隔多长时间。大型视觉语言模型（VLM）是否具有这种能力仍然是一个开放且实际重要的问题。我们引入了 CHRONOSIGHT，一个严格控制的基准，评估视觉时间推理的五个维度：CHRONORANK（图像序列的时间顺序）、CHRONOLOCATE（单个图像的顺序阶段定位）、CHRONODELTA（对数尺度上两个图像之间经过的时间估计）、CHRONOREVERSE（时间反转序列的检测）和 CHRONOODD（识别集合内的时间异常值）。该基准包括 8 个过程系列（生物生长、食物转化、物理风化、建筑、环境变化、人类衰老、天文现象和城市动态）的 1{,}000 个项目，时间跨度从几分钟到几千年。我们在两种提示机制下评估了八个开源 VLM（500 M 至 19 B 参数）并收集人类表现基线。各个任务的人类绩效平均为 0.89；最好的开放模型（Qwen2.5-VL-7B）在直接提示下达到0.40，我们将这种差距称为时间盲性。对 151 个示例进行轻量级 LoRA 微调，将 CHRONODELTA 精度从接近零提高到 0.43，将零样本转移到相关任务（CHRONOODD：0.37；CHRONOREVERSE：0.64），这表明瓶颈部分是指令遵循而不是视觉感知。基准、代码和预测将在接受后发布。"
+    },
+    {
+      "title": "Diffusion Offline Reinforcement Learning for Fair and Energy-Efficient UAV-Assisted Wireless Networks",
+      "authors": [
+        "Eslam Eldeeb",
+        "Hirley Alves"
+      ],
+      "summary": "The integration of generative artificial intelligence with wireless communication and signal processing systems has opened new avenues for intelligent, data-driven decision-making in future 6G networks. This work proposes a diffusion soft actor-critic (Diffusion-SAC) approach that leverages offline reinforcement learning (RL) enhanced by denoising diffusion probabilistic models (DDPMs) to optimize trajectory and scheduling control in unmanned aerial vehicle (UAV) networks. While offline RL methods, such as conservative Q-learning (CQL), can learn from static datasets, they often struggle to generalize in low-data or dynamic conditions. To address this, we combine the robustness of CQL with the generative power of diffusion models, enabling expressive and signal-aware policy learning that generalizes beyond behavior policies. Applied to a UAV-assisted wireless network, the proposed framework minimizes transmission energy and improves fairness among devices. Simulations show that Diffusion-SAC outperforms standard offline RL baselines, achieving more stable convergence and higher rewards even with limited datasets. The method enhances data efficiency, reduces energy consumption, and increases throughput by more than 35 % compared to existing algorithms, demonstrating its potential for robust policy learning in next-generation wireless control systems.",
+      "published": "2026-06-15T07:34:17Z",
+      "updated": "2026-06-15T07:34:17Z",
+      "arxiv_id": "2606.16331v1",
+      "abs_url": "http://arxiv.org/abs/2606.16331v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16331v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "高效微调与轻量化",
+        "无人机/UAV",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 8,
+      "anchor_terms": [
+        "diffusion model",
+        "UAV"
+      ],
+      "matched_terms": [
+        "aerial",
+        "denoising",
+        "diffusion model",
+        "robust",
+        "UAV",
+        "unmanned aerial vehicle"
+      ],
+      "title_zh": "用于公平且节能的无人机辅助无线网络的扩散离线强化学习",
+      "summary_zh": "生成式人工智能与无线通信和信号处理系统的集成为未来 6G 网络中智能、数据驱动的决策开辟了新途径。这项工作提出了一种扩散软演员批评家（Diffusion-SAC）方法，该方法利用通过去噪扩散概率模型（DDPM）增强的离线强化学习（RL）来优化无人机（UAV）网络中的轨迹和调度控制。虽然离线 RL 方法（例如保守 Q 学习 (CQL)）可以从静态数据集中学习，但它们通常难以在低数据或动态条件下进行泛化。为了解决这个问题，我们将 CQL 的稳健性与扩散模型的生成能力结合起来，实现表达性和信号感知的策略学习，从而泛化到行为策略之外。应用于无人机辅助的无线网络时，所提出的框架最大限度地减少了传输能量并提高了设备​​之间的公平性。模拟表明，Diffusion-SAC 的性能优于标准离线 RL 基线，即使在数据集有限的情况下也能实现更稳定的收敛和更高的奖励。与现有算法相比，该方法提高了数据效率，降低了能耗，吞吐量提高了 35% 以上，展示了其在下一代无线控制系统中强大的策略学习的潜力。"
+    },
+    {
+      "title": "Explainable Flood Segmentation on Sentinel-1 SAR Imagery: A Comparative Study of CNN and Transformer Architectures",
+      "authors": [
+        "Arundhuti Banerjee",
+        "David Daou"
+      ],
+      "summary": "Rapid and accurate flood prediction is essential for disaster response and mitigation planning. Synthetic Aperture Radar (SAR) sensors in satellites are well-suited for this purpose because they operate independently of weather and daylight conditions. Although SAR-based data enable all-weather flood monitoring, distinguishing flooded land from permanent water remains a significant challenge, particularly when flooding is defined strictly as inundated land. This study provides a comprehensive comparison of convolutional neural network (CNN) and vision transformer architectures for multi-class flood segmentation using Sentinel-1 SAR imagery, specifically trained to separate flooded land from permanent water bodies and land. Three state-of-the-art (SOTA)CNN-based models, U-Net, U-Net++, and DeepLabV3 with ResNet-34 backbone, and three SegFormer variants (b0,b1,b2) were evaluated in two benchmark datasets, the ETCI NASA dataset and SenFloods11, using scene-based data splits to ensure a realistic assessment of spatial generalization. The results demonstrate that SegFormer-b2 significantly outperforms the U-Net baseline on the ETCI dataset (higher flood IoU across all 7 test scenes in the Wilcoxon signed-rank test), while after fine-tuning on Sen1Floods11, the advantage narrows to within the range of scene variability and is concentrated in spatially fragmented flood events. The study includes both qualitative and quantitative explainability techniques to visually comprehend model decisions and systematically assess prediction reliability. Qualitative analysis reveals that SegFormer-b2 produces more spatially coherent Grad-CAM activations focused on flood-relevant features, while U-Net generates more informative uncertainty estimates along flood boundaries.",
+      "published": "2026-06-15T07:06:30Z",
+      "updated": "2026-06-15T07:06:30Z",
+      "arxiv_id": "2606.16302v1",
+      "abs_url": "http://arxiv.org/abs/2606.16302v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16302v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "语义分割",
+        "基础模型",
+        "高效微调与轻量化",
+        "SAR遥感",
+        "灾害与应急监测",
+        "数据集/评测"
+      ],
+      "topic": "语义分割",
+      "score": 16,
+      "anchor_terms": [
+        "flood",
+        "SAR",
+        "SAR image",
+        "SAR imagery",
+        "Sentinel-1",
+        "synthetic aperture radar",
+        "vision transformer"
+      ],
+      "matched_terms": [
+        "CNN",
+        "convolutional neural network",
+        "fine-tuning",
+        "flood",
+        "SAR",
+        "SAR image",
+        "SAR imagery",
+        "satellite",
+        "Sentinel-1",
+        "synthetic aperture radar",
+        "transformer",
+        "U-Net"
+      ],
+      "title_zh": "Sentinel-1 SAR 图像上的可解释洪水分割：CNN 和 Transformer 架构的比较研究",
+      "summary_zh": "快速、准确的洪水预测对于灾害响应和减灾规划至关重要。卫星中的合成孔径雷达 (SAR) 传感器非常适合此用途，因为它们的运行不受天气和日光条件的影响。尽管基于SAR的数据可以实现全天候洪水监测，但区分被淹没的土地和永久水域仍然是一个重大挑战，特别是当洪水被严格定义为被淹没的土地时。本研究对使用 Sentinel-1 SAR 图像进行多类洪水分割的卷积神经网络 (CNN) 和视觉变换器架构进行了全面比较，该图像经过专门训练，可将被淹没的土地与永久水体和土地分开。在两个基准数据集（ETCI NASA 数据集和 SenFloods11）中评估了三个最先进的 (SOTA)CNN 模型（U-Net、U-Net++ 和带有 ResNet-34 主干的 DeepLabV3）以及三个 SegFormer 变体（b0、b1、b2），使用基于场景的数据分割来确保对空间泛化进行真实的评估。结果表明，SegFormer-b2 在 ETCI 数据集上显着优于 U-Net 基线（Wilcoxon 符号秩测试中所有 7 个测试场景的洪水 IoU 较高），而在 Sen1Floods11 上进行微调后，优势缩小到场景可变性范围内，并集中在空间碎片化的洪水事件中。该研究包括定性和定量的可解释性技术，以直观地理解模型决策并系统地评估预测可靠性。定性分析表明，SegFormer-b2 产生更多空间连贯的 Grad-CAM 激活，重点关注洪水相关特征，而 U-Net 沿洪水边界生成更多信息丰富的不确定性估计。"
+    },
+    {
+      "title": "AI Supply Chain Galaxy: 3D Visual Analytics for License Compliance",
+      "authors": [
+        "Weiru Han",
+        "Xuetao Shi",
+        "Wenyi He",
+        "Wei Wang",
+        "Rui Zhao",
+        "Moming Duan"
+      ],
+      "summary": "The rapid proliferation of machine learning model reuse has transformed the AI ecosystem into a highly interconnected supply chain. Traditional compliance tools and static reports struggle to navigate these massive, multi-hop dependency networks. To address this, we present AI Supply Chain Galaxy (AISCG), an interactive 3D visual analytics system for model provenance and compliance auditing. AISCG maps models into a 3D spatial layout, integrating explicit structural dependencies with a rule-based compliance engine. It supports multi-scale exploration, from global community detection to localized, path-aware lineage tracing. We demonstrate its efficacy through an ecosystem-scale empirical analysis of 908,449 models from Hugging Face. Our findings reveal a concerning landscape: 55.46% of models exhibit compliance risks or metadata conflicts/omissions. We also identified distinct risk patterns, including a 56.67% license omission rate in adapter derivations and an 8.05% \"license drift\" rate in fine-tuning. Through a case study on the complex Llama model family, we show how AISCG empowers analysts to intuitively trace inherited restrictive terms and identify root causes across deep topological networks, significantly reducing the cognitive load of compliance auditing.",
+      "published": "2026-06-15T06:54:33Z",
+      "updated": "2026-06-15T06:54:33Z",
+      "arxiv_id": "2606.16292v1",
+      "abs_url": "http://arxiv.org/abs/2606.16292v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16292v1",
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "comment": "15 pages, 6 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 4,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "adapter",
+        "fine-tuning",
+        "LoRA",
+        "multi-scale"
+      ],
+      "title_zh": "AI Supply Chain Galaxy：用于许可证合规性的 3D 可视化分析",
+      "summary_zh": "机器学习模型重用的快速普及已将人工智能生态系统转变为高度互联的供应链。传统的合规性工具和静态报告很难驾驭这些庞大的多跳依赖网络。为了解决这个问题，我们推出了 AI Supply Chain Galaxy (AISCG)，这是一个用于模型来源和合规性审计的交互式 3D 可视化分析系统。 AISCG 将模型映射到 3D 空间布局，将显式结构依赖性与基于规则的合规引擎集成。它支持多尺度探索，从全球社区检测到本地化、路径感知的谱系追踪。我们通过对 Hugging Face 的 908,449 个模型进行生态系统规模的实证分析来证明其功效。我们的研究结果揭示了一个令人担忧的情况：55.46% 的模型存在合规风险或元数据冲突/遗漏。我们还确定了不同的风险模式，包括适配器派生中 56.67% 的许可证遗漏率和微调中 8.05% 的“许可证漂移”率。通过对复杂 Llama 模型系列的案例研究，我们展示了 AISCG 如何帮助分析师直观地追踪继承的限制性术语并识别深层拓扑网络的根本原因，从而显着降低合规审计的认知负担。"
+    },
+    {
+      "title": "Training-Free Open-Vocabulary Visual Grounding for Remote Sensing Images and Videos",
+      "authors": [
+        "Ke Li",
+        "Di Wang",
+        "Yongshan Zhu",
+        "Ting Wang",
+        "Weiping Ni",
+        "Tao Lei",
+        "Quan Wang",
+        "Xinbo Gao"
+      ],
+      "summary": "Remote sensing visual grounding (RSVG) aims to localize a referred target in a remote sensing image or video according to a natural language expression. Existing RSVG methods usually rely on task-specific manual annotations, which are costly to collect and inevitably limited in covering the diversity of real-world geospatial scenarios. As a result, they often struggle to generalize to open-vocabulary queries involving novel objects, fine-grained attributes, complex spatial relationships, and functional semantics. In this paper, we propose RSVG-ZeroOV, a training-free framework that leverages frozen generic foundation models for zero-shot open-vocabulary RSVG. RSVG-ZeroOV follows an Overview-Focus-Evolve paradigm, which exploits the distinct yet complementary attention patterns of vision-language models (VLMs) and diffusion models (DMs) to progressively generate precise grounding results. Specifically, (i) Overview utilizes a VLM to extract cross-attention maps that capture semantic correlations between the referring expression and visual regions; (ii) Focus leverages the fine-grained modeling priors of a DM to compensate for object structure and shape information often overlooked by VLM attention; and (iii) Evolve introduces a simple yet effective attention evolution module to suppress irrelevant activations, yielding purified object masks. To handle video inputs, we further present Video RSVG-ZeroOV, which extends image-level grounding to spatio-temporal grounding through a query-relevant key-frame selector and a temporal propagator, enabling efficient and temporally coherent video grounding without video annotations or fine-tuning. Extensive experiments on six image and video grounding benchmarks show that RSVG-ZeroOV consistently outperforms existing zero-shot baselines and achieves competitive or superior performance compared with weakly- and fully-supervised methods.",
+      "published": "2026-06-15T02:31:32Z",
+      "updated": "2026-06-15T02:31:32Z",
+      "arxiv_id": "2606.16124v1",
+      "abs_url": "http://arxiv.org/abs/2606.16124v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16124v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像生成与重建",
+        "开放词汇与开放集",
+        "图像描述与视觉推理",
+        "基础模型",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "图像生成与重建",
+      "score": 22,
+      "anchor_terms": [
+        "diffusion model",
+        "foundation model",
+        "geospatial",
+        "open-vocabulary",
+        "referring expression",
+        "remote sensing",
+        "remote sensing visual grounding",
+        "temporal",
+        "visual grounding"
+      ],
+      "matched_terms": [
+        "cross-attention",
+        "diffusion model",
+        "fine-tuning",
+        "foundation model",
+        "geospatial",
+        "open-vocabulary",
+        "referring expression",
+        "remote sensing",
+        "remote sensing visual grounding",
+        "temporal",
+        "visual grounding",
+        "VLM"
+      ],
+      "title_zh": "遥感图像和视频的免培训开放词汇视觉基础",
+      "summary_zh": "遥感视觉基础（RSVG）旨在根据自然语言表达来定位遥感图像或视频中的参考目标。现有的 RSVG 方法通常依赖于特定于任务的手动注释，这些注释的收集成本很高，并且在覆盖现实世界地理空间场景的多样性方面不可避免地受到限制。因此，他们经常难以推广到涉及新颖对象、细粒度属性、复杂空间关系和功能语义的开放词汇查询。在本文中，我们提出了 RSVG-ZeroOV，这是一种免训练框架，利用冻结通用基础模型实现零样本开放词汇 RSVG。 RSVG-ZeroOV 遵循概述-焦点-进化范式，利用视觉语言模型 (VLM) 和扩散模型 (DM) 的独特但互补的注意力模式来逐步生成精确的基础结果。具体来说，（i）Overview 利用 VLM 来提取交叉注意力图，以捕获所指表达和视觉区域之间的语义相关性； (ii) Focus 利用 DM 的细粒度建模先验来补偿经常被 VLM 注意力忽略的对象结构和形状信息； (iii) Evolve 引入了一个简单而有效的注意力进化模块来抑制不相关的激活，从而产生纯化的对象掩模。为了处理视频输入，我们进一步提出了 Video RSVG-ZeroOV，它通过与查询相关的关键帧选择器和时间传播器将图像级接地扩展到时空接地，从而无需视频注释或微调即可实现高效且时间连贯的视频接地。对六个图像和视频接地基准的大量实验表明，RSVG-ZeroOV 始终优于现有的零样本基线，并且与弱监督和完全监督方法相比，实现了有竞争力或优越的性能。"
+    },
+    {
+      "title": "Phys-JEPA: Physics-Informed Latent World Models for Multivariate Time-Series Forecasting",
+      "authors": [
+        "Weizhi Nie",
+        "Weichao Liu",
+        "Honglin Guo",
+        "Yuting Su"
+      ],
+      "summary": "Multivariate forecasting in physical systems requires models that predict coupled temporal variables while preserving meaningful state evolution. Deep forecasters can fit temporal correlations, and physics-informed models can regularize predictions with scientific constraints, but these directions are often connected only at the decoded-output level. As a result, the hidden predictive state that generates future trajectories may remain statistically useful but physically unstructured. We introduce Phys-JEPA, a physics-informed joint-embedding predictive architecture for multivariate time-series forecasting. Phys-JEPA learns a latent world model in which predictive states are decomposed into physical and residual components, and physical consistency is imposed directly on latent states and latent transitions rather than only on decoded forecasts. This formulation uses known physical variables to organize the representation space while retaining residual capacity for unresolved dynamics. On Jena Climate 2009--2016, Phys-JEPA reduces aggregate MSE from 0.12482 to 0.12273 and temperature MSE from 0.01892 to 0.01831 at H=24. On Traffic, full Phys-JEPA improves aggregate MSE over the supervised baseline across all tested horizons, reducing H=192 MSE from 0.800784 to 0.773873. On Electricity, the best variant depends on horizon: static latent consistency is strongest at H=24 and H=48, while full Phys-JEPA gives the best aggregate and target-variable MSE at H=192. These initial results suggest that moving physics-informed learning from output space to latent predictive state space is a promising direction for interpretable temporal world models.",
+      "published": "2026-06-15T00:22:54Z",
+      "updated": "2026-06-15T00:22:54Z",
+      "arxiv_id": "2606.16076v1",
+      "abs_url": "http://arxiv.org/abs/2606.16076v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.16076v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.GT"
+      ],
+      "comment": "Submitted to arXiv as a preliminary manuscript. 10 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频"
+      ],
+      "topic": "时间序列与视频",
+      "score": 2,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "temporal",
+        "time-series"
+      ],
+      "title_zh": "Phys-JEPA：用于多元时间序列预测的物理信息潜在世界模型",
+      "summary_zh": "物理系统中的多变量预测需要模型能够预测耦合时间变量，同时保留有意义的状态演化。深度预测器可以拟合时间相关性，基于物理的模型可以在科学约束下规范预测，但这些方向通常仅在解码输出级别上连接。因此，生成未来轨迹的隐藏预测状态可能在统计上仍然有用，但在物理上是非结构化的。我们介绍 Phys-JEPA，一种用于多变量时间序列预测的物理信息联合嵌入预测架构。 Phys-JEPA 学习一个潜在世界模型，其中预测状态被分解为物理和剩余部分，并且物理一致性直接施加于潜在状态和潜在转换，而不仅仅是解码的预测。该公式使用已知的物理变量来组织表示空间，同时保留未解决的动力学的剩余容量。在耶拿气候 2009--2016 中，Phys-JEPA 在 H=24 时将总 MSE 从 0.12482 降低到 0.12273，将温度 MSE 从 0.01892 降低到 0.01831。在流量方面，完整的 Phys-JEPA 提高了所有测试范围内监督基线上的总 MSE，将 H=192 MSE 从 0.800784 降低到 0.773873。在电力方面，最佳变体取决于范围：静态潜在一致性在 H=24 和 H=48 时最强，而完整的 Phys-JEPA 在 H=192 时提供最佳聚合和目标变量 MSE。这些初步结果表明，将物理信息学习从输出空间转移到潜在预测状态空间是可解释时间世界模型的一个有前途的方向。"
+    },
+    {
+      "title": "Do Safety Monitors Stay Reliable After an Update? Benchmarking and Predicting Activation-Monitor Staleness",
+      "authors": [
+        "Evan Duan"
+      ],
+      "summary": "Activation monitors-lightweight probes trained on a language model's internal representations-are an increasingly common layer in deployment safety stacks. Deployed models however are rarely static: they are quantized, fine-tuned, adapted with LoRA, or served with merged adapters while the monitor remains frozen. We present the first systematic test of whether this implicit contract holds: whether activation monitors trained on a base model remain reliable after these routine model updates. Across multiple safety-relevant monitors, model depths, update families, and open-weight models, we find a sharp split: quantization-style updates largely preserve frozen probe performance, while fine-tuning-style updates frequently make probes stale. Fragility is highly monitor-dependent, with privacy/PII probes most affected and refusal-compliance probes comparatively stable, showing that retraining a behavior need not stale its corresponding monitor. QLoRA is especially damaging despite NF4 quantization alone being relatively benign, suggesting that quantization becomes riskier when combined with adaptation. We further show that degradation is predictable from pre-deployment features, enabling revalidation budgets to be triaged toward the monitors most likely to fail. These results suggest that fine-tuning should trigger activation-monitor revalidation by default, while prediction can help prioritize which monitors to check first.",
+      "published": "2026-06-14T19:07:22Z",
+      "updated": "2026-06-14T19:07:22Z",
+      "arxiv_id": "2606.15980v1",
+      "abs_url": "http://arxiv.org/abs/2606.15980v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15980v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化",
+        "数据集/评测"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 3,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "adapter",
+        "fine-tuning",
+        "LoRA"
+      ],
+      "title_zh": "更新后安全监视器是否仍然可靠？基准测试和预测激活监控陈旧性",
+      "summary_zh": "激活监视器（在语言模型的内部表示上训练的轻量级探针）是部署安全堆栈中越来越常见的层。然而，部署的模型很少是静态的：它们被量化、微调、使用 LoRA 进行调整，或者在监视器保持冻结状态时使用合并的适配器提供服务。我们对这个隐式契约是否成立提出了第一个系统测试：在这些常规模型更新后，在基础模型上训练的激活监视器是否仍然可靠。在多个安全相关的监视器、模型深度、更新系列和开放权重模型中，我们发现了一个尖锐的分歧：量化式更新在很大程度上保留了冻结的探针性能，而微调式更新经常使探针过时。脆弱性高度依赖于监控器，隐私/PII 探测器受影响最大，拒绝合规性探测器相对稳定，这表明重新训练行为不需要使其相应的监控器过时。尽管 NF4 量化本身相对良性，但 QLoRA 的破坏性尤其大，这表明量化与适应相结合时风险更大。我们进一步表明，从部署前的功能可以预测降级，从而使重新验证预算能够针对最有可能失败的监视器进行分类。这些结果表明，微调应该默认触发激活监视器重新验证，而预测可以帮助确定首先检查哪些监视器的优先级。"
+    },
+    {
+      "title": "PreLort: Prefix-Nested LoRA for Federated Fine-Tuning under Rank Heterogeneity",
+      "authors": [
+        "Muhammad Waseem",
+        "Nurbek Tastan",
+        "Andrej Jovanovic",
+        "Nicholas D. Lane",
+        "Nils Lukas",
+        "Karthik Nandakumar",
+        "Samuel Horvath"
+      ],
+      "summary": "Federated fine-tuning of large language models using parameter-efficient methods such as LoRA enables privacy-preserving adaptation of foundation models. Heterogeneous hardware resources introduce challenges, as clients with different adapter ranks cannot be directly aggregated. While existing methods enable aggregation under heterogeneous ranks, they fail to control how information is distributed across rank dimensions, leading to suboptimal use of shared low-rank representations. Instead, we propose PreLort: a nested low-rank formulation for federated LoRA that organizes adapter dimensions into a prefix hierarchy. Our approach ensures that lower-rank dimensions encode task-relevant information, while higher-rank dimensions capture additional capacity. Building on this, we introduce (i) a segment-wise aggregation rule that averages only over clients contributing to each rank segment, avoiding dilution from zero-padded lower-rank clients, and (ii) a prefix-nested training strategy that optimizes each adapter under multiple rank truncations, encouraging useful signal to concentrate in low-rank prefix dimensions. Together, these components encourage a consistent low-rank prefix capturing the most task-relevant information, while higher-rank dimensions learn additional capacity. This allows low-rank clients to benefit from richer information contributed by higher-rank clients, as prefix dimensions are consistently learned and aggregated. Experiments demonstrate that our method consistently outperforms prior heterogeneous federated LoRA methods in accuracy and ROUGE-L, while achieving lower or comparable perplexity across multiple base models.",
+      "published": "2026-06-14T18:44:47Z",
+      "updated": "2026-06-14T18:44:47Z",
+      "arxiv_id": "2606.15963v1",
+      "abs_url": "http://arxiv.org/abs/2606.15963v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15963v1",
+      "primary_category": "cs.DC",
+      "categories": [
+        "cs.DC",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "高效微调与轻量化"
+      ],
+      "topic": "基础模型",
+      "score": 7,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "adapter",
+        "fine-tuning",
+        "foundation model",
+        "large language model",
+        "LoRA"
+      ],
+      "title_zh": "PreLort：用于排名异质性下联邦微调的前缀嵌套 LoRA",
+      "summary_zh": "使用 LoRA 等参数高效方法对大型语言模型进行联合微调，可以实现基础模型的隐私保护适应。异构硬件资源带来了挑战，因为具有不同适配器级别的客户端无法直接聚合。虽然现有方法能够在异构等级下进行聚合，但它们无法控制信息如何跨等级维度分布，从而导致共享低等级表示的使用不理想。相反，我们提出 PreLort：一种用于联合 LoRA 的嵌套低阶公式，它将适配器维度组织到前缀层次结构中。我们的方法确保较低等级的维度编码与任务相关的信息，而较高等级的维度捕获额外的容量。在此基础上，我们引入了（i）分段聚合规则，仅对对每个排名分段做出贡献的客户端进行平均，避免零填充的较低排名客户端的稀释，以及（ii）前缀嵌套训练策略，在多个排名截断下优化每个适配器，鼓励有用信号集中在低排名前缀维度。这些组件共同鼓励一致的低等级前缀捕获与任务最相关的信息，而较高等级的维度则学习额外的能力。这使得低级别的客户端能够从较高级别的客户端提供的更丰富的信息中受益，因为前缀维度是持续学习和聚合的。实验表明，我们的方法在准确性和 ROUGE-L 方面始终优于先前的异构联合 LoRA 方法，同时在多个基础模型中实现较低或相当的困惑度。"
+    },
+    {
+      "title": "CogCanvas: A Benchmark for Evaluating Multi-Subject Reference-Based Image Generation",
+      "authors": [
+        "Long-Bao Nguyen",
+        "Quang-Khai Tran",
+        "Tam V. Nguyen",
+        "Minh-Triet Tran",
+        "Trung-Nghia Le"
+      ],
+      "summary": "Multi-subject reference-based image generation requires jointly preserving multiple human identities, binding per-person objects and fashion items, and respecting a specified background scene, a regime where current diffusion models remain brittle. Existing benchmarks evaluate only one axis at a time and none jointly captures multi-identity composition with human-object interaction, background grounding, and spatial plausibility. We introduce CogCanvas, a benchmark of 1,952 curated reference images spanning 100 celebrity identities, 115 distinctive objects and fashion items, and 29 real-world background scenes including landmarks, from which we construct 1,361 compositional prompts covering 2-5 person group sizes. The curation pipeline combines DINOv2-based deduplication, two-stage aesthetic filtering, and automated derivation of structured interaction and position graphs that serve as ground-truth supervision. CogCanvas supports three tasks, reference-based multi-human-object generation (primary), text-to-image compositional generation, and reference retrieval, under a unified six-axis evaluation protocol. We introduce two metrics tailored to the multi-reference setting: BG-Sim, which scores background fidelity on SAM 3-masked regions via DINOv3 feature similarity, and Attr-VQA, which uses a multimodal LLM to verify per-subject attribute binding and inter-person interactions against the structured graphs. Benchmarking five SOTA methods reveals that every model degrades substantially as group size grows from 2 to 5, with near-complete failure on object/fashion binding beyond three subjects.",
+      "published": "2026-06-14T15:38:24Z",
+      "updated": "2026-06-14T15:38:24Z",
+      "arxiv_id": "2606.15867v1",
+      "abs_url": "http://arxiv.org/abs/2606.15867v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15867v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "实例分割",
+        "图像生成与重建",
+        "图像描述与视觉推理",
+        "视觉-语言模型",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "实例分割",
+      "score": 6,
+      "anchor_terms": [
+        "image generation"
+      ],
+      "matched_terms": [
+        "diffusion model",
+        "image generation",
+        "LLM",
+        "SAM"
+      ],
+      "title_zh": "CogCanvas：评估基于多主体参考的图像生成的基准",
+      "summary_zh": "基于多主体参考的图像生成需要共同保留多个人类身份，绑定每个人的对象和时尚物品，并尊重指定的背景场景，在这种情况下，当前的扩散模型仍然脆弱。现有的基准一次仅评估一个轴，没有一个基准可以联合捕获具有人与物体交互、背景基础和空间合理性的多身份组合。我们引入了 CogCanvas，这是一个由 1,952 个精选参考图像组成的基准，涵盖 100 个名人身份、115 个独特的物体和时尚物品，以及 29 个包括地标在内的现实世界背景场景，从中我们构建了 1,361 个涵盖 2-5 人团体规模的构图提示。管理管道结合了基于 DINOv2 的重复数据删除、两阶段美学过滤以及用作地面实况监督的结构化交互和位置图的自动推导。 CogCanvas 在统一的六轴评估协议下支持三种任务：基于参考的多人体对象生成（初级）、文本到图像合成生成和参考检索。我们引入了两个针对多参考设置量身定制的指标：BG-Sim，它通过 DINOv3 特征相似性对 SAM 3 屏蔽区域的背景保真度进行评分；Attr-VQA，它使用多模态 LLM 来验证每个主题的属性绑定和针对结构化图的人际交互。对五种 SOTA 方法进行基准测试表明，随着小组规模从 2 人增加到 5 人，每个模型都会大幅退化，超过 3 个受试者的物体/时尚绑定几乎完全失败。"
+    },
+    {
+      "title": "CPS4: Class Prompt driven Semi-Supervised Spine Segmentation with Class-specific Consistency Constraint",
+      "authors": [
+        "Qingtao Pan",
+        "Hongzan Sun",
+        "Bing Ji",
+        "Shuo Li"
+      ],
+      "summary": "Vision Language Model (VLM) has great potential to enhance the quality of pseudo labels in semi-supervised spine segmentation by leveraging textual class prompts to generate segmentation map, but no one has studied it yet. Although promising, it lacks explicit constraints to ensure consistency between spine class prompts and spine unit region, resulting in unsatisfactory performance in multi-class segmentation map generation. In this paper, we propose CPS4, the first text-guided semi-supervised spine segmentation network using class prompts to enhance the quality of spine pseudo labels. Specifically, CPS4 is implemented through two training stages. (i) Class-specific consistency constrained VLM pretraining stage: we propose token- and pixel-level attention loss to optimize the consistency between class prompts and spine units, forcing the textual class prompt to be closely coupled with the target spine unit in the semantic space. (ii) Class Prompt driven semi-supervised spine segmentation stage: using the pretrained vision-text encoder, we derive each class-specific binary segmentation map for the unlabeled spine image and integrate them into an unified multi-class segmentation map, improving the quality of the spine pseudo label generated by the semi-supervised spine segmentation network. Experimental results show that our CPS4 achieves superior spine segmentation performance with Dice of 80.44%, only using 5% labeled data on the public spine segmentation dataset, surpassing popular semi-supervised learning and VLM methods. Our code will be available.",
+      "published": "2026-06-14T13:08:11Z",
+      "updated": "2026-06-14T13:08:11Z",
+      "arxiv_id": "2606.15802v1",
+      "abs_url": "http://arxiv.org/abs/2606.15802v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15802v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "视觉-语言模型",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "视觉-语言模型",
+      "score": 5,
+      "anchor_terms": [
+        "semi-supervised"
+      ],
+      "matched_terms": [
+        "semi-supervised",
+        "vision language model",
+        "VLM"
+      ],
+      "title_zh": "CPS4：具有特定于类的一致性约束的类提示驱动的半监督脊柱分割",
+      "summary_zh": "视觉语言模型（VLM）通过利用文本类提示生成分割图，在提高半监督脊柱分割中伪标签的质量方面具有巨大的潜力，但目前还没有人对其进行研究。尽管很有前途，但它缺乏明确的约束来确保脊柱类提示和脊柱单元区域之间的一致性，导致多类分割图生成的性能不令人满意。在本文中，我们提出了 CPS4，这是第一个文本引导的半监督脊柱分割网络，使用类别提示来提高脊柱伪标签的质量。具体来说，CPS4是通过两个训练阶段来实现的。 (i) 类特定一致性约束的 VLM 预训练阶段：我们提出令牌级和像素级注意力损失来优化类提示和脊柱单元之间的一致性，迫使文本类提示与语义空间中的目标脊柱单元紧密耦合。 （ii）类提示驱动的半监督脊柱分割阶段：使用预训练的视觉文本编码器，我们为未标记的脊柱图像导出每个特定于类的二进制分割图，并将它们集成为统一的多类分割图，提高半监督脊柱分割网络生成的脊柱伪标签的质量。实验结果表明，我们的 CPS4 仅使用公共脊柱分割数据集上 5% 的标记数据，就以 Dice 达到 80.44% 的优异脊柱分割性能，超越了流行的半监督学习和 VLM 方法。我们的代码将可用。"
+    },
+    {
+      "title": "XPASS-Vis: A Dataset for Cross-Domain Personalized Image Aesthetic Assessment",
+      "authors": [
+        "Takato Hayashi",
+        "Hiroaki Takahara",
+        "Candy Olivia Mawalim",
+        "Hiromi Narimatsu",
+        "Akisato Kimura",
+        "Shiro Kumano",
+        "Shogo Okada"
+      ],
+      "summary": "Personalized image aesthetic assessment (PIAA) seeks to model, at the individual level, the subjective nature of aesthetic judgments toward artworks and photographs. Aesthetic preference is known to be both deeply personal and partially consistent across visual domains. Yet existing PIAA datasets and methods are largely confined to a single domain, or provide too few samples per annotator within each domain to enable personalization across domains. Consequently, the cross-domain generalization of personalized aesthetic preferences remains largely unexplored. To address this gap, we introduce XPASS-Vis, the first dataset explicitly designed for cross-domain PIAA. XPASS-Vis comprises 6,526 stimuli from three visual domains -- art, fashion, and landscape -- rated by 129 annotators, yielding 87,836 user-stimulus interactions, each annotated with an overall aesthetic score and nine aesthetic-emotion ratings. Notably, each annotator rated more than 200 stimuli per domain, providing sufficient per-domain coverage to support personalization both within and across domains. Moreover, we establish baseline models for cross-domain PIAA under unsupervised domain adaptation (UDA), where a model trained on a labeled source domain is transferred to an unlabeled target domain. A systematic evaluation of representative UDA approaches shows that the best-performing method recovers approximately 60\\% (Spearman's $ρ$ = .28) of the supervised upper bound under a fully unsupervised setting. This provides encouraging evidence that personalized aesthetic preferences are, to a meaningful extent, transferable across visual domains. At the same time, a substantial gap remains, highlighting the need for PIAA-specific adaptation strategies. XPASS-Vis and the accompanying baselines provide a foundation for future research on cross-domain PIAA. All datasets and code will be made publicly available upon acceptance.",
+      "published": "2026-06-14T06:44:19Z",
+      "updated": "2026-06-14T06:44:19Z",
+      "arxiv_id": "2606.15629v1",
+      "abs_url": "http://arxiv.org/abs/2606.15629v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15629v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "小样本与域泛化",
+        "无监督与弱监督",
+        "数据集/评测"
+      ],
+      "topic": "小样本与域泛化",
+      "score": 4,
+      "anchor_terms": [
+        "domain generalization"
+      ],
+      "matched_terms": [
+        "domain adaptation",
+        "domain generalization",
+        "unsupervised"
+      ],
+      "title_zh": "XPASS-Vis：跨领域个性化图像审美评估数据集",
+      "summary_zh": "个性化图像审美评估（PIAA）旨在在个人层面上模拟对艺术品和照片的审美判断的主观本质。众所周知，审美偏好是非常个人化的，并且在整个视觉领域中部分一致。然而，现有的 PIAA 数据集和方法很大程度上局限于单个域，或者为每个域内的每个注释器提供的样本太少，无法实现跨域的个性化。因此，个性化审美偏好的跨领域概括在很大程度上仍未得到探索。为了解决这一差距，我们引入了 XPASS-Vis，这是第一个专门为跨域 PIAA 设计的数据集。 XPASS-Vis 包含来自三个视觉领域（艺术、时尚和风景）的 6,526 个刺激，由 129 位注释者评分，产生 87,836 个用户刺激交互，每个刺激都带有总体审美分数和 9 个审美情感评级。值得注意的是，每个注释者对每个域的 200 多个刺激进行了评级，提供了足够的每个域覆盖范围以支持域内和跨域的个性化。此外，我们在无监督域适应（UDA）下建立了跨域 PIAA 的基线模型，其中在标记源域上训练的模型被转移到未标记目标域。对代表性 UDA 方法的系统评估表明，性能最佳的方法在完全无监督的设置下恢复了监督上限的大约 60%（Spearman $ρ$ = .28）。这提供了令人鼓舞的证据，表明个性化的审美偏好在一定程度上可以跨视觉领域转移。与此同时，仍然存在巨大差距，凸显了制定针对 PIAA 的具体适应策略的必要性。 XPASS-Vis 和随附的基线为跨域 PIAA 的未来研究奠定了基础。所有数据集和代码将在接受后公开。"
+    },
+    {
+      "title": "Parameter-Efficient Adaptation of SAM 3 for Automated ITV Generation from 4DCT Images",
+      "authors": [
+        "Changwoo Song"
+      ],
+      "summary": "Four-dimensional computed tomography (4DCT) captures the full respiratory cycle of thoracic anatomy, yet current Internal Target Volume contouring workflows process each phase in isolation, discarding temporal coherence and leaving contours vulnerable to phase-specific artifacts. We present a lightweight framework that applies parameter-efficient fine-tuning to the Segment Anything Model 3 (SAM 3) via low-rank adaptation (LoRA) to align its text-prompted segmentation with the medical domain using only seven annotated 3D CT volumes. Furthermore, the framework incorporates a hard negative mining strategy to improve boundary discrimination in low-contrast thoracic regions. At inference, phase-wise predictions are refined through phase-coherent temporal filtering and spatial connectivity analysis. Since respiratory motion is continuous and periodic, genuine anatomy appears in contiguous blocks of phases, whereas transient artifacts appear sporadically and are thus effectively suppressed. Experiments on pulmonary and cardiac structures yield median Dice scores of 0.968 and 0.910 with 95th-percentile Hausdorff distances of 0.998 mm and 2.931 mm, respectively. The proposed framework effectively eliminates the severe false-positive predictions inherent in the zero-shot inference of the unadapted SAM 3. With only seven annotated volumes, the framework retains over 95% of full-data accuracy, and the entire pipeline is trainable on a single consumer-grade GPU, demonstrating a scalable, data-efficient solution for adaptive radiotherapy.",
+      "published": "2026-06-14T05:12:57Z",
+      "updated": "2026-06-14T05:12:57Z",
+      "arxiv_id": "2606.15604v1",
+      "abs_url": "http://arxiv.org/abs/2606.15604v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15604v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "10 pages, 4 figures, 2 tables",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "实例分割",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化"
+      ],
+      "topic": "实例分割",
+      "score": 7,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "fine-tuning",
+        "LoRA",
+        "SAM",
+        "Segment Anything Model",
+        "zero-shot"
+      ],
+      "title_zh": "SAM 3 的参数高效调整，用于从 4DCT 图像自动生成 ITV",
+      "summary_zh": "四维计算机断层扫描 (4DCT) 捕获胸部解剖结构的完整呼吸周期，但当前的内部目标体积轮廓工作流程单独处理每个阶段，丢弃时间相干性，并使轮廓容易受到特定阶段伪影的影响。我们提出了一个轻量级框架，该框架通过低秩适应 (LoRA) 对 Segment Anything Model 3 (SAM 3) 进行参数高效微调，仅使用七个带注释的 3D CT 体积即可将其文本提示分割与医学领域保持一致。此外，该框架采用了硬负挖掘策略，以改善低对比度胸部区域的边界辨别力。在推理时，通过相位相干时间滤波和空间连通性分析来细化相位预测。由于呼吸运动是连续且周期性的，因此真实的解剖结构出现在连续的相位块中，而瞬态伪影则零星地出现，因此被有效地抑制。肺和心脏结构的实验得出中位 Dice 分数为 0.968 和 0.910，第 95 百分位 Hausdorff 距离分别为 0.998 毫米和 2.931 毫米。所提出的框架有效地消除了未适应的 SAM 3 的零样本推理中固有的严重误报预测。该框架仅使用七个带注释的卷，就保留了超过 95% 的全数据准确性，并且整个管道可在单个消费级 GPU 上进行训练，展示了用于自适应放射治疗的可扩展、数据高效的解决方案。"
+    },
+    {
+      "title": "Post-Launch Capability Expansion of Vision-Language Models via Prompting for On-Orbit Spacecraft Inspection",
+      "authors": [
+        "Nicholas A. Welsh",
+        "Lennon J. Shikhman",
+        "Monty Nehru Attazs",
+        "Seemanthini K. Putane",
+        "Van Minh Nguyen",
+        "Ryan T. White"
+      ],
+      "summary": "Spaceborne inspection systems often deploy perception models prior to launch, after which updating model weights or expanding fixed label sets becomes operationally impractical. While supervised models can be integrated pre-flight, adding new semantic capabilities in orbit requires retraining and re-uploading parameters. We investigate whether prompt-driven vision--language models can enable post-launch semantic expansion, allowing new spacecraft components to be specified via natural-language prompts without modifying onboard weights. We evaluate zero-shot instance segmentation of spacecraft components under a strictly frozen, single-pass inference protocol on a test set of $129$ images of previously unseen satellites. Under fixed global thresholds and no post-processing, SAM3 achieves $0.385$ mAP@$0.5$ and $0.267$ mAP@$0.5{:}0.95$. Performance is strongly scale-dependent: large structural elements like spacecraft bodies ($0.639$ AP@$0.50$) and solar arrays ($0.598$ AP@$0.5$) localize reliably, while relatively small appendages like antennas ($0.221$ AP@$0.5$) and thrusters ($0.081$ AP@$0.5$) remain difficult. Prompt formulation influences performance, with structured prompts incorporating spatial and geometric descriptors yielding up to $82%$ improvement over short category-name prompts. The model operates within the memory and compute envelope of contemporary embedded GPUs, suggesting prompt-driven grounding can provide a practical mechanism for post-launch semantic extension of dominant spacecraft structures while highlighting limitations of zero-shot localization for fine-scale components under orbital domain shift.",
+      "published": "2026-06-13T18:29:24Z",
+      "updated": "2026-06-13T18:29:24Z",
+      "arxiv_id": "2606.15427v1",
+      "abs_url": "http://arxiv.org/abs/2606.15427v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15427v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "comment": "5 pages, 1 figure, 2 tables. Equal contribution by Nicholas A. Welsh and Lennon Shikhman. Published in the CVPR2026 Workshop on AI4Space",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "实例分割",
+        "视觉-语言模型",
+        "小样本与域泛化"
+      ],
+      "topic": "实例分割",
+      "score": 6,
+      "anchor_terms": [
+        "instance segmentation"
+      ],
+      "matched_terms": [
+        "instance segmentation",
+        "satellite",
+        "spaceborne",
+        "zero-shot"
+      ],
+      "title_zh": "通过提示在轨航天器检查来扩展视觉语言模型的发射后功能",
+      "summary_zh": "星载检查系统通常在发射前部署感知模型，之后更新模型权重或扩展固定标签集在操作上变得不切实际。虽然监督模型可以在飞行前集成，但在轨道上添加新的语义功能需要重新训练和重新上传参数。我们研究提示驱动的视觉语言模型是否可以实现发射后语义扩展，从而允许通过自然语言提示指定新的航天器组件，而无需修改机载重量。我们在严格冻结的单通道推理协议下，在价值 129 美元的以前未见过的卫星图像的测试集上评估了航天器组件的零样本实例分割。在固定的全局阈值和无后处理的情况下，SAM3 达到 $0.385$ mAP@$0.5$ 和 $0.267$ mAP@$0.5{:}0.95$。性能很大程度上依赖于尺度：航天器主体（$0.639$ AP@$0.50$）和太阳能电池阵列（$0.598$ AP@$0.5$）等大型结构元件能够可靠地定位，而天线（$0.221$ AP@$0.5$）和推进器（$0.081$ AP@$0.5$）等相对较小的附件仍然很困难。提示表述会影响性能，与短类别名称提示相比，包含空间和几何描述符的结构化提示可带来高达 82% 的改进。该模型在当代嵌入式 GPU 的内存和计算范围内运行，这表明提示驱动的接地可以为主要航天器结构的发射后语义扩展提供实用的机制，同时强调轨道域偏移下细尺度组件零射击定位的局限性。"
+    },
+    {
+      "title": "DYNA-PRUNER: Input-Adaptive Data-Model Co-Pruning for Efficient and Scalable Spatio-Temporal Media Prediction",
+      "authors": [
+        "Fuyan Zhang",
+        "Yuqi Li",
+        "Yingli Tian",
+        "Edmond S. L. Ho"
+      ],
+      "summary": "Spatio-temporal prediction supports radar/satellite nowcasting and city-scale traffic monitoring, but modern models are often too expensive for real-time deployment. This stems from a mismatch between dense computation and strong input-dependent redundancy (e.g., calm seas or clear skies). To enable automated, resource-aware architecture optimization in scalable media analysis, we propose Dyna-Pruner, an end-to-end framework for input-dependent co-pruning of data and model structure. A shared-importance synchronization mechanism generates coupled masks that prune redundant regions and their corresponding computational units (e.g., convolutional filters), yielding per-sample sparse sub-networks at inference time. Experiments on WeatherBench, SEVIR, and TaxiBJ show seamless integration with CNN, RNN, and Transformer backbones, reducing FLOPs by up to $70\\%$ and achieving a $2.5\\times$ speedup on NVIDIA Jetson AGX Orin with negligible accuracy loss ($<1\\%$).",
+      "published": "2026-06-13T15:14:05Z",
+      "updated": "2026-06-13T15:14:05Z",
+      "arxiv_id": "2606.15346v1",
+      "abs_url": "http://arxiv.org/abs/2606.15346v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15346v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.MM"
+      ],
+      "comment": "ICME 2026 Spotlight Paper",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "高效微调与轻量化"
+      ],
+      "topic": "高效微调与轻量化",
+      "score": 5,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "CNN",
+        "satellite",
+        "temporal",
+        "transformer"
+      ],
+      "title_zh": "DYNA-PRUNER：输入自适应数据模型共同修剪，用于高效且可扩展的时空媒体预测",
+      "summary_zh": "时空预测支持雷达/卫星临近预报和城市规模的交通监控，但现代模型对于实时部署来说通常过于昂贵。这是由于密集计算和强输入相关冗余（例如平静的大海或晴朗的天空）之间的不匹配。为了在可扩展媒体分析中实现自动化、资源感知的架构优化，我们提出了 Dyna-Pruner，这是一种端到端框架，用于对数据和模型结构进行依赖于输入的共同修剪。共享重要性同步机制生成耦合掩码，修剪冗余区域及其相应的计算单元（例如卷积滤波器），从而在推理时生成每个样本的稀疏子网络。 WeatherBench、SEVIR 和 TaxiBJ 上的实验表明，与 CNN、RNN 和 Transformer 主干网无缝集成，可将 FLOP 降低高达 70\\%$，并在 NVIDIA Jetson AGX Orin 上实现 $2.5\\times$ 加速，而精度损失可以忽略不计 ($<1\\%$)。"
+    },
+    {
+      "title": "Adapting Reinforcement Learning with Chain-of-Thought Supervision for Explainable Detection of Hateful and Propagandistic Memes",
+      "authors": [
+        "Mohamed Bayan Kmainasi",
+        "Mucahid Kutlu",
+        "Ali Ezzat Shahroor",
+        "Abul Hasnat",
+        "Firoj Alam"
+      ],
+      "summary": "Hateful and propagandistic memes exploit the interplay between images and text to convey harmful intent that neither modality reveals alone. Although thinking-based multimodal large language models (MLLMs) have advanced vision-language understanding, their application to meme content moderation remains underexplored. We propose a reinforcement learning-based post-training method that improves classification performance and reference-based explanation quality in thinking-based MLLMs via task-specific rewards and Group Relative Policy Optimization (GRPO). Concretely, we (i) conduct a systematic empirical study of off-the-shelf MLLMs for hateful and propagandistic meme understanding across English and Arabic benchmarks, (ii) extend existing meme datasets with weakly supervised chain-of-thought (CoT) rationales via distillation and multi-LLM fine-grained propaganda annotations, (iii) introduce a GRPO-based objective with thinking-length regularization that jointly optimizes classification accuracy and explanation quality, and (iv) investigate self-supervised GRPO on unlabeled memes using consensus-based pseudo-labels. Experiments on the Hateful Memes and ArMeme benchmarks show that our approach improves over previously reported results on FHM accuracy (up to +2.1%, from 79.9% to 82.0%) and on ArMeme macro-F1 (up to +7.6 points, from 0.536 to 0.612 with explanations; +6.1 compared to the original ArMeme benchmark), while also generating natural-language explanations. On ArMeme, sequence-classification baselines remain stronger in terms of raw accuracy, whereas our approach provides more balanced per-class performance along with explanations. We publicly release our code, data extensions, and evaluation resources.",
+      "published": "2026-06-13T13:51:54Z",
+      "updated": "2026-06-13T13:51:54Z",
+      "arxiv_id": "2606.15307v1",
+      "abs_url": "http://arxiv.org/abs/2606.15307v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15307v1",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "视觉-语言模型",
+        "无监督与弱监督",
+        "多模态融合",
+        "数据集/评测"
+      ],
+      "topic": "基础模型",
+      "score": 6,
+      "anchor_terms": [
+        "weakly supervised"
+      ],
+      "matched_terms": [
+        "large language model",
+        "LLM",
+        "MLLM",
+        "multimodal large language model",
+        "self-supervised",
+        "weakly supervised"
+      ],
+      "title_zh": "采用强化学习和思想链监督来可解释地检测仇恨和宣传模因",
+      "summary_zh": "Hateful and propagandistic memes exploit the interplay between images and text to convey harmful intent that neither modality reveals alone.尽管基于思维的多模态大语言模型（MLLM）具有先进的视觉语言理解能力，但它们在模因内容调节中的应用仍未得到充分探索。我们提出了一种基于强化学习的后训练方法，通过特定于任务的奖励和组相对策略优化（GRPO）来提高基于思维的 MLLM 的分类性能和基于参考的解释质量。具体来说，我们（i）对现成的 MLLM 进行了系统的实证研究，以理解英语和阿拉伯语基准中的仇恨和宣传性 meme，（ii）通过蒸馏和多 LLM 细粒度宣传注释，用弱监督的思想链（CoT）原理扩展现有的 meme 数据集，（iii）引入基于 GRPO 的目标和思考长度正则化，共同优化分类准确性和解释质量，以及（iv） investigate self-supervised GRPO on unlabeled memes using consensus-based pseudo-labels. Hateful Memes 和 ArMeme 基准测试表明，我们的方法比之前报道的 FHM 准确度（从 79.9% 到 82.0%，高达 +2.1%）和 ArMeme Macro-F1（从 0.536 到 0.612，带解释，高达 +7.6 点；与原始 ArMeme 基准相比 +6.1）的结果有所改进，同时还生成自然语言解释。在 ArMeme 上，序列分类基线在原始准确性方面仍然更强，而我们的方法提供了更平衡的每类性能以及解释。 We publicly release our code, data extensions, and evaluation resources."
+    },
+    {
+      "title": "Hybrid NARX-LLM for Greenland Iceberg Discharge: Prompt-Driven Residual Correction",
+      "authors": [
+        "Yiquan Gao",
+        "Duohui Xu"
+      ],
+      "summary": "Greenland iceberg discharge exhibits complex nonlinear dynamics with limited observability, challenging traditional predictive models. We present a Hybrid NARX-LLM framework that combines a nonlinear autoregressive model with exogenous inputs (NARX) and a large language model (LLM) for residual correction. We further propose a Physics-Informed Prompt (PIP) method that transforms unstructured physical knowledge into structured prompts for zero-shot in-context reasoning. The primary objective is to explore the corrective potential of this framework for modeling Greenland iceberg discharge, rather than merely optimizing predictive accuracy. The NARX component captures intrinsic temporal dependencies, while the LLM, guided by PIP, encodes glacier dynamics and environmental drivers and perceives key trend patterns to correct systematic prediction errors. This integration allows the model to reason about unmodeled factors and produce interpretable residuals, enhancing overall predictive accuracy. Applied to Greenland iceberg discharge time series, our approach addresses extreme events that are difficult to predict due to rare variations and nonstationary trends, a limitation often overlooked by traditional methods. By fusing structured time-series modeling with knowledge-driven foundation AI, the framework offers a scalable and interpretable pathway to bridge data-limited climate forecasting with physics-informed LLM reasoning. The code is available.",
+      "published": "2026-06-13T13:03:17Z",
+      "updated": "2026-06-13T13:03:17Z",
+      "arxiv_id": "2606.15288v1",
+      "abs_url": "http://arxiv.org/abs/2606.15288v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15288v1",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "physics.ao-ph"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "时间序列与视频",
+        "视觉-语言模型",
+        "小样本与域泛化"
+      ],
+      "topic": "时间序列与视频",
+      "score": 5,
+      "anchor_terms": [
+        "temporal"
+      ],
+      "matched_terms": [
+        "large language model",
+        "LLM",
+        "temporal",
+        "time-series",
+        "zero-shot"
+      ],
+      "title_zh": "用于格陵兰冰山排放的混合 NARX-LLM：即时驱动的残差校正",
+      "summary_zh": "Greenland iceberg discharge exhibits complex nonlinear dynamics with limited observability, challenging traditional predictive models.我们提出了一个混合 NARX-LLM 框架，它将非线性自回归模型与外源输入 (NARX) 和用于残差校正的大语言模型 (LLM) 相结合。我们进一步提出了一种物理信息提示（PIP）方法，将非结构化物理知识转化为结构化提示，以进行零样本上下文推理。主要目标是探索该框架对格陵兰冰山排放建模的纠正潜力，而不仅仅是优化预测准确性。 NARX 组件捕获内在的时间依赖性，而法学硕士在 PIP 的指导下，对冰川动态和环境驱动因素进行编码，并感知关键趋势模式以纠正系统预测错误。 This integration allows the model to reason about unmodeled factors and produce interpretable residuals, enhancing overall predictive accuracy.应用于格陵兰冰山排放时间序列，我们的方法解决了由于罕见的变化和非平稳趋势而难以预测的极端事件，这是传统方法经常忽视的局限性。通过将结构化时间序列建模与知识驱动的基础人工智能相融合，该框架提供了一种可扩展且可解释的途径，将数据有限的气候预测与基于物理的法学硕士推理联系起来。代码可用。"
+    },
+    {
+      "title": "Enhancing Precision Agriculture with a Hybrid Deep Learning Framework for Multi-Class Plant Disease Classification and Interpretability",
+      "authors": [
+        "Hasibul Islam Sufi",
+        "Ridam Roy",
+        "Shayla Alam Setu",
+        "Mahimul Islam Nadim"
+      ],
+      "summary": "This study proposes an overall deep learning architecture for multi-class classification of plant diseases from high-resolution leaf imagery, with a particular interest in investigating the behavior of ResNet-50 and a hybrid ResNet + Vision Transformer (ViT) design. A specially gathered image database with 15,200 training images and 3,800 validation images spanning 38 classes across multiple crops, including tomato, apple, grape etc. were subjected to preprocessing steps such as resizing, normalization, and data augmentation to enhance model robustness. Multiple architectures, including ResNet-50, MobileNetV2, and EfficientNet-B0, were trained and compared with the hybrid ResNet + ViT model. All models were fine-tuned using the AdamW optimizer and cross-entropy loss, with early stopping applied to prevent overfitting and ensure generalization. Furthermore, interpretability techniques such as Grad-CAM and saliency maps were implemented to indicate disease-relevant regions, while segmentation-based analysis was performed to identify the affected parts of a leaf. For every one of the considered architectures, ResNet-50 led to the highest accuracy of 98.74%, whereas the hybrid ResNet + ViT model achieved a competitive accuracy of 98.58%, showing that the hybrid architectures were effective in capturing both local and overall information. The experimental results showcase the promise of transformer-based models to achieve highly accurate, interpretable, and computationally efficient computer-based multi-class multi-disease classification systems, providing helpful assistance for cultivation management practices as well as for precision farming.",
+      "published": "2026-06-13T12:41:31Z",
+      "updated": "2026-06-13T12:41:31Z",
+      "arxiv_id": "2606.15282v1",
+      "abs_url": "http://arxiv.org/abs/2606.15282v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15282v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "基础模型",
+        "高效微调与轻量化",
+        "农业与生态"
+      ],
+      "topic": "基础模型",
+      "score": 5,
+      "anchor_terms": [
+        "crop"
+      ],
+      "matched_terms": [
+        "crop",
+        "robust",
+        "transformer",
+        "vision transformer",
+        "ViT"
+      ],
+      "title_zh": "利用用于多类植物病害分类和解释的混合深度学习框架增强精准农业",
+      "summary_zh": "本研究提出了一种整体深度学习架构，用于根据高分辨率叶子图像对植物病害进行多类分类，特别是研究 ResNet-50 的行为和混合 ResNet + Vision Transformer (ViT) 设计。专门收集的图像数据库包含 15,200 张训练图像和 3,800 张验证图像，涵盖番茄、苹果、葡萄等多种作物的 38 个类别，并经过调整大小、标准化和数据增强等预处理步骤，以增强模型的稳健性。对包括 ResNet-50、MobileNetV2 和 EfficientNet-B0 在内的多种架构进行了训练，并与混合 ResNet + ViT 模型进行了比较。所有模型均使用 AdamW 优化器和交叉熵损失进行微调，并应用早期停止来防止过度拟合并确保泛化。此外，还实施了 Grad-CAM 和显着性图等可解释性技术来指示疾病相关区域，同时进行基于分割的分析来识别叶子受影响的部分。对于每一种所考虑的架构，ResNet-50 的准确率最高为 98.74%，而混合 ResNet + ViT 模型则达到了 98.58% 的竞争准确率，这表明混合架构在捕获局部和整体信息方面均有效。实验结果展示了基于变压器的模型有望实现高度准确、可解释且计算高效的基于计算机的多类多疾病分类系统，为种植管理实践以及精准农业提供有益的帮助。"
+    },
+    {
+      "title": "EyeMVP: OCT-Informed Fundus Representation Learning via Paired CFP--OCT Pretraining",
+      "authors": [
+        "Zhuo Deng",
+        "Ruiheng Zhang",
+        "Ziheng Zhang",
+        "Weihao Gao",
+        "Yitong Li",
+        "Qian Wang",
+        "Lei Shao",
+        "Jiaoyue Dong",
+        "Zhixi Zeng",
+        "Lijian Fang",
+        "Haibo Wang",
+        "Xiaobin Lin",
+        "Tao Liu",
+        "Zhicheng Du",
+        "Zhengwei Zhang",
+        "Lin Yang",
+        "Zheng Gong",
+        "Xinyu Zhao",
+        "Zhenquan Wu",
+        "Fang Li",
+        "Zhiguang Zhou",
+        "Guoming Zhang",
+        "Sun Jing",
+        "Han Lv",
+        "Wenbin We",
+        "Lan Ma"
+      ],
+      "summary": "Color fundus photography (CFP) is the mainstay for large-scale retinal screening, yet its diagnostic capacity is constrained by the lack of depth-resolved structural information. Optical coherence tomography (OCT) provides cross-sectional retinal anatomy, but is less accessible in population-level screening. Here, we present EyeMVP, a cross-modal retinal foundation model that uses paired CFP--OCT pretraining to learn OCT-informed CFP representations. EyeMVP is pretrained on 674,893 strict same-eye same-day paired CFP--OCT image triples from 112,642 patients across eight hospitals in China. The model uses cross-modal masked reconstruction to enrich CFP representations with OCT-associated supervision, while requiring only CFP images at inference. To accommodate the non-aligned imaging geometry between en-face CFP and cross-sectional OCT, EyeMVP combines source-constrained cross-attention with CFP-derived structural masks. Across 16 downstream tasks, including classification, segmentation, few-shot adaptation, and cross-modal retrieval, EyeMVP outperforms representative retinal foundation models and shows consistent gains on tasks involving macular and optic nerve structure. For CFP-challenging macular diseases, EyeMVP achieves an AUROC of 0.948 for macular edema (vs.~0.852 for EyeCLIP) and 0.825 for myopic macular schisis. In an exploratory reader study, EyeMVP exceeds junior and intermediate ophthalmologist groups but does not reach senior ophthalmologist performance on macular edema, while showing numerically higher balanced accuracy than all reader groups on myopic macular schisis. These results suggest that pixel-level cross-modal reconstruction can enrich CFP representations with OCT-associated supervision, providing a practical route toward stronger CFP-based retinal analysis in screening settings.",
+      "published": "2026-06-13T05:44:18Z",
+      "updated": "2026-06-13T05:44:18Z",
+      "arxiv_id": "2606.15129v1",
+      "abs_url": "http://arxiv.org/abs/2606.15129v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15129v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "comment": "",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "图像检索",
+        "基础模型",
+        "视觉-语言模型",
+        "小样本与域泛化",
+        "高效微调与轻量化",
+        "多模态融合"
+      ],
+      "topic": "图像检索",
+      "score": 6,
+      "anchor_terms": [
+        "LoRA"
+      ],
+      "matched_terms": [
+        "CLIP",
+        "cross-attention",
+        "cross-modal retrieval",
+        "foundation model",
+        "LoRA"
+      ],
+      "title_zh": "EyeMVP：通过配对 CFP-OCT 预训练进行 OCT 知情眼底表示学习",
+      "summary_zh": "彩色眼底摄影（CFP）是大规模视网膜筛查的支柱，但其诊断能力因缺乏深度分辨结构信息而受到限制。光学相干断层扫描 (OCT) 提供横截面视网膜解剖结构，但在人群水平筛查中不太容易获得。在这里，我们提出了 EyeMVP，一种跨模态视网膜基础模型，它使用配对的 CFP-OCT 预训练来学习 OCT 信息的 CFP 表示。 EyeMVP 对来自中国 8 家医院 112,642 名患者的 674,893 个严格同眼同日配对的 CFP-OCT 图像三元组进行了预训练。该模型使用跨模态掩模重建来通过 OCT 相关监督来丰富 CFP 表示，同时在推理时仅需要 CFP 图像。为了适应正面 CFP 和横截面 OCT 之间的非对齐成像几何形状，EyeMVP 将源约束交叉注意力与 CFP 衍生的结构掩模相结合。在 16 个下游任务中，包括分类、分割、小样本适应和跨模态检索，EyeMVP 的表现优于代表性的视网膜基础模型，并且在涉及黄斑和视神经结构的任务上显示出一致的增益。对于 CFP 挑战的黄斑疾病，EyeMVP 黄斑水肿的 AUROC 为 0.948（EyeCLIP 的 AUROC 为 0.852），近视黄斑分裂的 AUROC 为 0.825。在一项探索性读者研究中，EyeMVP 超过了初级和中级眼科医生群体，但未达到高级眼科医生在黄斑水肿方面的表现，同时在近视黄斑分裂方面表现出比所有读者群体更高的平衡准确性。这些结果表明，像素级跨模态重建可以通过 OCT 相关监督来丰富 CFP 表征，为在筛查环境中进行更强大的基于 CFP 的视网膜分析提供了一条实用途径。"
+    },
+    {
+      "title": "Learn Temporal Consistency For Robust Satellite Video Detector",
+      "authors": [
+        "Weilong Guo",
+        "Shengyang Li",
+        "Yanfeng Gu"
+      ],
+      "summary": "Satellite video object detection (SVOD) for oriented and fine-grained objects plays an important role in satellite applications. Most existing SVOD methods only focus on one or a few coarse-grained categories of moving objects and represent objects with horizontal bounding boxes. They have difficulty extracting complete, accurate, and consistent information about objects in whole satellite videos. In this paper, we propose a satellite video object detection framework based on Temporal Consistency Learning (TCL). TCL adeptly detects oriented and fine-grained objects by leveraging the rich temporal contexts within satellite videos. The framework integrates three key modules: temporal and fine-grained feature aggregation (TFA), structure encoding (SE), and temporal consistency constraint (TCC). TFA and TCC modules facilitate consistent representation learning across frames, while the SE module encodes both appearance and structural information for precise fine-grained recognition. Experimental results on the SAT-MTB benchmark dataset demonstrate TCL's superior performance, achieving a new state-of-the-art oriented and fine-grained detection accuracy of 47.7% mAP--a 4.8% improvement over the baseline. Furthermore, our TCL framework readily accommodates existing image-based detectors, leading to enhanced detection accuracies.",
+      "published": "2026-06-13T05:00:14Z",
+      "updated": "2026-06-13T05:00:14Z",
+      "arxiv_id": "2606.15112v1",
+      "abs_url": "http://arxiv.org/abs/2606.15112v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.15112v1",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "comment": "11 pages, 8 figures",
+      "code_url": "",
+      "has_code": false,
+      "labels": [
+        "目标检测",
+        "时间序列与视频",
+        "数据集/评测"
+      ],
+      "topic": "目标检测",
+      "score": 12,
+      "anchor_terms": [
+        "object detection",
+        "satellite video",
+        "temporal"
+      ],
+      "matched_terms": [
+        "object detection",
+        "robust",
+        "satellite",
+        "satellite video",
+        "satellite video object detection",
+        "temporal"
+      ],
+      "title_zh": "了解鲁棒卫星视频检测器的时间一致性",
+      "summary_zh": "针对定向和细粒度目标的卫星视频目标检测（SVOD）在卫星应用中发挥着重要作用。大多数现有的SVOD方法仅关注移动对象的一个​​或几个粗粒度类别，并用水平边界框表示对象。他们很难提取整个卫星视频中物体的完整、准确和一致的信息。在本文中，我们提出了一种基于时间一致性学习（TCL）的卫星视频目标检测框架。 TCL 利用卫星视频中丰富的时间上下文，熟练地检测定向和细粒度的物体。该框架集成了三个关键模块：时间和细粒度特征聚合（TFA）、结构编码（SE）和时间一致性约束（TCC）。 TFA 和 TCC 模块促进跨帧的一致表示学习，而 SE 模块对外观和结构信息进行编码，以实现精确的细粒度识别。 SAT-MTB 基准数据集上的实验结果证明了 TCL 的卓越性能，实现了 47.7% mAP 的新的面向最先进的细粒度检测精度，比基线提高了 4.8%。此外，我们的 TCL 框架可以轻松适应现有的基于图像的检测器，从而提高检测精度。"
+    }
+  ]
+}
